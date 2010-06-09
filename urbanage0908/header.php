@@ -1,5 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes() ?>>
+<?php $base_uri = 'http://urban-age.net'; ?>
 <!-- Urban Age 9.08 Template, built on YAML (http://www.yaml.de/) and based on legacy Urban Age html 4.01 Template -->
 <!-- Deployed as a Wordpress theme based on Sandbox (http://www.plaintxt.org/themes/sandbox/) -->
 <head profile="http://gmpg.org/xfn/11">
@@ -16,18 +17,18 @@
     <meta name="x-layout" content="Layout based on YAML (http://www.yaml.de/)" />
     
     <!--[if lte IE 7]>
-    <link href="http://urban-age.net/stylesheets/ua908/ua908_patch.css" rel="stylesheet" type="text/css" />
+    <link href="<?php echo $base_uri; ?>/stylesheets/ua908/ua908_patch.css" rel="stylesheet" type="text/css" />
     <![endif]-->
     
 	
 	
     <!-- jQuery stuff BEGIN -->
-    <link type="text/css" href="http://urban-age.net/scripts/jqueryui/development-bundle/themes/base/ui.all.css" rel="stylesheet" />
+    <link type="text/css" href="<?php echo $base_uri; ?>/scripts/jqueryui/development-bundle/themes/base/ui.all.css" rel="stylesheet" />
 
-    <script type="text/javascript" src="http://urban-age.net/scripts/jquery/jquery-1.4.1.min.js"></script>
-    <script type="text/javascript" src="http://urban-age.net/scripts/jqueryui/development-bundle/ui/ui.core.js"></script>
-    <script type="text/javascript" src="http://urban-age.net/scripts/jqueryui/development-bundle/ui/ui.accordion.js"></script>
-    <script type="text/javascript" src="http://urban-age.net/scripts/jquery/datatables/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="<?php echo $base_uri; ?>/scripts/jquery/jquery-1.4.1.min.js"></script>
+    <script type="text/javascript" src="<?php echo $base_uri; ?>/scripts/jqueryui/development-bundle/ui/ui.core.js"></script>
+    <script type="text/javascript" src="<?php echo $base_uri; ?>/scripts/jqueryui/development-bundle/ui/ui.accordion.js"></script>
+    <script type="text/javascript" src="<?php echo $base_uri; ?>/scripts/jquery/datatables/jquery.dataTables.min.js"></script>
 
     <script type="text/javascript">
      $(document).ready(function(){
@@ -49,15 +50,15 @@
     <!-- jQuery stuff END -->
 
     <!-- slimbox BEGIN -->
-    <script type="text/javascript" src="http://urban-age.net/scripts/slimbox2/js/slimbox2.js"></script>
+    <script type="text/javascript" src="<?php echo $base_uri; ?>/scripts/slimbox2/js/slimbox2.js"></script>
     <!-- slimbox END -->
 
     <!--[if lt IE 8]>
     <script src="http://ie7-js.googlecode.com/svn/version/2.0(beta3)/IE8.js" type="text/javascript"></script>
     <![endif]-->
 
-    <script type="text/javascript" src="http://urban-age.net/0_scripts/menu.js"></script>
-    <script type="text/javascript" src="http://urban-age.net/0_scripts/qoute.js"></script>
+    <script type="text/javascript" src="<?php echo $base_uri; ?>/0_scripts/menu.js"></script>
+    <script type="text/javascript" src="<?php echo $base_uri; ?>/0_scripts/qoute.js"></script>
 
     <script type="text/javascript">
     <!--
@@ -78,10 +79,10 @@
     //-->
     </script>
 
-    <script src="http://urban-age.net/scripts/cufon-yui.js" type="text/javascript"></script>
-    <script src="http://urban-age.net/scripts/BureauGrotesque_400-BureauGrotesque_400.font.js" type="text/javascript"></script>
-    <script src="http://urban-age.net/scripts/BureauGrotesque-ThreeSeven.font.js" type="text/javascript"></script>
-    <script src="http://urban-age.net/scripts/GothamMedium_500.font.js" type="text/javascript"></script>
+    <script src="<?php echo $base_uri; ?>/scripts/cufon-yui.js" type="text/javascript"></script>
+    <script src="<?php echo $base_uri; ?>/scripts/BureauGrotesque_400-BureauGrotesque_400.font.js" type="text/javascript"></script>
+    <script src="<?php echo $base_uri; ?>/scripts/BureauGrotesque-ThreeSeven.font.js" type="text/javascript"></script>
+    <script src="<?php echo $base_uri; ?>/scripts/GothamMedium_500.font.js" type="text/javascript"></script>
     
     <script type="text/javascript">
      Cufon.replace('.cityName', {fontFamily: 'BureauGrotesque-ThreeSeven'});

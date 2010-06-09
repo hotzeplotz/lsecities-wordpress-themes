@@ -1,47 +1,8 @@
 <?php get_header() ?>
 
 	<div id="container" class="page ua908">
-<!-- Urban Age BEGIN -->
-     <div id="header">
-      <?php include (TEMPLATEPATH . '/ua_logo.php'); ?>
-      <div id="topnav">
-       <!-- start: skip link navigation -->
-       <a class="skip" title="skip link" href="#navigation">Skip to the navigation</a><span class="hideme">.</span>
-       <a class="skip" title="skip link" href="#content">Skip to the content</a><span class="hideme">.</span>
-       <!-- end: skip link navigation -->
-       <?php include (TEMPLATEPATH . '/ua_toolslinks.php'); ?>
-      </div>
-     </div>
-	 <div id="nav">
-      <!-- skiplink anchor: navigation -->
-      <a id="navigation" name="navigation"></a>
-      <div class="hlist">
-       <!-- main navigation: horizontal list -->
-       <?php include (TEMPLATEPATH . '/ua_mainmenu.php'); ?>
-      </div>
-     </div>
-<!-- Urban Age END -->
-     
-<!-- Urban Age BEGIN -->
-     <div id="main" class="clearfix">
-     
-      <div id="col1">
-       <div id="col1_content" class="clearfix">
-        <div class="yb_content yb_hover">
-         <?php include (TEMPLATEPATH . '/ua_vertnav.php'); ?>
-        </div>
-       </div>
-      </div>
-      
-      <div id="col2">
-       <div id="col2_content" class="clearfix">
-        <?php get_sidebar() ?>
-       </div>
-      </div>
-  
-  <div id="col3">
-   <div id="col3_content">
-<!-- Urban Age END -->
+
+	<?php include (TEMPLATEPATH . '/ua_contentPre.php'); ?>
 
 		<div id="content">
 
