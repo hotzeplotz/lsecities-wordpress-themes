@@ -12,13 +12,13 @@
        <!-- end: skip link navigation -->
        <?php include (TEMPLATEPATH . '/ua_toolslinks.php'); ?>
       </div>
-      <div id="nav">
-       <!-- skiplink anchor: navigation -->
-       <a id="navigation" name="navigation"></a>
-       <div class="hlist">
-        <!-- main navigation: horizontal list -->
-        <?php include (TEMPLATEPATH . '/ua_mainmenu.php'); ?>
-       </div>
+     </div>
+	 <div id="nav">
+      <!-- skiplink anchor: navigation -->
+      <a id="navigation" name="navigation"></a>
+      <div class="hlist">
+       <!-- main navigation: horizontal list -->
+       <?php include (TEMPLATEPATH . '/ua_mainmenu.php'); ?>
       </div>
      </div>
 <!-- Urban Age END -->
