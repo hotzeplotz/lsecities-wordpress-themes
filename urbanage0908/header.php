@@ -1,4 +1,3 @@
-<?xml version="1.0"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes() ?>>
 <!-- Urban Age 9.08 Template, built on YAML (http://www.yaml.de/) and based on legacy Urban Age html 4.01 Template -->
@@ -17,11 +16,48 @@
     <meta name="x-layout" content="Layout based on YAML (http://www.yaml.de/)" />
     
     <!--[if lte IE 7]>
-    <link href="[% base_uri %]/stylesheets/ua908/ua908_patch.css" rel="stylesheet" type="text/css" />
+    <link href="http://urban-age.net/stylesheets/ua908/ua908_patch.css" rel="stylesheet" type="text/css" />
     <![endif]-->
     
-    <script type="text/javascript" src="[% base_uri %]/0_scripts/menu.js"></script>
-    <script type="text/javascript" src="[% base_uri %]/0_scripts/qoute.js"></script>
+	
+	
+    <!-- jQuery stuff BEGIN -->
+    <link type="text/css" href="http://urban-age.net/scripts/jqueryui/development-bundle/themes/base/ui.all.css" rel="stylesheet" />
+
+    <script type="text/javascript" src="http://urban-age.net/scripts/jquery/jquery-1.4.1.min.js"></script>
+    <script type="text/javascript" src="http://urban-age.net/scripts/jqueryui/development-bundle/ui/ui.core.js"></script>
+    <script type="text/javascript" src="http://urban-age.net/scripts/jqueryui/development-bundle/ui/ui.accordion.js"></script>
+    <script type="text/javascript" src="http://urban-age.net/scripts/jquery/datatables/jquery.dataTables.min.js"></script>
+
+    <script type="text/javascript">
+     $(document).ready(function(){
+      $("#accordion").accordion({ autoHeight: false, animated: false });    
+      // collapsible lists: expand only the active menu, which is determined by the class name
+      //$("#collapsibleList > li > h3[@class='expanded'] ").find("+ div").slideToggle("medium");
+      // Toggle the selected menu's class and expand or collapse the menu
+      $("#collapsibleList > li > h3").click(function() {
+       $(this).toggleClass("expanded").toggleClass("collapsed").find("+ div").slideToggle("medium");
+      });
+    
+      // tablesorter
+      $(".dataTable").dataTable({
+       "aaSorting": [[ 0, "desc" ]],
+       "bPaginate": false
+      });
+     });
+    </script>
+    <!-- jQuery stuff END -->
+
+    <!-- slimbox BEGIN -->
+    <script type="text/javascript" src="http://urban-age.net/scripts/slimbox2/js/slimbox2.js"></script>
+    <!-- slimbox END -->
+
+    <!--[if lt IE 8]>
+    <script src="http://ie7-js.googlecode.com/svn/version/2.0(beta3)/IE8.js" type="text/javascript"></script>
+    <![endif]-->
+
+    <script type="text/javascript" src="http://urban-age.net/0_scripts/menu.js"></script>
+    <script type="text/javascript" src="http://urban-age.net/0_scripts/qoute.js"></script>
 
     <script type="text/javascript">
     <!--
@@ -40,6 +76,28 @@
      if (restore) selObj.selectedIndex=0;
     }
     //-->
+    </script>
+
+    <script src="http://urban-age.net/scripts/cufon-yui.js" type="text/javascript"></script>
+    <script src="http://urban-age.net/scripts/BureauGrotesque_400-BureauGrotesque_400.font.js" type="text/javascript"></script>
+    <script src="http://urban-age.net/scripts/BureauGrotesque-ThreeSeven.font.js" type="text/javascript"></script>
+    <script src="http://urban-age.net/scripts/GothamMedium_500.font.js" type="text/javascript"></script>
+    
+    <script type="text/javascript">
+     Cufon.replace('.cityName', {fontFamily: 'BureauGrotesque-ThreeSeven'});
+     Cufon.replace('.zoneName', {fontFamily: 'BureauGrotesque-ThreeSeven'});
+     Cufon.replace('.bureauGrotesque', {fontFamily: 'BureauGrotesque'});
+     Cufon.replace('.bureauGrotesqueUppercase', {fontFamily: 'BureauGrotesque'});
+     Cufon.replace('#ebulletinTitle .h1', {fontFamily: 'BureauGrotesque'});
+     Cufon.replace('.ebulletinTitle .h1', {fontFamily: 'BureauGrotesque'});
+     Cufon.replace('#ebulletinTitle .h2', {fontFamily: 'BureauGrotesque'});
+     Cufon.replace('.ebulletinTitle .h2', {fontFamily: 'BureauGrotesque'});
+     Cufon.replace('.ebulletinTocItem h3', {fontFamily: 'BureauGrotesque'});
+     Cufon.replace('#ebulletin h2', {fontFamily: 'BureauGrotesque'});
+     Cufon.replace('.urbanAgeToolbox .title', {fontFamily: 'BureauGrotesque'});
+     Cufon.replace('.conferenceTitle', {fontFamily: 'BureauGrotesque'});
+     Cufon.replace('.homepageMainHeadlines', {fontFamily: 'BureauGrotesque'});
+     Cufon.replace('.reportDownloads .downloadBox span', {fontFamily: 'BureauGrotesque'});
     </script>
 <!-- urban-age END -->
 
