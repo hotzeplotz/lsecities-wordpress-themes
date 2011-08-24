@@ -20,7 +20,7 @@
     
     
     <?php
-      $pod = new Pod('articles');
+      $pod = new Pod('article');
       $pod->findRecords('name ASC');
       $total_objects = $pod->getTotalRows();
         ?>
