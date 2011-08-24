@@ -28,7 +28,7 @@
       echo '<code class="debug">req_lang: ' . $lang . '</code>';
       echo '<code class="debug">lang2: ' . $article_lang2 . '</code>';
       
-      if(!empty($lang) && $lang == $article_lang2)) {
+      if(!empty($lang) && $lang == $article_lang2) {
         $article_title = $pod->get_field('title_lang2');
         $article_abstract = $pod->get_field('abstract_lang2');
         $article_text = $pod->get_field('text_lang2');
