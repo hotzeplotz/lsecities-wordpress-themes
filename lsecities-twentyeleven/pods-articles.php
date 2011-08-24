@@ -24,7 +24,7 @@
       $lang = pod_url_variable(4);
     ?>
 
-    <code><?php var_dump($pod->get_field('language'); ?></code>
+    <code><?php var_dump($pod->get_field('language')); ?></code>
     
     <?php if( $pod->getTotalRows() > 0 ) : ?>
       <div id="primary">
