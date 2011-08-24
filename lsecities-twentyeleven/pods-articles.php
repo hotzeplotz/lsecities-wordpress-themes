@@ -25,9 +25,9 @@
     ?>
 
     <code class="pods-debug"><?php var_dump($pod->get_field('language')); ?></code>
-    <code class="pods-debug"><?php echo $pod->getTotalRows(); ?></code>
+    <code class="pods-debug"><?php echo $pod->data; ?></code>
     
-    <?php if( $pod->getTotalRows() > 0 ) : ?>
+    <?php if( !empty($pod->data) : ?>
       <div id="primary">
         <div id="content" role="main">
           <div class="article">
