@@ -31,7 +31,7 @@
           <ul>
             <?php while ( $pod->fetchRecord() ) : ?>
               <li>
-                <a href="<?php echo get_permalink(); ?><?php echo $pod->get_field('permalink'); ?>/">
+                <a href="<?php echo get_permalink(); ?><?php echo $pod->get_field('slug'); ?>/">
                   <?php echo $pod->get_field('name'); ?>
                 </a>
               </li>
