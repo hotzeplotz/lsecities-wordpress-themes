@@ -16,6 +16,31 @@
 
 	<div class="entry-content">
 		<?php the_content(); ?>
+    
+    
+    
+    <?php
+      $pod = new Pod('articles');
+      $pod->findRecords('name ASC');
+      $total_objects = $pod->getTotalRows();
+        ?>
+
+        <?php if( $total_objects > 0 ) : ?>
+          <ul>
+            <?php while ( $pod->fetchRecord() ) : ?>
+              <li>
+                <a href="<?php echo get_permalink(); ?><?php echo $pod->get_field('permalink'); ?>/">
+                  <?php echo $pod->get_field('name'); ?>
+                </a>
+              </li>
+
+            <?php endwhile ?>
+          </ul>
+        <?php endif ?>
+        
+        
+        
+        
 		<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'twentyeleven' ) . '</span>', 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->
 	<footer class="entry-meta">
