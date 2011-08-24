@@ -24,15 +24,16 @@
       $lang = pods_url_variable(4);
     ?>
 
-    <code><?php var_dump($pod->get_field('language')); ?></code>
+    <code class="pods-debug"><?php var_dump($pod->get_field('language')); ?></code>
+    <code class="pods-debug"><?php echo $pod->getTotalRows(); ?></code>
     
     <?php if( $pod->getTotalRows() > 0 ) : ?>
       <div id="primary">
         <div id="content" role="main">
           <div class="article">
-            <h1 class="entry-title article-title"><?php $pod->get_field('name'); ?></h1>
-            <div class="entry-meta article-abstract"><?php $pod->get_field('abstract'); ?></div>
-            <div class="entry-content article-text"><?php $pod->get_field('text'); ?></div>
+            <h1 class="entry-title article-title"><?php echo $pod->get_field('name'); ?></h1>
+            <div class="entry-meta article-abstract"><?php echo $pod->get_field('abstract'); ?></div>
+            <div class="entry-content article-text"><?php echo $pod->get_field('text'); ?></div>
           </div>
         </div>
       </div>
