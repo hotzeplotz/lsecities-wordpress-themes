@@ -21,7 +21,7 @@
       global $pods;
       /* URI: /media/objects/articles/<article-slug>/<language> */
       $pod = new Pod('article', pods_url_variable(3));
-      $lang = strtolower(pods_url_variable(4));
+      $lang = strtolower(pods_url_variable('lang', 'get'));
       $article_lang2 = $pod->get_field('language');
       $article_lang2 = $article_lang2[0]['slug'];
 
