@@ -1,7 +1,7 @@
 <?php
-/* Template Name: Article Pods - index */
 /**
- * The template used for lists of Article Pods
+ * Template Name: Pods - Articles
+ * Description: The template used for Article Pods
  *
  * @package WordPress
  * @subpackage Twenty_Eleven
@@ -17,31 +17,26 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<?php the_content(); ?>
-    
-    
-    
     <?php
-      $pod = new Pod('article');
-      $pod->findRecords('name ASC');
-      $total_objects = $pod->getTotalRows();
-        ?>
+      global $pods;
+      /* URI: /media/objects/articles/<article-slug>/<language> */
+      $pod = new Pod('article', pod_url_variable(3));
+      $lang = pod_url_variable(4);
+    ?>
 
-        <?php if( $total_objects > 0 ) : ?>
-          <ul>
-            <?php while ( $pod->fetchRecord() ) : ?>
-              <li>
-                <a href="<?php echo get_permalink(); ?><?php echo $pod->get_field('slug'); ?>/">
-                  <?php echo $pod->get_field('name'); ?>
-                </a>
-              </li>
-
-            <?php endwhile ?>
-          </ul>
-        <?php endif ?>
-        
-        
-        
+    <code><?php var_dump($pod->get_field('language'); ?></code>
+    
+    <?php if( $pod->getTotalRows() > 0 ) : ?>
+      <div id="primary">
+        <div id="content" role="main">
+          <div class="article">
+            <h1 class="entry-title article-title"><?php $pod->get_field('name'); ?></h1>
+            <div class="entry-meta article-abstract"><?php $pod->get_field('abstract'); ?></div>
+            <div class="entry-content article-text"><?php $pod->get_field('text'); ?></div>
+          </div>
+        </div>
+      </div>
+    <?php endif ?>
         
 		<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'twentyeleven' ) . '</span>', 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->
