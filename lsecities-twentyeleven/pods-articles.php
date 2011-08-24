@@ -20,8 +20,8 @@
     <?php
       global $pods;
       /* URI: /media/objects/articles/<article-slug>/<language> */
-      $pod = new Pod('article', pod_url_variable(3));
-      $lang = pod_url_variable(4);
+      $pod = new Pod('article', pods_url_variable(3));
+      $lang = pods_url_variable(4);
     ?>
 
     <code><?php var_dump($pod->get_field('language')); ?></code>
