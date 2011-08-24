@@ -1,4 +1,5 @@
 <?php
+/* Template Name: Article Pods - index */
 /**
  * The template used for lists of Article Pods
  *
