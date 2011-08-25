@@ -31,7 +31,7 @@
             <h1 class="entry-title article-title"><?php echo $pod->get_field('name'); ?></h1>
             <ul>
               <?php foreach($pod->get_field('articles') as $a) : ?>
-                <li><a href="#"><?php echo $a['name']; ?></a></li>
+                <li><a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $a['slug']; ?>"><?php echo $a['name']; ?></a></li>
               <?php endforeach; ?>
             </ul>
           </div>

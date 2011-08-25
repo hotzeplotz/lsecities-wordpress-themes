@@ -591,3 +591,5 @@ function twentyeleven_body_classes( $classes ) {
 }
 add_filter( 'body_class', 'twentyeleven_body_classes' );
 
+// Load up Pods-specific functions and definitions.
+require( dirname( __FILE__ ) . '/inc/pods-functions.php' );
