@@ -31,7 +31,11 @@
             <h1 class="entry-title article-title"><?php echo $pod->get_field('name'); ?></h1>
             <ul>
               <?php foreach($pod->get_field('articles') as $a) : ?>
-                <li><a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $a['slug']; ?>"><?php echo $a['name']; ?></a></li>
+                <li>
+                  <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $a['slug']; ?>"><?php echo $a['name']; ?></a><?php if(!empty($a['language']) : ?>
+                    (English) - <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $a['slug'] . '/?lang=' . $a['language']['language_code']; ?>">(<?php echo $a['language']['name']; ?>)</a>
+                  <?php endif; ?>
+                </li>
               <?php endforeach; ?>
             </ul>
           </div>
