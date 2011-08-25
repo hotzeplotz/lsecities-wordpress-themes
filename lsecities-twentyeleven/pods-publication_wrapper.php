@@ -22,16 +22,25 @@
     
     
     <?php
-      $pod = new Pod('article');
-      $params = array();
-      $params['select'] = 't.*,a.*';
-      $params['join'] = ' LEFT JOIN wp_7_pod_tbl_article AS a ON a.id = t.publications ';
-      $params['search'] = false;
-      $params['where'] = 't.name LIKE "%securing%"';
-      $pod->findRecords($params);
-      $total_objects = $pod->getTotalRows();
-        ?>
+      /* URI: TBD */
+      $pod_pw = new Pod('publication_wrappers', 'south-american-cities-securing-an-urban-future');
+    ?>
 
+    <?php if(!empty($pod->data)) : ?>
+      <div id="primary">
+        <div id="content" role="main">
+          <div class="article">
+            <h1 class="entry-title article-title"><?php echo $pod_pw->get_field('name'); ?></h1>
+            <ul>
+             <?php foreach($pod_pw->get_field('articles') as $a) : ?>
+               <li><a href="#"><?php echo $a['title']; ?></a></li>
+             <?php endforeach ?>
+            </ul>
+          </div>
+        </div>
+      </div>
+    <?php endif ?>
+    
         <?php if( $total_objects > 0 ) : ?>
           <ul>
             <?php while ( $pod->fetchRecord() ) : ?>
