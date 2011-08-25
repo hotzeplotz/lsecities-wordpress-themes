@@ -25,8 +25,8 @@
       $article_lang2 = $pod->get_field('language');
       $article_lang2 = $article_lang2[0]['slug'];
 
-      echo '<code class="debug">req_lang: ' . $lang . '</code>';
-      echo '<code class="debug">lang2: ' . $article_lang2 . '</code>';
+      error_log('<code class="debug">req_lang: ' . $lang . '</code>');
+      error_log('<code class="debug">lang2: ' . $article_lang2 . '</code>');
       
       if(!empty($lang) && $lang == $article_lang2) {
         $article_title = $pod->get_field('title_lang2');

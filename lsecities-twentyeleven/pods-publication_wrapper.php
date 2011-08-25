@@ -31,6 +31,7 @@
             <h1 class="entry-title article-title"><?php echo $pod->get_field('name'); ?></h1>
             <ul>
               <?php foreach($pod->get_field('articles') as $a) : ?>
+              <?php error_log($a['language']); ?>
                 <li>
                   <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $a['slug']; ?>"><?php echo $a['name']; ?></a>
                   <?php if(!empty($a['language'])) : ?>
