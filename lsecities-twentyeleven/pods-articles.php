@@ -32,12 +32,16 @@
         $article_title = $pod->get_field('title_lang2');
         $article_abstract = $pod->get_field('abstract_lang2');
         $article_text = $pod->get_field('text_lang2');
+        $article_extra_content = $pod->get_field('extra_content');
       } else {
         $article_title = $pod->get_field('name');
         $article_abstract = $pod->get_field('abstract');
         $article_text = $pod->get_field('text');
+        $article_extra_content = $pod->get_field('extra_content_lang2');
       }
       
+      $article_publication_date = $pod->get_field('publication_date');
+      $article_tags = $pod->get_field('tags');
       $article_authors = $pod->get_field('authors');
     ?>
     
@@ -48,6 +52,7 @@
             <h1 class="entry-title article-title"><?php echo $article_title; ?></h1>
             <div class="entry-meta article-abstract"><?php echo $article_abstract; ?></div>
             <div class="entry-content article-text"><?php echo $article_text; ?></div>
+            <div class="extra-content"><?php echo $article_extra_content; ?></div>
           </div>
         </div>
       </div>
@@ -66,6 +71,23 @@
         <?php endforeach; ?>
         </dl>
       <?php endif ; ?>
+      <h2>Article metadata</h2>
+      <dl>
+        <dt>Publication date</dt>
+        <dd><?php echo $article_publication_date ?></dd>
+        <dt>Tags</dt>
+        <dd>
+          <?php if(is_array($article_tags)): ?>
+          <ul>
+            <?php foreach($article_tags as $t): ?>
+              <li><?php echo $t['name'] ; ?></li>
+            <?php endforeach; ?>
+          </ul>
+          <?php else: ?>
+          <em>no tags defined</em>
+          <?php endif; ?>
+        </dd>
+      </dl>
     </div>
 		<?php edit_post_link( __( 'Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-meta -->
