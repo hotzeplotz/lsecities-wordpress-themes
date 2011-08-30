@@ -45,7 +45,7 @@
       $article_authors = $pod->get_field('authors');
     ?>
     
-    <?php if(!empty($pod->data)) : ?>
+    <?php if(!empty($pod->data)): ?>
       <div id="primary">
         <div id="content" role="main">
           <div class="article">
@@ -56,21 +56,21 @@
           </div>
         </div>
       </div>
-    <?php endif ?>
+    <?php endif; ?>
         
 		<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'twentyeleven' ) . '</span>', 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->
 	<footer class="entry-meta">
     <div id="author-info">
-      <?php if(is_array($article_authors)) : ?>
+      <?php if(is_array($article_authors)): ?>
         <h2>About the authors</h2>
         <dl>
-        <?php foreach($article_authors as $a) : ?>
+        <?php foreach($article_authors as $a): ?>
           <dt><?php echo $a['name'] ?> <?php echo $a['family_name'] ?></dt>
           <dd><?php echo $a['profile_text'] ?></dd>
         <?php endforeach; ?>
         </dl>
-      <?php endif ; ?>
+      <?php endif; ?>
       <h2>Article metadata</h2>
       <dl>
         <dt>Publication date</dt>
