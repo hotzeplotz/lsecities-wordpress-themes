@@ -21,7 +21,7 @@
 
     <?php
       /* URI: TBD */
-      $publication_wrapper_slug = get_post_meta($post->ID, 'publication_slug');
+      $publication_wrapper_slug = get_post_meta($post->ID, 'publication_slug', true);
       error_log('publication_slug: ' . $publication_wrapper_slug);
       $pod = new Pod('publication_wrappers', $publication_wrapper_slug);
     ?>
