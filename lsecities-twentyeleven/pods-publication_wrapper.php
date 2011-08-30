@@ -30,7 +30,7 @@
       <div id="primary">
         <div id="content" role="main">
           <div class="article">
-            <h1 class="entry-title article-title"><?php echo $pod->get_field('name'); ?></h1>
+            <h2><?php echo $pod->get_field('name'); ?></h2>
             <ul>
               <?php foreach($pod->get_field('articles') as $a) : ?>
               <?php error_log(var_export($a['language']['name'], true)); ?>
