@@ -21,7 +21,8 @@
 
     <?php
       /* URI: TBD */
-      $pod = new Pod('publication_wrappers', 'south-american-cities-securing-an-urban-future');
+      $publication_wrapper_slug = get_post_meta(the_ID(), 'publication_slug');
+      $pod = new Pod('publication_wrappers', $publication_wrapper_slug);
     ?>
 
     <?php if(!empty($pod->data)) : ?>
