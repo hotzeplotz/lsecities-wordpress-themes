@@ -49,15 +49,11 @@
     ?>
     
     <?php if(!empty($pod->data)): ?>
-      <div id="primary">
-        <div id="content" role="main">
-          <div class="article">
-            <h1 class="entry-title article-title"><?php echo $article_title; ?></h1>
-            <div class="entry-meta article-abstract"><?php echo $article_abstract; ?></div>
-            <div class="entry-content article-text"><?php echo $article_text; ?></div>
-            <div class="extra-content"><?php echo $article_extra_content; ?></div>
-          </div>
-        </div>
+      <div class="article">
+        <h1 class="entry-title article-title"><?php echo $article_title; ?></h1>
+        <div class="entry-meta article-abstract"><?php echo $article_abstract; ?></div>
+        <div class="entry-content article-text"><?php echo $article_text; ?></div>
+        <div class="extra-content"><?php echo $article_extra_content; ?></div>
       </div>
     <?php endif; ?>
         
