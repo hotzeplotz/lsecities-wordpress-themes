@@ -11,7 +11,10 @@
 
 <?php get_header(); ?>
 
-<article id="post-<?php $post->ID; ?>" <?php post_class(); ?>>
+<div id="primary">
+<div id="content" role="main">
+
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 	</header><!-- .entry-header -->
@@ -92,6 +95,9 @@
 		<?php edit_post_link( __( 'Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-meta -->
 </article><!-- #post-<?php the_ID(); ?> -->
+
+</div>
+</div>
 
 <?php get_sidebar(); ?>
 
