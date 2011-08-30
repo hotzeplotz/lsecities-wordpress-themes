@@ -11,6 +11,9 @@
 
 <?php get_header(); ?>
 
+<div id="primary">
+<div id="content" role="main">
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<h1 class="entry-title"><?php the_title(); ?></h1>
@@ -27,23 +30,19 @@
     ?>
 
     <?php if(!empty($pod->data)) : ?>
-      <div id="primary">
-        <div id="content" role="main">
-          <div class="article">
-            <h2><?php echo $pod->get_field('name'); ?></h2>
-            <ul>
-              <?php foreach($pod->get_field('articles') as $a) : ?>
-              <?php error_log(var_export($a['language']['name'], true)); ?>
-                <li>
-                  <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $a['slug']; ?>"><?php echo $a['name']; ?></a>
-                  <?php if(!empty($a['language']['name'])) : ?>
-                    (English) - <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $a['slug'] . '/?lang=' . $a['language']['language_code']; ?>">(<?php echo $a['language']['name']; ?>)</a>
-                  <?php endif; ?>
-                </li>
-              <?php endforeach; ?>
-            </ul>
-          </div>
-        </div>
+      <div class="article">
+        <h2><?php echo $pod->get_field('name'); ?></h2>
+        <ul>
+          <?php foreach($pod->get_field('articles') as $a) : ?>
+          <?php error_log(var_export($a['language']['name'], true)); ?>
+            <li>
+              <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $a['slug']; ?>"><?php echo $a['name']; ?></a>
+              <?php if(!empty($a['language']['name'])) : ?>
+                (English) - <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $a['slug'] . '/?lang=' . $a['language']['language_code']; ?>">(<?php echo $a['language']['name']; ?>)</a>
+              <?php endif; ?>
+            </li>
+          <?php endforeach; ?>
+        </ul>
       </div>
     <?php endif ?>    
         
