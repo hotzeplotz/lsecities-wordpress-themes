@@ -52,6 +52,8 @@
 		<?php edit_post_link( __( 'Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-meta -->
 </article><!-- #post-<?php the_ID(); ?> -->
+</div>
+</div>
 
 <?php get_sidebar(); ?>
 
