@@ -31,10 +31,10 @@
             <h1 class="entry-title article-title"><?php echo $pod->get_field('name'); ?></h1>
             <ul>
               <?php foreach($pod->get_field('articles') as $a) : ?>
-              <?php error_log(var_export($a['language'], true)); ?>
+              <?php error_log(var_export($a['language']['name'], true)); ?>
                 <li>
                   <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $a['slug']; ?>"><?php echo $a['name']; ?></a>
-                  <?php if(!empty($a['language'])) : ?>
+                  <?php if(!empty($a['language']['name'])) : ?>
                     (English) - <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $a['slug'] . '/?lang=' . $a['language']['language_code']; ?>">(<?php echo $a['language']['name']; ?>)</a>
                   <?php endif; ?>
                 </li>
