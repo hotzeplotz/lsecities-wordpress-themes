@@ -61,8 +61,8 @@
         <h2>About the authors</h2>
         <dl>
         <?php foreach($article_authors as $a) : ?>
-          <dt><?php echo $a['first_name'] ?> <?php echo $a['family_name'] ?></dt>
-          <dd><?php echo $a['profile_blurb'] ?></dd>
+          <dt><?php echo $a['name'] ?> <?php echo $a['family_name'] ?></dt>
+          <dd><?php echo $a['profile_text'] ?></dd>
         <?php endforeach; ?>
         </dl>
       <?php endif ; ?>
