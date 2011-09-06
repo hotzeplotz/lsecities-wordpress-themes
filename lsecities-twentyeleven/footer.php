@@ -35,7 +35,7 @@
 <li>Berlin</li>
 <li>German cities - Halle</li>
 <li>Mumbai</li>
-<li>São Paulo</li>
+<li>SÃ£o Paulo</li>
 <li>Istanbul</li>
 <li>Chicago</li>
 <li>Hong Kong</li>
@@ -57,7 +57,7 @@
 <ul>
 <li>2010 | Mexico City</li>
 <li>2009 | Istanbul</li>
-<li>2008 | São Paulo</li>
+<li>2008 | SÃ£o Paulo</li>
 <li>2007 | Mumbai</li>
 </ul>
 </section>
