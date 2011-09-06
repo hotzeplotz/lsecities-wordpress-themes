@@ -12,20 +12,58 @@
 
 	</div><!-- #main -->
 
-	<footer id="colophon" role="contentinfo">
+	<footer id="footer" class="row">
+<nav id="footerSitemap">
+<section class="threecol">
+<h3>Network</h3>
+<ul>
+<li>Board</li>
+<li>Staff</li>
+<li>Advisory board</li>
+<li>Contributors</li>
+<li>Institutional partners</li>
+</ul>
+</section>
+<section class="threecol">
+<h3>Conferences</h3>
+<ul>
+<li>New York</li>
+<li>Shanghai</li>
+<li>London</li>
+<li>Mexico City</li>
+<li>Johannesburg</li>
+<li>Berlin</li>
+<li>German cities - Halle</li>
+<li>Mumbai</li>
+<li>São Paulo</li>
+<li>Istanbul</li>
+<li>Chicago</li>
+<li>Hong Kong</li>
+</ul>
+</section>
+<section class="threecol">
+<h3>Publications</h3>
+<ul>
+<li>Newsletter</li>
+<li>The Endless City</li>
+<li>Living in the Endless City</li>
+<li>Conference newspapers</li>
+<li>Research reports</li>
+<li>Archive</li>
+</ul>
+</section>
+<section class="threecol last">
+<h3>Deutsche Bank Urban Age Award</h3>
+<ul>
+<li>2010 | Mexico City</li>
+<li>2009 | Istanbul</li>
+<li>2008 | São Paulo</li>
+<li>2007 | Mumbai</li>
+</ul>
+</section>
+</nav>
 
-			<?php
-				/* A sidebar in the footer? Yep. You can can customize
-				 * your footer with three columns of widgets.
-				 */
-				get_sidebar( 'footer' );
-			?>
-
-			<div id="site-generator">
-				<?php do_action( 'twentyeleven_credits' ); ?>
-				<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'twentyeleven' ) ); ?>" title="<?php esc_attr_e( 'Semantic Personal Publishing Platform', 'twentyeleven' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'twentyeleven' ), 'WordPress' ); ?></a>
-			</div>
-	</footer><!-- #colophon -->
+</footer><!-- #footer -->
 </div><!-- #page -->
 </div><!-- ## grid # container -->
 
