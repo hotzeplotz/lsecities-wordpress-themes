@@ -76,7 +76,7 @@
 <div class='container' id='container'>  <!-- ## grid -->
 
 <div class="hfeed">
-	<header id="branding" role="banner">
+	<header role="banner">
   
   
   <div class='row'> 
