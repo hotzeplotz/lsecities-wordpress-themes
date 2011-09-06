@@ -59,7 +59,7 @@
         
 		<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'twentyeleven' ) . '</span>', 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->
-	<footer class="entry-meta">
+	<div class="entry-meta">
     <div id="author-info">
       <?php if(is_array($article_authors)): ?>
         <h2>Authors</h2>
@@ -88,7 +88,7 @@
       </dl>
     </div>
 		<?php edit_post_link( __( 'Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
-	</footer><!-- .entry-meta -->
+	</div><!-- .entry-meta -->
 </article><!-- #post-<?php the_ID(); ?> -->
 
 </div>
