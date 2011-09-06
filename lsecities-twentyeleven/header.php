@@ -112,16 +112,16 @@
 <ul> 
 <li> 
 <a href='https://twitter.com/#!/LSECities' title='Follow us on Twitter'> 
-<img alt='Follow us on Twitter' src='/images/icons/16x16icon_twitter.png'> 
+<img alt='Follow us on Twitter' src='<?php bloginfo('stylesheet_directory') ?>/images/icons/16x16icon_twitter.png'> 
 </a> 
 </li> 
 <li> 
 <a href='http://facebook.com/lsecities' title='Follow us on Facebook'></a> 
-<img alt='Follow us on Facebook' src='/images/icons/16x16icon_facebook.gif'> 
+<img alt='Follow us on Facebook' src='<?php bloginfo('stylesheet_directory') ?>/images/icons/16x16icon_facebook.gif'> 
 </li> 
 <li> 
 <a href='http://lsecities.net/category/urban-age/' title='News archive'></a> 
-<img alt='News archive' src='/images/icons/16x16icon_feed.gif'> 
+<img alt='News archive' src='<?php bloginfo('stylesheet_directory') ?>/images/icons/16x16icon_feed.gif'> 
 </li> 
 </ul> 
 </div> 
