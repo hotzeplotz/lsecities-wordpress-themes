@@ -35,12 +35,12 @@
         $article_title = $pod->get_field('title_lang2');
         $article_abstract = do_shortcode($pod->get_field('abstract_lang2'));
         $article_text = do_shortcode($pod->get_field('text_lang2'));
-        $article_extra_content = do_shortcode($pod->get_field('extra_content'));
+        $article_extra_content = do_shortcode($pod->get_field('extra_content_lang2'));
       } else {
         $article_title = $pod->get_field('name');
         $article_abstract = do_shortcode($pod->get_field('abstract'));
         $article_text = do_shortcode($pod->get_field('text'));
-        $article_extra_content = do_shortcode($pod->get_field('extra_content_lang2'));
+        $article_extra_content = do_shortcode($pod->get_field('extra_content'));
       }
       
       $article_publication_date = $pod->get_field('publication_date');
