@@ -83,7 +83,11 @@ p {
   color: #666666;
   font-size: 0.875em;
 }
- 
+
+article {
+  margin-bottom: 2em;
+}
+
 a, a:active, a:visited { color: #607890; }
 
 a:hover { color: #003366; }
