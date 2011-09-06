@@ -77,6 +77,12 @@ p {
   font-family: "Gentium Book Basic";
   line-height: 1.3333333333em;
 }
+
+.entry-meta {
+  clear: both;
+  color: #666666;
+  font-size: 0.875em;
+}
  
 a, a:active, a:visited { color: #607890; }
 
