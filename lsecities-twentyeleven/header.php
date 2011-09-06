@@ -72,12 +72,62 @@
 </head>
 
 <body <?php body_class(); ?>>
+
+<div class='container' id='container'>  <!-- ## grid -->
+
 <div id="page" class="hfeed">
 	<header id="branding" role="banner">
-			<hgroup>
-				<h1 id="site-title"><span><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span></h1>
-				<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
-			</hgroup>
+  
+  
+  <div class='row'> 
+<div class='full fivecol' id='logo'>&nbsp;</div> 
+<nav class='fourcol' id='lcnav'> 
+<ul> 
+<li>Home</li> 
+<li>About</li> 
+<li>Who's Who</li> 
+</ul> 
+<ul> 
+<li>Events</li> 
+<li>Research</li> 
+<li>Publications</li> 
+</ul> 
+<ul> 
+<li>Urban Age</li> 
+<li>Cities Programme</li> 
+<li>Media Archive</li> 
+</ul> 
+</nav> 
+<div class='threecol last' id='toolbox'> 
+<div id='searchbox'> 
+<form action='http://www.google.com/u/urbanAge' id='search-box' method='get'> 
+<div class='hiddenFields'> 
+<input name='domains' type='hidden' value='www.urban-age.net'> 
+<input name='sitesearch' type='hidden' value='www.urban-age.net'> 
+<input id='queryfield' name='q' placeholder='Search LSE Cities' size='40' type='text'> 
+</div> 
+</form> 
+<div id='socialbuttons'> 
+<h4>Follow us:</h4> 
+<ul> 
+<li> 
+<a href='https://twitter.com/#!/LSECities' title='Follow us on Twitter'> 
+<img alt='Follow us on Twitter' src='/images/icons/16x16icon_twitter.png'> 
+</a> 
+</li> 
+<li> 
+<a href='http://facebook.com/lsecities' title='Follow us on Facebook'></a> 
+<img alt='Follow us on Facebook' src='/images/icons/16x16icon_facebook.gif'> 
+</li> 
+<li> 
+<a href='http://lsecities.net/category/urban-age/' title='News archive'></a> 
+<img alt='News archive' src='/images/icons/16x16icon_feed.gif'> 
+</li> 
+</ul> 
+</div> 
+</div> 
+</div> 
+</div> 
 
 			<?php
 				// Check to see if the header image has been removed
