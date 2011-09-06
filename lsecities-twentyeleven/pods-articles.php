@@ -62,13 +62,12 @@
 	<footer class="entry-meta">
     <div id="author-info">
       <?php if(is_array($article_authors)): ?>
-        <h2>About the authors</h2>
-        <dl>
+        <h2>Authors</h2>
+        <ul>
         <?php foreach($article_authors as $a): ?>
-          <dt><?php echo $a['name'] ?> <?php echo $a['family_name'] ?></dt>
-          <dd><?php echo $a['profile_text'] ?></dd>
+          <li><?php echo $a['name'] ?> <?php echo $a['family_name'] ?></li>
         <?php endforeach; ?>
-        </dl>
+        </ul>
       <?php endif; ?>
       <h2>Article metadata</h2>
       <dl>
