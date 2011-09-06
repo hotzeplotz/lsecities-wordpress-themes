@@ -69,7 +69,7 @@ nav ul, nav li { margin: 0; list-style: none; list-style-image: none; }
 .clearfix:before, .clearfix:after { content: ""; display: table; }
 .clearfix:after { clear: both; }
 
-body, select, input, textarea { color: #444444; }
+body, select, input, textarea { color: #444444; background-color: transparent; }
 
 h1, h2, h3, h4, h5, h6 { font-weight: bold; }
 
