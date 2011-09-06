@@ -30,5 +30,17 @@
 
 <?php wp_footer(); ?>
 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js" type="text/javascript"></script> 
+<script> 
+  //<![CDATA[
+    window.jQuery || document.write("<script src='<?php bloginfo( 'stylesheet_directory' ); ?>/javascripts/jquery.min.js'>\x3C/script>")
+  //]]>
+</script> 
+<script src="<?php bloginfo( 'stylesheet_directory' ); ?>/javascripts/rails.js?1315255380" type="text/javascript"></script> 
+<script src="<?php bloginfo( 'stylesheet_directory' ); ?>/javascripts/plugins.js?1315255380" type="text/javascript"></script> 
+<script src="<?php bloginfo( 'stylesheet_directory' ); ?>/javascripts/application.js?1315255380" type="text/javascript"></script> 
+ 
+<script src='<?php bloginfo( 'stylesheet_directory' ); ?>/javascripts/jquery.flickrbomb.min.js'></script> 
+
 </body>
 </html>
