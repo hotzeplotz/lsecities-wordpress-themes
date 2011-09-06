@@ -11,7 +11,7 @@
 
 <?php get_header(); ?>
 
-<div id="primary">
+<div id="primary" class="ninecol">
 <div id="content" role="main">
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

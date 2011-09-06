@@ -162,4 +162,4 @@
 	</header><!-- #branding -->
 
 
-	<div id="main">
+	<div id="main" class="row">
