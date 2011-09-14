@@ -1,0 +1,15 @@
+/*
+THEME NAME: Urban Age 9.08
+THEME URI: http://www.urban-age.net/colophon/themes/
+DESCRIPTION: Urban Age 9.08 theme ported to Sandbox theme for Wordpress
+VERSION: 1.6.1.001
+AUTHOR: Andrea Rota
+AUTHOR URI:
+TAGS: sandbox, microformats, hcard, hatom, xoxo, widgets, blank slate, starter theme, minimalist, developer, urban age
+*/
+
+@import url('http://urban-age.net/0_css/ua.css');
+@import url('http://urban-age.net/0_css/index.css');
+@import url('http://urban-age.net/0_css/conferenceProgramme.css');
+@import url('http://urban-age.net/stylesheets/UA905.css');
+@import url('http://urban-age.net/stylesheets/ua908/ua908.css');
