@@ -1,6 +1,9 @@
 <?php get_header() ?>
 
-	<div id="container">
+	<div id="container" class="page ua908">
+
+	<?php include (TEMPLATEPATH . '/ua_contentPre.php'); ?>
+  
 		<div id="content">
 
 			<h2 class="page-title"><?php _e( 'Tag Archives:', 'sandbox' ) ?> <span><?php single_tag_title() ?></span></h2>

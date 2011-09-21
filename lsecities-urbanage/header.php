@@ -52,8 +52,8 @@
     <script type="text/javascript" src="<?php echo $base_uri; ?>/scripts/slimbox2/js/slimbox2.js"></script>
     <!-- slimbox END -->
 
-    <!--[if lt IE 8]>
-    <script src="http://ie7-js.googlecode.com/svn/version/2.0(beta3)/IE8.js" type="text/javascript"></script>
+    <!--[if lt IE 9]>
+    <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
     <![endif]-->
 
     <script type="text/javascript">
