@@ -1,6 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes() ?>>
-<?php $base_uri = 'http://urban-age.net'; ?>
 <!-- Urban Age 9.08 Template, built on YAML (http://www.yaml.de/) and based on legacy Urban Age html 4.01 Template -->
 <!-- Deployed as a Wordpress theme based on Sandbox (http://www.plaintxt.org/themes/sandbox/) -->
 <head profile="http://gmpg.org/xfn/11">
