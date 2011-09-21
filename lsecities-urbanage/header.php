@@ -16,23 +16,23 @@
     <meta name="x-layout" content="Layout based on YAML (http://www.yaml.de/)" />
     
     <!--[if lte IE 7]>
-    <link href="<?php echo $base_uri; ?>/stylesheets/ua908/ua908_patch.css" rel="stylesheet" type="text/css" />
+    <link href="<?php echo $ua_base_uri; ?>/stylesheets/ua908/ua908_patch.css" rel="stylesheet" type="text/css" />
     <![endif]-->
 
  <!-- jQuery stuff BEGIN -->
- <script type="text/javascript" src="<?php echo $base_uri; ?>/scripts/jquery/jquery-1.5.1.min.js"></script>
- <script type="text/javascript" src="<?php echo $base_uri; ?>/scripts/jquery/ui/1.8.10-ua0/js/jquery-ui-1.8.10.custom.min.js"></script>
- <script type="text/javascript" src="<?php echo $base_uri; ?>/scripts/jquery/plugins/datatables/jquery.dataTables.min.js"></script>
-<!-- <script type="text/javascript" src="<?php echo $base_uri; ?>/scripts/jquery/zrssfeed/jquery.zrssfeed.min.js"></script> -->
- <script type="text/javascript" src="<?php echo $base_uri; ?>/scripts/jquery/plugins/zrssfeed/1.1.1+lsecities/jquery.zrssfeed.min.js"></script>
- <script type="text/javascript" src="<?php echo $base_uri; ?>/scripts/jquery/plugins/validate/jquery.validate.min.js"></script>
- <script type="text/javascript" src="<?php echo $base_uri; ?>/scripts/jquery/plugins/vticker/jquery.vticker.js"></script>
- <script type="text/javascript" src="<?php echo $base_uri; ?>/scripts/jquery/plugins/nivoslider/2.4/jquery.nivo.slider.pack.js"></script>
- <script type="text/javascript" src="<?php echo $base_uri; ?>/scripts/jquery/plugins/hoverintent/r6/jquery.hoverintent.min.js"></script>
- <script type="text/javascript" src="<?php echo $base_uri; ?>/scripts/jquery/plugins/superfish/1.4.8/superfish.js"></script>
- <script type="text/javascript" src="<?php echo $base_uri; ?>/scripts/jquery/plugins/tweet/e9dbe84d61d6a5a035c9/jquery.tweet.js"></script>
+ <script type="text/javascript" src="<?php echo $ua_base_uri; ?>/scripts/jquery/jquery-1.5.1.min.js"></script>
+ <script type="text/javascript" src="<?php echo $ua_base_uri; ?>/scripts/jquery/ui/1.8.10-ua0/js/jquery-ui-1.8.10.custom.min.js"></script>
+ <script type="text/javascript" src="<?php echo $ua_base_uri; ?>/scripts/jquery/plugins/datatables/jquery.dataTables.min.js"></script>
+<!-- <script type="text/javascript" src="<?php echo $ua_base_uri; ?>/scripts/jquery/zrssfeed/jquery.zrssfeed.min.js"></script> -->
+ <script type="text/javascript" src="<?php echo $ua_base_uri; ?>/scripts/jquery/plugins/zrssfeed/1.1.1+lsecities/jquery.zrssfeed.min.js"></script>
+ <script type="text/javascript" src="<?php echo $ua_base_uri; ?>/scripts/jquery/plugins/validate/jquery.validate.min.js"></script>
+ <script type="text/javascript" src="<?php echo $ua_base_uri; ?>/scripts/jquery/plugins/vticker/jquery.vticker.js"></script>
+ <script type="text/javascript" src="<?php echo $ua_base_uri; ?>/scripts/jquery/plugins/nivoslider/2.4/jquery.nivo.slider.pack.js"></script>
+ <script type="text/javascript" src="<?php echo $ua_base_uri; ?>/scripts/jquery/plugins/hoverintent/r6/jquery.hoverintent.min.js"></script>
+ <script type="text/javascript" src="<?php echo $ua_base_uri; ?>/scripts/jquery/plugins/superfish/1.4.8/superfish.js"></script>
+ <script type="text/javascript" src="<?php echo $ua_base_uri; ?>/scripts/jquery/plugins/tweet/e9dbe84d61d6a5a035c9/jquery.tweet.js"></script>
  <!-- slimbox BEGIN -->
- <script type="text/javascript" src="<?php echo $base_uri; ?>/scripts/jquery/plugins/slimbox/2.04/js/slimbox2.js"></script>
+ <script type="text/javascript" src="<?php echo $ua_base_uri; ?>/scripts/jquery/plugins/slimbox/2.04/js/slimbox2.js"></script>
  <!-- slimbox END -->
 
  <script type="text/javascript">

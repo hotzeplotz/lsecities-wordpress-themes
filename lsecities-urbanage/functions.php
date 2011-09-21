@@ -507,6 +507,6 @@ add_filter( 'archive_meta', 'wpautop' );
 
 // Remember: the Sandbox is for play.
 
-$base_uri = 'http://urban-age.net';
+$ua_base_uri = 'http://urban-age.net';
 
 ?>
