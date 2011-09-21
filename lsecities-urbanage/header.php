@@ -56,9 +56,6 @@
     <script src="http://ie7-js.googlecode.com/svn/version/2.0(beta3)/IE8.js" type="text/javascript"></script>
     <![endif]-->
 
-    <script type="text/javascript" src="<?php echo $base_uri; ?>/0_scripts/menu.js"></script>
-    <script type="text/javascript" src="<?php echo $base_uri; ?>/0_scripts/qoute.js"></script>
-
     <script type="text/javascript">
     <!--
     window.onload = function() {
@@ -78,27 +75,6 @@
     //-->
     </script>
 
-    <script src="<?php echo $base_uri; ?>/scripts/cufon-yui.js" type="text/javascript"></script>
-    <script src="<?php echo $base_uri; ?>/scripts/BureauGrotesque_400-BureauGrotesque_400.font.js" type="text/javascript"></script>
-    <script src="<?php echo $base_uri; ?>/scripts/BureauGrotesque-ThreeSeven.font.js" type="text/javascript"></script>
-    <script src="<?php echo $base_uri; ?>/scripts/GothamMedium_500.font.js" type="text/javascript"></script>
-    
-    <script type="text/javascript">
-     Cufon.replace('.cityName', {fontFamily: 'BureauGrotesque-ThreeSeven'});
-     Cufon.replace('.zoneName', {fontFamily: 'BureauGrotesque-ThreeSeven'});
-     Cufon.replace('.bureauGrotesque', {fontFamily: 'BureauGrotesque'});
-     Cufon.replace('.bureauGrotesqueUppercase', {fontFamily: 'BureauGrotesque'});
-     Cufon.replace('#ebulletinTitle .h1', {fontFamily: 'BureauGrotesque'});
-     Cufon.replace('.ebulletinTitle .h1', {fontFamily: 'BureauGrotesque'});
-     Cufon.replace('#ebulletinTitle .h2', {fontFamily: 'BureauGrotesque'});
-     Cufon.replace('.ebulletinTitle .h2', {fontFamily: 'BureauGrotesque'});
-     Cufon.replace('.ebulletinTocItem h3', {fontFamily: 'BureauGrotesque'});
-     Cufon.replace('#ebulletin h2', {fontFamily: 'BureauGrotesque'});
-     Cufon.replace('.urbanAgeToolbox .title', {fontFamily: 'BureauGrotesque'});
-     Cufon.replace('.conferenceTitle', {fontFamily: 'BureauGrotesque'});
-     Cufon.replace('.homepageMainHeadlines', {fontFamily: 'BureauGrotesque'});
-     Cufon.replace('.reportDownloads .downloadBox span', {fontFamily: 'BureauGrotesque'});
-    </script>
 <!-- urban-age END -->
 
 </head>
