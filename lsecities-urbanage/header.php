@@ -18,39 +18,49 @@
     <!--[if lte IE 7]>
     <link href="<?php echo $base_uri; ?>/stylesheets/ua908/ua908_patch.css" rel="stylesheet" type="text/css" />
     <![endif]-->
-    
-	
-	
-    <!-- jQuery stuff BEGIN -->
-    <link type="text/css" href="<?php echo $base_uri; ?>/scripts/jqueryui/development-bundle/themes/base/ui.all.css" rel="stylesheet" />
 
-    <script type="text/javascript" src="<?php echo $base_uri; ?>/scripts/jquery/jquery-1.4.1.min.js"></script>
-    <script type="text/javascript" src="<?php echo $base_uri; ?>/scripts/jqueryui/development-bundle/ui/ui.core.js"></script>
-    <script type="text/javascript" src="<?php echo $base_uri; ?>/scripts/jqueryui/development-bundle/ui/ui.accordion.js"></script>
-    <script type="text/javascript" src="<?php echo $base_uri; ?>/scripts/jquery/datatables/jquery.dataTables.min.js"></script>
+ <!-- jQuery stuff BEGIN -->
+ <script type="text/javascript" src="<?php echo $base_uri; ?>/scripts/jquery/jquery-1.5.1.min.js"></script>
+ <script type="text/javascript" src="<?php echo $base_uri; ?>/scripts/jquery/ui/1.8.10-ua0/js/jquery-ui-1.8.10.custom.min.js"></script>
+ <script type="text/javascript" src="<?php echo $base_uri; ?>/scripts/jquery/plugins/datatables/jquery.dataTables.min.js"></script>
+<!-- <script type="text/javascript" src="<?php echo $base_uri; ?>/scripts/jquery/zrssfeed/jquery.zrssfeed.min.js"></script> -->
+ <script type="text/javascript" src="<?php echo $base_uri; ?>/scripts/jquery/plugins/zrssfeed/1.1.1+lsecities/jquery.zrssfeed.min.js"></script>
+ <script type="text/javascript" src="<?php echo $base_uri; ?>/scripts/jquery/plugins/validate/jquery.validate.min.js"></script>
+ <script type="text/javascript" src="<?php echo $base_uri; ?>/scripts/jquery/plugins/vticker/jquery.vticker.js"></script>
+ <script type="text/javascript" src="<?php echo $base_uri; ?>/scripts/jquery/plugins/nivoslider/2.4/jquery.nivo.slider.pack.js"></script>
+ <script type="text/javascript" src="<?php echo $base_uri; ?>/scripts/jquery/plugins/hoverintent/r6/jquery.hoverintent.min.js"></script>
+ <script type="text/javascript" src="<?php echo $base_uri; ?>/scripts/jquery/plugins/superfish/1.4.8/superfish.js"></script>
+ <script type="text/javascript" src="<?php echo $base_uri; ?>/scripts/jquery/plugins/tweet/e9dbe84d61d6a5a035c9/jquery.tweet.js"></script>
+ <!-- slimbox BEGIN -->
+ <script type="text/javascript" src="<?php echo $base_uri; ?>/scripts/jquery/plugins/slimbox/2.04/js/slimbox2.js"></script>
+ <!-- slimbox END -->
 
-    <script type="text/javascript">
-     $(document).ready(function(){
-      $("#accordion").accordion({ autoHeight: false, animated: false });    
-      // collapsible lists: expand only the active menu, which is determined by the class name
-      //$("#collapsibleList > li > h3[@class='expanded'] ").find("+ div").slideToggle("medium");
-      // Toggle the selected menu's class and expand or collapse the menu
-      $("#collapsibleList > li > h3").click(function() {
-       $(this).toggleClass("expanded").toggleClass("collapsed").find("+ div").slideToggle("medium");
-      });
-    
-      // tablesorter
-      $(".dataTable").dataTable({
-       "aaSorting": [[ 0, "desc" ]],
-       "bPaginate": false
-      });
-     });
-    </script>
-    <!-- jQuery stuff END -->
+ <script type="text/javascript">
+  $(document).ready(function(){
+   $("#accordion").accordion({ autoHeight: false, animated: false });
+   $("#collapsibleList > li > h3").click(function() {
+    $(this).toggleClass("expanded").toggleClass("collapsed").find("+ div").slideToggle("medium");
+   });
+   $(".dataTable").dataTable({ "aaSorting": [[ 0, "desc" ]], "bPaginate": false });
+   $('#lseCitiesSubscriptionForm').validate({ rules: { email2: { equalTo: '#email1', } } });
+   $('#slider, .sliderhalf').nivoSlider({ effect: 'fade', pauseTime: 8000, directionNavHide: false  });
+   $('ul.menu').superfish();
+   $('.imagegallery.loop > a').slimbox({loop: true});
+   $('#feedControl').rssfeed('http://lsecities.net/archives/category/urban-age/feed', {
+    limit: 5,
+    time: false,
+    header: false,
+    snippet: false,
+    key: "ABQIAAAAZGyLcr2w2IwIanQOT_23-xQ9VN5nDw6eyrxocscc-xeihEkAnhT4bxUhovQw_0oWUEj85K_qGfCTkg"
+   }).ajaxStop(function() { $('#feedControl div.rssBody').vTicker({ showItems: 10, animation: 'fade', height: 800, pause: 7000 }); });
+  });
+  </script>
+ <!-- jQuery stuff END -->
 
-    <!-- slimbox BEGIN -->
-    <script type="text/javascript" src="<?php echo $base_uri; ?>/scripts/slimbox2/js/slimbox2.js"></script>
-    <!-- slimbox END -->
+ <!-- webtype.com BEGIN -->
+ <link href="http://cloud.webtype.com/css/9044dce3-7052-4e0e-9dbb-377978412ca7.css" rel="stylesheet" type="text/css" />
+ <!-- webtype.com END -->
+
 
     <!--[if lt IE 9]>
     <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
