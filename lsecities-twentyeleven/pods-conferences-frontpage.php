@@ -86,7 +86,7 @@
                   <a href='#'>Istanbul</a>
                 </li>
                 <li class='cityName conferencesSouthAmerica'>
-                  <a href='#'>São Paulo</a>
+                  <a href='#'>SÃ£o Paulo</a>
                 </li>
                 <li class='cityName conferencesAsia'>
                   <a href='#'>Mumbai</a>
