@@ -11,7 +11,6 @@
 
 <?php get_header(); ?>
 
-<div class="ninecol">
 <div role="main">
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -143,7 +142,6 @@
 	</div><!-- .entry-meta -->
 </article><!-- #post-<?php the_ID(); ?> -->
 
-</div>
 </div>
 
 <?php get_sidebar(); ?>
