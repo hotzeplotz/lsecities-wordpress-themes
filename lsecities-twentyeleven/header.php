@@ -73,61 +73,94 @@
 
 <body <?php body_class(); ?>>
 
-<div class='container' id='container'>  <!-- ## grid -->
+<div class='container' id='container'> <!-- ## grid -->
+<header id='header'>
+<div class='row'>
+<div class='full fivecol' id='ualogo'>
+&nbsp;
+</div>
+<div class='sevencol last' id='toolbox'>
+<div id='searchbox'>
+<form action='http://www.google.com/u/urbanAge' id='search-box' method='get'>
+<div class='hiddenFields'>
+<input name='domains' type='hidden' value='www.urban-age.net'>
+<input name='sitesearch' type='hidden' value='www.urban-age.net'>
+<input id='queryfield' name='q' placeholder='Search LSE Cities' size='40' type='text'>
+</div>
+</form>
+<div class='clearfix' id='persistentLogo'>
 
-<div class="hfeed">
-	<header role="banner">
-  
-  
-  <div class='row'> 
-<div class='full fivecol' id='logo'>&nbsp;</div> 
-<nav class='fourcol' id='lcnav'> 
-<ul> 
-<li>Home</li> 
-<li>About</li> 
-<li>Who's Who</li> 
-</ul> 
-<ul> 
-<li>Events</li> 
-<li>Research</li> 
-<li>Publications</li> 
-</ul> 
-<ul> 
-<li>Urban Age</li> 
-<li>Cities Programme</li> 
-<li>Media Archive</li> 
-</ul> 
-</nav> 
-<div class='threecol last' id='toolbox'> 
-<div id='searchbox'> 
-<form action='http://www.google.com/u/urbanAge' id='search-box' method='get'> 
-<div class='hiddenFields'> 
-<input name='domains' type='hidden' value='www.urban-age.net'> 
-<input name='sitesearch' type='hidden' value='www.urban-age.net'> 
-<input id='queryfield' name='q' placeholder='Search LSE Cities' size='40' type='text'> 
-</div> 
-</form> 
-<div id='socialbuttons'> 
-<h4>Follow us:</h4> 
-<ul> 
-<li> 
-<a href='https://twitter.com/#!/LSECities' title='Follow us on Twitter'> 
-<img alt='Follow us on Twitter' src='<?php bloginfo('stylesheet_directory') ?>/images/icons/16x16icon_twitter.png'> 
-</a> 
-</li> 
-<li> 
-<a href='http://facebook.com/lsecities' title='Follow us on Facebook'></a> 
-<img alt='Follow us on Facebook' src='<?php bloginfo('stylesheet_directory') ?>/images/icons/16x16icon_facebook.gif'> 
-</li> 
-<li> 
-<a href='http://lsecities.net/category/urban-age/' title='News archive'></a> 
-<img alt='News archive' src='<?php bloginfo('stylesheet_directory') ?>/images/icons/16x16icon_feed.gif'> 
-</li> 
-</ul> 
-</div> 
-</div> 
-</div> 
-</div> 
+<img id='lsecitiesSmallLogo' src='/images/logo_lsecities_nostrapline_small.gif'>
+</div>
+</div>
+<nav id='level1nav'>
+<ul>
+<li class='lsecitiesAreaAbout'>
+<a href='#'>
+About
+</a>
+</li>
+<li class='lsecitiesAreaResearch'>
+<a href='#'>
+Research
+</a>
+</li>
+<li class='lsecitiesAreaPublications'>
+<a href='#'>
+
+Publications
+</a>
+</li>
+<li class='lsecitiesAreaEvents'>
+<a href='#'>
+Events
+</a>
+</li>
+<li class='current lsecitiesAreaUrbanAge'>
+<a href='#'>
+Urban Age
+</a>
+</li>
+<li class='last lsecitiesAreaMediaArchive'>
+<a href='#'>
+Media Archive
+</a>
+
+</li>
+</ul>
+</nav>
+</div>
+</div>
+<div class='row' id='mainmenus'>
+<nav class='twelvecol' id='level2nav'>
+<h1>Urban Age conferences</h1>
+<ul>
+<li>
+<a href='#'>
+Who's Who
+</a>
+</li>
+<li class='current'>
+<a href='#'>
+
+Conferences
+</a>
+</li>
+<li>
+<a href='#'>
+Research
+</a>
+</li>
+<li>
+<a href='#'>
+Publications
+</a>
+</li>
+</ul>
+</nav>
+</div>
+
+
 
 			<?php
 				// Check to see if the header image has been removed
