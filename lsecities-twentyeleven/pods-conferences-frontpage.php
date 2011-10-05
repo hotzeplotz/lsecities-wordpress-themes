@@ -24,12 +24,6 @@
           <article class='tencol'>
             <div class='row'>
               <div class='slider spaceAfter eightcol' id='slider'>
-                <a href='http://urban-age.net/events/publicLectures/2011/09/01/the-tale-of-two-regions/' title='item'>
-                  <img alt='The tale of two regions report - launch event' src='http://urban-age.net/media/homepage/sliders/201109_randstad-report.jpg' title='1 September 2011: The tale of two regions - launch event'>
-                </a>
-                <a href='http://urban-age.net/events/publicLectures/2011/06/06/living-in-the-endless-city/' title='item'>
-                  <img alt='Living in the Endless City book launch' src='http://urban-age.net/media/homepage/sliders/201106_litec-launch-event.jpg' title='Living in the Endless City book launch: audio and video'>
-                </a>
                 <a href='http://urban-age.net/publications/living-in-the-endless-city/' title='item'>
                   <img alt='Living in the endless city - book cover' src='http://urban-age.net/media/homepage/sliders/201106_living-in-the-endless-city-book.jpg' title='New Publication: Living in the Endless City'>
                 </a>
