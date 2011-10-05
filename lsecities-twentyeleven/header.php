@@ -51,6 +51,8 @@
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_directory') ?>/stylesheets/style_lc.css" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_directory') ?>/stylesheets/flickrbomb.css" />
 <link href='http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+<?php wp_enqueue_style('fonts_ubuntu', '/stylesheets/fonts/ubuntu/stylesheet.css'); ?>
+<?php wp_enqueue_style('fonts_ubuntu', '/stylesheets/fonts/linux-libertine/stylesheet.css'); ?>
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
