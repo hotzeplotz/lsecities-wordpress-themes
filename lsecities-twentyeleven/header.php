@@ -143,8 +143,7 @@ Who's Who
 </a>
 </li>
 <li class='current'>
-<a href='#'>
-
+<a href='/ua/conferences/'>
 Conferences
 </a>
 </li>
