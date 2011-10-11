@@ -27,7 +27,7 @@ $pod = new Pod('conference', $conference_slug);
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<h1 class="entry-title"><?php $pod->get_field('name'); ?></h1>
+		<h1 class="entry-title"><?php echo $pod->get_field('name'); ?></h1>
     <?php
       $tagline = $pod->get_field('tagline');
       if($tagline) : ?>
