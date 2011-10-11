@@ -9,17 +9,6 @@
  */
 ?>
 
-<?php get_header(); ?>
-
-<div class="ninecol">
-<div role="main">
-
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<h1 class="entry-title"><?php the_title(); ?></h1>
-	</header><!-- .entry-header -->
-
-	<div class="entry-content">
     <?php
       global $pods;
       /* URI: /media/objects/articles/<article-slug>/<language> */
@@ -36,18 +25,37 @@
         $article_abstract = do_shortcode($pod->get_field('abstract_lang2'));
         $article_text = do_shortcode($pod->get_field('text_lang2'));
         $article_extra_content = do_shortcode($pod->get_field('extra_content_lang2'));
+        $pdf_uri = $pod->get_field('article_pdf_uri_lang2');
       } else {
         $article_title = $pod->get_field('name');
         $article_abstract = do_shortcode($pod->get_field('abstract'));
         $article_text = do_shortcode($pod->get_field('text'));
         $article_extra_content = do_shortcode($pod->get_field('extra_content'));
+        $pdf_uri = $pod->get_field('article_pdf_uri');
+      }
+      
+      // prepend base URI
+      // ToDo: add exceptions (e.g. Istanbul newspaper)
+      if($pdf_uri) {
+        $pdf_uri = "http://urban-age.net/0_downloads/" . $pdf_uri;
       }
       
       $article_publication_date = $pod->get_field('publication_date');
       $article_tags = $pod->get_field('tags');
       $article_authors = $pod->get_field('authors');
     ?>
-    
+
+<?php get_header(); ?>
+
+<div class="ninecol">
+<div role="main">
+
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<header class="entry-header">
+		<h1 class="entry-title"><?php the_title(); ?></h1>
+	</header><!-- .entry-header -->
+
+	<div class="entry-content">    
     <?php if(!empty($pod->data)): ?>
       <div class="article">
         <h1 class="entry-title article-title"><?php echo $article_title; ?></h1>
@@ -59,7 +67,13 @@
         
 		<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'twentyeleven' ) . '</span>', 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->
-	<div class="entry-meta">
+</article><!-- #post-<?php the_ID(); ?> -->
+
+</div>
+</div>
+
+<aside class="threecol">
+<div class="entry-meta">
     <div id="author-info">
       <?php if(is_array($article_authors)): ?>
         <h2>Authors</h2>
@@ -89,10 +103,11 @@
     </div>
 		<?php edit_post_link( __( 'Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
 	</div><!-- .entry-meta -->
-</article><!-- #post-<?php the_ID(); ?> -->
-
-</div>
-</div>
+  
+<?php if($pdf_uri) : ?>
+<a href="<?php echo $pdf_uri; ?>">Download this article as PDF</a>
+<?php endif; ?>
+</aside>
 
 <?php get_sidebar(); ?>
 
