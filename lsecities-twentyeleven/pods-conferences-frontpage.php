@@ -23,6 +23,8 @@ $pod = new Pod('conference', $conference_slug);
 
 <div role="main">
 
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<h1 class="entry-title"><?php $pod->get_field('name'); ?></h1>
@@ -149,6 +151,10 @@ $pod = new Pod('conference', $conference_slug);
 		<?php edit_post_link( __( 'Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
 	</div><!-- .entry-meta -->
 </article><!-- #post-<?php the_ID(); ?> -->
+
+<?php endwhile; else: ?>
+<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+<?php endif; ?>
 
 </div>
 
