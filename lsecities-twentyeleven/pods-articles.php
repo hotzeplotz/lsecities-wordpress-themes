@@ -72,7 +72,7 @@
 </div>
 </div>
 
-<aside class="threecol">
+<aside class="threecol last">
 <div class="entry-meta">
     <div id="author-info">
       <?php if(is_array($article_authors)): ?>
