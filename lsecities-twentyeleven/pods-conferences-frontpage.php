@@ -9,6 +9,16 @@
  */
 ?>
 
+<?php
+/**
+ * Pods initialization
+ * URI: TBD
+ */
+$conference_slug = get_post_meta($post->ID, 'conference_slug', true);
+error_log('conference_slug: ' . $conference_slug);
+$pod = new Pod('conference', $conference_slug);
+?>
+
 <?php get_header(); ?>
 
 <div role="main">
@@ -28,20 +38,11 @@
                 </a>
               </div>
               <aside class='extras fourcol last'>
-                <dl>
-                  <dt>Conference dates</dt>
-                  <dd>Hong Kong, 16 and 17 November 2011</dd>
-                  <dt>Venue</dt>
-                  <dd>The Venue, Hong Kong</dd>
-                  <dt>Press information</dt>
-                  <dd>
-                    <a href='#'>Download press pack</a>
-                  </dd>
-                </dl>
+              <?php echo do_shortcode($pod->get_field('info')); ?>
               </aside>
             </div>
             <div class='introblurb'>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus malesuada congue purus, sit amet porta augue tincidunt at.</p>
+              <?php echo do_shortcode($pod->get_field('abstract')); ?>
             </div>
             <div class='featureboxes clearfix row'>
               <div class='featurebox fourcol'>
@@ -63,7 +64,9 @@
                 <h2>Deutsche Bank Urban Age Award</h2>
               </div>
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus malesuada congue purus, sit amet porta augue tincidunt at. Aliquam vitae tellus sapien. Sed ullamcorper tortor lacus, ut pellentesque lorem. Donec lorem purus, feugiat lacinia tempor eu, convallis vitae nunc. Aliquam vulputate tristique quam, in iaculis erat blandit id. Cras mollis vestibulum odio quis adipiscing. Donec in mauris nec mauris aliquam suscipit sed a risus. Praesent non nisl mi. Suspendisse non elit metus. Pellentesque egestas pulvinar ipsum non suscipit. Sed quam turpis, commodo vitae aliquet id, consectetur ut urna. Sed turpis elit, mattis eget semper eget, iaculis eget mauris. Etiam dictum placerat est quis pretium. Aenean vel gravida lectus.</p>
+            <div id="the_content">
+            <?php the_content(); ?>
+            </div>
           </article>
           <aside class='twocol last'>
             <nav id='conferencesmenu'>
