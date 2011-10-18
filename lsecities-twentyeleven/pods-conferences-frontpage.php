@@ -17,6 +17,7 @@
 $conference_slug = get_post_meta($post->ID, 'conference_slug', true);
 error_log('conference_slug: ' . $conference_slug);
 $pod = new Pod('conference', $conference_slug);
+$button_links = $pod->get_field('links');
 ?>
 
 <?php get_header(); ?>
@@ -52,24 +53,12 @@ $pod = new Pod('conference', $conference_slug);
               <?php echo do_shortcode($pod->get_field('abstract')); ?>
             </div>
             <div class='featureboxes clearfix row'>
+              <?php foreach($button_links as $link) : ?>
+              <?php echo error_log(var_export($link)); ?>
               <div class='featurebox fourcol'>
-                <h2>Programme</h2>
+                <h2><?php echo $link['ID'] ; ?></h2>
               </div>
-              <div class='featurebox fourcol'>
-                <h2>Publications</h2>
-              </div>
-              <div class='featurebox fourcol last'>
-                <h2>Live streaming</h2>
-              </div>
-              <div class='featurebox fourcol'>
-                <h2>Photo galleries</h2>
-              </div>
-              <div class='featurebox fourcol'>
-                <h2>Press pack</h2>
-              </div>
-              <div class='featurebox fourcol last'>
-                <h2>Deutsche Bank Urban Age Award</h2>
-              </div>
+              <?php endforeach ; ?>
             </div>
             <div id="the_content">
             <?php the_content(); ?>
