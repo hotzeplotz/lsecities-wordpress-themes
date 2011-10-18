@@ -16,7 +16,7 @@
   $pod = new Pod('publication_wrappers', $publication_slug);
   $pod_title = $pod->get_field('name');
   $pod_subtitle = $pod->get_field('subtitle');
-  $pod_photo = $pod->get_field('cover');
+  $pod_cover = $pod->get_field('cover');
 ?>
 
 <?php get_header(); ?>
@@ -51,7 +51,7 @@
           </ul>
         </div>
         <div class="threecol">
-          <img src="<?php echo $pod_photo['guid'] ; ?>" />
+          <img src="<?php echo $pod_cover[0]['guid'] ; ?>" />
         </div>
       </div>
     <?php endif ?>    
