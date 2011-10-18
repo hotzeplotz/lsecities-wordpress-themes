@@ -50,7 +50,7 @@
             <?php endforeach; ?>
           </ul>
         </div>
-        <div class="threecol">
+        <div class="threecol last">
           <img src="<?php echo $pod_cover[0]['guid'] ; ?>" />
         </div>
       </div>
