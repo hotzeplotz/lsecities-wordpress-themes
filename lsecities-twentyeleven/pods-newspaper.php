@@ -16,7 +16,7 @@
   $pod = new Pod('publication_wrappers', $publication_slug);
   $pod_title = $pod->get_field('name');
   $pod_subtitle = $pod->get_field('publication_subtitle');
-  $pod_issuu = $pod->get_field('issuu');
+  $pod_issuu = do_shortcode($pod->get_field('issuu'));
   $pod_cover = $pod->get_field('cover');
   $pod_abstract = do_shortcode($pod->get_field('abstract'));
 ?>
