@@ -96,9 +96,10 @@
 </div>
 </div>
 <nav id='level1nav'>
-<?php wp_list_pages('depth=1&sort_column=menu_order&title_li='); ?>
-<!--
 <ul>
+<?php wp_list_pages('depth=1&sort_column=menu_order&title_li='); ?>
+
+<!--
 <li class='lsecitiesAreaAbout'>
 <a href='#'>
 About
@@ -131,8 +132,8 @@ Media Archive
 </a>
 
 </li>
-</ul>
 -->
+</ul>
 </nav>
 </div>
 </div>
