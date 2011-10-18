@@ -140,8 +140,10 @@ Media Archive
 <div class='row' id='mainmenus'>
 <nav class='twelvecol' id='level2nav'>
 <?php
-$toplevel_ancestor = array_pop(get_ancestors($post->ID));
+$ancestors = get_ancestors($post->ID);
+$toplevel_ancestor = array_pop($ancestors);
 error_log('post ID: ' . $post->ID);
+error_log('ancestors: ' . var_dump($ancestors, true));
 error_log('toplevel_ancestor: ' . $toplevel_ancestor);
 $level2nav = wp_list_pages('child_of=' . $toplevel_ancestor . '&depth=2&sort_column=menu_order&title_li=&echo=0');
 error_log('level2nav: ' . $level2nav);
