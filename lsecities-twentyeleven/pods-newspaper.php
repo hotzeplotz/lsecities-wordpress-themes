@@ -38,7 +38,7 @@
         <?php if($pod_subtitle) : ?>
         <h2><?php echo $pod_subtitle; ?></h2>
         <?php endif ; ?>
-        <div class="threecol">
+        <div class="sixcol">
           <ul>
             <?php foreach($pod->get_field('articles') as $a) : ?>
             <?php error_log(var_export($a['language']['name'], true)); ?>
