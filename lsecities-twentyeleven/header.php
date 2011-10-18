@@ -147,26 +147,7 @@ error_log('level2nav: ' . $level2nav);
 ?>
 <h1>Urban Age conferences</h1>
 <ul>
-<li>
-<a href='#'>
-Who's Who
-</a>
-</li>
-<li class='current'>
-<a href='/ua/conferences/'>
-Conferences
-</a>
-</li>
-<li>
-<a href='#'>
-Research
-</a>
-</li>
-<li>
-<a href='#'>
-Publications
-</a>
-</li>
+<?php echo $level2nav ; ?>
 </ul>
 </nav>
 </div>
