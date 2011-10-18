@@ -15,7 +15,8 @@
   error_log('publication_slug: ' . $publication_slug);
   $pod = new Pod('publication_wrappers', $publication_slug);
   $pod_title = $pod->get_field('name');
-  $pod_subtitle = $pod->get_field('subtitle');
+  $pod_subtitle = $pod->get_field('publication_subtitle');
+  $pod_issuu = $pod->get_field('issuu');
   $pod_cover = $pod->get_field('cover');
   $pod_abstract = do_shortcode($pod->get_field('abstract'));
 ?>
@@ -39,6 +40,7 @@
         <h2><?php echo $pod_subtitle; ?></h2>
         <?php endif ; ?>
         <div class="sixcol">
+          <h3>Read the articles</h3>
           <ul>
             <?php foreach($pod->get_field('articles') as $a) : ?>
             <?php error_log(var_export($a['language'][0], true)); ?>
@@ -50,6 +52,10 @@
               </li>
             <?php endforeach; ?>
           </ul>
+          <?php if($pod_issuu) : ?>
+          <h3>Browse the newspaper</h3>
+          <?php echo $pod_issuu ; ?>
+          <?php endif ; ?>
         </div>
         <div class="threecol">
           <img src="<?php echo $pod_cover[0]['guid'] ; ?>" />
