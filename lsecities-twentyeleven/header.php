@@ -140,7 +140,7 @@ Media Archive
 <div class='row' id='mainmenus'>
 <nav class='twelvecol' id='level2nav'>
 <?php
-$ancestors = get_ancestors($post->ID);
+$ancestors = get_ancestors('object_id' => $post->ID, 'object_type' => 'page');
 $toplevel_ancestor = array_pop($ancestors);
 error_log('post ID: ' . $post->ID);
 error_log('ancestors: ' . var_export($ancestors, true));
