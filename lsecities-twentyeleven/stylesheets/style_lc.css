@@ -166,7 +166,7 @@ nav#level1nav ul li.current, nav#level2nav ul li.current { border-bottom: #B4001
 #level1nav ul li:hover:not(.current).lsecitiesAreaMediaArchive, #level1nav ul li:hover:not(.current).page-item-313 { border-bottom: 5px solid rgba(75, 128, 68, 0.5); }
 
 #level2nav h1 { display: inline-block; color: #ffffff; font-size: 1.2em; font-weight: normal; font-family: UbuntuBold; padding: 0 0.5em; }
-#level2nav ul li.current a { border-bottom: #ffffff 5px solid; }
+#level2nav ul li.current a, #level2nav ul li.current-page-item a, #level2nav ul li.current-page-ancestor a { border-bottom: #ffffff 5px solid; }
 #level2nav ul a { color: #ffffff; display: block; margin: 0; border-bottom: 5px solid #b4001d; }
 #level2nav ul a:hover { border-bottom: 5px solid #ffffff; }
 
