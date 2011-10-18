@@ -56,7 +56,9 @@ $button_links = $pod->get_field('links');
               <?php foreach($button_links as $link) : ?>
               <?php error_log(var_export($link)); ?>
               <div class='featurebox fourcol'>
-                <h2><?php echo $link['ID'] ; ?></h2>
+                <a href="<?php echo $link['guid'] ; ?>" title="<?php echo $link['post_title'] ; ?>">
+                  <h2><?php echo $link['post_title'] ; ?></h2>
+                </a>
               </div>
               <?php endforeach ; ?>
             </div>
