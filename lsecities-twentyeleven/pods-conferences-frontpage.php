@@ -54,7 +54,7 @@ $button_links = $pod->get_field('links');
             </div>
             <div class='featureboxes clearfix row'>
               <?php foreach($button_links as $link) : ?>
-              <?php error_log(var_export($link)); ?>
+              <?php error_log(var_export($link), true); ?>
               <div class='featurebox fourcol'>
                 <a href="<?php echo $link['guid'] ; ?>" title="<?php echo $link['post_title'] ; ?>">
                   <h2><?php echo $link['post_title'] ; ?></h2>
