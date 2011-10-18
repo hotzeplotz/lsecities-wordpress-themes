@@ -17,6 +17,7 @@
   $pod_title = $pod->get_field('name');
   $pod_subtitle = $pod->get_field('subtitle');
   $pod_cover = $pod->get_field('cover');
+  $pod_abstract = do_shortcode($pod->get_field('abstract'));
 ?>
 
 <?php get_header(); ?>
@@ -37,7 +38,7 @@
         <?php if($pod_subtitle) : ?>
         <h2><?php echo $pod_subtitle; ?></h2>
         <?php endif ; ?>
-        <div class="ninecol">
+        <div class="threecol">
           <ul>
             <?php foreach($pod->get_field('articles') as $a) : ?>
             <?php error_log(var_export($a['language']['name'], true)); ?>
@@ -50,8 +51,11 @@
             <?php endforeach; ?>
           </ul>
         </div>
-        <div class="threecol last">
+        <div class="threecol">
           <img src="<?php echo $pod_cover[0]['guid'] ; ?>" />
+        </div>
+        <div class="threecol last">
+          <?php echo $pod_abstract ; ?>
         </div>
       </div>
     <?php endif ?>    
