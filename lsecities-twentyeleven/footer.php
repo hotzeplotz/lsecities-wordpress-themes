@@ -15,13 +15,13 @@
 	<footer id="footer" class="row">
 <nav id="footerSitemap">
 <section class="threecol">
-<h3>Network</h3>
+<h3>Who's who</h3>
 <ul>
-<li>Board</li>
-<li>Staff</li>
-<li>Advisory board</li>
-<li>Contributors</li>
-<li>Institutional partners</li>
+<li><a target="_blank" href="/about/whos-who/board/">Board</a></li>
+<li><a target="_blank" href="/about/whos-who/staff/">Staff</a></li>
+<li><a target="_blank" href="/about/whos-who/advisory-board/">Advisory board</a></li>
+<li><a target="_blank" href="/about/whos-who/contributors/">Contributors</a></li>
+<li><a target="_blank" href="/about/whos-who/institutional-partners/">Institutional partners</a></li>
 </ul>
 </section>
 <section class="threecol">
@@ -44,21 +44,19 @@
 <section class="threecol">
 <h3>Publications</h3>
 <ul>
-<li>Newsletter</li>
-<li>The Endless City</li>
-<li>Living in the Endless City</li>
-<li>Conference newspapers</li>
-<li>Research reports</li>
-<li>Archive</li>
+<li><a target="_blank" href="/publications/the-endless-city/">The Endless City</a></li>
+<li><a target="_blank" href="/publications/living-in-the-endless-city/">Living in the Endless City</a></li>
+<li><a target="_blank" href="/publications/newspapers/">Conference newspapers</a></li>
+<li><a target="_blank" href="/publications/research-reports/">Research reports</a></li>
 </ul>
 </section>
 <section class="threecol last">
 <h3>Deutsche Bank Urban Age Award</h3>
 <ul>
-<li>2010 | Mexico City</li>
-<li>2009 | Istanbul</li>
-<li>2008 | São Paulo</li>
-<li>2007 | Mumbai</li>
+<li><a target="_blank" href="http://www.alfred-herrhausen-society.org/en/1605.html">2010 | Mexico City</a></li>
+<li><a target="_blank" href="http://www.alfred-herrhausen-society.org/en/uaa_istanbul.html">2009 | Istanbul</a></li>
+<li><a target="_blank" href="http://www.alfred-herrhausen-society.org/en/50.html">2008 | São Paulo</a></li>
+<li><a target="_blank" href="http://www.alfred-herrhausen-society.org/en/52.html">2007 | Mumbai</a></li>
 </ul>
 </section>
 </nav>
