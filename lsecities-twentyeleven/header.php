@@ -103,18 +103,20 @@
 </div>
 </div>
 <div class='row' id='mainmenus'>
-<nav class='twelvecol' id='level2nav'>
 <?php
 $toplevel_ancestor = array_pop(get_ancestors($post->ID, 'page'));
 error_log('toplevel_ancestor: ' . $toplevel_ancestor);
 $level2nav = wp_list_pages('child_of=' . $toplevel_ancestor . '&depth=1&sort_column=menu_order&title_li=&echo=0');
 error_log('level2nav: ' . $level2nav);
 ?>
+<?php if($toplevel_ancestor) : ?>
+<nav class='twelvecol' id='level2nav'>
 <h1>Urban Age conferences</h1>
 <ul>
 <?php echo $level2nav ; ?>
 </ul>
 </nav>
+<?php endif ; ?>
 </div>
 
 
