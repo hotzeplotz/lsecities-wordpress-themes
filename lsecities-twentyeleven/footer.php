@@ -46,7 +46,7 @@
 <ul>
 <li><a target="_blank" href="/publications/the-endless-city/">The Endless City</a></li>
 <li><a target="_blank" href="/publications/living-in-the-endless-city/">Living in the Endless City</a></li>
-<li><a target="_blank" href="/publications/newspapers/">Conference newspapers</a></li>
+<li><a target="_blank" href="/publications/conference-newspapers/">Conference newspapers</a></li>
 <li><a target="_blank" href="/publications/research-reports/">Research reports</a></li>
 </ul>
 </section>
