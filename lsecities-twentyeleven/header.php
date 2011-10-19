@@ -8,6 +8,18 @@
  * @subpackage Twenty_Eleven
  * @since Twenty Eleven 1.0
  */
+?><?php
+$ancestors = get_ancestors($post->ID, 'page');
+$toplevel_ancestor = array_pop($ancestors);
+error_log('ancestors: ' . $ancestors);
+error_log('toplevel_ancestor: ' . $toplevel_ancestor);
+$level2nav = wp_list_pages('child_of=' . $toplevel_ancestor . '&depth=1&sort_column=menu_order&title_li=&echo=0');
+error_log('level2nav: ' . $level2nav);
+
+// check if we are in the Urban Age section
+$urban_age_section = in_array(94, $ancestors) ? true : false;
+$logo_element_id = $urban_age_section ? 'ualogo' : 'logo';
+
 ?><!DOCTYPE html>
 <!--[if IE 6]>
 <html id="ie6" <?php language_attributes(); ?>>
@@ -103,12 +115,7 @@
 </div>
 </div>
 <div class='row' id='mainmenus'>
-<?php
-$toplevel_ancestor = array_pop(get_ancestors($post->ID, 'page'));
-error_log('toplevel_ancestor: ' . $toplevel_ancestor);
-$level2nav = wp_list_pages('child_of=' . $toplevel_ancestor . '&depth=1&sort_column=menu_order&title_li=&echo=0');
-error_log('level2nav: ' . $level2nav);
-?>
+
 <?php if($toplevel_ancestor) : ?>
 <nav class='twelvecol' id='level2nav'>
 <h1>Urban Age conferences</h1>
