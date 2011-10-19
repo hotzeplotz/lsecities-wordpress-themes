@@ -15,7 +15,7 @@ $toplevel_ancestor = array_pop($ancestors);
 error_log('ancestors: ' . var_export($ancestors, true));
 error_log('ancestor[0]: ' . $ancestors[0]);
 error_log('toplevel_ancestor: ' . $toplevel_ancestor);
-$level2nav = wp_list_pages('child_of=' . $toplevel_ancestor . '&depth=1&sort_column=menu_order&title_li=&echo=0');
+$level2nav = wp_list_pages('child_of=' . $toplevel_ancestor . '&depth=1&sort_column=menu_order&title_li=&echo=0&exclude=393,395');
 
 // check if we are in the Urban Age section
 $urban_age_section = ($toplevel_ancestor == 94) ? true : false;
