@@ -17,7 +17,7 @@ $level2nav = wp_list_pages('child_of=' . $toplevel_ancestor . '&depth=1&sort_col
 error_log('level2nav: ' . $level2nav);
 
 // check if we are in the Urban Age section
-$urban_age_section = in_array(94, $ancestors) ? true : false;
+$urban_age_section = ($ancestors[0] == 94) ? true : false;
 $logo_element_id = $urban_age_section ? 'ualogo' : 'logo';
 
 ?><!DOCTYPE html>
