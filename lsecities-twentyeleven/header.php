@@ -107,7 +107,7 @@ $logo_element_id = $urban_age_section ? 'ualogo' : 'logo';
 </form>
 <div class='clearfix' id='persistentLogo'>
 
-<img id='lsecitiesSmallLogo' src='<?php echo get_template_directory_uri() ?>/images/logo_lsecities_nostrapline_small.gif'>
+<a href="/"><img id='lsecitiesSmallLogo' src='<?php echo get_template_directory_uri() ?>/images/logo_lsecities_nostrapline_small.gif'></a>
 </div>
 </div>
 <nav id='level1nav'>
