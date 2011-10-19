@@ -91,7 +91,7 @@ $logo_element_id = $urban_age_section ? 'ualogo' : 'logo';
 <div class='container' id='container'> <!-- ## grid -->
 <header id='header'>
 <div class='row'>
-<div class='full fivecol' id='ualogo'>
+<div class='full fivecol' id='<?php echo $logo_element_id ; ?>'>
 &nbsp;
 </div>
 <div class='sevencol last' id='toolbox'>
