@@ -35,7 +35,7 @@
 <li><a href="/ua/conferences/2008-sao-paulo/">São Paulo</a></li>
 <li><a href="/ua/conferences/2007-mumbai/">Mumbai</a></li>
 <li><a href="/ua/conferences/2006-german-cities/">German cities - Halle</a></li>
-<li><a href="/ua/conferences/2006-istanbul/">Berlin</a></li>
+<li><a href="/ua/conferences/2006-berlin/">Berlin</a></li>
 <li><a href="/ua/conferences/2006-johannesburg/">Johannesburg</a></li>
 <li><a href="/ua/conferences/2006-mexico-city/">Mexico City</a></li>
 <li><a href="/ua/conferences/2005-london/">London</a></li>
