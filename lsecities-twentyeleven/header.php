@@ -98,41 +98,6 @@
 <nav id='level1nav'>
 <ul>
 <?php wp_list_pages('depth=1&sort_column=menu_order&title_li='); ?>
-
-<!--
-<li class='lsecitiesAreaAbout'>
-<a href='#'>
-About
-</a>
-</li>
-<li class='lsecitiesAreaResearch'>
-<a href='#'>
-Research
-</a>
-</li>
-<li class='lsecitiesAreaPublications'>
-<a href='#'>
-
-Publications
-</a>
-</li>
-<li class='lsecitiesAreaEvents'>
-<a href='#'>
-Events
-</a>
-</li>
-<li class='current lsecitiesAreaUrbanAge'>
-<a href='#'>
-Urban Age
-</a>
-</li>
-<li class='last lsecitiesAreaMediaArchive'>
-<a href='#'>
-Media Archive
-</a>
-
-</li>
--->
 </ul>
 </nav>
 </div>
