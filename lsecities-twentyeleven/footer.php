@@ -27,18 +27,18 @@
 <section class="threecol">
 <h3>Conferences</h3>
 <ul>
-<li>New York</li>
-<li>Shanghai</li>
-<li>London</li>
-<li>Mexico City</li>
-<li>Johannesburg</li>
-<li>Berlin</li>
-<li>German cities - Halle</li>
-<li>Mumbai</li>
-<li>São Paulo</li>
-<li>Istanbul</li>
-<li>Chicago</li>
-<li>Hong Kong</li>
+<li><a href="/ua/conferences/2011-hongkong/">Hong Kong</a></li>
+<li><a href="/ua/conferences/2010-chicago/">Chicago</a></li>
+<li><a href="/ua/conferences/2009-istanbul/">Istanbul</a></li>
+<li><a href="/ua/conferences/2008-sao-paulo/">São Paulo</a></li>
+<li><a href="/ua/conferences/2007-mumbai/">Mumbai</a></li>
+<li><a href="/ua/conferences/2006-german-cities/">German cities - Halle</a></li>
+<li><a href="/ua/conferences/2006-istanbul/">Berlin</a></li>
+<li><a href="/ua/conferences/2006-johannesburg/">Johannesburg</a></li>
+<li><a href="/ua/conferences/2006-mexico-city/">Mexico City</a></li>
+<li><a href="/ua/conferences/2005-london/">London</a></li>
+<li><a href="/ua/conferences/2005-shanghai/">Shanghai</a></li>
+<li><a href="/ua/conferences/2005-new-york/">New York</a></li>
 </ul>
 </section>
 <section class="threecol">
