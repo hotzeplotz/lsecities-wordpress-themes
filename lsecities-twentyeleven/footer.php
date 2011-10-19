@@ -17,11 +17,13 @@
 <section class="threecol">
 <h3>Who's who</h3>
 <ul>
-<li><a target="_blank" href="/about/whos-who/board/">Board</a></li>
-<li><a target="_blank" href="/about/whos-who/staff/">Staff</a></li>
-<li><a target="_blank" href="/about/whos-who/advisory-board/">Advisory board</a></li>
-<li><a target="_blank" href="/about/whos-who/contributors/">Contributors</a></li>
-<li><a target="_blank" href="/about/whos-who/institutional-partners/">Institutional partners</a></li>
+<li><a href="/about/whos-who/governing-board/">Governing board</a></li>
+<li><a href="/about/whos-who/advisory-board/">Advisory board</a></li>
+<li><a href="/about/whos-who/executive-group/">Executive Group</a></li>
+<li><a href="/about/whos-who/staff/">Staff</a></li>
+<li><a href="/ua/whos-who/board/">Urban Age board</a></li>
+<li><a href="/ua/whos-who/contributors/">Urban Age contributors</a></li>
+<li><a href="/about/whos-who/institutional-partners/">Institutional partners</a></li>
 </ul>
 </section>
 <section class="threecol">
@@ -44,10 +46,10 @@
 <section class="threecol">
 <h3>Publications</h3>
 <ul>
-<li><a target="_blank" href="/publications/the-endless-city/">The Endless City</a></li>
-<li><a target="_blank" href="/publications/living-in-the-endless-city/">Living in the Endless City</a></li>
-<li><a target="_blank" href="/publications/conference-newspapers/">Conference newspapers</a></li>
-<li><a target="_blank" href="/publications/research-reports/">Research reports</a></li>
+<li><a href="/publications/the-endless-city/">The Endless City</a></li>
+<li><a href="/publications/living-in-the-endless-city/">Living in the Endless City</a></li>
+<li><a href="/publications/conference-newspapers/">Conference newspapers</a></li>
+<li><a href="/publications/research-reports/">Research reports</a></li>
 </ul>
 </section>
 <section class="threecol last">
