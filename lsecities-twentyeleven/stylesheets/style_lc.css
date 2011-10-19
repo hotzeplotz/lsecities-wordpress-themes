@@ -138,7 +138,7 @@ body > #container > header #subsitesNavigation { height: 2.906em; font-size: 0.7
 body > #container > header #subsitesNavigation img#lsecitiesSmallLogo { padding: 0.125em 2em 0; margin: 0.125em auto 0; display: block; background-color: #ffffff; -moz-border-radius-topleft: 3px; -webkit-border-top-left-radius: 3px; -o-border-top-left-radius: 3px; -ms-border-top-left-radius: 3px; -khtml-border-top-left-radius: 3px; border-top-left-radius: 3px; -moz-border-radius-topright: 3px; -webkit-border-top-right-radius: 3px; -o-border-top-right-radius: 3px; -ms-border-top-right-radius: 3px; -khtml-border-top-right-radius: 3px; border-top-right-radius: 3px; }
 body > #container > header #subsitesNavigation ul li a { color: #ffffff; }
 
-body > #container > header #logo.full { background: url("../images/logo_lsecities_strapline.gif") no-repeat scroll 0 0 transparent; height: 6.93333em; text-indent: -9999px; }
+body > #container > header #logo.full { background: url("../images/logo_lsecities_strapline.gif") no-repeat scroll 0 0 transparent; height: 6.93333em; margin-top: 0.166667em; text-indent: -9999px; }
 
 body > #container > header #logo.small { background: url("../images/logo_lsecities_nostrapline_small.gif") no-repeat scroll left bottom transparent; height: 59px; /* kept consistent with #logo.full to allow bottom alignment */ margin-top: 5px; margin-bottom: 5px; text-indent: -9999px; }
 
