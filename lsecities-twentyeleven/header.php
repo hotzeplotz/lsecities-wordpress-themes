@@ -121,7 +121,7 @@ $logo_element_id = $urban_age_section ? 'ualogo' : 'logo';
 
 <?php if($toplevel_ancestor) : ?>
 <nav class='twelvecol' id='level2nav'>
-<h1>Urban Age conferences</h1>
+<h1>&nbsp;</h1>
 <ul>
 <?php echo $level2nav ; ?>
 </ul>
