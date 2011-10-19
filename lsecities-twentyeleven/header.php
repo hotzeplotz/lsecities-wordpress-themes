@@ -91,9 +91,11 @@ $logo_element_id = $urban_age_section ? 'ualogo' : 'logo';
 <div class='container' id='container'> <!-- ## grid -->
 <header id='header'>
 <div class='row'>
+<a href="/<?php if($urban_age_section) { echo 'ua/'; }?>">
 <div class='full fivecol' id='<?php echo $logo_element_id ; ?>'>
 &nbsp;
 </div>
+</a>
 <div class='sevencol last' id='toolbox'>
 <div id='searchbox'>
 <form action='http://www.google.com/u/urbanAge' id='search-box' method='get'>
