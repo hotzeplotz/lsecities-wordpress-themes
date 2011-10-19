@@ -194,6 +194,11 @@ $button_links = $pod->get_field('features');
 
 </div>
 
+<script>
+$(function() {
+  $('.flipbox').quickFlip();
+});
+</script>
 <?php get_sidebar(); ?>
 
 <?php get_footer(); ?>
