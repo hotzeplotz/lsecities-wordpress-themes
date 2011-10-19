@@ -84,12 +84,12 @@ $button_links = $pod->get_field('features');
 <img src='http://placehold.it/500x310'>
 </div>
 </div>
-<div class='flipbox twelvecol boxbig'>
+<div class='flipbox twelvecol last boxbig'>
 <div class='box recto'>
-<img class='last' src='http://placehold.it/500x310'>
+<img class='quickFlipCta' src='http://placehold.it/500x310'>
 </div>
 <div class='box verso'>
-<img class='last' src='http://placehold.it/500x310'>
+<img class='quickFlipCta' src='http://placehold.it/1000x620/ffcc00/000000'>
 </div>
 </div>
 </div>
