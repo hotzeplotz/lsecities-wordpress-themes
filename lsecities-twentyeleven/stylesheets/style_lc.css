@@ -63,7 +63,7 @@ hr {
 body {
     font-family: UbuntuRegular,Tahoma,sans-serif;
     font-size: 16px;
-    line-height: 1;
+    line-height: 1.5;
 }
 pre, code, kbd, samp {
     font-family: monospace,sans-serif;
