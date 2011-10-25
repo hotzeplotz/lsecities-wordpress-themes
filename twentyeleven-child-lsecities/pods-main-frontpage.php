@@ -94,26 +94,27 @@ $button_links = $pod->get_field('features');
             </div>
           </div>
         </div>
-        <div class='row' id='topnews'>
-          <div class='featureboxes clearfix row'>
-            <h2>News</h2>
-            
-            <?php $latest_news = new WP_Query('posts_per_page=3');
-              $post_index = 1;
-              while ($latest_news->have_posts()) : $latest_news->the_post();
-              $do_not_duplicate = $post->ID;
-              if($post_index++ == 3) { $class_extra = " last"; }
-              ?>
-            <!-- Do stuff... -->
-            <div class='featurebox fourcol<?php echo $class_extra; ?>'>
-              <h3><?php the_title(); ?></h3>
-              <?php the_excerpt(); ?>
-            </div>
-            <?php endwhile; ?>
-          </div>
-        </div>
         <?php edit_post_link( __( 'Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
       </article>
+      <aside class="twocol">
+      </aside>
+      <div class='row' id='topnews'>
+        <div class='featureboxes clearfix row'>
+          <h2>News</h2>
+          
+          <?php $latest_news = new WP_Query('posts_per_page=3');
+            $post_index = 1;
+            while ($latest_news->have_posts()) : $latest_news->the_post();
+            $do_not_duplicate = $post->ID;
+            if($post_index++ == 3) { $class_extra = " last"; }
+            ?>
+          <div class='featurebox fourcol<?php echo $class_extra; ?>'>
+            <h3><?php the_title(); ?></h3>
+            <?php the_excerpt(); ?>
+          </div>
+          <?php endwhile; ?>
+        </div>
+      </div>
     </div>        
 		<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'twentyeleven' ) . '</span>', 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->
