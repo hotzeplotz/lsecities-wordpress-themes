@@ -172,8 +172,16 @@ nav#level1nav ul li.current, nav#level2nav ul li.current { border-bottom: #B4001
 #level2nav ul a { color: #ffffff; display: block; margin: 0; border-bottom: 5px solid #b4001d; }
 #level2nav ul a:hover { border-bottom: 5px solid #ffffff; }
 
-#level2nav, #level2nav ul { background-color: #b4001d; }
+#level2nav.section-ancestor-303 { background-color: #00aeef; }
+#level2nav.section-ancestor-306 { background-color: #ff7700; }
+#level2nav.section-ancestor-309 { background-color: #db4140; }
+#level2nav.section-ancestor-311 { background-color: #363795; }
+#level2nav.section-ancestor-94 { background-color: #b4001d; }
+#level2nav.section-ancestor-313 { background-color: #4b8044; }
+#level2nav ul { background-color: inherit; }
 
+/*   #level2nav, #level2nav ul { background-color: #b4001d; }
+*/
 header #searchbox { float: right; }
 header #searchbox form { opacity: 0.3; font-size: 0.75em; }
 header #searchbox form:hover { opacity: 0.9; }

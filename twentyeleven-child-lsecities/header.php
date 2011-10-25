@@ -122,7 +122,7 @@ $logo_element_id = $urban_age_section ? 'ualogo' : 'logo';
 <div class='row' id='mainmenus'>
 
 <?php if($toplevel_ancestor) : ?>
-<nav class='twelvecol' id='level2nav'>
+<nav class='twelvecol section-ancestor-<?php echo $toplevel_ancestor ; ?>' id='level2nav'>
 <h1>&nbsp;</h1>
 <ul>
 <?php echo $level2nav ; ?>
