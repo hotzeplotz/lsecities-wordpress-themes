@@ -99,12 +99,15 @@ $button_links = $pod->get_field('features');
             <h2>News</h2>
             
             <?php $latest_news = new WP_Query('posts_per_page=3');
+              $post_index = 1;
               while ($latest_news->have_posts()) : $latest_news->the_post();
-              $do_not_duplicate = $post->ID; ?>
+              $do_not_duplicate = $post->ID;
+              $class_extra = " last" if(++$post_index ==3);
+              ?>
             <!-- Do stuff... -->
-            <div class='featurebox fourcol'>
+            <div class='featurebox fourcol<?php echo $class_extra; ?>'>
               <h3><?php the_title(); ?></h3>
-              <p><?php the_excerpt(); ?></p>
+              <?php the_excerpt(); ?>
             </div>
             <?php endwhile; ?>
           </div>
