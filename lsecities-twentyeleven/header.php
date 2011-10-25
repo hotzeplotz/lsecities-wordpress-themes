@@ -63,7 +63,6 @@ $logo_element_id = $urban_age_section ? 'ualogo' : 'logo';
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_directory') ?>/stylesheets/cssgrid.net/1140.css" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_directory') ?>/stylesheets/style_lc.css" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_directory') ?>/stylesheets/flickrbomb.css" />
-<link href='http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
 <?php wp_enqueue_style('fonts_ubuntu', get_template_directory_uri() . '/stylesheets/fonts/ubuntu/stylesheet.css'); ?>
 <?php wp_enqueue_style('fonts_linux_libertine', get_template_directory_uri() . '/stylesheets/fonts/linux-libertine/stylesheet.css'); ?>
