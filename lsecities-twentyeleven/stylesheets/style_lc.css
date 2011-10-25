@@ -7,6 +7,9 @@ dl dd {
 a, a:focus, a:active, a:hover {
     text-decoration: none;
 }
+p {
+    margin-bottom: 1.625em;
+}
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
     border: 0 none;
     font-size: 100%;
@@ -63,7 +66,7 @@ hr {
 body {
     font-family: UbuntuRegular,Tahoma,sans-serif;
     font-size: 16px;
-    line-height: 1;
+    line-height: 1.2;
 }
 pre, code, kbd, samp {
     font-family: monospace,sans-serif;
@@ -221,7 +224,7 @@ aside h2 {
     padding: 0.5em;
 }
 article {
-    font-family: LinuxLibertineORegular,Gentium Book Basic,serif;
+    font-family: ff-meta-serif-web-pro,Palatino,Georgia,LinuxLibertineORegular,Gentium Book Basic,serif;
 }
 small {
     font-size: 69%;

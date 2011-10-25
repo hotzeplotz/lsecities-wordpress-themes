@@ -73,6 +73,8 @@
 <script src="<?php bloginfo( 'stylesheet_directory' ); ?>/javascripts/application.js?1315255380" type="text/javascript"></script> 
  
 <script src='<?php bloginfo( 'stylesheet_directory' ); ?>/javascripts/jquery.flickrbomb.min.js'></script> 
+<script type="text/javascript" src="https://use.typekit.com/loj6mke.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
 </body>
 </html>
