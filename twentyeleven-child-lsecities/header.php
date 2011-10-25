@@ -61,12 +61,11 @@ $logo_element_id = $urban_age_section ? 'ualogo' : 'logo';
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_directory') ?>/stylesheets/cssgrid.net/1140.css" />
-<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_directory') ?>/stylesheets/style_lc.css" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_directory') ?>/stylesheets/flickrbomb.css" />
 <link href='http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
-<?php wp_enqueue_style('fonts_ubuntu', get_template_directory_uri() . '/stylesheets/fonts/ubuntu/stylesheet.css'); ?>
-<?php wp_enqueue_style('fonts_linux_libertine', get_template_directory_uri() . '/stylesheets/fonts/linux-libertine/stylesheet.css'); ?>
-<?php wp_enqueue_script('jquery.quickflip', get_template_directory_uri() . '/javascripts/jquery.quickflip.min.js', 'jquery', false, true); ?>
+<?php wp_enqueue_style('fonts_ubuntu', get_stylesheet_directory_uri() . '/stylesheets/fonts/ubuntu/stylesheet.css'); ?>
+<?php wp_enqueue_style('fonts_linux_libertine', get_stylesheet_directory_uri() . '/stylesheets/fonts/linux-libertine/stylesheet.css'); ?>
+<?php wp_enqueue_script('jquery.quickflip', get_stylesheet_directory_uri() . '/javascripts/jquery.quickflip.min.js', 'jquery', false, true); ?>
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
@@ -108,7 +107,7 @@ $logo_element_id = $urban_age_section ? 'ualogo' : 'logo';
 </form>
 <div class='clearfix' id='persistentLogo'>
 
-<a href="/"><img id='lsecitiesSmallLogo' src='<?php echo get_template_directory_uri() ?>/images/logo_lsecities_nostrapline_small.gif'></a>
+<a href="/"><img id='lsecitiesSmallLogo' src='<?php echo get_stylesheet_directory_uri() ?>/images/logo_lsecities_nostrapline_small.gif'></a>
 </div>
 </div>
 <nav id='level1nav'>
