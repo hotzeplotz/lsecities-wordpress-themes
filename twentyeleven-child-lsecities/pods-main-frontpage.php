@@ -73,7 +73,7 @@ $button_links = $pod->get_field('features');
                 <img class='quickFlipCta' src='http://placehold.it/500x310'>
               </div>
               <div class='box verso'>
-                <img class='quickFlipCta' src='http://placehold.it/500x310'>
+                <img class='quickFlipCta' src='http://placehold.it/1000x620/ffcc00/000000'>
               </div>
             </div>
             <div class='flipbox sixcol boxsmall last'>
@@ -81,7 +81,7 @@ $button_links = $pod->get_field('features');
                 <img class='quickFlipCta' src='http://placehold.it/500x310'>
               </div>
               <div class='box verso'>
-                <img class='quickFlipCta' src='http://placehold.it/500x310'>
+                <img class='quickFlipCta' src='http://placehold.it/1000x620/ffcc00/000000'>
               </div>
             </div>
             <div class='flipbox twelvecol last boxbig'>
@@ -102,7 +102,7 @@ $button_links = $pod->get_field('features');
               $post_index = 1;
               while ($latest_news->have_posts()) : $latest_news->the_post();
               $do_not_duplicate = $post->ID;
-              if(++$post_index == 3) { $class_extra = " last"; }
+              if($post_index++ == 3) { $class_extra = " last"; }
               ?>
             <!-- Do stuff... -->
             <div class='featurebox fourcol<?php echo $class_extra; ?>'>
@@ -112,84 +112,12 @@ $button_links = $pod->get_field('features');
             <?php endwhile; ?>
           </div>
         </div>
+        <?php edit_post_link( __( 'Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
       </article>
-    </div>
-<!--
-          <aside class='twocol last'>
-            <nav id='conferencesmenu'>
-              <h2>Urban Age conferences</h2>
-              <ul>
-                <li class='cityName conferencesAsia'>
-                  <a href='/ua/conferences/2011-hongkong/'>Hong Kong</a>
-                </li>
-                <li class='cityName conferencesNorthAmerica'>
-                  <a href='/ua/conferences/2010-chicago/'>Chicago</a>
-                </li>
-                <li class='cityName conferencesEurope'>
-                  <a href='/ua/conferences/2009-istanbul/'>Istanbul</a>
-                </li>
-                <li class='cityName conferencesSouthAmerica'>
-                  <a href='/ua/conferences/2008-sao-paulo/'>São Paulo</a>
-                </li>
-                <li class='cityName conferencesAsia'>
-                  <a href='/ua/conferences/2007-mumbai/'>Mumbai</a>
-                </li>
-                <li class='cityName conferencesEurope'>
-                  <a href='/ua/conferences/2006-berlin/'>Berlin</a>
-                </li>
-                <li class='cityName conferencesAfrica'>
-                  <a href='/ua/conferences/2006-johannesburg/'>Johannesburg</a>
-                </li>
-                <li class='cityName conferencesSouthAmerica'>
-                  <a href='/ua/conferences/2006-mexico-city/'>Mexico City</a>
-                </li>
-                <li class='cityName conferencesEurope'>
-                  <a href='/ua/conferences/2005-london/'>London</a>
-                </li>
-                <li class='cityName conferencesAsia'>
-                  <a href='/ua/conferences/2005-shanghai/'>Shanghai</a>
-                </li>
-                <li class='cityName conferencesNorthAmerica'>
-                  <a href='/ua/conferences/2005-new-york/'>New York</a>
-                </li>
-              </ul>
-            </nav>
-          </aside>
--->
-
-        
+    </div>        
 		<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'twentyeleven' ) . '</span>', 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->
-	<div class="entry-meta">
-    <div id="author-info">
-      <?php if(is_array($article_authors)): ?>
-        <h2>Authors</h2>
-        <ul>
-        <?php foreach($article_authors as $a): ?>
-          <li><?php echo $a['name'] ?> <?php echo $a['family_name'] ?></li>
-        <?php endforeach; ?>
-        </ul>
-      <?php endif; ?>
-      <h2>Article metadata</h2>
-      <dl>
-        <dt>Publication date</dt>
-        <dd><?php echo $article_publication_date ?></dd>
-        <dt>Tags</dt>
-        <dd>
-          <?php if(is_array($article_tags)): ?>
-          <ul>
-            <?php foreach($article_tags as $t): ?>
-              <li><?php echo $t['name'] ; ?></li>
-            <?php endforeach; ?>
-          </ul>
-          <?php else: ?>
-          <em>no tags defined</em>
-          <?php endif; ?>
-        </dd>
-      </dl>
-    </div>
-		<?php edit_post_link( __( 'Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
-	</div><!-- .entry-meta -->
+
 </article><!-- #post-<?php the_ID(); ?> -->
 
 <?php endwhile; else: ?>
