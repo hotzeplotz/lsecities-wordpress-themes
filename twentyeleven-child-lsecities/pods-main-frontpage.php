@@ -97,15 +97,16 @@ $button_links = $pod->get_field('features');
         <div class='row' id='topnews'>
           <div class='featureboxes clearfix row'>
             <h2>News</h2>
+            
+            <?php $latest_news = new WP_Query('posts_per_page=3');
+              while ($latest_news->have_posts()) : $latest_news->the_post();
+              $do_not_duplicate = $post->ID; ?>
+            <!-- Do stuff... -->
             <div class='featurebox fourcol'>
-              <h3>Lorem ipsum</h3>
+              <h3><?php the_title(); ?></h3>
+              <p><?php the_excerpt(); ?></p>
             </div>
-            <div class='featurebox fourcol'>
-              <h3>Lorem ipsum</h3>
-            </div>
-            <div class='featurebox fourcol last'>
-              <h3>Lorem ipsum</h3>
-            </div>
+            <?php endwhile; ?>
           </div>
         </div>
       </article>
