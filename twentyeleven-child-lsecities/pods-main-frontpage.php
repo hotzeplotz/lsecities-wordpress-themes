@@ -70,26 +70,26 @@ $button_links = $pod->get_field('features');
           <div class='features sixcol last'>
             <div class='flipbox sixcol boxsmall'>
               <div class='box recto'>
-                <img src='http://placehold.it/500x310'>
+                <img class='quickFlipCta' src='http://placehold.it/500x310'>
               </div>
               <div class='box verso'>
-                <img src='http://placehold.it/500x310'>
+                <img class='quickFlipCta' src='http://placehold.it/500x310'>
               </div>
             </div>
             <div class='flipbox sixcol boxsmall last'>
               <div class='box recto'>
-                <img src='http://placehold.it/500x310'>
+                <img class='quickFlipCta' src='http://placehold.it/500x310'>
               </div>
               <div class='box verso'>
-                <img src='http://placehold.it/500x310'>
+                <img class='quickFlipCta' src='http://placehold.it/500x310'>
               </div>
             </div>
             <div class='flipbox twelvecol last boxbig'>
               <div class='box recto'>
-                <img class='quickFlipCta' src='http://placehold.it/500x310'>
+                <img class='quickFlipCta' class='quickFlipCta' src='http://placehold.it/500x310'>
               </div>
               <div class='box verso'>
-                <img class='quickFlipCta' src='http://placehold.it/1000x620/ffcc00/000000'>
+                <img class='quickFlipCta' class='quickFlipCta' src='http://placehold.it/1000x620/ffcc00/000000'>
               </div>
             </div>
           </div>
