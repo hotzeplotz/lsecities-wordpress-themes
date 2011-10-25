@@ -38,78 +38,78 @@ $button_links = $pod->get_field('features');
 
 	<div class="entry-content">
 
-<div class='row' id='core'>
-<article class='tencol'>
-<div class='row' id='headfeatures'>
-<div class='features sixcol'>
-<div class='flipbox twelvecol last boxbig'>
-<div class='box recto'>
-<img class='quickFlipCta' src='http://placehold.it/500x310'>
-</div>
-<div class='box verso'>
-<img class='quickFlipCta' src='http://placehold.it/1000x620/ffcc00/000000'>
-</div>
-</div>
-<div class='flipbox sixcol'>
-<div class='box recto'>
-<img class='quickFlipCta' src='http://placehold.it/500x310'>
-</div>
-<div class='box verso'>
-<img class='quickFlipCta' src='http://placehold.it/1000x620/ffcc00/000000'>
-</div>
-</div>
-<div class='flipbox sixcol last'>
-<div class='box recto'>
-<img class='quickFlipCta' src='http://placehold.it/500x310'>
-</div>
-<div class='box verso'>
-<img class='quickFlipCta' src='http://placehold.it/1000x620/ffcc00/000000'>
-</div>
-</div>
-</div>
-<div class='features sixcol last'>
-<div class='flipbox sixcol boxsmall'>
-<div class='box recto'>
-<img src='http://placehold.it/500x310'>
-</div>
-<div class='box verso'>
-<img src='http://placehold.it/500x310'>
-</div>
-</div>
-<div class='flipbox sixcol boxsmall last'>
-<div class='box recto'>
-<img src='http://placehold.it/500x310'>
-</div>
-<div class='box verso'>
-<img src='http://placehold.it/500x310'>
-</div>
-</div>
-<div class='flipbox twelvecol last boxbig'>
-<div class='box recto'>
-<img class='quickFlipCta' src='http://placehold.it/500x310'>
-</div>
-<div class='box verso'>
-<img class='quickFlipCta' src='http://placehold.it/1000x620/ffcc00/000000'>
-</div>
-</div>
-</div>
-</div>
-<div class='row' id='topnews'>
-<div class='featureboxes clearfix row'>
-<h2>News</h2>
-<div class='featurebox fourcol'>
-<h3>Lorem ipsum</h3>
-</div>
-<div class='featurebox fourcol'>
-<h3>Lorem ipsum</h3>
-</div>
-<div class='featurebox fourcol last'>
-<h3>Lorem ipsum</h3>
-</div>
-</div>
-</div>
-</article>
-</div>
+    <div class='row' id='core'>
+      <article class='tencol'>
+        <div class='row' id='headfeatures'>
+          <div class='features sixcol'>
+            <div class='flipbox twelvecol last boxbig'>
+              <div class='box recto'>
+                <img class='quickFlipCta' src='http://placehold.it/500x310'>
+              </div>
+              <div class='box verso'>
+                <img class='quickFlipCta' src='http://placehold.it/1000x620/ffcc00/000000'>
+              </div>
+            </div>
+            <div class='flipbox sixcol'>
+              <div class='box recto'>
+                <img class='quickFlipCta' src='http://placehold.it/500x310'>
+              </div>
+              <div class='box verso'>
+                <img class='quickFlipCta' src='http://placehold.it/1000x620/ffcc00/000000'>
+              </div>
+            </div>
+            <div class='flipbox sixcol last'>
+              <div class='box recto'>
+                <img class='quickFlipCta' src='http://placehold.it/500x310'>
+              </div>
+              <div class='box verso'>
+                <img class='quickFlipCta' src='http://placehold.it/1000x620/ffcc00/000000'>
+              </div>
+            </div>
+          </div>
+          <div class='features sixcol last'>
+            <div class='flipbox sixcol boxsmall'>
+              <div class='box recto'>
+                <img src='http://placehold.it/500x310'>
+              </div>
+              <div class='box verso'>
+                <img src='http://placehold.it/500x310'>
+              </div>
+            </div>
+            <div class='flipbox sixcol boxsmall last'>
+              <div class='box recto'>
+                <img src='http://placehold.it/500x310'>
+              </div>
+              <div class='box verso'>
+                <img src='http://placehold.it/500x310'>
+              </div>
+            </div>
+            <div class='flipbox twelvecol last boxbig'>
+              <div class='box recto'>
+                <img class='quickFlipCta' src='http://placehold.it/500x310'>
+              </div>
+              <div class='box verso'>
+                <img class='quickFlipCta' src='http://placehold.it/1000x620/ffcc00/000000'>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class='row' id='topnews'>
+          <div class='featureboxes clearfix row'>
+            <h2>News</h2>
+            <div class='featurebox fourcol'>
+              <h3>Lorem ipsum</h3>
+            </div>
+            <div class='featurebox fourcol'>
+              <h3>Lorem ipsum</h3>
+            </div>
+            <div class='featurebox fourcol last'>
+              <h3>Lorem ipsum</h3>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
 <!--
           <aside class='twocol last'>
             <nav id='conferencesmenu'>
