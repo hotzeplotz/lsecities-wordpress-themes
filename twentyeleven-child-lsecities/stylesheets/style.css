@@ -126,7 +126,11 @@ a, a:focus, a:active, a:hover { text-decoration: none; }
 
 p { margin-bottom: 1.625em; }
 
+h1, h2, h3, h4, h5, h6 { font-family: ff-meta-web-pro, UbuntuRegular, Tahoma, Elvetica, sans-serif; }
+
 body { background: inherit; }
+
+header h1.entry-title { font-size: 2em; margin-bottom: 1.2em; }
 
 body > #container > header { /* font-size: 0.75em; */ /* margin-top: 1em; */ /* background: url('../images/backgrounds/header-background-strip-lsecities.gif') repeat-x; */ border-top: 3px solid #ff0000; }
 body > #container > header nav { color: inherit; }
