@@ -174,7 +174,7 @@ header #searchbox { float: right; }
 header #searchbox form { opacity: 0.3; font-size: 0.75em; }
 header #searchbox form:hover { opacity: 0.9; }
 
-#persistentLogo { float: right; }
+#persistentLogo { float: right; height: 31px; }
 
 header #searchbox input#queryfield { background: url("../images/icons/search_icon.png") no-repeat scroll right center transparent; border: 1px solid #CCCCCC; height: 1.2em; margin: 10px 0; padding: 3px 0; }
 
