@@ -9,10 +9,10 @@
  * @since Twenty Eleven 1.0
  */
 ?><?php
-error_log($post->ID);
+error_log('header.php starting for post with ID ' . $post->ID);
 $ancestors = get_ancestors($post->ID, 'page');
 $toplevel_ancestor = array_pop($ancestors);
-error_log('ancestors: ' . var_export($ancestors, true));
+error_log('ancestors (array): ' . var_export($ancestors, true));
 error_log('ancestor[0]: ' . $ancestors[0]);
 error_log('toplevel_ancestor: ' . $toplevel_ancestor);
 $level2nav = wp_list_pages('child_of=' . $toplevel_ancestor . '&depth=1&sort_column=menu_order&title_li=&echo=0');
