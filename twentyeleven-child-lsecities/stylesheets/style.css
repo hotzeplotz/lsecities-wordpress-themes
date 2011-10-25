@@ -153,18 +153,18 @@ nav#level1nav, nav#level2nav { line-height: 1.5em; font-family: UbuntuRegular; }
 nav#level1nav ul li.current, nav#level2nav ul li.current { border-bottom: #B4001D 5px solid; }
 
 #level1nav ul li:hover:not(.current), #level1nav ul li:hover:not(.current_page_item) { border-bottom: 5px solid; }
-#level1nav ul li.current, #level1nav ul li.current_page_item { border-bottom: 5px solid; }
-#level1nav ul li.lsecitiesAreaAbout, #level1nav ul li.page-item-303 { border-bottom: 5px hidden #00aeef; }
+#level1nav ul li.current, #level1nav ul li.current_page_item { border-bottom-width: 5px; border-bottom-style: solid; }
+#level1nav ul li.lsecitiesAreaAbout, #level1nav ul li.page-item-303 { border-bottom: #00aeef; }
 #level1nav ul li.lsecitiesAreaAbout:hover:not(.current), #level1nav ul li.lsecitiesAreaAbout:hover:not(.current_page_item), #level1nav ul li.page-item-303:hover:not(.current), #level1nav ul li.page-item-303:hover:not(.current_page_item) { border-bottom-color: rgba(0, 174, 239, 0.5); }
-#level1nav ul li.lsecitiesAreaResearch, #level1nav ul li.page-item-306 { border-bottom: 5px hidden #ff7700; }
+#level1nav ul li.lsecitiesAreaResearch, #level1nav ul li.page-item-306 { border-bottom: #ff7700; }
 #level1nav ul li.lsecitiesAreaResearch:hover:not(.current), #level1nav ul li.lsecitiesAreaResearch:hover:not(.current_page_item), #level1nav ul li.page-item-306:hover:not(.current), #level1nav ul li.page-item-306:hover:not(.current_page_item) { border-bottom-color: rgba(255, 119, 0, 0.5); }
-#level1nav ul li.lsecitiesAreaPublications, #level1nav ul li.page-item-309 { border-bottom: 5px hidden #db4140; }
+#level1nav ul li.lsecitiesAreaPublications, #level1nav ul li.page-item-309 { border-bottom: #db4140; }
 #level1nav ul li.lsecitiesAreaPublications:hover:not(.current), #level1nav ul li.lsecitiesAreaPublications:hover:not(.current_page_item), #level1nav ul li.page-item-309:hover:not(.current), #level1nav ul li.page-item-309:hover:not(.current_page_item) { border-bottom-color: rgba(219, 65, 64, 0.5); }
-#level1nav ul li.lsecitiesAreaEvents, #level1nav ul li.page-item-311 { border-bottom: 5px hidden #363795; }
+#level1nav ul li.lsecitiesAreaEvents, #level1nav ul li.page-item-311 { border-bottom: #363795; }
 #level1nav ul li.lsecitiesAreaEvents:hover:not(.current), #level1nav ul li.lsecitiesAreaEvents:hover:not(.current_page_item), #level1nav ul li.page-item-311:hover:not(.current), #level1nav ul li.page-item-311:hover:not(.current_page_item) { border-bottom-color: rgba(54, 55, 149, 0.5); }
-#level1nav ul li.lsecitiesAreaUrbanAge, #level1nav ul li.page-item-94 { border-bottom: 5px hidden #b4001d; }
+#level1nav ul li.lsecitiesAreaUrbanAge, #level1nav ul li.page-item-94 { border-bottom: #b4001d; }
 #level1nav ul li.lsecitiesAreaUrbanAge:hover:not(.current), #level1nav ul li.lsecitiesAreaUrbanAge:hover:not(.current_page_item), #level1nav ul li.page-item-94:hover:not(.current), #level1nav ul li.page-item-94:hover:not(.current_page_item) { border-bottom-color: rgba(180, 0, 29, 0.5); }
-#level1nav ul li.lsecitiesAreaMediaArchive, #level1nav ul li.page-item-313 { border-bottom: 5px hidden #4b8044; }
+#level1nav ul li.lsecitiesAreaMediaArchive, #level1nav ul li.page-item-313 { border-bottom: #4b8044; }
 #level1nav ul li.lsecitiesAreaMediaArchive:hover:not(.current), #level1nav ul li.lsecitiesAreaMediaArchive:hover:not(.current_page_item), #level1nav ul li.page-item-313:hover:not(.current), #level1nav ul li.page-item-313:hover:not(.current_page_item) { border-bottom-color: rgba(75, 128, 68, 0.5); }
 
 #level2nav h1 { display: inline-block; color: #ffffff; font-size: 1.2em; font-weight: normal; font-family: UbuntuBold; padding: 0 0.5em; }
