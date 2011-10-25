@@ -1,5 +1,5 @@
-= TWENTY ELEVEN =
+= LSE Cities TWENTY ELEVEN =
 
-* by the WordPress team, http://wordpress.org/
+* by the LSE Cities team, http://lsecities.net/
 
 == ABOUT TWENTY ELEVEN ==
