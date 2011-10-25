@@ -102,7 +102,7 @@ $button_links = $pod->get_field('features');
               $post_index = 1;
               while ($latest_news->have_posts()) : $latest_news->the_post();
               $do_not_duplicate = $post->ID;
-              $class_extra = " last" if(++$post_index ==3);
+              if(++$post_index == 3) { $class_extra = " last"; }
               ?>
             <!-- Do stuff... -->
             <div class='featurebox fourcol<?php echo $class_extra; ?>'>
