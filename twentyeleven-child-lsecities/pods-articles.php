@@ -77,11 +77,13 @@
       <dl>
       <?php if(is_array($article_authors)): ?>
         <dt>Authors</dt>
-        <ul>
-        <?php foreach($article_authors as $a): ?>
-          <li><?php echo $a['name'] ?> <?php echo $a['family_name'] ?></li>
-        <?php endforeach; ?>
-        </ul>
+        <dd>
+          <ul>
+          <?php foreach($article_authors as $a): ?>
+            <li><?php echo $a['name'] ?> <?php echo $a['family_name'] ?></li>
+          <?php endforeach; ?>
+          </ul>
+        </dd>
       <?php endif; ?>
         <dt>Publication date</dt>
         <dd><?php echo $article_publication_date ?></dd>
