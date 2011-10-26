@@ -50,11 +50,11 @@
 <div class="ninecol">
 <div role="main">
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 	</header><!-- .entry-header -->
-
+  
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="entry-content">    
     <?php if(!empty($pod->data)): ?>
       <div class="article">
@@ -75,16 +75,15 @@
 <aside class="threecol last">
 <div class="entry-meta">
     <div id="author-info">
+      <dl>
       <?php if(is_array($article_authors)): ?>
-        <h2>Authors</h2>
+        <dt>Authors</dt>
         <ul>
         <?php foreach($article_authors as $a): ?>
           <li><?php echo $a['name'] ?> <?php echo $a['family_name'] ?></li>
         <?php endforeach; ?>
         </ul>
       <?php endif; ?>
-      <h2>Article metadata</h2>
-      <dl>
         <dt>Publication date</dt>
         <dd><?php echo $article_publication_date ?></dd>
         <dt>Tags</dt>
