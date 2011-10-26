@@ -97,44 +97,46 @@ $button_links = $pod->get_field('features');
         <?php edit_post_link( __( 'Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
       </article>
       <aside class="twocol last">
+      &#160;
       </aside>
-      <div id='news_area twelvecol'>
-        <h2>News</h2>
-        <div class='clearfix row'>
-          <?php $latest_news = new WP_Query('posts_per_page=3');
-            while ($latest_news->have_posts()) :
-              $latest_news->the_post();
-              $do_not_duplicate = $post->ID;
-              if($latest_news->current_post == 2) { $class_extra = " last"; }
-            ?>
-          <div class='fourcol<?php echo $class_extra; ?>'>
-            <h3><?php the_title(); ?></h3>
-            <?php the_excerpt(); ?>
-          </div>
-          <?php endwhile;
-            wp_reset_postdata();
+    </div><!-- #core.row -->
+    <div id='news_area'>
+      <h2>News</h2>
+      <div class='clearfix row'>
+        <?php $latest_news = new WP_Query('posts_per_page=3');
+          while ($latest_news->have_posts()) :
+            $latest_news->the_post();
+            $do_not_duplicate = $post->ID;
+            if($latest_news->current_post == 2) { $class_extra = " last"; }
           ?>
-        </div><!--.clearfix.row -->
-        <?php $more_news = new WP_Query('posts_per_page=10');
-          if($more_news->found_posts > 3) :
+        <div class='fourcol<?php echo $class_extra; ?>'>
+          <h3><?php the_title(); ?></h3>
+          <?php the_excerpt(); ?>
+        </div>
+        <?php endwhile;
+          wp_reset_postdata();
         ?>
-        <h2>More news</h2>
-        <ul>
-        <?php
-            while ($more_news->have_posts()) :
-              $more_news->the_post();
-              if ($more_news->current_post > 2) :
-        ?>
-          <li><a href="<?php echo get_permalink(the_ID()); ?>"><?php the_title() ?></a></li>
-        <?php endif;
-            endwhile;
-        ?>
-        </ul>
-        <?php
-          endif;
-        ?>
-        </ul>
-      </div><!-- #news_area -->
+      </div><!--.clearfix.row -->
+      <?php $more_news = new WP_Query('posts_per_page=10');
+        if($more_news->found_posts > 3) :
+      ?>
+      <h2>More news</h2>
+      <ul>
+      <?php
+          while ($more_news->have_posts()) :
+            $more_news->the_post();
+            if ($more_news->current_post > 2) :
+      ?>
+        <li><a href="<?php echo get_permalink(the_ID()); ?>"><?php the_title() ?></a></li>
+      <?php endif;
+          endwhile;
+      ?>
+      </ul>
+      <?php
+        endif;
+      ?>
+      </ul>
+    </div><!-- #news_area -->
     </div>        
 		<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'twentyeleven' ) . '</span>', 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->
