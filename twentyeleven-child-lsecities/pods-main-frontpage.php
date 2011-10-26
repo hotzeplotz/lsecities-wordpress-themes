@@ -96,9 +96,9 @@ $button_links = $pod->get_field('features');
         </div>
         <?php edit_post_link( __( 'Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
       </article>
-      <aside class="twocol">
+      <aside class="twocol last">
       </aside>
-      <div id='news_area'>
+      <div id='news_area twelvecol'>
         <h2>News</h2>
         <div class='clearfix row'>
           <?php $latest_news = new WP_Query('posts_per_page=3');
@@ -115,10 +115,12 @@ $button_links = $pod->get_field('features');
             wp_reset_postdata();
           ?>
         </div><!--.clearfix.row -->
-          
-        <ul>
         <?php $more_news = new WP_Query('posts_per_page=10');
           if($more_news->found_posts > 3) :
+        ?>
+        <h2>More news</h2>
+        <ul>
+        <?php
             while ($more_news->have_posts()) :
               $more_news->the_post();
               if ($more_news->current_post > 2) :
@@ -126,6 +128,9 @@ $button_links = $pod->get_field('features');
           <li><a href="<?php echo get_permalink(the_ID()); ?>"><?php the_title() ?></a></li>
         <?php endif;
             endwhile;
+        ?>
+        </ul>
+        <?php
           endif;
         ?>
         </ul>
