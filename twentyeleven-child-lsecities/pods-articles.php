@@ -48,12 +48,11 @@
 <?php get_header(); ?>
 
 <div class="ninecol">
-<div role="main">
 
 	<header class="entry-header">
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 	</header><!-- .entry-header -->
-  
+<div role="main">
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="entry-content">    
     <?php if(!empty($pod->data)): ?>
