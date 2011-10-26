@@ -40,7 +40,7 @@
       <div class="sixcol">
           <ul>
             <?php foreach($pod_publications as $key => $p) : ?>
-              <li class='fourcol<?php if((($key + 1) % 3) == 0) : ?> last<?php endif ; ?>>
+              <li class='fourcol<?php if((($key + 1) % 3) == 0) : ?> last<?php endif ; ?>'>
                 <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $p['slug']; ?>">
                   <?php echo $p['name']; ?>
                 </a>
