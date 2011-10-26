@@ -111,7 +111,9 @@ $button_links = $pod->get_field('features');
             <h3><?php the_title(); ?></h3>
             <?php the_excerpt(); ?>
           </div>
-          <?php endwhile; ?>
+          <?php endwhile;
+            wp_reset_postdata();
+          ?>
         </div><!--.clearfix.row -->
           
         <ul>

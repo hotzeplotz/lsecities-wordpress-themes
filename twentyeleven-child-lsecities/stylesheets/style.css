@@ -99,7 +99,7 @@ aside h2 { margin-bottom: 1.2em; }
 #headfeatures .flipbox { margin-bottom: 1em; }
 
 .featureboxes { margin-top: 1em; font-family: ff-meta-serif-web-pro, Palatino, Georgia, LinuxLibertineORegular, Gentium Book Basic, serif; }
-.featureboxes .featurebox { display: inline-block; margin-bottom: 0.5em; /*
+.featureboxes .featurebox { display: inline-block; margin-bottom: 0.5em; background-color: #cccccc; /*
 &.last { margin-right: 0;
 }
 */ }
