@@ -49,6 +49,7 @@
 
 	<header class="entry-header twelvecol last">
 		<h1 class="entry-title article-title"><?php echo $article_title; ?></h1>
+    <div class="entry-meta article-abstract"><em><?php echo $article_abstract; ?></em></div>
 	</header><!-- .entry-header -->
 <div class="ninecol">
 
@@ -58,7 +59,6 @@
 	<div class="entry-content">    
     <?php if(!empty($pod->data)): ?>
       <div class="article">
-        <div class="entry-meta article-abstract"><?php echo $article_abstract; ?></div>
         <div class="entry-content article-text"><?php echo $article_text; ?></div>
         <div class="extra-content"><?php echo $article_extra_content; ?></div>
       </div>
