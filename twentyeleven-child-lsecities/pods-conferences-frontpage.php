@@ -38,7 +38,7 @@ $button_links = $pod->get_field('links');
 
 	<div class="entry-content">
 <div class='row' id='core'>
-          <article class='tencol'>
+          <article class='ninecol'>
             <div class='row'>
               <div class='slider spaceAfter eightcol' id='slider'>
                 <a href='http://urban-age.net/publications/living-in-the-endless-city/' title='item'>
@@ -66,45 +66,8 @@ $button_links = $pod->get_field('links');
             <?php the_content(); ?>
             </div>
           </article>
-          <aside class='twocol last'>
-            <nav id='conferencesmenu'>
-              <h2>Urban Age conferences</h2>
-              <ul>
-                <li class='cityName conferencesAsia'>
-                  <a href='/ua/conferences/2011-hongkong/'>Hong Kong</a>
-                </li>
-                <li class='cityName conferencesNorthAmerica'>
-                  <a href='/ua/conferences/2010-chicago/'>Chicago</a>
-                </li>
-                <li class='cityName conferencesEurope'>
-                  <a href='/ua/conferences/2009-istanbul/'>Istanbul</a>
-                </li>
-                <li class='cityName conferencesSouthAmerica'>
-                  <a href='/ua/conferences/2008-sao-paulo/'>São Paulo</a>
-                </li>
-                <li class='cityName conferencesAsia'>
-                  <a href='/ua/conferences/2007-mumbai/'>Mumbai</a>
-                </li>
-                <li class='cityName conferencesEurope'>
-                  <a href='/ua/conferences/2006-berlin/'>Berlin</a>
-                </li>
-                <li class='cityName conferencesAfrica'>
-                  <a href='/ua/conferences/2006-johannesburg/'>Johannesburg</a>
-                </li>
-                <li class='cityName conferencesSouthAmerica'>
-                  <a href='/ua/conferences/2006-mexico-city/'>Mexico City</a>
-                </li>
-                <li class='cityName conferencesEurope'>
-                  <a href='/ua/conferences/2005-london/'>London</a>
-                </li>
-                <li class='cityName conferencesAsia'>
-                  <a href='/ua/conferences/2005-shanghai/'>Shanghai</a>
-                </li>
-                <li class='cityName conferencesNorthAmerica'>
-                  <a href='/ua/conferences/2005-new-york/'>New York</a>
-                </li>
-              </ul>
-            </nav>
+          <aside class='threecol last'>
+            <?php get_template_part( 'nav', 'conferences' ); ?>
           </aside>
         </div>
 
