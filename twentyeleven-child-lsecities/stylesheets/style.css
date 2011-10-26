@@ -93,7 +93,7 @@ strong, th { font-weight: bold; }
 
 article .introblurb { font-size: 1.5em; }
 
-aside { font-family: UbuntuRegular, Tahoma, sans-serif; }
+aside { font-family: ff-meta-serif-web-pro, Palatino, Georgia, LinuxLibertineORegular, Gentium Book Basic, serif; font-size: 0.8em; }
 aside h2 { margin-bottom: 1.2em; }
 
 #headfeatures .flipbox { margin-bottom: 1em; }
