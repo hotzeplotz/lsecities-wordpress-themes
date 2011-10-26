@@ -1,5 +1,6 @@
             <nav id='conferencesmenu'>
               <h2>Urban Age conferences</h2>
+              <p>The Urban Age Programme is an international investigation of the spatial and social dynamics of cities centred on an annual conference, research initiative and publication.</p>
               <ul>
                 <li class='cityName conferencesAsia'>
                   <a href='/ua/conferences/2011-hongkong/'>Hong Kong</a>
