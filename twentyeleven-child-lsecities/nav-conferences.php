@@ -11,7 +11,7 @@
                   <a href='/ua/conferences/2009-istanbul/'>Istanbul</a>
                 </li>
                 <li class='cityName conferencesSouthAmerica'>
-                  <a href='/ua/conferences/2008-sao-paulo/'>São Paulo</a>
+                  <a href='/ua/conferences/2008-sao-paulo/'>SÃ£o Paulo</a>
                 </li>
                 <li class='cityName conferencesAsia'>
                   <a href='/ua/conferences/2007-mumbai/'>Mumbai</a>
