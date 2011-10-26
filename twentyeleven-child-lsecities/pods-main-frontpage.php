@@ -106,7 +106,7 @@ $button_links = $pod->get_field('features');
             while ($latest_news->have_posts()) :
               $latest_news->the_post();
               $do_not_duplicate = $post->ID;
-              if($current_post == 3) { $class_extra = " last"; }
+              if($latest_news->$current_post == 3) { $class_extra = " last"; }
             ?>
           <div class='fourcol<?php echo $class_extra; ?>'>
             <h3><?php the_title(); ?></h3>
@@ -119,9 +119,11 @@ $button_links = $pod->get_field('features');
             if($more_news->found_posts > 3) :
               while ($more_news->have_posts()) :
                 $more_news->the_post();
+                if ($more_news->current_post >4) :
           ?>
             <li><?php the_title() ?></li>
-          <?php endwhile;
+          <?php endif;
+              endwhile;
             endif;
           ?>
           </ul>
