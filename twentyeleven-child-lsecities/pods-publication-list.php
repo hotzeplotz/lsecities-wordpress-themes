@@ -34,7 +34,7 @@
       <div class="featured-publication">
         <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $pod_featured_publication[0]['slug']; ?>">
           <h3><?php echo $pod_featured_publication[0]['name']; ?></h3>
-          <img src="<?php echo $pod_featured_publication[0]['guid'] ; ?>" />
+          <img src="<?php echo $pod_featured_publication[0]['cover']['guid'] ; ?>" />
         </a>
       </div>
     <?php endif ; ?>
