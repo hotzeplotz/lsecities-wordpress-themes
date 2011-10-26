@@ -23,5 +23,8 @@
 	</footer><!-- .entry-meta -->
 </article><!-- #post-<?php the_ID(); ?> -->
 <aside class="threecol last">
+  <?php
+    echo get_post_meta(the_ID(), "aside", true);
+  ?>
 </aside>
 </div><!-- .row -->
