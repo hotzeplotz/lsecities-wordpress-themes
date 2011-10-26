@@ -172,7 +172,7 @@ ul li { &.current, &.current_page_item { border-bottom-width: 5px; border-bottom
 #level2nav ul li.current, #level2nav ul li.current_page_item, #level2nav ul li.current_page_ancestor, #level2nav ul li.current_page_parent { border-bottom: #ffffff 5px solid; /* a { border-bottom: #ffffff 5px solid;
 }
 */ }
-#level2nav ul a { color: #ffffff; display: block; margin: 0; border-bottom: 5px solid #b4001d; }
+#level2nav ul a { color: #ffffff; display: block; margin: 0; /* border-bottom: 5px solid #b4001d; */ }
 #level2nav ul a:hover { border-bottom: 5px solid #ffffff; }
 
 #level2nav.section-ancestor-303 { background-color: #00aeef; }
