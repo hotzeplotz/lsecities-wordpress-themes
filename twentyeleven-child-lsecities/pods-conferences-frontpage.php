@@ -57,7 +57,7 @@ $button_links = $pod->get_field('links');
               <?php error_log('link key: ' . $key); ?>
               <div class='featurebox fourcol<?php if((($key + 1) % 3) == 0) : ?> last<?php endif ; ?>'>
                 <a href="<?php echo $link['guid'] ; ?>" title="<?php echo $link['post_title'] ; ?>">
-                  <h2><?php echo $link['post_title'] ; ?></h2>
+                  <h3><?php echo $link['post_title'] ; ?></h3>
                 </a>
               </div>
               <?php endforeach ; ?>
