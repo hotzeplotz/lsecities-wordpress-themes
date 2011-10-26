@@ -126,6 +126,10 @@ h1, h2, h3, h4, h5, h6 { font-family: ff-meta-web-pro, UbuntuRegular, Tahoma, El
 
 ul { list-style-type: none; }
 
+.alignleft { float: left; }
+
+.alignright { float: right; }
+
 body { background: inherit; }
 
 header h1.entry-title { font-size: 2em; margin-bottom: 1.2em; }
