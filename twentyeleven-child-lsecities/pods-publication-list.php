@@ -32,12 +32,15 @@
 
     <?php if(!empty($pod_featured_publication)) : ?>
       <div class="featured-publication">
-        <img src="<?php echo $pod_featured_publication['guid'] ; ?>" />
+        <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $pod_featured_publication[0]['slug']; ?>">
+          <h3><?php echo $pod_featured_publication[0]['name']; ?></h3>
+          <img src="<?php echo $pod_featured_publication[0]['guid'] ; ?>" />
+        </a>
       </div>
     <?php endif ; ?>
     
     <?php if(!empty($pod_publications)) : ?>
-      <div class="sixcol">
+      <div>
           <ul>
             <?php foreach($pod_publications as $key => $p) : ?>
               <li class='fourcol<?php if((($key + 1) % 3) == 0) : ?> last<?php endif ; ?>'>
