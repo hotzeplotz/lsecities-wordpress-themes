@@ -103,16 +103,28 @@ $button_links = $pod->get_field('features');
           <h2>News</h2>
           
           <?php $latest_news = new WP_Query('posts_per_page=3');
-            $post_index = 1;
-            while ($latest_news->have_posts()) : $latest_news->the_post();
-            $do_not_duplicate = $post->ID;
-            if($post_index++ == 3) { $class_extra = " last"; }
+            while ($latest_news->have_posts()) :
+              $latest_news->the_post();
+              $do_not_duplicate = $post->ID;
+              if($current_post == 3) { $class_extra = " last"; }
             ?>
-          <div class='featurebox fourcol<?php echo $class_extra; ?>'>
+          <div class='fourcol<?php echo $class_extra; ?>'>
             <h3><?php the_title(); ?></h3>
             <?php the_excerpt(); ?>
           </div>
           <?php endwhile; ?>
+          
+          <ul>
+          <?php $more_news = new WP_Query('posts_per_page=10');
+            if($more_news->found_posts > 3) :
+              while ($more_news->have_posts()) :
+                $more_news->the_post();
+          ?>
+            <li><?php the_title() ?></li>
+          <?php endwhile;
+            endif;
+          ?>
+          </ul>
         </div>
       </div>
     </div>        
