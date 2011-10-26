@@ -105,8 +105,7 @@ $button_links = $pod->get_field('features');
             while ($latest_news->have_posts()) :
               $latest_news->the_post();
               $do_not_duplicate = $post->ID;
-              error_log('current post index is ' . $latest_news->current_post);
-              if($current_post == 3) { $class_extra = " last"; }
+              if($latest_news->current_post == 2) { $class_extra = " last"; }
             ?>
           <div class='fourcol<?php echo $class_extra; ?>'>
             <h3><?php the_title(); ?></h3>
@@ -119,10 +118,10 @@ $button_links = $pod->get_field('features');
           
         <ul>
         <?php $more_news = new WP_Query('posts_per_page=10');
-          if($found_posts > 3) :
+          if($more_news->found_posts > 3) :
             while ($more_news->have_posts()) :
               $more_news->the_post();
-              if ($current_post >4) :
+              if ($more_news->current_post > 3) :
         ?>
           <li><?php the_title() ?></li>
         <?php endif;
