@@ -105,7 +105,7 @@ $button_links = $pod->get_field('features');
             while ($latest_news->have_posts()) :
               $latest_news->the_post();
               $do_not_duplicate = $post->ID;
-              error_log('current post index is ' . $current_post);
+              error_log('current post index is ' . $latest_news->current_post);
               if($current_post == 3) { $class_extra = " last"; }
             ?>
           <div class='fourcol<?php echo $class_extra; ?>'>
