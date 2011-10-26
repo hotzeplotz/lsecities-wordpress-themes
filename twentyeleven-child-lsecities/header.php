@@ -13,7 +13,7 @@ error_log('header.php starting for post with ID ' . $post->ID);
 $ancestors = get_ancestors($post->ID, 'page');
 array_unshift($ancestors, $post->ID);
 $toplevel_ancestor = array_pop($ancestors);
-if($toplevel_ancestor == 393( { $toplevel_ancestor = ''; }
+if($toplevel_ancestor == 393) { $toplevel_ancestor = ''; }
 error_log('ancestors (array): ' . var_export($ancestors, true));
 error_log('ancestor[0]: ' . $ancestors[0]);
 error_log('toplevel_ancestor: ' . $toplevel_ancestor);
