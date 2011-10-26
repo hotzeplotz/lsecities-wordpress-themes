@@ -98,37 +98,36 @@ $button_links = $pod->get_field('features');
       </article>
       <aside class="twocol">
       </aside>
-      <div class='row' id='topnews'>
-        <div class='featureboxes clearfix row'>
-          <h2>News</h2>
-          
+      <div id='news_area'>
+        <h2>News</h2>
+        <div class='clearfix row'>
           <?php $latest_news = new WP_Query('posts_per_page=3');
             while ($latest_news->have_posts()) :
               $latest_news->the_post();
               $do_not_duplicate = $post->ID;
-              if($latest_news->$current_post == 3) { $class_extra = " last"; }
+              if($current_post == 3) { $class_extra = " last"; }
             ?>
           <div class='fourcol<?php echo $class_extra; ?>'>
             <h3><?php the_title(); ?></h3>
             <?php the_excerpt(); ?>
           </div>
           <?php endwhile; ?>
+        </div><!--.clearfix.row -->
           
-          <ul>
-          <?php $more_news = new WP_Query('posts_per_page=10');
-            if($more_news->found_posts > 3) :
-              while ($more_news->have_posts()) :
-                $more_news->the_post();
-                if ($more_news->current_post >4) :
-          ?>
-            <li><?php the_title() ?></li>
-          <?php endif;
-              endwhile;
-            endif;
-          ?>
-          </ul>
-        </div>
-      </div>
+        <ul>
+        <?php $more_news = new WP_Query('posts_per_page=10');
+          if($more_news->found_posts > 3) :
+            while ($more_news->have_posts()) :
+              $more_news->the_post();
+              if ($current_post >4) :
+        ?>
+          <li><?php the_title() ?></li>
+        <?php endif;
+            endwhile;
+          endif;
+        ?>
+        </ul>
+      </div><!-- #news_area -->
     </div>        
 		<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'twentyeleven' ) . '</span>', 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->
