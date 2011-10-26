@@ -16,7 +16,7 @@
   $pod = new Pod('publications_list', $pod_slug);
   $pod_title = $pod->get_field('name');
   $pod_featured_publication = $pod->get_field('featured_publication');
-  $pod_publications = $pod->get_field('publications'));
+  $pod_publications = $pod->get_field('publications');
 ?>
 
 <?php get_header(); ?>
