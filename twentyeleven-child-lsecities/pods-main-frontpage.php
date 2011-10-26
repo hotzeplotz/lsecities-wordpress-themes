@@ -120,7 +120,6 @@ $button_links = $pod->get_field('features');
       <?php $more_news = new WP_Query('posts_per_page=10');
         if($more_news->found_posts > 3) :
       ?>
-      <h2>More news</h2>
       <ul>
       <?php
           while ($more_news->have_posts()) :
