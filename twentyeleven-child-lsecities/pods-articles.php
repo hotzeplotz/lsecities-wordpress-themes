@@ -47,9 +47,10 @@
 
 <?php get_header(); ?>
 
-	<header class="entry-header twelvecol last">
-		<h1 class="entry-title article-title"><?php echo $article_title; ?></h1>
-    <div class="entry-meta article-abstract"><em><?php echo $article_abstract; ?></em></div>
+	<header class="entry-header twelvecol row last">
+		<h1 class="entry-title article-title twelvecol"><?php echo $article_title; ?></h1>
+    <div class="entry-meta article-abstract ninecol"><em><?php echo $article_abstract; ?></em></div>
+    <div class="threecol last">&#160;</div>
 	</header><!-- .entry-header -->
 <div class="ninecol">
 
