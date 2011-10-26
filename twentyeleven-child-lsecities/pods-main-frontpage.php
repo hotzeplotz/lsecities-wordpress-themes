@@ -121,9 +121,9 @@ $button_links = $pod->get_field('features');
           if($more_news->found_posts > 3) :
             while ($more_news->have_posts()) :
               $more_news->the_post();
-              if ($more_news->current_post > 3) :
+              if ($more_news->current_post > 2) :
         ?>
-          <li><?php the_title() ?></li>
+          <li><a href="<?php echo get_permalink(the_ID()); ?>"><?php the_title() ?></a></li>
         <?php endif;
             endwhile;
           endif;
