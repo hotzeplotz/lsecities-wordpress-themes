@@ -84,23 +84,6 @@ $button_links = $pod->get_field('links');
         <?php endforeach; ?>
         </ul>
       <?php endif; ?>
-      <h2>Article metadata</h2>
-      <dl>
-        <dt>Publication date</dt>
-        <dd><?php echo $article_publication_date ?></dd>
-        <dt>Tags</dt>
-        <dd>
-          <?php if(is_array($article_tags)): ?>
-          <ul>
-            <?php foreach($article_tags as $t): ?>
-              <li><?php echo $t['name'] ; ?></li>
-            <?php endforeach; ?>
-          </ul>
-          <?php else: ?>
-          <em>no tags defined</em>
-          <?php endif; ?>
-        </dd>
-      </dl>
     </div>
 		<?php edit_post_link( __( 'Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
 	</div><!-- .entry-meta -->
