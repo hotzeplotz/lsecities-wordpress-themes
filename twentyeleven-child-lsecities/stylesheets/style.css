@@ -149,11 +149,10 @@ body > #container > header ul li a { padding: 0 0.6em; text-decoration: none; }
 #mainmenus { opacity: 0.8; -moz-box-shadow: #888888 3px 3px 5px; -webkit-box-shadow: #888888 3px 3px 5px; -o-box-shadow: #888888 3px 3px 5px; box-shadow: #888888 3px 3px 5px; }
 #mainmenus:hover { opacity: 1; }
 
-nav#level1nav, nav#level2nav { line-height: 1.5em; font-family: UbuntuRegular; }
-nav#level1nav ul li.current, nav#level2nav ul li.current { border-bottom: #B4001D 5px solid; }
+nav#level1nav, nav#level2nav { line-height: 1.5em; font-family: ff-meta-web-pro, UbuntuRegular, Tahoma, Elvetica, sans-serif; }
+nav#level1nav ul li.current, nav#level1nav ul li.current_page_item, nav#level2nav ul li.current, nav#level2nav ul li.current_page_item { border-bottom-width: 5px; border-bottom-style: solid; }
 
 #level1nav ul li:hover:not(.current), #level1nav ul li:hover:not(.current_page_item) { border-bottom: 5px solid; }
-#level1nav ul li.current, #level1nav ul li.current_page_item { border-bottom-width: 5px; border-bottom-style: solid; }
 #level1nav ul li.lsecitiesAreaAbout, #level1nav ul li.page-item-303 { border-bottom-color: #00aeef; }
 #level1nav ul li.lsecitiesAreaAbout:hover:not(.current), #level1nav ul li.lsecitiesAreaAbout:hover:not(.current_page_item), #level1nav ul li.page-item-303:hover:not(.current), #level1nav ul li.page-item-303:hover:not(.current_page_item) { border-bottom-color: rgba(0, 174, 239, 0.5); }
 #level1nav ul li.lsecitiesAreaResearch, #level1nav ul li.page-item-306 { border-bottom-color: #ff7700; }
