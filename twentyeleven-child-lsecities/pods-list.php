@@ -11,13 +11,16 @@
 
 <?php
   /* URI: TBD */
+  $TRACE_PODS_LIST = true;
   $pod_slug = get_post_meta($post->ID, 'pod_slug', true);
   $pod = new Pod('list', $pod_slug);
   $pod_type = $pod->get_field('pod_type.slug');
-  error_log('fetching list Pod with slug: ' . $pod_slug . " and pod_type: " . $pod_type);
+  if($TRACE_PODS_LIST) { error_log('fetching list Pod with slug: ' . $pod_slug . " and pod_type: " . $pod_type); }
   $pod_title = $pod->get_field('name');
-  error_log('slug for featured item: ' . get_post_meta($pod->get_field('featured_item.ID'), 'pod_slug', true));
-  $pod_featured_item = new Pod($pod_type, get_post_meta($pod->get_field('featured_item.ID'), 'pod_slug', true));
+  $page_id = $pod->get_field('featured_item.ID');
+  if($TRACE_PODS_LIST) { error_log('slug for featured item: ' . get_post_meta($page_id, 'pod_slug', true)); }
+  $pod_featured_item_permalink = get_permalink($page_id);
+  $pod_featured_item_pod = new Pod($pod_type, get_post_meta($pod->get_field('featured_item.ID'), 'pod_slug', true));
   $pod_list = $pod->get_field('list');
 ?>
 
@@ -47,11 +50,11 @@ var_export($pod_list);
 	<div class="entry-content">
 		<?php the_content(); ?>
 
-    <?php if(!empty($pod_featured_item)) : ?>
+    <?php if(!empty($pod_featured_item_pod)) : ?>
       <div class="featured-item">
-        <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $pod_featured_item->get_field('slug'); ?>">
-          <h3><?php echo $pod_featured_item->get_field('name'); ?></h3>
-          <img src="<?php echo $pod_featured_item->get_field('cover.guid') ; ?>" />
+        <a href="<?php echo $pod_featured_item_permalink; ?>">
+          <h3><?php echo $pod_featured_item_pod->get_field('name'); ?></h3>
+          <img src="<?php echo $pod_featured_item_pod->get_field('cover.guid') ; ?>" />
         </a>
       </div>
     <?php endif ; ?>
