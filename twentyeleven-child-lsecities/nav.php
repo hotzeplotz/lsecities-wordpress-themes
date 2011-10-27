@@ -16,4 +16,6 @@ if ($children) : ?>
 <ul>
 <?php echo $children; ?>
 </ul>
+<?php else : ?>
+&#160;
 <?php endif; ?>
