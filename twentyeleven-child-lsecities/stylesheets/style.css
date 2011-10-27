@@ -18,7 +18,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
 
-body { font-size: 16px; font-family: UbuntuRegular, Tahoma, sans-serif; line-height: 1.2; *font-size: small; }
+body { font-size: 16px; font-family: ff-meta-web-pro, UbuntuRegular, Tahoma, sans-serif; line-height: 1.2; *font-size: small; }
 
 pre, code, kbd, samp { font-family: monospace, sans-serif; }
 
@@ -113,7 +113,7 @@ input:invalid, textarea:invalid { -moz-border-radius: 1px; -webkit-border-radius
 
 .no-boxshadow input:invalid, .no-boxshadow textarea:invalid { background-color: #f0dddd; }
 
-#slider { margin-bottom: 0.5em; font-family: UbuntuRegular, Tahoma, sans-serif; }
+#slider { margin-bottom: 0.5em; font-family: ff-meta-web-pro, UbuntuRegular, Tahoma, sans-serif; }
 
 dl dt { font-weight: bold; }
 dl dd { margin-bottom: 0.5em; }
