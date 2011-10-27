@@ -54,7 +54,7 @@ if($TRACE_PODS_LIST) { var_export($pod_list); }
       <div class="featured-item">
         <a href="<?php echo $pod_featured_item_permalink; ?>">
           <h3><?php echo $pod_featured_item_pod->get_field('name'); ?></h3>
-          <img src="<?php echo $pod_featured_item_pod->get_field('cover.guid') ; ?>" />
+          <img src="<?php echo $pod_featured_item_pod->get_field('snapshot.guid') ; ?>" />
         </a>
       </div>
     <?php endif ; ?>
@@ -68,7 +68,7 @@ if($TRACE_PODS_LIST) { var_export($pod_list); }
               <li class='fourcol<?php if((($key + 1) % 3) == 0) : ?> last<?php endif ; ?>'>
                 <p>
                   <a href="<?php echo get_permalink($item['ID']); ?>">
-                    <img src="<?php echo $item_pod->get_field('cover.guid'); ?>" />
+                    <img src="<?php echo $item_pod->get_field('snapshot.guid'); ?>" />
                   </a>
                 </p>
                 <p>

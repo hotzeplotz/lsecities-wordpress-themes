@@ -17,7 +17,7 @@
   $pod_title = $pod->get_field('name');
   $pod_subtitle = $pod->get_field('publication_subtitle');
   $pod_issuu = do_shortcode($pod->get_field('issuu'));
-  $pod_cover = $pod->get_field('cover');
+  $pod_cover = $pod->get_field('snapshot.guid');
   $pod_abstract = do_shortcode($pod->get_field('abstract'));
 ?>
 
@@ -58,7 +58,7 @@
           <?php endif ; ?>
         </div>
         <div class="threecol">
-          <img src="<?php echo $pod_cover[0]['guid'] ; ?>" />
+          <img src="<?php echo $pod_cover ; ?>" />
         </div>
         <div class="threecol last">
           <?php echo $pod_abstract ; ?>
