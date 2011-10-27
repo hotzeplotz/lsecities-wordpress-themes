@@ -53,6 +53,27 @@
     <div class="threecol last">&#160;</div>
 	</header><!-- .entry-header -->
 
+  
+  <div class="sixcol">
+
+
+<div role="main">
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<div class="entry-content">    
+    <?php if(!empty($pod->data)): ?>
+      <div class="article">
+        <div class="entry-content article-text"><?php echo $article_text; ?></div>
+        <div class="extra-content"><?php echo $article_extra_content; ?></div>
+      </div>
+    <?php endif; ?>
+        
+		<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'twentyeleven' ) . '</span>', 'after' => '</div>' ) ); ?>
+	</div><!-- .entry-content -->
+</article><!-- #post-<?php the_ID(); ?> -->
+
+</div>
+</div>
+
 <aside class="threecol">
 <div class="entry-meta">
     <div id="author-info">
@@ -91,30 +112,8 @@
 <?php endif; ?>
 </aside>
 
-
-  
-  <div class="sixcol">
-
-
-<div role="main">
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="entry-content">    
-    <?php if(!empty($pod->data)): ?>
-      <div class="article">
-        <div class="entry-content article-text"><?php echo $article_text; ?></div>
-        <div class="extra-content"><?php echo $article_extra_content; ?></div>
-      </div>
-    <?php endif; ?>
-        
-		<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'twentyeleven' ) . '</span>', 'after' => '</div>' ) ); ?>
-	</div><!-- .entry-content -->
-</article><!-- #post-<?php the_ID(); ?> -->
-
-</div>
-</div>
-
 <nav class="threecol last" id="level3nav>
-<?php get_template_part( 'nav'); ?>
+  <?php get_template_part( 'nav'); ?>
 </nav>
 
 <?php get_sidebar(); ?>
