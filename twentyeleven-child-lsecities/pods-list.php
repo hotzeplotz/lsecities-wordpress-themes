@@ -28,16 +28,16 @@
 
 <!--
 
-featured_item:
+featured_item_permalink:
 
 <?php
-var_export($pod_featured_item);
+if($TRACE_PODS_LIST) { var_export($pod_featured_item_permalink); )
 ?>
 
 list:
 
 <?php
-var_export($pod_list);
+if($TRACE_PODS_LIST) { var_export($pod_list); }
 ?>
 -->
 
@@ -62,11 +62,20 @@ var_export($pod_list);
     <?php if(!empty($pod_list)) : ?>
       <div>
           <ul>
-            <?php foreach($pod_list as $key => $item) : ?>
+            <?php foreach($pod_list as $key => $item) : 
+              $item_pod = new Pod($pod_type, get_post_meta($item['ID'], 'pod_slug', true);
+            ?>
               <li class='fourcol<?php if((($key + 1) % 3) == 0) : ?> last<?php endif ; ?>'>
-                <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $item['slug']; ?>">
-                  <?php echo $item['name']; ?>
-                </a>
+                <p>
+                  <a href="<?php echo get_permalink($item['ID']); ?>">
+                    <?php echo $item_pod->get_field('name'); ?>
+                  </a>
+                </p>
+                <p>
+                  <a href="<?php echo get_permalink($item['ID']); ?>">
+                    <?php echo $item_pod->get_field('cover.guid'); ?>
+                  </a>
+                </p>
               </li>
             <?php endforeach; ?>
           </ul>
