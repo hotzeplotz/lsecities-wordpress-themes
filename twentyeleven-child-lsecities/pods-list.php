@@ -50,7 +50,7 @@ var_export($pod_list);
       <div class="featured-item">
         <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $pod_featured_item->get_field('slug'); ?>">
           <h3><?php echo $pod_featured_item->get_field('name'); ?></h3>
-          <img src="<?php echo $pod_featured_item->get_field('cover')['guid'] ; ?>" />
+          <img src="<?php echo $pod_featured_item->get_field('cover') ; ?>" />
         </a>
       </div>
     <?php endif ; ?>
