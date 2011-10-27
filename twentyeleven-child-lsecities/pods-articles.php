@@ -9,41 +9,40 @@
  */
 ?>
 
-    <?php
-      global $pods;
-      /* URI: /media/objects/articles/<article-slug>/<language> */
-      $pod = new Pod('article', pods_url_variable(3));
-      $lang = strtolower(pods_url_variable('lang', 'get'));
-      $article_lang2 = $pod->get_field('language');
-      $article_lang2 = $article_lang2[0]['slug'];
+<?php
+global $pods;
+/* URI: /media/objects/articles/<article-slug>/<language> */
+$pod = new Pod('article', pods_url_variable(3));
+$lang = strtolower(pods_url_variable('lang', 'get'));
+$article_lang2 = $pod->get_field('language.slug');
 
-      error_log('<code class="debug">req_lang: ' . $lang . '</code>');
-      error_log('<code class="debug">lang2: ' . $article_lang2 . '</code>');
-      
-      if(!empty($lang) && $lang == $article_lang2) {
-        $article_title = $pod->get_field('title_lang2');
-        $article_abstract = do_shortcode($pod->get_field('abstract_lang2'));
-        $article_text = do_shortcode($pod->get_field('text_lang2'));
-        $article_extra_content = do_shortcode($pod->get_field('extra_content_lang2'));
-        $pdf_uri = $pod->get_field('article_pdf_uri_lang2');
-      } else {
-        $article_title = $pod->get_field('name');
-        $article_abstract = do_shortcode($pod->get_field('abstract'));
-        $article_text = do_shortcode($pod->get_field('text'));
-        $article_extra_content = do_shortcode($pod->get_field('extra_content'));
-        $pdf_uri = $pod->get_field('article_pdf_uri');
-      }
-      
-      // prepend base URI
-      // ToDo: add exceptions (e.g. Istanbul newspaper)
-      if($pdf_uri) {
-        $pdf_uri = "http://urban-age.net/0_downloads/" . $pdf_uri;
-      }
-      
-      $article_publication_date = $pod->get_field('publication_date');
-      $article_tags = $pod->get_field('tags');
-      $article_authors = $pod->get_field('authors');
-    ?>
+if($TRACE_PODS_ARTICLES) { error_log('request_language: ' . $lang); }
+if($TRACE_PODS_ARTICLES) { error_log('article_lang2: ' . $article_lang2); }
+
+if(!empty($lang) && $lang == $article_lang2) {
+  $article_title = $pod->get_field('title_lang2');
+  $article_abstract = do_shortcode($pod->get_field('abstract_lang2'));
+  $article_text = do_shortcode($pod->get_field('text_lang2'));
+  $article_extra_content = do_shortcode($pod->get_field('extra_content_lang2'));
+  $pdf_uri = $pod->get_field('article_pdf_uri_lang2');
+} else {
+  $article_title = $pod->get_field('name');
+  $article_abstract = do_shortcode($pod->get_field('abstract'));
+  $article_text = do_shortcode($pod->get_field('text'));
+  $article_extra_content = do_shortcode($pod->get_field('extra_content'));
+  $pdf_uri = $pod->get_field('article_pdf_uri');
+}
+
+// prepend base URI
+// ToDo: add exceptions (e.g. Istanbul newspaper)
+if($pdf_uri) {
+  $pdf_uri = "http://urban-age.net/0_downloads/" . $pdf_uri;
+}
+
+$article_publication_date = $pod->get_field('publication_date');
+$article_tags = $pod->get_field('tags');
+$article_authors = $pod->get_field('authors');
+?>
 
 <?php get_header(); ?>
 

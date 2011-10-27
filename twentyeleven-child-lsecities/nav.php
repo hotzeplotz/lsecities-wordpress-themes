@@ -1,6 +1,7 @@
 <?php
 $TRACE_TEMPLATE_NAV = true;
-if($TRACE_TEMPLATE_NAV) { error_log($post->ID); }
+$TRACE_PREFIX = 'nav.php';
+if($TRACE_TEMPLATE_NAV) { error_log($TRACE_PREFIX . 'post ID: ' . $post->ID); }
 $children = wp_list_pages('title_li=&child_of='.$post->ID.'&echo=0');
 if ($children) : ?>
 <ul>
