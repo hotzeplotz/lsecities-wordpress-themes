@@ -1,7 +1,7 @@
 <?php
 /**
- * Template Name: Pods - Publications - index
- * Description: The template used for lists of publications
+ * Template Name: Pods - List - index
+ * Description: The template used for lists of items
  *
  * @package WordPress
  * @subpackage Twenty_Eleven
@@ -12,24 +12,24 @@
 <?php
   /* URI: TBD */
   $pod_slug = get_post_meta($post->ID, 'pod_slug', true);
-  error_log('fetching publications_list Pod with slug: ' . $pod_slug);
-  $pod = new Pod('publications_list', $pod_slug);
+  error_log('fetching list Pod with slug: ' . $pod_slug);
+  $pod = new Pod('list', $pod_slug);
   $pod_title = $pod->get_field('name');
-  $pod_featured_publication = $pod->get_field('featured_publication');
-  $pod_publications = $pod->get_field('publications');
+  $pod_featured_item = $pod->get_field('featured_item');
+  $pod_list = $pod->get_field('list');
 ?>
 
 <?php get_header(); ?>
 
 <!--
 
-featured_publication:
+featured_item:
 
 <?php
 var_export($pod_featured_publication);
 ?>
 
-publications:
+list:
 
 <?php
 var_export($pod_publications);
@@ -45,22 +45,22 @@ var_export($pod_publications);
 	<div class="entry-content">
 		<?php the_content(); ?>
 
-    <?php if(!empty($pod_featured_publication)) : ?>
-      <div class="featured-publication">
-        <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $pod_featured_publication[0]['slug']; ?>">
-          <h3><?php echo $pod_featured_publication[0]['name']; ?></h3>
-          <img src="<?php echo $pod_featured_publication[0]['cover'][0]['guid'] ; ?>" />
+    <?php if(!empty($pod_featured_item)) : ?>
+      <div class="featured-item">
+        <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $pod_featured_item[0]['slug']; ?>">
+          <h3><?php echo $pod_featured_item[0]['name']; ?></h3>
+          <img src="<?php echo $pod_featured_item[0]['cover'][0]['guid'] ; ?>" />
         </a>
       </div>
     <?php endif ; ?>
     
-    <?php if(!empty($pod_publications)) : ?>
+    <?php if(!empty($pod_list)) : ?>
       <div>
           <ul>
-            <?php foreach($pod_publications as $key => $p) : ?>
+            <?php foreach($pod_list as $key => $item) : ?>
               <li class='fourcol<?php if((($key + 1) % 3) == 0) : ?> last<?php endif ; ?>'>
-                <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $p['slug']; ?>">
-                  <?php echo $p['name']; ?>
+                <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $item['slug']; ?>">
+                  <?php echo $item['name']; ?>
                 </a>
               </li>
             <?php endforeach; ?>
