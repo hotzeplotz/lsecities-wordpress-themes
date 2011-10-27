@@ -73,7 +73,7 @@ if($TRACE_PODS_LIST) { var_export($pod_list); }
                 </p>
                 <p>
                   <a href="<?php echo get_permalink($item['ID']); ?>">
-                    <?php echo $item_pod->get_field('cover.guid'); ?>
+                    <img src="<?php echo $item_pod->get_field('cover.guid'); ?>" />
                   </a>
                 </p>
               </li>
