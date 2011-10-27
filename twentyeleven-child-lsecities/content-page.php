@@ -12,7 +12,7 @@
 	<header class="entry-header">
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 	</header><!-- .entry-header -->
-<article id="post-<?php the_ID(); ?>" <?php post_class('ninecol'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('sixcol'); ?>>
 	<div class="entry-content">
 		<?php the_content(); ?>
 		<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'twentyeleven' ) . '</span>', 'after' => '</div>' ) ); ?>
@@ -21,9 +21,12 @@
 		<?php edit_post_link( __( 'Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-meta -->
 </article><!-- #post-<?php the_ID(); ?> -->
-<aside class="threecol last">
+<aside class="threecol">
   <?php
     echo get_post_meta(get_the_ID(), "aside", true);
   ?>
 </aside>
+
+<?php get_template_part( 'nav'); ?>
+
 </div><!-- .row -->

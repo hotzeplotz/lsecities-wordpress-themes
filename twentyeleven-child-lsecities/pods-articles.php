@@ -112,9 +112,7 @@ $article_authors = $pod->get_field('authors');
 <?php endif; ?>
 </aside>
 
-<nav class="threecol last" id="level3nav>
-  <?php get_template_part( 'nav'); ?>
-</nav>
+<?php get_template_part( 'nav'); ?>
 
 <?php get_sidebar(); ?>
 

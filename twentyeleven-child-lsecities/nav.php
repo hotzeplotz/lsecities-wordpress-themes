@@ -8,7 +8,10 @@ if($TRACE_TEMPLATE_NAV) : ?>
 pod:
 <?php var_export($pod); ?>
 -->
-<?php endif;
+<?php endif; ?>
+
+<nav class="threecol last" id="level3nav>
+<?php
 if($current_post_id) {
   $children = wp_list_pages('title_li=&child_of='.$current_post_id.'&echo=0');
 }
@@ -19,3 +22,4 @@ if ($children) : ?>
 <?php else : ?>
 &#160;
 <?php endif; ?>
+</nav>
