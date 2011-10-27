@@ -63,7 +63,7 @@ if($TRACE_PODS_LIST) { var_export($pod_list); }
       <div>
           <ul>
             <?php foreach($pod_list as $key => $item) : 
-              $item_pod = new Pod($pod_type, get_post_meta($item['ID'], 'pod_slug', true);
+              $item_pod = new Pod($pod_type, get_post_meta($item['ID'], 'pod_slug', true));
             ?>
               <li class='fourcol<?php if((($key + 1) % 3) == 0) : ?> last<?php endif ; ?>'>
                 <p>
