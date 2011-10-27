@@ -40,6 +40,7 @@
         <h2><?php echo $pod_subtitle; ?></h2>
         <?php endif ; ?>
         <div class="sixcol">
+          <?php if(count($pod->get_field('articles'))) : ?>
           <h3>Read the articles</h3>
           <ul>
             <?php foreach($pod->get_field('articles') as $a) : ?>
@@ -52,8 +53,10 @@
               </li>
             <?php endforeach; ?>
           </ul>
+          <?php endif; ?>
+          
           <?php if($pod_issuu) : ?>
-          <h3>Browse the newspaper</h3>
+          <h3>Browse the publication</h3>
           <?php echo $pod_issuu ; ?>
           <?php endif ; ?>
         </div>
