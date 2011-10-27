@@ -7,6 +7,7 @@
  * @subpackage Twenty_Eleven
  * @since Twenty Eleven 1.0
  */
+$TRACE_PODS_ARTICLES = false;
 ?>
 
 <?php
