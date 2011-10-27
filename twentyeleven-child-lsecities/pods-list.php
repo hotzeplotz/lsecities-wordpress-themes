@@ -31,7 +31,7 @@
 featured_item_permalink:
 
 <?php
-if($TRACE_PODS_LIST) { var_export($pod_featured_item_permalink); )
+if($TRACE_PODS_LIST) { var_export($pod_featured_item_permalink); }
 ?>
 
 list:
