@@ -26,13 +26,13 @@
 featured_item:
 
 <?php
-var_export($pod_featured_publication);
+var_export($pod_featured_item);
 ?>
 
 list:
 
 <?php
-var_export($pod_publications);
+var_export($pod_list);
 ?>
 -->
 
