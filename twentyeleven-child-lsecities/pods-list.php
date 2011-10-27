@@ -14,8 +14,9 @@
   $pod_slug = get_post_meta($post->ID, 'pod_slug', true);
   error_log('fetching list Pod with slug: ' . $pod_slug);
   $pod = new Pod('list', $pod_slug);
+  $pod_type = $pod->get_field('pod_type');
   $pod_title = $pod->get_field('name');
-  $pod_featured_item = $pod->get_field('featured_item');
+  $pod_featured_item = new Pod($pod_type, get_post_meta($pod->get_field('featured_item.ID'), 'pod_slug'));
   $pod_list = $pod->get_field('list');
 ?>
 
