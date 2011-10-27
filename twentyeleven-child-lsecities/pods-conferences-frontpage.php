@@ -14,9 +14,9 @@
  * Pods initialization
  * URI: TBD
  */
-$conference_slug = get_post_meta($post->ID, 'conference_slug', true);
-error_log('conference_slug: ' . $conference_slug);
-$pod = new Pod('conference', $conference_slug);
+$pod_slug = get_post_meta($post->ID, 'pod_slug', true);
+if($TRACE_PODS_CONFERENCES_FRONTPAGE) { error_log('pod_slug: ' . $pod_slug); }
+$pod = new Pod('conference', $pod_slug);
 $button_links = $pod->get_field('links');
 ?>
 
