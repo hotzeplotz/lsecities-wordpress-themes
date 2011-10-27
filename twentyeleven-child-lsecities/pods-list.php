@@ -48,9 +48,9 @@ var_export($pod_list);
 
     <?php if(!empty($pod_featured_item)) : ?>
       <div class="featured-item">
-        <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $pod_featured_item[0]['slug']; ?>">
-          <h3><?php echo $pod_featured_item[0]['name']; ?></h3>
-          <img src="<?php echo $pod_featured_item[0]['cover'][0]['guid'] ; ?>" />
+        <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $pod_featured_item->get_field('slug'); ?>">
+          <h3><?php echo $pod_featured_item->get_field('name'); ?></h3>
+          <img src="<?php echo $pod_featured_item->get_field('cover')['guid'] ; ?>" />
         </a>
       </div>
     <?php endif ; ?>
