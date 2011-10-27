@@ -11,8 +11,8 @@
 
 <?php
   /* URI: TBD */
-  $publication_slug = get_post_meta($post->ID, 'publication_slug', true);
-  error_log('publication_slug: ' . $publication_slug);
+  $publication_slug = get_post_meta($post->ID, 'pod_slug', true);
+  error_log('pod_slug: ' . $publication_slug);
   $pod = new Pod('publication_wrappers', $publication_slug);
   $pod_title = $pod->get_field('name');
   $pod_subtitle = $pod->get_field('publication_subtitle');
