@@ -16,8 +16,8 @@
   $pod_type = $pod->get_field('pod_type.slug');
   error_log('fetching list Pod with slug: ' . $pod_slug . " and pod_type: " . $pod_type);
   $pod_title = $pod->get_field('name');
-  error_log('slug for featured item: ' . get_post_meta($pod->get_field('featured_item.ID'), 'pod_slug'));
-  $pod_featured_item = new Pod($pod_type, get_post_meta($pod->get_field('featured_item.ID'), 'pod_slug'));
+  error_log('slug for featured item: ' . get_post_meta($pod->get_field('featured_item.ID'), 'pod_slug', true));
+  $pod_featured_item = new Pod($pod_type, get_post_meta($pod->get_field('featured_item.ID'), 'pod_slug', true));
   $pod_list = $pod->get_field('list');
 ?>
 
