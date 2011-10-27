@@ -9,14 +9,14 @@
  * @since Twenty Eleven 1.0
  */
 ?><?php
-error_log('header.php starting for post with ID ' . $post->ID);
+if($TRACE_HEADER) { error_log('header.php starting for post with ID ' . $post->ID) };
 $ancestors = get_ancestors($post->ID, 'page');
 array_unshift($ancestors, $post->ID);
 $toplevel_ancestor = array_pop($ancestors);
 if($toplevel_ancestor == 393) { $toplevel_ancestor = ''; }
-error_log('ancestors (array): ' . var_export($ancestors, true));
-error_log('ancestor[0]: ' . $ancestors[0]);
-error_log('toplevel_ancestor: ' . $toplevel_ancestor);
+if($TRACE_HEADER) { error_log('ancestors (array): ' . var_export($ancestors, true)) };
+if($TRACE_HEADER) { error_log('ancestor[0]: ' . $ancestors[0]) };
+if($TRACE_HEADER) { error_log('toplevel_ancestor: ' . $toplevel_ancestor) };
 $level2nav = wp_list_pages('child_of=' . $toplevel_ancestor . '&depth=1&sort_column=menu_order&title_li=&echo=0');
 
 // check if we are in the Urban Age section
