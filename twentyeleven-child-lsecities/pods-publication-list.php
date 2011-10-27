@@ -21,6 +21,21 @@
 
 <?php get_header(); ?>
 
+<!--
+
+featured_publication:
+
+<?php
+var_export($pod_featured_publication);
+?>
+
+publications:
+
+<?php
+var_export($pod_publications);
+?>
+-->
+
 <div role="main row">
 <header class="entry-header twelvecol last">
 		<h1 class="entry-title"><?php echo $pod_title; ?></h1>
