@@ -9,7 +9,9 @@ pod:
 <?php var_export($pod); ?>
 -->
 <?php endif;
-$children = wp_list_pages('title_li=&child_of='.current_post_id.'&echo=0');
+if($current_post_id) {
+  $children = wp_list_pages('title_li=&child_of='.$current_post_id.'&echo=0');
+}
 if ($children) : ?>
 <ul>
 <?php echo $children; ?>
