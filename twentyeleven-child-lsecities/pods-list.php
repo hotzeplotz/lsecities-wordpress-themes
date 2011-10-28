@@ -19,7 +19,7 @@
   $pod_title = $pod->get_field('name');
   $page_id = $pod->get_field('featured_item.ID');
   if($TRACE_PODS_LIST) { error_log('slug for featured item: ' . get_post_meta($page_id, 'pod_slug', true)); }
-  $pod_featured_item_thumbnail = get_the_post_thumbnail($page_id, 'full');
+  $pod_featured_item_thumbnail = get_the_post_thumbnail($page_id, array(960,367));
   if(!$pod_featured_item_thumbnail) { $pod_featured_item_thumbnail = '<img src="' . $pod->get_field('featured_item_image.guid') . '" />'; }
   $pod_featured_item_permalink = get_permalink($page_id);
   $pod_featured_item_pod = new Pod($pod_type, get_post_meta($pod->get_field('featured_item.ID'), 'pod_slug', true));
