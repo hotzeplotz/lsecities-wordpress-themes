@@ -58,7 +58,7 @@ if($TRACE_PODS_LIST) { var_export($pod_list); }
           <h3><?php echo $pod_featured_item_pod->get_field('name'); ?></h3>
           <?php echo $pod_featured_item_thumbnail ; ?>
         </a>
-        <div><?php echo $pod->get_item('featured_item_blurb') ; ?></div>
+        <div><?php echo $pod->get_field('featured_item_blurb') ; ?></div>
         <p><a href="<?php echo $pod_featured_item_permalink; ?>">Read more...</a></p>
       </div>
     <?php endif ; ?>
