@@ -10,7 +10,7 @@ pod:
 -->
 <?php endif; ?>
 
-<div class="threecol last" id="level3nav>
+<div class="threecol last" id="level3nav">
 <?php
 if($current_post_id) {
   $children = wp_list_pages('title_li=&child_of='.$current_post_id.'&echo=0');
@@ -20,7 +20,6 @@ if ($children) : ?>
 <?php echo $children; ?>
 </ul>
 <?php else : ?>
-get_template_part('nav', 'conferences');
 &#160;
 <br />
 <br />
