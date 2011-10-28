@@ -19,6 +19,8 @@
   $pod_title = $pod->get_field('name');
   $page_id = $pod->get_field('featured_item.ID');
   if($TRACE_PODS_LIST) { error_log('slug for featured item: ' . get_post_meta($page_id, 'pod_slug', true)); }
+  $pod_featured_item_thumbnail = get_the_post_thumbnail($page_id, 'full');
+  if(!$pod_featured_item_thumbnail) { $pod_featured_item_thumbnail = '<img src="' . $pod->get_field('featured_item_image.guid') . '" />'; }
   $pod_featured_item_permalink = get_permalink($page_id);
   $pod_featured_item_pod = new Pod($pod_type, get_post_meta($pod->get_field('featured_item.ID'), 'pod_slug', true));
   $pod_list = $pod->get_field('list');
@@ -54,7 +56,7 @@ if($TRACE_PODS_LIST) { var_export($pod_list); }
       <div class="featured-item">
         <a href="<?php echo $pod_featured_item_permalink; ?>">
           <h3><?php echo $pod_featured_item_pod->get_field('name'); ?></h3>
-          <img src="<?php echo $pod_featured_item_pod->get_field('snapshot.guid') ; ?>" />
+          <?php echo $pod_featured_item_thumbnail ; ?>
         </a>
       </div>
     <?php endif ; ?>
