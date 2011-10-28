@@ -21,5 +21,7 @@ if ($children) : ?>
 </ul>
 <?php else : ?>
 &#160;
+<br />
+<br />
 <?php endif; ?>
 </nav>
