@@ -105,6 +105,8 @@ aside p { font-size: 0.9em; }
 */ }
 .featureboxes .featurebox h3 { font-family: ff-meta-web-pro, UbuntuRegular, Tahoma, Elvetica, sans-serif; padding: 0.5em; }
 
+.featured-item { margin-bottom: 4em; }
+
 article { font-family: ff-meta-serif-web-pro, Palatino, Georgia, LinuxLibertineORegular, Gentium Book Basic, serif; }
 
 small { font-size: 69%; }
