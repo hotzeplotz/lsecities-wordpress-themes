@@ -20,6 +20,7 @@ if ($children) : ?>
 <?php echo $children; ?>
 </ul>
 <?php else : ?>
+get_template_part('nav', 'conferences');
 &#160;
 <br />
 <br />
