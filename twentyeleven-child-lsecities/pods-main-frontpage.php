@@ -39,7 +39,7 @@ $button_links = $pod->get_field('features');
 	<div class="entry-content">
 
     <div class='row' id='core'>
-      <article class='tencol'>
+      <article class='ninecol'>
         <div class='row' id='headfeatures'>
           <div class='features sixcol'>
             <div class='flipbox twelvecol last boxbig'>
@@ -78,7 +78,7 @@ $button_links = $pod->get_field('features');
         </div>
         <?php edit_post_link( __( 'Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
       </article>
-      <aside class="twocol last">
+      <aside class="threecol last">
       &#160;
       </aside>
     </div><!-- #core.row -->
@@ -130,11 +130,6 @@ $button_links = $pod->get_field('features');
 
 </div>
 
-<script>
-jQuery(function() {
-  jQuery('.flipbox').quickFlip();
-});
-</script>
 <?php get_sidebar(); ?>
 
 <?php get_footer(); ?>
