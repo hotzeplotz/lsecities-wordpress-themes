@@ -90,49 +90,46 @@ $logo_element_id = $urban_age_section ? 'ualogo' : 'logo';
 
 <body <?php body_class(); ?>>
 
-<div class='container' id='container'> <!-- ## grid -->
-<header id='header'>
-<div class='row'>
-<a href="/<?php if($urban_age_section) { echo 'ua/'; }?>">
-<div class='full fivecol' id='<?php echo $logo_element_id ; ?>'>
-&nbsp;
-</div>
-</a>
-<div class='sevencol last' id='toolbox'>
-<div id='searchbox'>
-<form action='http://www.google.com/u/urbanAge' id='search-box' method='get'>
-<div class='hiddenFields'>
-<input name='domains' type='hidden' value='www.urban-age.net'>
-<input name='sitesearch' type='hidden' value='www.urban-age.net'>
-<input id='queryfield' name='q' placeholder='Search LSE Cities' size='40' type='text'>
-</div>
-</form>
-<div class='clearfix' id='persistentLogo'>
-<?php if($urban_age_section) : ?>
-<a href="/"><img id='lsecitiesSmallLogo' src='<?php echo get_stylesheet_directory_uri() ?>/images/logo_lsecities_nostrapline_small.gif'></a>
-<?php endif ; ?>
-</div>
-</div>
-<nav id='level1nav'>
-<ul>
-<?php wp_list_pages('depth=1&sort_column=menu_order&title_li=&exclude=393,395,562'); ?>
-</ul>
-</nav>
-</div>
-</div>
-<div class='row' id='mainmenus'>
-
-<?php if($toplevel_ancestor) : ?>
-<nav class='twelvecol section-ancestor-<?php echo $toplevel_ancestor ; ?>' id='level2nav'>
-<h1>&nbsp;</h1>
-<ul>
-<?php echo $level2nav ; ?>
-</ul>
-</nav>
-<?php endif ; ?>
-</div>
-
-
+	<div class='container' id='container'> <!-- ## grid -->
+		<header id='header'>
+			<div class='row'>
+				<a href="/<?php if($urban_age_section) { echo 'ua/'; }?>">
+					<div class='full fivecol' id='<?php echo $logo_element_id ; ?>'>
+						&nbsp;
+					</div>
+				</a>
+				<div class='sevencol last' id='toolbox'>
+					<div id='searchbox'>
+						<form action='http://www.google.com/u/urbanAge' id='search-box' method='get'>
+							<div class='hiddenFields'>
+								<input name='domains' type='hidden' value='www.urban-age.net' />
+								<input name='sitesearch' type='hidden' value='www.urban-age.net' />
+								<input id='queryfield' name='q' placeholder='Search LSE Cities' size='40' type='text' />
+							</div>
+						</form>
+						<div class='clearfix' id='persistentLogo'>
+						<?php if($urban_age_section) : ?>
+								<a href="/"><img id='lsecitiesSmallLogo' src='<?php echo get_stylesheet_directory_uri() ?>/images/logo_lsecities_nostrapline_small.gif'></a>
+						<?php endif ; ?>
+						</div>
+					</div>
+				</div><!-- #toolbox -->
+				<nav id='level1nav'>
+					<ul>
+					<?php wp_list_pages('depth=1&sort_column=menu_order&title_li=&exclude=393,395,562'); ?>
+					</ul>
+				</nav><!-- #level1nav -->
+			</div><!-- row -->
+			<div class='row' id='mainmenus'>
+			<?php if($toplevel_ancestor) : ?>
+				<nav class='twelvecol section-ancestor-<?php echo $toplevel_ancestor ; ?>' id='level2nav'>
+					<h1>&nbsp;</h1>
+					<ul>
+					<?php echo $level2nav ; ?>
+					</ul>
+				</nav>
+			<?php endif ; ?>
+			</div><!-- #mainmenus -->
 
 			<?php
 				// Check to see if the header image has been removed
@@ -164,7 +161,7 @@ $logo_element_id = $urban_age_section ? 'ualogo' : 'logo';
 				<?php /* Our navigation menu.  If one isn't filled out, wp_nav_menu falls back to wp_page_menu. The menu assiged to the primary position is the one used. If none is assigned, the menu with the lowest ID is used. */ ?>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 			</nav> --> <!-- #access -->
+		</div><!-- .row -->
 	</header><!-- #branding -->
-
 
 	<div id="main" class="row">
