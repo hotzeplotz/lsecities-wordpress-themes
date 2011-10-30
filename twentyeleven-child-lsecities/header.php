@@ -114,21 +114,20 @@ $logo_element_id = $urban_age_section ? 'ualogo' : 'logo';
 						</div>
 					</div>
 				</div><!-- #toolbox -->
-				<nav id='level1nav'>
+				<nav id='level1nav' class="row">
 					<ul>
 					<?php wp_list_pages('depth=1&sort_column=menu_order&title_li=&exclude=393,395,562'); ?>
 					</ul>
 				</nav><!-- #level1nav -->
 			</div><!-- row -->
 			<div class='row' id='mainmenus'>
-			<?php if($toplevel_ancestor) : ?>
 				<nav class='twelvecol section-ancestor-<?php echo $toplevel_ancestor ; ?>' id='level2nav'>
-					<h1>&nbsp;</h1>
+				<?php if($toplevel_ancestor) : ?>
 					<ul>
 					<?php echo $level2nav ; ?>
 					</ul>
+				<?php endif ; ?>
 				</nav>
-			<?php endif ; ?>
 			</div><!-- #mainmenus -->
 
 			<?php
