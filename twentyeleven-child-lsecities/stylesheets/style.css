@@ -166,7 +166,7 @@ nav#level1nav, nav#level2nav { line-height: 1.2em; font-family: ff-meta-web-pro,
 #level1nav ul li:hover:not(.current), #level1nav ul li:hover:not(.current_page_item) { border-bottom: 5px solid; }
 #level1nav ul li:hover:not(.current), #level1nav ul li:hover:not(.current_page_item) { border-bottom-color: rgba(0, 0, 0, 0.5); }
 
-#level2nav { padding-top: 5px; }
+#level2nav { padding-top: 5px; height: 26px; }
 #level2nav h1 { display: inline-block; color: #ffffff; font-size: 1.2em; font-weight: normal; font-family: UbuntuBold; padding: 0 0.5em; }
 #level2nav ul { font-weight: bold; }
 #level2nav ul li.current a, #level2nav ul li.current_page_item a, #level2nav ul li.current_page_ancestor a, #level2nav ul li.current_page_parent a { border-bottom: #ffffff 5px solid; }
