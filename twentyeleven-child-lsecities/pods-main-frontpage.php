@@ -40,42 +40,30 @@ $button_links = $pod->get_field('features');
 
     <div class='row' id='core'>
       <article class='ninecol'>
-        <div class='row' id='headfeatures'>
-          <div class='features sixcol'>
-            <div class='flipbox twelvecol last boxbig'>
-              <div class='box recto'>
-                <img src='http://placehold.it/500x310'>
+        <div id="featuresgrid" class="row">
+              <div class="featurescolumn">
+                <div class="featureboxbig">
+                  <img src="http://placehold.it/500x309">
+                </div>
+                <div class="featureboxsmall">
+                  <img src="http://placehold.it/500x309">
+                </div>
+                <div class="featureboxsmall last">
+                  <img src="http://placehold.it/500x309">
+                </div>
+              </div>
+              <div class="featurescolumn last">
+                <div class="featureboxsmall">
+                  <img src="http://placehold.it/500x309">
+                </div>
+                <div class="featureboxsmall last">
+                  <img src="http://placehold.it/500x309">
+                </div>
+                <div class="featureboxbig">
+                  <img src="http://placehold.it/500x309">
+                </div>
               </div>
             </div>
-            <div class='flipbox sixcol'>
-              <div class='box recto'>
-                <img src='http://placehold.it/500x310'>
-              </div>
-            </div>
-            <div class='flipbox sixcol last'>
-              <div class='box recto'>
-                <img src='http://placehold.it/500x310'>
-              </div>
-            </div>
-          </div>
-          <div class='features sixcol last'>
-            <div class='flipbox sixcol boxsmall'>
-              <div class='box recto'>
-                <img src='http://placehold.it/500x310'>
-              </div>
-            </div>
-            <div class='flipbox sixcol boxsmall last'>
-              <div class='box recto'>
-                <img src='http://placehold.it/500x310'>
-              </div>
-            </div>
-            <div class='flipbox twelvecol last boxbig'>
-              <div class='box recto'>
-                <img src='http://placehold.it/500x310'>
-              </div>
-            </div>
-          </div>
-        </div>
         <?php edit_post_link( __( 'Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
       </article>
       <aside class="threecol last">
