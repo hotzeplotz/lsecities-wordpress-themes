@@ -32,6 +32,6 @@ $main_area_class = $wide_layout ? 'ninecol' : 'sixcol';
 </aside>
 <?php endif; ?>
 
-<?php get_template_part( 'nav'); ?>
+<?php get_template_part('nav'); ?>
 
 </div><!-- .row -->
