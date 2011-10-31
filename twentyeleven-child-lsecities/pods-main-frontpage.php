@@ -44,7 +44,7 @@ $slide1_href = $slide1_page_permalink ? $slide1_page_permalink : $pod->get_field
       <article class='ninecol'>
         <div id="featuresgrid" class="row">
               <div class="featurescolumn">
-                <div class="featureboxbig">
+                <div class="featurebox bigbox last">
                   <a href="<?php echo $slide1_href; ?>">
                     <img src="<?php echo $pod->get_field('slide1_image.guid'); ?>">
                     <div class="feature_info">
@@ -54,7 +54,7 @@ $slide1_href = $slide1_page_permalink ? $slide1_page_permalink : $pod->get_field
                     </div>
                   </a>
                 </div>
-                <div class="featureboxsmall">
+                <div class="featurebox smallbox">
                   <a href="<?php echo $slide2_href; ?>">
                     <img src="<?php echo $pod->get_field('slide2_image.guid'); ?>">
                     <div class="feature_info">
@@ -64,7 +64,7 @@ $slide1_href = $slide1_page_permalink ? $slide1_page_permalink : $pod->get_field
                     </div>
                   </a>
                 </div>
-                <div class="featureboxsmall last">
+                <div class="featurebox smallbox last">
                   <a href="<?php echo $slide3_href; ?>">
                     <img src="<?php echo $pod->get_field('slide3_image.guid'); ?>">
                     <div class="feature_info">
@@ -76,7 +76,7 @@ $slide1_href = $slide1_page_permalink ? $slide1_page_permalink : $pod->get_field
                 </div>
               </div>
               <div class="featurescolumn last">
-                <div class="featureboxsmall">
+                <div class="featurebox smallbox">
                   <a href="<?php echo $slide4_href; ?>">
                     <img src="<?php echo $pod->get_field('slide4_image.guid'); ?>">
                     <div class="feature_info">
@@ -86,7 +86,7 @@ $slide1_href = $slide1_page_permalink ? $slide1_page_permalink : $pod->get_field
                     </div>
                   </a>
                </div>
-                <div class="featureboxsmall last">
+                <div class="featurebox smallbox last">
                   <a href="<?php echo $slide5_href; ?>">
                     <img src="<?php echo $pod->get_field('slide5_image.guid'); ?>">
                     <div class="feature_info">
@@ -96,7 +96,7 @@ $slide1_href = $slide1_page_permalink ? $slide1_page_permalink : $pod->get_field
                     </div>
                   </a>
                 </div>
-                <div class="featureboxbig">
+                <div class="featurebox bigbox last">
                   <a href="<?php echo $slide6_href; ?>">
                     <img src="<?php echo $pod->get_field('slide6_image.guid'); ?>">
                     <div class="feature_info">
