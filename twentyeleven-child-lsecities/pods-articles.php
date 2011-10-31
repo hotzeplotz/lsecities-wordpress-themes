@@ -49,8 +49,8 @@ $article_authors = $pod->get_field('authors');
 
 	<header class="entry-header twelvecol row last">
 		<h1 class="entry-title article-title twelvecol"><?php echo $article_title; ?></h1>
-    <div class="entry-meta article-abstract ninecol"><?php echo $article_abstract; ?></div>
-    <div class="threecol last">&#160;</div>
+    <div class="entry-meta article-abstract sixcol"><?php echo $article_abstract; ?></div>
+    <div class="sixcol last">&#160;</div>
 	</header><!-- .entry-header -->
 
   
