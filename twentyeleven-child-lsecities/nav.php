@@ -6,7 +6,7 @@ if($TRACE_TEMPLATE_NAV) { error_log($TRACE_PREFIX . 'post ID: ' . $current_post_
 if($TRACE_TEMPLATE_NAV) : ?>
 <!--
 pod:
-<?php var_export($pod); ?>
+<?php var_export($Pod); ?>
 -->
 <?php endif; ?>
 
@@ -16,12 +16,10 @@ if($current_post_id) {
   $children = wp_list_pages('title_li=&depth=1&child_of='.$current_post_id.'&echo=0');
 }
 if ($children) : ?>
-<ul>
-<?php echo $children; ?>
-</ul>
+  <ul>
+  <?php echo $children; ?>
+  </ul>
 <?php else : ?>
-&#160;
-<br />
-<br />
+  &#160;
 <?php endif; ?>
 </div>
