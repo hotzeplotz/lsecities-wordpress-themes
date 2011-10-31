@@ -1,4 +1,20 @@
             <nav id='conferencesmenu'>
+<?php if($post->ID == 94) : // /ua/ ?>
+  <div>
+    <h1>Organisers</h1>
+    <span>
+      <a href="http://www.lse.ac.uk/collections/cities" target="_blank">
+        <img alt="LSE" src="http://v0.urban-age.net/0_images/organizer_lse_bigger.gif" height="49" width="128">
+      </a>
+    </span>
+    <br />
+    <span class="indent">
+      <a href="http://www.alfred-herrhausen-gesellschaft.de" target="_blank">
+        <img alt="Alfred Herrhausen Stiftung" src="http://v0.urban-age.net/0_images/organizer_ahg_big.gif" align="top" height="30" width="153">
+      </a>
+    </span>
+  </div>   
+<?php endif; ?>
               <h2>Urban Age conferences</h2>
               <p>The Urban Age Programme is an international investigation of the spatial and social dynamics of cities centred on an annual conference, research initiative and publication.</p>
               <!--
