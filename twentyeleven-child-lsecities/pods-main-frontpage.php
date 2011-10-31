@@ -17,7 +17,9 @@
 $pod_slug = get_post_meta($post->ID, 'pod_slug', true);
 error_log('pod_slug: ' . $pod_slug);
 $pod = new Pod('slider', $pod_slug);
-$button_links = $pod->get_field('features');
+
+$slide1_page_permalink = get_permalink($pod->get_field('slide1_page.ID'));
+$slide1_href = $slide1_page_permalink ? $slide1_page_permalink : $pod->get_field('slide1_uri');
 ?>
 
 <?php get_header(); ?>
@@ -43,24 +45,66 @@ $button_links = $pod->get_field('features');
         <div id="featuresgrid" class="row">
               <div class="featurescolumn">
                 <div class="featureboxbig">
-                  <img src="<?php echo $pod->get_field('slide1_image.guid'); ?>">
+                  <a href="<?php echo $slide1_href; ?>">
+                    <img src="<?php echo $pod->get_field('slide1_image.guid'); ?>">
+                    <div class="feature_info">
+                      <div class="feature_title"><?php echo $pod->get_field('slide1_title'); ?></div>
+                      <div class="feature_caption"><?php echo $pod->get_field('slide1_caption'); ?></div>
+                      <div class="feature_blurb"><?php echo $pod->get_field('slide1_blurb'); ?></div>
+                    </div>
+                  </a>
                 </div>
                 <div class="featureboxsmall">
-                  <img src="<?php echo $pod->get_field('slide2_image.guid'); ?>">
+                  <a href="<?php echo $slide2_href; ?>">
+                    <img src="<?php echo $pod->get_field('slide2_image.guid'); ?>">
+                    <div class="feature_info">
+                      <div class="feature_title"><?php echo $pod->get_field('slide2_title'); ?></div>
+                      <div class="feature_caption"><?php echo $pod->get_field('slide2_caption'); ?></div>
+                      <div class="feature_blurb"><?php echo $pod->get_field('slide2_blurb'); ?></div>
+                    </div>
+                  </a>
                 </div>
                 <div class="featureboxsmall last">
-                  <img src="<?php echo $pod->get_field('slide3_image.guid'); ?>">
+                  <a href="<?php echo $slide3_href; ?>">
+                    <img src="<?php echo $pod->get_field('slide3_image.guid'); ?>">
+                    <div class="feature_info">
+                      <div class="feature_title"><?php echo $pod->get_field('slide3_title'); ?></div>
+                      <div class="feature_caption"><?php echo $pod->get_field('slide3_caption'); ?></div>
+                      <div class="feature_blurb"><?php echo $pod->get_field('slide3_blurb'); ?></div>
+                    </div>
+                  </a>
                 </div>
               </div>
               <div class="featurescolumn last">
                 <div class="featureboxsmall">
-                  <img src="<?php echo $pod->get_field('slide4_image.guid'); ?>">
-                </div>
+                  <a href="<?php echo $slide4_href; ?>">
+                    <img src="<?php echo $pod->get_field('slide4_image.guid'); ?>">
+                    <div class="feature_info">
+                      <div class="feature_title"><?php echo $pod->get_field('slide4_title'); ?></div>
+                      <div class="feature_caption"><?php echo $pod->get_field('slide4_caption'); ?></div>
+                      <div class="feature_blurb"><?php echo $pod->get_field('slide4_blurb'); ?></div>
+                    </div>
+                  </a>
+               </div>
                 <div class="featureboxsmall last">
-                  <img src="<?php echo $pod->get_field('slide5_image.guid'); ?>">
+                  <a href="<?php echo $slide5_href; ?>">
+                    <img src="<?php echo $pod->get_field('slide5_image.guid'); ?>">
+                    <div class="feature_info">
+                      <div class="feature_title"><?php echo $pod->get_field('slide5_title'); ?></div>
+                      <div class="feature_caption"><?php echo $pod->get_field('slide5_caption'); ?></div>
+                      <div class="feature_blurb"><?php echo $pod->get_field('slide5_blurb'); ?></div>
+                    </div>
+                  </a>
                 </div>
                 <div class="featureboxbig">
-                  <img src="<?php echo $pod->get_field('slide6_image.guid'); ?>">
+                  <a href="<?php echo $slide6_href; ?>">
+                    <img src="<?php echo $pod->get_field('slide6_image.guid'); ?>">
+                    <div class="feature_info">
+                      <div class="feature_title"><?php echo $pod->get_field('slide6_title'); ?></div>
+                      <div class="feature_caption"><?php echo $pod->get_field('slide6_caption'); ?></div>
+                      <div class="feature_blurb"><?php echo $pod->get_field('slide6_blurb'); ?></div>
+                    </div>
+                  </a>
                 </div>
               </div>
             </div>
