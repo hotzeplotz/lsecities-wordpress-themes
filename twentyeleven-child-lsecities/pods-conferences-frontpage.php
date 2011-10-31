@@ -40,7 +40,7 @@ if(!$slider) {
       <article class='ninecol'>
         <div class='row'>
           <div class='slider spaceAfter eightcol' id='slider'>
-            <img src=<?php echo $featured_image; ?> />
+            <img src="<?php echo $featured_image; ?>" />
           </div>
           <aside class='extras fourcol last'>
           <?php echo do_shortcode($pod->get_field('info')); ?>
