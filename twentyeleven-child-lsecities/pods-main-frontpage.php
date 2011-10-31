@@ -43,24 +43,24 @@ $button_links = $pod->get_field('features');
         <div id="featuresgrid" class="row">
               <div class="featurescolumn">
                 <div class="featureboxbig">
-                  <img src="<?php echo $Pod->get_field('slide1_image.guid'); ?>">
+                  <img src="<?php echo $pod->get_field('slide1_image.guid'); ?>">
                 </div>
                 <div class="featureboxsmall">
-                  <img src="<?php echo $Pod->get_field('slide2_image.guid'); ?>">
+                  <img src="<?php echo $pod->get_field('slide2_image.guid'); ?>">
                 </div>
                 <div class="featureboxsmall last">
-                  <img src="<?php echo $Pod->get_field('slide3_image.guid'); ?>">
+                  <img src="<?php echo $pod->get_field('slide3_image.guid'); ?>">
                 </div>
               </div>
               <div class="featurescolumn last">
                 <div class="featureboxsmall">
-                  <img src="<?php echo $Pod->get_field('slide4_image.guid'); ?>">
+                  <img src="<?php echo $pod->get_field('slide4_image.guid'); ?>">
                 </div>
                 <div class="featureboxsmall last">
-                  <img src="<?php echo $Pod->get_field('slide5_image.guid'); ?>">
+                  <img src="<?php echo $pod->get_field('slide5_image.guid'); ?>">
                 </div>
                 <div class="featureboxbig">
-                  <img src="<?php echo $Pod->get_field('slide6_image.guid'); ?>">
+                  <img src="<?php echo $pod->get_field('slide6_image.guid'); ?>">
                 </div>
               </div>
             </div>
