@@ -2,6 +2,8 @@
 $TRACE_TEMPLATE_NAV = true;
 $TRACE_PREFIX = 'nav.php -- ';
 $current_post_id = $post->ID;
+$ancestors = get_post_ancestors($current_post_id);
+$parent_post_id = count(ancestors) > 1 ? array_shift($ancestors) : $current_post_id;
 if($TRACE_TEMPLATE_NAV) { error_log($TRACE_PREFIX . 'post ID: ' . $current_post_id); }
 if($TRACE_TEMPLATE_NAV) : ?>
 <!--
@@ -13,7 +15,7 @@ pod:
 <div class="threecol last" id="level3nav">
 <?php
 if($current_post_id) {
-  $children = wp_list_pages('title_li=&depth=1&child_of='.$current_post_id.'&echo=0');
+  $children = wp_list_pages('title_li=&depth=1&child_of='.$parent_post_id.'&echo=0');
 }
 if ($children) : ?>
   <ul>
