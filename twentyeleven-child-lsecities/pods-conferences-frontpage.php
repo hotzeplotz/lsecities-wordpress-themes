@@ -18,6 +18,10 @@ $pod_slug = get_post_meta($post->ID, 'pod_slug', true);
 if($TRACE_PODS_CONFERENCES_FRONTPAGE) { error_log('pod_slug: ' . $pod_slug); }
 $pod = new Pod('conference', $pod_slug);
 $button_links = $pod->get_field('links');
+$slider = $pod->get_field('slider');
+if(!$slider) {
+  $featured_image = get_the_post_thumbnail(get_the_ID(), array(960,367));
+}
 ?>
 
 <?php get_header(); ?>
@@ -36,9 +40,7 @@ $button_links = $pod->get_field('links');
       <article class='ninecol'>
         <div class='row'>
           <div class='slider spaceAfter eightcol' id='slider'>
-            <a href='http://urban-age.net/publications/living-in-the-endless-city/' title='item'>
-              <img alt='Living in the endless city - book cover' src='http://urban-age.net/media/homepage/sliders/201106_living-in-the-endless-city-book.jpg' title='New Publication: Living in the Endless City'>
-            </a>
+            <img src=<?php echo $featured_image; ?> />
           </div>
           <aside class='extras fourcol last'>
           <?php echo do_shortcode($pod->get_field('info')); ?>
