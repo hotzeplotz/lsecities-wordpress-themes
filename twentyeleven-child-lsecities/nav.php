@@ -3,7 +3,7 @@ $TRACE_TEMPLATE_NAV = true;
 $TRACE_PREFIX = 'nav.php -- ';
 $current_post_id = $post->ID;
 $ancestors = get_post_ancestors($current_post_id);
-$parent_post_id = count(ancestors) > 1 ? array_shift($ancestors) : $current_post_id;
+$parent_post_id = count(ancestors) > 1 ? array_shift($ancestors)[0] : $current_post_id;
 
 if($TRACE_TEMPLATE_NAV) { error_log($TRACE_PREFIX . 'post ID: ' . $current_post_id); }
 if($TRACE_TEMPLATE_NAV) { error_log($TRACE_PREFIX . 'ancestors: ' . var_export($ancestors, true)); }
