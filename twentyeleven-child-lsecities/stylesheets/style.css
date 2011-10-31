@@ -96,7 +96,7 @@ article .introblurb { font-size: 1.3em; }
 aside { font-family: ff-meta-serif-web-pro, Palatino, Georgia, LinuxLibertineORegular, Gentium Book Basic, serif; }
 aside p { font-size: 0.875em; line-height: 1.5em; }
 
-#featuresgrid { width: 100%; }
+#featuresgrid { width: 100%; line-height: 1em; }
 #featuresgrid .featurescolumn { width: 49.5260664%; margin-right: 0.94786739%; margin-bottom: 0.94786739%; float: left; }
 #featuresgrid .featurescolumn.last { margin-right: 0; }
 #featuresgrid .featureboxbig { width: 100%; float: left; margin-bottom: 0.9569378%; }
