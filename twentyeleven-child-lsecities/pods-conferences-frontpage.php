@@ -20,7 +20,7 @@ $pod = new Pod('conference', $pod_slug);
 $button_links = $pod->get_field('links');
 $slider = $pod->get_field('slider');
 if(!$slider) {
-  $featured_image = get_the_post_thumbnail(get_the_ID(), array(960,367));
+  $featured_image_uri = get_the_post_thumbnail(get_the_ID(), array(960,367));
 }
 ?>
 
@@ -40,7 +40,7 @@ if(!$slider) {
       <article class='ninecol'>
         <div class='row'>
           <div class='slider spaceAfter eightcol' id='slider'>
-            <img src="<?php echo $featured_image; ?>" />
+            <?php echo $featured_image_uri; ?>
           </div>
           <aside class='extras fourcol last'>
           <?php echo do_shortcode($pod->get_field('info')); ?>
