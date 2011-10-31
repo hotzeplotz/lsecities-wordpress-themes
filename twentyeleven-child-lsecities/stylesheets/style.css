@@ -99,8 +99,8 @@ aside p { font-size: 0.875em; line-height: 1.5em; }
 #featuresgrid { width: 100%; }
 #featuresgrid .featurescolumn { width: 49.5260664%; margin-right: 0.94786739%; margin-bottom: 0.94786739%; float: left; }
 #featuresgrid .featurescolumn.last { margin-right: 0; }
-#featuresgrid .featureboxbig { width: 100%; float: left; margin-bottom: 1.9138756%; }
-#featuresgrid .featureboxsmall { width: 49.0430622%; margin-right: 1.9138756%; margin-bottom: 1.9138756%; float: left; }
+#featuresgrid .featureboxbig { width: 100%; float: left; margin-bottom: 0.9569378%; }
+#featuresgrid .featureboxsmall { width: 49.0430622%; margin-right: 1.9138756%; margin-bottom: 0.9569378%; float: left; }
 #featuresgrid .featureboxsmall.last { margin-right: 0; }
 
 #headfeatures .flipbox { margin-bottom: 1em; }
