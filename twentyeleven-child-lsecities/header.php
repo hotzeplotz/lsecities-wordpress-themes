@@ -100,6 +100,11 @@ $logo_element_id = $urban_age_section ? 'ualogo' : 'logo';
 				</a>
 				<div class='sevencol last' id='toolbox'>
 					<div id='searchbox'>
+						<div class='clearfix' id='persistentLogo'>
+						<?php if($urban_age_section) : ?>
+								<a href="/"><img id='lsecitiesSmallLogo' src='<?php echo get_stylesheet_directory_uri() ?>/images/logo_lsecities_nostrapline_small.gif'></a>
+						<?php endif ; ?>
+						</div>
 						<form action='http://www.google.com/u/urbanAge' id='search-box' method='get'>
 							<div class='hiddenFields'>
 								<input name='domains' type='hidden' value='www.urban-age.net' />
@@ -107,11 +112,6 @@ $logo_element_id = $urban_age_section ? 'ualogo' : 'logo';
 								<input id='queryfield' name='q' placeholder='Search LSE Cities' size='40' type='text' />
 							</div>
 						</form>
-						<div class='clearfix' id='persistentLogo'>
-						<?php if($urban_age_section) : ?>
-								<a href="/"><img id='lsecitiesSmallLogo' src='<?php echo get_stylesheet_directory_uri() ?>/images/logo_lsecities_nostrapline_small.gif'></a>
-						<?php endif ; ?>
-						</div>
 					</div>
 				</div><!-- #toolbox -->
 				<nav id='level1nav' class="row">
