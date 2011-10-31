@@ -16,7 +16,7 @@
  */
 $pod_slug = get_post_meta($post->ID, 'pod_slug', true);
 error_log('pod_slug: ' . $pod_slug);
-$pod = new Pod('slider', $pd_slug);
+$pod = new Pod('slider', $pod_slug);
 $button_links = $pod->get_field('features');
 ?>
 
