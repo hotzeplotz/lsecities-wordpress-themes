@@ -91,10 +91,10 @@ strong, th { font-weight: bold; }
 
 .boxsmall { height: 137px; }
 
-article .introblurb { font-size: 1.5em; }
+article .introblurb { font-size: 1.3em; }
 
 aside { font-family: ff-meta-serif-web-pro, Palatino, Georgia, LinuxLibertineORegular, Gentium Book Basic, serif; }
-aside p { font-size: 0.875em; }
+aside p { font-size: 0.875em; line-height: 1.5em; }
 
 #featuresgrid { width: 100%; }
 #featuresgrid .featurescolumn { width: 49.5260664%; margin-right: 0.94786739%; margin-bottom: 0.94786739%; float: left; }
