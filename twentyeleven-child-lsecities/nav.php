@@ -13,7 +13,7 @@ pod:
 <div class="threecol last" id="level3nav">
 <?php
 if($current_post_id) {
-  $children = wp_list_pages('title_li=&child_of='.$current_post_id.'&echo=0');
+  $children = wp_list_pages('title_li=&depth=1&child_of='.$current_post_id.'&echo=0');
 }
 if ($children) : ?>
 <ul>
