@@ -16,7 +16,7 @@
  */
 $pod_slug = get_post_meta($post->ID, 'pod_slug', true);
 error_log('pod_slug: ' . $pod_slug);
-$pod = new Pod('frontpage', $pd_slug);
+$pod = new Pod('slider', $pd_slug);
 $button_links = $pod->get_field('features');
 ?>
 
@@ -43,24 +43,24 @@ $button_links = $pod->get_field('features');
         <div id="featuresgrid" class="row">
               <div class="featurescolumn">
                 <div class="featureboxbig">
-                  <img src="http://placehold.it/500x309">
+                  <img src="<?php echo $Pod->get_field('slide1_image.guid'); ?>">
                 </div>
                 <div class="featureboxsmall">
-                  <img src="http://placehold.it/500x309">
+                  <img src="<?php echo $Pod->get_field('slide2_image.guid'); ?>">
                 </div>
                 <div class="featureboxsmall last">
-                  <img src="http://placehold.it/500x309">
+                  <img src="<?php echo $Pod->get_field('slide3_image.guid'); ?>">
                 </div>
               </div>
               <div class="featurescolumn last">
                 <div class="featureboxsmall">
-                  <img src="http://placehold.it/500x309">
+                  <img src="<?php echo $Pod->get_field('slide4_image.guid'); ?>">
                 </div>
                 <div class="featureboxsmall last">
-                  <img src="http://placehold.it/500x309">
+                  <img src="<?php echo $Pod->get_field('slide5_image.guid'); ?>">
                 </div>
                 <div class="featureboxbig">
-                  <img src="http://placehold.it/500x309">
+                  <img src="<?php echo $Pod->get_field('slide6_image.guid'); ?>">
                 </div>
               </div>
             </div>
