@@ -126,7 +126,7 @@ $slide6_image_uri = $pod->get_field('slide6_image.guid');
                </div>
                 <div class="featurebox smallbox last">
                   <a href="<?php echo $slide5_href; ?>">
-                    <?php if($slide5image_uri) : ?>
+                    <?php if($slide5_image_uri) : ?>
                     <img src="<?php echo $slide5_image_uri; ?>" />
                     <?php else : ?>
                     <img src="/files/2011/11/grid_placeholder_goldenratio.png" />
