@@ -71,7 +71,7 @@ nav ul, nav li { margin: 0; list-style: none; list-style-image: none; }
 
 body, select, input, textarea { color: black; }
 
-h1, h2, h3, h4, h5, h6 { font-weight: bold; }
+h1, h2, h3, h4, h5, h6 { font-weight: normal; }
 
 a, a:active, a:visited { color: #990000; }
 
@@ -99,6 +99,7 @@ aside p { font-size: 0.875em; line-height: 1.5em; }
 #featuresgrid .feature_info .feature_caption { font-weight: normal; }
 
 .featureboxes .featurebox { background-color: #000; color: #fff; margin-bottom: 0.9569378%; }
+.featureboxes .featurebox h3 { padding: 0 0.3em; }
 .featureboxes .featurebox a, .featureboxes .featurebox a:active, .featureboxes .featurebox a:visited, .featureboxes .featurebox a:hover { color: #fff; }
 
 .featured-item { margin-bottom: 4em; }
