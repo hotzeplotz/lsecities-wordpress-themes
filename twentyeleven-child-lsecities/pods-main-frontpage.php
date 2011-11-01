@@ -156,9 +156,9 @@ $slide6_image_uri = $pod->get_field('slide6_image.guid');
             </div>
         <?php edit_post_link( __( 'Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
       </article>
-      <aside class="threecol last">
-      &#160;
-      </aside>
+
+      <?php get_template_part('nav'); ?>
+      
     </div><!-- #core.row -->
     <div id='news_area'>
       <h2>News</h2>
