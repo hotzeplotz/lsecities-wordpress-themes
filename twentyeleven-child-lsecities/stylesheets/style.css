@@ -92,11 +92,14 @@ aside p { font-size: 0.875em; line-height: 1.5em; }
 #featuresgrid .featurebox.smallbox.last { margin-right: 0; }
 #featuresgrid .featurebox .feature_blurb { float: left; font-size: 0.8em; line-height: 1.08em; max-height: 0; overflow: hidden; padding-top: 5px; width: 100%; }
 #featuresgrid .featurebox:hover .feature_title, #featuresgrid .featurebox:hover .feature_caption { display: none; }
+#featuresgrid .featurebox:hover .feature_info.textonly .feature_title, #featuresgrid .featurebox:hover .feature_info.textonly .feature_caption { display: block; }
 #featuresgrid .featurebox:hover .feature_blurb { max-height: 75%; }
 #featuresgrid .featurebox:hover .feature_info { -moz-transition-property: background-color; -webkit-transition-property: background-color; -o-transition-property: background-color; transition-property: background-color; -moz-transition-duration: 0.5s; -webkit-transition-duration: 0.5s; -o-transition-duration: 0.5s; transition-duration: 0.5s; -moz-transition-timing-function: ease-in-out; -webkit-transition-timing-function: ease-in-out; -o-transition-timing-function: ease-in-out; transition-timing-function: ease-in-out; -moz-transition-delay: 0s; -webkit-transition-delay: 0s; -o-transition-delay: 0s; transition-delay: 0s; background-color: #3F3F3F; max-height: 75%; }
 #featuresgrid .feature_info { -moz-transition-property: background-color; -webkit-transition-property: background-color; -o-transition-property: background-color; transition-property: background-color; -moz-transition-duration: 0.5s; -webkit-transition-duration: 0.5s; -o-transition-duration: 0.5s; transition-duration: 0.5s; -moz-transition-timing-function: ease-in-out; -webkit-transition-timing-function: ease-in-out; -o-transition-timing-function: ease-in-out; transition-timing-function: ease-in-out; -moz-transition-delay: 0s; -webkit-transition-delay: 0s; -o-transition-delay: 0s; transition-delay: 0s; background: none repeat scroll 0 0 rgba(0, 0, 0, 0.6); bottom: 0; color: #F8F8F8; cursor: pointer; line-height: 1em; padding: 10px; position: absolute; left: 0; right: 0; }
 #featuresgrid .feature_info .feature_title { font-weight: bold; }
 #featuresgrid .feature_info .feature_caption { font-weight: normal; }
+#featuresgrid .feature_info.textonly { top: 0; }
+#featuresgrid .feature_info.textonly .feature_blurb { max-height: 75%; }
 
 .featureboxes .featurebox { background-color: #000; color: #fff; margin-bottom: 0.9569378%; }
 .featureboxes .featurebox h3 { padding: 0 0.3em; }

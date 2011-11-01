@@ -20,6 +20,28 @@ $pod = new Pod('slider', $pod_slug);
 
 $slide1_page_permalink = get_permalink($pod->get_field('slide1_page.ID'));
 $slide1_href = $slide1_page_permalink ? $slide1_page_permalink : $pod->get_field('slide1_uri');
+$slide1_image_uri = $pod->get_field('slide1_image.guid');
+
+$slide2_page_permalink = get_permalink($pod->get_field('slide2_page.ID'));
+$slide2_href = $slide2_page_permalink ? $slide2_page_permalink : $pod->get_field('slide2_uri');
+$slide2_image_uri = $pod->get_field('slide2_image.guid');
+
+$slide3_page_permalink = get_permalink($pod->get_field('slide3_page.ID'));
+$slide3_href = $slide3_page_permalink ? $slide3_page_permalink : $pod->get_field('slide3_uri');
+$slide3_image_uri = $pod->get_field('slide3_image.guid');
+
+$slide4_page_permalink = get_permalink($pod->get_field('slide4_page.ID'));
+$slide4_href = $slide4_page_permalink ? $slide4_page_permalink : $pod->get_field('slide4_uri');
+$slide4_image_uri = $pod->get_field('slide4_image.guid');
+
+$slide5_page_permalink = get_permalink($pod->get_field('slide5_page.ID'));
+$slide5_href = $slide5_page_permalink ? $slide5_page_permalink : $pod->get_field('slide5_uri');
+$slide5_image_uri = $pod->get_field('slide5_image.guid');
+
+$slide6_page_permalink = get_permalink($pod->get_field('slide6_page.ID'));
+$slide6_href = $slide6_page_permalink ? $slide6_page_permalink : $pod->get_field('slide6_uri');
+$slide6_image_uri = $pod->get_field('slide6_image.guid');
+
 ?>
 
 <?php get_header(); ?>
@@ -46,8 +68,12 @@ $slide1_href = $slide1_page_permalink ? $slide1_page_permalink : $pod->get_field
               <div class="featurescolumn">
                 <div class="featurebox bigbox last">
                   <a href="<?php echo $slide1_href; ?>">
-                    <img src="<?php echo $pod->get_field('slide1_image.guid'); ?>">
-                    <div class="feature_info">
+                    <?php if($slide1_image_uri) : ?>
+                    <img src="<?php echo $slide1_image_uri; ?>" />
+                    <?php else : ?>
+                    <img src="/files/2011/11/grid_placeholder_goldenratio.png" />
+                    <?php endif; ?>
+                    <div class="feature_info<?php if(empty($slide1_image_uri)) : ?> textonly<?php endif; ?>">
                       <div class="feature_title"><?php echo $pod->get_field('slide1_title'); ?></div>
                       <div class="feature_caption"><?php echo $pod->get_field('slide1_caption'); ?></div>
                       <div class="feature_blurb"><?php echo $pod->get_field('slide1_blurb'); ?></div>
@@ -56,8 +82,12 @@ $slide1_href = $slide1_page_permalink ? $slide1_page_permalink : $pod->get_field
                 </div>
                 <div class="featurebox smallbox">
                   <a href="<?php echo $slide2_href; ?>">
-                    <img src="<?php echo $pod->get_field('slide2_image.guid'); ?>">
-                    <div class="feature_info">
+                    <?php if($slide2_image_uri) : ?>
+                    <img src="<?php echo $slide2_image_uri; ?>" />
+                    <?php else : ?>
+                    <img src="/files/2011/11/grid_placeholder_goldenratio.png" />
+                    <?php endif; ?>
+                    <div class="feature_info<?php if(empty($slide2_image_uri)) : ?> textonly<?php endif; ?>">
                       <div class="feature_title"><?php echo $pod->get_field('slide2_title'); ?></div>
                       <div class="feature_caption"><?php echo $pod->get_field('slide2_caption'); ?></div>
                       <div class="feature_blurb"><?php echo $pod->get_field('slide2_blurb'); ?></div>
@@ -66,8 +96,12 @@ $slide1_href = $slide1_page_permalink ? $slide1_page_permalink : $pod->get_field
                 </div>
                 <div class="featurebox smallbox last">
                   <a href="<?php echo $slide3_href; ?>">
-                    <img src="<?php echo $pod->get_field('slide3_image.guid'); ?>">
-                    <div class="feature_info">
+                    <?php if($slide3_image_uri) : ?>
+                    <img src="<?php echo $slide3_image_uri; ?>" />
+                    <?php else : ?>
+                    <img src="/files/2011/11/grid_placeholder_goldenratio.png" />
+                    <?php endif; ?>
+                    <div class="feature_info<?php if(empty($slide3_image_uri)) : ?> textonly<?php endif; ?>">
                       <div class="feature_title"><?php echo $pod->get_field('slide3_title'); ?></div>
                       <div class="feature_caption"><?php echo $pod->get_field('slide3_caption'); ?></div>
                       <div class="feature_blurb"><?php echo $pod->get_field('slide3_blurb'); ?></div>
@@ -78,8 +112,12 @@ $slide1_href = $slide1_page_permalink ? $slide1_page_permalink : $pod->get_field
               <div class="featurescolumn last">
                 <div class="featurebox smallbox">
                   <a href="<?php echo $slide4_href; ?>">
-                    <img src="<?php echo $pod->get_field('slide4_image.guid'); ?>">
-                    <div class="feature_info">
+                    <?php if($slide4_image_uri) : ?>
+                    <img src="<?php echo $slide4_image_uri; ?>" />
+                    <?php else : ?>
+                    <img src="/files/2011/11/grid_placeholder_goldenratio.png" />
+                    <?php endif; ?>
+                    <div class="feature_info<?php if(empty($slide4_image_uri)) : ?> textonly<?php endif; ?>">
                       <div class="feature_title"><?php echo $pod->get_field('slide4_title'); ?></div>
                       <div class="feature_caption"><?php echo $pod->get_field('slide4_caption'); ?></div>
                       <div class="feature_blurb"><?php echo $pod->get_field('slide4_blurb'); ?></div>
@@ -88,8 +126,12 @@ $slide1_href = $slide1_page_permalink ? $slide1_page_permalink : $pod->get_field
                </div>
                 <div class="featurebox smallbox last">
                   <a href="<?php echo $slide5_href; ?>">
-                    <img src="<?php echo $pod->get_field('slide5_image.guid'); ?>">
-                    <div class="feature_info">
+                    <?php if($slide5image_uri) : ?>
+                    <img src="<?php echo $slide5_image_uri; ?>" />
+                    <?php else : ?>
+                    <img src="/files/2011/11/grid_placeholder_goldenratio.png" />
+                    <?php endif; ?>
+                    <div class="feature_info<?php if(empty($slide5_image_uri)) : ?> textonly<?php endif; ?>">
                       <div class="feature_title"><?php echo $pod->get_field('slide5_title'); ?></div>
                       <div class="feature_caption"><?php echo $pod->get_field('slide5_caption'); ?></div>
                       <div class="feature_blurb"><?php echo $pod->get_field('slide5_blurb'); ?></div>
@@ -98,8 +140,12 @@ $slide1_href = $slide1_page_permalink ? $slide1_page_permalink : $pod->get_field
                 </div>
                 <div class="featurebox bigbox last">
                   <a href="<?php echo $slide6_href; ?>">
-                    <img src="<?php echo $pod->get_field('slide6_image.guid'); ?>">
-                    <div class="feature_info">
+                    <?php if($slide6_image_uri) : ?>
+                    <img src="<?php echo $slide6_image_uri; ?>" />
+                    <?php else : ?>
+                    <img src="/files/2011/11/grid_placeholder_goldenratio.png" />
+                    <?php endif; ?>
+                    <div class="feature_info<?php if(empty($slide6_image_uri)) : ?> textonly<?php endif; ?>">
                       <div class="feature_title"><?php echo $pod->get_field('slide6_title'); ?></div>
                       <div class="feature_caption"><?php echo $pod->get_field('slide6_caption'); ?></div>
                       <div class="feature_blurb"><?php echo $pod->get_field('slide6_blurb'); ?></div>
