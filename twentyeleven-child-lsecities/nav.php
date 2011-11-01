@@ -22,7 +22,7 @@ pod:
 <div class="threecol last" id="level3nav">
 <?php
 if($current_post_id == 94) : // /ua/ ?>
-<h1>Organisers</h1>
+<h3>Organisers</h3>
 <span class="indent">
 <a href="http://www.lse.ac.uk/collections/cities" target="_blank">
 <img alt="LSE" src="http://v0.urban-age.net/0_images/organizer_lse_bigger.gif" height="49" width="128"></a>
