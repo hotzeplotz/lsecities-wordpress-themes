@@ -79,18 +79,6 @@ a:hover { color: #555555; }
 
 strong, th { font-weight: bold; }
 
-/*
-.recto { background-color: #dddddd;
-}
-*/
-/*
-.flipbox .box.verso { position: absolute; left: -9999px; display: none; background-color: rgba(255, 166, 0, 0.7);
-}
-*/
-.boxbig { height: 283px; }
-
-.boxsmall { height: 137px; }
-
 article .introblurb { font-size: 1.3em; }
 
 aside { font-family: ff-meta-serif-web-pro, Palatino, Georgia, LinuxLibertineORegular, Gentium Book Basic, serif; }
@@ -110,15 +98,8 @@ aside p { font-size: 0.875em; line-height: 1.5em; }
 #featuresgrid .feature_info .feature_title { font-weight: bold; }
 #featuresgrid .feature_info .feature_caption { font-weight: normal; }
 
-#headfeatures .flipbox { margin-bottom: 1em; }
-
-#featureboxes { margin-top: 1em; font-family: ff-meta-serif-web-pro, Palatino, Georgia, LinuxLibertineORegular, Gentium Book Basic, serif; }
-#featureboxes .featurebox { display: inline-block; margin-bottom: 0.5em; background-color: #111; /*
-&.last { margin-right: 0;
-}
-*/ }
-#featureboxes .featurebox a { color: #fff; }
-#featureboxes .featurebox h3 { font-family: ff-meta-web-pro, UbuntuRegular, Tahoma, Elvetica, sans-serif; padding: 0.5em; }
+.featureboxes .featurebox { background-color: #000; color: #fff; margin-bottom: 0.9569378%; }
+.featureboxes .featurebox a, .featureboxes .featurebox a:active, .featureboxes .featurebox a:visited, .featureboxes .featurebox a:hover { color: #fff; }
 
 .featured-item { margin-bottom: 4em; }
 
