@@ -57,7 +57,7 @@ if(!$slider) {
         <?php foreach($button_links as $key => $link) : ?>
           <?php if(($key % 3) == 0) : ?>
             <div class='featureboxes row'>
-          <?php endif: ?>          
+          <?php endif; ?>          
           <?php error_log('link key: ' . $key); ?>
           <div class='featurebox fourcol<?php if((($key + 1) % 3) == 0) : ?> last<?php endif ; ?>'>
             <a href="<?php echo $link['guid'] ; ?>" title="<?php echo $link['post_title'] ; ?>">
@@ -68,7 +68,7 @@ if(!$slider) {
           
           <?php if(($key % 3) == 3 or $key == (count($button_links) - 1) : ?>
             </div>
-          <?php endif: ?>
+          <?php endif; ?>
         <div id="the_content">
         <?php the_content(); ?>
         </div>
