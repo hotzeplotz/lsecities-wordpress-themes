@@ -55,7 +55,7 @@ if(!$slider) {
           <?php echo do_shortcode($pod->get_field('abstract')); ?>
         </div>
         <?php foreach($button_links as $key => $link) : ?>
-          <?php if(($key % 3) == 0) : ?>
+          <?php if((($key + 1) % 3) == 0) : ?>
             <div class='featureboxes row'>
           <?php endif; ?>          
           <?php error_log('link key: ' . $key); ?>
@@ -64,7 +64,7 @@ if(!$slider) {
               <h3><?php echo $link['post_title'] ; ?></h3>
             </a>
           </div>
-          <?php if(($key % 3) == 3 or $key == (count($button_links) - 1)) : ?>
+          <?php if((($key + 1) % 3) == 3 or $key == (count($button_links) - 1)) : ?>
             </div>
           <?php endif; ?>
         <?php endforeach ; ?>
