@@ -12,7 +12,7 @@
 <?php
 /**
  * Pods initialization
- * URI: /content/objects/events/
+ * URI: /media/objects/events/
  */
 
 // check if we are getting called via Pods (pods_url_variable is set)
