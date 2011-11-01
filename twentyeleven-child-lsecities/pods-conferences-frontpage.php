@@ -54,8 +54,10 @@ if(!$slider) {
         <div class='introblurb'>
           <?php echo do_shortcode($pod->get_field('abstract')); ?>
         </div>
-        <div class='featureboxes clearfix row'>
-          <?php foreach($button_links as $key => $link) : ?>
+        <?php foreach($button_links as $key => $link) : ?>
+          <?php if(($key % 3) == 0) : ?>
+            <div class='featureboxes row'>
+          <?php endif: ?>          
           <?php error_log('link key: ' . $key); ?>
           <div class='featurebox fourcol<?php if((($key + 1) % 3) == 0) : ?> last<?php endif ; ?>'>
             <a href="<?php echo $link['guid'] ; ?>" title="<?php echo $link['post_title'] ; ?>">
@@ -63,7 +65,10 @@ if(!$slider) {
             </a>
           </div>
           <?php endforeach ; ?>
-        </div>
+          
+          <?php if(($key % 3) == 3 or $key == (count($button_links) - 1) : ?>
+            </div>
+          <?php endif: ?>
         <div id="the_content">
         <?php the_content(); ?>
         </div>
