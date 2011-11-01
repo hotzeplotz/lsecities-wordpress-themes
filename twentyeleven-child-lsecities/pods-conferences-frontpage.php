@@ -64,7 +64,7 @@ if(!$slider) {
               <h3><?php echo $link['post_title'] ; ?></h3>
             </a>
           </div>
-          <?php if((($key + 1) % 3) == 3 or $key == (count($button_links) - 1)) : ?>
+          <?php if((($key + 1) % 3) == 0 or $key == (count($button_links) - 1)) : ?>
             </div>
           <?php endif; ?>
         <?php endforeach ; ?>
