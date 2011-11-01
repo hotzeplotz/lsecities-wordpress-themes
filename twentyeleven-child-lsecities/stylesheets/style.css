@@ -116,7 +116,7 @@ input:invalid, textarea:invalid { -moz-border-radius: 1px; -webkit-border-radius
 
 .no-boxshadow input:invalid, .no-boxshadow textarea:invalid { background-color: #f0dddd; }
 
-#slider { margin-bottom: 0.5em; font-family: ff-meta-web-pro, UbuntuRegular, Tahoma, sans-serif; }
+#slider { margin-bottom: 0.5em; font-family: ff-meta-web-pro, UbuntuRegular, Tahoma, sans-serif; max-height: 13.18001222em; height: 13.18001222em; }
 
 dl dt { font-weight: bold; }
 dl dd { margin-bottom: 0.5em; }
