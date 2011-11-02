@@ -2,14 +2,14 @@
 <ul>
   <li>
     <a href="http://www.lse.ac.uk/collections/cities" target="_blank">
-      <img alt="LSE" src="http://v0.urban-age.net/0_images/organizer_lse_bigger.gif" height="49" width="128" />
+      <img alt="LSE" src="<?php bloginfo('stylesheet_directory') ?>/images/lse_logo_blk.gif" height="49" />
     </a>
   </li>
 </ul>
 <ul>
   <li>
     <a href="http://www.alfred-herrhausen-gesellschaft.de" target="_blank">
-      <img alt="Alfred Herrhausen Gesellschaft" src="http://v0.urban-age.net/0_images/organizer_ahg_big.gif" height="30" align="top" width="153" />
+      <img alt="Alfred Herrhausen Gesellschaft" src="<?php bloginfo('stylesheet_directory') ?>/images/logo_ahs_blk.gif" height="30" />
     </a>
   </li>
 </ul>
