@@ -29,18 +29,7 @@
 <section class="threecol">
 <h3>Conferences</h3>
 <ul>
-<li><a href="/ua/conferences/2011-hongkong/">Hong Kong</a></li>
-<li><a href="/ua/conferences/2010-chicago/">Chicago</a></li>
-<li><a href="/ua/conferences/2009-istanbul/">Istanbul</a></li>
-<li><a href="/ua/conferences/2008-sao-paulo/">São Paulo</a></li>
-<li><a href="/ua/conferences/2007-mumbai/">Mumbai</a></li>
-<li><a href="/ua/conferences/2006-german-cities/">German cities - Halle</a></li>
-<li><a href="/ua/conferences/2006-berlin/">Berlin</a></li>
-<li><a href="/ua/conferences/2006-johannesburg/">Johannesburg</a></li>
-<li><a href="/ua/conferences/2006-mexico-city/">Mexico City</a></li>
-<li><a href="/ua/conferences/2005-london/">London</a></li>
-<li><a href="/ua/conferences/2005-shanghai/">Shanghai</a></li>
-<li><a href="/ua/conferences/2005-new-york/">New York</a></li>
+ <?php wp_list_pages('title_li=&depth=1&child_of=96&sort_column=menu_order&sort_order=DESC&echo=1'); ?>
 </ul>
 </section>
 <section class="threecol">
