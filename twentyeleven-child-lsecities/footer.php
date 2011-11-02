@@ -68,10 +68,7 @@
           </ul>
         </section>
         <section class="fourcol last">
-          <h3>Organizers</h3>
-          <ul>
-            <?php get_template_part('snippet-organizers'); ?>
-          </ul>
+          <?php get_template_part('snippet-organizers'); ?>
         </section>
       </div>
     </nav>
