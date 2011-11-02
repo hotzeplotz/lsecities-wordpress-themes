@@ -15,6 +15,8 @@
  * URI: /media/objects/events/
  */
 
+$TRACE_PODS_EVENTS_FRONTPAGE = true;
+
 // check if we are getting called via Pods (pods_url_variable is set)
 $pod_slug = pods_url_variable(3);
 
@@ -22,9 +24,11 @@ if($pod_slug) {
   $pod = new Pod('event', $pod_slug);
 } else {
   $pod_slug = get_post_meta($post->ID, 'pod_slug', true);
-  if($TRACE_PODS_CONFERENCES_FRONTPAGE) { error_log('pod_slug: ' . $pod_slug); }
   $pod = new Pod('conference', $pod_slug);
 }
+
+if($TRACE_PODS_EVENTS_FRONTPAGE) { error_log('pod_slug: ' . $pod_slug); }
+
 $button_links = $pod->get_field('links');
 $slider = $pod->get_field('slider');
 if(!$slider) {
