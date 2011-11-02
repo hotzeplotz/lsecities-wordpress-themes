@@ -9,7 +9,7 @@
 <ul>
   <li>
     <a href="http://www.alfred-herrhausen-gesellschaft.de" target="_blank">
-      <img alt="Alfred Herrhausen Gesellschaft" src="<?php bloginfo('stylesheet_directory') ?>/images/logo_ahs_blk.gif" height="30" />
+      <img alt="Alfred Herrhausen Gesellschaft" src="<?php bloginfo('stylesheet_directory') ?>/images/ahs_logo_blk.gif" height="30" />
     </a>
   </li>
 </ul>
