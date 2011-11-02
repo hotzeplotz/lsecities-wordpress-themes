@@ -54,12 +54,12 @@ if(!$slider) {
           <?php echo do_shortcode($pod->get_field('info')); ?>
           </aside>
         </div>
+        <div class='introblurb'>
         <?php
           $tagline = $pod->get_field('tagline');
           if($tagline) : ?>
             <h2><?php echo $tagline; ?></h2>
         <?php endif; ?>
-        <div class='introblurb'>
           <?php echo do_shortcode($pod->get_field('abstract')); ?>
         </div>
         <?php foreach($button_links as $key => $link) : ?>

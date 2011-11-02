@@ -73,6 +73,8 @@ body, select, input, textarea { color: black; }
 
 h1, h2, h3, h4, h5, h6 { font-weight: normal; }
 
+.introblurb h2 { margin-top: 0.6em; margin-bottom: 0; }
+
 a, a:active, a:visited { color: #990000; }
 
 a:hover { color: #555555; }
