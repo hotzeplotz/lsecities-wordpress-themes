@@ -22,6 +22,7 @@ $pod_slug = pods_url_variable(3);
 
 if($pod_slug) {
   $pod = new Pod('event', $pod_slug);
+  if($TRACE_PODS_EVENTS_FRONTPAGE) { error_log('event pod: ' . var_export($pod, true)); }
 } else {
   $pod_slug = get_post_meta($post->ID, 'pod_slug', true);
   $pod = new Pod('conference', $pod_slug);
