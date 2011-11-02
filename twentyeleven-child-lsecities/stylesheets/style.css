@@ -121,7 +121,8 @@ dl dd { margin-bottom: 0.5em; }
 
 a, a:focus, a:active, a:hover { text-decoration: none; }
 
-nav a, nav a:active, nav a:visited { color: #555; }
+nav a, nav a:active, nav a:visited { color: #990000; }
+nav a:hover { color: #555555; }
 
 p { margin-bottom: 1.625em; }
 
