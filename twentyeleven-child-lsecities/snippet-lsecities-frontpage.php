@@ -1,3 +1,3 @@
-<h2>ìIn cities, good design is socialî</h2>
+<h2>‚ÄúIn cities, good design is social‚Äù</h2>
 <p>LSE Cities is an international centre at the London School of Economics and Political Science that carries out research, education and outreach activities in London and abroad. Its mission is to study how people and cities interact in a rapidly urbanising world, focussing on how the design of cities impacts on society, culture and the environment.</p>
 <p><a href="http://v0.lsecities.net/files/2011/09/2011-09_lsecities_booklet.pdf">Download a full introduction to LSE Cities (PDF)</a></p>
