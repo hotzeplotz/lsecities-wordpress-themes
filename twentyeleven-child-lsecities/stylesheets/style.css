@@ -198,7 +198,8 @@ header #socialbuttons ul { height: 16px; }
 
 footer { font-size: 0.75em; background: none repeat scroll 0 0 #F1F1EC; border-top: 1px solid #E5E5E0; margin-top: 20px; padding: 40px; }
 footer ul { list-style-type: none; }
-footer #footerSitemap .row > section > ul { -moz-column-count: 2; -webkit-column-count: 2; -o-column-count: 2; column-count: 2; }
+footer #footerSitemap > .row { margin-bottom: 1.5em; }
+footer #footerSitemap > .row > section > ul { -moz-column-count: 2; -webkit-column-count: 2; -o-column-count: 2; column-count: 2; }
 
 .entry-meta.article-abstract { font-style: italic; }
 
