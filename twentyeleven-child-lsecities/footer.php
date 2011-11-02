@@ -16,19 +16,19 @@
     <nav id="footerSitemap">
       <div class="row">
         <section class="fourcol">
-          <h3>About</h3>
+          <h1>About</h1>
           <ul>
             <?php wp_list_pages('title_li=&depth=1&child_of=617&sort_column=menu_order&sort_order=ASC&echo=1'); ?>
           </ul>
         </section>
         <section class="fourcol">
-          <h3>Who's who</h3>
+          <h1>Who's who</h1>
           <ul>
             <?php wp_list_pages('title_li=&depth=1&child_of=421&sort_column=menu_order&sort_order=ASC&echo=1'); ?>
           </ul>
         </section>
         <section class="fourcol last">
-          <h3>Research</h3>
+          <h1>Research</h1>
           <ul>
             <?php wp_list_pages('title_li=&depth=2&child_of=306&sort_column=menu_order&sort_order=ASC&echo=1'); ?>
           </ul>
@@ -36,19 +36,19 @@
       </div>
       <div class="row">
         <section class="fourcol">
-          <h3>Publications</h3>
+          <h1>Publications</h1>
           <ul>
             <?php wp_list_pages('title_li=&depth=2&child_of=309&sort_column=menu_order&sort_order=ASC&echo=1'); ?>
           </ul>
         </section>
         <section class="fourcol">
-          <h3>Conferences</h3>
+          <h1>Conferences</h1>
           <ul>
             <?php wp_list_pages('title_li=&depth=1&child_of=96&sort_column=menu_order&sort_order=DESC&echo=1'); ?>
           </ul>
         </section>
         <section class="fourcol last">
-          <h3>Deutsche Bank Urban Age Award</h3>
+          <h1>Deutsche Bank Urban Age Award</h1>
           <ul>
             <?php wp_list_pages('title_li=&depth=1&child_of=489&sort_column=menu_order&sort_order=ASC&echo=1'); ?>
           </ul>
@@ -56,13 +56,13 @@
       </div>
       <div class="row">
         <section class="fourcol">
-          <h3>Events</h3>
+          <h1>Events</h1>
           <ul>
             <?php wp_list_pages('title_li=&depth=1&child_of=311&sort_column=menu_order&sort_order=ASC&echo=1'); ?>
           </ul>
         </section>
         <section class="fourcol">
-          <h3></h3>
+          <h1></h1>
           <ul>
             <?php // wp_list_pages('title_li=&depth=1&child_of=489&sort_column=menu_order&sort_order=ASC&echo=1'); ?>
           </ul>
