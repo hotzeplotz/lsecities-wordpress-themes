@@ -48,17 +48,17 @@
           </ul>
         </section>
         <section class="fourcol last">
-          <h3>Events</h3>
+          <h3>Deutsche Bank Urban Age Award</h3>
           <ul>
-            <?php wp_list_pages('title_li=&depth=1&child_of=311&sort_column=menu_order&sort_order=ASC&echo=1'); ?>
+            <?php wp_list_pages('title_li=&depth=1&child_of=489&sort_column=menu_order&sort_order=ASC&echo=1'); ?>
           </ul>
         </section>
       </div>
       <div class="row">
         <section class="fourcol">
-          <h3>Deutsche Bank Urban Age Award</h3>
+          <h3>Events</h3>
           <ul>
-            <?php wp_list_pages('title_li=&depth=1&child_of=489&sort_column=menu_order&sort_order=ASC&echo=1'); ?>
+            <?php wp_list_pages('title_li=&depth=1&child_of=311&sort_column=menu_order&sort_order=ASC&echo=1'); ?>
           </ul>
         </section>
         <section class="fourcol">
