@@ -24,37 +24,37 @@
               -->
               <ul>
                 <li class='cityName conferencesAsia'>
-                  <a href='/ua/conferences/2011-hongkong/'>Hong Kong</a>
+                  <a href='/ua/conferences/2011-hongkong/'>2011 | Hong Kong</a>
                 </li>
                 <li class='cityName conferencesNorthAmerica'>
-                  <a href='/ua/conferences/2010-chicago/'>Chicago</a>
+                  <a href='/ua/conferences/2010-chicago/'>2010 | Chicago</a>
                 </li>
                 <li class='cityName conferencesEurope'>
-                  <a href='/ua/conferences/2009-istanbul/'>Istanbul</a>
+                  <a href='/ua/conferences/2009-istanbul/'>2009 | Istanbul</a>
                 </li>
                 <li class='cityName conferencesSouthAmerica'>
-                  <a href='/ua/conferences/2008-sao-paulo/'>São Paulo</a>
+                  <a href='/ua/conferences/2008-sao-paulo/'>2008 | São Paulo</a>
                 </li>
                 <li class='cityName conferencesAsia'>
-                  <a href='/ua/conferences/2007-mumbai/'>Mumbai</a>
+                  <a href='/ua/conferences/2007-mumbai/'>2007 | Mumbai</a>
                 </li>
                 <li class='cityName conferencesEurope'>
-                  <a href='/ua/conferences/2006-berlin/'>Berlin</a>
+                  <a href='/ua/conferences/2006-berlin/'>2006 | Berlin</a>
                 </li>
                 <li class='cityName conferencesAfrica'>
-                  <a href='/ua/conferences/2006-johannesburg/'>Johannesburg</a>
+                  <a href='/ua/conferences/2006-johannesburg/'>2006 | Johannesburg</a>
                 </li>
                 <li class='cityName conferencesSouthAmerica'>
-                  <a href='/ua/conferences/2006-mexico-city/'>Mexico City</a>
+                  <a href='/ua/conferences/2006-mexico-city/'>2006 | Mexico City</a>
                 </li>
                 <li class='cityName conferencesEurope'>
-                  <a href='/ua/conferences/2005-london/'>London</a>
+                  <a href='/ua/conferences/2005-london/'>2005 | London</a>
                 </li>
                 <li class='cityName conferencesAsia'>
-                  <a href='/ua/conferences/2005-shanghai/'>Shanghai</a>
+                  <a href='/ua/conferences/2005-shanghai/'>2005 | Shanghai</a>
                 </li>
                 <li class='cityName conferencesNorthAmerica'>
-                  <a href='/ua/conferences/2005-new-york/'>New York</a>
+                  <a href='/ua/conferences/2005-new-york/'>2005 | New York</a>
                 </li>
               </ul>
             </nav>

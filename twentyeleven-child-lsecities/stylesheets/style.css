@@ -189,10 +189,9 @@ header #socialbuttons { height: 30px; }
 header #socialbuttons h4 { display: inline; }
 header #socialbuttons ul { height: 16px; }
 
-#conferencesmenu ul { font-family: "Anton", "BureauGrotesque-ThreeSeven"; font-size: 1.2em; text-transform: uppercase; list-style: none; padding-left: 0; }
-#conferencesmenu ul li { margin-top: 0.5625em; }
-#conferencesmenu ul li:first-child { margin-top: 0; }
-#conferencesmenu .cityName a:hover { color: #66000d; }
+#conferencesmenu ul { font-family: "Anton", "BureauGrotesque-ThreeSeven"; font-size: 1.125em; line-height: 1.5em; text-transform: uppercase; list-style: none; padding-left: 0; }
+#conferencesmenu a, #conferencesmenu a:active, #conferencesmenu a:visited { color: #555555; }
+#conferencesmenu a:hover { color: #990000; }
 
 #main { margin-top: 1em; margin-bottom: 2em; }
 
