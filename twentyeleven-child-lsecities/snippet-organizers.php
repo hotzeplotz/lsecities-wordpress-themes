@@ -1,5 +1,5 @@
 <h3>Organisers</h3>
-<ul>
+<ul id="organizer-logos">
   <li>
     <a href="http://www.lse.ac.uk/collections/cities" target="_blank">
       <img alt="LSE" src="<?php bloginfo('stylesheet_directory') ?>/images/lse_logo_blk.gif" height="49" />
