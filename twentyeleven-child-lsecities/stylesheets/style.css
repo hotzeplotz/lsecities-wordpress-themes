@@ -79,9 +79,6 @@ a:hover { color: #555555; }
 
 strong, th { font-weight: bold; }
 
-article .introblurb h2 { margin-top: 0.6em; margin-bottom: 0; }
-article .introblurb p { font-size: 1.25em; line-height: 1.25em; }
-
 aside { font-family: ff-meta-serif-web-pro, Palatino, Georgia, LinuxLibertineORegular, Gentium Book Basic, serif; }
 aside p { font-size: 0.875em; line-height: 1.5em; }
 
@@ -144,6 +141,8 @@ header h1.entry-title { font-size: 2em; margin-bottom: 1.2em; }
 #main h2 { font-size: 1.5em; margin-bottom: 1.1em; }
 #main h3 { font-size: 1.2em; margin-bottom: 1em; }
 #main .article-text img { max-width: 100%; }
+#main article .introblurb h2 { margin-top: 0.6em; margin-bottom: 0; }
+#main article .introblurb p { font-size: 1.25em; line-height: 1.25em; }
 
 body > #container > header { /* font-size: 0.75em; */ /* margin-top: 1em; */ /* background: url('../images/backgrounds/header-background-strip-lsecities.gif') repeat-x; */ padding-top: 0.25em; }
 body > #container > header nav { color: inherit; }
