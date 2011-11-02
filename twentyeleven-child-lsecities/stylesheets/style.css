@@ -73,15 +73,14 @@ body, select, input, textarea { color: black; }
 
 h1, h2, h3, h4, h5, h6 { font-weight: normal; }
 
-.introblurb h2 { margin-top: 0.6em; margin-bottom: 0; }
-
 a, a:active, a:visited { color: #990000; }
 
 a:hover { color: #555555; }
 
 strong, th { font-weight: bold; }
 
-article .introblurb { font-size: 1.3em; }
+article .introblurb h2 { margin-top: 0.6em; margin-bottom: 0; }
+article .introblurb p { font-size: 1.25em; line-height: 1.25em; }
 
 aside { font-family: ff-meta-serif-web-pro, Palatino, Georgia, LinuxLibertineORegular, Gentium Book Basic, serif; }
 aside p { font-size: 0.875em; line-height: 1.5em; }
