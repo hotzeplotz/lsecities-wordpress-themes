@@ -123,7 +123,7 @@ $article_authors = $pod->get_field('authors');
 <?php endif; ?>
 
 <h3>All the articles</h3>
-<ul>
+<ul class="publication-side-toc">
 <?php foreach($publication_pod->get_field('articles') as $a) : ?>
   <?php error_log(var_export($a['language'][0], true)); ?>
   <li>
