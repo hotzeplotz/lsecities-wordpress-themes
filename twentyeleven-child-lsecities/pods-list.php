@@ -90,9 +90,9 @@ if($TRACE_PODS_LIST) { var_export($pod_list); }
 		<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'twentyeleven' ) . '</span>', 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->
 </article><!-- #post-<?php the_ID(); ?> -->
-<aside class='threecol last'>
-&#160;
-</aside>
+
+<?php get_template_part('nav'); ?>
+
 </div><!-- .main.row -->
 
 
