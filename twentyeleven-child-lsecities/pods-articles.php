@@ -21,6 +21,9 @@ $pod = new Pod('article', pods_url_variable(3));
 $lang = strtolower(pods_url_variable('lang', 'get'));
 $article_lang2 = $pod->get_field('language.slug');
 
+$publication_pod = new Pod('publication_wrappers', $pod->get_field('in_publication.id'));
+
+
 if($TRACE_PODS_ARTICLES) { error_log('request_language: ' . $lang); }
 if($TRACE_PODS_ARTICLES) { error_log('article_lang2: ' . $article_lang2); }
 
@@ -39,9 +42,13 @@ if(!empty($lang) && $lang == $article_lang2) {
 }
 
 // prepend base URI
-// ToDo: add exceptions (e.g. Istanbul newspaper)
 if($pdf_uri) {
-  $pdf_uri = "http://urban-age.net/0_downloads/" . $pdf_uri;
+  // Istanbul newspaper follows different URI template
+  if($pod->get_field('in_publication.slug') == 'istanbul-city-of-intersections') {
+    $pdf_uri = 'http://v0.urban-age.net/publications/newspapers/' ;
+  } else {
+    $pdf_uri = "http://urban-age.net/0_downloads/" . $pdf_uri;
+  }
 }
 
 $article_publication_date = $pod->get_field('publication_date');
@@ -107,13 +114,27 @@ $article_authors = $pod->get_field('authors');
           <?php endif; ?>
         </dd>
       </dl>
-    </div>
+    </div><!-- #author-info -->
 		<?php edit_post_link( __( 'Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
 	</div><!-- .entry-meta -->
   
 <?php if($pdf_uri) : ?>
 <a href="<?php echo $pdf_uri; ?>">Download this article as PDF</a>
 <?php endif; ?>
+
+<h3>All the articles</h3>
+<ul>
+<?php foreach($publication_pod->get_field('articles') as $a) : ?>
+  <?php error_log(var_export($a['language'][0], true)); ?>
+  <li>
+    <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $a['slug']; ?>"><?php echo $a['name']; ?></a>
+    <?php if(!empty($a['language']['name'])) : ?>
+      (English) - <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $a['slug'] . '/?lang=' . $a['language']['language_code']; ?>">(<?php echo $a['language']['name']; ?>)</a>
+    <?php endif; ?>
+  </li>
+<?php endforeach; ?>
+</ul>
+
 </aside>
 
 <?php get_template_part( 'nav'); ?>
