@@ -32,6 +32,7 @@ else :
     $children = wp_list_pages('title_li=&depth=1&child_of='.$parent_post_id.'&echo=0');
   }
   if ($children) : ?>
+  <h3><?php echo get_the_title($parent_post_id); ?></h3>
   <ul>
     <?php echo $children; ?>
   </ul>
