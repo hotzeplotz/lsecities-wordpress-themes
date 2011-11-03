@@ -43,7 +43,7 @@ if($TRACE_PODS_LIST) { var_export($pod_list); }
 ?>
 -->
 
-<div role="main row">
+<div role="main" class="row">
 <header class="entry-header twelvecol last">
 		<h1 class="entry-title"><?php echo $pod_title; ?></h1>
 </header><!-- .entry-header -->
