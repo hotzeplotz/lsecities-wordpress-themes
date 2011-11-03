@@ -25,7 +25,7 @@
 
 <div role="main" class="row">
 
-<header class="entry-header twelvecol last">
+<header class="entry-header ninecol">
   <h1 class="entry-title"><?php echo $pod_title; ?></h1>
   <?php if($pod_subtitle) : ?>
   <h2><?php echo $pod_subtitle; ?></h2>
