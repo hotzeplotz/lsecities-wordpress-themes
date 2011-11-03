@@ -45,7 +45,7 @@ if(!empty($lang) && $lang == $article_lang2) {
 if($pdf_uri) {
   // Istanbul newspaper follows different URI template
   if($pod->get_field('in_publication.slug') == 'istanbul-city-of-intersections') {
-    $pdf_uri = 'http://v0.urban-age.net/publications/newspapers/' ;
+    $pdf_uri = 'http://v0.urban-age.net/publications/newspapers/' . $pdf_uri;
   } else {
     $pdf_uri = "http://urban-age.net/0_downloads/" . $pdf_uri;
   }
