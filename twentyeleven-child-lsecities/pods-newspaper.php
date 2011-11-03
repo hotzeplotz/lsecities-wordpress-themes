@@ -25,10 +25,12 @@
 
 <div role="main" class="row">
 
+<header class="entry-header twelvecol last">
+  <h1 class="entry-title"><?php echo $pod_title; ?></h1>
+</header><!-- .entry-header -->
+
 <article id="post-<?php the_ID(); ?>" <?php post_class('ninecol'); ?>>
-	<header class="entry-header">
-		<h1 class="entry-title"><?php echo $pod_title; ?></h1>
-	</header><!-- .entry-header -->
+
 
 	<div class="entry-content">
 		<?php the_content(); ?>
