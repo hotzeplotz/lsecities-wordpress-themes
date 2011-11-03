@@ -70,16 +70,14 @@ if($TRACE_PODS_LIST) { var_export($pod_list); }
               $item_pod = new Pod($pod_type, get_post_meta($item['ID'], 'pod_slug', true));
             ?>
               <li class='fourcol<?php if((($key + 1) % 3) == 0) : ?> last<?php endif ; ?>'>
-                <p>
-                  <a href="<?php echo get_permalink($item['ID']); ?>">
-                    <img src="<?php echo $item_pod->get_field('snapshot.guid'); ?>" />
-                  </a>
-                </p>
-                <p>
+                <a href="<?php echo get_permalink($item['ID']); ?>">
+                  <img src="<?php echo $item_pod->get_field('snapshot.guid'); ?>" />
+                </a>
+                <h3>
                   <a href="<?php echo get_permalink($item['ID']); ?>">
                     <?php echo $item_pod->get_field('name'); ?>
                   </a>
-                </p>
+                </h3>
               </li>
             <?php endforeach; ?>
           </ul>
