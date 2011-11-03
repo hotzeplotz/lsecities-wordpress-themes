@@ -122,18 +122,20 @@ $article_authors = $pod->get_field('authors');
 <a href="<?php echo $pdf_uri; ?>">Download this article as PDF</a>
 <?php endif; ?>
 
-<h3>All the articles</h3>
-<ul class="publication-side-toc">
-<?php foreach($publication_pod->get_field('articles') as $a) : ?>
-  <?php error_log(var_export($a['language'][0], true)); ?>
-  <li>
-    <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $a['slug']; ?>"><?php echo $a['name']; ?></a>
-    <?php if(!empty($a['language']['name'])) : ?>
-      (English) - <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $a['slug'] . '/?lang=' . $a['language']['language_code']; ?>">(<?php echo $a['language']['name']; ?>)</a>
-    <?php endif; ?>
-  </li>
-<?php endforeach; ?>
-</ul>
+<?php if($publication_pod->get_field('articles')) : ?>
+  <h3>All the articles</h3>
+  <ul class="publication-side-toc">
+  <?php foreach($publication_pod->get_field('articles') as $a) : ?>
+    <?php error_log(var_export($a['language'][0], true)); ?>
+    <li>
+      <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $a['slug']; ?>"><?php echo $a['name']; ?></a>
+      <?php if(!empty($a['language']['name'])) : ?>
+        (English) - <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $a['slug'] . '/?lang=' . $a['language']['language_code']; ?>">(<?php echo $a['language']['name']; ?>)</a>
+      <?php endif; ?>
+    </li>
+  <?php endforeach; ?>
+  </ul>
+<?php endif; ?>
 
 </aside>
 
