@@ -13,6 +13,10 @@ $TRACE_PODS_ARTICLES = false;
 <?php
 global $pods;
 /* URI: /media/objects/articles/<article-slug>[?lang=<language>] */
+
+// set toplevel ancestor explicitly as we are outside of WP's hierarchy
+$pods_toplevel_ancestor = 309;
+
 $pod = new Pod('article', pods_url_variable(3));
 $lang = strtolower(pods_url_variable('lang', 'get'));
 $article_lang2 = $pod->get_field('language.slug');

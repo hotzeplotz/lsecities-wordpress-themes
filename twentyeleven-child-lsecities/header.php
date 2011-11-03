@@ -13,7 +13,13 @@ if($TRACE_HEADER) { error_log('header.php starting for post with ID ' . $post->I
 $ancestors = get_ancestors($post->ID, 'page');
 array_unshift($ancestors, $post->ID);
 $toplevel_ancestor = array_pop($ancestors);
+
+// If we are on the root frontpage ('/', page ID 393), set ancestor to nil
 if($toplevel_ancestor == 393) { $toplevel_ancestor = ''; }
+
+// If we are processing a Pods page for the Article pod, manually set our current position
+if($pods_toplevel_ancestor) { $toplevel_ancestor = $pods_toplevel_ancestor; }
+
 if($TRACE_HEADER) { error_log('ancestors (array): ' . var_export($ancestors, true)); }
 if($TRACE_HEADER) { error_log('ancestor[0]: ' . $ancestors[0]); }
 if($TRACE_HEADER) { error_log('toplevel_ancestor: ' . $toplevel_ancestor); }
