@@ -146,7 +146,7 @@ header h1.entry-title { font-size: 2em; margin-bottom: 1.2em; }
 #main .article-text img { max-width: 100%; }
 #main article .introblurb h2 { margin-top: 0.6em; margin-bottom: 0; }
 #main article .introblurb p { font-size: 1.25em; line-height: 1.25em; }
-#main .wp_caption { max-width: 100% !important; }
+#main .wp-caption { max-width: 100% !important; }
 
 body > #container > header { /* font-size: 0.75em; */ /* margin-top: 1em; */ /* background: url('../images/backgrounds/header-background-strip-lsecities.gif') repeat-x; */ padding-top: 0.25em; }
 body > #container > header nav { color: inherit; }
