@@ -23,10 +23,9 @@
 
 <?php get_header(); ?>
 
-<div class="row">
-<div role="main">
+<div role="main" class="row">
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('ninecol'); ?>>
 	<header class="entry-header">
 		<h1 class="entry-title"><?php echo $pod_title; ?></h1>
 	</header><!-- .entry-header -->
@@ -39,7 +38,7 @@
         <?php if($pod_subtitle) : ?>
         <h2><?php echo $pod_subtitle; ?></h2>
         <?php endif ; ?>
-        <div class="sixcol">
+        <div class="ninecol">
           <?php if(count($pod->get_field('articles'))) : ?>
           <h3>Read the articles</h3>
           <ul>
@@ -60,20 +59,18 @@
           <?php echo $pod_issuu ; ?>
           <?php endif ; ?>
         </div>
-        <div class="threecol">
-          <img src="<?php echo $pod_cover ; ?>" />
-        </div>
         <div class="threecol last">
-          <?php echo $pod_abstract ; ?>
+          <img src="<?php echo $pod_cover ; ?>" />
         </div>
       </div>
     <?php endif ?>    
-        
 		<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'twentyeleven' ) . '</span>', 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->
 </article><!-- #post-<?php the_ID(); ?> -->
-</div>
-</div>
+
+<?php get_template_part('nav'); ?>
+
+</div><!-- role='main'.row -->
 
 <?php get_sidebar(); ?>
 
