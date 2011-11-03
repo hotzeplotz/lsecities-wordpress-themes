@@ -44,13 +44,15 @@ if($TRACE_PODS_LIST) { var_export($pod_list); }
 -->
 
 <div role="main" class="row">
-<header class="entry-header twelvecol last">
+
+  <header class="entry-header twelvecol last">
 		<h1 class="entry-title"><?php echo $pod_title; ?></h1>
-</header><!-- .entry-header -->
+  </header><!-- .entry-header -->
   
-<article id="post-<?php the_ID(); ?>" <?php post_class('ninecol'); ?>>
-	<div class="entry-content">
-		<?php the_content(); ?>
+  <article id="post-<?php the_ID(); ?>" <?php post_class('ninecol'); ?>>
+    <div class="entry-content">
+    
+    <?php the_content(); ?>
 
     <?php if(!empty($pod_featured_item_pod)) : ?>
       <div class="featured-item">
@@ -65,23 +67,23 @@ if($TRACE_PODS_LIST) { var_export($pod_list); }
     
     <?php if(!empty($pod_list)) : ?>
       <div>
-          <ul>
-            <?php foreach($pod_list as $key => $item) : 
-              $item_pod = new Pod($pod_type, get_post_meta($item['ID'], 'pod_slug', true));
-            ?>
-              <li class='fourcol<?php if((($key + 1) % 3) == 0) : ?> last<?php endif ; ?>'>
-                <a href="<?php echo get_permalink($item['ID']); ?>">
-                  <img src="<?php echo $item_pod->get_field('snapshot.guid'); ?>" />
-                </a>
-                <h3>
-                  <a href="<?php echo get_permalink($item['ID']); ?>">
-                    <?php echo $item_pod->get_field('name'); ?>
-                  </a>
-                </h3>
-              </li>
-            <?php endforeach; ?>
-          </ul>
-        </div>
+        <ul>
+        <?php
+          foreach($pod_list as $key => $item) : 
+            $item_pod = new Pod($pod_type, get_post_meta($item['ID'], 'pod_slug', true));
+        ?>
+          <li class='fourcol<?php if((($key + 1) % 3) == 0) : ?> last<?php endif ; ?>'>
+            <a href="<?php echo get_permalink($item['ID']); ?>">
+              <img src="<?php echo $item_pod->get_field('snapshot.guid'); ?>" />
+            </a>
+            <h3>
+              <a href="<?php echo get_permalink($item['ID']); ?>">
+                <?php echo $item_pod->get_field('name'); ?>
+              </a>
+            </h3>
+          </li>
+        <?php endforeach; ?>
+        </ul>
       </div>
     <?php endif ?>    
         
