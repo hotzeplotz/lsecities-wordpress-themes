@@ -27,6 +27,9 @@
 
 <header class="entry-header twelvecol last">
   <h1 class="entry-title"><?php echo $pod_title; ?></h1>
+  <?php if($pod_subtitle) : ?>
+  <h2><?php echo $pod_subtitle; ?></h2>
+  <?php endif ; ?>
 </header><!-- .entry-header -->
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('ninecol'); ?>>
@@ -37,9 +40,6 @@
 
     <?php if(!empty($pod->data)) : ?>
       <div class="article row">
-        <?php if($pod_subtitle) : ?>
-        <h2><?php echo $pod_subtitle; ?></h2>
-        <?php endif ; ?>
         <div class="ninecol">
           <?php if(count($pod->get_field('articles'))) : ?>
           <h3>Read the articles</h3>
