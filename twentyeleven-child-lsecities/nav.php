@@ -25,7 +25,7 @@ if($current_post_id == 94) : // /ua/ (Urban Age frontpage)
   get_template_part('snippet-organizers');
 elseif($current_post_id == 393) : // / (main frontpage)
   get_template_part('snippet-lsecities-frontpage');
-elseif($current_post_id == 309 or in_array(309, get_post_ancestors($current_post_id))) : // /publications (the whole Publications section)
+elseif($current_post_id == 309 or in_array(309, get_post_ancestors($current_post_id)) or ($pods_toplevel_ancestor == 309)) : // /publications (the whole Publications section) or individual Article pod items
   get_template_part('nav-publications');
 else :
   if($current_post_id) {
