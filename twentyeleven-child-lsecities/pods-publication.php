@@ -1,7 +1,7 @@
 <?php
 /**
- * Template Name: Pods - Newspapers - index
- * Description: The template used for Newspapers, listing articles
+ * Template Name: Pods - Publications - index
+ * Description: The template used for Publications, showing publication info, listing available articles, etc.
  *
  * @package WordPress
  * @subpackage Twenty_Eleven
