@@ -93,8 +93,8 @@ $article_authors = $pod->get_field('authors');
         <dt>Authors</dt>
         <dd>
           <ul>
-          <?php foreach($article_authors as $a): ?>
-            <li><?php echo $a['name'] ?> <?php echo $a['family_name'] ?></li>
+          <?php foreach($article_authors as $author): ?>
+            <li><?php echo $author['name'] ?> <?php echo $author['family_name'] ?></li>
           <?php endforeach; ?>
           </ul>
         </dd>
@@ -105,8 +105,8 @@ $article_authors = $pod->get_field('authors');
         <dd>
           <?php if(is_array($article_tags)): ?>
           <ul>
-            <?php foreach($article_tags as $t): ?>
-              <li><?php echo $t['name'] ; ?></li>
+            <?php foreach($article_tags as $tag): ?>
+              <li><?php echo $tag['name'] ; ?></li>
             <?php endforeach; ?>
           </ul>
           <?php else: ?>
@@ -125,12 +125,12 @@ $article_authors = $pod->get_field('authors');
 <?php if($publication_pod->get_field('articles')) : ?>
   <h3>All the articles</h3>
   <ul class="publication-side-toc">
-  <?php foreach($publication_pod->get_field('articles') as $a) : ?>
-    <!-- <?php echo 'article Pod object: ' . var_export($a, true); ?> -->
+  <?php foreach($publication_pod->get_field('articles') as $article) : ?>
+    <!-- <?php echo 'article Pod object: ' . var_export($article, true); ?> -->
     <li>
-      <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $a['slug']; ?>"><?php echo $a['name']; ?></a>
-      <?php if(!empty($a['language']['name'])) : ?>
-        (English) - <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $a['slug'] . '/?lang=' . $a['language']['language_code']; ?>">(<?php echo $a['language']['name']; ?>)</a>
+      <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $article['slug']; ?>"><?php echo $article['name']; ?></a>
+      <?php if(!empty($article['language']['name'])) : ?>
+        (English) - <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $article['slug'] . '/?lang=' . $article['language']['language_code']; ?>">(<?php echo $article['language']['name']; ?>)</a>
       <?php endif; ?>
     </li>
   <?php endforeach; ?>
