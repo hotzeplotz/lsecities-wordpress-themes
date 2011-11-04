@@ -60,7 +60,9 @@
           <?php endif ; ?>
         </div>
         <div class="threecol last">
-          <img src="<?php echo $pod_cover ; ?>" />
+          <div class="publication-cover">
+            <img src="<?php echo $pod_cover ; ?>" />
+          </div>
         </div>
       </div>
     <?php endif ?>    
