@@ -202,7 +202,7 @@ header #socialbuttons ul { height: 16px; }
 
 #main { margin-top: 1em; margin-bottom: 2em; }
 
-#level3nav { font-size: 0.925em; }
+#level3nav { font-size: 0.925em; font-family: ff-meta-web-pro, UbuntuRegular, Tahoma, Elvetica, sans-serif; }
 #level3nav li { line-height: 1.25em; margin-bottom: 0.25em; }
 #level3nav ul.children { margin-left: 1em; }
 #level3nav #organizer-logos { max-width: 67.7290%; width: 67.7290%; }
