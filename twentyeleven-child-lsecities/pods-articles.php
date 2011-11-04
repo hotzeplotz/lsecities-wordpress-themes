@@ -15,7 +15,9 @@ global $pods;
 /* URI: /media/objects/articles/<article-slug>[?lang=<language>] */
 
 // set toplevel ancestor explicitly as we are outside of WP's hierarchy
-global $pods_toplevel_ancestor = 309;
+global $pods_toplevel_ancestor;
+
+$pods_toplevel_ancestor = 309;
 
 $pod = new Pod('article', pods_url_variable(3));
 $lang = strtolower(pods_url_variable('lang', 'get'));
