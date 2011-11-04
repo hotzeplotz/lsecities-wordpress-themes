@@ -126,7 +126,7 @@ $article_authors = $pod->get_field('authors');
   <h3>All the articles</h3>
   <ul class="publication-side-toc">
   <?php foreach($publication_pod->get_field('articles') as $a) : ?>
-    <?php error_log(var_export($a['language'][0], true)); ?>
+    <!-- <?php echo 'article Pod object: ' . var_export($a, true); ?> -->
     <li>
       <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $a['slug']; ?>"><?php echo $a['name']; ?></a>
       <?php if(!empty($a['language']['name'])) : ?>
