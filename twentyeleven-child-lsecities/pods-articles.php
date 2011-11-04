@@ -20,6 +20,7 @@ $pods_toplevel_ancestor = 309;
 $pod = new Pod('article', pods_url_variable(3));
 $lang = strtolower(pods_url_variable('lang', 'get'));
 $article_lang2 = $pod->get_field('language.slug');
+$article_layout = $pod->get_field('layout');
 
 $publication_pod = new Pod('publication_wrappers', $pod->get_field('in_publication.id'));
 
@@ -73,7 +74,7 @@ $article_authors = $pod->get_field('authors');
 	<div class="entry-content">    
     <?php if(!empty($pod->data)): ?>
       <div class="article">
-        <div class="entry-content article-text"><?php echo $article_text; ?></div>
+        <div class="entry-content article-text<?php if($article_layout) { echo ' ' . $article_layout; } ?>"><?php echo $article_text; ?></div>
         <div class="extra-content"><?php echo $article_extra_content; ?></div>
       </div>
     <?php endif; ?>

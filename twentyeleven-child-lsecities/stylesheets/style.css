@@ -150,6 +150,7 @@ header h1.entry-title { font-size: 2em; margin-bottom: 1.2em; }
 #main .wp-caption-text { font-size: 0.875em; font-family: ff-meta-web-pro, UbuntuRegular, Tahoma, Elvetica, sans-serif; }
 #main ul.publication-side-toc li { line-height: 1.25em; margin-bottom: 0.25em; }
 #main .publication-cover { -moz-box-shadow: 0.313em 0.313em 0.188em #888888; -webkit-box-shadow: 0.313em 0.313em 0.188em #888888; -o-box-shadow: 0.313em 0.313em 0.188em #888888; box-shadow: 0.313em 0.313em 0.188em #888888; }
+#main .article .entry-content.article-text.sidebyside > div { -moz-column-count: 2; -webkit-column-count: 2; -o-column-count: 2; column-count: 2; }
 
 body > #container > header { /* font-size: 0.75em; */ /* margin-top: 1em; */ /* background: url('../images/backgrounds/header-background-strip-lsecities.gif') repeat-x; */ padding-top: 0.25em; }
 body > #container > header nav { color: inherit; }
