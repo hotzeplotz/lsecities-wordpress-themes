@@ -140,7 +140,7 @@ $article_authors = $pod->get_field('authors');
 
 </aside>
 
-<?php get_template_part( 'nav'); ?>
+<?php get_template_part('nav'); ?>
 
 <?php get_sidebar(); ?>
 
