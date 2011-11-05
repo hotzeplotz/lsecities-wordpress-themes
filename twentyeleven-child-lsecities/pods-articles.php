@@ -8,7 +8,7 @@
  * @since Twenty Eleven 1.0
  */
 $TRACE_PODS_ARTICLES = false;
-global $PODS_BASEURI_ARTICLES;
+$PODS_BASEURI_ARTICLES = '/media/objects/articles/';
 ?>
 
 <?php
