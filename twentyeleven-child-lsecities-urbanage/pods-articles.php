@@ -129,17 +129,17 @@ $article_authors = $pod->get_field('authors');
     $sections = array();
     foreach(preg_split("/\n/", $publication_pod->get_field('sections')) as $section_line) {
       preg_match("/^(\d+)?\s?(.*)$/", $section_line, $matches);
-      array_push($sections, array( $matches[1] => $matches[2]));
+      array_push($sections, array( 'id' => $matches[1], 'title' => $matches[2]));
     }
     if($TRACE_PODS_ARTICLES) { error_log('sections: ' . var_export($sections, true)); }
     
     if(!count($sections)) {
       $sections = array("010" => "");
     }
-    foreach($sections as $section_id => $section_title) : ?>
-      <?php if($section_title) { ?><h4><?php echo $section_title; ?></h4><?php }
+    foreach($sections as $section) : ?>
+      <?php if($section['title']) { ?><h4><?php echo $section['title']; ?></h4><?php }
       foreach($publication_pod->get_field('articles') as $article) :
-        if(preg_match("/^$section_id/", $article['order'])) : ?>
+        if(preg_match("/^$section['id']/", $article['order'])) : ?>
           <!-- <?php echo 'article Pod object: ' . var_export($article, true); ?> -->
           <li>
             <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $article['slug']; ?>"><?php echo $article['name']; ?></a>
