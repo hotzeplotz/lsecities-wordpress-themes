@@ -122,7 +122,7 @@ body, input, textarea { background-color: #ffffff; }
 #main article .introblurb p { font-size: 1.25em; line-height: 1.25em; }
 #main .wp-caption { max-width: 100% !important; }
 #main .wp-caption-text { font-size: 0.875em; font-family: ff-meta-web-pro, Tahoma, Verdana, Elvetica, sans-serif; }
-#main .author-info { padding-bottom: 0.25em; }
+#main #author-info { padding-bottom: 0.25em; }
 #main ul.publication-side-toc li { line-height: 1.25em; margin-bottom: 0.25em; }
 #main .publication-cover { -moz-box-shadow: 0.313em 0.313em 0.188em #888888; -webkit-box-shadow: 0.313em 0.313em 0.188em #888888; -o-box-shadow: 0.313em 0.313em 0.188em #888888; box-shadow: 0.313em 0.313em 0.188em #888888; }
 #main .article .entry-content.article-text.sidebyside > div { -moz-column-count: 2; -webkit-column-count: 2; -o-column-count: 2; column-count: 2; }
