@@ -135,7 +135,7 @@ $article_authors = $pod->get_field('authors');
     foreach($sections as $section_id => $section_title) : ?>
       <?php if($section_title) { ?><h4><?php echo $section_title; ?></h4><?php }
       foreach($publication_pod->get_field('articles') as $article) :
-        if(preg_match("/^$section_id/", $article['order'])) :
+        if(preg_match("/^$section_id/", $article['order'])) : ?>
           <!-- <?php echo 'article Pod object: ' . var_export($article, true); ?> -->
           <li>
             <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $article['slug']; ?>"><?php echo $article['name']; ?></a>
