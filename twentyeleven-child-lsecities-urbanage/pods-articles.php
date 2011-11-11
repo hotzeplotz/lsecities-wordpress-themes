@@ -62,17 +62,18 @@ $article_authors = $pod->get_field('authors');
 
 <?php get_header(); ?>
 
-	<header class="entry-header twelvecol row last">
-		<h1 class="entry-title article-title twelvecol"><?php echo $article_title; ?></h1>
-    <div class="entry-meta article-abstract sixcol"><?php echo $article_abstract; ?></div>
-    <div class="sixcol last">&#160;</div>
+<div class="ninecol">
+  
+	<header class="entry-header">
+		<h1 class="entry-title article-title"><?php echo $article_title; ?></h1>
+    <div class="entry-meta article-abstract"><?php echo $article_abstract; ?></div>
 	</header><!-- .entry-header -->
 
   
-  <div class="ninecol">
+  
 
 
-<div role="main">
+<div role="main" class="ninecol">
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="entry-content">    
     <?php if(!empty($pod->data)): ?>
@@ -86,8 +87,7 @@ $article_authors = $pod->get_field('authors');
 	</div><!-- .entry-content -->
 </article><!-- #post-<?php the_ID(); ?> -->
 
-</div>
-</div>
+</div><!-- role:main -->
 
 <aside class="threecol last">
 <div class="entry-meta">
@@ -142,7 +142,7 @@ $article_authors = $pod->get_field('authors');
 <?php endif; ?>
 
 </aside>
-
+</div>
 <?php // get_template_part('nav'); ?>
 
 <?php get_sidebar(); ?>
