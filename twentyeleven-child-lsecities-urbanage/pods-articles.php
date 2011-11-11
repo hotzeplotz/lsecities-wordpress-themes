@@ -7,7 +7,7 @@
  * @subpackage Twenty_Eleven
  * @since Twenty Eleven 1.0
  */
-$TRACE_PODS_ARTICLES = false;
+$TRACE_PODS_ARTICLES = true;
 $PODS_BASEURI_ARTICLES = '/media/objects/articles/';
 ?>
 
