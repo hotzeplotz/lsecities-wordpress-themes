@@ -64,16 +64,11 @@ $article_authors = $pod->get_field('authors');
 
 <div class="row">
   
+<div role="main" class="ninecol">
 	<header class="entry-header">
 		<h1 class="entry-title article-title"><?php echo $article_title; ?></h1>
     <div class="entry-meta article-abstract"><?php echo $article_abstract; ?></div>
 	</header><!-- .entry-header -->
-
-  
-  
-
-
-<div role="main" class="ninecol">
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="entry-content">    
     <?php if(!empty($pod->data)): ?>
@@ -127,18 +122,20 @@ $article_authors = $pod->get_field('authors');
 <?php endif; ?>
 
 <?php if($publication_pod->get_field('articles')) : ?>
-  <h3><?php echo $publication_pod->get_field('name'); ?></h3>
-  <ul class="publication-side-toc">
-  <?php foreach($publication_pod->get_field('articles') as $article) : ?>
-    <!-- <?php echo 'article Pod object: ' . var_export($article, true); ?> -->
-    <li>
-      <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $article['slug']; ?>"><?php echo $article['name']; ?></a>
-      <?php if(!empty($article['language']['name'])) : ?>
-        (English) - <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $article['slug'] . '/?lang=' . $article['language']['language_code']; ?>">(<?php echo $article['language']['name']; ?>)</a>
-      <?php endif; ?>
-    </li>
-  <?php endforeach; ?>
-  </ul>
+  <div>
+    <h3><?php echo $publication_pod->get_field('name'); ?></h3>
+    <ul class="publication-side-toc">
+    <?php foreach($publication_pod->get_field('articles') as $article) : ?>
+      <!-- <?php echo 'article Pod object: ' . var_export($article, true); ?> -->
+      <li>
+        <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $article['slug']; ?>"><?php echo $article['name']; ?></a>
+        <?php if(!empty($article['language']['name'])) : ?>
+          (English) - <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $article['slug'] . '/?lang=' . $article['language']['language_code']; ?>">(<?php echo $article['language']['name']; ?>)</a>
+        <?php endif; ?>
+      </li>
+    <?php endforeach; ?>
+    </ul>
+  </div>
 <?php endif; ?>
 
 </aside>
