@@ -4,5 +4,7 @@ SYNC_TO=$1
 
 for THEME_FOLDER in 'lsecities-urbanage' 'twentyeleven-child-lsecities' 'twentyeleven-child-lsecities-urbanage'
 do
-	rsync -v -a --delete $theme_folder $SYNC_TO/$THEME_FOLDER
+	CMD="rsync -v -a --delete $THEME_FOLDER $SYNC_TO/"
+	echo $CMD
+	$CMD
 done
