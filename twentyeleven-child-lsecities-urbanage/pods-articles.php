@@ -128,7 +128,7 @@ $article_authors = $pod->get_field('authors');
     <?php
     $sections = array();
     foreach(preg_split("/\n/", $publication_pod->get_field('sections')) as $section_line) {
-      preg_match("/^(\d+)?\s(.*)$/", $section_line, $matches);
+      preg_match("/^(\d+)?\s?(.*)$/", $section_line, $matches);
       array_push($sections, array( $matches[1] => $matches[2]));
     }
     if($TRACE_PODS_ARTICLES) { error_log('sections: ' . var_export($sections, true)); }
