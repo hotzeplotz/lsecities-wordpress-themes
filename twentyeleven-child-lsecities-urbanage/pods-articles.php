@@ -126,6 +126,7 @@ $article_authors = $pod->get_field('authors');
     <h3><?php echo $publication_pod->get_field('name'); ?></h3>
     <ul class="publication-side-toc">
     <?php
+    $sections = '';
     foreach(preg_split("/\n/", $publication_pod->get_field('sections')) as $section_line) {
       preg_match("/^(\d+)?\s(.*)$/", $section_line, $matches);
       array_push($sections, array( "$matches[1]" => $matches[2]));
