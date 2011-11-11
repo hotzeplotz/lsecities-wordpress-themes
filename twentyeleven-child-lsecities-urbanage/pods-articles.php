@@ -62,7 +62,7 @@ $article_authors = $pod->get_field('authors');
 
 <?php get_header(); ?>
 
-<div class="ninecol">
+<div class="row">
   
 	<header class="entry-header">
 		<h1 class="entry-title article-title"><?php echo $article_title; ?></h1>
