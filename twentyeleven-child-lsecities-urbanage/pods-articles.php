@@ -125,15 +125,28 @@ $article_authors = $pod->get_field('authors');
   <div>
     <h3><?php echo $publication_pod->get_field('name'); ?></h3>
     <ul class="publication-side-toc">
-    <?php foreach($publication_pod->get_field('articles') as $article) : ?>
-      <!-- <?php echo 'article Pod object: ' . var_export($article, true); ?> -->
-      <li>
-        <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $article['slug']; ?>"><?php echo $article['name']; ?></a>
-        <?php if(!empty($article['language']['name'])) : ?>
-          (English) - <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $article['slug'] . '/?lang=' . $article['language']['language_code']; ?>">(<?php echo $article['language']['name']; ?>)</a>
-        <?php endif; ?>
-      </li>
-    <?php endforeach; ?>
+    <?php
+    $sections = preg_grep("/^(\d+)?\s(.*)$", preg_split("\n", $publication_pod->get_field('sections')));
+    if($TRACE_PODS_ARTICLES) { error_log('sections: ' . var_export($sections, true)); }
+    
+    if(!count($sections)) {
+      $sections = array("010" => "");
+    }
+    foreach($sections as $section_id => $section_title) : ?>
+      <?php if($section_title) { ?><h4><?php echo $section_title; ?></h4><?php }
+      foreach($publication_pod->get_field('articles') as $article) :
+        if(preg_match("/^$section_id/", $article['order']) :
+          <!-- <?php echo 'article Pod object: ' . var_export($article, true); ?> -->
+          <li>
+            <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $article['slug']; ?>"><?php echo $article['name']; ?></a>
+            <?php if(!empty($article['language']['name'])) : ?>
+              (English) - <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $article['slug'] . '/?lang=' . $article['language']['language_code']; ?>">(<?php echo $article['language']['name']; ?>)</a>
+            <?php endif; ?>
+          </li>
+      <?php
+        endif;
+      endforeach; 
+    endforeach; ?>
     </ul>
   </div>
 <?php endif; ?>
