@@ -127,7 +127,7 @@ $article_authors = $pod->get_field('authors');
 <?php endif; ?>
 
 <?php if($publication_pod->get_field('articles')) : ?>
-  <h3>All the articles</h3>
+  <h3><?php echo $publication_pod->get_field('title'); ?></h3>
   <ul class="publication-side-toc">
   <?php foreach($publication_pod->get_field('articles') as $article) : ?>
     <!-- <?php echo 'article Pod object: ' . var_export($article, true); ?> -->
