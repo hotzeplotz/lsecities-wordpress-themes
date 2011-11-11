@@ -126,7 +126,7 @@ $article_authors = $pod->get_field('authors');
     <h3><?php echo $publication_pod->get_field('name'); ?></h3>
     <ul class="publication-side-toc">
     <?php
-    $sections = preg_grep("/^(\d+)?\s(.*)$", preg_split("\n", $publication_pod->get_field('sections')));
+    $sections = preg_grep("/^(\d+)?\s(.*)$/", preg_split("/\n/", $publication_pod->get_field('sections')));
     if($TRACE_PODS_ARTICLES) { error_log('sections: ' . var_export($sections, true)); }
     
     if(!count($sections)) {
