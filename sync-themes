@@ -2,7 +2,7 @@
 
 $SYNC_TO = $1
 
-for $theme_folder in 'lsecities-urbanage' 'twentyeleven-child-lsecities' 'twentyeleven-child-lsecities-urbanage'
+for THEME_FOLDER in 'lsecities-urbanage' 'twentyeleven-child-lsecities' 'twentyeleven-child-lsecities-urbanage'
 do
-	rsync -n -v -a --delete $theme_folder $SYNC_TO/$theme_folder
+	rsync -n -v -a --delete $theme_folder $SYNC_TO/$THEME_FOLDER
 done
