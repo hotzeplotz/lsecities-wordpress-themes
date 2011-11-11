@@ -1,0 +1,1 @@
+../twentyeleven-child-lsecities/snippet-lsecities-frontpage.php
