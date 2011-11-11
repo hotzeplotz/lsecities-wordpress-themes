@@ -96,7 +96,7 @@ $logo_element_id = $urban_age_section ? 'ualogo' : 'logo';
         <div class='row'>
 
           <div class='full ninecol' id='ualogo'>
-            <img alt='Urban Age' src='/images/logo_urbanage_strapline.gif'>
+            <img alt='Urban Age' src='<?php bloginfo('stylesheet_directory') ?>/images/logo_urbanage_strapline.gif'>
           </div>
           <div class='threecol last' id='toolbox'>
             <div id='searchbox'>
