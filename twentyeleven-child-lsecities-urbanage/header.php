@@ -288,5 +288,52 @@ $logo_element_id = $urban_age_section ? 'ualogo' : 'logo';
           </div>
         </div>
       </header>
+    
+<div class='row' id='main' role='main'>
+        <div id='flash'>
 
-	<div id="main" class="row">
+        </div>
+        <nav class='twocol' id='conferencesmenu'>
+          <ul>
+            <li>
+              <a href='#'>New York</a>
+            </li>
+            <li>
+              <a href='#'>Shanghai</a>
+
+            </li>
+            <li>
+              <a href='#'>London</a>
+            </li>
+            <li>
+              <a href='#'>Mexico City</a>
+            </li>
+            <li>
+
+              <a href='#'>Johannesburg</a>
+            </li>
+            <li>
+              <a href='#'>Berlin</a>
+            </li>
+            <li>
+              <a href='#'>Mumbai</a>
+
+            </li>
+            <li>
+              <a href='#'>São Paulo</a>
+            </li>
+            <li>
+              <a href='#'>Istanbul</a>
+            </li>
+            <li>
+
+              <a href='#'>Chicago</a>
+            </li>
+            <li>
+              <a href='#'>Hong Kong</a>
+            </li>
+          </ul>
+        </nav>
+        <div class='tencol last' id='core'>
+
+

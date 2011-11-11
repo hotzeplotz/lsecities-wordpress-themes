@@ -9,7 +9,7 @@
  * @since Twenty Eleven 1.0
  */
 ?>
-
+        </div><!-- #core -->
       </div><!-- #main -->
     </div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.js" type="text/javascript"></script>
