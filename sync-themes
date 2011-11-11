@@ -1,6 +1,6 @@
 #!/bin/bash
 
-$SYNC_TO = $1
+SYNC_TO=$1
 
 for THEME_FOLDER in 'lsecities-urbanage' 'twentyeleven-child-lsecities' 'twentyeleven-child-lsecities-urbanage'
 do
