@@ -120,7 +120,7 @@ body, input, textarea { background-color: #ffffff; }
 #main article .introblurb h2 { margin-top: 0.6em; margin-bottom: 0; }
 #main article .introblurb p { font-size: 1.25em; line-height: 1.25em; }
 #main .entry-title { padding-top: 0; line-height: 1em; }
-#main .wp-caption-text { font-size: 0.875em; font-family: ff-meta-web-pro, Tahoma, Verdana, Elvetica, sans-serif; }
+#main .wp-caption-text { font-size: 0.875em; font-family: ff-meta-web-pro, Tahoma, Verdana, Helvetica, sans-serif; }
 #main #author-info { padding-bottom: 2em; }
 #main .entry-content, #main .entry-summary { padding: 0; }
 #main ul.publication-side-toc li { line-height: 1.25em; margin-bottom: 0.25em; }
