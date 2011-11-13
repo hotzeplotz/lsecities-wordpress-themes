@@ -26,6 +26,17 @@
 <script src="<?php bloginfo( 'stylesheet_directory' ); ?>/javascripts/application.js?1315255380" type="text/javascript"></script> 
 <script type="text/javascript" src="http://v0.urban-age.net/scripts/jquery/plugins/superfish/1.4.8/superfish.js"></script>
 
+<script type="text/javascript">
+  jQuery(document).ready(function(){
+   // next function is ported to jQuery from legacy Urban Age JavaScript code embedded on each page
+   ,Query("#ebulletinArchive .DDMenu").change(function() {
+    var location = $('select option:selected').attr('value');
+    top.location.href = location;
+   });
+   jQuery('ul.menu').superfish();
+  });
+</script><!-- jQuery functions -->
+
 
 </body>
 </html>
