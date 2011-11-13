@@ -117,11 +117,9 @@ body, input, textarea { background-color: #ffffff; }
 #main p:last-child { margin-bottom: 0; }
 #main .defaultBox { border-top: 1px solid #5D5151; padding-top: 0.25em; padding-bottom: 0.25em; }
 #main .defaultBox:first-child { border-top: none; padding-top: 0; }
-#main .article-text img { max-width: 100%; }
 #main article .introblurb h2 { margin-top: 0.6em; margin-bottom: 0; }
 #main article .introblurb p { font-size: 1.25em; line-height: 1.25em; }
 #main .entry-title { padding-top: 0; line-height: 1em; }
-#main .wp-caption { max-width: 100% !important; }
 #main .wp-caption-text { font-size: 0.875em; font-family: ff-meta-web-pro, Tahoma, Verdana, Elvetica, sans-serif; }
 #main #author-info { padding-bottom: 2em; }
 #main .entry-content, #main .entry-summary { padding: 0; }
