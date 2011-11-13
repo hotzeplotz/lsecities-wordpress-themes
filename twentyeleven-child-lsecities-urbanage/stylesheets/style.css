@@ -149,7 +149,7 @@ footer ul { list-style-type: none; }
 #mainMenu li ul ul { margin: -1.3em 0 0 14em; }
 #mainMenu li li { float: left; width: 13.8em; }
 #mainMenu a, #mainMenu span { color: #ffffff; display: block; font-weight: bold; font-size: 1em; line-height: 1.8em; margin: 0; padding: 0 0.9em; text-decoration: none; text-transform: uppercase; }
-#mainMenu a:hover, #mainMenu span:hover { background-color: #cccccc; color: #b4001d; text-decoration: underline; }
+#mainMenu a:hover, #mainMenu span:hover { background-color: #cccccc; color: #b4001d; text-decoration: none; }
 #mainMenu a.active, #mainMenu span.active { background-color: #b4001d; color: #FFFFFF; text-decoration: none; }
 #mainMenu > ul > li > span > a { padding-left: 0; padding-right: 0; }
 
