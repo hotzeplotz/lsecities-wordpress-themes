@@ -13,7 +13,7 @@
       </div><!-- #main -->
     </div>
     
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.js" type="text/javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.js" type="text/javascript"></script>
 
     <script>
       //<![CDATA[
