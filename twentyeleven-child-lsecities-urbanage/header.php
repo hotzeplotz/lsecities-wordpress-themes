@@ -132,7 +132,7 @@ $logo_element_id = $urban_age_section ? 'ualogo' : 'logo';
             </div>
           </div>
         </div>
-        <div class='row top15'>
+        <div class='row'>
           <div class='twelvecol last' id='mainMenu'>
 
             <ul class='menu sf-js-enabled sf-shadow'>
@@ -148,12 +148,6 @@ $logo_element_id = $urban_age_section ? 'ualogo' : 'logo';
                   <a href='/network/'>Who's who</a>
                 </span>
                 <ul class='tree' style='display: none; visibility: hidden; '>
-                  <!--
-                    <li class="leaf"><a href="/network/board/">Board</a></li>
-                    <li class="leaf"><a href="/network/staff/">Staff</a></li>
-                    <li class="leaf"><a href="/network/advisors/">Advisors and Contributors</a></li>
-                    <li class="leaf"><a href="/network/institutions/">Institutional Partners</a></li>
-                  -->
                   <li class='leaf'>
                     <a href='/02_network/network_Board.html'>Board</a>
                   </li>
