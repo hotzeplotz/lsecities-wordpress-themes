@@ -52,7 +52,7 @@ if(!empty($lang) && $lang == $article_lang2) {
 }
 
 // prepend base URI
-if(!preg_match('/^http:\/\//', $pdf_uri)) {
+if(!preg_match('/^https?:\/\//', $pdf_uri)) {
   // Istanbul newspaper follows different URI template
   if($pod->get_field('in_publication.slug') == 'istanbul-city-of-intersections') {
     $pdf_uri = 'http://v0.urban-age.net/publications/newspapers/' . $pdf_uri;
@@ -118,14 +118,16 @@ $article_authors = $pod->get_field('authors');
           <em>no tags defined</em>
           <?php endif; ?>
         </dd>
+        <?php if($pdf_uri) : ?>
+        <dt>Downloads</dt>
+        <dd>
+          <a href="<?php echo $pdf_uri; ?>">Download this article as PDF</a>
+        </dd>
+        <?php endif; ?>
       </dl>
     </div><!-- #author-info -->
 		<?php edit_post_link( __( 'Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
 	</div><!-- .entry-meta -->
-  
-<?php if($pdf_uri) : ?>
-<a href="<?php echo $pdf_uri; ?>">Download this article as PDF</a>
-<?php endif; ?>
 
 <?php if($publication_pod->get_field('articles')) : ?>
   <div>
