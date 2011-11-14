@@ -37,7 +37,7 @@ if(!empty($lang) && $lang == $article_lang2) {
   $article_text = do_shortcode($pod->get_field('text_lang2'));
   $article_extra_content = do_shortcode($pod->get_field('extra_content_lang2'));
   $pdf_uri = $pod->get_field('article_pdf_lang2.guid');
-  if(isempty($pdf_uri)) {
+  if(empty($pdf_uri)) {
     $pdf_uri = $pod->get_field('article_pdf_uri_lang2');
   }
 } else {
@@ -46,7 +46,7 @@ if(!empty($lang) && $lang == $article_lang2) {
   $article_text = do_shortcode($pod->get_field('text'));
   $article_extra_content = do_shortcode($pod->get_field('extra_content'));
   $pdf_uri = $pod->get_field('article_pdf.guid');
-  if(isempty($pdf_uri)) {
+  if(empty($pdf_uri)) {
     $pdf_uri = $pod->get_field('article_pdf_uri');
   }
 }
