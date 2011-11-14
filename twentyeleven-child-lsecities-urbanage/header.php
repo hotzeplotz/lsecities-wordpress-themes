@@ -29,6 +29,7 @@ $level2nav = wp_list_pages('child_of=' . $toplevel_ancestor . '&depth=1&sort_col
 $urban_age_section = ($toplevel_ancestor == 94) ? true : false;
 $logo_element_id = $urban_age_section ? 'ualogo' : 'logo';
 
+$FORCE_UA_HOSTNAME = 'http://urban-age.net';
 ?><!DOCTYPE html>
 <!--[if IE 6]>
 <html id="ie6" <?php language_attributes(); ?>>
@@ -139,120 +140,120 @@ $logo_element_id = $urban_age_section ? 'ualogo' : 'logo';
 
             <ul class='menu sf-js-enabled sf-shadow'>
               <li class='leaf'>
-                <a href='/'>Home</a>
+                <a href='<?php echo $FORCE_UA_HOSTNAME ; ?>/'>Home</a>
               </li>
               <li class='leaf'>
-                <a href='/introduction/idea/'>About</a>
+                <a href='<?php echo $FORCE_UA_HOSTNAME ; ?>/introduction/idea/'>About</a>
               </li>
               <li class='tree'>
 
                 <span class='leaf'>
-                  <a href='/network/'>Who's who</a>
+                  <a href='<?php echo $FORCE_UA_HOSTNAME ; ?>/network/'>Who's who</a>
                 </span>
                 <ul class='tree' style='display: none; visibility: hidden; '>
                   <li class='leaf'>
-                    <a href='/02_network/network_Board.html'>Board</a>
+                    <a href='<?php echo $FORCE_UA_HOSTNAME ; ?>/02_network/network_Board.html'>Board</a>
                   </li>
 
                   <li class='leaf'>
-                    <a href='/02_network/network_Staff.html'>Staff</a>
+                    <a href='<?php echo $FORCE_UA_HOSTNAME ; ?>/02_network/network_Staff.html'>Staff</a>
                   </li>
                   <li class='leaf'>
-                    <a href='/02_network/network_Advisors.html'>Advisors and Contributors</a>
+                    <a href='<?php echo $FORCE_UA_HOSTNAME ; ?>/02_network/network_Advisors.html'>Advisors and Contributors</a>
                   </li>
                   <li class='leaf'>
-                    <a href='/02_network/network_Institutions.html'>Institutional Partners</a>
+                    <a href='<?php echo $FORCE_UA_HOSTNAME ; ?>/02_network/network_Institutions.html'>Institutional Partners</a>
 
                   </li>
                 </ul>
               </li>
               <li class='tree'>
                 <span class='leaf'>
-                  <a href='/conferences/'>Conferences</a>
+                  <a href='<?php echo $FORCE_UA_HOSTNAME ; ?>/conferences/'>Conferences</a>
                 </span>
                 <ul class='tree' style='display: none; visibility: hidden; '>
 
                   <li class='leaf'>
-                    <a href='/03_conferences/conf_newYork.html'>New York</a>
+                    <a href='<?php echo $FORCE_UA_HOSTNAME ; ?>/03_conferences/conf_newYork.html'>New York</a>
                   </li>
                   <li class='leaf'>
-                    <a href='/03_conferences/conf_shanghai.html'>Shanghai</a>
+                    <a href='<?php echo $FORCE_UA_HOSTNAME ; ?>/03_conferences/conf_shanghai.html'>Shanghai</a>
                   </li>
                   <li class='leaf'>
-                    <a href='/03_conferences/conf_london.html'>London</a>
+                    <a href='<?php echo $FORCE_UA_HOSTNAME ; ?>/03_conferences/conf_london.html'>London</a>
 
                   </li>
                   <li class='leaf'>
-                    <a href='/03_conferences/conf_mexicoCity.html'>Mexico City</a>
+                    <a href='<?php echo $FORCE_UA_HOSTNAME ; ?>/03_conferences/conf_mexicoCity.html'>Mexico City</a>
                   </li>
                   <li class='leaf'>
-                    <a href='/03_conferences/conf_johannesburg.html'>Johannesburg</a>
-                  </li>
-                  <li class='leaf'>
-
-                    <a href='/03_conferences/conf_berlin.html'>Berlin</a>
-                  </li>
-                  <li class='leaf'>
-                    <a href='/03_conferences/conf_halle.html'>German Cities, Halle</a>
-                  </li>
-                  <li class='leaf'>
-                    <a href='/03_conferences/conf_mumbai.html'>Mumbai</a>
-
-                  </li>
-                  <li class='leaf'>
-                    <a href='/03_conferences/conf_saoPaulo.html'>São Paulo</a>
-                  </li>
-                  <li class='leaf'>
-                    <a href='/conferences/istanbul/'>Istanbul</a>
+                    <a href='<?php echo $FORCE_UA_HOSTNAME ; ?>/03_conferences/conf_johannesburg.html'>Johannesburg</a>
                   </li>
                   <li class='leaf'>
 
-                    <a href='/conferences/chicago/'>Chicago</a>
+                    <a href='<?php echo $FORCE_UA_HOSTNAME ; ?>/03_conferences/conf_berlin.html'>Berlin</a>
                   </li>
                   <li class='leaf'>
-                    <a href='/conferences/hongkong/'>Hong Kong</a>
+                    <a href='<?php echo $FORCE_UA_HOSTNAME ; ?>/03_conferences/conf_halle.html'>German Cities, Halle</a>
+                  </li>
+                  <li class='leaf'>
+                    <a href='<?php echo $FORCE_UA_HOSTNAME ; ?>/03_conferences/conf_mumbai.html'>Mumbai</a>
+
+                  </li>
+                  <li class='leaf'>
+                    <a href='<?php echo $FORCE_UA_HOSTNAME ; ?>/03_conferences/conf_saoPaulo.html'>São Paulo</a>
+                  </li>
+                  <li class='leaf'>
+                    <a href='<?php echo $FORCE_UA_HOSTNAME ; ?>/conferences/istanbul/'>Istanbul</a>
+                  </li>
+                  <li class='leaf'>
+
+                    <a href='<?php echo $FORCE_UA_HOSTNAME ; ?>/conferences/chicago/'>Chicago</a>
+                  </li>
+                  <li class='leaf'>
+                    <a href='<?php echo $FORCE_UA_HOSTNAME ; ?>/conferences/hongkong/'>Hong Kong</a>
                   </li>
                 </ul>
               </li>
               <li class='leaf'>
 
-                <a href='/events/publicLectures/'>Events</a>
+                <a href='<?php echo $FORCE_UA_HOSTNAME ; ?>/events/publicLectures/'>Events</a>
               </li>
               <li class='leaf'>
-                <a href='/introduction/investigation/'>Research</a>
+                <a href='<?php echo $FORCE_UA_HOSTNAME ; ?>/introduction/investigation/'>Research</a>
               </li>
               <li class='tree'>
                 <span class='leaf'>
-                  <a href='/publications/'>Publications</a>
+                  <a href='<?php echo $FORCE_UA_HOSTNAME ; ?>/publications/'>Publications</a>
 
                 </span>
                 <ul class='tree' style='display: none; visibility: hidden; '>
                   <li class='leaf'>
-                    <a href='/publications/newsletter/current/'>Newsletter</a>
+                    <a href='<?php echo $FORCE_UA_HOSTNAME ; ?>/publications/newsletter/current/'>Newsletter</a>
                   </li>
                   <li class='leaf'>
-                    <a href='/publications/theEndlessCity/'>The Endless City</a>
+                    <a href='<?php echo $FORCE_UA_HOSTNAME ; ?>/publications/theEndlessCity/'>The Endless City</a>
                   </li>
 
                   <li class='leaf'>
-                    <a href='/publications/living-in-the-endless-city/'>Living in the Endless City</a>
+                    <a href='<?php echo $FORCE_UA_HOSTNAME ; ?>/publications/living-in-the-endless-city/'>Living in the Endless City</a>
                   </li>
                   <li class='leaf'>
-                    <a href='/publications/newspapers/'>Conference newspapers</a>
+                    <a href='<?php echo $FORCE_UA_HOSTNAME ; ?>/publications/newspapers/'>Conference newspapers</a>
                   </li>
                   <li class='leaf'>
-                    <a href='/publications/reports/'>Research reports</a>
+                    <a href='<?php echo $FORCE_UA_HOSTNAME ; ?>/publications/reports/'>Research reports</a>
 
                   </li>
                   <li class='leaf'>
-                    <a href='/publications/archive/'>Archive</a>
+                    <a href='<?php echo $FORCE_UA_HOSTNAME ; ?>/publications/archive/'>Archive</a>
                   </li>
                 </ul>
               </li>
               <li class='tree'>
                 <span class='leaf'>
 
-                  <a href='/dbua-award/'>Award</a>
+                  <a href='<?php echo $FORCE_UA_HOSTNAME ; ?>/dbua-award/'>Award</a>
                 </span>
                 <ul class='tree' style='display: none; visibility: hidden; '>
                   <li class='leaf'>
@@ -275,7 +276,7 @@ $logo_element_id = $urban_age_section ? 'ualogo' : 'logo';
                 <a href='http://lsecities.net/category/urban-age'>News</a>
               </li>
               <li class='leaf'>
-                <a href='/press/information/'>Press</a>
+                <a href='<?php echo $FORCE_UA_HOSTNAME ; ?>/press/information/'>Press</a>
               </li>
               <li class='leaf'>
 

@@ -64,7 +64,7 @@ if(!preg_match('/^https?:\/\//', $pdf_uri) && !empty($pdf_uri)) {
 }
 
 // force urban-age.net uri until we switch to WP for everything
-preg_replace('/^https?:\/\/v1.lsecities.net/', 'http://urban-age.net', $pdf_uri);
+preg_replace('/^https?:\/\/v1\.lsecities\.net/', 'http://urban-age.net', $pdf_uri);
 
 $article_publication_date = $pod->get_field('publication_date');
 $article_tags = $pod->get_field('tags');
