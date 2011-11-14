@@ -290,47 +290,43 @@ $logo_element_id = $urban_age_section ? 'ualogo' : 'logo';
         <div id='flash'>
 
         </div>
-        <nav class='twocol' id='conferencesmenu'>
+        <nav id="conferencesmenu" class="twocol">
           <ul>
             <li>
-              <a href='#'>New York</a>
+              <a href="/ua/conferences/2005-new-york/">New York</a>
             </li>
             <li>
-              <a href='#'>Shanghai</a>
-
+              <a href="/ua/conferences/2005-shanghai/">Shanghai</a>
             </li>
             <li>
-              <a href='#'>London</a>
+              <a href="/ua/conferences/2005-london/">London</a>
             </li>
             <li>
-              <a href='#'>Mexico City</a>
+              <a href="/ua/conferences/2006-mexico-city/">Mexico City</a>
             </li>
             <li>
-
-              <a href='#'>Johannesburg</a>
+              <a href="/ua/conferences/2006-johannesburg/">Johannesburg</a>
             </li>
             <li>
-              <a href='#'>Berlin</a>
+              <a href="/ua/conferences/2006-berlin/">Berlin</a>
             </li>
             <li>
-              <a href='#'>Mumbai</a>
-
+              <a href="/ua/conferences/2007-mumbai/">Mumbai</a>
             </li>
             <li>
-              <a href='#'>São Paulo</a>
+              <a href="/ua/conferences/2008-sao-paulo/">São Paulo</a>
             </li>
             <li>
-              <a href='#'>Istanbul</a>
+              <a href="/ua/conferences/2009-istanbul/">Istanbul</a>
             </li>
             <li>
-
-              <a href='#'>Chicago</a>
+              <a href="/ua/conferences/2010-chicago/">Chicago</a>
             </li>
             <li>
-              <a href='#'>Hong Kong</a>
+              <a href="/ua/conferences/2011-hongkong/">Hong Kong</a>
             </li>
           </ul>
-        </nav>
+        </nav><!-- #conferencesmenu -->
         <div class='tencol last' id='core'>
 
 
