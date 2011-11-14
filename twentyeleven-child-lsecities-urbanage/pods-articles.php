@@ -141,7 +141,7 @@ $article_authors = $pod->get_field('authors');
       foreach($publication_pod->get_field('articles') as $article) :
         if(preg_match("/^" . $section['id'] . "/", $article['sequence'])) : ?>
           <?php if($TRACE_PODS_ARTICLES) : ?>
-          <!-- <?php echo 'article Pod object: ' . var_export($article, true); } ?> -->
+          <!-- <?php echo 'article Pod object: ' . var_export($article, true); ?> -->
           <?php endif; ?>
           <li>
             <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $article['slug']; ?>"><?php echo $article['name']; ?></a>
