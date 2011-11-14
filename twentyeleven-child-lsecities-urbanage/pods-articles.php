@@ -36,22 +36,28 @@ if(!empty($lang) && $lang == $article_lang2) {
   $article_abstract = do_shortcode($pod->get_field('abstract_lang2'));
   $article_text = do_shortcode($pod->get_field('text_lang2'));
   $article_extra_content = do_shortcode($pod->get_field('extra_content_lang2'));
-  $pdf_uri = $pod->get_field('article_pdf_uri_lang2');
+  $pdf_uri = $pod->get_field('article_pdf_lang2.guid');
+  if(isempty($pdf_uri)) {
+    $pdf_uri = $pod->get_field('article_pdf_uri_lang2');
+  }
 } else {
   $article_title = $pod->get_field('name');
   $article_abstract = do_shortcode($pod->get_field('abstract'));
   $article_text = do_shortcode($pod->get_field('text'));
   $article_extra_content = do_shortcode($pod->get_field('extra_content'));
-  $pdf_uri = $pod->get_field('article_pdf_uri');
+  $pdf_uri = $pod->get_field('article_pdf.guid');
+  if(isempty($pdf_uri)) {
+    $pdf_uri = $pod->get_field('article_pdf_uri');
+  }
 }
 
 // prepend base URI
-if($pdf_uri) {
+if(!preg_match('/^http:\/\//', $pdf_uri)) {
   // Istanbul newspaper follows different URI template
   if($pod->get_field('in_publication.slug') == 'istanbul-city-of-intersections') {
     $pdf_uri = 'http://v0.urban-age.net/publications/newspapers/' . $pdf_uri;
   } else {
-    $pdf_uri = "http://urban-age.net/0_downloads/" . $pdf_uri;
+    $pdf_uri = "http://v0.urban-age.net/0_downloads/" . $pdf_uri;
   }
 }
 
