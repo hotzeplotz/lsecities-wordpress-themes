@@ -70,6 +70,8 @@ $logo_element_id = $urban_age_section ? 'ualogo' : 'logo';
 <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Anton'>
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_directory') ?>/stylesheets/cssgrid.net/1140.css" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_url'); ?>" />
+<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory'); ?>/javascripts/jquery/plugins/slimbox/2.04/css/slimbox2.css" media="screen" />
+
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
