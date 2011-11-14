@@ -52,7 +52,7 @@ if(!empty($lang) && $lang == $article_lang2) {
 }
 
 // prepend base URI
-if(!preg_match('/^https?:\/\//', $pdf_uri)) {
+if(!preg_match('/^https?:\/\//', $pdf_uri) && !empty($pdf_uri)) {
   // Istanbul newspaper follows different URI template
   if($pod->get_field('in_publication.slug') == 'istanbul-city-of-intersections') {
     $pdf_uri = 'http://v0.urban-age.net/publications/newspapers/' . $pdf_uri;
