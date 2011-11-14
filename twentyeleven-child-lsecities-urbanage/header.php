@@ -293,37 +293,37 @@ $logo_element_id = $urban_age_section ? 'ualogo' : 'logo';
         <nav id="conferencesmenu" class="twocol">
           <ul>
             <li>
-              <a href="/ua/conferences/2005-new-york/">New York</a>
+              <a href="http://urban-age.net/03_conferences/conf_newYork.html">New York</a>
             </li>
             <li>
-              <a href="/ua/conferences/2005-shanghai/">Shanghai</a>
+              <a href="http://urban-age.net/03_conferences/conf_shanghai.html">Shanghai</a>
             </li>
             <li>
-              <a href="/ua/conferences/2005-london/">London</a>
+              <a href="http://urban-age.net/03_conferences/conf_london.html">London</a>
             </li>
             <li>
-              <a href="/ua/conferences/2006-mexico-city/">Mexico City</a>
+              <a href="http://urban-age.net/03_conferences/conf_mexicoCity.html">Mexico City</a>
             </li>
             <li>
-              <a href="/ua/conferences/2006-johannesburg/">Johannesburg</a>
+              <a href="http://urban-age.net/03_conferences/conf_johannesburg.html">Johannesburg</a>
             </li>
             <li>
-              <a href="/ua/conferences/2006-berlin/">Berlin</a>
+              <a href="http://urban-age.net/03_conferences/conf_berlin.html">Berlin</a>
             </li>
             <li>
-              <a href="/ua/conferences/2007-mumbai/">Mumbai</a>
+              <a href="http://urban-age.net/03_conferences/conf_mumbai.html">Mumbai</a>
             </li>
             <li>
-              <a href="/ua/conferences/2008-sao-paulo/">São Paulo</a>
+              <a href="http://urban-age.net/03_conferences/conf_saoPaulo.html">São Paulo</a>
             </li>
             <li>
-              <a href="/ua/conferences/2009-istanbul/">Istanbul</a>
+              <a href="http://urban-age.net/conferences/istanbul/">Istanbul</a>
             </li>
             <li>
-              <a href="/ua/conferences/2010-chicago/">Chicago</a>
+              <a href="http://urban-age.net/conferences/chicago/">Chicago</a>
             </li>
             <li>
-              <a href="/ua/conferences/2011-hongkong/">Hong Kong</a>
+              <a href="http://urban-age.net/conferences/hongkong/">Hong Kong</a>
             </li>
           </ul>
         </nav><!-- #conferencesmenu -->
