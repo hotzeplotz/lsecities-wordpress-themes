@@ -8,7 +8,7 @@
  * @since Twenty Eleven 1.0
  */
 $TRACE_PODS_ARTICLES = false;
-$PODS_BASEURI_ARTICLES = '/media/objects/articles/';
+$PODS_BASEURI_ARTICLES = 'http://urban-age.net/media/objects/articles/';
 ?>
 
 <?php
