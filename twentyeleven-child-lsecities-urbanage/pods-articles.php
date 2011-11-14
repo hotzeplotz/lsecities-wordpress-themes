@@ -135,7 +135,7 @@ $article_authors = $pod->get_field('authors');
 		<?php edit_post_link( __( 'Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
 	</div><!-- .entry-meta -->
 
-<?php if($publication_pod->get_field('articles')) : ?>
+<?php if(count($publication_pod->get_field('articles'))) : ?>
   <div>
     <h3><?php echo $publication_pod->get_field('name'); ?></h3>
     <ul class="publication-side-toc">
