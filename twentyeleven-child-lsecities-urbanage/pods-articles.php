@@ -7,7 +7,7 @@
  * @subpackage Twenty_Eleven
  * @since Twenty Eleven 1.0
  */
-$TRACE_PODS_ARTICLES = false;
+$TRACE_PODS_ARTICLES = true;
 
 // TODO: remove hostname once we switch to WP for the whole urban-age.net
 $PODS_BASEURI_ARTICLES = 'http://urban-age.net/media/objects/articles/';
@@ -64,6 +64,7 @@ if(!preg_match('/^https?:\/\//', $pdf_uri) && !empty($pdf_uri)) {
 }
 
 // force urban-age.net uri until we switch to WP for everything
+if($TRACE_PODS_ARTICLES) { error_log('pdf_uri: ' . $pdf_uri); }
 preg_replace('/^https?:\/\/v1\.lsecities\.net/', 'http://urban-age.net', $pdf_uri);
 
 $article_publication_date = $pod->get_field('publication_date');
