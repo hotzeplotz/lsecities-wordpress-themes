@@ -24,7 +24,7 @@ pod:
 
 <div class="threecol last" id="level3nav">
 <?php
-if($no_navbar == true) : ?>
+if($no_navbar == 'true') : ?>
   &#160;
 <?php
 elseif($current_post_id == 94) : // /ua/ (Urban Age frontpage)
