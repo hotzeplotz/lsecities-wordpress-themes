@@ -108,6 +108,8 @@ nav#conferencesmenu ul li:first-child { margin-top: 0; }
 
 .entry-content { margin-bottom: 4em; }
 
+.singular article.hentry { padding-top: 1em; }
+
 body, input, textarea { background-color: #ffffff; }
 
 #main { margin-top: 1em; margin-bottom: 2em; padding: 0; }
