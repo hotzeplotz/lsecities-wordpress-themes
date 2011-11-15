@@ -9,6 +9,7 @@
 
 $wide_layout = strtolower(get_post_meta(get_the_ID(), "layout", true)) == 'wide' ? 1 : 0;
 $main_area_class = $wide_layout ? 'ninecol' : 'sixcol';
+$no_navbar = get_post_meta(get_the_ID(), 'no_navbar', true);
 ?>
 
 <div class="row">

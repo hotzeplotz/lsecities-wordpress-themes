@@ -4,6 +4,7 @@ $TRACE_PREFIX = 'nav.php -- ';
 $current_post_id = $post->ID;
 $ancestors = get_post_ancestors($current_post_id);
 global $pods_toplevel_ancestor;
+global $no_navbar;
 
 if($TRACE_TEMPLATE_NAV) { error_log($TRACE_PREFIX . 'ancestors: ' . var_export($ancestors, true)); }
 
@@ -23,7 +24,10 @@ pod:
 
 <div class="threecol last" id="level3nav">
 <?php
-if($current_post_id == 94) : // /ua/ (Urban Age frontpage)
+if($no_navbar == true) : ?>
+  &#160;
+<?php
+elseif($current_post_id == 94) : // /ua/ (Urban Age frontpage)
   get_template_part('snippet-organizers');
 elseif($current_post_id == 393) : // / (main frontpage)
   get_template_part('snippet-lsecities-frontpage');
