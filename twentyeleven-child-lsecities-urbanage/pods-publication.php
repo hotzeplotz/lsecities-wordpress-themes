@@ -14,6 +14,7 @@
   $publication_slug = get_post_meta($post->ID, 'pod_slug', true);
   error_log('pod_slug: ' . $publication_slug);
   $pod = new Pod('publication_wrappers', $publication_slug);
+  $publication_pod = $pod; // TODO refactor code and move generation of list of articles to sub used both in pods-articles and pods-publication
   $pod_title = $pod->get_field('name');
   $pod_subtitle = $pod->get_field('publication_subtitle');
   $pod_issuu = do_shortcode($pod->get_field('issuu'));
