@@ -128,7 +128,6 @@ body, input, textarea { background-color: #ffffff; }
 #main #author-info { padding-bottom: 2em; }
 #main .entry-content, #main .entry-summary { padding: 0; }
 #main ul.publication-side-toc li { line-height: 1.25em; margin-bottom: 0.25em; }
-#main .publication-cover { -moz-box-shadow: 0.313em 0.313em 0.188em #888888; -webkit-box-shadow: 0.313em 0.313em 0.188em #888888; -o-box-shadow: 0.313em 0.313em 0.188em #888888; box-shadow: 0.313em 0.313em 0.188em #888888; }
 #main .article .entry-content.article-text.sidebyside > div { -moz-column-count: 2; -webkit-column-count: 2; -o-column-count: 2; column-count: 2; }
 
 #extras h1 { font-size: 1em; }
