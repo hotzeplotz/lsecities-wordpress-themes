@@ -100,7 +100,7 @@ $FORCE_UA_HOSTNAME = 'http://urban-age.net';
         <div class='row'>
 
           <div class='full ninecol' id='ualogo'>
-            <img alt='Urban Age' src='<?php bloginfo('stylesheet_directory') ?>/images/logo_urbanage_strapline.gif'>
+            <a href="http://urban-age.net/"><img alt='Urban Age' src='<?php bloginfo('stylesheet_directory') ?>/images/logo_urbanage_strapline.gif'></a>
           </div>
           <div class='threecol last' id='toolbox'>
             <div id='searchbox'>
