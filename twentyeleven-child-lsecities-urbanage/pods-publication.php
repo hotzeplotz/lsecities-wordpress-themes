@@ -22,7 +22,7 @@
   $pod_abstract = do_shortcode($pod->get_field('abstract'));
   
 // TODO: remove hostname once we switch to WP for the whole urban-age.net
-$PODS_BASEURI_ARTICLES = 'http://urban-age.net/media/objects/articles/';
+$PODS_BASEURI_ARTICLES = 'http://urban-age.net/media/objects/articles';
 
 ?>
 
