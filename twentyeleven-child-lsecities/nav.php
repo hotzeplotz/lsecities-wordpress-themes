@@ -27,6 +27,8 @@ pod:
 if($no_navbar == 'true') : ?>
   &#160;
 <?php
+elseif($current_post_id == 595) : // ua/conferences/2011-hongkong/audio-and-video/
+  echo get_post_meta($current_post_id, "aside", true);
 elseif($current_post_id == 94) : // /ua/ (Urban Age frontpage)
   get_template_part('snippet-organizers');
 elseif($current_post_id == 393) : // / (main frontpage)
