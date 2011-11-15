@@ -45,7 +45,8 @@ $PODS_BASEURI_ARTICLES = 'http://urban-age.net/media/objects/articles/';
       <div class="article row">
         <div class="ninecol">
           <?php if(count($pod->get_field('articles'))) : ?>
-          <h3>Read the articles</h3>
+          <h2>Read the articles</h2>
+          <p>
     <ul class="publication-side-toc">
     <?php
     $sections = array();
@@ -76,6 +77,7 @@ $PODS_BASEURI_ARTICLES = 'http://urban-age.net/media/objects/articles/';
       endforeach; 
     endforeach; ?>
     </ul>
+          </p>
           <?php endif; ?>
           
           <?php if($pod_issuu) : ?>
