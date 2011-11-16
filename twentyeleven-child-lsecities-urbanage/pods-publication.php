@@ -22,6 +22,11 @@
   $pod_cover = $pod->get_field('snapshot.guid');
   $pod_abstract = do_shortcode($pod->get_field('abstract'));
   
+  $pod_pdf = $pod->get_field('publication_pdf.guid') ? $pod->get_field('publication_pdf.guid') : $pod->get_field('publication_pdf_uri');
+  $pod_alt_pdf = $pod->get_field('publication_alt_pdf.guid') ? $pod->get_field('publication_alt_pdf.guid') : $pod->get_field('publication_alt_pdf_uri');
+  $pod_pdf_lang2 = $pod->get_field('publication_pdf_lang2.guid') ? $pod->get_field('publication_pdf_lang2.guid') : $pod->get_field('publication_pdf_lang2_uri');
+  $pod_alt_pdf_lang2 = $pod->get_field('publication_alt_pdf_lang2.guid') ? $pod->get_field('publication_alt_pdf_lang2.guid') : $pod->get_field('publication_alt_pdf_lang2_uri');
+
   $articles_pods = new Pod('article');
   $search_params = array();
   $search_params['where'] = 'in_publication.id = ' .$pod->get_field('id');
@@ -119,6 +124,15 @@ $PODS_BASEURI_ARTICLES = 'http://urban-age.net/media/objects/articles';
           <div class="publication-cover">
             <img src="<?php echo $pod_cover ; ?>" />
           </div>
+          <?php if($pod_pdf) : ?>
+          <div>
+            <h3>Downloads</h3>
+            <ul>
+              <li><a href="<?php echo $pod_pdf; ?>">Publication (PDF)</a></li>
+              <?php if($pod_alt_pdf) { ?><li><a href="<?php echo $pod_alt_pdf; ?>">Expert essays (PDF)</a></li><?php } ?>
+            </ul>
+          </div>
+          <?php endif; ?>
         </div>
       </div>
     <?php endif ?>    
