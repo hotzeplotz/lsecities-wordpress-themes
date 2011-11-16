@@ -25,7 +25,7 @@
   $articles_pods = new Pod('article');
   $search_params = array();
   $search_params['join'] = 'LEFT JOIN wp_7_pod_tbl_publication_wrappers AS publication ON publication.id = t.in_publication';
-  $search_params['where'] = 'publication.id = ' .$pod['id'];
+  $search_params['where'] = 'publication.id = ' .$pod->get_field('id');
   $search_params['orderby'] = 'sequence';
   $search_params['limit'] = -1;
   $articles_pods->findRecords($search_params);
