@@ -90,7 +90,7 @@ $PODS_BASEURI_ARTICLES = 'http://urban-age.net/media/objects/articles';
             $author_names = $author_names . $author['name'] . ' ' . $author['family_name'] . ', ';
           }
           $article_name = $articles_pods->get_field('name');
-          echo '<!--' . $author_names . ' ' . $article_name '-->';
+          echo '<!--' . $author_names . ' ' . $article_name . '-->';
           if($TRACE_PODS_ARTICLES) : ?>
           <!-- <?php echo 'article Pod object: ' . var_export($articles_pods, true); ?> -->
           <?php endif; ?>
