@@ -11,7 +11,7 @@
 
 <?php
   /* URI: TBD */
-  $TRACE_PODS_ARTICLES = true;
+  $TRACE_PODS_ARTICLES = false;
   $publication_slug = get_post_meta($post->ID, 'pod_slug', true);
   error_log('pod_slug: ' . $publication_slug);
   $pod = new Pod('publication_wrappers', $publication_slug);
@@ -86,6 +86,7 @@ $PODS_BASEURI_ARTICLES = 'http://urban-age.net/media/objects/articles';
         //if(preg_match("/^" . $section['id'] . "/", $article['sequence'])) :
         if(preg_match("/^" . $section['id'] . "/", $articles_pods->get_field('sequence'))) :
           $article_authors = $articles_pods->get_field('authors');
+          $author_names = '';
           foreach($article_authors as $author) {
             $author_names = $author_names . $author['name'] . ' ' . $author['family_name'] . ', ';
           }
