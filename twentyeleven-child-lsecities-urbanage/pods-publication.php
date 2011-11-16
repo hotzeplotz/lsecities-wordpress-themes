@@ -11,6 +11,7 @@
 
 <?php
   /* URI: TBD */
+  $TRACE_PODS_ARTICLES = true;
   $publication_slug = get_post_meta($post->ID, 'pod_slug', true);
   error_log('pod_slug: ' . $publication_slug);
   $pod = new Pod('publication_wrappers', $publication_slug);
