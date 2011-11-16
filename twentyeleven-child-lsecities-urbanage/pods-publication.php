@@ -22,15 +22,6 @@
   $pod_cover = $pod->get_field('snapshot.guid');
   $pod_abstract = do_shortcode($pod->get_field('abstract'));
   
-  $articles_pods = new Pod('article');
-  $search_params = array();
-  $search_params['join'] = 'LEFT JOIN wp_7_pod_tbl_publication_wrappers AS publication ON publication.id = t.in_publication';
-  my_custom_join.coolness LIKE "%awesome%"
-  $search_params['where'] = 'publication.id = ' .$pod['id'];
-  $search_params['orderby'] = 'sequence';
-  $search_params['limit'] = -1;
-  $articles_pods->findRecords($search_params);
-  
 // TODO: remove hostname once we switch to WP for the whole urban-age.net
 $PODS_BASEURI_ARTICLES = 'http://urban-age.net/media/objects/articles';
 
@@ -71,35 +62,20 @@ $PODS_BASEURI_ARTICLES = 'http://urban-age.net/media/objects/articles';
     }
     foreach($sections as $section) : ?>
       <?php if($section['title']) { ?><h4><?php echo $section['title']; ?></h4><?php }
-      //$publication_articles = $publication_pod->get_field('articles');
-      
-      // sort articles by their 'sequence' field, then by id (this will be the default if no sequence is specified)
-      /*
-      foreach($publication_articles as $key => $row) {
-        $sequence[$key] = $row['sequence'];
-        $id[$key] = $row['id'];
-      }
-      array_multisort($sequence, SORT_ASC, $id, SORT_ASC, $publication_articles);
-      */
-      
-      //foreach($publication_articles as $article) :
-      mysql_data_seek($articles_pods->result,0);
-      while($articles_pods->fetchRecord()) :
-        //if(preg_match("/^" . $section['id'] . "/", $article['sequence'])) :
-        if(preg_match("/^" . $section['id'] . "/", $articles_pods->get_field('sequence'))) :
+      foreach($publication_pod->get_field('articles') as $article) :
+        if(preg_match("/^" . $section['id'] . "/", $article['sequence'])) : ?>
           <?php if($TRACE_PODS_ARTICLES) : ?>
-          <!-- <?php echo 'article Pod object: ' . var_export($articles_pods, true); ?> -->
+          <!-- <?php echo 'article Pod object: ' . var_export($article, true); ?> -->
           <?php endif; ?>
           <li>
-            <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $articles_pods->get_field('slug'); ?>"><?php echo $articles_pods->get_field('name'); ?></a>
+            <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $article['slug']; ?>"><?php echo $article['name']; ?></a>
             <?php if(!empty($article['language']['name'])) : ?>
               (English) - <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $article['slug'] . '/?lang=' . $article['language']['language_code']; ?>">(<?php echo $article['language']['name']; ?>)</a>
             <?php endif; ?>
           </li>
       <?php
         endif;
-      endwhile;
-      //endforeach; 
+      endforeach; 
     endforeach; ?>
     </ul>
           </p>
