@@ -85,6 +85,10 @@ $PODS_BASEURI_ARTICLES = 'http://urban-age.net/media/objects/articles';
       while($articles_pods->fetchRecord()) :
         //if(preg_match("/^" . $section['id'] . "/", $article['sequence'])) :
         if(preg_match("/^" . $section['id'] . "/", $articles_pods->get_field('sequence'))) :
+          $article_authors = $articles_pods->get_field('authors');
+          foreach($article_authors as $author) {
+            echo '<!--' . $author['name'] . ' ' . $author['family_name'] . '-->';
+          }
           if($TRACE_PODS_ARTICLES) : ?>
           <!-- <?php echo 'article Pod object: ' . var_export($articles_pods, true); ?> -->
           <?php endif; ?>
