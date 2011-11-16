@@ -87,13 +87,15 @@ $PODS_BASEURI_ARTICLES = 'http://urban-age.net/media/objects/articles';
         if(preg_match("/^" . $section['id'] . "/", $articles_pods->get_field('sequence'))) :
           $article_authors = $articles_pods->get_field('authors');
           foreach($article_authors as $author) {
-            echo '<!--' . $author['name'] . ' ' . $author['family_name'] . '-->';
+            $author_names =. $author['name'] . ' ' . $author['family_name'] . ', ';
           }
+          $article_name = $articles_pods->get_field('name');
+          echo '<!--' . $author_names . ' ' . $article_name '-->';
           if($TRACE_PODS_ARTICLES) : ?>
           <!-- <?php echo 'article Pod object: ' . var_export($articles_pods, true); ?> -->
           <?php endif; ?>
           <li>
-            <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $articles_pods->get_field('slug'); ?>"><?php echo $articles_pods->get_field('name'); ?></a>
+            <?php echo '<!--' . $author_names . ' ' ; ?><a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $articles_pods->get_field('slug'); ?>"><?php echo $articles_title; ?></a>
             <?php if(!empty($article['language']['name'])) : ?>
               (English) - <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $article['slug'] . '/?lang=' . $article['language']['language_code']; ?>">(<?php echo $article['language']['name']; ?>)</a>
             <?php endif; ?>
