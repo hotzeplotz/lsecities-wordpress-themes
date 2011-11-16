@@ -86,7 +86,7 @@ $PODS_BASEURI_ARTICLES = 'http://urban-age.net/media/objects/articles';
       while($articles_pods->fetchRecord()) :
         //if(preg_match("/^" . $section['id'] . "/", $article['sequence'])) :
         if(preg_match("/^" . $section['id'] . "/", $articles_pods->get_field('sequence'))) :
-          <?php if($TRACE_PODS_ARTICLES) : ?>
+          if($TRACE_PODS_ARTICLES) : ?>
           <!-- <?php echo 'article Pod object: ' . var_export($articles_pods, true); ?> -->
           <?php endif; ?>
           <li>
