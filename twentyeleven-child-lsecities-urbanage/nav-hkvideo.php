@@ -2,7 +2,7 @@
 // ad-hoc template for the Hong Kong conference live streaming page
 ?>
 
-<h3>Day two | 17 November 2011</h3>
+<h3>Day one | 16 November 2011</h3>
 <p>
 <ul class="choosesession" data-title="Day one | 16 November 2011">
 <li><a data-session="1116001" data-title="Welcome">Welcome</a></li>
