@@ -1,8 +1,9 @@
 <?php
 // ad-hoc template for the Hong Kong conference live streaming page
 ?>
-<p>The Urban Age Hong Kong live streaming has now ended.</p>
-<p>Videos of the sessions of the conference can be watched on this page.</p>
+
+<h3>Day two | 17 November 2011</h3>
+<p>
 <ul class="choosesession" data-title="Day one | 16 November 2011">
 <li><a data-session="1116001" data-title="Welcome">Welcome</a></li>
 <li><a data-session="1116002" data-title="The politics of urban health">The politics of urban health
@@ -15,7 +16,10 @@
 </a></li>
 <li>Evening keynote: <a data-session="1116007" data-title="Beyond inequality: emerging logics of expulsion">Beyond inequality: emerging logics of expulsion</a></li>
 </ul>
+</p>
 
+<h3>Day two | 17 November 2011</h3>
+<p>
 <ul class="choosesession" data-title="Day two | 17 November 2011">
 <li><a data-session="1117001" data-title="Planning for city change">Planning for city change</a></li>
 <li><a data-session="1117002" data-title="Mobility and urban well-being">Mobility and urban well-being</a></li>
@@ -26,6 +30,7 @@
 <li>Evening keynote: <a data-session="1117006" data-title="Evening keynote: Governing the healthy city">Governing the healthy city
 </a></li>
 </ul>
+</p>
 
 <p><em>Webcast partner: <a href="http://smart-streaming.com/">Smart Streaming Limited</a></em></p>
 
