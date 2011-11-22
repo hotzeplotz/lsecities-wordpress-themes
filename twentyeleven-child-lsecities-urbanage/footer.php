@@ -23,11 +23,6 @@
     
     <?php wp_footer(); ?>
     
-    <script type="text/javascript" src="https://use.typekit.com/loj6mke.js"></script>
-    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-    <script src="<?php bloginfo( 'stylesheet_directory' ); ?>/javascripts/rails.js?1315255380" type="text/javascript"></script> 
-    <script src="<?php bloginfo( 'stylesheet_directory' ); ?>/javascripts/plugins.js?1315255380" type="text/javascript"></script> 
-    <script src="<?php bloginfo( 'stylesheet_directory' ); ?>/javascripts/application.js?1315255380" type="text/javascript"></script> 
     <script type="text/javascript" src="http://v0.urban-age.net/scripts/jquery/plugins/superfish/1.4.8/superfish.js"></script>
     <script src="<?php bloginfo( 'stylesheet_directory' ); ?>/javascripts/jquery/plugins/slimbox/2.04/js/slimbox2.js" type="text/javascript"></script>
 

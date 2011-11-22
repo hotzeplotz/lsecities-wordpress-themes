@@ -108,6 +108,8 @@ jQuery(document).ready(function(){
         conferencedate = "Day two | 17 November 2011";
         break;
     }
+    jQuery('#videotitle').text(videotitle);
+    jQuery('#conferencedate').text(conferencedate);
     jwplayer('videosession').setup({
       'flashplayer': 'http://demo.smart-streaming.com/fms/player.swf',
       'file': '/urbanage/' + videosession + '.mp4',
@@ -119,8 +121,6 @@ jQuery(document).ready(function(){
       'width': '480',
       'height': '390'
     });
-    jQuery('#videotitle').text(videotitle);
-    jQuery('#conferencedate').text(conferencedate);
   });
 });
 </script>
