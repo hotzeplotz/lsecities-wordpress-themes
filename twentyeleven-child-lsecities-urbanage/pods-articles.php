@@ -142,7 +142,7 @@ if(count($attachments)) {
         <?php
           if(count($attachments)) :
             foreach($attachments as $attachment) :?>
-            <!-- <dd><a href="<?php echo $attachment['guid']; ?>" /><?php echo $attachment['post_title']; ?></a></dd> -->
+            <dd><a href="<?php echo $attachment['guid']; ?>" /><?php echo $attachment['post_title']; ?></a></dd>
         <?php
             endforeach;
           endif; ?>
