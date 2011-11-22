@@ -50,9 +50,9 @@ jQuery(document).ready(function(){
   });
   jQuery(".choosesession > li > a").click(function() {
     var videosession;
-    var videotitle;
+    var videotitle = '';
     videosession = $(this).data('session');
-    videotitle = $(this).data('title');
+    // videotitle = $(this).data('title');
     conferencedate = $(this).parent().parent().data('title');
     // alert(session);
     jwplayer('videosession').setup({
