@@ -49,7 +49,8 @@ jQuery(document).ready(function(){
   });
   jQuery(".choosesession > li > a").click(function() {
     var videosession = jQuery(this).attr('id').substr(1);
-    var videotitle = '';
+    var videotitle;
+    var conferencedate;
     // videosession = jQuery(this).data('session');
     // videotitle = jQuery(this).data('title');
     //conferencedate = jQuery(this).parent().parent().data('title');
