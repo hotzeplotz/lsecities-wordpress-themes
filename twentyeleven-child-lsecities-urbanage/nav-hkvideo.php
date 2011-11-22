@@ -49,12 +49,11 @@ jQuery(document).ready(function(){
     'height': '390'
   });
   jQuery(".choosesession > li > a").click(function() {
-    var videosession;
+    var videosession = jQuery(this).attr('id').substr(1);
     var videotitle = '';
-    videosession = jQuery(this).data('session');
-    videotitle = jQuery(this).data('title');
+    // videosession = jQuery(this).data('session');
+    // videotitle = jQuery(this).data('title');
     conferencedate = jQuery(this).parent().parent().data('title');
-    // alert(session);
     jwplayer('videosession').setup({
       'flashplayer': 'http://demo.smart-streaming.com/fms/player.swf',
       'file': '/urbanage/' + videosession + '.mp4',
