@@ -129,6 +129,14 @@ $article_authors = $pod->get_field('authors');
         <dd>
           <a href="<?php echo $pdf_uri; ?>">Download this article as PDF</a>
         </dd>
+        <?php
+          $attachments = $pod->get_field('attachments');
+          if(count($attachments)) :
+            foreach($attachments as $attachment) :?>
+            <!-- <dd><a href="<?php echo $attachment['guid']; ?>" /><?php echo $attachment['post_title']; ?></a></dd> -->
+        <?php
+            endforeach;
+          endif; ?>
         <?php endif; ?>
       </dl>
     </div><!-- #author-info -->
