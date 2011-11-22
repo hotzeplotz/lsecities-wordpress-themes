@@ -74,7 +74,7 @@ $article_authors = $pod->get_field('authors');
 // fetch any attachments, replace hostname until we switch to WP+Pods for the whole website
 $attachments = $pod->get_field('attachments');
 if(count($attachments)) {
-  foreach($attachments as $attachment) {
+  foreach($attachments as &$attachment) {
     $attachment['guid'] = preg_replace('/^https?:\/\/v1\.lsecities\.net/i', 'http://urban-age.net', $attachment['guid']);
   }
 }
