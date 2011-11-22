@@ -55,55 +55,55 @@ jQuery(document).ready(function(){
     // videotitle = jQuery(this).data('title');
     //conferencedate = jQuery(this).parent().parent().data('title');
     switch(videosession) {
-      case 1116001:
+      case '1116001':
         videotitle = "Welcome";
         conferencedate = "Day one | 16 November 2011";
         break;
-      case 1116002:
+      case '1116002':
         videotitle = "The politics of urban health";
         conferencedate = "Day one | 16 November 2011";
         break;
-      case 1116003:
+      case '1116003':
         videotitle = "Understanding health in cities";
         conferencedate = "Day one | 16 November 2011";
         break;
-      case 1116004:
+      case '1116004':
         videotitle = "Measuring quality of life";
         conferencedate = "Day one | 16 November 2011";
         break;
-      case 1116005:
+      case '1116005':
         videotitle = "Space and design";
         conferencedate = "Day one | 16 November 2011";
         break;
-      case 1116006:
+      case '1116006':
         videotitle = "Designing for density";
         conferencedate = "Day one | 16 November 2011";
         break;
-      case 1116007:
+      case '1116007':
         videotitle = "Beyond inequality: emerging logics of expulsion";
         conferencedate = "Day one | 16 November 2011";
         break;
-      case 1117001:
+      case '1117001':
         videotitle = "Planning for city change";
         conferencedate = "Day two | 17 November 2011";
         break;
-      case 1117002:
+      case '1117002':
         videotitle = "Mobility and urban well-being";
         conferencedate = "Day two | 17 November 2011";
         break;
-      case 1117003:
+      case '1117003':
         videotitle = "Urban density and health";
         conferencedate = "Day two | 17 November 2011";
         break;
-      case 1117004:
+      case '1117004':
         videotitle = "Urban density and health (continued)";
         conferencedate = "Day two | 17 November 2011";
         break;
-      case 1117005:
+      case '1117005':
         videotitle = "Mapping inequalities";
         conferencedate = "Day two | 17 November 2011";
         break;
-      case 1117006:
+      case '1117006':
         videotitle = "Evening keynote: Governing the healthy city";
         conferencedate = "Day two | 17 November 2011";
         break;
