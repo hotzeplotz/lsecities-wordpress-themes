@@ -57,7 +57,7 @@ $PODS_BASEURI_ARTICLES = 'http://urban-age.net/media/objects/articles';
     <?php if(!empty($pod->data)) : ?>
       <div class="article row">
         <div class="ninecol">
-          <?php if(count($pod->get_field('articles'))) : ?>
+          <?php if($articles_pods->getTotalRows()) : ?>
           <h2>Read the articles</h2>
           <p>
     <ul class="publication-side-toc">
@@ -74,21 +74,9 @@ $PODS_BASEURI_ARTICLES = 'http://urban-age.net/media/objects/articles';
     }
     foreach($sections as $section) : ?>
       <?php if($section['title']) { ?><h4><?php echo $section['title']; ?></h4><?php }
-      //$publication_articles = $publication_pod->get_field('articles');
       
-      // sort articles by their 'sequence' field, then by id (this will be the default if no sequence is specified)
-      /*
-      foreach($publication_articles as $key => $row) {
-        $sequence[$key] = $row['sequence'];
-        $id[$key] = $row['id'];
-      }
-      array_multisort($sequence, SORT_ASC, $id, SORT_ASC, $publication_articles);
-      */
-      
-      //foreach($publication_articles as $article) :
       mysql_data_seek($articles_pods->result,0);
       while($articles_pods->fetchRecord()) :
-        //if(preg_match("/^" . $section['id'] . "/", $article['sequence'])) :
         if(preg_match("/^" . $section['id'] . "/", $articles_pods->get_field('sequence'))) :
           $article_authors = $articles_pods->get_field('authors');
           $author_names = '';
@@ -109,14 +97,13 @@ $PODS_BASEURI_ARTICLES = 'http://urban-age.net/media/objects/articles';
       <?php
         endif;
       endwhile;
-      //endforeach; 
     endforeach; ?>
     </ul>
           </p>
           <?php endif; ?>
           
           <?php if($pod_issuu) : ?>
-          <h3>Browse the publication</h3>
+          <h2>Browse the publication</h2>
           <?php echo $pod_issuu ; ?>
           <?php endif ; ?>
         </div>
