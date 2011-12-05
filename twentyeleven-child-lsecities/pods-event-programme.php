@@ -28,14 +28,29 @@ function process_session($session_slug) {
   $pod = new Pod('event_session', $session_slug);
   $session_title = $pod->get_field('name');
   $session_subtitle = $pod->get_field('session_subtitle');
+  $show_times = $pod->get_field('show_times');
+  $session_start = $pod->get_field('start');
+  $session_end = $pod->get_field('end');
   $hide_title = $pod->get_field('hide_title');
   $session_type = $pod->get_field('session_type.name');
+  $session_speakers = $pod->get_field('speakers_blurb');
+  $session_chairs = $pod->get_field('chairs_blurb');
+  $session_respondents = $pod->get_field('respondents_blurb');
   $subsessions = $pod->get_field('sessions.slug');
   // if(count($subsessions) == 1) { $subsessions = array(0 => $subsessions); }
   if($TRACE_PODS_EVENT_PROGRAMME) { error_log($TRACE_PREFIX . 'sessions: ' . var_export($subsessions, true)); }
   echo "<div class='$session_type'>";
+  if($show_times) {
+    echo "$session_start to $session_end";
+  }
   if($session_title and !$hide_title) { echo "<h1>$session_title</h1>"; }
   if($session_subtitle and !$hide_title) { echo "<h2>$session_subtitle</h2>"; }
+  if($session_chairs) {
+    echo "<p><strong>Chair:</strong> $session_chairs</p>";
+  }
+  if($session_speakers) {
+    echo "<p>$session_speakers</p>";
+  }
   foreach($subsessions as $session) {
     process_session($session);
   }
