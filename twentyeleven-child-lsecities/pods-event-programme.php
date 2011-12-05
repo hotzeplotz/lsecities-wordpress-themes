@@ -28,11 +28,12 @@ function process_session($session_slug) {
   $session_title = $pod->get_field('name');
   $session_subtitle = $pod->get_field('session_subtitle');
   $session_type = $pod->get_field('session_type.name');
+  $subsessions = $pod->get_field('sessions.slug');
   echo "<div class='$session_type'>";
   if($session_title) { echo "<h1>$session_title</h1>"; }
   if($session_subtitle) { echo "<h2>$session_subtitle</h2>"; }
-  foreach($subsections as $session) {
-    process_section($subsection['slug']);
+  foreach($subsessions as $session) {
+    process_session($session['slug']);
   }
   echo "</div>";
 }
@@ -57,8 +58,8 @@ function process_session($session_slug) {
       <div class="article row">
         <div class="ninecol">
           <?php
-          foreach($subsections as $subsection) {
-            process_section($section_slug);
+          foreach($subsessions as $subsession) {
+            process_session($session_slug);
           }
           ?>
         </div>
