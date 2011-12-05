@@ -28,14 +28,14 @@ function process_session($session_slug) {
   $pod = new Pod('event_session', $session_slug);
   $session_title = $pod->get_field('name');
   $session_subtitle = $pod->get_field('session_subtitle');
-  $display_title = $pod->get_field('hide_title');
+  $hide_title = $pod->get_field('hide_title');
   $session_type = $pod->get_field('session_type.name');
   $subsessions = $pod->get_field('sessions.slug');
   // if(count($subsessions) == 1) { $subsessions = array(0 => $subsessions); }
   if($TRACE_PODS_EVENT_PROGRAMME) { error_log($TRACE_PREFIX . 'sessions: ' . var_export($subsessions, true)); }
   echo "<div class='$session_type'>";
-  if($session_title and $display_title) { echo "<h1>$session_title</h1>"; }
-  if($session_subtitle and $display_title) { echo "<h2>$session_subtitle</h2>"; }
+  if($session_title and !$hide_title) { echo "<h1>$session_title</h1>"; }
+  if($session_subtitle and !$hide_title) { echo "<h2>$session_subtitle</h2>"; }
   foreach($subsessions as $session) {
     process_session($session);
   }
