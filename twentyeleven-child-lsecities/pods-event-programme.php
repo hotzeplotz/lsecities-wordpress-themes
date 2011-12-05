@@ -21,7 +21,7 @@
   $pod_subtitle = $pod->get_field('programme_subtitle');
   if($TRACE_PODS_EVENT_PROGRAMME) { error_log($TRACE_PREFIX . 'subtitle: ' . var_export($subtitle, true)); }
   $subsessions = $pod->get_field('sessions.slug');
-  if(count($subsessions) == 1) { $subsessions = array($subsessions); }
+  if(count($subsessions) == 1) { $subsessions = array(0 => $subsessions); }
   if($TRACE_PODS_EVENT_PROGRAMME) { error_log($TRACE_PREFIX . 'sessions: ' . var_export($subsessions, true)); }
   
 function process_session($session_slug) {
@@ -30,7 +30,7 @@ function process_session($session_slug) {
   $session_subtitle = $pod->get_field('session_subtitle');
   $session_type = $pod->get_field('session_type.name');
   $subsessions = $pod->get_field('sessions.slug');
-  if(count($subsessions) == 1) { $subsessions = array($subsessions); }
+  if(count($subsessions) == 1) { $subsessions = array(0 => $subsessions); }
   echo "<div class='$session_type'>";
   if($session_title) { echo "<h1>$session_title</h1>"; }
   if($session_subtitle) { echo "<h2>$session_subtitle</h2>"; }
