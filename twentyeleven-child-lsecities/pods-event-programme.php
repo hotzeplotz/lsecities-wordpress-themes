@@ -12,13 +12,15 @@
 <?php
   /* URI: TBD */
   $TRACE_PODS_EVENT_PROGRAMME = true;
+  $TRACE_PREFIX = 'pods-event-programme.php -- ';
   $publication_slug = get_post_meta($post->ID, 'pod_slug', true);
+  if($TRACE_PODS_EVENT_PROGRAMME) { error_log($TRACE_PREFIX . var_export($subsections, true)); }
   error_log('pod_slug: ' . $publication_slug);
   $pod = new Pod('event_programme', $programme_slug);
   $pod_title = $pod->get_field('name');
   $pod_subtitle = $pod->get_field('programme_subtitle');
   $subsections = $pod->get_field('sessions.name');
-  if($TRACE_PODS_EVENT_PROGRAMME) { error_log(var_export($subsections, true)); }
+  if($TRACE_PODS_EVENT_PROGRAMME) { error_log($TRACE_PREFIX . var_export($subsections, true)); }
   
 function process_section($section_slug) {
   $pod = new Pod('event_section', $section_slug);
