@@ -19,18 +19,18 @@
   $pod = new Pod('event_programme', $programme_slug);
   $pod_title = $pod->get_field('name');
   $pod_subtitle = $pod->get_field('programme_subtitle');
-  $subsections = $pod->get_field('sessions');
-  if($TRACE_PODS_EVENT_PROGRAMME) { error_log($TRACE_PREFIX . 'sections: ' . var_export($subsections, true)); }
+  $subsessions = $pod->get_field('sessions');
+  if($TRACE_PODS_EVENT_PROGRAMME) { error_log($TRACE_PREFIX . 'sessions: ' . var_export($subsessions, true)); }
   
-function process_section($section_slug) {
-  $pod = new Pod('event_section', $section_slug);
-  $section_title = $pod->get_field('name');
-  $section_subtitle = $pod->get_field('section_subtitle');
-  $section_type = $pod->get_field('section_type.name');
-  echo "<div class='$section_type'>";
-  if($section_title) { echo "<h1>$section_title</h1>"; }
-  if($section_subtitle) { echo "<h2>$section_subtitle</h2>"; }
-  foreach($section_subsections as $subsection) {
+function process_session($session_slug) {
+  $pod = new Pod('event_session', $session_slug);
+  $session_title = $pod->get_field('name');
+  $session_subtitle = $pod->get_field('session_subtitle');
+  $session_type = $pod->get_field('session_type.name');
+  echo "<div class='$session_type'>";
+  if($session_title) { echo "<h1>$session_title</h1>"; }
+  if($session_subtitle) { echo "<h2>$session_subtitle</h2>"; }
+  foreach($subsections as $session) {
     process_section($subsection['slug']);
   }
   echo "</div>";
