@@ -33,7 +33,7 @@ function process_session($session_slug) {
   if($session_title) { echo "<h1>$session_title</h1>"; }
   if($session_subtitle) { echo "<h2>$session_subtitle</h2>"; }
   foreach($subsessions as $session) {
-    process_session($session['slug']);
+    process_session($session);
   }
   echo "</div>";
 }
@@ -58,8 +58,8 @@ function process_session($session_slug) {
       <div class="article row">
         <div class="ninecol">
           <?php
-          foreach($subsessions as $subsession) {
-            process_session($session_slug);
+          foreach($subsessions as $session) {
+            process_session($session);
           }
           ?>
         </div>
