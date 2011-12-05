@@ -13,9 +13,9 @@
   /* URI: TBD */
   $TRACE_PODS_EVENT_PROGRAMME = true;
   $TRACE_PREFIX = 'pods-event-programme.php -- ';
-  $publication_slug = get_post_meta($post->ID, 'pod_slug', true);
-  if($TRACE_PODS_EVENT_PROGRAMME) { error_log($TRACE_PREFIX . 'publication_slug: ' . var_export($publication_slug, true)); }
-  $pod = new Pod('event_programme', $programme_slug);
+  $pod_slug = get_post_meta($post->ID, 'pod_slug', true);
+  if($TRACE_PODS_EVENT_PROGRAMME) { error_log($TRACE_PREFIX . 'pod_slug: ' . var_export($publication_slug, true)); }
+  $pod = new Pod('event_programme', $pod_slug);
   $pod_title = $pod->get_field('name');
   if($TRACE_PODS_EVENT_PROGRAMME) { error_log($TRACE_PREFIX . 'title: ' . var_export($pod_title, true)); }
   $pod_subtitle = $pod->get_field('programme_subtitle');
