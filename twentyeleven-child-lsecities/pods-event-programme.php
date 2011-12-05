@@ -29,8 +29,10 @@ function process_session($session_slug) {
   $session_title = $pod->get_field('name');
   $session_subtitle = $pod->get_field('session_subtitle');
   $show_times = $pod->get_field('show_times');
-  $session_start = $pod->get_field('start');
-  $session_end = $pod->get_field('end');
+  $session_start = new DateTime($pod->get_field('start'));
+  $session_start = $session_start->format('H:i');
+  $session_end = new DateTime($pod->get_field('end'));
+  $session_end = $session_end->format('H:i');
   $hide_title = $pod->get_field('hide_title');
   $session_type = $pod->get_field('session_type.name');
   $session_speakers = $pod->get_field('speakers_blurb');
