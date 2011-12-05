@@ -15,10 +15,11 @@
   $TRACE_PREFIX = 'pods-event-programme.php -- ';
   $publication_slug = get_post_meta($post->ID, 'pod_slug', true);
   if($TRACE_PODS_EVENT_PROGRAMME) { error_log($TRACE_PREFIX . 'publication_slug: ' . var_export($publication_slug, true)); }
-  error_log('pod_slug: ' . $publication_slug);
   $pod = new Pod('event_programme', $programme_slug);
   $pod_title = $pod->get_field('name');
+  if($TRACE_PODS_EVENT_PROGRAMME) { error_log($TRACE_PREFIX . 'title: ' . var_export($pod_title, true)); }
   $pod_subtitle = $pod->get_field('programme_subtitle');
+  if($TRACE_PODS_EVENT_PROGRAMME) { error_log($TRACE_PREFIX . 'subtitle: ' . var_export($subtitle, true)); }
   $subsessions = $pod->get_field('sessions');
   if($TRACE_PODS_EVENT_PROGRAMME) { error_log($TRACE_PREFIX . 'sessions: ' . var_export($subsessions, true)); }
   
