@@ -20,7 +20,7 @@
   if($TRACE_PODS_EVENT_PROGRAMME) { error_log($TRACE_PREFIX . 'title: ' . var_export($pod_title, true)); }
   $pod_subtitle = $pod->get_field('programme_subtitle');
   if($TRACE_PODS_EVENT_PROGRAMME) { error_log($TRACE_PREFIX . 'subtitle: ' . var_export($subtitle, true)); }
-  $subsessions = $pod->get_field('sessions');
+  $subsessions = $pod->get_field('sessions.name');
   if($TRACE_PODS_EVENT_PROGRAMME) { error_log($TRACE_PREFIX . 'sessions: ' . var_export($subsessions, true)); }
   
 function process_session($session_slug) {
