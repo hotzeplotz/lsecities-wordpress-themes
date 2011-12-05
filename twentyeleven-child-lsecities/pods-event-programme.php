@@ -11,11 +11,14 @@
 
 <?php
   /* URI: TBD */
+  $TRACE_PODS_EVENT_PROGRAMME = true;
   $publication_slug = get_post_meta($post->ID, 'pod_slug', true);
   error_log('pod_slug: ' . $publication_slug);
   $pod = new Pod('event_programme', $programme_slug);
   $pod_title = $pod->get_field('name');
   $pod_subtitle = $pod->get_field('programme_subtitle');
+  $subsections = $pod->get_field('sessions.name');
+  if($TRACE_PODS_EVENT_PROGRAMME) { error_log(var_export($subsections, true)); }
   
 function process_section($section_slug) {
   $pod = new Pod('event_section', $section_slug);
@@ -51,7 +54,7 @@ function process_section($section_slug) {
       <div class="article row">
         <div class="ninecol">
           <?php
-          foreach($pod->get_field('sessions.name') as $subsection) {
+          foreach($subsections as $subsection) {
             process_section($section_slug);
           }
           ?>
