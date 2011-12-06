@@ -56,7 +56,7 @@ function process_session($session_slug) {
   if($show_times) {
     echo "$session_start to $session_end";
   }
-  if($session_title and !$hide_title) { echo '<h1>' . $session_times . $session_title '</h1>'; }
+  if($session_title and !$hide_title) { echo '<h1>' . $session_times . $session_title . '</h1>'; }
   if($session_subtitle and !$hide_title) { echo "<h2>$session_subtitle</h2>"; }
   if($session_chairs) {
     $caption = count($session_chairs) > 1 ? "Chairs" : "Chair";
