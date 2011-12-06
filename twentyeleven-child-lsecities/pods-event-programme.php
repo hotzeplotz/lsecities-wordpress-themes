@@ -31,6 +31,7 @@
   if($TRACE_PODS_EVENT_PROGRAMME) { error_log($TRACE_PREFIX . 'sessions: ' . var_export($subsessions, true)); }
   
 function process_session($session_slug) {
+  global $TRACE_PODS_EVENT_PROGRAMME;
   $ALLOWED_TAGS_IN_BLURBS = '<strong><em>';
   
   $pod = new Pod('event_session', $session_slug);
