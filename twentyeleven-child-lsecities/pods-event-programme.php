@@ -62,7 +62,7 @@ function process_session($session_slug) {
   if($session_subtitle and !$hide_title) { echo "<h2>$session_subtitle</h2>"; }
   if($session_chairs) {
     $caption = count($session_chairs) > 1 ? "Chairs" : "Chair";
-    echo "<dl><dt>$caption:</dt><dd>$session_chairs_blurb</dd>";
+    echo "<dl class='session-chairs'><dt>$caption:</dt><dd>$session_chairs_blurb</dd>";
   }
   if($session_speakers) {
     echo "<div>$session_speakers_blurb</div>";
