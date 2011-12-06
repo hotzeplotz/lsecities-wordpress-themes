@@ -31,7 +31,10 @@
   if($TRACE_PODS_EVENT_PROGRAMME) { error_log($TRACE_PREFIX . 'sessions: ' . var_export($subsessions, true)); }
   
 function process_session($session_slug) {
+  $ALLOWED_TAGS_IN_BLURBS = '<strong><em>';
+  
   $pod = new Pod('event_session', $session_slug);
+  
   $session_title = $pod->get_field('name');
   $session_subtitle = $pod->get_field('session_subtitle');
   $show_times = $pod->get_field('show_times');
@@ -46,11 +49,11 @@ function process_session($session_slug) {
   $session_type = $pod->get_field('session_type.slug');
   if($session_type != 'session') { $session_type = "session $session_type"; }
   $session_speakers = $pod->get_field('speakers');
-  $session_speakers_blurb = $pod->get_field('speakers_blurb');
+  $session_speakers_blurb = strip_tags($pod->get_field('speakers_blurb'), $ALLOWED_TAGS_IN_BLURBS);
   $session_chairs = $pod->get_field('chairs');
-  $session_chairs_blurb = $pod->get_field('chairs_blurb');
+  $session_chairs_blurb = strip_tags($pod->get_field('chairs_blurb'), $ALLOWED_TAGS_IN_BLURBS)
   $session_respondents = $pod->get_field('respondents');
-  $session_respondents_blurb = $pod->get_field('respondents_blurb');
+  $session_respondents_blurb = strip_tags($pod->get_field('respondents_blurb'), $ALLOWED_TAGS_IN_BLURBS);
   $session_youtube_video = $pod->get_field('media_items.youtube_uri');
   $subsessions = $pod->get_field('sessions.slug');
   // if(count($subsessions) == 1) { $subsessions = array(0 => $subsessions); }
