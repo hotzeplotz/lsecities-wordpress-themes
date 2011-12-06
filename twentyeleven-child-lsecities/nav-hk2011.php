@@ -1,5 +1,6 @@
 <?php
 // ad-hoc template for the Hong Kong conference section
+$IMG_PREFIX = 'http://urban-age.net/conferences/hongkong/';
 ?>
 
 
@@ -12,7 +13,7 @@
   <div class="defaultBox">
    <h1>Conference videos</h1>
    <ul>
-    <li><a href="/ua/conferences/2011-hongkong/audio-and-video/"><img class="fullwidth" alt="conference videos" src="media/hkvideothumbnail.jpg"></a></li>
+    <li><a href="/ua/conferences/2011-hongkong/audio-and-video/"><img class="fullwidth" alt="conference videos" src="<?php echo $IMG_PREFIX; ?>media/hkvideothumbnail.jpg"></a></li>
     <li><a href="/ua/conferences/2011-hongkong/audio-and-video/">Watch online</a></li>
    </ul>
   </div>
@@ -41,13 +42,13 @@
   <div class="defaultBox">
    <h1>Image galleries</h1>
    <div class="center">
-    <a target="_blank" href="https://picasaweb.google.com/lse.urban.age/UrbanAgeHongKongDay1#slideshow/"><img class="fullwidth" alt="Urban Age Hong Kong - conference photo galleries" src="media/2011_11_hong-kong-conference-gallery-teaser_small.jpg"></a>
+    <a target="_blank" href="https://picasaweb.google.com/lse.urban.age/UrbanAgeHongKongDay1#slideshow/"><img class="fullwidth" alt="Urban Age Hong Kong - conference photo galleries" src="<?php echo $IMG_PREFIX; ?>media/2011_11_hong-kong-conference-gallery-teaser_small.jpg"></a>
    </div>
    <p>
     Urban Age Hong Kong photo galleries: <a target="_blank" href="https://picasaweb.google.com/lse.urban.age/UrbanAgeHongKongDay1#slideshow/">Day one</a> | <a target="_blank" href="https://picasaweb.google.com/lse.urban.age/UrbanAgeHongKongDay2#slideshow/">Day two</a>.
    </p>
    <div class="center">
-    <a target="_blank" href="https://picasaweb.google.com/lse.urban.age/HongKongPhotoGallery#slideshow/"><img class="fullwidth" alt="Views of Hong Kong" title="Photo credits: Wei Leng Tay and Nic Tinworth" src="media/2011-11_hong-kong-gallery-teaser_small.jpg"></a>
+    <a target="_blank" href="https://picasaweb.google.com/lse.urban.age/HongKongPhotoGallery#slideshow/"><img class="fullwidth" alt="Views of Hong Kong" title="Photo credits: Wei Leng Tay and Nic Tinworth" src="<?php echo $IMG_PREFIX; ?>media/2011-11_hong-kong-gallery-teaser_small.jpg"></a>
    </div>
    <p>
     Click <a target="_blank" href="https://picasaweb.google.com/lse.urban.age/HongKongPhotoGallery#slideshow/">here</a> for a photographic portrait of urban life in Hong Kong.
