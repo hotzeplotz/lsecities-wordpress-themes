@@ -160,8 +160,8 @@ footer ul { list-style-type: none; }
 #main .event-programme dl .session-chairs { padding-left: 1em; }
 #main .event-programme .session .session { padding-left: 1em; }
 #main .event-programme .session h1 { padding-left: -1em; }
-#main .event-programme > div > .session > h1 { font-size: 1.3333333333em; background-color: #333; color: #fff; padding: 0.1875em; }
-#main .event-programme > div > .session > .session > h1 { text-transform: none; }
+#main .event-programme > div > h1 { font-size: 1.3333333333em; background-color: #333; color: #fff; padding: 0.1875em; }
+#main .event-programme > div > h1 { text-transform: none; }
 
 .row { max-width: 960px; }
 
