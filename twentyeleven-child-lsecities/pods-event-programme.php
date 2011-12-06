@@ -57,7 +57,7 @@ function process_session($session_slug) {
   $session_respondents_blurb = strip_tags($pod->get_field('respondents_blurb'), $ALLOWED_TAGS_IN_BLURBS);
   $session_youtube_video = $pod->get_field('media_items.youtube_uri');
   $subsessions = $pod->get_field('sessions.slug');
-  // if(count($subsessions) == 1) { $subsessions = array(0 => $subsessions); }
+  if($subsessions and count($subsessions) == 1) { $subsessions = array(0 => $subsessions); }
   if($TRACE_PODS_EVENT_PROGRAMME) { error_log($TRACE_PREFIX . 'session count: ' . count($subsessions)); }
   if($TRACE_PODS_EVENT_PROGRAMME) { error_log($TRACE_PREFIX . 'sessions: ' . var_export($subsessions, true)); }
   if($session_title and !$hide_title) { echo '<h1>' . $session_times . $session_title . '</h1>'; }
@@ -73,8 +73,10 @@ function process_session($session_slug) {
   if($session_youtube_video) {
     echo "<div class='link video'><a href='http://youtube.com/watch?v=$session_youtube_video'>Watch video</a></div>";
   }
-  foreach($subsessions as $session) {
-    process_session($session);
+  if($subsessions) {
+    foreach($subsessions as $session) {
+      process_session($session);
+    }
   }
   echo "</div>";
 }
