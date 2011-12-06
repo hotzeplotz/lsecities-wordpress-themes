@@ -32,8 +32,8 @@
    <ul>
     <li><a href="/media/objects/articles/measuring-the-human-urban-footprint">Measuring the human urban footprint</a></li>
     <li><a href="/media/objects/articles/measuring-metropolitan-well-being">Hong Kong tops global health index</a></li>
-    <li><a href="/media/objects/articles/hong-kongs-spatial-dna">Hong Kong’s Spatial DNA</a></li>
-    <li><a href="/media/objects/articles/mapping-social-determinants">Mapping Hong Kong’s Social and Health Indicators</a></li>
+    <li><a href="/media/objects/articles/hong-kongs-spatial-dna">Hong Kongâ€™s Spatial DNA</a></li>
+    <li><a href="/media/objects/articles/mapping-social-determinants">Mapping Hong Kongâ€™s Social and Health Indicators</a></li>
     <li><a href="/media/objects/articles/living-at-density">Living at density: Hong Kong focus groups</a></li>
    </ul>
    <p>Read more in the <a href="/publications/conference-newspapers/hong-kong/">conference newspaper</a></p>
@@ -69,7 +69,7 @@
   <div class="defaultBox">
    <h1>Newsletter subscription</h1>
    <p>
-    If you would like to receive updates on LSE Cities and Urban Age activities and research – including notices related to the <em>Cities, Health and Well-being conference</em> – please <a href="publications/ebulletins/subscription/">click here</a>.
+    If you would like to receive updates on LSE Cities and Urban Age activities and research â€“ including notices related to the <em>Cities, Health and Well-being conference</em> â€“ please <a href="publications/ebulletins/subscription/">click here</a>.
    </p>
   </div>
  
