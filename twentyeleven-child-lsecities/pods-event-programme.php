@@ -39,7 +39,7 @@ function process_session($session_slug) {
   $session_start = $session_start->format('H:i');
   $session_end = new DateTime($pod->get_field('end'));
   $session_end = $pod->get_field('end') == '0000-00-00 00:00:00' ? null : $session_end->format('H:i');
-  $session_times = is_null($session_end) ? $session_start . ' ' : $session_start . ' to ' $session_end . ' ';
+  $session_times = is_null($session_end) ? $session_start . ' ' : $session_start . ' to ' . $session_end . ' ';
   $hide_title = $pod->get_field('hide_title');
   $session_type = $pod->get_field('session_type.slug');
   unless($session_type == 'session') { $session_type = "session $session_type"; }
