@@ -114,7 +114,7 @@ body, input, textarea { background-color: #ffffff; }
 
 #main { margin-top: 1em; margin-bottom: 2em; padding: 0; }
 #main a { text-decoration: none; }
-#main h1, #main h2, #main h3, #main h4, #main h5, #main h6 { text-transform: uppercase; }
+#main h1, #main h2, #main h3, #main h4, #main h5, #main h6 { text-transform: uppercase; margin-bottom: 1em; }
 #main h1 { font-size: 1.5em; margin-bottom: 0.333333em; }
 #main ul > li { list-style: none; }
 #main p { line-height: 1.25em; margin-bottom: 1.25em; }
@@ -153,6 +153,15 @@ footer ul { list-style-type: none; }
 #mainMenu a:hover, #mainMenu span:hover { background-color: #cccccc; color: #b4001d; text-decoration: none; }
 #mainMenu a.active, #mainMenu span.active { background-color: #b4001d; color: #FFFFFF; text-decoration: none; }
 #mainMenu > ul > li > span > a { padding-left: 0; padding-right: 0; }
+
+#main .event-programme dl { line-height: 1.2em; }
+#main .event-programme dl dt { font-weight: bold; }
+#main .event-programme dl dd { margin-left: 1em; }
+#main .event-programme .session dl.session-chairs { padding-left: 1em; }
+#main .event-programme .session .session { padding-left: 1em; }
+#main .event-programme .session h1 { padding-left: -1em; }
+#main .event-programme > div > .session > h1 { font-size: 1.3333333333em; background-color: #333; color: #fff; padding: 0.1875em; }
+#main .event-programme > div > .session > .session > h1 { text-transform: none; }
 
 .row { max-width: 960px; }
 
