@@ -31,6 +31,8 @@ elseif($current_post_id == 309 or in_array(309, get_post_ancestors($current_post
   get_template_part('nav-publications');
 elseif($current_post_id == 595) : // /ua/conferences/2011-hongkong/audio-and-video/
   get_template_part('nav-hkvideo');
+elseif($current_post_id == 577 or in_array(577, get_post_ancestors($current_post_id)) : // /ua/conferences/2011-hongkong
+  get_template_part('nav-hk2011');
 else :
   if($current_post_id) {
     $children = wp_list_pages('title_li=&depth=1&child_of='.$parent_post_id.'&echo=0');
