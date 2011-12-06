@@ -22,6 +22,12 @@
   if($TRACE_PODS_EVENT_PROGRAMME) { error_log($TRACE_PREFIX . 'subtitle: ' . var_export($subtitle, true)); }
   $subsessions = $pod->get_field('sessions.slug');
   if(count($subsessions) == 1) { $subsessions = array(0 => $subsessions); }
+  
+  $for_conference = $pod->get_field('for_conference.slug');
+  $for_event = $pod->get_field('for_event.slug');
+  
+  $page_title = !empty($for_conference) ? "Conference programme" : "Event programme";
+  
   if($TRACE_PODS_EVENT_PROGRAMME) { error_log($TRACE_PREFIX . 'sessions: ' . var_export($subsessions, true)); }
   
 function process_session($session_slug) {
@@ -73,6 +79,8 @@ function process_session($session_slug) {
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('ninecol'); ?>>
 	<div class="entry-content">
+    <h1><?php echo $page_title; ?></h1>
+    
 		<?php the_content(); ?>
 
     <?php if(!empty($pod->data)) : ?>
