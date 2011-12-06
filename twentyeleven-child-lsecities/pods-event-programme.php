@@ -51,7 +51,7 @@ function process_session($session_slug) {
   $session_speakers = $pod->get_field('speakers');
   $session_speakers_blurb = strip_tags($pod->get_field('speakers_blurb'), $ALLOWED_TAGS_IN_BLURBS);
   $session_chairs = $pod->get_field('chairs');
-  $session_chairs_blurb = strip_tags($pod->get_field('chairs_blurb'), $ALLOWED_TAGS_IN_BLURBS)
+  $session_chairs_blurb = strip_tags($pod->get_field('chairs_blurb'), $ALLOWED_TAGS_IN_BLURBS);
   $session_respondents = $pod->get_field('respondents');
   $session_respondents_blurb = strip_tags($pod->get_field('respondents_blurb'), $ALLOWED_TAGS_IN_BLURBS);
   $session_youtube_video = $pod->get_field('media_items.youtube_uri');
