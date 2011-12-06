@@ -51,6 +51,7 @@ function process_session($session_slug) {
   $session_chairs_blurb = $pod->get_field('chairs_blurb');
   $session_respondents = $pod->get_field('respondents');
   $session_respondents_blurb = $pod->get_field('respondents_blurb');
+  $session_youtube_video = $pod->get_field('media_items.youtube_uri');
   $subsessions = $pod->get_field('sessions.slug');
   // if(count($subsessions) == 1) { $subsessions = array(0 => $subsessions); }
   if($TRACE_PODS_EVENT_PROGRAMME) { error_log($TRACE_PREFIX . 'sessions: ' . var_export($subsessions, true)); }
@@ -63,6 +64,9 @@ function process_session($session_slug) {
   }
   if($session_speakers) {
     echo "<div>$session_speakers_blurb</div>";
+  }
+  if($session_youtube_video) {
+    echo "<div class='link video'><a href='http://youtube.com/watch?v=$session_youtube_video'>Watch video</a></div>";
   }
   foreach($subsessions as $session) {
     process_session($session);
