@@ -38,12 +38,17 @@ function process_session($session_slug) {
   $session_start = new DateTime($pod->get_field('start'));
   $session_start = $session_start->format('H:i');
   $session_end = new DateTime($pod->get_field('end'));
-  $session_end = $session_end->format('H:i');
+  $session_end = $pod->get_field('end') == '0000-00-00 00:00:00' ? null : $session_end->format('H:i');
+  $session_times = is_null($session_end) ? $session_start . ' ' : $session_start . ' to ' $session_end . ' ';
   $hide_title = $pod->get_field('hide_title');
   $session_type = $pod->get_field('session_type.slug');
-  $session_speakers = $pod->get_field('speakers_blurb');
-  $session_chairs = $pod->get_field('chairs_blurb');
-  $session_respondents = $pod->get_field('respondents_blurb');
+  unless($session_type == 'session') { $session_type = "session $session_type"; }
+  $session_speakers = $pod->get_field('speakers');
+  $session_speakers_blurb = $pod->get_field('speakers_blurb');
+  $session_chairs = $pod->get_field('chairs');
+  $session_chairs_blurb = $pod->get_field('chairs_blurb');
+  $session_respondents = $pod->get_field('respondents');
+  $session_respondents_blurb = $pod->get_field('respondents_blurb');
   $subsessions = $pod->get_field('sessions.slug');
   // if(count($subsessions) == 1) { $subsessions = array(0 => $subsessions); }
   if($TRACE_PODS_EVENT_PROGRAMME) { error_log($TRACE_PREFIX . 'sessions: ' . var_export($subsessions, true)); }
@@ -51,13 +56,14 @@ function process_session($session_slug) {
   if($show_times) {
     echo "$session_start to $session_end";
   }
-  if($session_title and !$hide_title) { echo "<h1>$session_title</h1>"; }
+  if($session_title and !$hide_title) { echo '<h1>' . $session_times . $session_title '</h1>'; }
   if($session_subtitle and !$hide_title) { echo "<h2>$session_subtitle</h2>"; }
   if($session_chairs) {
-    echo "<p><strong>Chair:</strong> $session_chairs</p>";
+    $caption = count($session_chairs) > 1 ? "Chairs" : "Chair";
+    echo "<dl><dt>$caption:</dt><dd>$session_chairs_blurb</dd>";
   }
   if($session_speakers) {
-    echo "<p>$session_speakers</p>";
+    echo "<div>$session_speakers_blurb</div>";
   }
   foreach($subsessions as $session) {
     process_session($session);
@@ -85,7 +91,7 @@ function process_session($session_slug) {
 
     <?php if(!empty($pod->data)) : ?>
       <div class="article row">
-        <div class="ninecol">
+        <div class="ninecol event-programme">
           <?php
           foreach($subsessions as $session) {
             process_session($session);
