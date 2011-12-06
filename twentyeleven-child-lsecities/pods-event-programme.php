@@ -54,12 +54,9 @@ function process_session($session_slug) {
   $subsessions = $pod->get_field('sessions.slug');
   // if(count($subsessions) == 1) { $subsessions = array(0 => $subsessions); }
   if($TRACE_PODS_EVENT_PROGRAMME) { error_log($TRACE_PREFIX . 'sessions: ' . var_export($subsessions, true)); }
-  echo "<div class='$session_type'>";
-  if($show_times) {
-    echo "$session_start to $session_end";
-  }
   if($session_title and !$hide_title) { echo '<h1>' . $session_times . $session_title . '</h1>'; }
   if($session_subtitle and !$hide_title) { echo "<h2>$session_subtitle</h2>"; }
+  echo "<div class='$session_type'>";
   if($session_chairs) {
     $caption = count($session_chairs) > 1 ? "Chairs" : "Chair";
     echo "<dl class='session-chairs'><dt>$caption:</dt><dd>$session_chairs_blurb</dd>";
