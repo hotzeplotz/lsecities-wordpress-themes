@@ -34,7 +34,7 @@ function process_session($session_slug) {
   $session_end = new DateTime($pod->get_field('end'));
   $session_end = $session_end->format('H:i');
   $hide_title = $pod->get_field('hide_title');
-  $session_type = $pod->get_field('session_type.name');
+  $session_type = $pod->get_field('session_type.slug');
   $session_speakers = $pod->get_field('speakers_blurb');
   $session_chairs = $pod->get_field('chairs_blurb');
   $session_respondents = $pod->get_field('respondents_blurb');
