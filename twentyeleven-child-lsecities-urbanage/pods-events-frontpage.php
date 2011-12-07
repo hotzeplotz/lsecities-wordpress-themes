@@ -97,7 +97,7 @@ if(!$slider) {
   <?php get_template_part( 'nav', 'conferences' ); ?>
 </aside>
 
-<?php // endwhile; else: ?>
+<?php endwhile; else: ?>
 <!-- <p><?php //_e('Sorry, no posts matched your criteria.'); ?></p> -->
 <?php endif; ?>
 
