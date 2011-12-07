@@ -110,6 +110,8 @@ nav#conferencesmenu ul li:first-child { margin-top: 0; }
 
 .singular article.hentry, .singular.page article.hentry { padding-top: 0; margin-right: 3.8%; }
 
+.one-column #content, .singular #content, .left-sidebar.singular #content { margin: auto; }
+
 body, input, textarea { background-color: #ffffff; }
 
 #main { margin-top: 1em; margin-bottom: 2em; padding: 0; }
