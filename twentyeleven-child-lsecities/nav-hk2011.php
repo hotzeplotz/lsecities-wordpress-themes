@@ -1,6 +1,7 @@
 <?php
 // ad-hoc template for the Hong Kong conference section
-$IMG_PREFIX = 'http://urban-age.net/conferences/hongkong/';
+$BASE_URI = 'http://urban-age.net';
+$IMG_PREFIX = $BASE_URI . '/conferences/hongkong/';
 ?>
 
 
