@@ -43,10 +43,12 @@ if(!$slider) {
 <?php // if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('ninecol'); ?>>
+	<?php if(false) : ?>
 	<header class="entry-header">
 		<h1 class="entry-title"><?php echo $pod->get_field('name'); ?></h1>
 	</header><!-- .entry-header -->
-
+	<?php endif; ?>
+	
 	<div class="entry-content">
     <div id='core'>
       <article>
