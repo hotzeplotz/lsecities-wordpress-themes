@@ -57,7 +57,7 @@ if(!$slider) {
         <?php
           $tagline = $pod->get_field('tagline');
           if($tagline) : ?>
-            <h2><?php echo $tagline; ?></h2>
+            <h1><?php echo $tagline; ?></h1>
         <?php endif; ?>
           <?php echo do_shortcode($pod->get_field('abstract')); ?>
         </div>
