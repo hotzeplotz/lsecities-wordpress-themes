@@ -1,3 +1,9 @@
+<?php
+$current_post_id = $post->ID;
+if($current_post_id == 577 or in_array(577, get_post_ancestors($current_post_id))) : // /ua/conferences/2011-hongkong
+  get_template_part('nav', 'hk2011');
+else :
+?>
             <nav id='conferencesmenu'>
 <?php if($post->ID == 94) : // /ua/ ?>
   <div>
@@ -59,3 +65,4 @@
               </ul>
 -->
             </nav>
+<?php endif; ?>
