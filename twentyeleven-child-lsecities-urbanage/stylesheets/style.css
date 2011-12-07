@@ -108,7 +108,7 @@ nav#conferencesmenu ul li:first-child { margin-top: 0; }
 
 .entry-content { margin-bottom: 4em; }
 
-.singular article.hentry, .singular.page article.hentry { padding-top: 0; }
+.singular article.hentry, .singular.page article.hentry { padding-top: 0; margin-right: 3.8%; }
 
 body, input, textarea { background-color: #ffffff; }
 
@@ -132,6 +132,7 @@ body, input, textarea { background-color: #ffffff; }
 #main .article .entry-content.article-text.sidebyside > div { -moz-column-count: 2; -webkit-column-count: 2; -o-column-count: 2; column-count: 2; }
 
 #level3nav h1 { font-size: 1em; }
+#level3nav ul > li { line-height: 1.2em; }
 
 #extras h1 { font-size: 1em; }
 
