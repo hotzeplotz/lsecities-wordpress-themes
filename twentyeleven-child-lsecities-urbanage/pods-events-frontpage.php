@@ -58,8 +58,12 @@ if(!$slider) {
         <div class='introblurb'>
         <?php
           $tagline = $pod->get_field('tagline');
+          $conference_title = $pod->get_field('conference_title');
           if($tagline) : ?>
             <h1><?php echo $tagline; ?></h1>
+        <?php endif;
+		  if($conference_title): ?>
+		    <h2><?php echo $conference_title; ?></h2>
         <?php endif; ?>
           <?php echo do_shortcode($pod->get_field('abstract')); ?>
         </div>
