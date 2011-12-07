@@ -87,7 +87,7 @@ if(!$slider) {
 		<?php edit_post_link( __( 'Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
 	</div><!-- .entry-meta -->
 </article><!-- #post-<?php the_ID(); ?> -->
-<aside class='threecol last'>
+<aside id="level3nav" class='threecol last'>
   <?php get_template_part( 'nav', 'conferences' ); ?>
 </aside>
 
