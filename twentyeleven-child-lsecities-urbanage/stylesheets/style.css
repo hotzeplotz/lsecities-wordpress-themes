@@ -108,7 +108,7 @@ nav#conferencesmenu ul li:first-child { margin-top: 0; }
 
 .entry-content { margin-bottom: 4em; }
 
-.singular article.hentry, .singular.page article.hentry { padding-top: 1em; }
+.singular article.hentry, .singular.page article.hentry { padding-top: 0; }
 
 body, input, textarea { background-color: #ffffff; }
 
