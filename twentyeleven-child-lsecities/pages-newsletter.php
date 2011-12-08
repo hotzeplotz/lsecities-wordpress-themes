@@ -217,7 +217,7 @@ $PODS_BASEURI_ARTICLES = '/media/objects/articles/';
 				max-width:600px !important;
 			}
 
-   #headerTitle h1{
+   h1#headerTitle {
     background-color: #de1f00;
     color: #fff;
     font-size: 1.5em;
@@ -400,8 +400,8 @@ $PODS_BASEURI_ARTICLES = '/media/objects/articles/';
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="headerTitle">
-                                              <h1><?php the_title(); ?></h1>
+                                            <td>
+                                              <h1 id="headerTitle"><?php the_title(); ?></h1>
                                             </td>
                                         </tr>
                                     </table>
