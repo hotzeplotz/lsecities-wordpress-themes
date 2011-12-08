@@ -10,6 +10,8 @@
 $TRACE_PODS_ARTICLES = false;
 $PODS_BASEURI_ARTICLES = '/media/objects/articles/';
 ?>
+<?php define('WP_USE_THEMES', false); get_header(); ?>
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
     <head>
@@ -386,7 +388,7 @@ $PODS_BASEURI_ARTICLES = '/media/objects/articles/';
                                             <td class="headerContent">
                                             
                                             	<!-- // Begin Module: Standard Header Image \\ -->
-                                            	<img src="http://gallery.mailchimp.com/653153ae841fd11de66ad181a/images/placeholder_320.gif" style="max-width:320px;" id="headerImage campaign-icon" mc:label="header_image" mc:edit="header_image" mc:allowdesigner mc:allowtext />
+                                            	<?php echo get_the_post_thumbnail(); ?>
                                             	<!-- // End Module: Standard Header Image \\ -->
                                             
                                             </td>
@@ -491,3 +493,6 @@ $PODS_BASEURI_ARTICLES = '/media/objects/articles/';
         </center>
     </body>
 </html>
+<?php endwhile; else: ?>
+<p><?php // _e('Sorry, no posts matched your criteria.'); ?></p>
+<?php endif; ?>
