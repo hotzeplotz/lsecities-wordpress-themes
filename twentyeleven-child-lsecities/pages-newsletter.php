@@ -217,6 +217,13 @@ $PODS_BASEURI_ARTICLES = '/media/objects/articles/';
 				max-width:600px !important;
 			}
 
+   #headerTitle h1{
+    background-color: #de1f00;
+    color: #fff;
+    font-size: 1.5em;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+   }
 			/* /\/\/\/\/\/\/\/\/\/\ STANDARD STYLING: MAIN BODY /\/\/\/\/\/\/\/\/\/\ */
 
 			/**
