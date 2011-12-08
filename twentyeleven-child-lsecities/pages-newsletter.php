@@ -32,6 +32,13 @@ $PODS_BASEURI_ARTICLES = '/media/objects/articles/';
 			img{border:0; height:auto; line-height:100%; outline:none; text-decoration:none;}
 			table td{border-collapse:collapse;}
 			#backgroundTable{height:100% !important; margin:0; padding:0; width:100% !important;}
+   a, a:active, a:visited, a:hover {
+    text-decoration: none;
+    color: #de1f00;
+   }
+   a:hover {
+    color: #777;
+   }
 
 			/* Template Styles */
 
@@ -315,7 +322,11 @@ $PODS_BASEURI_ARTICLES = '/media/objects/articles/';
 			.footerContent img{
 				display:inline;
 			}
-
+   
+   .footerContent h1{
+    font-size: 20px;
+   }
+   
 			/**
 			* @tab Footer
 			* @section social bar style
@@ -458,7 +469,7 @@ $PODS_BASEURI_ARTICLES = '/media/objects/articles/';
                                                    <table cellpadding="0" cellspacing="0" border="0" width="558">
                                                      <tbody>
                                                        <tr>
-                                                         <td valign="top" width="269" style="font-size: 13px; font-family: georgia, serif;">
+                                                         <td valign="top" width="269">
                                                            <h1>Would you like to hear more from us?</h1>
                                                            <p style="margin-top: 5px;">Get all our updates directly on the social web.</p>
                                                          </td>
