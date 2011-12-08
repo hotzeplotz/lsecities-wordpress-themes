@@ -449,6 +449,42 @@ $PODS_BASEURI_ARTICLES = '/media/objects/articles/';
                                     	<tr>
                                         	<td valign="top" class="footerContent">
                                             
+                                            
+                                            <table cellpadding="0" cellspacing="0" border="0" width="600">
+<tbody><tr>
+    <td valign="top" width="20">&nbsp;</td>
+    <td>
+
+    <table cellpadding="0" cellspacing="0" border="0" width="558">
+    <tbody><tr>
+        <td valign="top" width="269" style="font-size: 13px; font-family: georgia, serif;">
+        <h1 style="color: #313131; font-weight: normal; font-style: italic; font-size: 20px; font-family: georgia, serif; margin: 0;">Would you like to hear more from us?</h1>
+        <p style="margin-top: 5px;">Get all our updates directly on the social web.</p>
+        </td>
+        <td valign="top" width="10">&nbsp;</td>
+        <td valign="top" width="289">
+
+        <table cellpadding="0" cellspacing="0" border="0" width="289">
+        <tbody><tr>
+            <td><a href="https://facebook.com/lsecities"><img border="0" src="http://urban-age.net/images/art/icons/thegforce-hand-drawn/Facebook/32x32.png" alt="Facebook" height="32" width="32" style="display: block;"></a></td>
+            <td width="5">&nbsp;</td>
+            <td><a href="https://facebook.com/lsecities" style="color: #447bc4; text-decoration: none; font-size: 13px; font-family: georgia, serif;">Follow us on Facebook</a></td>
+            <td valign="top" width="20">&nbsp;</td>
+            <td><a href="https://twitter.com/#!/LSECities"><img border="0" src="http://urban-age.net/images/art/icons/thegforce-hand-drawn/Twitter/32x32.png" alt="Twitter" height="36" width="36" style="display: block;"></a></td>
+            <td width="5">&nbsp;</td>
+            <td><a href="http://twitter.com/#!/LSECities" style="color: #447bc4; text-decoration: none; font-size: 13px; font-family: georgia, serif;">Join us on Twitter</a></td>
+        </tr>
+        </tbody></table>
+
+        </td>
+    </tr>
+    </tbody></table>
+    </td>
+    <td valign="top" width="10">&nbsp;</td>
+</tr>
+</tbody></table>
+
+
                                                 <!-- // Begin Module: Standard Footer \\ -->
                                                 <table border="0" cellpadding="10" cellspacing="0" width="100%">
                                                     <tr>
