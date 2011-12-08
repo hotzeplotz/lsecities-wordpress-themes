@@ -508,14 +508,8 @@ $PODS_BASEURI_ARTICLES = '/media/objects/articles/';
 
 
                                                 <!-- // Begin Module: Standard Footer \\ -->
+                                                <!--
                                                 <table border="0" cellpadding="10" cellspacing="0" width="100%">
-                                                    <tr>
-                                                        <td colspan="2" valign="middle" id="social">
-                                                            <div mc:edit="std_social">
-                                                                &nbsp;<a href="*|TWITTER:PROFILEURL|*">follow on Twitter</a> | <a href="*|FACEBOOK:PROFILEURL|*">friend on Facebook</a> | <a href="*|FORWARD|*">forward to a friend</a>&nbsp;
-                                                            </div>
-                                                        </td>
-                                                    </tr>
                                                     <tr>
                                                         <td valign="top" width="350">
                                                             <div mc:edit="std_footer">
@@ -541,7 +535,7 @@ $PODS_BASEURI_ARTICLES = '/media/objects/articles/';
                                                             </div>
                                                         </td>
                                                     </tr>
-                                                </table>
+                                                </table> -->
                                                 <!-- // End Module: Standard Footer \\ -->
                                             
                                             </td>
