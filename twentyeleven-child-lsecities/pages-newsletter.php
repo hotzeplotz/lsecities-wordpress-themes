@@ -18,9 +18,9 @@ $PODS_BASEURI_ARTICLES = '/media/objects/articles/';
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         
         <!-- Facebook sharing information tags -->
-        <meta property="og:title" content="*|MC:SUBJECT|*" />
+        <meta property="og:title" content="<?php the_title(); ?>" />
         
-        <title>*|MC:SUBJECT|*</title>
+        <title><?php the_title(); ?></title>
 		<style type="text/css">
 			/* Client-specific Styles */
 			#outlook a{padding:0;} /* Force Outlook to provide a "view in browser" button. */
@@ -391,8 +391,10 @@ $PODS_BASEURI_ARTICLES = '/media/objects/articles/';
                                     	<tr>
                                         	<td valign="top">
                                             	<div mc:edit="std_preheader_content">
-                                                	 Use this area to offer a short teaser of your email's content. Text here will show in the preview area of some email clients.
-                                                </div>
+                                               <?php $teaser = get_post_meta(get_the_ID(), "layout", true);
+                                                 echo $teaser;
+                                               ?>
+                                              </div>
                                             </td>
                                             <!-- *|IFNOT:ARCHIVE_PAGE|* -->
 											<td valign="top" width="190">
