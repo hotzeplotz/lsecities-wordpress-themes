@@ -399,7 +399,7 @@ $PODS_BASEURI_ARTICLES = '/media/objects/articles/';
                                             <!-- *|IFNOT:ARCHIVE_PAGE|* -->
 											<td valign="top" width="190">
                                             	<div mc:edit="std_preheader_links">
-                                                	Is this email not displaying correctly?<br /><a href="*|ARCHIVE|*" target="_blank">View it in your browser</a>.
+                                                	Is this email not displaying correctly?<br /><a href="<?php echo get_permalink( $id ); ?>" target="_blank">View it in your browser</a>.
                                                 </div>
                                             </td>
 											<!-- *|END:IF|* -->
