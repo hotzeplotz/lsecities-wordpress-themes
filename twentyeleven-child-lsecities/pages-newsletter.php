@@ -323,6 +323,10 @@ $PODS_BASEURI_ARTICLES = '/media/objects/articles/';
 				display:inline;
 			}
    
+   .footerContent {
+    font-size: 13px;
+   }
+   
    .footerContent h1{
     font-size: 20px;
    }
