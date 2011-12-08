@@ -204,7 +204,7 @@ $PODS_BASEURI_ARTICLES = '/media/objects/articles/';
 				/*@editable*/ font-weight:bold;
 				/*@editable*/ line-height:100%;
 				/*@editable*/ padding:0;
-				/*@editable*/ text-align:center;
+				/*@editable*/ text-align:left;
 				/*@editable*/ vertical-align:middle;
 			}
 
