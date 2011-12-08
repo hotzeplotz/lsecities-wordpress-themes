@@ -171,13 +171,6 @@ $PODS_BASEURI_ARTICLES = '/media/objects/articles/';
 				/*@editable*/ font-weight:normal;
 				/*@editable*/ text-decoration:underline;
 			}
-			
-			.preheaderContent img{
-				display:inline;
-				height:auto;
-				margin-bottom:10px;
-				max-width:280px;
-			}
 
 			/* /\/\/\/\/\/\/\/\/\/\ STANDARD STYLING: HEADER /\/\/\/\/\/\/\/\/\/\ */
 
@@ -221,7 +214,7 @@ $PODS_BASEURI_ARTICLES = '/media/objects/articles/';
 
 			#headerImage{
 				height:auto;
-				max-width:320px !important;
+				max-width:600px !important;
 			}
 
 			/* /\/\/\/\/\/\/\/\/\/\ STANDARD STYLING: MAIN BODY /\/\/\/\/\/\/\/\/\/\ */
@@ -244,7 +237,7 @@ $PODS_BASEURI_ARTICLES = '/media/objects/articles/';
 			.bodyContent div{
 				/*@editable*/ color:#505050;
 				/*@editable*/ font-family:Arial;
-				/*@editable*/ font-size:12px;
+				/*@editable*/ font-size:14px;
 				/*@editable*/ line-height:150%;
 				/*@editable*/ text-align:left;
 			}
@@ -263,8 +256,6 @@ $PODS_BASEURI_ARTICLES = '/media/objects/articles/';
 			.bodyContent img{
 				display:inline;
 				height:auto;
-				margin-bottom:10px;
-				max-width:280px;
 			}
 
 			/* /\/\/\/\/\/\/\/\/\/\ STANDARD STYLING: FOOTER /\/\/\/\/\/\/\/\/\/\ */
@@ -289,8 +280,8 @@ $PODS_BASEURI_ARTICLES = '/media/objects/articles/';
 			.footerContent div{
 				/*@editable*/ color:#707070;
 				/*@editable*/ font-family:Arial;
-				/*@editable*/ font-size:11px;
-				/*@editable*/ line-height:150%;
+				/*@editable*/ font-size:12px;
+				/*@editable*/ line-height:125%;
 				/*@editable*/ text-align:left;
 			}
 
@@ -307,9 +298,6 @@ $PODS_BASEURI_ARTICLES = '/media/objects/articles/';
 
 			.footerContent img{
 				display:inline;
-				height:auto;
-				margin-bottom:10px;
-				max-width:280px;
 			}
 
 			/**
@@ -329,7 +317,7 @@ $PODS_BASEURI_ARTICLES = '/media/objects/articles/';
 			* @tip Set the background color and border for your email's footer social bar.
 			*/
 			#social div{
-				/*@editable*/ text-align:left;
+				/*@editable*/ text-align:center;
 			}
 
 			/**
@@ -349,7 +337,11 @@ $PODS_BASEURI_ARTICLES = '/media/objects/articles/';
 			* @tip Set the background color and border for your email's footer utility bar.
 			*/
 			#utility div{
-				/*@editable*/ text-align:left;
+				/*@editable*/ text-align:center;
+			}
+
+			#monkeyRewards img{
+				max-width:190px;
 			}
 		</style>
 	</head>
@@ -359,11 +351,11 @@ $PODS_BASEURI_ARTICLES = '/media/objects/articles/';
             	<tr>
                 	<td align="center" valign="top">
                         <!-- // Begin Template Preheader \\ -->
-                        <table border="0" cellpadding="10" cellspacing="0" width="320" id="templatePreheader">
+                        <table border="0" cellpadding="10" cellspacing="0" width="600" id="templatePreheader">
                             <tr>
                                 <td valign="top" class="preheaderContent">
                                 
-                                	<!-- // Begin Module: Standard Mobile Preheader \\ -->
+                                	<!-- // Begin Module: Standard Preheader \ -->
                                     <table border="0" cellpadding="10" cellspacing="0" width="100%">
                                     	<tr>
                                         	<td valign="top">
@@ -371,19 +363,26 @@ $PODS_BASEURI_ARTICLES = '/media/objects/articles/';
                                                 	 Use this area to offer a short teaser of your email's content. Text here will show in the preview area of some email clients.
                                                 </div>
                                             </td>
+                                            <!-- *|IFNOT:ARCHIVE_PAGE|* -->
+											<td valign="top" width="190">
+                                            	<div mc:edit="std_preheader_links">
+                                                	Is this email not displaying correctly?<br /><a href="*|ARCHIVE|*" target="_blank">View it in your browser</a>.
+                                                </div>
+                                            </td>
+											<!-- *|END:IF|* -->
                                         </tr>
                                     </table>
-                                	<!-- // End Module: Standard Mobile Preheader \\ -->
+                                	<!-- // End Module: Standard Preheader \ -->
                                 
                                 </td>
                             </tr>
                         </table>
                         <!-- // End Template Preheader \\ -->
-                    	<table border="0" cellpadding="0" cellspacing="0" width="320" id="templateContainer">
+                    	<table border="0" cellpadding="0" cellspacing="0" width="600" id="templateContainer">
                         	<tr>
                             	<td align="center" valign="top">
                                     <!-- // Begin Template Header \\ -->
-                                	<table border="0" cellpadding="0" cellspacing="0" width="320" id="templateHeader">
+                                	<table border="0" cellpadding="0" cellspacing="0" width="600" id="templateHeader">
                                         <tr>
                                             <td class="headerContent">
                                             
@@ -400,18 +399,14 @@ $PODS_BASEURI_ARTICLES = '/media/objects/articles/';
                         	<tr>
                             	<td align="center" valign="top">
                                     <!-- // Begin Template Body \\ -->
-                                	<table border="0" cellpadding="0" cellspacing="0" width="320" id="templateBody">
+                                	<table border="0" cellpadding="0" cellspacing="0" width="600" id="templateBody">
                                     	<tr>
                                             <td valign="top" class="bodyContent">
                                 
-                                                <!-- // Begin Module: Standard Postcard Content \\ -->
+                                                <!-- // Begin Module: Standard Content \\ -->
                                                 <table border="0" cellpadding="20" cellspacing="0" width="100%">
-                                                    <tr mc:repeatable>
+                                                    <tr>
                                                         <td valign="top">
-                                                        	<div mc:edit="photoblog_heading00">
-                                                                <h1 class="h1">Heading 1</h1>
-                                                            </div>
-                                                            <img src="http://gallery.mailchimp.com/653153ae841fd11de66ad181a/images/placeholder_280.gif" style="max-width:560px;" mc:label="postcard_image" mc:edit="postcard_image" />
                                                             <div mc:edit="std_content00">
                                                                 <h1 class="h1">Heading 1</h1>
                                                                 <h2 class="h2">Heading 2</h2>
@@ -421,13 +416,11 @@ $PODS_BASEURI_ARTICLES = '/media/objects/articles/';
                                                                 <br />
                                                                 <br />
                                                                 After you enter your content, highlight the text you want to style and select the options you set in the style editor in the "styles" drop down box. Want to <a href="http://www.mailchimp.com/kb/article/im-using-the-style-designer-and-i-cant-get-my-formatting-to-change" target="_blank">get rid of styling on a bit of text</a>, but having trouble doing it? Just use the "remove formatting" button to strip the text of any formatting and reset your style.
-																<br />
-																<br />
-                                                                <strong>Repeatable content blocks:</strong> Repeatable sections are noted with plus and minus signs so that you can add and subtract content blocks. You can also <a href="http://www.mailchimp.com/kb/article/how-do-i-work-with-repeatable-content-blocks" target="_blank">get a little fancy</a>: repeat blocks and remove all text to make image "gallery" sections, or do the opposite and remove images for text-only blocks!                                </div>
-                                                        </td>
+                                                            </div>
+														</td>
                                                     </tr>
                                                 </table>
-                                                <!-- // End Module: Standard Postcard Content \\ -->
+                                                <!-- // End Module: Standard Content \\ -->
                                                 
                                             </td>
                                         </tr>
@@ -438,7 +431,7 @@ $PODS_BASEURI_ARTICLES = '/media/objects/articles/';
                         	<tr>
                             	<td align="center" valign="top">
                                     <!-- // Begin Template Footer \\ -->
-                                	<table border="0" cellpadding="10" cellspacing="0" width="320" id="templateFooter">
+                                	<table border="0" cellpadding="10" cellspacing="0" width="600" id="templateFooter">
                                     	<tr>
                                         	<td valign="top" class="footerContent">
                                             
@@ -447,13 +440,12 @@ $PODS_BASEURI_ARTICLES = '/media/objects/articles/';
                                                     <tr>
                                                         <td colspan="2" valign="middle" id="social">
                                                             <div mc:edit="std_social">
-                                                                <a href="*|TWITTER:PROFILEURL|*">follow on Twitter</a> <br /> <a href="*|FACEBOOK:PROFILEURL|*">friend on Facebook</a> <br /> <a href="*|FORWARD|*">forward to a friend</a>&nbsp;
+                                                                &nbsp;<a href="*|TWITTER:PROFILEURL|*">follow on Twitter</a> | <a href="*|FACEBOOK:PROFILEURL|*">friend on Facebook</a> | <a href="*|FORWARD|*">forward to a friend</a>&nbsp;
                                                             </div>
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td valign="top" width="100%">
-                                                            <br />
+                                                        <td valign="top" width="350">
                                                             <div mc:edit="std_footer">
 																<em>Copyright &copy; *|CURRENT_YEAR|* *|LIST:COMPANY|*, All rights reserved.</em>
 																<br />
@@ -463,8 +455,9 @@ $PODS_BASEURI_ARTICLES = '/media/objects/articles/';
 																<br />
 																*|HTML:LIST_ADDRESS_HTML|**|END:IF|* 
                                                             </div>
-                                                            <br />
-                                                            <div id="monkeyRewards" mc:edit="monkeyrewards">
+                                                        </td>
+                                                        <td valign="top" width="190" id="monkeyRewards">
+                                                            <div mc:edit="monkeyrewards">
                                                                 *|IF:REWARDS|* *|HTML:REWARDS|* *|END:IF|*
                                                             </div>
                                                         </td>
