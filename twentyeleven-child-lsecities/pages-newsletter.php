@@ -460,12 +460,12 @@ $PODS_BASEURI_ARTICLES = '/media/objects/articles/';
                         	<tr>
                             	<td align="center" valign="top">
                                     <!-- // Begin Template Footer \\ -->
-                                	<table border="0" cellpadding="10" cellspacing="0" width="600" id="templateFooter">
+                                	<table border="0" cellpadding="10" cellspacing="0" id="templateFooter">
                                     	<tr>
                                         	<td valign="top" class="footerContent">
                                             
                                             
-                                           <table cellpadding="0" cellspacing="0" border="0" width="600">
+                                           <table cellpadding="0" cellspacing="0" border="0">
                                              <tbody>
                                                <tr>
                                                  <td valign="top" width="20">&nbsp;</td>
@@ -474,7 +474,7 @@ $PODS_BASEURI_ARTICLES = '/media/objects/articles/';
                                                      <tbody>
                                                        <tr>
                                                          <td valign="top" width="269">
-                                                           <h1>Would you like to hear more from us?</h1>
+                                                           <h1>Follow LSE Cities</h1>
                                                            <p style="margin-top: 5px;">Get all our updates directly on the social web.</p>
                                                          </td>
                                                          <td valign="top" width="10">&nbsp;</td>
@@ -487,7 +487,7 @@ $PODS_BASEURI_ARTICLES = '/media/objects/articles/';
                                                                  </td>
                                                                  <td width="5">&nbsp;</td>
                                                                  <td>
-                                                                   <a href="https://facebook.com/lsecities">Follow us on Facebook</a>
+                                                                   <a href="https://facebook.com/lsecities">Join us on Facebook</a>
                                                                  </td>
                                                                  <td valign="top" width="20">&nbsp;</td>
                                                                  <td>
