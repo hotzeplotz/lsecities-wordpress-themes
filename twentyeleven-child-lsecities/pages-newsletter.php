@@ -391,7 +391,7 @@ $PODS_BASEURI_ARTICLES = '/media/objects/articles/';
                                     	<tr>
                                         	<td valign="top">
                                             	<div mc:edit="std_preheader_content">
-                                               <?php $teaser = get_post_meta(get_the_ID(), "layout", true);
+                                               <?php $teaser = get_post_meta(get_the_ID(), "newsletter_teaser_text", true);
                                                  echo $teaser;
                                                ?>
                                               </div>
