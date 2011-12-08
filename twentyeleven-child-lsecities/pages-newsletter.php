@@ -265,6 +265,14 @@ $PODS_BASEURI_ARTICLES = '/media/objects/articles/';
 				display:inline;
 				height:auto;
 			}
+   
+   dl dt{
+    font-weight: bold;
+   }
+   
+   dl dd{
+    margin-left: 0;
+   }
 
 			/* /\/\/\/\/\/\/\/\/\/\ STANDARD STYLING: FOOTER /\/\/\/\/\/\/\/\/\/\ */
 
