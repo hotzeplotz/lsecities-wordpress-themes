@@ -10,7 +10,7 @@
 $TRACE_PODS_ARTICLES = false;
 $PODS_BASEURI_ARTICLES = '/media/objects/articles/';
 ?>
-<?php define('WP_USE_THEMES', false); get_header(); ?>
+<?php define('WP_USE_THEMES', false); ?>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
