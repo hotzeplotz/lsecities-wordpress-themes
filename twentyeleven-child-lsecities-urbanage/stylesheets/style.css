@@ -136,7 +136,7 @@ body, input, textarea { background-color: #ffffff; }
 #core ul > li { line-height: 1.25em; margin-bottom: 1.25em; }
 
 #level3nav h1 { font-size: 1em; }
-#level3nav ul > li { line-height: 1.5em; }
+#level3nav ul > li { line-height: 1.5em; margin-bottom: 0.2em; }
 
 #extras h1 { font-size: 1em; }
 
