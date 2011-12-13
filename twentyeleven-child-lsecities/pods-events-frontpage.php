@@ -31,7 +31,7 @@ if($TRACE_PODS_EVENTS_FRONTPAGE) { error_log('pod_slug: ' . $pod_slug); }
 
 $button_links = $pod->get_field('links');
 
-if($TRACE_PODS_EVENTS_FRONTPAGE) { error_log(var_export($button_links, true)); }
+if($TRACE_PODS_EVENTS_FRONTPAGE) { error_log('button_links: ' . var_export($button_links, true)); }
 
 $slider = $pod->get_field('slider');
 if(!$slider) {
