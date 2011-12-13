@@ -71,7 +71,7 @@ if(!$slider) {
         </div>
         <?php foreach($button_links as $key => $link) : ?>
           <?php if(($key  % 3) == 0) : ?>
-            <div class='featureboxes'>
+            <div class='featureboxes clearfix'>
           <?php endif; ?>          
           <?php error_log('link key: ' . $key); ?>
           <div class='featurebox fourcol<?php if((($key + 1) % 3) == 0) : ?> last<?php endif ; ?>'>
