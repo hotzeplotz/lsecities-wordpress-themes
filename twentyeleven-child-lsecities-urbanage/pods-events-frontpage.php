@@ -75,9 +75,10 @@ if(!$slider) {
           <?php endif; ?>          
           <?php error_log('link key: ' . $key); ?>
           <div class='featurebox fourcol<?php if((($key + 1) % 3) == 0) : ?> last<?php endif ; ?>'>
-            <a href="<?php echo preg_replace('/^http:\/\/.*?\//', 'http://urban-age.net/', get_permalink($link['ID'])); ?>" title="<?php echo $link['post_title'] ; ?>">
-              <h3><?php echo $link['post_title'] ; ?></h3>
-            </a>
+            <h3>
+			  <a href="<?php echo preg_replace('/^http:\/\/.*?\//', 'http://urban-age.net/', get_permalink($link['ID'])); ?>" title="<?php echo $link['post_title'] ; ?>">
+              <?php echo $link['post_title'] ; ?></a>
+            </h3>
           </div>
           <?php if((($key + 1) % 3) == 0 or $key == (count($button_links) - 1)) : ?>
             </div>

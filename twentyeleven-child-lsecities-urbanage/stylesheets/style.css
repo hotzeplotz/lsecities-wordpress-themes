@@ -121,6 +121,10 @@ body, input, textarea { background-color: #ffffff; }
 #main ul > li { list-style: none; }
 #main p { line-height: 1.25em; margin-bottom: 1.25em; }
 #main p:last-child { margin-bottom: 0; }
+#main .featureboxes { margin-bottom: 1em; }
+#main .featureboxes .featurebox { background: black; color: white; margin-bottom: 1em; }
+#main .featureboxes .featurebox h3 { margin: 1em; text-align: center; }
+#main .featureboxes .featurebox a, #main .featureboxes .featurebox a:hover, #main .featureboxes .featurebox a:active, #main .featureboxes .featurebox a:visited { color: white; }
 #main .defaultBox { border-top: 1px solid #5D5151; padding-top: 0.25em; padding-bottom: 0.25em; }
 #main .defaultBox:first-child { border-top: none; padding-top: 0; }
 #main article .introblurb h2 { margin-top: 0.6em; margin-bottom: 0; }
