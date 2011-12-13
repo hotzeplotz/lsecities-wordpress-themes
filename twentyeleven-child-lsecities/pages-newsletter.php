@@ -9,6 +9,9 @@
  */
 $TRACE_PODS_ARTICLES = false;
 $PODS_BASEURI_ARTICLES = '/media/objects/articles/';
+
+// change to $our_permalink = get_permalink($id); once switch to WP+Pods is complete
+$our_permalink = preg_replace("/http:\/\/.*?\//", "http://urban-age.net/", get_permalink($id));
 ?>
 <?php define('WP_USE_THEMES', false); ?>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -400,7 +403,7 @@ $PODS_BASEURI_ARTICLES = '/media/objects/articles/';
                                             <!-- *|IFNOT:ARCHIVE_PAGE|* -->
 											<td valign="top" width="190">
                                             	<div mc:edit="std_preheader_links">
-                                                	Is this email not displaying correctly?<br /><a href="<?php echo get_permalink( $id ); ?>" target="_blank">View it in your browser</a>.
+                                                	Is this email not displaying correctly?<br /><a href="<?php echo $our_permalink; ?>" target="_blank">View it in your browser</a>.
                                                 </div>
                                             </td>
 											<!-- *|END:IF|* -->
