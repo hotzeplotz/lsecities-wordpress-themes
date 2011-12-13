@@ -11,7 +11,7 @@ $TRACE_PODS_ARTICLES = false;
 $PODS_BASEURI_ARTICLES = '/media/objects/articles/';
 
 // change to $our_permalink = get_permalink($id); once switch to WP+Pods is complete
-$our_permalink = preg_replace("/http:\/\/.*?\//", "http://urban-age.net/", get_permalink($id));
+$our_permalink = preg_replace('/^http:\/\/.*?\//', 'http://urban-age.net/', get_permalink($id));
 ?>
 <?php define('WP_USE_THEMES', false); ?>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
