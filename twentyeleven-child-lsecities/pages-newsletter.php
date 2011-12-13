@@ -231,6 +231,7 @@ $PODS_BASEURI_ARTICLES = '/media/objects/articles/';
     padding-left: 0.3em;
     padding-right: 0.3em;
     display: inline-block;
+    text-transform: uppercase;
    }
 			/* /\/\/\/\/\/\/\/\/\/\ STANDARD STYLING: MAIN BODY /\/\/\/\/\/\/\/\/\/\ */
 
