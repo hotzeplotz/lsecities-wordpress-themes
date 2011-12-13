@@ -17,6 +17,9 @@
 global $pods;
 $TRACE_PODS_EVENTS_FRONTPAGE = true;
 
+// remove following variable and update buttons loop once fully transitioned to WP+Pods
+$our_base_uri = 'http://urban-age.net';
+
 // check if we are getting called via Pods (pods_url_variable is set)
 $pod_slug = pods_url_variable(3);
 
@@ -30,7 +33,7 @@ if($pod_slug) {
 if($TRACE_PODS_EVENTS_FRONTPAGE) { error_log('pod_slug: ' . $pod_slug); }
 
 $button_links = $pod->get_field('links');
-if($TRACE_PODS_EVENTS_FRONTPAGE) { echo '<!-- button_links: ' . var_export($button_links, true) . '-->'; }
+// if($TRACE_PODS_EVENTS_FRONTPAGE) { echo '<!-- button_links: ' . var_export($button_links, true) . '-->'; }
 
 $slider = $pod->get_field('slider');
 if(!$slider) {
@@ -75,7 +78,7 @@ if(!$slider) {
           <?php endif; ?>          
           <?php error_log('link key: ' . $key); ?>
           <div class='featurebox fourcol<?php if((($key + 1) % 3) == 0) : ?> last<?php endif ; ?>'>
-            <a href="<?php echo $link['guid'] ; ?>" title="<?php echo $link['post_title'] ; ?>">
+            <a href="<?php echo $our_base_uri . '/?page_id=' . $link['ID'] ; ?>" title="<?php echo $link['post_title'] ; ?>">
               <h3><?php echo $link['post_title'] ; ?></h3>
             </a>
           </div>
