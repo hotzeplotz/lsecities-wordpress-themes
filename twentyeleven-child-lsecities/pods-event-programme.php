@@ -36,6 +36,7 @@ function process_session($session_slug) {
   
   $pod = new Pod('event_session', $session_slug);
   
+  $session_id = $pod->get_field('slug');
   $session_title = $pod->get_field('name');
   $session_subtitle = $pod->get_field('session_subtitle');
   $show_times = $pod->get_field('show_times');
@@ -62,7 +63,7 @@ function process_session($session_slug) {
   if($TRACE_PODS_EVENT_PROGRAMME) { error_log($TRACE_PREFIX . 'sessions: ' . var_export($subsessions, true)); }
   if($session_title and !$hide_title) { echo '<h1>' . $session_times . $session_title . '</h1>'; }
   if($session_subtitle and !$hide_title) { echo "<h2>$session_subtitle</h2>"; }
-  echo "<div class='$session_type'>";
+  echo "<div id='$session_id' class='$session_type'>";
   if($session_chairs) {
     $caption = count($session_chairs) > 1 ? "Chairs" : "Chair";
     echo "<dl class='session-chairs'><dt>$caption:</dt><dd>$session_chairs_blurb</dd></dl>";
