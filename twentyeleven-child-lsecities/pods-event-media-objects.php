@@ -36,7 +36,7 @@ function process_session($session_slug) {
   if($subsessions and count($subsessions) == 1) { $subsessions = array(0 => $subsessions); }
 
   if($session_youtube_video and $session_media_item_title) {
-    echo "$session_youtube_video, $session_media_item_title";
+    echo "$session_youtube_video, $session_media_item_title\n";
   }
   if($subsessions) {
     foreach($subsessions as $session) {
