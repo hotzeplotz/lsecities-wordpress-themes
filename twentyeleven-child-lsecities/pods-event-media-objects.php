@@ -43,7 +43,6 @@ function process_session($session_slug) {
       process_session($session);
     }
   }
-  echo "</div>";
 }
 
   if(!empty($pod->data)) {
