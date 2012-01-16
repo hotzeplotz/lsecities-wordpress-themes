@@ -134,11 +134,11 @@ body, input, textarea { background-color: #ffffff; }
 #main .wp-caption-text { font-size: 0.875em; font-family: ff-meta-web-pro, Tahoma, Verdana, Helvetica, sans-serif; }
 #main #author-info { padding-bottom: 2em; }
 #main .entry-content, #main .entry-summary { padding: 0; }
-#main ul.publication-side-toc li { line-height: 1.25em; margin-bottom: 0.25em; }
-#main ul.publication-side-toc dl { margin-top: 1.2em; }
-#main ul.publication-side-toc dt { margin-top: 1em; }
-#main ul.publication-side-toc dd { font-weight: bold; }
-#main ul.publication-side-toc h4 { margin-top: 2em; }
+#main dl.publication-side-toc { margin-top: 1.2em; }
+#main dl.publication-side-toc li { line-height: 1.25em; margin-bottom: 0.25em; }
+#main dl.publication-side-toc dt { margin-top: 1em; }
+#main dl.publication-side-toc dd { font-weight: bold; }
+#main dl.publication-side-toc h4 { margin-top: 2em; }
 #main .article .entry-content.article-text.sidebyside > div { -moz-column-count: 2; -webkit-column-count: 2; -o-column-count: 2; column-count: 2; }
 
 #core ul > li { line-height: 1.25em; margin-bottom: 1.25em; }
