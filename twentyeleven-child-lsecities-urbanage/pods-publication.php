@@ -60,7 +60,7 @@ $PODS_BASEURI_ARTICLES = 'http://urban-age.net/media/objects/articles';
           <?php if($articles_pods->getTotalRows()) : ?>
           <h2>Read the articles</h2>
           <p>
-    <ul class="publication-side-toc">
+    <dl class="publication-side-toc">
     <?php
     $sections = array();
     foreach(preg_split("/\n/", $publication_pod->get_field('sections')) as $section_line) {
@@ -88,17 +88,20 @@ $PODS_BASEURI_ARTICLES = 'http://urban-age.net/media/objects/articles';
           if($TRACE_PODS_ARTICLES) : ?>
           <!-- <?php echo 'article Pod object: ' . var_export($articles_pods, true); ?> -->
           <?php endif; ?>
-          <li>
-            <?php echo $author_names ; ?><a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $articles_pods->get_field('slug'); ?>"><?php echo $article_title; ?></a>
+          <dt>
+            <?php echo $author_names ; ?>
+          </dt>
+          <dd>
+            <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $articles_pods->get_field('slug'); ?>"><?php echo $article_title; ?></a>
             <?php if(!empty($article['language']['name'])) : ?>
               (English) - <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $article['slug'] . '/?lang=' . $article['language']['language_code']; ?>">(<?php echo $article['language']['name']; ?>)</a>
             <?php endif; ?>
-          </li>
+          </dd>
       <?php
         endif;
       endwhile;
     endforeach; ?>
-    </ul>
+    </dl>
           </p>
           <?php endif; ?>
           
