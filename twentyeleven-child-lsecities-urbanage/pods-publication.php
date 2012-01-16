@@ -58,8 +58,6 @@ $PODS_BASEURI_ARTICLES = 'http://urban-age.net/media/objects/articles';
       <div class="article row">
         <div class="ninecol">
           <?php if($articles_pods->getTotalRows()) : ?>
-          <h2>Read the articles</h2>
-          <p>
     <dl class="publication-side-toc">
     <?php
     $sections = array();
