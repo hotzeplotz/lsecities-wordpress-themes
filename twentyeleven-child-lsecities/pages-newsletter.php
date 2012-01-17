@@ -231,10 +231,9 @@ $our_permalink = preg_replace('/^http:\/\/.*?\//', 'http://urban-age.net/', get_
     background-color: #de1f00;
     color: #fff;
     font-size: 1.5em;
-    padding-left: 0.3em;
-    padding-right: 0.3em;
     display: inline-block;
     text-transform: uppercase;
+    padding: 0 20px;
    }
 			/* /\/\/\/\/\/\/\/\/\/\ STANDARD STYLING: MAIN BODY /\/\/\/\/\/\/\/\/\/\ */
 
@@ -277,6 +276,15 @@ $our_permalink = preg_replace('/^http:\/\/.*?\//', 'http://urban-age.net/', get_
 				height:auto;
 			}
    
+   div.section h2 {
+    background-color: #de1f00;
+    color: #fff;
+    font-size: 1.2em;
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 0 20px;
+   }
+
    dl dt{
     font-weight: bold;
    }
