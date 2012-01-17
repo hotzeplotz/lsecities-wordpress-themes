@@ -78,7 +78,7 @@ function process_session($session_slug) {
       echo "<span class='link video'><a href='http://youtube.com/watch?v=$session_youtube_video'>Watch video</a></span>";
     }
     if($session_slides) {
-      echo "<span class='link slides'><a href='http://downloads0.cloud.lsecities.net$session_slides'>Browse slides</a></span>";
+      echo "<span class='link slides'><a href='http://downloads0.cloud.lsecities.net/$session_slides'>Browse slides</a></span>";
     }
     echo '</div>';
   }
