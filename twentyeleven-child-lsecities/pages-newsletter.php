@@ -343,6 +343,7 @@ $our_permalink = preg_replace('/^http:\/\/.*?\//', 'http://urban-age.net/', get_
    
    .footerContent {
     font-size: 13px;
+    font-family: Arial, sans-serif;
    }
    
    .footerContent h1{
