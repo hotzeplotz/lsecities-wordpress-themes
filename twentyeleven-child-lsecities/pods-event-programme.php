@@ -61,12 +61,12 @@ function process_session($session_slug) {
   if($subsessions and count($subsessions) == 1) { $subsessions = array(0 => $subsessions); }
   if($TRACE_PODS_EVENT_PROGRAMME) { error_log($TRACE_PREFIX . 'session count: ' . count($subsessions)); }
   if($TRACE_PODS_EVENT_PROGRAMME) { error_log($TRACE_PREFIX . 'sessions: ' . var_export($subsessions, true)); }
+  echo "<div id='$session_id' class='$session_type'>";
   if($session_title and !$hide_title) { echo '<h1>' . $session_times . $session_title . '</h1>'; }
   if($session_subtitle and !$hide_title) { echo "<h2>$session_subtitle</h2>"; }
-  echo "<div id='$session_id' class='$session_type'>";
   if($session_chairs) {
     $caption = count($session_chairs) > 1 ? "Chairs" : "Chair";
-    echo "<dl class='session-chairs'><dt>$caption:</dt><dd>$session_chairs_blurb</dd></dl>";
+    echo "<dl class='session-chairs'><dt>$caption: </dt><dd>$session_chairs_blurb</dd></dl>";
   }
   if($session_speakers) {
     echo "<div>$session_speakers_blurb</div>";
