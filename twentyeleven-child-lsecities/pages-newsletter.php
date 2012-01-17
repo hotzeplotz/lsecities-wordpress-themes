@@ -283,10 +283,16 @@ $our_permalink = preg_replace('/^http:\/\/.*?\//', 'http://urban-age.net/', get_
     display: inline-block;
     text-transform: uppercase;
     padding: 0 20px;
+    margin-left: -20px;
    }
 
    dl dt{
     font-weight: bold;
+   }
+   
+   dl dt a{
+    font-weight: bold;
+    text-decoration: none; 
    }
    
    dl dd{
