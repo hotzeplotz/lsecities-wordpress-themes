@@ -176,8 +176,9 @@ footer ul { list-style-type: none; }
 #main .event-programme .session-chairs { padding-left: 1em; }
 #main .event-programme .session-chairs dt, #main .event-programme .session-chairs dd { display: inline; }
 #main .event-programme .session { margin-bottom: 1em; }
+#main .event-programme .sessiontype-day > .session { margin-top: 2.4em; }
 #main .event-programme .sessiontype-day > .session > * { padding-left: 1em; }
-#main .event-programme .sessiontype-day > .session .session { margin-top: 1.5em; }
+#main .event-programme .sessiontype-day > .session .session { margin-top: 1.8em; }
 #main .event-programme .sessiontype-day > .session > h2 { text-transform: none; }
 #main .event-programme .sessiontype-presentation > h2 { text-transform: none; }
 #main .event-programme .sessiontype-day > .session > h2 { background-color: #333; color: #fff; padding: 0.1875em; }
