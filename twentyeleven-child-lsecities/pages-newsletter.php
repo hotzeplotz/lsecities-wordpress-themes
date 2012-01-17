@@ -290,7 +290,7 @@ $our_permalink = preg_replace('/^http:\/\/.*?\//', 'http://urban-age.net/', get_
     font-weight: bold;
    }
    
-   .bodyContent div dl dt a, .bodyContent div dl dt a:active, .bodyContent div dl dt a:visited{
+   .bodyContent div dl dt a, .bodyContent div dl dt a:active, .bodyContent div dl dt a:visited, .bodyContent div dl dt a:link{
     font-weight: bold;
     text-decoration: none; 
    }
