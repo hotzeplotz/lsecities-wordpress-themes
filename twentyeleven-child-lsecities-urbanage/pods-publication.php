@@ -83,7 +83,7 @@ $PODS_BASEURI_ARTICLES = 'http://urban-age.net/media/objects/articles';
           }
           
           // remove trailing comma
-          rtrim($author_names, ',');
+          rtrim($author_names, ', ');
           
           $article_title = $articles_pods->get_field('name');
           echo '<!-- ' . $author_names . $article_title . '-->';
