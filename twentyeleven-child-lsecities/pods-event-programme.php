@@ -73,14 +73,14 @@ function process_session($session_slug) {
     echo "<div>$session_speakers_blurb</div>";
   }
   if($session_youtube_video or $session_slides) {
-    <div class="media_items">
+    echo '<div class="media_items">';
     if($session_youtube_video) {
       echo "<span class='link video'><a href='http://youtube.com/watch?v=$session_youtube_video'>Watch video</a></span>";
     }
     if($session_slides) {
       echo "<span class='link slides'><a href='http://downloads0.cloud.lsecities.net$session_slides'>Browse slides</a></span>";
     }
-    </div>
+    echo '</div>';
   }
   if($subsessions) {
     foreach($subsessions as $session) {
