@@ -81,19 +81,23 @@ $PODS_BASEURI_ARTICLES = 'http://urban-age.net/media/objects/articles';
           foreach($article_authors as $author) {
             $author_names = $author_names . $author['name'] . ' ' . $author['family_name'] . ', ';
           }
+          
+          // remove trailing comma
+          rtrim($author_names, ',');
+          
           $article_title = $articles_pods->get_field('name');
           echo '<!-- ' . $author_names . $article_title . '-->';
           if($TRACE_PODS_ARTICLES) : ?>
           <!-- <?php echo 'article Pod object: ' . var_export($articles_pods, true); ?> -->
           <?php endif; ?>
           <dt>
-            <?php echo $author_names ; ?>
-          </dt>
-          <dd>
             <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $articles_pods->get_field('slug'); ?>"><?php echo $article_title; ?></a>
             <?php if(!empty($article['language']['name'])) : ?>
               (English) - <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $article['slug'] . '/?lang=' . $article['language']['language_code']; ?>">(<?php echo $article['language']['name']; ?>)</a>
             <?php endif; ?>
+          </dt>
+          <dd>
+            <?php echo $author_names ; ?>
           </dd>
       <?php
         endif;
