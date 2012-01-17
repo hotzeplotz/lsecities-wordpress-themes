@@ -181,7 +181,7 @@ footer ul { list-style-type: none; }
 #main .event-programme .sessiontype-day > .session .session { margin-top: 1.8em; }
 #main .event-programme .sessiontype-day > .session > h2 { text-transform: none; }
 #main .event-programme .sessiontype-presentation > h2 { text-transform: none; }
-#main .event-programme .sessiontype-day > .session > h2 { background-color: #333; color: #fff; padding: 0.1875em; }
+#main .event-programme .sessiontype-day > .session > h2 { background-color: #333; color: #fff; padding: 0.1875em; text-transform: uppercase; }
 
 .row { max-width: 960px; }
 
