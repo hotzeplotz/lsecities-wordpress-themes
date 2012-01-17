@@ -170,13 +170,14 @@ footer ul { list-style-type: none; }
 #mainMenu > ul > li > span > a { padding-left: 0; padding-right: 0; }
 
 #main .event-programme h2 { font-size: 1.25em; }
-#main .event-programme dl { line-height: 1.2em; margin-bottom: 1em; }
+#main .event-programme dl { line-height: 1.2em; }
 #main .event-programme dl dt { font-weight: bold; }
 #main .event-programme dl dd { margin-left: 0.5em; }
 #main .event-programme .session-chairs { padding-left: 1em; }
 #main .event-programme .session-chairs dt, #main .event-programme .session-chairs dd { display: inline; }
 #main .event-programme .session { margin-bottom: 1em; }
-#main .event-programme .sessiontype-day > .session > * { padding-left: 1em; margin-bottom: 1.5em; }
+#main .event-programme .sessiontype-day > .session > * { padding-left: 1em; }
+#main .event-programme .sessiontype-day > .session > .session { margin-top: 1.5em; }
 #main .event-programme .sessiontype-day > .session > h2 { text-transform: none; }
 #main .event-programme .sessiontype-presentation > h2 { text-transform: none; }
 #main .event-programme .sessiontype-day > .session > h2 { background-color: #333; color: #fff; padding: 0.1875em; }
