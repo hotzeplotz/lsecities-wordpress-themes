@@ -57,6 +57,7 @@ function process_session($session_slug) {
   $session_respondents = $pod->get_field('respondents');
   $session_respondents_blurb = strip_tags($pod->get_field('respondents_blurb'), $ALLOWED_TAGS_IN_BLURBS);
   $session_youtube_video = $pod->get_field('media_items.youtube_uri');
+  $session_slides = $pod->get_field('media_items.slides_uri');
   $subsessions = $pod->get_field('sessions.slug');
   if($subsessions and count($subsessions) == 1) { $subsessions = array(0 => $subsessions); }
   if($TRACE_PODS_EVENT_PROGRAMME) { error_log($TRACE_PREFIX . 'session count: ' . count($subsessions)); }
@@ -71,8 +72,15 @@ function process_session($session_slug) {
   if($session_speakers) {
     echo "<div>$session_speakers_blurb</div>";
   }
-  if($session_youtube_video) {
-    echo "<div class='link video'><a href='http://youtube.com/watch?v=$session_youtube_video'>Watch video</a></div>";
+  if($session_youtube_video or $session_slides) {
+    <div class="media_items">
+    if($session_youtube_video) {
+      echo "<span class='link video'><a href='http://youtube.com/watch?v=$session_youtube_video'>Watch video</a></span>";
+    }
+    if($session_slides) {
+      echo "<span class='link slides'><a href='http://downloads0.cloud.lsecities.net$session_slides'>Browse slides</a></span>";
+    }
+    </div>
   }
   if($subsessions) {
     foreach($subsessions as $session) {
