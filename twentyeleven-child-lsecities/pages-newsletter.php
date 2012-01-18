@@ -298,6 +298,10 @@ $our_permalink = preg_replace('/^http:\/\/.*?\//', 'http://urban-age.net/', get_
    dl dd{
     margin-left: 0;
    }
+   
+   div.section {
+     border-top: 1px solid #E1E2E3;
+   }
 
 			/* /\/\/\/\/\/\/\/\/\/\ STANDARD STYLING: FOOTER /\/\/\/\/\/\/\/\/\/\ */
 
