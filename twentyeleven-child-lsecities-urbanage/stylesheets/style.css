@@ -188,6 +188,8 @@ footer ul { list-style-type: none; }
 
 #container.container { max-width: 1000px; margin: 0 auto; }
 
+#main .wp-caption { max-width: 100%; }
+
 /*/mediaquery*/
 /*/mediaquery*/
 @media print { * { background: transparent !important; color: black !important; text-shadow: none !important; filter: none !important; -ms-filter: none !important; }
