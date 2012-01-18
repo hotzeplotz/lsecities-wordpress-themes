@@ -70,6 +70,14 @@ $pdf_uri = preg_replace('/^https?:\/\/v1\.lsecities\.net/i', 'http://urban-age.n
 $article_publication_date = $pod->get_field('publication_date');
 $article_tags = $pod->get_field('tags');
 $article_authors = $pod->get_field('authors');
+
+// fetch any attachments, replace hostname until we switch to WP+Pods for the whole website
+$attachments = $pod->get_field('attachments');
+if(count($attachments)) {
+  foreach($attachments as &$attachment) {
+    $attachment['guid'] = preg_replace('/^https?:\/\/v1\.lsecities\.net/i', 'http://urban-age.net', $attachment['guid']);
+  }
+}
 ?>
 
 <?php get_header(); ?>
@@ -124,11 +132,20 @@ $article_authors = $pod->get_field('authors');
           <em>no tags defined</em>
           <?php endif; ?>
         </dd>
-        <?php if($pdf_uri) : ?>
+        <?php if($pdf_uri or count($attachments)) : ?>
         <dt>Downloads</dt>
+        <?php if($pdf_uri): ?>
         <dd>
           <a href="<?php echo $pdf_uri; ?>">Download this article as PDF</a>
         </dd>
+        <?php endif; ?>
+        <?php
+          if(count($attachments)) :
+            foreach($attachments as $attachment) :?>
+            <dd><a href="<?php echo $attachment['guid']; ?>" /><?php echo $attachment['post_title']; ?></a></dd>
+        <?php
+            endforeach;
+          endif; ?>
         <?php endif; ?>
       </dl>
     </div><!-- #author-info -->

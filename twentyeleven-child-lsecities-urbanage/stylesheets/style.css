@@ -108,28 +108,43 @@ nav#conferencesmenu ul li:first-child { margin-top: 0; }
 
 .entry-content { margin-bottom: 4em; }
 
-.singular article.hentry, .singular.page article.hentry { padding-top: 1em; }
+.singular article.hentry, .singular.page article.hentry { padding-top: 0; margin-right: 3.8%; }
+
+.one-column #content, .singular #content, .left-sidebar.singular #content { margin: auto; }
 
 body, input, textarea { background-color: #ffffff; }
 
 #main { margin-top: 1em; margin-bottom: 2em; padding: 0; }
 #main a { text-decoration: none; }
-#main h1, #main h2, #main h3, #main h4, #main h5, #main h6 { text-transform: uppercase; }
+#main h1, #main h2, #main h3, #main h4, #main h5, #main h6 { text-transform: uppercase; margin-bottom: 1em; }
 #main h1 { font-size: 1.5em; margin-bottom: 0.333333em; }
 #main ul > li { list-style: none; }
 #main p { line-height: 1.25em; margin-bottom: 1.25em; }
 #main p:last-child { margin-bottom: 0; }
+#main .featureboxes { margin-bottom: 1em; }
+#main .featureboxes .featurebox { background: black; color: white; }
+#main .featureboxes .featurebox h3 { margin: 1em; text-align: center; }
+#main .featureboxes .featurebox a, #main .featureboxes .featurebox a:hover, #main .featureboxes .featurebox a:active, #main .featureboxes .featurebox a:visited { color: white; }
 #main .defaultBox { border-top: 1px solid #5D5151; padding-top: 0.25em; padding-bottom: 0.25em; }
 #main .defaultBox:first-child { border-top: none; padding-top: 0; }
+#main article .introblurb { margin-bottom: 1em; }
 #main article .introblurb h2 { margin-top: 0.6em; margin-bottom: 0; }
 #main article .introblurb p { font-size: 1.25em; line-height: 1.25em; }
 #main .entry-title { padding-top: 0; line-height: 1em; }
 #main .wp-caption-text { font-size: 0.875em; font-family: ff-meta-web-pro, Tahoma, Verdana, Helvetica, sans-serif; }
 #main #author-info { padding-bottom: 2em; }
 #main .entry-content, #main .entry-summary { padding: 0; }
-#main ul.publication-side-toc li { line-height: 1.25em; margin-bottom: 0.25em; }
-#main ul.publication-side-toc h4 { margin-top: 0.75em; }
+#main dl.publication-side-toc { margin-top: 1.2em; }
+#main dl.publication-side-toc li { line-height: 1.25em; margin-bottom: 0.25em; }
+#main dl.publication-side-toc dt { margin-top: 1em; }
+#main dl.publication-side-toc dd { font-weight: bold; }
+#main dl.publication-side-toc h4 { margin-top: 2em; }
 #main .article .entry-content.article-text.sidebyside > div { -moz-column-count: 2; -webkit-column-count: 2; -o-column-count: 2; column-count: 2; }
+
+#core ul > li { line-height: 1.25em; margin-bottom: 1.25em; }
+
+#level3nav h1 { font-size: 1em; }
+#level3nav ul > li { line-height: 1.5em; margin-bottom: 0.2em; }
 
 #extras h1 { font-size: 1em; }
 
@@ -153,6 +168,22 @@ footer ul { list-style-type: none; }
 #mainMenu a:hover, #mainMenu span:hover { background-color: #cccccc; color: #b4001d; text-decoration: none; }
 #mainMenu a.active, #mainMenu span.active { background-color: #b4001d; color: #FFFFFF; text-decoration: none; }
 #mainMenu > ul > li > span > a { padding-left: 0; padding-right: 0; }
+
+#main .event-programme h2 { font-size: 1.25em; margin-bottom: 0.5em; }
+#main .event-programme dl { line-height: 1.2em; }
+#main .event-programme dl dt { font-weight: bold; }
+#main .event-programme dl dd { margin-left: 0.5em; }
+#main .event-programme .session-chairs { padding-left: 1em; }
+#main .event-programme .session-chairs dt, #main .event-programme .session-chairs dd { display: inline; }
+#main .event-programme .session { margin-bottom: 1em; }
+#main .event-programme .sessiontype-day > .session { margin-top: 2.4em; }
+#main .event-programme .sessiontype-day > .session > * { padding-left: 1em; }
+#main .event-programme .sessiontype-day > .session .session { margin-top: 1.8em; }
+#main .event-programme .sessiontype-day > .session > h2 { text-transform: none; }
+#main .event-programme .sessiontype-presentation > h2 { text-transform: none; }
+#main .event-programme .sessiontype-day > .session > h2 { background-color: #333; color: #fff; padding: 0.1875em; text-transform: uppercase; }
+#main .event-programme ul.mediaitems { display: inline; }
+#main .event-programme ul.mediaitems li { display: inline; margin-right: 1em; }
 
 .row { max-width: 960px; }
 

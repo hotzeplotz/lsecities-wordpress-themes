@@ -11,7 +11,7 @@
 
 <?php
   /* URI: TBD */
-  $TRACE_PODS_ARTICLES = true;
+  $TRACE_PODS_ARTICLES = false;
   $publication_slug = get_post_meta($post->ID, 'pod_slug', true);
   error_log('pod_slug: ' . $publication_slug);
   $pod = new Pod('publication_wrappers', $publication_slug);
@@ -21,6 +21,18 @@
   $pod_issuu = do_shortcode($pod->get_field('issuu'));
   $pod_cover = $pod->get_field('snapshot.guid');
   $pod_abstract = do_shortcode($pod->get_field('abstract'));
+  
+  $pod_pdf = $pod->get_field('publication_pdf.guid') ? $pod->get_field('publication_pdf.guid') : $pod->get_field('publication_pdf_uri');
+  $pod_alt_pdf = $pod->get_field('publication_alt_pdf.guid') ? $pod->get_field('publication_alt_pdf.guid') : $pod->get_field('publication_alt_pdf_uri');
+  $pod_pdf_lang2 = $pod->get_field('publication_pdf_lang2.guid') ? $pod->get_field('publication_pdf_lang2.guid') : $pod->get_field('publication_pdf_lang2_uri');
+  $pod_alt_pdf_lang2 = $pod->get_field('publication_alt_pdf_lang2.guid') ? $pod->get_field('publication_alt_pdf_lang2.guid') : $pod->get_field('publication_alt_pdf_lang2_uri');
+
+  $articles_pods = new Pod('article');
+  $search_params = array();
+  $search_params['where'] = 'in_publication.id = ' .$pod->get_field('id');
+  $search_params['orderby'] = 'sequence';
+  $search_params['limit'] = -1;
+  $articles_pods->findRecords($search_params);
   
 // TODO: remove hostname once we switch to WP for the whole urban-age.net
 $PODS_BASEURI_ARTICLES = 'http://urban-age.net/media/objects/articles';
@@ -45,10 +57,8 @@ $PODS_BASEURI_ARTICLES = 'http://urban-age.net/media/objects/articles';
     <?php if(!empty($pod->data)) : ?>
       <div class="article row">
         <div class="ninecol">
-          <?php if(count($pod->get_field('articles'))) : ?>
-          <h2>Read the articles</h2>
-          <p>
-    <ul class="publication-side-toc">
+          <?php if($articles_pods->getTotalRows()) : ?>
+    <dl class="publication-side-toc">
     <?php
     $sections = array();
     foreach(preg_split("/\n/", $publication_pod->get_field('sections')) as $section_line) {
@@ -62,27 +72,43 @@ $PODS_BASEURI_ARTICLES = 'http://urban-age.net/media/objects/articles';
     }
     foreach($sections as $section) : ?>
       <?php if($section['title']) { ?><h4><?php echo $section['title']; ?></h4><?php }
-      foreach($publication_pod->get_field('articles') as $article) :
-        if(preg_match("/^" . $section['id'] . "/", $article['sequence'])) : ?>
-          <?php if($TRACE_PODS_ARTICLES) : ?>
-          <!-- <?php echo 'article Pod object: ' . var_export($article, true); ?> -->
+
+      mysql_data_seek($articles_pods->result,0);
+      while($articles_pods->fetchRecord()) :
+        if(preg_match("/^" . $section['id'] . "/", $articles_pods->get_field('sequence'))) :
+          $article_authors = $articles_pods->get_field('authors');
+          $author_names = '';
+          foreach($article_authors as $author) {
+            $author_names = $author_names . $author['name'] . ' ' . $author['family_name'] . ', ';
+          }
+          
+          // remove trailing comma
+          $author_names = substr($author_names, 0, -2);
+          
+          $article_title = $articles_pods->get_field('name');
+          echo '<!-- ' . $author_names . $article_title . '-->';
+          if($TRACE_PODS_ARTICLES) : ?>
+          <!-- <?php echo 'article Pod object: ' . var_export($articles_pods, true); ?> -->
           <?php endif; ?>
-          <li>
-            <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $article['slug']; ?>"><?php echo $article['name']; ?></a>
+          <dt>
+            <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $articles_pods->get_field('slug'); ?>"><?php echo $article_title; ?></a>
             <?php if(!empty($article['language']['name'])) : ?>
               (English) - <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $article['slug'] . '/?lang=' . $article['language']['language_code']; ?>">(<?php echo $article['language']['name']; ?>)</a>
             <?php endif; ?>
-          </li>
+          </dt>
+          <dd>
+            <?php echo $author_names ; ?>
+          </dd>
       <?php
         endif;
-      endforeach; 
+      endwhile;
     endforeach; ?>
-    </ul>
+    </dl>
           </p>
           <?php endif; ?>
           
           <?php if($pod_issuu) : ?>
-          <h3>Browse the publication</h3>
+          <h2>Browse the publication</h2>
           <?php echo $pod_issuu ; ?>
           <?php endif ; ?>
         </div>
@@ -90,6 +116,15 @@ $PODS_BASEURI_ARTICLES = 'http://urban-age.net/media/objects/articles';
           <div class="publication-cover">
             <img src="<?php echo $pod_cover ; ?>" />
           </div>
+          <?php if($pod_pdf) : ?>
+          <div>
+            <h3>Downloads</h3>
+            <ul>
+              <li><a href="<?php echo $pod_pdf; ?>">Publication (PDF)</a></li>
+              <?php if($pod_alt_pdf) { ?><li><a href="<?php echo $pod_alt_pdf; ?>">Expert essays (PDF)</a></li><?php } ?>
+            </ul>
+          </div>
+          <?php endif; ?>
         </div>
       </div>
     <?php endif ?>    

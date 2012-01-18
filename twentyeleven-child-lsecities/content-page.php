@@ -11,11 +11,12 @@ $wide_layout = strtolower(get_post_meta(get_the_ID(), "layout", true)) == 'wide'
 $main_area_class = $wide_layout ? 'ninecol' : 'sixcol';
 ?>
 
-<div class="row">
+<div>
+
+<article id="post-<?php the_ID(); ?>" <?php post_class($main_area_class); ?>>
 	<header class="entry-header">
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 	</header><!-- .entry-header -->
-<article id="post-<?php the_ID(); ?>" <?php post_class($main_area_class); ?>>
 	<div class="entry-content">
 		<?php the_content(); ?>
 		<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'twentyeleven' ) . '</span>', 'after' => '</div>' ) ); ?>

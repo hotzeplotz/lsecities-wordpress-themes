@@ -77,7 +77,7 @@
 </div><!-- ## grid # container -->
 
 <?php wp_footer(); ?>
-<script type="text/javascript" src="https://use.typekit.com/loj6mke.js"></script>
+<script type="text/javascript" src="https://use.typekit.com/ftd3lpp.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 <script src="<?php bloginfo( 'stylesheet_directory' ); ?>/javascripts/rails.js?1315255380" type="text/javascript"></script> 
 <script src="<?php bloginfo( 'stylesheet_directory' ); ?>/javascripts/plugins.js?1315255380" type="text/javascript"></script> 
