@@ -14,8 +14,8 @@ $IMG_PREFIX = $BASE_URI . '/conferences/hongkong/';
   <div class="defaultBox">
    <h1>Conference videos</h1>
    <ul>
-    <li><a href="/ua/conferences/2011-hongkong/audio-and-video/"><img class="fullwidth" alt="conference videos" src="<?php echo $IMG_PREFIX; ?>media/hkvideothumbnail.jpg"></a></li>
-    <li><a href="/ua/conferences/2011-hongkong/audio-and-video/">Watch online</a></li>
+    <li><a href="https://www.youtube.com/playlist?list=PL0E0FE81C8AA35444&feature=view_all"><img class="fullwidth" alt="conference videos" src="<?php echo $IMG_PREFIX; ?>media/hkvideothumbnail.jpg"></a></li>
+    <li><a href="https://www.youtube.com/playlist?list=PL0E0FE81C8AA35444&feature=view_all">Watch online</a></li>
    </ul>
   </div>
   <div class="defaultBox">
