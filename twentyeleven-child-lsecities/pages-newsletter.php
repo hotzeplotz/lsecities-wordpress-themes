@@ -512,11 +512,11 @@ $our_permalink = preg_replace('/^http:\/\/.*?\//', 'http://urban-age.net/', get_
                                                                  </td>
                                                                  <td width="5">&nbsp;</td>
                                                                  <td>
-                                                                   <a href="https://facebook.com/lsecities">Join us on Facebook</a>
+                                                                   <a target="_blank" href="https://facebook.com/lsecities">Join us on Facebook</a>
                                                                  </td>
                                                                  <td valign="top" width="20">&nbsp;</td>
                                                                  <td>
-                                                                   <a href="https://twitter.com/#!/LSECities"><img border="0" src="http://urban-age.net/images/art/icons/socialmedia/twitter-32x32.png" alt="Twitter" height="36" width="36" style="display: block;"></a>
+                                                                   <a target="_blank" href="https://twitter.com/#!/LSECities"><img border="0" src="http://urban-age.net/images/art/icons/socialmedia/twitter-32x32.png" alt="Twitter" height="36" width="36" style="display: block;"></a>
                                                                  </td>
                                                                  <td width="5">&nbsp;</td>
                                                                  <td>
