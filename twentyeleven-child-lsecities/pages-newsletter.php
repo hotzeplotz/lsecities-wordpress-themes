@@ -500,7 +500,7 @@ $our_permalink = preg_replace('/^http:\/\/.*?\//', 'http://urban-age.net/', get_
                                                        <tr>
                                                          <td valign="top" width="269">
                                                            <h1>Follow LSE Cities</h1>
-                                                           <p style="margin-top: 5px;">Get all our updates directly on the social web.</p>
+                                                           <p style="margin-top: 5px;">Get all our updates on the social web.</p>
                                                          </td>
                                                          <td valign="top" width="10">&nbsp;</td>
                                                          <td valign="top" width="289">
