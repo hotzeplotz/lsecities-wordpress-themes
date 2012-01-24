@@ -8,7 +8,7 @@ $IMG_PREFIX = $BASE_URI . '/conferences/hongkong/';
   <div class="defaultBox">
    <h1>Programme</h1>
    <ul>
-    <li><a href="http://downloads0.cloud.lsecities.net/downloads/2011/11/ua-conference-hongkong-2011_programme_v01.pdf">Full conference programme</a></li>
+    <li>Full conference programme: <a href="programme">web version</a> | <a href="http://downloads0.cloud.lsecities.net/downloads/2011/11/ua-conference-hongkong-2011_programme_v01.pdf">PDF</a></li>
    </ul>
   </div>
   <div class="defaultBox">
