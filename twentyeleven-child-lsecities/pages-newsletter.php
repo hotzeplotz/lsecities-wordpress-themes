@@ -414,7 +414,7 @@ $our_permalink = preg_replace('/^http:\/\/.*?\//', 'http://urban-age.net/', get_
                                     	<tr>
                                         	<td valign="top">
                                             	<div mc:edit="std_preheader_content">
-                                               <?php $teaser = get_post_meta(get_the_ID(), "newsletter_teaser_text", true);
+                                               <?php $teaser = get_post_meta(get_the_ID(), "campaign_teaser_text", true);
                                                  echo $teaser;
                                                ?>
                                               </div>
@@ -443,7 +443,16 @@ $our_permalink = preg_replace('/^http:\/\/.*?\//', 'http://urban-age.net/', get_
                                             <td class="headerContent">
                                             
                                             	<!-- // Begin Module: Standard Header Image \\ -->
-                                            	<?php echo get_the_post_thumbnail(); ?>
+                                             <?php
+                                             $heading_link = get_post_meta(get_the_ID(), "campaign_heading_link", true);
+                                             if($heading_link) {
+                                               echo "<a target='_blank' href='$heading_link'>";
+                                             }
+                                            	echo get_the_post_thumbnail();
+                                             if($heading_link) {
+                                               echo "</a>";
+                                             }
+                                             ?>
                                             	<!-- // End Module: Standard Header Image \\ -->
                                             
                                             </td>
