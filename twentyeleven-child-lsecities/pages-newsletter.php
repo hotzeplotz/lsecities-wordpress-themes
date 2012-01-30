@@ -10,7 +10,7 @@
 $TRACE_PAGES_CAMPAIGN = true;
 
 // change to $our_permalink = get_permalink($id); once switch to WP+Pods is complete
-$our_permalink = preg_replace('/^http:\/\/.*?\//', 'http://urban-age.net/', get_permalink($id));
+$our_permalink = preg_replace('/^https?:\/\/.*?\//', 'http://urban-age.net/', get_permalink($id));
 if($TRACE_PAGES_CAMPAIGN) {
   error_log('post_permalink: ' . get_permalink($id));
   error_log('our_permalink: ' . $our_permalink);
