@@ -7,7 +7,7 @@
  * @subpackage Twenty_Eleven
  * @since Twenty Eleven 1.0
  */
-$TRACE_PAGES_CAMPAIGN = false;
+$TRACE_PAGES_CAMPAIGN = true;
 
 // change to $our_permalink = get_permalink($id); once switch to WP+Pods is complete
 $our_permalink = preg_replace('/^http:\/\/.*?\//', 'http://urban-age.net/', get_permalink($id));
