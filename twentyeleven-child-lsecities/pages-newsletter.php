@@ -7,8 +7,7 @@
  * @subpackage Twenty_Eleven
  * @since Twenty Eleven 1.0
  */
-$TRACE_PODS_ARTICLES = false;
-$PODS_BASEURI_ARTICLES = '/media/objects/articles/';
+$TRACE_PAGES_CAMPAIGN = false;
 
 // change to $our_permalink = get_permalink($id); once switch to WP+Pods is complete
 $our_permalink = preg_replace('/^http:\/\/.*?\//', 'http://urban-age.net/', get_permalink($id));
@@ -414,7 +413,7 @@ $our_permalink = preg_replace('/^http:\/\/.*?\//', 'http://urban-age.net/', get_
                                     	<tr>
                                         	<td valign="top">
                                             	<div mc:edit="std_preheader_content">
-                                               <?php $teaser = get_post_meta(get_the_ID(), "newsletter_teaser_text", true);
+                                               <?php $teaser = get_post_meta(get_the_ID(), "campaign_teaser_text", true);
                                                  echo $teaser;
                                                ?>
                                               </div>
@@ -443,7 +442,20 @@ $our_permalink = preg_replace('/^http:\/\/.*?\//', 'http://urban-age.net/', get_
                                             <td class="headerContent">
                                             
                                             	<!-- // Begin Module: Standard Header Image \\ -->
-                                            	<?php echo get_the_post_thumbnail(); ?>
+                                             <?php
+                                             $heading_link = get_post_meta(get_the_ID(), "campaign_heading_link", true);
+                                             if($TRACE_PAGES_CAMPAIGN) {
+                                               error_log('post ID: ' . get_the_ID());
+                                               error_log('campaign_heading_link: ' . $heading_link);
+                                             }
+                                             if($heading_link) {
+                                               echo "<a target='_blank' href='$heading_link'>";
+                                             }
+                                            	echo get_the_post_thumbnail();
+                                             if($heading_link) {
+                                               echo "</a>";
+                                             }
+                                             ?>
                                             	<!-- // End Module: Standard Header Image \\ -->
                                             
                                             </td>
