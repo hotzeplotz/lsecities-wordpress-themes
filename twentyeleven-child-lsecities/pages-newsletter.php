@@ -554,8 +554,9 @@ if($TRACE_PAGES_CAMPAIGN) {
 
 
                                                 <!-- // Begin Module: Standard Footer \\ -->
-                                                <!--
+                                                
                                                 <table border="0" cellpadding="10" cellspacing="0" width="100%">
+<!--
                                                     <tr>
                                                         <td valign="top" width="350">
                                                             <div mc:edit="std_footer">
@@ -574,6 +575,7 @@ if($TRACE_PAGES_CAMPAIGN) {
                                                             </div>
                                                         </td>
                                                     </tr>
+ -->
                                                     <tr>
                                                         <td colspan="2" valign="middle" id="utility">
                                                             <div mc:edit="std_utility">
@@ -581,7 +583,7 @@ if($TRACE_PAGES_CAMPAIGN) {
                                                             </div>
                                                         </td>
                                                     </tr>
-                                                </table> -->
+                                                </table>
                                                 <!-- // End Module: Standard Footer \\ -->
                                             
                                             </td>
