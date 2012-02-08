@@ -190,6 +190,16 @@ footer ul { list-style-type: none; }
 
 #main .wp-caption { max-width: 100%; }
 
+.event-programme .link.slides {
+  background-image: url('http://urban-age.net/0_images/icn_pdf.gif');
+  padding-left: 22px;
+}
+
+.event-programme .link.video {
+  background-image: url('http://urban-age.net/images/art/icons/socialmedia/youtube-16x16.png');
+  padding-left: 22px;
+}
+
 /*/mediaquery*/
 /*/mediaquery*/
 @media print { * { background: transparent !important; color: black !important; text-shadow: none !important; filter: none !important; -ms-filter: none !important; }
