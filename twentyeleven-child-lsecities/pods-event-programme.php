@@ -118,7 +118,7 @@ function process_session($session_slug) {
           ?>
         </div>
         <div class="threecol last">
-          <div class="publication-cover">
+          <div>
           </div>
         </div>
       </div>
