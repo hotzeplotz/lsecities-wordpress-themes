@@ -194,13 +194,13 @@ footer ul { list-style-type: none; }
   line-height: 2em;
 }
 
-.event-programme .link.slides {
+.event-programme .link.slides > a {
   background: url('http://urban-age.net/0_images/icn_pdf.gif') no-repeat;
   padding-left: 1.8333em;
   padding-bottom: 0.4em;
 }
 
-.event-programme .link.video {
+.event-programme .link.video > a {
   background: url('http://urban-age.net/images/art/icons/socialmedia/youtube-16x16.png') no-repeat;
   padding-left: 1.8333em;
   padding-bottom: 0.4em;
