@@ -426,7 +426,10 @@ if($TRACE_PAGES_CAMPAIGN) {
                                             <!-- *|IFNOT:ARCHIVE_PAGE|* -->
 											<td valign="top" width="190">
                                             	<div mc:edit="std_preheader_links">
+													<p>Not interested in email updates from LSE Cities? <a href="*|UNSUB|*">UNSUBSCRIBE from this list</a>.</p>
+													<p>
                                                 	Is this email not displaying correctly?<br /><a href="<?php echo $our_permalink; ?>" target="_blank">View it in your browser</a>.
+                                                	</p>
                                                 </div>
                                             </td>
 											<!-- *|END:IF|* -->
