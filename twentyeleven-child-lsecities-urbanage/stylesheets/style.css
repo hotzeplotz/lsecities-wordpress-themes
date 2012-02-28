@@ -99,10 +99,9 @@ header #socialbuttons { text-align: right; }
 header #socialbuttons h4 { display: inline; }
 header #socialbuttons ul, header #socialbuttons ul img { height: 1.25em; }
 
-nav#conferencesmenu { font-family: "BureauGrotesque-ThreeSeven", "Anton"; font-size: 2em; text-transform: uppercase; }
 nav#conferencesmenu a { color: #333; text-decoration: none; }
 nav#conferencesmenu a:hover { color: #990000; }
-nav#conferencesmenu ul { list-style: none; padding-left: 0; }
+nav#conferencesmenu ul { font-family: "BureauGrotesque-ThreeSeven", "Anton"; font-size: 2em; text-transform: uppercase; list-style: none; padding-left: 0; }
 nav#conferencesmenu ul li { margin-top: 0.5625em; }
 nav#conferencesmenu ul li:first-child { margin-top: 0; }
 
