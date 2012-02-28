@@ -34,7 +34,7 @@ $button_links = $pod->get_field('links');
 
 $slider = $pod->get_field('slider');
 if(!$slider) {
-  $featured_image_uri = get_the_post_thumbnail(get_the_ID(), array(960,367));
+  $featured_image_uri = get_the_post_thumbnail($post->ID, array(960,367));
 }
 ?>
 
