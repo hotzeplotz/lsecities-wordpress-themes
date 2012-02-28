@@ -219,6 +219,51 @@ footer #footerSitemap > .row > section > ul li { line-height: 1em; margin-bottom
 
 .entry-meta.article-abstract { font-style: italic; }
 
+.flexslider { font-family: ff-meta-web-pro,UbuntuRegular,Tahoma,Elvetica,sans-serif; position: relative; /* Direction Nav */ /* Control Nav */ }
+.flexslider .onecol, .flexslider .twocol, .flexslider .threecol, .flexslider .fourcol, .flexslider .fivecol, .flexslider .sixcol, .flexslider .sevencol, .flexslider .eightcol, .flexslider .ninecol, .flexslider .tencol, .flexslider .elevencol { margin-right: 0; }
+.flexslider .slide-inner { border-left: 1px solid #dedede; border-bottom: 1px solid #dedede; }
+.flexslider .col2 { width: 28.5em; float: left; }
+.flexslider .col1 { width: 14.25em; float: left; }
+.flexslider .gridbox { border-right: 1px solid #dedede; border-top: 1px solid #dedede; float: left; padding: 0.3125em; overflow: hidden; position: relative; min-height: 210px; }
+.flexslider .gridbox:hover .feature_title, .flexslider .gridbox:hover .feature_caption { display: none; }
+.flexslider .gridbox:hover .feature_info.textonly .feature_title, .flexslider .gridbox:hover .feature_info.textonly .feature_caption { display: block; }
+.flexslider .gridbox:hover .feature_blurb { max-height: 75%; }
+.flexslider .gridbox:hover .feature_info { -moz-transition-property: background-color; -webkit-transition-property: background-color; -o-transition-property: background-color; transition-property: background-color; -moz-transition-duration: 0.5s; -webkit-transition-duration: 0.5s; -o-transition-duration: 0.5s; transition-duration: 0.5s; -moz-transition-timing-function: ease-in-out; -webkit-transition-timing-function: ease-in-out; -o-transition-timing-function: ease-in-out; transition-timing-function: ease-in-out; -moz-transition-delay: 0s; -webkit-transition-delay: 0s; -o-transition-delay: 0s; transition-delay: 0s; background-color: #000; max-height: 75%; }
+.flexslider .gridbox:hover .feature_info.textonly { -moz-transition-property: background-color; -webkit-transition-property: background-color; -o-transition-property: background-color; transition-property: background-color; -moz-transition-duration: 0.5s; -webkit-transition-duration: 0.5s; -o-transition-duration: 0.5s; transition-duration: 0.5s; -moz-transition-timing-function: ease-in-out; -webkit-transition-timing-function: ease-in-out; -o-transition-timing-function: ease-in-out; transition-timing-function: ease-in-out; -moz-transition-delay: 0s; -webkit-transition-delay: 0s; -o-transition-delay: 0s; transition-delay: 0s; background-color: #000; max-height: inherit; }
+.flexslider .gridbox.mono { width: 13.5625em; }
+.flexslider .gridbox .inner-box { padding: 0.3125em; }
+.flexslider .gridbox .crop { position: relative; overflow: hidden; width: 445px; height: 210px; }
+.flexslider .gridbox .crop img { /* position: absolute; */ margin: 0; }
+.flexslider .gridbox.databox { font-family: BureauGrotesque, Anton; }
+.flexslider .gridbox.databox h1 { font-family: BureauGrotesque, Anton; text-transform: uppercase; font-weight: bold; font-size: 6em !important; display: inline; line-height: 1em; margin-bottom: inherit !important; }
+.flexslider .gridbox.databox p { font-size: 1.4em !important; display: inline; text-transform: uppercase; }
+.flexslider .introbox .inner-box { background-color: #000; color: #fff; }
+.flexslider .introbox .inner-box p { font-size: 0.8em; }
+.flexslider .feature_info { -moz-transition-property: background-color; -webkit-transition-property: background-color; -o-transition-property: background-color; transition-property: background-color; -moz-transition-duration: 0.5s; -webkit-transition-duration: 0.5s; -o-transition-duration: 0.5s; transition-duration: 0.5s; -moz-transition-timing-function: ease-in-out; -webkit-transition-timing-function: ease-in-out; -o-transition-timing-function: ease-in-out; transition-timing-function: ease-in-out; -moz-transition-delay: 0s; -webkit-transition-delay: 0s; -o-transition-delay: 0s; transition-delay: 0s; background: none repeat scroll 0 0 rgba(0, 0, 0, 0.6); bottom: 0; color: #F8F8F8; cursor: pointer; line-height: 1em; padding: 10px; margin: 0.3125em; position: absolute; left: 0; right: 0; }
+.flexslider .feature_info .feature_title { font-weight: bold; }
+.flexslider .feature_info .feature_caption { font-weight: normal; }
+.flexslider .feature_info .feature_blurb { float: left; line-height: 1.08em; max-height: 0; overflow: hidden; padding-top: 5px; width: 100%; }
+.flexslider ul { list-style-type: disc; }
+.flexslider ul li { list-style-type: inherit; }
+.flexslider ul.citieslist { display: inline; text-transform: uppercase; font-family: BureauGrotesque, Anton; font-size: 2em; }
+.flexslider ul.citieslist li { display: inline; }
+.flexslider ul.citieslist li.alternate { color: #999; }
+.flexslider ul.citieslist li a, .flexslider ul.citieslist li a:active, .flexslider ul.citieslist li a:visited { color: inherit; }
+.flexslider ul.citieslist li a:hover { color: #990000; }
+.flexslider .flex-direction-nav li a { width: 33px; height: 64px; text-indent: -9999px; border: 0; margin: -13px 0 0; display: block; /* background: url(theme/bg_direction_nav.png) no-repeat 0 0; */ position: absolute; top: 220px; /*((503-64)/2)px;*/ /* top: 50%; */ opacity: 0.9; }
+.flexslider .flex-direction-nav li a:hover { background-position: 0px -65px; opacity: 1; }
+.flexslider .flex-direction-nav li a:active { background-position: 0px -130px; }
+.flexslider .flex-direction-nav li .next { background: transparent url("http://urban-age.net/stylesheets/plugins/jquery.nivoslider/2.4/arrow-right.png") no-repeat; right: 0px; /* background-position: -52px 0;
+right: -21px; */ }
+.flexslider .flex-direction-nav li .prev { /* left: -20px; */ background: transparent url("http://urban-age.net/stylesheets/plugins/jquery.nivoslider/2.4/arrow-left.png") no-repeat; left: -2px; }
+.flexslider .flex-direction-nav li .disabled { opacity: .3; filter: alpha(opacity=30); cursor: default; }
+.flexslider .flex-control-nav { width: 100%; position: absolute; bottom: -30px; text-align: center; }
+.flexslider .flex-control-nav li { margin: 0 0 0 5px; display: inline-block; zoom: 1; *display: inline; }
+.flexslider .flex-control-nav li:first-child { margin: 0; }
+.flexslider .flex-control-nav li a { width: 13px; height: 13px; display: block; background: url(theme/bg_control_nav.png) no-repeat 0 0; cursor: pointer; text-indent: -9999px; }
+.flexslider .flex-control-nav li a:hover { background-position: 0 -13px; }
+.flexslider .flex-control-nav li a.active { background-position: 0 -26px; cursor: default; }
+
 /*/mediaquery*/
 /*/mediaquery*/
 @media print { * { background: transparent !important; color: black !important; text-shadow: none !important; filter: none !important; -ms-filter: none !important; }
