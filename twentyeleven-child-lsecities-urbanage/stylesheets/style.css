@@ -214,6 +214,10 @@ footer ul { list-style-type: none; }
   margin-top: 2em;
 }
 
+.featured-item {
+  margin-bottom: 4em;
+}
+
 /*/mediaquery*/
 /*/mediaquery*/
 @media print { * { background: transparent !important; color: black !important; text-shadow: none !important; filter: none !important; -ms-filter: none !important; }
