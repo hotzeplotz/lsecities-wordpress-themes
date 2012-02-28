@@ -8,14 +8,14 @@ $IMG_PREFIX = $BASE_URI . '/conferences/hongkong/';
   <div class="defaultBox">
    <h1>Programme</h1>
    <ul>
-    <li><a href="http://downloads0.cloud.lsecities.net/downloads/2011/11/ua-conference-hongkong-2011_programme_v01.pdf">Full conference programme</a></li>
+    <li>Full conference programme: <a href="programme">web version</a> | <a href="http://downloads0.cloud.lsecities.net/downloads/2011/11/ua-conference-hongkong-2011_programme_v01.pdf">PDF</a></li>
    </ul>
   </div>
   <div class="defaultBox">
    <h1>Conference videos</h1>
    <ul>
-    <li><a href="/ua/conferences/2011-hongkong/audio-and-video/"><img class="fullwidth" alt="conference videos" src="<?php echo $IMG_PREFIX; ?>media/hkvideothumbnail.jpg"></a></li>
-    <li><a href="/ua/conferences/2011-hongkong/audio-and-video/">Watch online</a></li>
+    <li><a href="https://www.youtube.com/playlist?list=PL0E0FE81C8AA35444&feature=view_all"><img class="fullwidth" alt="conference videos" src="<?php echo $IMG_PREFIX; ?>media/hkvideothumbnail.jpg"></a></li>
+    <li><a href="https://www.youtube.com/playlist?list=PL0E0FE81C8AA35444&feature=view_all">Watch online</a></li>
    </ul>
   </div>
   <div class="defaultBox">

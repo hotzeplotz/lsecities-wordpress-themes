@@ -117,17 +117,17 @@ $FORCE_UA_HOSTNAME = 'http://urban-age.net';
                 <ul>
                   <li>
                     <a href='https://facebook.com/lsecities' title='Facebook'>
-                      <img alt='Follow us on Facebook' src='http://urban-age.net/images/art/icons/thegforce-hand-drawn/Facebook/24x24.png' />
+                      <img alt='Follow us on Facebook' src='http://urban-age.net/images/art/icons/socialmedia/facebook-16x16.png' />
                     </a>
                   </li>
                   <li>
                     <a href='https://twitter.com/#!/LSECities' title='Twitter'>
-                      <img alt='Follow us on Twitter' src='http://urban-age.net/images/art/icons/thegforce-hand-drawn/Twitter/24x24.png' />
+                      <img alt='Follow us on Twitter' src='http://urban-age.net/images/art/icons/socialmedia/twitter-16x16.png' />
                     </a>
                   </li>
                   <li>
                     <a href='https://youtube.com/user/UrbanAge' title='YouTube channel'>
-                      <img alt='Follow us on YouTube' src='http://urban-age.net/images/art/icons/thegforce-hand-drawn/Youtube/24x24.png' />
+                      <img alt='Follow us on YouTube' src='http://urban-age.net/images/art/icons/socialmedia/youtube-16x16.png' />
                     </a>
                   </li>
                 </ul>

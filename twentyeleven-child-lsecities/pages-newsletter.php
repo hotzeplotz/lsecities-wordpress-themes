@@ -7,10 +7,15 @@
  * @subpackage Twenty_Eleven
  * @since Twenty Eleven 1.0
  */
-$TRACE_PAGES_CAMPAIGN = false;
+$TRACE_PAGES_CAMPAIGN = true;
 
 // change to $our_permalink = get_permalink($id); once switch to WP+Pods is complete
-$our_permalink = preg_replace('/^http:\/\/.*?\//', 'http://urban-age.net/', get_permalink($id));
+$our_permalink = preg_replace('/^https?:\/\/.*?\//', 'http://urban-age.net/', get_permalink($id));
+if($TRACE_PAGES_CAMPAIGN) {
+  error_log('post_permalink: ' . get_permalink($id));
+  error_log('our_permalink: ' . $our_permalink);
+}
+
 ?>
 <?php define('WP_USE_THEMES', false); ?>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -421,7 +426,10 @@ $our_permalink = preg_replace('/^http:\/\/.*?\//', 'http://urban-age.net/', get_
                                             <!-- *|IFNOT:ARCHIVE_PAGE|* -->
 											<td valign="top" width="190">
                                             	<div mc:edit="std_preheader_links">
+													<p>Not interested in email updates from LSE Cities? <a href="*|UNSUB|*">UNSUBSCRIBE from this list</a>.</p>
+													<p>
                                                 	Is this email not displaying correctly?<br /><a href="<?php echo $our_permalink; ?>" target="_blank">View it in your browser</a>.
+                                                	</p>
                                                 </div>
                                             </td>
 											<!-- *|END:IF|* -->
@@ -512,7 +520,7 @@ $our_permalink = preg_replace('/^http:\/\/.*?\//', 'http://urban-age.net/', get_
                                                        <tr>
                                                          <td valign="top" width="269">
                                                            <h1>Follow LSE Cities</h1>
-                                                           <p style="margin-top: 5px;">Get all our updates directly on the social web.</p>
+                                                           <p style="margin-top: 5px;">Get all our updates on the social web.</p>
                                                          </td>
                                                          <td valign="top" width="10">&nbsp;</td>
                                                          <td valign="top" width="289">
@@ -520,15 +528,15 @@ $our_permalink = preg_replace('/^http:\/\/.*?\//', 'http://urban-age.net/', get_
                                                              <tbody>
                                                                <tr>
                                                                  <td>
-                                                                   <a href="https://facebook.com/lsecities"><img border="0" src="http://urban-age.net/images/art/icons/thegforce-hand-drawn/Facebook/32x32.png" alt="Facebook" height="32" width="32" style="display: block;"></a>
+                                                                   <a href="https://facebook.com/lsecities"><img border="0" src="http://urban-age.net/images/art/icons/socialmedia/facebook-32x32.png" alt="Facebook" height="32" width="32" style="display: block;"></a>
                                                                  </td>
                                                                  <td width="5">&nbsp;</td>
                                                                  <td>
-                                                                   <a href="https://facebook.com/lsecities">Join us on Facebook</a>
+                                                                   <a target="_blank" href="https://facebook.com/lsecities">Join us on Facebook</a>
                                                                  </td>
                                                                  <td valign="top" width="20">&nbsp;</td>
                                                                  <td>
-                                                                   <a href="https://twitter.com/#!/LSECities"><img border="0" src="http://urban-age.net/images/art/icons/thegforce-hand-drawn/Twitter/32x32.png" alt="Twitter" height="36" width="36" style="display: block;"></a>
+                                                                   <a target="_blank" href="https://twitter.com/#!/LSECities"><img border="0" src="http://urban-age.net/images/art/icons/socialmedia/twitter-32x32.png" alt="Twitter" height="36" width="36" style="display: block;"></a>
                                                                  </td>
                                                                  <td width="5">&nbsp;</td>
                                                                  <td>
@@ -549,8 +557,9 @@ $our_permalink = preg_replace('/^http:\/\/.*?\//', 'http://urban-age.net/', get_
 
 
                                                 <!-- // Begin Module: Standard Footer \\ -->
-                                                <!--
+                                                
                                                 <table border="0" cellpadding="10" cellspacing="0" width="100%">
+<!--
                                                     <tr>
                                                         <td valign="top" width="350">
                                                             <div mc:edit="std_footer">
@@ -569,6 +578,7 @@ $our_permalink = preg_replace('/^http:\/\/.*?\//', 'http://urban-age.net/', get_
                                                             </div>
                                                         </td>
                                                     </tr>
+ -->
                                                     <tr>
                                                         <td colspan="2" valign="middle" id="utility">
                                                             <div mc:edit="std_utility">
@@ -576,7 +586,7 @@ $our_permalink = preg_replace('/^http:\/\/.*?\//', 'http://urban-age.net/', get_
                                                             </div>
                                                         </td>
                                                     </tr>
-                                                </table> -->
+                                                </table>
                                                 <!-- // End Module: Standard Footer \\ -->
                                             
                                             </td>
