@@ -70,6 +70,9 @@ if(!$slider) {
           <?php echo do_shortcode($pod->get_field('abstract')); ?>
         </div>
         <?php foreach($button_links as $key => $link) : ?>
+          <!--
+          <?php var_export($link);
+          -->
           <?php if(($key  % 3) == 0) : ?>
             <div class='featureboxes clearfix'>
           <?php endif; ?>          
