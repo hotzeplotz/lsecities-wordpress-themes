@@ -68,6 +68,13 @@ if(!$slider) {
         <?php endif; ?>
           <?php echo do_shortcode($pod->get_field('abstract')); ?>
         </div>
+        <?php
+        // sort by menu_order of linked items
+        foreach($button_links as $sort_key => $sort_value) {
+			$menu_order[$key] = $sort_value['menu_order'];
+		}
+		array_multisort($menu_order, SORT_ASC, $button_links);
+        ?>
         <?php if($TRACE_PODS_EVENTS_FRONTPAGE) { echo '<!-- button_links: ' . var_export($button_links, true) . '-->'; } ?>
         <?php foreach($button_links as $key => $link) : ?>
           <?php if($TRACE_PODS_EVENTS_FRONTPAGE) { echo '<!-- link: ' . var_export($link, true) . '-->'; } ?>
