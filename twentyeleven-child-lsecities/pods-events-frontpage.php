@@ -69,6 +69,13 @@ if(!$slider) {
         <?php endif; ?>
           <?php echo do_shortcode($pod->get_field('abstract')); ?>
         </div>
+        <?php
+        // sort by menu_order of linked items
+        foreach($button_links as $sort_key => $sort_value) {
+			$menu_order[$sort_key] = $sort_value['menu_order'];
+		}
+		array_multisort($menu_order, SORT_ASC, $button_links);
+        ?>
         <?php foreach($button_links as $key => $link) : ?>
           <?php if(($key  % 3) == 0) : ?>
             <div class='featureboxes row'>
