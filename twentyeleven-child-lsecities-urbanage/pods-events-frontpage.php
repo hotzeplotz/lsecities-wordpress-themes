@@ -30,7 +30,7 @@ if($pod_slug) {
 if($TRACE_PODS_EVENTS_FRONTPAGE) { error_log('pod_slug: ' . $pod_slug); }
 
 $button_links = $pod->get_field('links');
-// if($TRACE_PODS_EVENTS_FRONTPAGE) { echo '<!-- button_links: ' . var_export($button_links, true) . '-->'; }
+if($TRACE_PODS_EVENTS_FRONTPAGE) { echo '<!-- button_links: ' . var_export($button_links, true) . '-->'; }
 
 $slider = $pod->get_field('slider');
 if(!$slider) {
@@ -71,7 +71,7 @@ if(!$slider) {
         </div>
         <?php foreach($button_links as $key => $link) : ?>
           <!--
-          <?php var_export($link); ?>
+          <?php if($TRACE_PODS_EVENTS_FRONTPAGE) { echo '<!-- link: ' . var_export($link, true) . '-->'; } ?>
           -->
           <?php if(($key  % 3) == 0) : ?>
             <div class='featureboxes clearfix'>
