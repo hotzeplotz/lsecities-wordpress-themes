@@ -71,7 +71,7 @@ if(!$slider) {
         <?php
         // sort by menu_order of linked items
         foreach($button_links as $sort_key => $sort_value) {
-			$menu_order[$key] = $sort_value['menu_order'];
+			$menu_order[$sort_key] = $sort_value['menu_order'];
 		}
 		array_multisort($menu_order, SORT_ASC, $button_links);
         ?>
