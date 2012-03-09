@@ -41,7 +41,7 @@ if(!$slider) {
 
 <div role="main">
 
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+<?php if ( have_posts() ) : the_post(); endif; ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('ninecol'); ?>>
 	<?php if(false) : ?>
@@ -107,10 +107,6 @@ if(!$slider) {
 <aside id="level3nav" class='threecol last'>
   <?php get_template_part( 'nav', 'conferences' ); ?>
 </aside>
-
-<?php endwhile; else: ?>
-<!-- <p><?php //_e('Sorry, no posts matched your criteria.'); ?></p> -->
-<?php endif; ?>
 
 </div>
 
