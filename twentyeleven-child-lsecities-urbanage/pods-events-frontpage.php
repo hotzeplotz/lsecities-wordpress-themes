@@ -66,7 +66,7 @@ if(!$slider) {
 		  if($conference_title): ?>
 		    <h2><?php echo $conference_title; ?></h2>
         <?php endif; ?>
-          <?php echo do_shortcode($pod->get_field('abstract')); ?>
+          <?php echo do_shortcode($pod->get_field('blurb')); ?>
         </div>
         <?php
         // sort by menu_order of linked items
