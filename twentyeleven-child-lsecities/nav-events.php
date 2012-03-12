@@ -1,5 +1,3 @@
-//For the Publications Conference Newspapers Page
-
 <?php
 $TRACE_TEMPLATE_NAV = true;
 $TRACE_PREFIX = 'nav.php -- ';
