@@ -38,7 +38,8 @@ if(!$slider) {
   $featured_image_uri = get_the_post_thumbnail(get_the_ID(), array(960,367));
 }
 
-$poster_pdf = $pod->get_field('poster_pdf')[0]['guid'];
+$poster_pdf = $pod->get_field('poster_pdf');
+$poster_pdf = $poster_pdf[0]['guid'];
 ?>
 
 <?php get_header(); ?>
