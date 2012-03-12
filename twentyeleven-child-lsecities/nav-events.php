@@ -15,6 +15,8 @@ pod:
 	$events_list = new Pod('event');
 	$events_list->findRecords('date_start DESC');
 	
+  if($TRACE_TEMPLATE_NAV) { error_log($TRACE_PREFIX . 'events records found: ' . $events->getTotalRows()) };
+  
 	if($events->getTotalRows()> 0):
 	?>
 		<ul>
