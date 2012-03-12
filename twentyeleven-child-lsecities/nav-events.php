@@ -20,7 +20,7 @@ pod:
 	if($events_list->getTotalRows()> 0):
 	?>
 		<ul>
-			<?php while($events_list->fetchRecord): ?>
+			<?php while($events_list->fetchRecord()): ?>
 	
       <?php
        $event_title = $events_list->get_field('name');
