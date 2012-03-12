@@ -24,7 +24,7 @@ pod:
 	
       <?php
        $event_title = $events_list->get_field('name');
-       $event_date = date('d F Y', $events_list->get_field('date_start'));
+       $event_date = date('d F Y', strtotime($events_list->get_field('date_start')));
        $event_uri = $BASE_URI . $events_list->get_field('slug');
       ?>
       
