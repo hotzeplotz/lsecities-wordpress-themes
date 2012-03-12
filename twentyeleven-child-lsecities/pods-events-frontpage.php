@@ -58,7 +58,9 @@ if(!$slider) {
             <?php echo $featured_image_uri; ?>
           </div>
           <aside class='extras fourcol last'>
-          <?php echo do_shortcode($pod->get_field('info')); ?>
+          <p><?php echo do_shortcode($pod->get_field('date_freeform')); ?></p>
+          <p><?php echo do_shortcode($pod->get_field('location')); ?></p>
+          <p><em><?php echo do_shortcode($pod->get_field('event_series')); ?></em></p>
           </aside>
         </div>
         <div class='introblurb'>
@@ -67,7 +69,7 @@ if(!$slider) {
           if($tagline) : ?>
             <h2><?php echo $tagline; ?></h2>
         <?php endif; ?>
-          <?php echo do_shortcode($pod->get_field('abstract')); ?>
+          <?php echo do_shortcode($pod->get_field('blurb')); ?>
         </div>
         <?php
         // sort by menu_order of linked items
