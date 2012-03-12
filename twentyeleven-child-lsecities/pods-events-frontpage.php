@@ -15,6 +15,7 @@
  * URI: /media/objects/events/
  */
 global $pods;
+$BASE_URI = '/media/objects/events/';
 $TRACE_PODS_EVENTS_FRONTPAGE = true;
 
 // check if we are getting called via Pods (pods_url_variable is set)
@@ -102,8 +103,12 @@ $poster_pdf = $poster_pdf[0]['guid'];
         <?php the_content(); ?>
         </div>
       </article>
-      <aside class='threecol last'>
+      <aside class='threecol last'>	
+		<?php if($pod_slug) : // if we are dealing with an event, $pod_slug is set - display events sidebar ?>
+		<?php get_template_part( 'nav', 'events' ); ?>
+		<?php else : // otherwise we are dealing with a conference - display conferences sidebar ?>
         <?php get_template_part( 'nav', 'conferences' ); ?>
+        <?php endif; ?>
       </aside>
     </div>
     
