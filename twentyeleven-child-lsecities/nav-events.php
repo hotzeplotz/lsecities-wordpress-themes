@@ -12,18 +12,18 @@ pod:
 
 <nav id="eventsmenu">
 	<?php
-	$events = new Pod('event');
-	$events->findRecords('date_start DESC');
+	$events_list = new Pod('event');
+	$events_list->findRecords('date_start DESC');
 	
 	if($events->getTotalRows()> 0):
 	?>
 		<ul>
-			<?php while($events->fetchRecord): ?>
+			<?php while($events_list->fetchRecord): ?>
 	
       <?php
-       $event_title = $events->get_field('name');
-       $event_date = date('d F Y', $events->get_field('date_start'));
-       $event_uri = $BASE_URI . $events->get_field('slug');
+       $event_title = $events_list->get_field('name');
+       $event_date = date('d F Y', $events_list->get_field('date_start'));
+       $event_uri = $BASE_URI . $events_list->get_field('slug');
       ?>
       
       <li><a href="<?php echo $event_uri; ?>"><?php echo $event_date; ?> | <?php echo $event_title; ?></a></li>
