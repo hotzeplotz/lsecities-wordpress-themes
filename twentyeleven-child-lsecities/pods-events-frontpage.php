@@ -43,7 +43,7 @@ if(!$slider) {
 
 <div role="main">
 
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+<?php if ( have_posts() ) : the_post(); endif; ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
@@ -115,10 +115,6 @@ if(!$slider) {
 		<?php edit_post_link( __( 'Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
 	</div><!-- .entry-meta -->
 </article><!-- #post-<?php the_ID(); ?> -->
-
-<?php endwhile; else: ?>
-<p><?php //_e('Sorry, no posts matched your criteria.'); ?></p>
-<?php endif; ?>
 
 </div>
 
