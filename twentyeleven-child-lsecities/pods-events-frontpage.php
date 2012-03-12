@@ -37,6 +37,8 @@ $slider = $pod->get_field('slider');
 if(!$slider) {
   $featured_image_uri = get_the_post_thumbnail(get_the_ID(), array(960,367));
 }
+
+$poster_pdf = $pod->get_field('poster_pdf')[0]['guid'];
 ?>
 
 <?php get_header(); ?>
@@ -61,6 +63,9 @@ if(!$slider) {
           <p><?php echo do_shortcode($pod->get_field('date_freeform')); ?></p>
           <p><?php echo do_shortcode($pod->get_field('location')); ?></p>
           <p><em><?php echo do_shortcode($pod->get_field('event_series')); ?></em></p>
+          <?php if($poster_pdf) : ?>
+          <p><a href="<?php echo $poster_pdf; ?>">Download the event's poster</a> (PDF)</p>
+          <?php endif; ?>
           </aside>
         </div>
         <div class='introblurb'>
