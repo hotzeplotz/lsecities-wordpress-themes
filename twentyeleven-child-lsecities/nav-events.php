@@ -17,7 +17,7 @@ pod:
 	
   if($TRACE_TEMPLATE_NAV) { error_log($TRACE_PREFIX . 'events records found: ' . $events_list->getTotalRows()); }
   
-	if($events->getTotalRows()> 0):
+	if($events_list->getTotalRows()> 0):
 	?>
 		<ul>
 			<?php while($events_list->fetchRecord): ?>
