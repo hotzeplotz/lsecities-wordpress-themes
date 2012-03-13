@@ -23,9 +23,11 @@ $pod_slug = pods_url_variable(3);
 
 if($pod_slug) {
   $pod = new Pod('event', $pod_slug);
+  $is_conference = false;
 } else {
   $pod_slug = get_post_meta($post->ID, 'pod_slug', true);
   $pod = new Pod('conference', $pod_slug);
+  $is_conference = true;
 }
 
 if($TRACE_PODS_EVENTS_FRONTPAGE) { error_log('pod_slug: ' . $pod_slug); }
@@ -120,7 +122,7 @@ $poster_pdf = $poster_pdf[0]['guid'];
         </div>
       </article>
       <aside class='threecol last'>	
-		<?php if($pod_slug) : // if we are dealing with an event, $pod_slug is set - display events sidebar ?>
+		<?php if(!$is_conference) : // if we are dealing with an event, $pod_slug is set - display events sidebar ?>
 		<?php get_template_part( 'nav', 'events' ); ?>
 		<?php else : // otherwise we are dealing with a conference - display conferences sidebar ?>
         <?php get_template_part( 'nav', 'conferences' ); ?>
