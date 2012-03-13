@@ -39,6 +39,10 @@ if(!$slider) {
   $featured_image_uri = get_the_post_thumbnail(get_the_ID(), array(960,367));
 }
 
+$event_date = $pod->get_field('date_freeform');
+$event_location = do_shortcode($pod->get_field('location');
+$event_series = do_shortcode($pod->get_field('event_series');
+          
 $poster_pdf = $pod->get_field('poster_pdf');
 $poster_pdf = $poster_pdf[0]['guid'];
 ?>
@@ -62,12 +66,24 @@ $poster_pdf = $poster_pdf[0]['guid'];
             <?php echo $featured_image_uri; ?>
           </div>
           <aside class='extras fourcol last'>
-          <p><?php echo do_shortcode($pod->get_field('date_freeform')); ?></p>
-          <p><?php echo do_shortcode($pod->get_field('location')); ?></p>
-          <p><em><?php echo do_shortcode($pod->get_field('event_series')); ?></em></p>
-          <?php if($poster_pdf) : ?>
-          <p><a href="<?php echo $poster_pdf; ?>">Download the event's poster</a> (PDF)</p>
-          <?php endif; ?>
+            <dl>
+              <?php if($event_date): ?>
+              <dt>When</dt>
+              <dd><?php echo $event_date; ?></dd>
+              <?php endif; ?>
+              <?php if($event_location): ?>
+              <dt>Where</dt>
+              <dd><?php echo $event_location; ?></dd>
+              <?php endif; ?>
+              <?php if($event_series): ?>
+              <dt>Event series</dt>
+              <dd><em><?php echo do_shortcode($pod->get_field('event_series')); ?></em></dd>
+              <?php endif; ?>
+              <?php if($poster_pdf) : ?>
+              <dt>Downloads</dt>
+              <dd><a href="<?php echo $poster_pdf; ?>">Event's poster</a> (PDF)</dd>
+              <?php endif; ?>
+            </dl>
           </aside>
         </div>
         <div class='introblurb'>
