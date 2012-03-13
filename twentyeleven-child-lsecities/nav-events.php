@@ -13,7 +13,10 @@ pod:
 <nav id="eventsmenu">
 	<?php
 	$events_list = new Pod('event');
-	$events_list->findRecords('date_start DESC');
+	$events_list->findRecords(array(
+    'orderby' => 'date_start DESC',
+    'limit' => -1
+  ));
 	
   if($TRACE_TEMPLATE_NAV) { error_log($TRACE_PREFIX . 'events records found: ' . $events_list->getTotalRows()); }
   
