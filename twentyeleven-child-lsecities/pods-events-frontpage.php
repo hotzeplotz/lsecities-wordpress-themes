@@ -40,8 +40,8 @@ if(!$slider) {
 }
 
 $event_date = $pod->get_field('date_freeform');
-$event_location = do_shortcode($pod->get_field('location');
-$event_series = do_shortcode($pod->get_field('event_series');
+$event_location = do_shortcode($pod->get_field('location'));
+$event_series = do_shortcode($pod->get_field('event_series'));
           
 $poster_pdf = $pod->get_field('poster_pdf');
 $poster_pdf = $poster_pdf[0]['guid'];
