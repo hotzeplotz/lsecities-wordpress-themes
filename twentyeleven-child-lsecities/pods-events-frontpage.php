@@ -105,7 +105,7 @@ $poster_pdf = $poster_pdf[0]['guid'];
               <dd>
                 <ul>
                   <?php foreach($event_speakers as $event_speaker): ?>
-                  <li><a href="#person-profile-<?php echo $event_speaker['slug'] ?><?php echo $event_speaker['name'] ?> <?php echo $event_speaker['family_name'] ?></li>
+                  <li><a href="#person-profile-<?php echo $event_speaker['slug'] ?>"><?php echo $event_speaker['name'] ?> <?php echo $event_speaker['family_name'] ?></a></li>
                   <?php endforeach; ?>
                 </ul>
               </dd>
