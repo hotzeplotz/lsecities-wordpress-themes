@@ -105,7 +105,7 @@ $poster_pdf = $poster_pdf[0]['guid'];
               <dd>
                 <ul>
                   <?php foreach($event_speakers as $event_speaker): ?>
-                  <li><?php echo $event_speaker['name'] ?> <?php echo $event_speaker['family_name'] ?></li>
+                  <li><a href="#person-profile-<?php echo $event_speaker['slug'] ?><?php echo $event_speaker['name'] ?> <?php echo $event_speaker['family_name'] ?></li>
                   <?php endforeach; ?>
                 </ul>
               </dd>
@@ -178,6 +178,21 @@ $poster_pdf = $poster_pdf[0]['guid'];
           <?php endif; ?>
         <?php endforeach ; ?>
         <?php if(!$is_conference): ?>
+        <aside class="row">
+			<section class="sixcol">
+				<?php if(is_array($event_speakers)): ?>
+				<h1>Speaker profiles</h1>
+				<?php foreach($event_speakers as $event_speaker): ?>
+					<section id="person-profile-<?php echo $event_moderator['name'] ?>">
+						<h1><?php echo $event_speaker['name'] ?> <?php echo $event_speaker['family_name'] ?></h1>
+						<p><?php echo $event_speaker['profile_text'] ?></p>
+					</section>
+				<?php endforeach; ?>
+				<?php endif; ?>
+			</section>
+			<div class="sixcol last">
+			</div>
+        </aside>
         <?php endif; ?>
         <div id="the_content">
         <?php the_content(); ?>
