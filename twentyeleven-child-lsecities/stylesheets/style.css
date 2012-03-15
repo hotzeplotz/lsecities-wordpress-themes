@@ -18,7 +18,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
 
-body { font-size: 16px; font-family: ff-meta-web-pro, UbuntuRegular, Tahoma, sans-serif; line-height: 1.5; *font-size: small; }
+body { font-size: 16px; font-family: PT Sans, ff-meta-web-pro, UbuntuRegular, Tahoma, sans-serif; line-height: 1.5; *font-size: small; }
 
 pre, code, kbd, samp { font-family: monospace, sans-serif; }
 
@@ -81,10 +81,16 @@ a:hover { color: #555555; }
 
 strong, th { font-weight: bold; }
 
-aside { font-family: ff-meta-serif-web-pro, Palatino, Georgia, LinuxLibertineORegular, Gentium Book Basic, serif; }
+aside { font-family: PT Serif, ff-meta-serif-web-pro, Palatino, Georgia, LinuxLibertineORegular, Gentium Book Basic, serif; }
 aside p { font-size: 0.875em; line-height: 1.5em; }
+aside.extras { font-family: PT Sans, ff-meta-web-pro, UbuntuRegular, Tahoma, sans-serif; float: right; padding-bottom: 1.2em; }
+aside.extras > dl { padding-left: 1em; }
+aside.extras ul.people-list { display: inline; }
+aside.extras ul.people-list > li { display: inline; }
+aside.extras ul.people-list li:after { content: ', '; }
+aside.extras ul.people-list li:last-child:after { content: ''; }
 
-#featuresgrid { width: 100%; line-height: 1em; font-family: ff-meta-web-pro, UbuntuRegular, Tahoma, Elvetica, sans-serif; }
+#featuresgrid { width: 100%; line-height: 1em; font-family: PT Sans, ff-meta-web-pro, UbuntuRegular, Tahoma, Elvetica, sans-serif; }
 #featuresgrid .featurescolumn { width: 49.5260664%; margin-right: 0.94786739%; margin-bottom: 0.94786739%; float: left; }
 #featuresgrid .featurescolumn.last { margin-right: 0; }
 #featuresgrid .featurebox.bigbox { width: 100%; float: left; margin-bottom: 0.9569378%; position: relative; }
@@ -108,7 +114,7 @@ aside p { font-size: 0.875em; line-height: 1.5em; }
 
 .featured-item { margin-bottom: 4em; }
 
-article { font-family: ff-meta-serif-web-pro, Palatino, Georgia, LinuxLibertineORegular, Gentium Book Basic, serif; }
+article { font-family: PT Serif, ff-meta-serif-web-pro, Palatino, Georgia, LinuxLibertineORegular, Gentium Book Basic, serif; }
 
 small { font-size: 69%; }
 
@@ -116,7 +122,7 @@ input:invalid, textarea:invalid { -moz-border-radius: 1px; -webkit-border-radius
 
 .no-boxshadow input:invalid, .no-boxshadow textarea:invalid { background-color: #f0dddd; }
 
-#slider { margin-bottom: 0.5em; font-family: ff-meta-web-pro, UbuntuRegular, Tahoma, sans-serif; max-height: 13.18001222em; height: 13.18001222em; }
+#slider { margin-bottom: 0.5em; font-family: PT Sans, ff-meta-web-pro, UbuntuRegular, Tahoma, sans-serif; max-height: 13.18001222em; height: 13.18001222em; overflow: hidden; }
 
 dl dt { font-weight: bold; }
 dl dd { margin-bottom: 0.5em; }
@@ -128,7 +134,7 @@ nav a:hover { color: #555555; }
 
 p { margin-bottom: 1.625em; }
 
-h1, h2, h3, h4, h5, h6 { font-family: ff-meta-web-pro, UbuntuRegular, Tahoma, Elvetica, sans-serif; text-transform: uppercase; }
+h1, h2, h3, h4, h5, h6 { font-family: PT Sans, ff-meta-web-pro, UbuntuRegular, Tahoma, Elvetica, sans-serif; text-transform: uppercase; }
 
 ul { list-style-type: none; }
 
@@ -147,7 +153,7 @@ header h1.entry-title { font-size: 2em; margin-bottom: 1.2em; }
 #main article .introblurb h2 { margin-top: 0.6em; margin-bottom: 0; }
 #main article .introblurb p { font-size: 1.25em; line-height: 1.25em; }
 #main .wp-caption { max-width: 100% !important; }
-#main .wp-caption-text { font-size: 0.875em; font-family: ff-meta-web-pro, UbuntuRegular, Tahoma, Elvetica, sans-serif; }
+#main .wp-caption-text { font-size: 0.875em; font-family: PT Sans, ff-meta-web-pro, UbuntuRegular, Tahoma, Elvetica, sans-serif; }
 #main ul.publication-side-toc li { line-height: 1.25em; margin-bottom: 0.25em; }
 #main .publication-cover { -moz-box-shadow: 0.313em 0.313em 0.188em #888888; -webkit-box-shadow: 0.313em 0.313em 0.188em #888888; -o-box-shadow: 0.313em 0.313em 0.188em #888888; box-shadow: 0.313em 0.313em 0.188em #888888; }
 #main .article .entry-content.article-text.sidebyside > div { -moz-column-count: 2; -webkit-column-count: 2; -o-column-count: 2; column-count: 2; }
@@ -168,7 +174,7 @@ body > #container > header ul li a { padding: 0 0.6em; text-decoration: none; }
 #mainmenus { opacity: 0.9; }
 #mainmenus:hover { opacity: 1; }
 
-nav#level1nav, nav#level2nav { line-height: 1.2em; font-family: ff-meta-web-pro, UbuntuRegular, Tahoma, Elvetica, sans-serif; text-transform: uppercase; margin: 0.25em 0; }
+nav#level1nav, nav#level2nav { line-height: 1.2em; font-family: PT Sans, ff-meta-web-pro, UbuntuRegular, Tahoma, Elvetica, sans-serif; text-transform: uppercase; margin: 0.25em 0; }
 
 #level1nav ul li { border-bottom: 5px solid transparent; }
 #level1nav ul li a, #level1nav ul li a:active, #level1nav ul li a:visited { color: #000; }
@@ -204,7 +210,7 @@ header #socialbuttons ul { height: 16px; }
 
 #main { margin-top: 1em; margin-bottom: 2em; }
 
-#level3nav { font-size: 0.925em; font-family: ff-meta-web-pro, UbuntuRegular, Tahoma, Elvetica, sans-serif; }
+#level3nav { font-size: 0.925em; font-family: PT Sans, ff-meta-web-pro, UbuntuRegular, Tahoma, Elvetica, sans-serif; }
 #level3nav li { line-height: 1.25em; margin-bottom: 0.25em; }
 #level3nav ul.children { margin-left: 1em; }
 #level3nav #organizer-logos { max-width: 67.7290%; width: 67.7290%; }
