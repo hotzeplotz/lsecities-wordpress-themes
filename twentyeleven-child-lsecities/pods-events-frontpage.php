@@ -69,8 +69,18 @@ $poster_pdf = $poster_pdf[0]['guid'];
     <div class='row' id='core'>
       <article class='ninecol'>
         <div class='row'>
-          <div class='slider spaceAfter eightcol' id='slider'>
-            <?php echo $featured_image_uri; ?>
+          <div class='slider spaceAfter eightcol'>
+            <div id='slider'>
+              <?php echo $featured_image_uri; ?>
+            </div>
+            <div class='introblurb'>
+            <?php
+              $tagline = $pod->get_field('tagline');
+              if($tagline) : ?>
+              <h2><?php echo $tagline; ?></h2>
+            <?php endif; ?>
+            <?php echo do_shortcode($pod->get_field('blurb')); ?>
+            </div>
           </div>
           <aside class='extras fourcol last'>
             <dl>
@@ -132,14 +142,6 @@ $poster_pdf = $poster_pdf[0]['guid'];
               <?php endif; ?>
             </dl>
           </aside>
-        </div>
-        <div class='introblurb'>
-        <?php
-          $tagline = $pod->get_field('tagline');
-          if($tagline) : ?>
-            <h2><?php echo $tagline; ?></h2>
-        <?php endif; ?>
-          <?php echo do_shortcode($pod->get_field('blurb')); ?>
         </div>
         <?php
         // sort by menu_order of linked items
