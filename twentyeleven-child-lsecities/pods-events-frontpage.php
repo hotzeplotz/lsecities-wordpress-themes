@@ -18,9 +18,6 @@ global $pods;
 $BASE_URI = '/media/objects/events/';
 $TRACE_PODS_EVENTS_FRONTPAGE = true;
 
-// we don't want wpautop here
-remove_filter ('the_content', 'wpautop');
-
 // check if we are getting called via Pods (pods_url_variable is set)
 $pod_slug = pods_url_variable(3);
 
