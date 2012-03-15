@@ -195,7 +195,7 @@ $poster_pdf = $poster_pdf[0]['guid'];
 				<?php if($event_media): ?>
 				<h2>Event materials</h2>
 				<?php foreach($event_media as $event_media_item): ?>
-					<?php if($event_media_item['youtube_uri']: ?>
+					<?php if($event_media_item['youtube_uri']): ?>
 					<h3>Video</h3>
 					<iframe
 					 width="283"
