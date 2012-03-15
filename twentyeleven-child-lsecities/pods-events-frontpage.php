@@ -101,7 +101,7 @@ $poster_pdf = $poster_pdf[0]['guid'];
               </dd>
               <?php endif; ?>
               <?php if(is_array($event_respondents)): ?>
-              <dt>Speakers</dt>
+              <dt>Respondents</dt>
               <dd>
                 <ul>
                   <?php foreach($event_respondents as $event_respondent): ?>
@@ -111,7 +111,7 @@ $poster_pdf = $poster_pdf[0]['guid'];
               </dd>
               <?php endif; ?>
               <?php if(is_array($event_chairs)): ?>
-              <dt>Speakers</dt>
+              <dt>Chairs</dt>
               <dd>
                 <ul>
                   <?php foreach($event_chairs as $event_chair): ?>
@@ -121,7 +121,7 @@ $poster_pdf = $poster_pdf[0]['guid'];
               </dd>
               <?php endif; ?>
               <?php if(is_array($event_moderators)): ?>
-              <dt>Speakers</dt>
+              <dt>Moderators</dt>
               <dd>
                 <ul>
                   <?php foreach($event_moderators as $event_moderator): ?>
