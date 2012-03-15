@@ -36,6 +36,11 @@ $button_links = $pod->get_field('links');
 
 if($TRACE_PODS_EVENTS_FRONTPAGE) { error_log('button_links: ' . var_export($button_links, true)); }
 
+$event_speakers = $pod->get_field('speakers');
+$event_respondents = $pod->get_field('respondents');
+$event_chairs = $pod->get_field('chairs');
+$event_moderators = $pod->get_field('moderators');
+
 $slider = $pod->get_field('slider');
 if(!$slider) {
   $featured_image_uri = get_the_post_thumbnail(get_the_ID(), array(960,367));
@@ -84,6 +89,16 @@ $poster_pdf = $poster_pdf[0]['guid'];
               <?php if($poster_pdf) : ?>
               <dt>Downloads</dt>
               <dd><a href="<?php echo $poster_pdf; ?>">Event's poster</a> (PDF)</dd>
+              <?php endif; ?>
+              <?php if(is_array($event_speakers)): ?>
+              <dt>Speakers</dt>
+              <dd>
+                <ul>
+                  <?php foreach($event_speakers as $event_speaker): ?>
+                  <li><?php echo $event_speaker['name'] ?> <?php echo $event_speaker['family_name'] ?></li>
+                  <?php endforeach; ?>
+                </ul>
+              </dd>
               <?php endif; ?>
             </dl>
           </aside>
