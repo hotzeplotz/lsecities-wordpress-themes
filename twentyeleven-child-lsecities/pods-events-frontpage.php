@@ -163,7 +163,7 @@ $poster_pdf = $poster_pdf[0]['guid'];
             <?php if($event_blurb): ?>
             <div class="event-blurb"><?php echo $event_blurb; ?></div>
             <?php endif; ?>
-            <?php if($event_contact_info) ?>
+            <?php if($event_contact_info): ?>
             <div class="event-contact-info"><?php echo $event_contact_info; ?></div>
             <?php endif; ?>
             </div>
