@@ -70,9 +70,11 @@ $poster_pdf = $poster_pdf[0]['guid'];
       <article class='ninecol'>
         <div class='row'>
           <div class='slider spaceAfter eightcol'>
-            <div id='slider'>
-              <?php echo $featured_image_uri; ?>
-            </div>
+            <?php if($featured_image_uri): ?>
+              <div id='slider'>
+                <?php echo $featured_image_uri; ?>
+              </div>
+            <?php endif; ?>
             <div class='introblurb'>
             <?php
               $tagline = $pod->get_field('tagline');
