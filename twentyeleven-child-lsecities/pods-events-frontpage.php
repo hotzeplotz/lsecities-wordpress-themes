@@ -183,7 +183,7 @@ $poster_pdf = $poster_pdf[0]['guid'];
 				<?php if(is_array($event_speakers)): ?>
 				<h1>Speaker profiles</h1>
 				<?php foreach($event_speakers as $event_speaker): ?>
-					<section id="person-profile-<?php echo $event_speaker['name'] ?>">
+					<section id="person-profile-<?php echo $event_speaker['slug'] ?>">
 						<h1><?php echo $event_speaker['name'] ?> <?php echo $event_speaker['family_name'] ?></h1>
 						<p><?php echo $event_speaker['profile_text'] ?></p>
 					</section>
