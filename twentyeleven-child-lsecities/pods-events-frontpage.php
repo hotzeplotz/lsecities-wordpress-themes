@@ -41,6 +41,7 @@ $event_respondents = $pod->get_field('respondents');
 $event_chairs = $pod->get_field('chairs');
 $event_moderators = $pod->get_field('moderators');
 $event_hashtag = ltrim($pod->get_field('hashtag'), '#');
+$event_media = $pod->get_field('media_attachments');
 
 $slider = $pod->get_field('slider');
 if(!$slider) {
@@ -146,7 +147,7 @@ $poster_pdf = $poster_pdf[0]['guid'];
 
               <?php if($event_hashtag) : ?>
               <dt>Twitter hashtag</dt>
-              <dd><a href="https://search.twitter.com/search?q=&tag=<?php echo $event_hashtag; ?>&lang=all">#<?php echo $event_hashtag; ?></a> (PDF)</dd>
+              <dd><a href="https://search.twitter.com/search?q=&tag=<?php echo $event_hashtag; ?>&lang=all">#<?php echo $event_hashtag; ?></a></dd>
               <?php endif; ?>
               
               <?php if($poster_pdf) : ?>
@@ -181,16 +182,32 @@ $poster_pdf = $poster_pdf[0]['guid'];
         <aside class="row">
 			<section class="sixcol">
 				<?php if(is_array($event_speakers)): ?>
-				<h1>Speaker profiles</h1>
+				<h2>Speaker profiles</h2>
 				<?php foreach($event_speakers as $event_speaker): ?>
 					<section id="person-profile-<?php echo $event_speaker['slug'] ?>">
-						<h1><?php echo $event_speaker['name'] ?> <?php echo $event_speaker['family_name'] ?></h1>
+						<h3><?php echo $event_speaker['name'] ?> <?php echo $event_speaker['family_name'] ?></h3>
 						<p><?php echo $event_speaker['profile_text'] ?></p>
 					</section>
 				<?php endforeach; ?>
 				<?php endif; ?>
 			</section>
 			<div class="sixcol last">
+				<?php if($event_media): ?>
+				<h2>Event materials</h2>
+				<?php foreach($event_media as $event_media_item): ?>
+					<?php if($event_media_item['youtube_uri']: ?>
+					<h3>Video</h3>
+					<iframe
+					 width="283"
+					 height="191"
+					 src="https://www.youtube.com/embed/<?php echo $event_media_item['youtube_uri']; ?>?rel=0"
+					 frameborder="0"
+					 allowfullscreen="allowfullscreen">
+					 &#160;
+					</iframe>
+					<?php endif; ?>
+				<?php endforeach; ?>
+				<?php endif; ?>
 			</div>
         </aside>
         <?php endif; ?>
