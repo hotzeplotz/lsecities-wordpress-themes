@@ -206,6 +206,10 @@ $poster_pdf = $poster_pdf[0]['guid'];
 					 &#160;
 					</iframe>
 					<?php endif; ?>
+					<?php if($event_media_item['audio_uri']): ?>
+					<h3>Audio</h3>
+					<p>Listen to <a class="link mp3" href="<?php echo $event_media_item['audio_uri']; ?>">podcast</a></p>
+					<?php endif; ?>
 				<?php endforeach; ?>
 				<?php endif; ?>
 			</div>
