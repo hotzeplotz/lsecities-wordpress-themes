@@ -52,7 +52,11 @@ if(!$slider) {
   $featured_image_uri = get_the_post_thumbnail(get_the_ID(), array(960,367));
 }
 
-$event_date = $pod->get_field('date_freeform');
+$event_date_string = $pod->get_field('date_freeform');
+$event_date = new DateTime($pod->get_field('date'));
+$datetime_now = new DateTime('now');
+$is_future_event = ($event_date > $datetime_now) ? true : false;
+
 $event_location = preg_replace('/<p>(.*?)<\/p>/', "$1", $pod->get_field('location'));
 $event_series = $pod->get_field('event_series');
           
@@ -83,9 +87,9 @@ $poster_pdf = $poster_pdf[0]['guid'];
 
             <aside class='extras fourcol last'>
             <dl>
-              <?php if($event_date): ?>
+              <?php if($event_date_string): ?>
               <dt>When</dt>
-              <dd><?php echo $event_date; ?></dd>
+              <dd><?php echo $event_date_string; ?></dd>
               <?php endif; ?>
               
               <?php if($event_location): ?>
@@ -163,7 +167,7 @@ $poster_pdf = $poster_pdf[0]['guid'];
             <?php if($event_blurb): ?>
             <div class="event-blurb"><?php echo $event_blurb; ?></div>
             <?php endif; ?>
-            <?php if($event_contact_info): ?>
+            <?php if($event_contact_info and $is_future_event): ?>
             <div class="event-contact-info"><?php echo $event_contact_info; ?></div>
             <?php endif; ?>
             </div>
