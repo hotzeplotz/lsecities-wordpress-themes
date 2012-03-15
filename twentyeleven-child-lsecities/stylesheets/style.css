@@ -83,7 +83,7 @@ strong, th { font-weight: bold; }
 
 aside { font-family: PT Serif, ff-meta-serif-web-pro, Palatino, Georgia, LinuxLibertineORegular, Gentium Book Basic, serif; }
 aside p { font-size: 0.875em; line-height: 1.5em; }
-aside.extras { font-family: PT Sans, ff-meta-web-pro, UbuntuRegular, Tahoma, sans-serif; }
+aside.extras { font-family: PT Sans, ff-meta-web-pro, UbuntuRegular, Tahoma, sans-serif; float: right; padding-bottom: 1.2em; }
 aside.extras ul.people-list { display: inline; }
 aside.extras ul.people-list > li { display: inline; }
 aside.extras ul.people-list li:after { content: ', '; }
@@ -121,7 +121,7 @@ input:invalid, textarea:invalid { -moz-border-radius: 1px; -webkit-border-radius
 
 .no-boxshadow input:invalid, .no-boxshadow textarea:invalid { background-color: #f0dddd; }
 
-#slider { margin-bottom: 0.5em; font-family: PT Sans, ff-meta-web-pro, UbuntuRegular, Tahoma, sans-serif; max-height: 13.18001222em; height: 13.18001222em; }
+#slider { margin-bottom: 0.5em; font-family: PT Sans, ff-meta-web-pro, UbuntuRegular, Tahoma, sans-serif; max-height: 13.18001222em; height: 13.18001222em; overflow: hidden; }
 
 dl dt { font-weight: bold; }
 dl dd { margin-bottom: 0.5em; }

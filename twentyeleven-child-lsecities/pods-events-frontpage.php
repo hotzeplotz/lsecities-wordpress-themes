@@ -72,19 +72,12 @@ $poster_pdf = $poster_pdf[0]['guid'];
       <article class='ninecol'>
         <div class='row'>
           <div class='slider spaceAfter eightcol'>
-            <div id='slider'>
+            <div id='slider' class='eightcol'>
               <?php echo $featured_image_uri; ?>
             </div>
-            <div class='introblurb'>
-            <?php
-              $tagline = $pod->get_field('tagline');
-              if($tagline) : ?>
-              <h2><?php echo $tagline; ?></h2>
-            <?php endif; ?>
-            <?php echo do_shortcode($pod->get_field('blurb')); ?>
-            </div>
           </div>
-          <aside class='extras fourcol last'>
+
+            <aside class='extras fourcol last'>
             <dl>
               <?php if($event_date): ?>
               <dt>When</dt>
@@ -104,44 +97,44 @@ $poster_pdf = $poster_pdf[0]['guid'];
               <?php if(is_array($event_speakers)): ?>
               <dt>Speakers</dt>
               <dd>
-                <ul class="people-list">
-                  <?php foreach($event_speakers as $event_speaker): ?>
-                  <li><a href="#person-profile-<?php echo $event_speaker['slug'] ?>"><?php echo $event_speaker['name'] ?> <?php echo $event_speaker['family_name'] ?></a></li>
-                  <?php endforeach; ?>
-                </ul>
+              <ul class="people-list">
+                <?php foreach($event_speakers as $event_speaker): ?>
+                <li><a href="#person-profile-<?php echo $event_speaker['slug'] ?>"><?php echo $event_speaker['name'] ?> <?php echo $event_speaker['family_name'] ?></a></li>
+                <?php endforeach; ?>
+              </ul>
               </dd>
               <?php endif; ?>
               
               <?php if(is_array($event_respondents)): ?>
               <dt>Respondents</dt>
               <dd>
-                <ul class="people-list">
-                  <?php foreach($event_respondents as $event_respondent): ?>
-                  <li><?php echo $event_respondent['name'] ?> <?php echo $event_respondent['family_name'] ?></li>
-                  <?php endforeach; ?>
-                </ul>
+              <ul class="people-list">
+                <?php foreach($event_respondents as $event_respondent): ?>
+                <li><?php echo $event_respondent['name'] ?> <?php echo $event_respondent['family_name'] ?></li>
+                <?php endforeach; ?>
+              </ul>
               </dd>
               <?php endif; ?>
               
               <?php if(is_array($event_chairs)): ?>
               <dt>Chairs</dt>
               <dd>
-                <ul class="people-list">
-                  <?php foreach($event_chairs as $event_chair): ?>
-                  <li><?php echo $event_chair['name'] ?> <?php echo $event_chair['family_name'] ?></li>
-                  <?php endforeach; ?>
-                </ul>
+              <ul class="people-list">
+                <?php foreach($event_chairs as $event_chair): ?>
+                <li><?php echo $event_chair['name'] ?> <?php echo $event_chair['family_name'] ?></li>
+                <?php endforeach; ?>
+              </ul>
               </dd>
               <?php endif; ?>
               
               <?php if(is_array($event_moderators)): ?>
               <dt>Moderators</dt>
               <dd>
-                <ul class="people-list">
-                  <?php foreach($event_moderators as $event_moderator): ?>
-                  <li><?php echo $event_moderator['name'] ?> <?php echo $event_moderator['family_name'] ?></li>
-                  <?php endforeach; ?>
-                </ul>
+              <ul class="people-list">
+                <?php foreach($event_moderators as $event_moderator): ?>
+                <li><?php echo $event_moderator['name'] ?> <?php echo $event_moderator['family_name'] ?></li>
+                <?php endforeach; ?>
+              </ul>
               </dd>
               <?php endif; ?>
 
@@ -155,7 +148,17 @@ $poster_pdf = $poster_pdf[0]['guid'];
               <dd><a href="<?php echo $poster_pdf; ?>">Event's poster</a> (PDF)</dd>
               <?php endif; ?>
             </dl>
-          </aside>
+            </aside>
+            
+            <div class='introblurb'>
+            <?php
+              $tagline = $pod->get_field('tagline');
+              if($tagline) : ?>
+              <h2><?php echo $tagline; ?></h2>
+            <?php endif; ?>
+            <?php echo do_shortcode($pod->get_field('blurb')); ?>
+            </div>
+            
         </div>
         <?php
         // sort by menu_order of linked items
