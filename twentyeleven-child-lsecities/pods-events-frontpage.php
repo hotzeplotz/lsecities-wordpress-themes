@@ -81,18 +81,10 @@ $poster_pdf = $poster_pdf[0]['guid'];
         <div class='row'>
           <div class='slider spaceAfter eightcol'>
             <?php if($featured_image_uri): ?>
-              <div id='slider'>
+              <div id='slider' class='eightcol'>
                 <?php echo $featured_image_uri; ?>
               </div>
             <?php endif; ?>
-            <div class='introblurb'>
-            <?php
-              $tagline = $pod->get_field('tagline');
-              if($tagline) : ?>
-              <h2><?php echo $tagline; ?></h2>
-            <?php endif; ?>
-            <?php echo do_shortcode($pod->get_field('blurb')); ?>
-            </div>
           </div>
 
             <aside class='extras fourcol last'>
