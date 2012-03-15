@@ -36,10 +36,10 @@ $button_links = $pod->get_field('links');
 
 if($TRACE_PODS_EVENTS_FRONTPAGE) { error_log('button_links: ' . var_export($button_links, true)); }
 
-$event_speakers = $pod->get_field('speakers');
-$event_respondents = $pod->get_field('respondents');
-$event_chairs = $pod->get_field('chairs');
-$event_moderators = $pod->get_field('moderators');
+$event_speakers = $pod->get_field('speakers', 'name ASC');
+$event_respondents = $pod->get_field('respondents', 'name ASC');
+$event_chairs = $pod->get_field('chairs', 'name ASC');
+$event_moderators = $pod->get_field('moderators', 'name ASC');
 $event_hashtag = ltrim($pod->get_field('hashtag'), '#');
 $event_media = $pod->get_field('media_attachments');
 
