@@ -211,8 +211,12 @@ $poster_pdf = $poster_pdf[0]['guid'];
 					<?php endif; ?>
 					<?php if($event_media_item['audio_uri']): ?>
 					<h3>Audio</h3>
-					<p>Listen to <a class="link mp3" href="<?php echo $event_media_item['audio_uri']; ?>">podcast</a></p>
+					<p>Listen to <a class="link mp3" href="<?php echo $event_media_item['audio_uri']; ?>">podcast</a>.</p>
 					<?php endif; ?>
+					<?php if($event_media_item['presentation_uri']): ?>
+					<h3>Presentation slides</h3>
+					<p><a class="link pdf" href="<?php echo $event_media_item['presentation_uri']; ?>">Download</a> (PDF).</p>
+					<?php endif; ?> 
 				<?php endforeach; ?>
 				<?php endif; ?>
 			</div>
