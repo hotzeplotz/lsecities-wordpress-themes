@@ -40,6 +40,7 @@ $event_speakers = $pod->get_field('speakers');
 $event_respondents = $pod->get_field('respondents');
 $event_chairs = $pod->get_field('chairs');
 $event_moderators = $pod->get_field('moderators');
+$event_hashtag = ltrim($pod->get_field('hashtag'), '#');
 
 $slider = $pod->get_field('slider');
 if(!$slider) {
@@ -88,18 +89,17 @@ $poster_pdf = $poster_pdf[0]['guid'];
               <dt>When</dt>
               <dd><?php echo $event_date; ?></dd>
               <?php endif; ?>
+              
               <?php if($event_location): ?>
               <dt>Where</dt>
               <dd><?php echo $event_location; ?></dd>
               <?php endif; ?>
+              
               <?php if($event_series): ?>
               <dt>Event series</dt>
               <dd><em><?php echo do_shortcode($pod->get_field('event_series')); ?></em></dd>
               <?php endif; ?>
-              <?php if($poster_pdf) : ?>
-              <dt>Downloads</dt>
-              <dd><a href="<?php echo $poster_pdf; ?>">Event's poster</a> (PDF)</dd>
-              <?php endif; ?>
+              
               <?php if(is_array($event_speakers)): ?>
               <dt>Speakers</dt>
               <dd>
@@ -110,6 +110,7 @@ $poster_pdf = $poster_pdf[0]['guid'];
                 </ul>
               </dd>
               <?php endif; ?>
+              
               <?php if(is_array($event_respondents)): ?>
               <dt>Respondents</dt>
               <dd>
@@ -120,6 +121,7 @@ $poster_pdf = $poster_pdf[0]['guid'];
                 </ul>
               </dd>
               <?php endif; ?>
+              
               <?php if(is_array($event_chairs)): ?>
               <dt>Chairs</dt>
               <dd>
@@ -130,6 +132,7 @@ $poster_pdf = $poster_pdf[0]['guid'];
                 </ul>
               </dd>
               <?php endif; ?>
+              
               <?php if(is_array($event_moderators)): ?>
               <dt>Moderators</dt>
               <dd>
@@ -139,6 +142,16 @@ $poster_pdf = $poster_pdf[0]['guid'];
                   <?php endforeach; ?>
                 </ul>
               </dd>
+              <?php endif; ?>
+
+              <?php if($event_hashtag) : ?>
+              <dt>Twitter hashtag</dt>
+              <dd><a href="https://search.twitter.com/search?q=&tag=<?php echo $event_hashtag; ?>&lang=all">#<?php echo $event_hashtag; ?></a> (PDF)</dd>
+              <?php endif; ?>
+              
+              <?php if($poster_pdf) : ?>
+              <dt>Downloads</dt>
+              <dd><a href="<?php echo $poster_pdf; ?>">Event's poster</a> (PDF)</dd>
               <?php endif; ?>
             </dl>
           </aside>
@@ -164,6 +177,8 @@ $poster_pdf = $poster_pdf[0]['guid'];
             </div>
           <?php endif; ?>
         <?php endforeach ; ?>
+        <?php if(!$is_conference): ?>
+        <?php endif; ?>
         <div id="the_content">
         <?php the_content(); ?>
         </div>
