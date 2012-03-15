@@ -83,6 +83,7 @@ strong, th { font-weight: bold; }
 
 aside { font-family: PT Serif, ff-meta-serif-web-pro, Palatino, Georgia, LinuxLibertineORegular, Gentium Book Basic, serif; }
 aside p { font-size: 0.875em; line-height: 1.5em; }
+aside.extras { font-family: PT Sans, ff-meta-web-pro, UbuntuRegular, Tahoma, sans-serif; }
 
 #featuresgrid { width: 100%; line-height: 1em; font-family: PT Sans, ff-meta-web-pro, UbuntuRegular, Tahoma, Elvetica, sans-serif; }
 #featuresgrid .featurescolumn { width: 49.5260664%; margin-right: 0.94786739%; margin-bottom: 0.94786739%; float: left; }
