@@ -41,6 +41,10 @@ $event_respondents = $pod->get_field('respondents', 'family_name ASC');
 $event_chairs = $pod->get_field('chairs', 'family_name ASC');
 $event_moderators = $pod->get_field('moderators', 'family_name ASC');
 $event_hashtag = ltrim($pod->get_field('hashtag'), '#');
+
+$event_blurb = do_shortcode($pod->get_field('blurb'));
+$event_contact_info = do_shortcode($pod->get_field('contact_info'));
+
 $event_media = $pod->get_field('media_attachments');
 
 $slider = $pod->get_field('slider');
@@ -156,7 +160,12 @@ $poster_pdf = $poster_pdf[0]['guid'];
               if($tagline) : ?>
               <h2><?php echo $tagline; ?></h2>
             <?php endif; ?>
-            <?php echo do_shortcode($pod->get_field('blurb')); ?>
+            <?php if($event_blurb): ?>
+            <div class="event-blurb"><?php echo $event_blurb; ?></div>
+            <?php endif; ?>
+            <?php if($event_contact_info) ?>
+            <div class="event-contact-info"><?php echo $event_contact_info; ?></div>
+            <?php endif; ?>
             </div>
             
         </div>
