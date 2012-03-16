@@ -197,7 +197,7 @@ $poster_pdf = $poster_pdf[0]['guid'];
           <?php endif; ?>
         <?php endforeach ; ?>
         <?php if(!$is_conference): ?>
-        <aside class="row">
+        <aside class="row event-extra-content">
 			<section class="sixcol">
 				<?php if(is_array($event_speakers)): ?>
 				<h2>Speaker profiles</h2>
