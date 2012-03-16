@@ -63,10 +63,13 @@ $slide6_image_uri = $pod->get_field('slide6_image.guid');
 	<div class="entry-content">
 
     <div class='row' id='core'>
-      <article class='ninecol'>
-        <div id="featuresgrid" class="row">
-              <div class="featurescolumn">
-                <div class="featurebox bigbox last">
+      <article class='twelvecol'>
+<div class="flexslider">
+              <ul class="slides">
+                <li>
+                  <div class="slide-inner row">
+                    <div class="col2">
+                      <div class="gridbox" id="s909843">
                   <a href="<?php echo $slide1_href; ?>">
                     <?php if($slide1_image_uri) : ?>
                     <img src="<?php echo $slide1_image_uri; ?>" />
@@ -79,8 +82,8 @@ $slide6_image_uri = $pod->get_field('slide6_image.guid');
                       <div class="feature_blurb"><?php echo $pod->get_field('slide1_blurb'); ?></div>
                     </div>
                   </a>
-                </div>
-                <div class="featurebox smallbox">
+                      </div>
+                      <div class="gridbox mono" id="s535465">
                   <a href="<?php echo $slide2_href; ?>">
                     <?php if($slide2_image_uri) : ?>
                     <img src="<?php echo $slide2_image_uri; ?>" />
@@ -93,8 +96,8 @@ $slide6_image_uri = $pod->get_field('slide6_image.guid');
                       <div class="feature_blurb"><?php echo $pod->get_field('slide2_blurb'); ?></div>
                     </div>
                   </a>
-                </div>
-                <div class="featurebox smallbox last">
+                      </div>
+                      <div class="gridbox mono" id="s358452">
                   <a href="<?php echo $slide3_href; ?>">
                     <?php if($slide3_image_uri) : ?>
                     <img src="<?php echo $slide3_image_uri; ?>" />
@@ -107,10 +110,10 @@ $slide6_image_uri = $pod->get_field('slide6_image.guid');
                       <div class="feature_blurb"><?php echo $pod->get_field('slide3_blurb'); ?></div>
                     </div>
                   </a>
-                </div>
-              </div>
-              <div class="featurescolumn last">
-                <div class="featurebox smallbox">
+                      </div>
+                    </div>
+                    <div class="col2">
+                      <div class="gridbox mono" id="s9234363">
                   <a href="<?php echo $slide4_href; ?>">
                     <?php if($slide4_image_uri) : ?>
                     <img src="<?php echo $slide4_image_uri; ?>" />
@@ -123,8 +126,8 @@ $slide6_image_uri = $pod->get_field('slide6_image.guid');
                       <div class="feature_blurb"><?php echo $pod->get_field('slide4_blurb'); ?></div>
                     </div>
                   </a>
-               </div>
-                <div class="featurebox smallbox last">
+                      </div>
+                      <div class="gridbox mono" id="s1275434">
                   <a href="<?php echo $slide5_href; ?>">
                     <?php if($slide5_image_uri) : ?>
                     <img src="<?php echo $slide5_image_uri; ?>" />
@@ -137,23 +140,58 @@ $slide6_image_uri = $pod->get_field('slide6_image.guid');
                       <div class="feature_blurb"><?php echo $pod->get_field('slide5_blurb'); ?></div>
                     </div>
                   </a>
-                </div>
-                <div class="featurebox bigbox last">
-                  <a href="<?php echo $slide6_href; ?>">
-                    <?php if($slide6_image_uri) : ?>
-                    <img src="<?php echo $slide6_image_uri; ?>" />
-                    <?php else : ?>
-                    <img src="/files/2011/11/grid_placeholder_goldenratio.png" />
-                    <?php endif; ?>
-                    <div class="feature_info<?php if(empty($slide6_image_uri)) : ?> textonly<?php endif; ?>">
-                      <div class="feature_title"><?php echo $pod->get_field('slide6_title'); ?></div>
-                      <div class="feature_caption"><?php echo $pod->get_field('slide6_caption'); ?></div>
-                      <div class="feature_blurb"><?php echo $pod->get_field('slide6_blurb'); ?></div>
+                      </div>
+                      <div class="gridbox" id="s498754">
+                        <ul class="citieslist">
+                          <li>
+                            <a href="#">New York</a>
+                          </li>
+                          <li>
+                            <a href="#">Shanghai</a>
+                          </li>
+                          <li>
+                            <a href="#">London</a>
+                          </li>
+                          <li>
+                            <a href="#">Mexico City</a>
+                          </li>
+                          <li>
+                            <a href="#">Johannesburg</a>
+                          </li>
+                          <li>
+                            <a href="#">Berlin</a>
+                          </li>
+                          <li>
+                            <a href="#">Mumbai</a>
+                          </li>
+                          <li>
+                            <a href="#">São Paulo</a>
+                          </li>
+                          <li>
+                            <a href="#">Istanbul</a>
+                          </li>
+                          <li>
+                            <a href="#">Chicago</a>
+                          </li>
+                          <li>
+                            <a href="#">Hong Kong</a>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
-                  </a>
-                </div>
-              </div>
+                    <div class="col1">
+                      <div class="gridbox introbox" id="s990547">
+                        <div class="inner-box">
+                          <h2>Urban Age</h2>
+                          <p>LSE Cities is an international centre at the London School of Economics and Political Science that carries out research, education and outreach activities in London and abroad. Its mission is to study how people and cities interact in a rapidly urbanising world, focussing on how the design of cities impacts on society, culture and the environment. Through research, conferences, teaching and projects, the centre aims to shape new thinking and practice on how to make cities fairer and more sustainable for the next generation of urban dwellers, who will make up some 70 per cent of the global population by 2050.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
             </div>
+            
         <?php edit_post_link( __( 'Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
       </article>
 
