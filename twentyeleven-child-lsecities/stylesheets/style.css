@@ -83,7 +83,7 @@ strong, th { font-weight: bold; }
 
 aside { font-family: PT Serif, ff-meta-serif-web-pro, Palatino, Georgia, LinuxLibertineORegular, Gentium Book Basic, serif; }
 aside p { font-size: 0.875em; line-height: 1.5em; }
-aside.extras { font-family: PT Sans, ff-meta-web-pro, UbuntuRegular, Tahoma, sans-serif; float: right; padding-bottom: 1.2em; background-color: #ddd; }
+aside.extras { font-family: PT Sans, ff-meta-web-pro, UbuntuRegular, Tahoma, sans-serif; float: right; padding-bottom: 1.2em; background-color: #eee; }
 aside.extras > dl { padding-left: 1em; }
 aside.extras ul.people-list { display: inline; }
 aside.extras ul.people-list > li { display: inline; }
