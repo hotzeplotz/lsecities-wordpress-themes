@@ -15,33 +15,11 @@
  * URI: TBD
  */
 $pod_slug = get_post_meta($post->ID, 'pod_slug', true);
-error_log('pod_slug: ' . $pod_slug);
+$TRACE_PODS_MAIN_FRONTPAGE = true;
+if($TRACE_PODS_MAIN_FRONTPAGE) { error_log('pod_slug: ' . $pod_slug); }
 $pod = new Pod('slider', $pod_slug);
 
-$slide1_page_permalink = get_permalink($pod->get_field('slide1_page.ID'));
-$slide1_href = $slide1_page_permalink ? $slide1_page_permalink : $pod->get_field('slide1_uri');
-$slide1_image_uri = $pod->get_field('slide1_image.guid');
-
-$slide2_page_permalink = get_permalink($pod->get_field('slide2_page.ID'));
-$slide2_href = $slide2_page_permalink ? $slide2_page_permalink : $pod->get_field('slide2_uri');
-$slide2_image_uri = $pod->get_field('slide2_image.guid');
-
-$slide3_page_permalink = get_permalink($pod->get_field('slide3_page.ID'));
-$slide3_href = $slide3_page_permalink ? $slide3_page_permalink : $pod->get_field('slide3_uri');
-$slide3_image_uri = $pod->get_field('slide3_image.guid');
-
-$slide4_page_permalink = get_permalink($pod->get_field('slide4_page.ID'));
-$slide4_href = $slide4_page_permalink ? $slide4_page_permalink : $pod->get_field('slide4_uri');
-$slide4_image_uri = $pod->get_field('slide4_image.guid');
-
-$slide5_page_permalink = get_permalink($pod->get_field('slide5_page.ID'));
-$slide5_href = $slide5_page_permalink ? $slide5_page_permalink : $pod->get_field('slide5_uri');
-$slide5_image_uri = $pod->get_field('slide5_image.guid');
-
-$slide6_page_permalink = get_permalink($pod->get_field('slide6_page.ID'));
-$slide6_href = $slide6_page_permalink ? $slide6_page_permalink : $pod->get_field('slide6_uri');
-$slide6_image_uri = $pod->get_field('slide6_image.guid');
-
+$slides = $pod->get_field('slides');
 ?>
 
 <?php get_header(); ?>
@@ -65,7 +43,33 @@ $slide6_image_uri = $pod->get_field('slide6_image.guid');
     <div class='row' id='core'>
       <article class='twelvecol'>
 <div class="flexslider">
+  <?php if($TRACE_PODS_MAIN_FRONTPAGE): ?>
+  <!-- <?php var_export($slides, false); ?>  -->
+  <?php endif; ?>
               <ul class="slides">
+                <?php foreach($slides as $current_slide): ?>
+                <?php
+                  switch($current_slide['slide_layout']['slug']) {
+                    case 'two-two-two':
+                      $slide_content = array();
+                      $tile_index = 0;
+                      
+                      $tile_count = 4;
+                      $slide_column = array();
+                      while($tile_count > 0) {
+                        $this_tile_count = $current_slide['tile'][$tile_index++]['tile_layout']['name'];
+                        $this_tile_count = preg_replace('/x/', '/*/', $this_tile_count);
+                        $this_tile_count = eval('$this_tile_count = ' . $this_tile_count . ';');
+                        $tile_count -= $this_tile_count;
+                        array_push($slide_column, array(                            
+                          )
+                        );
+                      }
+                      break;
+                    default:
+                      break;
+                  }
+                ?>
                 <li>
                   <div class="slide-inner row">
                     <div class="col2">
@@ -189,14 +193,10 @@ $slide6_image_uri = $pod->get_field('slide6_image.guid');
                     </div>
                   </div>
                 </li>
+                <?php endforeach; ?>
               </ul>
             </div>
-            
-        <?php edit_post_link( __( 'Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
-      </article>
-
-      <?php get_template_part('nav'); ?>
-      
+      </article>      
     </div><!-- #core.row -->
     <div id='news_area'>
       <h2>News</h2>
