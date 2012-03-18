@@ -54,7 +54,6 @@ $slides = $pod->get_field('slides');
                 <?php foreach($slides as $current_slide): ?>
                 <?php
                   $current_slide_pod = new Pod('slide', $current_slide['slug']);
-                  echo "\n<!-- \n" . print_r($current_slide_pod) . "\n -->\n";
                   switch($current_slide['slide_layout']['slug']) {
                     case 'two-two-two':
                       $slide_content = array();
