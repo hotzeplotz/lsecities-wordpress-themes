@@ -54,7 +54,10 @@ $slides = $pod->get_field('slides');
                 <?php foreach($slides as $current_slide): ?>
                 <?php
                   $current_slide_pod = new Pod('slide', $current_slide['slug']);
-                  switch($current_slide['slide_layout']['slug']) {
+                  $layout = $current_slide_pod->get_field('slide_layout');
+                  $slide_layout = $layout['slug'];
+                  $tiles = $current_slide_pod->get_field('tiles');
+                  switch($slide_layout) {
                     case 'two-two-two':
                       $slide_content = array();
                       $tile_index = 0;
@@ -62,7 +65,7 @@ $slides = $pod->get_field('slides');
                       $tile_count = 4;
                       $slide_column = array();
                       while($tile_count > 0) {
-                        $this_tile_count = $current_slide['tile'][$tile_index++]['tile_layout']['name'];
+                        $this_tile_count = $tiles[$tile_index++]['tile_layout']['name'];
                         $this_tile_count = preg_replace('/x/', '/*/', $this_tile_count);
                         $this_tile_count = eval('$this_tile_count = ' . $this_tile_count . ';');
                         $tile_count -= $this_tile_count;
