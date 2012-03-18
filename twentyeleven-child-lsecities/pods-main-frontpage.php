@@ -57,6 +57,9 @@ $slides = $pod->get_field('slides');
                   $layout = $current_slide_pod->get_field('slide_layout');
                   $slide_layout = $layout['slug'];
                   $tiles = $current_slide_pod->get_field('tiles');
+                ?>
+<!-- <?php echo var_export($tiles, false); ?> -->
+				<?php
                   switch($slide_layout) {
                     case 'two-two-two':
                       $slide_content = array();
