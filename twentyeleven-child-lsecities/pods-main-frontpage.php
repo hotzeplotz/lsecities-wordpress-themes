@@ -106,7 +106,7 @@ $slides = $pod->get_field('slides');
                       $tile_count = 4;
                       $slide_column = array('layout' => $SLIDE_COLUMN_COL2, 'tiles' => array());
                       while($tile_count > 0 and $tile_index <= $total_tiles) {
-                        if($TRACE_PODS_MAIN_FRONTPAGE) { echo '<!-- tile[slug]: ' . var_export($tiles[$tile_index++]['slug'], true) . " -->\n"; }
+                        if($TRACE_PODS_MAIN_FRONTPAGE) { echo '<!-- tile[slug]: ' . var_export($tiles[$tile_index]['slug'], true) . " -->\n"; }
                         $tile = new Pod('tile', $tiles[$tile_index++]['slug']);
                         $tile_layout = $tile->get_field('tile_layout.name');
                         if($TRACE_PODS_MAIN_FRONTPAGE) { echo '<!-- tile[layout]: ' . var_export($tile_layout, true) . " -->\n"; }
