@@ -100,11 +100,12 @@ $slides = $pod->get_field('slides');
                     case 'two-two-one':
                       $slide_content = array('columns' => array());
                       $tile_index = 0;
+                      $total_tiles = count($tiles);
                       
                       // first column
                       $tile_count = 4;
                       $slide_column = array('layout' => $SLIDE_COLUMN_COL2, 'tiles' => array());
-                      while($tile_count > 0) {
+                      while($tile_count > 0 && $tile_index <= $total_tiles) {
                         if($TRACE_PODS_MAIN_FRONTPAGE) { echo '<!-- tile[slug]: ' . var_export($tiles[$tile_index++]['slug'], true) . " -->\n"; }
                         $tile = new Pod('tile', $tiles[$tile_index++]['slug']);
                         $tile_layout = $tile->get_field('tile_layout.name');
@@ -130,7 +131,7 @@ $slides = $pod->get_field('slides');
                       // second column
                       $tile_count = 4;
                       $slide_column = array('layout' => $SLIDE_COLUMN_COL2, 'tiles' => array());
-                      while($tile_count > 0) {
+                      while($tile_count > 0 && $tile_index <= $total_tiles) {
                         if($TRACE_PODS_MAIN_FRONTPAGE) { echo '<!-- tile[slug]: ' . var_export($tiles[$tile_index++]['slug'], true) . " -->\n"; }
                         $tile = new Pod('tile', $tiles[$tile_index++]['slug']);
                         $tile_layout = $tile->get_field('tile_layout.name');
@@ -156,7 +157,7 @@ $slides = $pod->get_field('slides');
                       // third column
                       $tile_count = 2;
                       $slide_column = array('layout' => $SLIDE_COLUMN_COL2, 'tiles' => array());
-                      while($tile_count > 0) {
+                      while($tile_count > 0 && $tile_index <= $total_tiles) {
                         if($TRACE_PODS_MAIN_FRONTPAGE) { echo '<!-- tile[slug]: ' . var_export($tiles[$tile_index++]['slug'], true) . " -->\n"; }
                         $tile = new Pod('tile', $tiles[$tile_index++]['slug']);
                         $tile_layout = $tile->get_field('tile_layout.name');
