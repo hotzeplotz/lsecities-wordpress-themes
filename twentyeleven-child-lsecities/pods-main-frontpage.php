@@ -158,7 +158,7 @@ $slides = $pod->get_field('slides');
                       $tile_count = 2;
                       $slide_column = array('layout' => $SLIDE_COLUMN_COL2, 'tiles' => array());
                       while($tile_count > 0 and $tile_index <= $total_tiles) {
-                        if($TRACE_PODS_MAIN_FRONTPAGE) { echo '<!-- tile[slug]: ' . var_export($tiles[$tile_index++]['slug'], true) . " -->\n"; }
+                        if($TRACE_PODS_MAIN_FRONTPAGE) { echo '<!-- tile[slug]: ' . var_export($tiles[$tile_index]['slug'], true) . " -->\n"; }
                         $tile = new Pod('tile', $tiles[$tile_index++]['slug']);
                         $tile_layout = $tile->get_field('tile_layout.name');
                         if($TRACE_PODS_MAIN_FRONTPAGE) { echo '<!-- tile[layout]: ' . var_export($tile_layout, true) . " -->\n"; }
@@ -198,10 +198,10 @@ $slides = $pod->get_field('slides');
                                 <img src="<?php echo $slide_column['image']; ?>" alt="" />
                               </div>
                             <?php endif; ?>
-                            <?php if($tile['title'] or $tile['tagline'] or $tile['blurb']): ?>
+                            <?php if($tile['title'] or $tile['subtitle'] or $tile['blurb']): ?>
                               <div class="feature_info">
                                 <?php if($tile['title']): ?><div class='feature_title'><?php echo $tile['title']; ?></div><?php endif; ?>
-                                <?php if($tile['tagline']): ?><div class='feature_caption'><?php echo $tile['tagline']; ?></div><?php endif; ?>
+                                <?php if($tile['subtitle']): ?><div class='feature_caption'><?php echo $tile['subtitle']; ?></div><?php endif; ?>
                                 <?php if($tile['blurb']): ?><div class='feature_blurb'><?php echo $tile['blurb']; ?></div><?php endif; ?>
                               </div>
                             <?php endif; ?>
