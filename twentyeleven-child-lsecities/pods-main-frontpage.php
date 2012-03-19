@@ -58,8 +58,7 @@ $slides = $pod->get_field('slides');
                 <?php foreach($slides as $current_slide): ?>
                 <?php
                   $current_slide_pod = new Pod('slide', $current_slide['slug']);
-                  $layout = $current_slide_pod->get_field('slide_layout');
-                  $slide_layout = $layout[0]['slug'];
+                  $slide_layout = $current_slide_pod->get_field('slide_layout.slug');
                   $tiles = $current_slide_pod->get_field('tiles');
                 ?>
 <!-- <?php if($TRACE_PODS_MAIN_FRONTPAGE) { echo 'tiles => ' . var_export($tiles, true) . "\n\n" . 'slide_layout => ' . var_export($slide_layout, true); }?> -->
@@ -74,13 +73,13 @@ $slides = $pod->get_field('slides');
                       while($tile_count > 0) {
                         if($TRACE_PODS_MAIN_FRONTPAGE) { echo '<!-- tile[slug]: ' . var_export($tiles[$tile_index++]['slug'], true) . " -->\n"; }
                         $tile = new Pod('tile', $tiles[$tile_index++]['slug']);
-                        $tile_layout = $tile->get_field('tile_layout');
+                        $tile_layout = $tile->get_field('tile_layout.name');
                         if($TRACE_PODS_MAIN_FRONTPAGE) { echo '<!-- tile[layout]: ' . var_export($tile_layout, true) . " -->\n"; }
-                        $this_tile_count = preg_replace('/x/', '*', $tile_layout[0]['name']);
+                        $this_tile_count = preg_replace('/x/', '*', $tile_layout);
                         if($TRACE_PODS_MAIN_FRONTPAGE) { echo '<!-- this_tile_count: ' . var_export($this_tile_count, true) . " -->\n"; }
                         eval('$this_tile_count = ' . $this_tile_count . ';');
                         $tile_count -= $this_tile_count;
-                        if($TRACE_PODS_MAIN_FRONTPAGE) { echo '<!-- tile_count: ' . var_export($tile_count, true) . " -->\n"; }
+                        if($TRACE_PODS_MAIN_FRONTPAGE) { echo '<!-- tile_countdown: ' . var_export($tile_count, true) . " -->\n"; }
                         array_push($slide_column['tiles'],
                           array(
                             'title' => $tile->get_field('name'),
