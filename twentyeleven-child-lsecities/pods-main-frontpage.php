@@ -22,6 +22,39 @@ $SLIDE_COLUMN_COL1 = 'col1';
 $SLIDE_COLUMN_COL2 = 'col2';
 $SLIDE_COLUMN_COL4 = 'col4';
 
+function get_tile_classes($tile_layout) {
+  $element_classes = '';
+  
+  $xcount = substr($tile_layout, 0, 1);
+  $ycount = substr($tile_layout, -1);
+  
+  switch($xcount) {
+    case '1':
+      $element_classes .= 'onetile';
+      break;
+    case '2':
+      $element_classes .= 'twotiles';
+      break;
+    case '3':
+      $element_classes .= 'threetiles';
+      break;
+    case '4':
+      $element_classes .= 'fourtiles';
+      break;
+    case '5':
+      $element_classes .= 'fivetiles';
+      break;
+  }
+  
+  switch($xcount) {
+    case '2':
+      $element_classes .= ' tall';
+      break;
+  }
+  
+  return $element_classes;
+}
+
 if($TRACE_PODS_MAIN_FRONTPAGE) { error_log('pod_slug: ' . $pod_slug); }
 $pod = new Pod('slider', $pod_slug);
 
@@ -82,6 +115,7 @@ $slides = $pod->get_field('slides');
                         if($TRACE_PODS_MAIN_FRONTPAGE) { echo '<!-- tile_countdown: ' . var_export($tile_count, true) . " -->\n"; }
                         array_push($slide_column['tiles'],
                           array(
+                            'element_class' => get_tile_classes($tile_layout),
                             'title' => $tile->get_field('name'),
                             'subtitle' => $tile->get_field('tagline'),
                             'blurb' => $tile->get_field('blurb'),
