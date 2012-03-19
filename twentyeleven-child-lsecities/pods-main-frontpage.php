@@ -66,10 +66,10 @@ $slides = $pod->get_field('slides');
                       $tile_count = 4;
                       $slide_column = array();
                       while($tile_count > 0) {
-                        if($TRACE_PODS_MAIN_FRONTPAGE) { echo '<!-- tile[slug]: ' . var_export($tiles[$tile_index++]['slug']) . ' -->'; }
+                        if($TRACE_PODS_MAIN_FRONTPAGE) { echo '<!-- tile[slug]: ' . var_export($tiles[$tile_index++]['slug'], true) . ' -->'; }
                         $tile = new Pod('tile', $tiles[$tile_index++]['slug']);
                         $tile_layout = $tile->get_field('tile_layout');
-                        if($TRACE_PODS_MAIN_FRONTPAGE) { echo '<!-- tile[layout]: ' . var_export($tile_layout) . ' -->'; }
+                        if($TRACE_PODS_MAIN_FRONTPAGE) { echo '<!-- tile[layout]: ' . var_export($tile_layout, true) . ' -->'; }
                         $this_tile_count = preg_replace('/x/', '/*/', $tile_layout['name']);
                         $this_tile_count = eval('$this_tile_count = ' . $this_tile_count . ';');
                         $tile_count -= $this_tile_count;
