@@ -16,6 +16,12 @@
  */
 $pod_slug = get_post_meta($post->ID, 'pod_slug', true);
 $TRACE_PODS_MAIN_FRONTPAGE = true;
+
+// for column classes
+$SLIDE_COLUMN_COL1 = 'col1';
+$SLIDE_COLUMN_COL2 = 'col2';
+$SLIDE_COLUMN_COL4 = 'col4';
+
 if($TRACE_PODS_MAIN_FRONTPAGE) { error_log('pod_slug: ' . $pod_slug); }
 $pod = new Pod('slider', $pod_slug);
 
@@ -64,7 +70,7 @@ $slides = $pod->get_field('slides');
                       $tile_index = 0;
                       
                       $tile_count = 4;
-                      $slide_column = array();
+                      $slide_column = array('layout' => $SLIDE_COLUMN_COL2, 'tiles' => array());
                       while($tile_count > 0) {
                         if($TRACE_PODS_MAIN_FRONTPAGE) { echo '<!-- tile[slug]: ' . var_export($tiles[$tile_index++]['slug'], true) . " -->\n"; }
                         $tile = new Pod('tile', $tiles[$tile_index++]['slug']);
@@ -75,10 +81,17 @@ $slides = $pod->get_field('slides');
                         eval('$this_tile_count = ' . $this_tile_count . ';');
                         $tile_count -= $this_tile_count;
                         if($TRACE_PODS_MAIN_FRONTPAGE) { echo '<!-- tile_count: ' . var_export($tile_count, true) . " -->\n"; }
-                        array_push($slide_column, array(                            
+                        array_push($slide_column['tiles'],
+                          array(
+                            'title' => $tile->get_field('name'),
+                            'subtitle' => $tile->get_field('tagline'),
+                            'blurb' => $tile->get_field('blurb'),
+                            'target_uri' => $tile->get_field('target_uri'),
+                            'subtitle' => $tile->get_field('image.guid')
                           )
                         );
                       }
+                      if($TRACE_PODS_MAIN_FRONTPAGE) { echo '<!-- slide_column_array: ' . var_export($slide_column, true) . " -->\n"; }
                       break;
                     default:
                       break;
