@@ -92,7 +92,7 @@ $slides = $pod->get_field('slides');
                 <?php
                   $current_slide_pod = new Pod('slide', $current_slide['slug']);
                   $slide_layout = $current_slide_pod->get_field('slide_layout.slug');
-                  $tiles = $current_slide_pod->get_field('tiles');
+                  $tiles = $current_slide_pod->get_field('tiles', 'displayorder ASC');
                 ?>
 <!-- <?php if($TRACE_PODS_MAIN_FRONTPAGE) { echo 'tiles => ' . var_export($tiles, true) . "\n\n" . 'slide_layout => ' . var_export($slide_layout, true); }?> -->
 				<?php
