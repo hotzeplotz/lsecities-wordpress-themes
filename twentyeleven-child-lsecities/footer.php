@@ -79,19 +79,21 @@
 <?php wp_footer(); ?>
 <script type="text/javascript" src="https://use.typekit.com/ftd3lpp.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<!--
 <script src="<?php bloginfo( 'stylesheet_directory' ); ?>/javascripts/rails.js?1315255380" type="text/javascript"></script> 
 <script src="<?php bloginfo( 'stylesheet_directory' ); ?>/javascripts/plugins.js?1315255380" type="text/javascript"></script> 
 <script src="<?php bloginfo( 'stylesheet_directory' ); ?>/javascripts/application.js?1315255380" type="text/javascript"></script> 
+-->
 <script src='<?php bloginfo( 'stylesheet_directory' ); ?>/javascripts/jquery.flickrbomb.min.js'></script>
 <script>
       //<![CDATA[
         jQuery().ready(function() {
-          $('.flexslider').flexslider(({
+          jQuery('.flexslider').flexslider(({
             animation: "slide",
             slideshow: false,
             mousewheel: true
-        }));
-        $('.citieslist li:nth-child(odd)').addClass('alternate');
+          }));
+          jQuery('.citieslist li:nth-child(odd)').addClass('alternate');
         });
       //]]>
 </script>
