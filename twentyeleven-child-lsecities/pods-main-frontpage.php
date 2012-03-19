@@ -56,7 +56,7 @@ $slides = $pod->get_field('slides');
                   $slide_layout = $layout['slug'];
                   $tiles = $current_slide_pod->get_field('tiles');
                 ?>
-<!-- <?php if($TRACE_PODS_MAIN_FRONTPAGE) { echo 'tiles => ' . var_export($tiles, false) . "\n\n" . 'slide_layout => ' . var_export($slide_layout, false); }?> -->
+<!-- <?php if($TRACE_PODS_MAIN_FRONTPAGE) { echo 'tiles => ' . var_export($tiles, true) . "\n\n" . 'slide_layout => ' . var_export($layout, true); }?> -->
 				<?php
                   switch($slide_layout) {
                     case 'two-two-two':
