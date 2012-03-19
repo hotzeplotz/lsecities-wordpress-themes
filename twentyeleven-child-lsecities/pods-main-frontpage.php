@@ -44,7 +44,7 @@ function get_tile_classes($tile_layout) {
       break;
   }
   
-  switch($xcount) {
+  switch($ycount) {
     case '2':
       $element_classes .= ' tall';
       break;
