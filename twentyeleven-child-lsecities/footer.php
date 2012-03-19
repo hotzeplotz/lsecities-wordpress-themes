@@ -85,7 +85,7 @@
 <script src='<?php bloginfo( 'stylesheet_directory' ); ?>/javascripts/jquery.flickrbomb.min.js'></script>
 <script>
       //<![CDATA[
-        $(function() {
+        jQuery().ready(function() {
           $('.flexslider').flexslider(({
             animation: "slide",
             slideshow: false,
