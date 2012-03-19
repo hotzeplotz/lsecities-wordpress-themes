@@ -87,7 +87,7 @@ $slides = $pod->get_field('slides');
                             'subtitle' => $tile->get_field('tagline'),
                             'blurb' => $tile->get_field('blurb'),
                             'target_uri' => $tile->get_field('target_uri'),
-                            'subtitle' => $tile->get_field('image.guid')
+                            'image' => $tile->get_field('image.guid')
                           )
                         );
                       }
