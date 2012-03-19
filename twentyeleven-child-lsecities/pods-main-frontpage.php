@@ -67,8 +67,8 @@ $slides = $pod->get_field('slides');
                       $slide_column = array();
                       while($tile_count > 0) {
                         $tile = new Pod('tile', $tiles[$tile_index++]['slug']);
-                        $this_tile_count = $tile->get_field('tile_layout')['name'];
-                        $this_tile_count = preg_replace('/x/', '/*/', $this_tile_count);
+                        $tile_layout = $tile->get_field('tile_layout');
+                        $this_tile_count = preg_replace('/x/', '/*/', $tile_layout['name']);
                         $this_tile_count = eval('$this_tile_count = ' . $this_tile_count . ';');
                         $tile_count -= $this_tile_count;
                         if($TRACE_PODS_MAIN_FRONTPAGE) { echo '<!-- tile_count: ' . var_export($tile_count, true) . ' -->'; }
