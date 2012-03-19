@@ -115,6 +115,7 @@ $slides = $pod->get_field('slides');
                         if($TRACE_PODS_MAIN_FRONTPAGE) { echo '<!-- tile_countdown: ' . var_export($tile_count, true) . " -->\n"; }
                         array_push($slide_column['tiles'],
                           array(
+                            'id' => $tile->get_field('slug'),
                             'element_class' => get_tile_classes($tile_layout),
                             'title' => $tile->get_field('name'),
                             'subtitle' => $tile->get_field('tagline'),
@@ -141,6 +142,7 @@ $slides = $pod->get_field('slides');
                         if($TRACE_PODS_MAIN_FRONTPAGE) { echo '<!-- tile_countdown: ' . var_export($tile_count, true) . " -->\n"; }
                         array_push($slide_column['tiles'],
                           array(
+                            'id' => $tile->get_field('slug'),
                             'element_class' => get_tile_classes($tile_layout),
                             'title' => $tile->get_field('name'),
                             'subtitle' => $tile->get_field('tagline'),
