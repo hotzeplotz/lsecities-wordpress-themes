@@ -53,10 +53,10 @@ $slides = $pod->get_field('slides');
                 <?php
                   $current_slide_pod = new Pod('slide', $current_slide['slug']);
                   $layout = $current_slide_pod->get_field('slide_layout');
-                  $slide_layout = $layout['slug'];
+                  $slide_layout = $layout[0]['slug'];
                   $tiles = $current_slide_pod->get_field('tiles');
                 ?>
-<!-- <?php if($TRACE_PODS_MAIN_FRONTPAGE) { echo 'tiles => ' . var_export($tiles, true) . "\n\n" . 'slide_layout => ' . var_export($layout, true); }?> -->
+<!-- <?php if($TRACE_PODS_MAIN_FRONTPAGE) { echo 'tiles => ' . var_export($tiles, true) . "\n\n" . 'slide_layout => ' . var_export($slide_layout, true); }?> -->
 				<?php
                   switch($slide_layout) {
                     case 'two-two-two':
@@ -66,10 +66,12 @@ $slides = $pod->get_field('slides');
                       $tile_count = 4;
                       $slide_column = array();
                       while($tile_count > 0) {
-                        $this_tile_count = $tiles[$tile_index++]['tile_layout']['name'];
+                        $tile = new Pod('tile', $tiles[$tile_index++]['slug']);
+                        $this_tile_count = $tile->get_field('tile_layout')['name'];
                         $this_tile_count = preg_replace('/x/', '/*/', $this_tile_count);
                         $this_tile_count = eval('$this_tile_count = ' . $this_tile_count . ';');
                         $tile_count -= $this_tile_count;
+                        if($TRACE_PODS_MAIN_FRONTPAGE) { echo '<!-- tile_count: ' . var_export($tile_count, true) . ' -->'; }
                         array_push($slide_column, array(                            
                           )
                         );
