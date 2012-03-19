@@ -46,8 +46,6 @@ $slides = $pod->get_field('slides');
   <?php if($TRACE_PODS_MAIN_FRONTPAGE): ?>
   <!--
   <?php var_export($slides, false); ?>
-  
-  <?php print_r($slides); ?>
   -->
   <?php endif; ?>
               <ul class="slides">
