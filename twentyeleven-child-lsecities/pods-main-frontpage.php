@@ -59,7 +59,7 @@ $slides = $pod->get_field('slides');
 <!-- <?php if($TRACE_PODS_MAIN_FRONTPAGE) { echo 'tiles => ' . var_export($tiles, true) . "\n\n" . 'slide_layout => ' . var_export($slide_layout, true); }?> -->
 				<?php
                   switch($slide_layout) {
-                    case 'two-two-two':
+                    case 'two-two-one':
                       $slide_content = array();
                       $tile_index = 0;
                       
