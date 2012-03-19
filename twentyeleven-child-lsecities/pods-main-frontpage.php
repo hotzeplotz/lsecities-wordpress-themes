@@ -105,7 +105,7 @@ $slides = $pod->get_field('slides');
                       // first column
                       $tile_count = 4;
                       $slide_column = array('layout' => $SLIDE_COLUMN_COL2, 'tiles' => array());
-                      while($tile_count > 0 && $tile_index <= $total_tiles) {
+                      while($tile_count > 0 and $tile_index <= $total_tiles) {
                         if($TRACE_PODS_MAIN_FRONTPAGE) { echo '<!-- tile[slug]: ' . var_export($tiles[$tile_index++]['slug'], true) . " -->\n"; }
                         $tile = new Pod('tile', $tiles[$tile_index++]['slug']);
                         $tile_layout = $tile->get_field('tile_layout.name');
@@ -131,7 +131,7 @@ $slides = $pod->get_field('slides');
                       // second column
                       $tile_count = 4;
                       $slide_column = array('layout' => $SLIDE_COLUMN_COL2, 'tiles' => array());
-                      while($tile_count > 0 && $tile_index <= $total_tiles) {
+                      while($tile_count > 0 and $tile_index <= $total_tiles) {
                         if($TRACE_PODS_MAIN_FRONTPAGE) { echo '<!-- tile[slug]: ' . var_export($tiles[$tile_index++]['slug'], true) . " -->\n"; }
                         $tile = new Pod('tile', $tiles[$tile_index++]['slug']);
                         $tile_layout = $tile->get_field('tile_layout.name');
@@ -157,7 +157,7 @@ $slides = $pod->get_field('slides');
                       // third column
                       $tile_count = 2;
                       $slide_column = array('layout' => $SLIDE_COLUMN_COL2, 'tiles' => array());
-                      while($tile_count > 0 && $tile_index <= $total_tiles) {
+                      while($tile_count > 0 and $tile_index <= $total_tiles) {
                         if($TRACE_PODS_MAIN_FRONTPAGE) { echo '<!-- tile[slug]: ' . var_export($tiles[$tile_index++]['slug'], true) . " -->\n"; }
                         $tile = new Pod('tile', $tiles[$tile_index++]['slug']);
                         $tile_layout = $tile->get_field('tile_layout.name');
@@ -169,6 +169,7 @@ $slides = $pod->get_field('slides');
                         if($TRACE_PODS_MAIN_FRONTPAGE) { echo '<!-- tile_countdown: ' . var_export($tile_count, true) . " -->\n"; }
                         array_push($slide_column['tiles'],
                           array(
+                            'id' => $tile->get_field('slug'),
                             'element_class' => get_tile_classes($tile_layout),
                             'title' => $tile->get_field('name'),
                             'subtitle' => $tile->get_field('tagline'),
@@ -186,6 +187,30 @@ $slides = $pod->get_field('slides');
                       break;
                   }
                 ?>
+                <li>
+                  <div class="slide-inner row">
+                    <?php foreach($slide_content['columns'] as $slide_column): ?>
+                      <div class="<?php echo $slide_column['layout']; ?>">
+                        <?php foreach($slide_column['tiles'] as $tile): ?>
+                          <div class="tile <?php echo $tile['element_class']; ?>" id="slidetile-<?php echo $tile['id']; ?>">
+                            <?php if($tile['image']): ?>
+                              <div class="crop">
+                                <img src="<?php echo $slide_column['image']; ?>" alt="" />
+                              </div>
+                            <?php endif; ?>
+                            <?php if($tile['title'] or $tile['tagline'] or $tile['blurb']): ?>
+                              <div class="feature_info">
+                                <?php if($tile['title']): ?><div class='feature_title'><?php echo $tile['title']; ?></div><?php endif; ?>
+                                <?php if($tile['tagline']): ?><div class='feature_caption'><?php echo $tile['tagline']; ?></div><?php endif; ?>
+                                <?php if($tile['blurb']): ?><div class='feature_blurb'><?php echo $tile['blurb']; ?></div><?php endif; ?>
+                              </div>
+                            <?php endif; ?>
+                          </div>
+                        <?php endforeach; ?>
+                      </div>
+                    <?php endforeach; ?>
+                  </div>
+                </li>
                 <li>
                   <div class="slide-inner row">
                     <div class="col2">
