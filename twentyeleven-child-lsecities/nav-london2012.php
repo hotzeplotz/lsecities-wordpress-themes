@@ -7,9 +7,7 @@ $IMG_PREFIX = $BASE_URI . '/ua/conferences/2012-london/';
 
   <div class="defaultBox">
    <h1>Conference information and themes</h1>
-   <ul>
-    <li>Please check back for further information on the 2012 Electric City conference.</li>
-   </ul>
+   <p>Please check back for further information on the 2012 Electric City conference.</p>
   </div>
   <div class="defaultBox">
    <h1>Newsletter subscription</h1>
