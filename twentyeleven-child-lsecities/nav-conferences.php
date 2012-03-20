@@ -2,6 +2,8 @@
 $current_post_id = $post->ID;
 if($current_post_id == 577 or in_array(577, get_post_ancestors($current_post_id))) : // /ua/conferences/2011-hongkong
   get_template_part('nav', 'hk2011');
+elseif($current_post_id == 1388 or in_array(1388, get_post_ancestors($current_post_id))) : // /ua/conferences/2011-london
+  get_template_part('nav', 'london2012');
 else :
 ?>
             <nav id='conferencesmenu'>
