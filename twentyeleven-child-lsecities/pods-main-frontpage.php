@@ -116,10 +116,12 @@ $slides = $pod->get_field('slides');
                         array_push($slide_column['tiles'],
                           array(
                             'id' => $tile->get_field('slug'),
-                            'element_class' => get_tile_classes($tile_layout),
+                            'element_class' => rtrim(get_tile_classes($tile_layout) . ' ' . $tile->get_field('class'), ' '),
                             'title' => $tile->get_field('name'),
                             'subtitle' => $tile->get_field('tagline'),
                             'blurb' => $tile->get_field('blurb'),
+                            'plain_content' => $tile->get_field('plain_content'),
+                            'posts_category' => $tile->get_field('posts_category'),
                             'target_uri' => $tile->get_field('target_uri'),
                             'image' => $tile->get_field('image.guid')
                           )
@@ -143,10 +145,12 @@ $slides = $pod->get_field('slides');
                         array_push($slide_column['tiles'],
                           array(
                             'id' => $tile->get_field('slug'),
-                            'element_class' => get_tile_classes($tile_layout),
+                            'element_class' => rtrim(get_tile_classes($tile_layout) . ' ' . $tile->get_field('class'), ' '),
                             'title' => $tile->get_field('name'),
                             'subtitle' => $tile->get_field('tagline'),
                             'blurb' => $tile->get_field('blurb'),
+                            'plain_content' => $tile->get_field('plain_content'),
+                            'posts_category' => $tile->get_field('posts_category'),
                             'target_uri' => $tile->get_field('target_uri'),
                             'image' => $tile->get_field('image.guid')
                           )
@@ -170,10 +174,12 @@ $slides = $pod->get_field('slides');
                         array_push($slide_column['tiles'],
                           array(
                             'id' => $tile->get_field('slug'),
-                            'element_class' => get_tile_classes($tile_layout),
+                            'element_class' => rtrim(get_tile_classes($tile_layout) . ' ' . $tile->get_field('class'), ' '),
                             'title' => $tile->get_field('name'),
                             'subtitle' => $tile->get_field('tagline'),
                             'blurb' => $tile->get_field('blurb'),
+                            'plain_content' => $tile->get_field('plain_content'),
+                            'posts_category' => $tile->get_field('posts_category'),
                             'target_uri' => $tile->get_field('target_uri'),
                             'image' => $tile->get_field('image.guid')
                           )
@@ -198,7 +204,15 @@ $slides = $pod->get_field('slides');
                                 <img src="<?php echo $slide_column['image']; ?>" alt="" />
                               </div>
                             <?php endif; ?>
-                            <?php if($tile['title'] or $tile['subtitle'] or $tile['blurb']): ?>
+                            <?php if($tile['plain_content']): ?>
+                              <div class="<?php echo $tile['element_class']; ?>">
+                                <?php echo $tile['plain_content']; ?>
+                              </div>
+                            <?php elseif($tile['posts_category']): ?>
+                              <div class="<?php echo ltrim($tile['element_class'] . ' categoryarchive', ' '); ?>">
+                                <em>Recent news go here</em>
+                              </div>
+                            <?php elseif($tile['title'] or $tile['subtitle'] or $tile['blurb']): ?>
                               <div class="feature_info">
                                 <?php if($tile['title']): ?><div class='feature_title'><?php echo $tile['title']; ?></div><?php endif; ?>
                                 <?php if($tile['subtitle']): ?><div class='feature_caption'><?php echo $tile['subtitle']; ?></div><?php endif; ?>
