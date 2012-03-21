@@ -71,6 +71,8 @@ nav ul, nav li { margin: 0; list-style: none; list-style-image: none; }
 
 .row .row { min-width: inherit; }
 
+@font-face { font-family: 'nevisBold'; src: url("fonts/webfont_nevis/nevis-webfont.eot"); src: url("fonts/webfont_nevis/nevis-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/webfont_nevis/nevis-webfont.woff") format("woff"), url("fonts/webfont_nevis/nevis-webfont.ttf") format("truetype"), url("fonts/webfont_nevis/nevis-webfont.svg#nevisBold") format("svg"); font-weight: normal; font-style: normal; }
+
 body, select, input, textarea { color: black; }
 
 h1, h2, h3, h4, h5, h6 { font-weight: normal; }
@@ -149,8 +151,11 @@ body { background: inherit; }
 header h1.entry-title { font-size: 2em; margin-bottom: 1.2em; }
 
 #main h1 { font-size: 2em; margin-bottom: 1.2em; }
+#main h1.mainheading { font-size: 3em; }
 #main h2 { font-size: 1.5em; margin-bottom: 1.1em; }
+#main h2.mainheading { font-size: 2.4em; }
 #main h3 { font-size: 1.2em; margin-bottom: 1em; }
+#main h1.mainheading, #main h2.mainheading, #main h3.mainheading, #main h4.mainheading, #main h5.mainheading, #main h6.mainheading { font-family: nevisBold, PT Sans, sans-serif; }
 #main .article-text img { max-width: 100%; }
 #main article .introblurb h2 { margin-top: 0.6em; margin-bottom: 0; }
 #main article .introblurb p { font-size: 1.25em; line-height: 1.25em; }
