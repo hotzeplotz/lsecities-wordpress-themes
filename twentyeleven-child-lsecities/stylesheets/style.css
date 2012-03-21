@@ -250,6 +250,7 @@ footer #footerSitemap > .row > section > ul li { line-height: 1em; margin-bottom
 .flexslider .tile.databox p { font-size: 1.4em !important; display: inline; text-transform: uppercase; }
 .flexslider .tile.citieslist ul { display: inline; text-transform: uppercase; font-family: BureauGrotesque, Anton; font-size: 2em; }
 .flexslider .tile.citieslist ul li { display: inline; }
+.flexslider .tile.citieslist ul li::after { content: ' '; }
 .flexslider .tile.citieslist ul li.alternate { color: #999; }
 .flexslider .tile.citieslist ul li a, .flexslider .tile.citieslist ul li a:active, .flexslider .tile.citieslist ul li a:visited { color: inherit; }
 .flexslider .tile.citieslist ul li a:hover { color: #990000; }

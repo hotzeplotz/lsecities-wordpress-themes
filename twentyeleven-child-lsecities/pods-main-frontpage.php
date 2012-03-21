@@ -165,7 +165,7 @@ $slides = $pod->get_field('slides');
                           <div class="tile <?php echo $tile['element_class']; ?>" id="slidetile-<?php echo $tile['id']; ?>">
                             <?php if($tile['image']): ?>
                               <div class="crop">
-                                <img src="<?php echo $slide_column['image']; ?>" alt="" />
+                                <img src="<?php echo $tile['image']; ?>" alt="" />
                               </div>
                             <?php endif; ?>
                             <?php if($tile['plain_content']): ?>
