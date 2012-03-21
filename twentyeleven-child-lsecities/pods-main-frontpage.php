@@ -170,7 +170,9 @@ $slides = $pod->get_field('slides');
                             <?php endif; ?>
                             <?php if($tile['plain_content']): ?>
                               <div class="<?php echo $tile['element_class']; ?>">
-                                <?php echo $tile['plain_content']; ?>
+                                <div class="inner-box">
+                                  <?php echo $tile['plain_content']; ?>
+                                </div>
                               </div>
                             <?php elseif($tile['posts_category']): ?>
                               <div class="<?php echo ltrim($tile['element_class'] . ' categoryarchive', ' '); ?>">

@@ -18,7 +18,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
 
-body { font-size: 16px; font-family: PT Sans, ff-meta-web-pro, UbuntuRegular, Tahoma, sans-serif; line-height: 1.5; *font-size: small; }
+body { font-size: 16px; font-family: PT Sans, ff-meta-web-pro, UbuntuRegular, Tahoma, Elvetica, sans-serif; line-height: 1.5; *font-size: small; }
 
 pre, code, kbd, samp { font-family: monospace, sans-serif; }
 
@@ -83,7 +83,7 @@ strong, th { font-weight: bold; }
 
 aside { font-family: PT Serif, ff-meta-serif-web-pro, Palatino, Georgia, LinuxLibertineORegular, Gentium Book Basic, serif; }
 aside p { font-size: 0.875em; line-height: 1.5em; }
-aside.extras { font-family: PT Sans, ff-meta-web-pro, UbuntuRegular, Tahoma, sans-serif; float: right; padding-bottom: 1.2em; background-color: #eee; }
+aside.extras { font-family: PT Sans, ff-meta-web-pro, UbuntuRegular, Tahoma, Elvetica, sans-serif; float: right; padding-bottom: 1.2em; background-color: #eee; }
 aside.extras > dl { padding-left: 1em; }
 aside.extras ul.people-list { display: inline; }
 aside.extras ul.people-list > li { display: inline; }
@@ -124,7 +124,7 @@ input:invalid, textarea:invalid { -moz-border-radius: 1px; -webkit-border-radius
 
 .no-boxshadow input:invalid, .no-boxshadow textarea:invalid { background-color: #f0dddd; }
 
-#slider { margin-bottom: 0.5em; font-family: PT Sans, ff-meta-web-pro, UbuntuRegular, Tahoma, sans-serif; max-height: 13.18001222em; height: 13.18001222em; overflow: hidden; }
+#slider { margin-bottom: 0.5em; font-family: PT Sans, ff-meta-web-pro, UbuntuRegular, Tahoma, Elvetica, sans-serif; max-height: 13.18001222em; height: 13.18001222em; overflow: hidden; }
 
 dl dt { font-weight: bold; }
 dl dd { margin-bottom: 0.5em; }
@@ -227,12 +227,12 @@ footer #footerSitemap > .row > section > ul li { line-height: 1em; margin-bottom
 
 .entry-meta.article-abstract { font-style: italic; }
 
-.flexslider { font-family: ff-meta-web-pro,UbuntuRegular,Tahoma,Elvetica,sans-serif; position: relative; font-size: 0.875em; /* Direction Nav */ /* Control Nav */ }
+.flexslider { font-family: PT Sans, ff-meta-web-pro, UbuntuRegular, Tahoma, Elvetica, sans-serif; position: relative; font-size: 0.875em; /* Direction Nav */ /* Control Nav */ }
 .flexslider .onecol, .flexslider .twocol, .flexslider .threecol, .flexslider .fourcol, .flexslider .fivecol, .flexslider .sixcol, .flexslider .sevencol, .flexslider .eightcol, .flexslider .ninecol, .flexslider .tencol, .flexslider .elevencol { margin-right: 0; }
 .flexslider .slides > li { height: 32.571em; }
 .flexslider .slide-inner { border-left: 1px solid #dedede; border-bottom: 1px solid #dedede; }
-.flexslider .col2 { width: 31.4em; float: left; }
-.flexslider .col1 { width: 15.771em; float: left; }
+.flexslider .col2 { width: 32.571em; float: left; }
+.flexslider .col1 { width: 16.286em; float: left; }
 .flexslider .tile { border-right: 1px solid #dedede; border-top: 1px solid #dedede; float: left; padding: 0.286em; overflow: hidden; position: relative; min-height: 210px; height: 16.286em; }
 .flexslider .tile.tall { height: 32.571em; }
 .flexslider .tile:hover .feature_title, .flexslider .tile:hover .feature_caption { display: none; }
@@ -240,7 +240,7 @@ footer #footerSitemap > .row > section > ul li { line-height: 1em; margin-bottom
 .flexslider .tile:hover .feature_blurb { max-height: 75%; }
 .flexslider .tile:hover .feature_info { -moz-transition-property: background-color; -webkit-transition-property: background-color; -o-transition-property: background-color; transition-property: background-color; -moz-transition-duration: 0.5s; -webkit-transition-duration: 0.5s; -o-transition-duration: 0.5s; transition-duration: 0.5s; -moz-transition-timing-function: ease-in-out; -webkit-transition-timing-function: ease-in-out; -o-transition-timing-function: ease-in-out; transition-timing-function: ease-in-out; -moz-transition-delay: 0s; -webkit-transition-delay: 0s; -o-transition-delay: 0s; transition-delay: 0s; background-color: #000; max-height: 75%; }
 .flexslider .tile:hover .feature_info.textonly { -moz-transition-property: background-color; -webkit-transition-property: background-color; -o-transition-property: background-color; transition-property: background-color; -moz-transition-duration: 0.5s; -webkit-transition-duration: 0.5s; -o-transition-duration: 0.5s; transition-duration: 0.5s; -moz-transition-timing-function: ease-in-out; -webkit-transition-timing-function: ease-in-out; -o-transition-timing-function: ease-in-out; transition-timing-function: ease-in-out; -moz-transition-delay: 0s; -webkit-transition-delay: 0s; -o-transition-delay: 0s; transition-delay: 0s; background-color: #000; max-height: inherit; }
-.flexslider .tile.onetile { width: 15.629em; }
+.flexslider .tile.onetile { width: 15.571em; }
 .flexslider .tile.twotiles { width: 31.829em; }
 .flexslider .tile .inner-box { padding: 0.3125em; }
 .flexslider .tile .crop { position: relative; overflow: hidden; width: 445px; height: 210px; }
@@ -248,19 +248,19 @@ footer #footerSitemap > .row > section > ul li { line-height: 1em; margin-bottom
 .flexslider .tile.databox { font-family: BureauGrotesque, Anton; }
 .flexslider .tile.databox h1 { font-family: BureauGrotesque, Anton; text-transform: uppercase; font-weight: bold; font-size: 6em !important; display: inline; line-height: 1em; margin-bottom: inherit !important; }
 .flexslider .tile.databox p { font-size: 1.4em !important; display: inline; text-transform: uppercase; }
-.flexslider .introbox .inner-box { background-color: #000; color: #fff; }
-.flexslider .introbox .inner-box p { font-size: 0.8em; }
+.flexslider .tile.citieslist ul { display: inline; text-transform: uppercase; font-family: BureauGrotesque, Anton; font-size: 2em; }
+.flexslider .tile.citieslist ul li { display: inline; }
+.flexslider .tile.citieslist ul li.alternate { color: #999; }
+.flexslider .tile.citieslist ul li a, .flexslider .tile.citieslist ul li a:active, .flexslider .tile.citieslist ul li a:visited { color: inherit; }
+.flexslider .tile.citieslist ul li a:hover { color: #990000; }
+.flexslider .tile.introbox .inner-box { background-color: #000; color: #fff; }
+.flexslider .tile.introbox .inner-box p { font-size: 0.8em; }
 .flexslider .feature_info { -moz-transition-property: background-color; -webkit-transition-property: background-color; -o-transition-property: background-color; transition-property: background-color; -moz-transition-duration: 0.5s; -webkit-transition-duration: 0.5s; -o-transition-duration: 0.5s; transition-duration: 0.5s; -moz-transition-timing-function: ease-in-out; -webkit-transition-timing-function: ease-in-out; -o-transition-timing-function: ease-in-out; transition-timing-function: ease-in-out; -moz-transition-delay: 0s; -webkit-transition-delay: 0s; -o-transition-delay: 0s; transition-delay: 0s; background: none repeat scroll 0 0 rgba(0, 0, 0, 0.6); bottom: 0; color: #F8F8F8; cursor: pointer; line-height: 1em; padding: 10px; margin: 0.3125em; position: absolute; left: 0; right: 0; }
 .flexslider .feature_info .feature_title { font-weight: bold; }
 .flexslider .feature_info .feature_caption { font-weight: normal; }
 .flexslider .feature_info .feature_blurb { float: left; line-height: 1.08em; max-height: 0; overflow: hidden; padding-top: 5px; width: 100%; }
 .flexslider ul { list-style-type: disc; }
 .flexslider ul li { list-style-type: inherit; }
-.flexslider ul.citieslist { display: inline; text-transform: uppercase; font-family: BureauGrotesque, Anton; font-size: 2em; }
-.flexslider ul.citieslist li { display: inline; }
-.flexslider ul.citieslist li.alternate { color: #999; }
-.flexslider ul.citieslist li a, .flexslider ul.citieslist li a:active, .flexslider ul.citieslist li a:visited { color: inherit; }
-.flexslider ul.citieslist li a:hover { color: #990000; }
 .flexslider .flex-direction-nav li a { width: 33px; height: 64px; text-indent: -9999px; border: 0; margin: -13px 0 0; display: block; /* background: url(theme/bg_direction_nav.png) no-repeat 0 0; */ position: absolute; top: 220px; /*((503-64)/2)px;*/ /* top: 50%; */ opacity: 0.9; }
 .flexslider .flex-direction-nav li a:hover { background-position: 0px -65px; opacity: 1; }
 .flexslider .flex-direction-nav li a:active { background-position: 0px -130px; }
