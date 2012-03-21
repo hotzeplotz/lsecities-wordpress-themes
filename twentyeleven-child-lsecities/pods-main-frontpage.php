@@ -92,6 +92,7 @@ function compose_slide($column_spans, $tiles) {
           'id' => $tile->get_field('slug'),
           'element_class' => rtrim(get_tile_classes($tile_layout) . ' ' . $tile->get_field('class'), ' '),
           'title' => $tile->get_field('name'),
+          'display_title' => $tile->get_field('display_title'),
           'subtitle' => $tile->get_field('tagline'),
           'blurb' => $tile->get_field('blurb'),
           'plain_content' => $tile->get_field('plain_content'),
@@ -171,7 +172,7 @@ $slides = $pod->get_field('slides');
                             <?php if($tile['plain_content']): ?>
                               <div class="<?php echo $tile['element_class']; ?>">
                                 <div class="inner-box">
-                                  <h1><?php echo $tile['title']; ?></h1>
+                                  <?php if($tile['display_title']): ?><h1><?php echo $tile['title']; ?></h1><?php endif; ?>
                                   <?php echo $tile['plain_content']; ?>
                                 </div>
                               </div>
