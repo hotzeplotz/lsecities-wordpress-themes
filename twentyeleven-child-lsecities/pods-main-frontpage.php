@@ -51,7 +51,8 @@ function get_tile_classes($tile_layout) {
 }
 
 function compose_slide($column_spans, $tiles) {
-
+  global $TRACE_PODS_MAIN_FRONTPAGE;
+  
   if($TRACE_PODS_MAIN_FRONTPAGE) {
     echo '<!-- compose_slide|tiles: ' . var_export($tiles, true) . " -->\n";
   }
