@@ -50,7 +50,7 @@ function get_tile_classes($tile_layout) {
   return $element_classes;
 }
 
-function compose_slide_column($column_spans, $tiles) {
+function compose_slide($column_spans, $tiles) {
   
   $slide_content = array('columns' => array());
   $tile_index = 0;
@@ -142,7 +142,7 @@ $slides = $pod->get_field('slides');
 				<?php
                   switch($slide_layout) {
                     case 'two-two-one':
-                      compose_slide_column(array(2, 2, 1), $tiles);
+                      $slide_content = compose_slide(array(2, 2, 1), $tiles);
                                            
                       if($TRACE_PODS_MAIN_FRONTPAGE) { echo '<!-- slide_content_array: ' . var_export($slide_content, true) . " -->\n"; }
                       break;
