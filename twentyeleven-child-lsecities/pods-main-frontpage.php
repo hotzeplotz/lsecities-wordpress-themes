@@ -15,10 +15,7 @@
 $pod_slug = get_post_meta($post->ID, 'pod_slug', true);
 $TRACE_PODS_MAIN_FRONTPAGE = true;
 
-// for column classes
-$SLIDE_COLUMN_COL1 = 'col1';
-$SLIDE_COLUMN_COL2 = 'col2';
-$SLIDE_COLUMN_COL4 = 'col4';
+$TILES_PER_COLUMN = 2;
 
 function get_tile_classes($tile_layout) {
   $element_classes = '';
@@ -51,6 +48,52 @@ function get_tile_classes($tile_layout) {
   }
   
   return $element_classes;
+}
+
+function compose_slide_column($column_spans, $tiles) {
+  
+  $slide_content = array('columns' => array());
+  $tile_index = 0;
+  $total_tiles = count($tiles); 
+  
+  foreach($column_spans as $column_span) {
+    $tile_count = $column_span * $TILES_PER_COLUMN;
+    $slide_column = array('layout' => 'col' . $column_count, 'tiles' => array());
+    while($tile_count > 0 and $tile_index <= $total_tiles) {
+      if($TRACE_PODS_MAIN_FRONTPAGE) {
+        echo '<!-- tile[slug]: ' . var_export($tiles[$tile_index]['slug'], true) . " -->\n";
+      }
+      $tile = new Pod('tile', $tiles[$tile_index++]['slug']);
+      $tile_layout = $tile->get_field('tile_layout.name');
+      if($TRACE_PODS_MAIN_FRONTPAGE) {
+        echo '<!-- tile[layout]: ' . var_export($tile_layout, true) . " -->\n";
+      }
+      $this_tile_count = preg_replace('/x/', '*', $tile_layout);
+      if($TRACE_PODS_MAIN_FRONTPAGE) {
+        echo '<!-- this_tile_count: ' . var_export($this_tile_count, true) . " -->\n";
+      }
+      eval('$this_tile_count = ' . $this_tile_count . ';');
+      $tile_count -= $this_tile_count;
+      if($TRACE_PODS_MAIN_FRONTPAGE) {
+        echo '<!-- tile_countdown: ' . var_export($tile_count, true) . " -->\n";
+      }
+      array_push($slide_column['tiles'],
+        array(
+          'id' => $tile->get_field('slug'),
+          'element_class' => rtrim(get_tile_classes($tile_layout) . ' ' . $tile->get_field('class'), ' '),
+          'title' => $tile->get_field('name'),
+          'subtitle' => $tile->get_field('tagline'),
+          'blurb' => $tile->get_field('blurb'),
+          'plain_content' => $tile->get_field('plain_content'),
+          'posts_category' => $tile->get_field('posts_category'),
+          'target_uri' => $tile->get_field('target_uri'),
+          'image' => $tile->get_field('image.guid')
+        )
+      );
+    }
+    array_push($slide_content['columns'], $slide_column);
+  }
+  return $slide_content;
 }
 
 if($TRACE_PODS_MAIN_FRONTPAGE) { error_log('pod_slug: ' . $pod_slug); }
@@ -96,97 +139,8 @@ $slides = $pod->get_field('slides');
 				<?php
                   switch($slide_layout) {
                     case 'two-two-one':
-                      $slide_content = array('columns' => array());
-                      $tile_index = 0;
-                      $total_tiles = count($tiles);
-                      
-                      // first column
-                      $tile_count = 4;
-                      $slide_column = array('layout' => $SLIDE_COLUMN_COL2, 'tiles' => array());
-                      while($tile_count > 0 and $tile_index <= $total_tiles) {
-                        if($TRACE_PODS_MAIN_FRONTPAGE) { echo '<!-- tile[slug]: ' . var_export($tiles[$tile_index]['slug'], true) . " -->\n"; }
-                        $tile = new Pod('tile', $tiles[$tile_index++]['slug']);
-                        $tile_layout = $tile->get_field('tile_layout.name');
-                        if($TRACE_PODS_MAIN_FRONTPAGE) { echo '<!-- tile[layout]: ' . var_export($tile_layout, true) . " -->\n"; }
-                        $this_tile_count = preg_replace('/x/', '*', $tile_layout);
-                        if($TRACE_PODS_MAIN_FRONTPAGE) { echo '<!-- this_tile_count: ' . var_export($this_tile_count, true) . " -->\n"; }
-                        eval('$this_tile_count = ' . $this_tile_count . ';');
-                        $tile_count -= $this_tile_count;
-                        if($TRACE_PODS_MAIN_FRONTPAGE) { echo '<!-- tile_countdown: ' . var_export($tile_count, true) . " -->\n"; }
-                        array_push($slide_column['tiles'],
-                          array(
-                            'id' => $tile->get_field('slug'),
-                            'element_class' => rtrim(get_tile_classes($tile_layout) . ' ' . $tile->get_field('class'), ' '),
-                            'title' => $tile->get_field('name'),
-                            'subtitle' => $tile->get_field('tagline'),
-                            'blurb' => $tile->get_field('blurb'),
-                            'plain_content' => $tile->get_field('plain_content'),
-                            'posts_category' => $tile->get_field('posts_category'),
-                            'target_uri' => $tile->get_field('target_uri'),
-                            'image' => $tile->get_field('image.guid')
-                          )
-                        );
-                      }
-                      array_push($slide_content['columns'], $slide_column);
-                      
-                      // second column
-                      $tile_count = 4;
-                      $slide_column = array('layout' => $SLIDE_COLUMN_COL2, 'tiles' => array());
-                      while($tile_count > 0 and $tile_index <= $total_tiles) {
-                        if($TRACE_PODS_MAIN_FRONTPAGE) { echo '<!-- tile[slug]: ' . var_export($tiles[$tile_index++]['slug'], true) . " -->\n"; }
-                        $tile = new Pod('tile', $tiles[$tile_index++]['slug']);
-                        $tile_layout = $tile->get_field('tile_layout.name');
-                        if($TRACE_PODS_MAIN_FRONTPAGE) { echo '<!-- tile[layout]: ' . var_export($tile_layout, true) . " -->\n"; }
-                        $this_tile_count = preg_replace('/x/', '*', $tile_layout);
-                        if($TRACE_PODS_MAIN_FRONTPAGE) { echo '<!-- this_tile_count: ' . var_export($this_tile_count, true) . " -->\n"; }
-                        eval('$this_tile_count = ' . $this_tile_count . ';');
-                        $tile_count -= $this_tile_count;
-                        if($TRACE_PODS_MAIN_FRONTPAGE) { echo '<!-- tile_countdown: ' . var_export($tile_count, true) . " -->\n"; }
-                        array_push($slide_column['tiles'],
-                          array(
-                            'id' => $tile->get_field('slug'),
-                            'element_class' => rtrim(get_tile_classes($tile_layout) . ' ' . $tile->get_field('class'), ' '),
-                            'title' => $tile->get_field('name'),
-                            'subtitle' => $tile->get_field('tagline'),
-                            'blurb' => $tile->get_field('blurb'),
-                            'plain_content' => $tile->get_field('plain_content'),
-                            'posts_category' => $tile->get_field('posts_category'),
-                            'target_uri' => $tile->get_field('target_uri'),
-                            'image' => $tile->get_field('image.guid')
-                          )
-                        );
-                      }
-                      array_push($slide_content['columns'], $slide_column);
-                      
-                      // third column
-                      $tile_count = 2;
-                      $slide_column = array('layout' => $SLIDE_COLUMN_COL1, 'tiles' => array());
-                      while($tile_count > 0 and $tile_index <= $total_tiles) {
-                        if($TRACE_PODS_MAIN_FRONTPAGE) { echo '<!-- tile[slug]: ' . var_export($tiles[$tile_index]['slug'], true) . " -->\n"; }
-                        $tile = new Pod('tile', $tiles[$tile_index++]['slug']);
-                        $tile_layout = $tile->get_field('tile_layout.name');
-                        if($TRACE_PODS_MAIN_FRONTPAGE) { echo '<!-- tile[layout]: ' . var_export($tile_layout, true) . " -->\n"; }
-                        $this_tile_count = preg_replace('/x/', '*', $tile_layout);
-                        if($TRACE_PODS_MAIN_FRONTPAGE) { echo '<!-- this_tile_count: ' . var_export($this_tile_count, true) . " -->\n"; }
-                        eval('$this_tile_count = ' . $this_tile_count . ';');
-                        $tile_count -= $this_tile_count;
-                        if($TRACE_PODS_MAIN_FRONTPAGE) { echo '<!-- tile_countdown: ' . var_export($tile_count, true) . " -->\n"; }
-                        array_push($slide_column['tiles'],
-                          array(
-                            'id' => $tile->get_field('slug'),
-                            'element_class' => rtrim(get_tile_classes($tile_layout) . ' ' . $tile->get_field('class'), ' '),
-                            'title' => $tile->get_field('name'),
-                            'subtitle' => $tile->get_field('tagline'),
-                            'blurb' => $tile->get_field('blurb'),
-                            'plain_content' => $tile->get_field('plain_content'),
-                            'posts_category' => $tile->get_field('posts_category'),
-                            'target_uri' => $tile->get_field('target_uri'),
-                            'image' => $tile->get_field('image.guid')
-                          )
-                        );
-                      }
-                      array_push($slide_content['columns'], $slide_column);
-                      
+                      compose_slide_column(array(2, 2, 1), $tiles);
+                                           
                       if($TRACE_PODS_MAIN_FRONTPAGE) { echo '<!-- slide_content_array: ' . var_export($slide_content, true) . " -->\n"; }
                       break;
                     default:
