@@ -248,7 +248,7 @@ footer #footerSitemap > .row > section > ul li { line-height: 1em; margin-bottom
 .flexslider .tile.onetile { width: 15.571em; }
 .flexslider .tile.twotiles { width: 31.829em; }
 .flexslider .tile .inner-box { padding: 0.3125em; }
-.flexslider .tile .crop { position: relative; overflow: hidden; width: 445px; height: 210px; }
+.flexslider .tile .crop { position: relative; overflow: hidden; }
 .flexslider .tile .crop img { /* position: absolute; */ margin: 0; }
 .flexslider .tile.databox { font-family: BureauGrotesque, Anton; }
 .flexslider .tile.databox h1 { font-family: BureauGrotesque, Anton; text-transform: uppercase; font-weight: bold; font-size: 6em !important; display: inline; line-height: 1em; margin-bottom: inherit !important; }
@@ -260,7 +260,7 @@ footer #footerSitemap > .row > section > ul li { line-height: 1em; margin-bottom
 .flexslider .tile.citieslist ul li a, .flexslider .tile.citieslist ul li a:active, .flexslider .tile.citieslist ul li a:visited { color: inherit; }
 .flexslider .tile.citieslist ul li a:hover { color: #990000; }
 .flexslider .tile.introbox .inner-box { background-color: #000; color: #fff; }
-.flexslider .tile.introbox .inner-box p { font-size: 0.8em; }
+.flexslider .tile.introbox .inner-box p { font-size: 0.9em; }
 .flexslider .feature_info { -moz-transition-property: background-color; -webkit-transition-property: background-color; -o-transition-property: background-color; transition-property: background-color; -moz-transition-duration: 0.5s; -webkit-transition-duration: 0.5s; -o-transition-duration: 0.5s; transition-duration: 0.5s; -moz-transition-timing-function: ease-in-out; -webkit-transition-timing-function: ease-in-out; -o-transition-timing-function: ease-in-out; transition-timing-function: ease-in-out; -moz-transition-delay: 0s; -webkit-transition-delay: 0s; -o-transition-delay: 0s; transition-delay: 0s; background: none repeat scroll 0 0 rgba(0, 0, 0, 0.6); bottom: 0; color: #F8F8F8; cursor: pointer; line-height: 1em; padding: 10px; margin: 0.3125em; position: absolute; left: 0; right: 0; }
 .flexslider .feature_info .feature_title { font-weight: bold; }
 .flexslider .feature_info .feature_caption { font-weight: normal; }
