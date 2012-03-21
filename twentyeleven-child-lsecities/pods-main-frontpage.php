@@ -64,6 +64,7 @@ function compose_slide($column_spans, $tiles) {
   if($TRACE_PODS_MAIN_FRONTPAGE) {
     echo '<!-- column_spans: ' . var_export($column_spans, true) . " -->\n";
   }
+  
   foreach($column_spans as $column_span) {
     $tile_count = $column_span * $TILES_PER_COLUMN;
     $slide_column = array('layout' => 'col' . $column_count, 'tiles' => array());
