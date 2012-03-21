@@ -171,6 +171,7 @@ $slides = $pod->get_field('slides');
                             <?php if($tile['plain_content']): ?>
                               <div class="<?php echo $tile['element_class']; ?>">
                                 <div class="inner-box">
+                                  <h1><?php echo $tile['title']; ?></h1>
                                   <?php echo $tile['plain_content']; ?>
                                 </div>
                               </div>
