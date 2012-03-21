@@ -51,7 +51,11 @@ function get_tile_classes($tile_layout) {
 }
 
 function compose_slide($column_spans, $tiles) {
-  
+
+  if($TRACE_PODS_MAIN_FRONTPAGE) {
+    echo '<!-- compose_slide|tiles: ' . var_export($tiles, true) . " -->\n";
+  }
+
   $slide_content = array('columns' => array());
   $tile_index = 0;
   $total_tiles = count($tiles); 
