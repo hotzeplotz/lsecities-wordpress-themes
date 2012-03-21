@@ -68,7 +68,7 @@ function compose_slide($column_spans, $tiles) {
   
   foreach($column_spans as $column_span) {
     $tile_count = $column_span * $TILES_PER_COLUMN;
-    $slide_column = array('layout' => 'col' . $column_count, 'tiles' => array());
+    $slide_column = array('layout' => 'col' . $column_span, 'tiles' => array());
     while($tile_count > 0 and $tile_index <= $total_tiles) {
       if($TRACE_PODS_MAIN_FRONTPAGE) {
         echo '<!-- tile[slug]: ' . var_export($tiles[$tile_index]['slug'], true) . " -->\n";
