@@ -227,9 +227,9 @@ footer #footerSitemap > .row > section > ul li { line-height: 1em; margin-bottom
 
 .entry-meta.article-abstract { font-style: italic; }
 
-.flexslider { font-family: PT Sans, ff-meta-web-pro, UbuntuRegular, Tahoma, Elvetica, sans-serif; position: relative; font-size: 0.875em; /* Direction Nav */ /* Control Nav */ }
+.flexslider { font-family: PT Sans, ff-meta-web-pro, UbuntuRegular, Tahoma, Elvetica, sans-serif; position: relative; font-size: 0.875em; /* .slides > li { height: #{2*$tile_base_emheight}em; }
+*/ /* Direction Nav */ /* Control Nav */ }
 .flexslider .onecol, .flexslider .twocol, .flexslider .threecol, .flexslider .fourcol, .flexslider .fivecol, .flexslider .sixcol, .flexslider .sevencol, .flexslider .eightcol, .flexslider .ninecol, .flexslider .tencol, .flexslider .elevencol { margin-right: 0; }
-.flexslider .slides > li { height: 32.571em; }
 .flexslider .slide-inner { border-left: 1px solid #dedede; border-bottom: 1px solid #dedede; }
 .flexslider .col2 { width: 32.571em; float: left; }
 .flexslider .col1 { width: 16.286em; float: left; }
