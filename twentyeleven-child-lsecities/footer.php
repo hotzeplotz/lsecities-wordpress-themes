@@ -91,7 +91,7 @@
           jQuery('.flexslider').flexslider(({
             animation: "slide",
             slideshow: false,
-            mousewheel: true
+            mousewheel: false
           }));
           jQuery('.citieslist li:nth-child(odd)').addClass('alternate');
         });
