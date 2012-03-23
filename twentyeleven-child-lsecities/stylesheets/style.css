@@ -141,6 +141,7 @@ p { margin-bottom: 1.625em; }
 h1, h2, h3, h4, h5, h6 { font-family: PT Sans, ff-meta-web-pro, UbuntuRegular, Tahoma, Elvetica, sans-serif; text-transform: uppercase; }
 
 ul { list-style-type: none; }
+ul li { line-height: 1.2em; margin-bottom: 0.6em; }
 
 .alignleft { float: left; }
 
@@ -150,10 +151,10 @@ body { background: inherit; }
 
 header h1.entry-title { font-size: 2em; margin-bottom: 1.2em; }
 
-#main h1 { font-size: 2em; margin-bottom: 1.2em; }
+#main h1 { font-size: 2em; margin-bottom: 1em; }
 #main h1.mainheading { font-size: 3em; }
-#main h2 { font-size: 1.5em; margin-bottom: 1.1em; }
-#main h2.mainheading { font-size: 2.4em; }
+#main h2 { font-size: 1.5em; margin-bottom: 1em; }
+#main h2.mainheading { font-size: 2.5em; }
 #main h3 { font-size: 1.2em; margin-bottom: 1em; }
 #main h1.mainheading, #main h2.mainheading, #main h3.mainheading, #main h4.mainheading, #main h5.mainheading, #main h6.mainheading { font-family: nevisBold, PT Sans, sans-serif; }
 #main .article-text img { max-width: 100%; }
@@ -215,7 +216,7 @@ header #socialbuttons ul { height: 16px; }
 #conferencesmenu a, #conferencesmenu a:active, #conferencesmenu a:visited { color: #555555; }
 #conferencesmenu a:hover { color: #990000; }
 
-#main { margin-top: 1em; margin-bottom: 2em; }
+#main { margin-bottom: 2em; }
 
 #level3nav { font-size: 0.925em; font-family: PT Sans, ff-meta-web-pro, UbuntuRegular, Tahoma, Elvetica, sans-serif; }
 #level3nav li { line-height: 1.25em; margin-bottom: 0.25em; }
