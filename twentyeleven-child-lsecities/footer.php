@@ -64,7 +64,7 @@
         <section class="fourcol">
           <h1></h1>
           <ul>
-            <?php // wp_list_pages('title_li=&depth=1&child_of=489&sort_column=menu_order&sort_order=ASC&echo=1'); ?>
+            <?php get_template_part('snippet-colophon'); ?>
           </ul>
         </section>
         <section class="fourcol last">
