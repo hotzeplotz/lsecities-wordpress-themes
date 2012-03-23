@@ -149,14 +149,13 @@ ul li { line-height: 1.2em; margin-bottom: 0.6em; }
 
 body { background: inherit; }
 
-header h1.entry-title { font-size: 2em; margin-bottom: 1.2em; }
+header h1.entry-title { font-size: 2em; margin-bottom: 1.2em; font-family: nevisBold, PT Sans, sans-serif; }
 
 #main h1 { font-size: 2em; margin-bottom: 1em; }
 #main h1.mainheading { font-size: 3em; }
 #main h2 { font-size: 1.5em; margin-bottom: 1em; }
 #main h2.mainheading { font-size: 2.5em; }
 #main h3 { font-size: 1.2em; margin-bottom: 1em; }
-#main h1.mainheading, #main h2.mainheading, #main h3.mainheading, #main h4.mainheading, #main h5.mainheading, #main h6.mainheading { font-family: nevisBold, PT Sans, sans-serif; }
 #main .article-text img { max-width: 100%; }
 #main article .introblurb h2 { margin-top: 0.6em; margin-bottom: 0; }
 #main article .introblurb p { font-size: 1.25em; line-height: 1.2em; }
