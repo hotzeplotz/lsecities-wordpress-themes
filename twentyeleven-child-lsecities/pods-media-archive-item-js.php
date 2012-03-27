@@ -18,5 +18,5 @@ $TRACE_PODS_MEDIA_ARCHIVE_ITEM_JS = true;
 if($TRACE_PODS_MEDIA_ARCHIVE_ITEM_JS) { error_log('pod_slug: ' . $pod_slug); }
 $pod = new Pod('media_item', $pod_slug);
 
-echo json_encode($pod);
+echo json_encode($pod['data']);
 ?>
