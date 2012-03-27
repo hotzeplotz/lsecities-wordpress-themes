@@ -18,5 +18,17 @@ $TRACE_PODS_MEDIA_ARCHIVE_ITEM_JS = true;
 if($TRACE_PODS_MEDIA_ARCHIVE_ITEM_JS) { error_log('pod_slug: ' . $pod_slug); }
 $pod = new Pod('media_item', $pod_slug);
 
-echo json_encode($pod['data']);
+$media_item = Array();
+
+$media_item['id'] = $pod->get_field('slug');
+$media_item['title'] = $pod->get_field('name');
+$media_item['date'] = $pod->get_field('date');
+$media_item['youtube_uri'] = $pod->get_field('youtube_uri');
+$media_item['video_uri'] = $pod->get_field('video_uri');
+$media_item['audio_uri'] = $pod->get_field('audio_uri');
+$media_item['presentation_uri'] = $pod->get_field('presentation_uri');
+$media_item['tags'] = $pod->get_field('tag.name');
+$media_item['geotags'] = $pod->get_field('geotags.name');
+
+echo json_encode($media_item);
 ?>
