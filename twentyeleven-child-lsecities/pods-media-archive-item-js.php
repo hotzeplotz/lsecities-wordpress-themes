@@ -10,13 +10,15 @@
 ?><?php
 /**
  * Pods initialization
- * URI: /media/objects/mediaitem
+ * URI: /media/search/?search=<search_string>
  */
-$pod_slug = get_post_meta($post->ID, 'pod_slug', true);
+$search = get_post_meta($post->ID, 'pod_slug', true) || pods_url_variable('search', 'get');
 $TRACE_PODS_MEDIA_ARCHIVE_ITEM_JS = true;
+$PODS_BASEURI_MEDIA_ARCHIVE_SEARCH = '/media/search/';
 
 if($TRACE_PODS_MEDIA_ARCHIVE_ITEM_JS) { error_log('pod_slug: ' . $pod_slug); }
-$pod = new Pod('media_item', $pod_slug);
+$pod = new Pod('media_item');
+$pod->findRecords('where' => 't.name LIKE ' . pods_sanitize($search));
 
 $media_item = Array();
 
