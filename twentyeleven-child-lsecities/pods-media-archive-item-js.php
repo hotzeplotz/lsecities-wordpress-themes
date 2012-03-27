@@ -19,7 +19,7 @@ $PODS_BASEURI_MEDIA_ARCHIVE_SEARCH = '/media/search/';
 if($TRACE_PODS_MEDIA_ARCHIVE_ITEM_JS) { error_log('pod_slug: ' . $pod_slug); }
 $pod = new Pod('media_item');
 $params = Array();
-$params['where'] = 't.name LIKE ' . pods_sanitize($search)
+$params['where'] = 't.name LIKE ' . pods_sanitize($search);
 $pod->findRecords($params);
 
 $media_item = Array();
