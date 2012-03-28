@@ -250,6 +250,15 @@ $poster_pdf = $poster_pdf[0]['guid'];
             </div>
           </div>
 
+          <div id="navigationarea" class='wireframe threecol last'>    
+          <?php if(!$is_conference) : // if we are dealing with an event, $pod_slug is set - display events sidebar ?>
+            <?php get_template_part( 'nav', 'events' ); ?>
+          <?php else : // otherwise we are dealing with a conference - display conferences sidebar ?>
+            <?php get_template_part( 'nav', 'conferences' ); ?>
+          <?php endif; ?>
+          </div>
+
+
 </div>
 
 <?php get_sidebar(); ?>
