@@ -52,6 +52,11 @@ if(!$slider) {
   $featured_image_uri = get_the_post_thumbnail(get_the_ID(), array(960,367));
 }
 
+// if this is an event, grab the image URI from the Pod
+if(!$featured_image_uri && !is_conference) {
+  $featured_image_uri = $pod->get_field('heading_image.guid');
+}
+
 $event_date_string = $pod->get_field('date_freeform');
 $event_date = new DateTime($pod->get_field('date'));
 $datetime_now = new DateTime('now');
