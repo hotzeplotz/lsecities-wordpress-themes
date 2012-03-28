@@ -82,10 +82,9 @@ $poster_pdf = $poster_pdf[0]['guid'];
               <article class='wireframe eightcol'>
                 <header>
                   <div class='photospread wireframe'>
-                    <?php
-                    if($featured_image_uri) {
-                      echo $featured_image_uri;
-                    } ?>
+                  <?php if($featured_image_uri) : ?>
+                    <img src="<?php echo $featured_image_uri; ?>" alt="event photo" />
+                  <?php endif; ?>
                   </div>
                   <h1><?php echo $pod->get_field('name'); ?></h1>
                   <div id='keyfacts-short'>
