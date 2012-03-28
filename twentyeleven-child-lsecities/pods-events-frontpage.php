@@ -70,202 +70,185 @@ $poster_pdf = $poster_pdf[0]['guid'];
 
 <?php if ( have_posts() ) : the_post(); endif; ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<h1 class="entry-title"><?php echo $pod->get_field('name'); ?></h1>
-	</header><!-- .entry-header -->
+<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<div class="entry-content">
-    <div class='row' id='core'>
-      <article class='ninecol'>
-        <div class='row'>
-          <div class='slider spaceAfter eightcol'>
-            <?php if($featured_image_uri): ?>
-              <div id='slider' class='eightcol'>
-                <?php echo $featured_image_uri; ?>
+          <div class='ninecol' id='contentarea'>
+            <div class='top-content'>
+              <article class='wireframe eightcol'>
+                <header>
+                  <div class='photospread wireframe'>
+                    <?php
+                    if($featured_image_uri) {
+                      echo $featured_image_uri;
+                    } ?>
+                  </div>
+                  <h1><?php echo $pod->get_field('name'); ?></h1>
+                  <div id='keyfacts-short'>
+                    <dl>
+                    <?php if(is_array($event_speakers)): ?>
+                      <dt>Speakers</dt>
+                      <dd>
+                        <ul>
+                        <?php foreach($event_speakers as $event_speaker): ?>
+                          <li><a href="#person-profile-<?php echo $event_speaker['slug'] ?>"><?php echo $event_speaker['name'] ?> <?php echo $event_speaker['family_name'] ?></a></li>
+                        <?php endforeach; ?>
+                        </ul>
+                      </dd>
+                    <?php endif; ?>
+                    
+                    <?php if(is_array($event_respondents)): ?>
+                      <dt>Respondents</dt>
+                      <dd>
+                        <ul>
+                        <?php foreach($event_respondents as $event_respondent): ?>
+                          <li><?php echo $event_respondent['name'] ?> <?php echo $event_respondent['family_name'] ?></li>
+                        <?php endforeach; ?>
+                        </ul>
+                      </dd>
+                    <?php endif; ?>
+              
+                    <?php if(is_array($event_chairs)): ?>
+                      <dt>Chairs</dt>
+                      <dd>
+                        <ul>
+                        <?php foreach($event_chairs as $event_chair): ?>
+                          <li><?php echo $event_chair['name'] ?> <?php echo $event_chair['family_name'] ?></li>
+                        <?php endforeach; ?>
+                        </ul>
+                      </dd>
+                    <?php endif; ?>
+              
+                    <?php if(is_array($event_moderators)): ?>
+                      <dt>Moderators</dt>
+                      <dd>
+                        <ul>
+                        <?php foreach($event_moderators as $event_moderator): ?>
+                          <li><?php echo $event_moderator['name'] ?> <?php echo $event_moderator['family_name'] ?></li>
+                        <?php endforeach; ?>
+                        </ul>
+                      </dd>
+                    <?php endif; ?>                    
+                    </dl>
+                  </div>
+                </header>
+                <?php if($event_blurb): ?>
+                  <div class="blurb"><?php echo $event_blurb; ?></div>
+                <?php endif; ?>
+                <?php if($event_contact_info and $is_future_event): ?>
+                  <aside class="booking-and-access"><?php echo $event_contact_info; ?></aside>
+                <?php endif; ?>
+              </article>
+              <div class='wireframe fourcol last' id='keyfacts'>
+                <dl>
+                    <?php if(is_array($event_speakers)): ?>
+                      <dt>Speakers</dt>
+                      <dd>
+                        <ul>
+                        <?php foreach($event_speakers as $event_speaker): ?>
+                          <li><a href="#person-profile-<?php echo $event_speaker['slug'] ?>"><?php echo $event_speaker['name'] ?> <?php echo $event_speaker['family_name'] ?></a></li>
+                        <?php endforeach; ?>
+                        </ul>
+                      </dd>
+                    <?php endif; ?>
+                    
+                    <?php if(is_array($event_respondents)): ?>
+                      <dt>Respondents</dt>
+                      <dd>
+                        <ul>
+                        <?php foreach($event_respondents as $event_respondent): ?>
+                          <li><?php echo $event_respondent['name'] ?> <?php echo $event_respondent['family_name'] ?></li>
+                        <?php endforeach; ?>
+                        </ul>
+                      </dd>
+                    <?php endif; ?>
+              
+                    <?php if(is_array($event_chairs)): ?>
+                      <dt>Chairs</dt>
+                      <dd>
+                        <ul>
+                        <?php foreach($event_chairs as $event_chair): ?>
+                          <li><?php echo $event_chair['name'] ?> <?php echo $event_chair['family_name'] ?></li>
+                        <?php endforeach; ?>
+                        </ul>
+                      </dd>
+                    <?php endif; ?>
+              
+                    <?php if(is_array($event_moderators)): ?>
+                      <dt>Moderators</dt>
+                      <dd>
+                        <ul>
+                        <?php foreach($event_moderators as $event_moderator): ?>
+                          <li><?php echo $event_moderator['name'] ?> <?php echo $event_moderator['family_name'] ?></li>
+                        <?php endforeach; ?>
+                        </ul>
+                      </dd>
+                    <?php endif; ?>
+                    
+                    <?php if($event_date_string): ?>
+                      <dt>When</dt>
+                      <dd><?php echo $event_date_string; ?></dd>
+                    <?php endif; ?>
+              
+                    <?php if($event_location): ?>
+                      <dt>Where</dt>
+                      <dd><?php echo $event_location; ?></dd>
+                    <?php endif; ?>
+              
+                    <?php if($event_series): ?>
+                      <dt>Event series</dt>
+                      <dd><em><?php echo do_shortcode($pod->get_field('event_series')); ?></em></dd>
+                    <?php endif; ?>
+                    
+                    <?php if($event_contact_info and $is_future_event): ?>
+                      <dt>Access &amp; booking</dt>
+                      <dd><?php echo $event_contact_info; ?></dd>
+                    <?php endif; ?>
+
+                    <?php if($poster_pdf || $freakin_site_map) : ?>
+                      <dt>Downloads</dt>
+                      <?php if($poster_pdf): ?>
+                      <dd><a href="<?php echo $poster_pdf; ?>">Event poster</a> (PDF)</dd>
+                      <?php endif; ?>
+                      <?php if($freakin_site_map): ?>
+                      <dd><a href="<?php echo $freakin_site_map; ?>">Site map</a> (PDF)</dd>
+                      <?php endif; ?>  
+                    <?php endif; ?>
+                    
+                    <?php if($event_hashtag): ?>
+                    <dt></dt>
+                    <dd>
+                      <div class='twitterbox'></div>
+                    </dd>
+                    <?php endif; ?>
+                </dl>
               </div>
-            <?php endif; ?>
-          </div>
-
-            <aside class='extras fourcol last'>
-            <dl>
-              <?php if($event_date_string): ?>
-              <dt>When</dt>
-              <dd><?php echo $event_date_string; ?></dd>
-              <?php endif; ?>
-              
-              <?php if($event_location): ?>
-              <dt>Where</dt>
-              <dd><?php echo $event_location; ?></dd>
-              <?php endif; ?>
-              
-              <?php if($event_series): ?>
-              <dt>Event series</dt>
-              <dd><em><?php echo do_shortcode($pod->get_field('event_series')); ?></em></dd>
-              <?php endif; ?>
-              
-              <?php if(is_array($event_speakers)): ?>
-              <dt>Speakers</dt>
-              <dd>
-              <ul class="people-list">
-                <?php foreach($event_speakers as $event_speaker): ?>
-                <li><a href="#person-profile-<?php echo $event_speaker['slug'] ?>"><?php echo $event_speaker['name'] ?> <?php echo $event_speaker['family_name'] ?></a></li>
+            </div>
+            <div class='extra-content twelvecol'>
+            <?php if(is_array($event_speakers)): ?>
+              <section id='speaker-profiles'>
+                <h1>Speaker profiles</h1>
+                <ul class='people-list'>
+                <?php foreach($event_speakers as $key => $event_speaker): ?>
+                  <li id="person-profile-<?php echo $event_speaker['slug'] ?>" class="person fourcol<?php if((($key + 1) % 3) == 0) : ?> last<?php endif ; ?>">
+                    <h1><?php echo $event_speaker['name'] ?> <?php echo $event_speaker['family_name'] ?></h1>
+                    <p><?php echo $event_speaker['profile_text'] ?></p>
+                    <?php if($event_speaker['homepage'] || $event_speaker['twitterhandle']): ?>
+                    <ul class="personal-links">
+                    <?php if(): ?>
+                        <li><a href="<?php echo $event_speaker['homepage']; ?>"><?php echo $event_speaker['homepage']; ?></a></li>
+                    <?php endif; ?>
+                    <?php if(): ?>
+                        <li><a href="<?php echo $event_speaker['twitterhandle']; ?>"><?php echo $event_speaker['twitterhandle']; ?></a></li>
+                    <?php endif; ?>
+                    </ul>
+                    <?php endif; ?>
+                  </section>
                 <?php endforeach; ?>
-              </ul>
-              </dd>
-              <?php endif; ?>
-              
-              <?php if(is_array($event_respondents)): ?>
-              <dt>Respondents</dt>
-              <dd>
-              <ul class="people-list">
-                <?php foreach($event_respondents as $event_respondent): ?>
-                <li><?php echo $event_respondent['name'] ?> <?php echo $event_respondent['family_name'] ?></li>
-                <?php endforeach; ?>
-              </ul>
-              </dd>
-              <?php endif; ?>
-              
-              <?php if(is_array($event_chairs)): ?>
-              <dt>Chairs</dt>
-              <dd>
-              <ul class="people-list">
-                <?php foreach($event_chairs as $event_chair): ?>
-                <li><?php echo $event_chair['name'] ?> <?php echo $event_chair['family_name'] ?></li>
-                <?php endforeach; ?>
-              </ul>
-              </dd>
-              <?php endif; ?>
-              
-              <?php if(is_array($event_moderators)): ?>
-              <dt>Moderators</dt>
-              <dd>
-              <ul class="people-list">
-                <?php foreach($event_moderators as $event_moderator): ?>
-                <li><?php echo $event_moderator['name'] ?> <?php echo $event_moderator['family_name'] ?></li>
-                <?php endforeach; ?>
-              </ul>
-              </dd>
-              <?php endif; ?>
-
-              <?php if($event_hashtag) : ?>
-              <dt>Twitter hashtag</dt>
-              <dd><a href="https://search.twitter.com/search?q=&tag=<?php echo $event_hashtag; ?>&lang=all">#<?php echo $event_hashtag; ?></a></dd>
-              <?php endif; ?>
-              
-              <?php if($poster_pdf) : ?>
-              <dt>Downloads</dt>
-              <dd><a href="<?php echo $poster_pdf; ?>">Event's poster</a> (PDF)</dd>
-              <?php endif; ?>
-            </dl>
-            </aside>
-            
-            <div class='introblurb'>
-            <?php
-              $tagline = $pod->get_field('tagline');
-              if($tagline) : ?>
-              <h2><?php echo $tagline; ?></h2>
-            <?php endif; ?>
-            <?php if($event_blurb): ?>
-            <div class="event-blurb"><?php echo $event_blurb; ?></div>
-            <?php endif; ?>
-            <?php if($event_contact_info and $is_future_event): ?>
-            <div class="event-contact-info"><?php echo $event_contact_info; ?></div>
+                </ul><!-- .people-list -->
+              </section><!-- #speaker-profiles -->
             <?php endif; ?>
             </div>
-            
-        </div>
-        <?php
-        // sort by menu_order of linked items
-        foreach($button_links as $sort_key => $sort_value) {
-			$menu_order[$sort_key] = $sort_value['menu_order'];
-		}
-		array_multisort($menu_order, SORT_ASC, $button_links);
-        ?>
-        <?php foreach($button_links as $key => $link) : ?>
-          <?php if(($key  % 3) == 0) : ?>
-            <div class='featureboxes row'>
-          <?php endif; ?>          
-          <?php error_log('link key: ' . $key); ?>
-          <div class='featurebox fourcol<?php if((($key + 1) % 3) == 0) : ?> last<?php endif ; ?>'>
-            <a href="<?php echo $link['guid'] ; ?>" title="<?php echo $link['post_title'] ; ?>">
-              <h3><?php echo $link['post_title'] ; ?></h3>
-            </a>
           </div>
-          <?php if((($key + 1) % 3) == 0 or $key == (count($button_links) - 1)) : ?>
-            </div>
-          <?php endif; ?>
-        <?php endforeach ; ?>
-        <?php if(!$is_conference): ?>
-        <aside class="row event-extra-content">
-			<section class="sixcol">
-				<?php if(is_array($event_speakers)): ?>
-				<h2>Speaker profiles</h2>
-				<?php foreach($event_speakers as $event_speaker): ?>
-					<section id="person-profile-<?php echo $event_speaker['slug'] ?>">
-						<h3><?php echo $event_speaker['name'] ?> <?php echo $event_speaker['family_name'] ?></h3>
-						<p><?php echo $event_speaker['profile_text'] ?></p>
-					</section>
-				<?php endforeach; ?>
-				<?php endif; ?>
-			</section>
-			<div class="sixcol last">
-				<?php if($event_media): ?>
-				<h2>Event materials</h2>
-				<?php foreach($event_media as $event_media_item): ?>
-					<?php if($event_media_item['youtube_uri']): ?>
-					<h3>Video</h3>
-					<iframe
-					 width="283"
-					 height="191"
-					 src="https://www.youtube.com/embed/<?php echo $event_media_item['youtube_uri']; ?>?rel=0"
-					 frameborder="0"
-					 allowfullscreen="allowfullscreen">
-					 &#160;
-					</iframe>
-					<?php endif; ?>
-					<?php if($event_media_item['audio_uri']): ?>
-					<h3>Audio</h3>
-					<p>Listen to <a class="link mp3" href="<?php echo $event_media_item['audio_uri']; ?>">podcast</a>.</p>
-					<?php endif; ?>
-					<?php if($event_media_item['presentation_uri']): ?>
-					<h3>Presentation slides</h3>
-					<p><a class="link pdf" href="<?php echo $event_media_item['presentation_uri']; ?>">Download</a> (PDF).</p>
-					<?php endif; ?> 
-				<?php endforeach; ?>
-				<?php endif; ?>
-			</div>
-        </aside>
-        <?php endif; ?>
-        <div id="the_content">
-        <?php the_content(); ?>
-        </div>
-      </article>
-      <aside class='threecol last'>	
-		<?php if(!$is_conference) : // if we are dealing with an event, $pod_slug is set - display events sidebar ?>
-		<?php get_template_part( 'nav', 'events' ); ?>
-		<?php else : // otherwise we are dealing with a conference - display conferences sidebar ?>
-        <?php get_template_part( 'nav', 'conferences' ); ?>
-        <?php endif; ?>
-      </aside>
-    </div>
-    
-		<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'twentyeleven' ) . '</span>', 'after' => '</div>' ) ); ?>
-	</div><!-- .entry-content -->
-	<div class="entry-meta">
-    <div id="author-info">
-      <?php if(is_array($article_authors)): ?>
-        <h2>Authors</h2>
-        <ul>
-        <?php foreach($article_authors as $a): ?>
-          <li><?php echo $a['name'] ?> <?php echo $a['family_name'] ?></li>
-        <?php endforeach; ?>
-        </ul>
-      <?php endif; ?>
-    </div>
-		<?php edit_post_link( __( 'Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
-	</div><!-- .entry-meta -->
-</article><!-- #post-<?php the_ID(); ?> -->
 
 </div>
 
