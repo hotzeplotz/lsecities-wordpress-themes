@@ -280,6 +280,8 @@ right: -21px; */ }
 .flexslider .flex-control-nav li a:hover { background-position: 0 -13px; }
 .flexslider .flex-control-nav li a.active { background-position: 0 -26px; cursor: default; }
 
+#main { margin-top: 1em; }
+
 #contentarea .top-content article header { margin-bottom: 1em; }
 #contentarea .top-content article header h1 { font-family: museo-sans, nevisBold, PT Sans, sans-serif; font-weight: 900; border-bottom: 1px solid #ff0000; }
 #contentarea .extra-content { border-top: 1px solid #ff0000; }
