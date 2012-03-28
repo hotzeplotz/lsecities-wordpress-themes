@@ -258,7 +258,7 @@ $poster_pdf = $poster_pdf[0]['guid'];
           <?php endif; ?>
           </div>
 
-
+</div>
 </div>
 
 <?php get_sidebar(); ?>
