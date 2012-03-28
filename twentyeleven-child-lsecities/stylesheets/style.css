@@ -284,8 +284,9 @@ right: -21px; */ }
 #contentarea .top-content article header h1 { font-family: museo-sans, nevisBold, PT Sans, sans-serif; font-weight: 900; border-bottom: 1px solid #ff0000; }
 #contentarea .extra-content { border-top: 1px solid #ff0000; }
 
+#keyfacts dl dt, #navigationarea nav dl dt { text-transform: uppercase; border-bottom: 1px solid #eee; }
+
 #navigationarea nav h1 { font-size: 1em; }
-#navigationarea nav dl dl { margin-left: 0; }
 
 #keyfacts-short dl dt { float: left; margin-right: 0.5em; }
 #keyfacts-short dl dt:after { content: ': '; }
@@ -294,7 +295,10 @@ right: -21px; */ }
 #keyfacts-short dl ul li:after { content: ', '; }
 #keyfacts-short dl ul li:last-child:after { content: ''; }
 
-#keyfacts dl dt, #navigationarea nav dl dt { text-transform: uppercase; border-bottom: 1px solid #eee; }
+#keyfacts dl dd ul { display: inline; }
+#keyfacts dl dd ul > li { display: inline; }
+#keyfacts dl dd ul li:after { content: ', '; }
+#keyfacts dl dd ul li:last-child:after { content: ''; }
 
 #speaker-profiles h1 { font-size: 1.2em; }
 #speaker-profiles .people-list .person h1 { font-size: 1em; font-weight: bold; text-transform: inherit; border-bottom: 1px solid #eee; }
