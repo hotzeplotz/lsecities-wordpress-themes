@@ -221,7 +221,7 @@ $poster_pdf = $poster_pdf[0]['guid'];
                     </dd>
                     <?php endif; ?>
                 </dl>
-              </div>
+              </div><!-- #keyfacts -->
             </div>
             <div class='extra-content twelvecol'>
             <?php if(is_array($event_speakers)): ?>
@@ -242,7 +242,7 @@ $poster_pdf = $poster_pdf[0]['guid'];
                     <?php endif; ?>
                     </ul>
                     <?php endif; ?>
-                  </section>
+                  </li>
                 <?php endforeach; ?>
                 </ul><!-- .people-list -->
               </section><!-- #speaker-profiles -->
