@@ -53,7 +53,7 @@ if(!$slider) {
 }
 
 // if this is an event, grab the image URI from the Pod
-if(!$featured_image_uri && !is_conference) {
+if(!$is_conference) {
   $featured_image_uri = $pod->get_field('heading_image.guid');
 }
 
