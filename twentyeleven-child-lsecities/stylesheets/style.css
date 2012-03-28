@@ -83,7 +83,7 @@ a:hover { color: #555555; }
 
 strong, th { font-weight: bold; }
 
-aside { font-family: nimbus-sans, PT Sans, ff-meta-web-pro, UbuntuRegular, Tahoma, Elvetica, sans-serif; }
+aside { font-family: ff-meta-web-pro, nimbus-sans, PT Sans, ff-meta-web-pro, UbuntuRegular, Tahoma, Elvetica, sans-serif; }
 aside p { font-size: 0.875em; line-height: 1.5em; }
 aside.extras { font-family: nimbus-sans, PT Sans, ff-meta-web-pro, UbuntuRegular, Tahoma, Elvetica, sans-serif; float: right; padding-bottom: 1.2em; background-color: #eee; }
 aside.extras > dl { padding-left: 1em; }
@@ -118,7 +118,7 @@ aside.extras ul.people-list li:last-child:after { content: ''; }
 
 .featured-item { margin-bottom: 4em; }
 
-article { font-family: nimbus-sans, PT Sans, ff-meta-web-pro, UbuntuRegular, Tahoma, Elvetica, sans-serif; }
+article { font-family: ff-meta-web-pro, nimbus-sans, PT Sans, ff-meta-web-pro, UbuntuRegular, Tahoma, Elvetica, sans-serif; }
 
 small { font-size: 69%; }
 
