@@ -234,10 +234,10 @@ $poster_pdf = $poster_pdf[0]['guid'];
                     <p><?php echo $event_speaker['profile_text'] ?></p>
                     <?php if($event_speaker['homepage'] || $event_speaker['twitterhandle']): ?>
                     <ul class="personal-links">
-                    <?php if(): ?>
+                    <?php if($event_speaker['homepage']): ?>
                         <li><a href="<?php echo $event_speaker['homepage']; ?>"><?php echo $event_speaker['homepage']; ?></a></li>
                     <?php endif; ?>
-                    <?php if(): ?>
+                    <?php if($event_speaker['twitterhandle']): ?>
                         <li><a href="<?php echo $event_speaker['twitterhandle']; ?>"><?php echo $event_speaker['twitterhandle']; ?></a></li>
                     <?php endif; ?>
                     </ul>
