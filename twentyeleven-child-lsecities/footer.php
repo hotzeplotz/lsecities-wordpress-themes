@@ -77,8 +77,8 @@
 </div><!-- ## grid # container -->
 
 <?php wp_footer(); ?>
-<?php enqueue_script('jquery-ui-core');
-      enqueue_script('jquery-ui-accordion'); ?>
+<?php wp_enqueue_script('jquery-ui-core');
+      wp_enqueue_script('jquery-ui-accordion'); ?>
 <script type="text/javascript" src="https://use.typekit.com/ftd3lpp.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 <script>
