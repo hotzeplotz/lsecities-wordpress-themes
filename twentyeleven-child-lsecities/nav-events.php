@@ -48,7 +48,7 @@ if($TRACE_TEMPLATE_NAV) { echo "<!-- $TRACE_PREFIX events array: \n" . var_expor
     <dt><?php echo $year ?></dt>
     <dd>
       <ul>
-      <?php foreach($year_events ar $event): ?>
+      <?php foreach($year_events as $event): ?>
 	<li><a href="<?php echo $BASE_URI . $event['slug'] ?>"><?php echo $event['date']; ?> | <?php echo $event['name']; ?></a></li>
       <?php endforeach; ?>
       </ul>
