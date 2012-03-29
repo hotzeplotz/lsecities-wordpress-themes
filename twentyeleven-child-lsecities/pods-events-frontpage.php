@@ -76,11 +76,11 @@ $button_links = $pod->get_field('links');
 
 if($TRACE_PODS_EVENTS_FRONTPAGE) { error_log('button_links: ' . var_export($button_links, true)); }
 
-$event_speakers = $pod->get_field('speakers', 'family_name ASC');
-$event_respondents = $pod->get_field('respondents', 'family_name ASC');
-$event_chairs = $pod->get_field('chairs', 'family_name ASC');
-$event_moderators = $pod->get_field('moderators', 'family_name ASC');
-$event_all_the_people = array_merge((array)$event_speakers, (array)$event_respondents, (array)$event_chairs, (array)$event_moderators);
+$event_speakers = $pod->get_field('speakers', 'family_name ASC') || array();
+$event_respondents = $pod->get_field('respondents', 'family_name ASC') || array();
+$event_chairs = $pod->get_field('chairs', 'family_name ASC') || array();
+$event_moderators = $pod->get_field('moderators', 'family_name ASC') || array();
+$event_all_the_people = array_merge($event_speakers, $event_respondents, $event_chairs, $event_moderators);
 var_trace($event_all_the_people);
 $event_hashtag = ltrim($pod->get_field('hashtag'), '#');
 
@@ -213,7 +213,7 @@ $poster_pdf = $poster_pdf[0]['guid'];
                 <h1>Speaker profiles</h1>
                 <ul class='people-list'>
                 <?php $index = 0;
-                      foreach($event_speakers as $key => $event_speaker):
+                      foreach($event_all_the_people as $key => $event_speaker):
                         echo "<!-- event_speaker : " . var_export($event_speaker, true) . "-->";
                         if($event_speaker['profile_text']):
                 ?>
