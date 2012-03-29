@@ -70,7 +70,7 @@ krsort($events);
     <?php if($upcoming_events): ?>
       <ul>
       <?php foreach($upcoming_events as $event): ?>
-	<li><a href="<?php echo $BASE_URI . $event['slug'] ?>"><?php echo $event['date']; ?> | <?php echo $event['name']; ?></a></li>
+	<li><a href="<?php echo $BASE_URI . $event['slug']; ?>"><?php echo $event['date']; ?> | <?php echo $event['name']; ?></a></li>
       <?php endforeach; ?>
       </ul>
     <?php else: ?>
@@ -86,7 +86,7 @@ krsort($events);
 	<dd>
 	  <ul>
 	  <?php foreach($year_events as $event): ?>
-	    <li><a href="<?php echo $BASE_URI . $event['slug'] ?>"><?php echo $event['date']; ?> | <?php echo $event['name']; ?></a></li>
+	    <li><a href="<?php echo $BASE_URI . $event['slug']; ?>"><?php echo $event['date']; ?> | <?php echo $event['name']; ?></a></li>
 	  <?php endforeach; ?>
 	  </ul>
 	</dd>
