@@ -17,7 +17,7 @@ if($TRACE_TEMPLATE_NAV) { error_log($TRACE_PREFIX . 'datetime_now: ' . $datetime
 // prepare array with list of upcoming events
 $upcoming_events = Array();
 $events_pod->findRecords(array(
-  'where' => 't.date_start < ' . date_format($datetime_now, 'Y-m-d'),
+  'where' => 't.date_start < ' . date_format($datetime_now, 'Y m d'),
   'orderby' => "t.date_start ASC"
 ));
 while($events_pod->fetchRecord()) {
