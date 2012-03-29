@@ -32,7 +32,7 @@ for($year = 2005; $year <= $current_year; $year++) {
   }
   
   // if there are no events for this year, remove year's array altogether from full list
-  if(!count($events[$year]) {
+  if(!count($events[$year])) {
     $events = array_pop($events);
   }
 }
