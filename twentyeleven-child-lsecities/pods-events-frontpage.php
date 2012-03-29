@@ -31,7 +31,7 @@ function people_list($people, $heading_singular, $heading_plural) {
     $output .= "<dd>\n<ul>\n";
     
     foreach($people as $person) {
-      $people_countcount++;
+      $people_count++;
       if($person['profile_text']) {
         $output .= "<li><a href='#person-profile-" . $person['slug'] . "'>" . $person['name'] . " " . $person['family_name'] . "</a></li>\n";
         $people_with_blurb_count++;
@@ -64,7 +64,6 @@ $button_links = $pod->get_field('links');
 if($TRACE_PODS_EVENTS_FRONTPAGE) { error_log('button_links: ' . var_export($button_links, true)); }
 
 $event_speakers = $pod->get_field('speakers', 'family_name ASC');
-$speakers_with_profile = 0; // increment this for each speaker with blurb available
 $event_respondents = $pod->get_field('respondents', 'family_name ASC');
 $event_chairs = $pod->get_field('chairs', 'family_name ASC');
 $event_moderators = $pod->get_field('moderators', 'family_name ASC');
