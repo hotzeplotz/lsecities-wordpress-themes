@@ -39,7 +39,7 @@ for($year = 2005; $year <= $current_year; $year++) {
 
 if($TRACE_TEMPLATE_NAV) { echo "<!-- $TRACE_PREFIX events array: \n" . var_export($events, true) . " \n-->"; }
 
-arsort($events);
+krsort($events);
 ?>
 
 <nav id="eventsmenu">
