@@ -33,10 +33,10 @@ function people_list($people, $heading_singular, $heading_plural) {
     foreach($people as $person) {
       $people_countcount++;
       if($person['blurb']) {
-        $output .= "<li><a href='#person-profile-$person['slug']'>$person['name'] $person['family_name']</a></li>\n";
+        $output .= "<li><a href='#person-profile-" . $person['slug'] . "'>" . $person['name'] . " " . $person['family_name'] . "</a></li>\n";
         $people_with_blurb_count++;
       } else {
-        $output .= "<li>$person['name'] $person['family_name']</li>\n";
+        $output .= "<li>" . $person['name'] . "  " . $person['family_name'] . "</li>\n";
       }
     }
     $output .= "</ul>\n</dd>\n";
