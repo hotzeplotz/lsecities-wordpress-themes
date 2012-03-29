@@ -32,7 +32,7 @@ function people_list($people, $heading_singular, $heading_plural) {
     
     foreach($people as $person) {
       $people_countcount++;
-      if($person['blurb']) {
+      if($person['profile_text']) {
         $output .= "<li><a href='#person-profile-" . $person['slug'] . "'>" . $person['name'] . " " . $person['family_name'] . "</a></li>\n";
         $people_with_blurb_count++;
       } else {
@@ -193,7 +193,7 @@ $poster_pdf = $poster_pdf[0]['guid'];
                 <ul class='people-list'>
                 <?php $index = 0;
                       foreach($event_speakers as $key => $event_speaker):
-                        if($event_speaker['blurb']):
+                        if($event_speaker['profile_text']):
                 ?>
                   <li id="person-profile-<?php echo $event_speaker['slug'] ?>" class="person fourcol<?php if((($index++ + 1) % 3) == 0) : ?> last<?php endif ; ?>">
                     <h1><?php echo $event_speaker['name'] ?> <?php echo $event_speaker['family_name'] ?></h1>
