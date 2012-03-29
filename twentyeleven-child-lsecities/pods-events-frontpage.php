@@ -55,7 +55,7 @@ function people_list($people, $heading_singular, $heading_plural) {
     $output .= "</ul>\n</dd>\n";
   }
   
-  return array('count' => $people_count, 'with_blurb' => $people_with_blurb_count, 'output' => $output);
+  return array('count' => $people_count, 'with_blurb' => $people_with_blurb_count, 'output' => $output, 'trace' => var_export($people, true));
 }
 
 // check if we are getting called via Pods (pods_url_variable is set)
