@@ -26,7 +26,7 @@ for($year = 2005; $year <= $current_year; $year++) {
     array_push($events[$year], Array(
       'slug' => $events_pod->get_field('slug'),
       'name' => $events_pod->get_field('name'),
-      'date' => date('d F', strtotime($events_list->get_field('date_start')))
+      'date' => date('d F', strtotime($events_pod->get_field('date_start')))
     ));
   }
   if($TRACE_TEMPLATE_NAV) { error_log($TRACE_PREFIX . 'events array: ' . $events); }
