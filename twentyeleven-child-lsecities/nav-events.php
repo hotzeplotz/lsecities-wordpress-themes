@@ -74,7 +74,7 @@ krsort($events);
       <?php endforeach; ?>
       </ul>
     <?php else: ?>
-      <p>Please check back for more information on our upcoming events.</p>
+      Please check back for more information on our upcoming events.
     <?php endif; ?>
     </dd>
     <?php if($events): ?>
@@ -82,7 +82,7 @@ krsort($events);
     <dd>
       <dl>
       <?php foreach($events as $year => $year_events): ?>
-	<dt><?php echo $year ?></dt>
+	<dt><?php echo $year; ?></dt>
 	<dd>
 	  <ul>
 	  <?php foreach($year_events as $event): ?>
