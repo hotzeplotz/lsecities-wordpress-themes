@@ -16,6 +16,7 @@ $current_year = date("Y");
 $events_pod = new Pod('event');
 
 for($year = 2005; $year <= $current_year; $year++) {
+  $events[$year] = Array();
   $events_pod->findRecords(array(
     'where' => "YEAR(t.date_start) = $year",
     'orderby' => 'date_start DESC',
