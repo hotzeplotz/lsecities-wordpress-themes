@@ -77,6 +77,8 @@
 </div><!-- ## grid # container -->
 
 <?php wp_footer(); ?>
+<?php enqueue_script('jquery-ui-core');
+      enqueue_script('jquery-ui-accordion'); ?>
 <script type="text/javascript" src="https://use.typekit.com/ftd3lpp.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 <script>
@@ -88,6 +90,7 @@
             mousewheel: false
           }));
           jQuery('.citieslist li:nth-child(odd)').addClass('alternate');
+          jQuery('.accordion').accordion();
         });
       //]]>
 </script>
