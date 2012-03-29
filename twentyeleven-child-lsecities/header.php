@@ -76,7 +76,7 @@ $logo_element_id = $urban_age_section ? 'ualogo' : 'logo';
 <?php wp_enqueue_style('fonts_nevis', get_stylesheet_directory_uri() . '/stylesheets/fonts/webfont_nevis/stylesheet.css'); ?>
 <?php wp_enqueue_script('jquery.flexslider', get_stylesheet_directory_uri() . '/javascripts/jquery.flexslider.js', 'jquery', false, true); ?>
 <?php wp_enqueue_script('jquery-ui-core', '', '', '', true); ?>
-<?php wp_enqueue_script('jquery-ui-accordion', '', array('jquery-ui-core'), '', true); ?>
+<?php wp_enqueue_script('jquery-ui-accordion', '', '', '', true); ?>
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
