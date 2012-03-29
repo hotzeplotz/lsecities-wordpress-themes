@@ -82,7 +82,6 @@ $event_moderators = $pod->get_field('moderators', 'family_name ASC');
 $event_hashtag = ltrim($pod->get_field('hashtag'), '#');
 
 $speakers_output = people_list($event_speakers, "Speaker", "Speakers");
-var_trace($speakers_output, false, $TRACE_PODS_EVENTS_FRONTPAGE);
 $respondents_output = people_list($event_respondents, "Respondent", "Respondents");
 $chairs_output = people_list($event_chairs, "Chair", "Chairs");
 $moderators_output = people_list($event_moderators, "Moderator", "Moderators");
@@ -123,6 +122,12 @@ $poster_pdf = $poster_pdf[0]['guid'];
 <?php if ( have_posts() ) : the_post(); endif; ?>
 
 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+<?php var_trace($speakers_output, false, $TRACE_PODS_EVENTS_FRONTPAGE);
+      var_trace($respondents_output, false, $TRACE_PODS_EVENTS_FRONTPAGE);
+      var_trace($chairs_output, false, $TRACE_PODS_EVENTS_FRONTPAGE);
+      var_trace($moderators_output, false, $TRACE_PODS_EVENTS_FRONTPAGE);
+?>
 
           <div class='ninecol' id='contentarea'>
             <div class='top-content'>
