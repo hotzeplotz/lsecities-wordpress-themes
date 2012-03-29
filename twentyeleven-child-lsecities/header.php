@@ -74,10 +74,9 @@ $logo_element_id = $urban_age_section ? 'ualogo' : 'logo';
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic|PT+Serif:400,700,700italic,400italic|Sorts+Mill+Goudy:400,400italic&amp;subset=latin,latin-ext" media="screen" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Anton'>
 <?php wp_enqueue_style('fonts_nevis', get_stylesheet_directory_uri() . '/stylesheets/fonts/webfont_nevis/stylesheet.css'); ?>
-<?php wp_enqueue_style('fonts_ubuntu', get_stylesheet_directory_uri() . '/stylesheets/fonts/ubuntu/stylesheet.css'); ?>
-<?php wp_enqueue_style('fonts_linux_libertine', get_stylesheet_directory_uri() . '/stylesheets/fonts/linux-libertine/stylesheet.css'); ?>
-<?php wp_enqueue_script('jquery.quickflip', get_stylesheet_directory_uri() . '/javascripts/jquery.quickflip.min.js', 'jquery', false, true); ?>
 <?php wp_enqueue_script('jquery.flexslider', get_stylesheet_directory_uri() . '/javascripts/jquery.flexslider.js', 'jquery', false, true); ?>
+<?php wp_enqueue_script('jquery-ui-core'); ?>
+<?php wp_enqueue_script('jquery-ui-accordion'); ?>
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
