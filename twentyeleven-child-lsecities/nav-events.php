@@ -12,7 +12,7 @@ pod:
 
 $events_pod = new Pod('event');
 $datetime_now = new DateTime('now');
-if($TRACE_TEMPLATE_NAV) { error_log($TRACE_PREFIX . 'datetime_now: ' . $datetime_now); 
+if($TRACE_TEMPLATE_NAV) { error_log($TRACE_PREFIX . 'datetime_now: ' . $datetime_now); }
 
 // prepare array with list of upcoming events
 $upcoming_events = Array();
