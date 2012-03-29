@@ -30,7 +30,7 @@ for($year = 2005; $year <= $current_year; $year++) {
       'date' => date('d F', strtotime($events_pod->get_field('date_start')))
     ));
   }
-  if($TRACE_TEMPLATE_NAV) { error_log($TRACE_PREFIX . 'events array: ' . $events); }
+  if($TRACE_TEMPLATE_NAV) { error_log($TRACE_PREFIX . 'events array: ' . var_export($events, true)); }
 }
 
 ?>
