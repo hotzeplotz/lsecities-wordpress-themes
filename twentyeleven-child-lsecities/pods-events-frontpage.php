@@ -185,8 +185,9 @@ $poster_pdf = $poster_pdf[0]['guid'];
                 </dl>
               </div><!-- #keyfacts -->
             </div>
-            <div class='extra-content twelvecol'>
             <?php if($people_with_blurb): ?>
+            <?php if($TRACE_PODS_EVENTS_FRONTPAGE) { echo '<!-- $event_speakers:  ' . var_export($event_speakers, true); } ?>
+            <div class='extra-content twelvecol'>
               <section id='speaker-profiles'>
                 <h1>Speaker profiles</h1>
                 <ul class='people-list'>
@@ -212,8 +213,8 @@ $poster_pdf = $poster_pdf[0]['guid'];
                       endforeach; ?>
                 </ul><!-- .people-list -->
               </section><!-- #speaker-profiles -->
-            <?php endif; ?>
             </div>
+            <?php endif; ?>
           </div>
 
           <div id="navigationarea" class='wireframe threecol last'>    
