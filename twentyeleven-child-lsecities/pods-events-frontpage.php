@@ -213,7 +213,7 @@ $poster_pdf = $poster_pdf[0]['guid'];
                 <ul class='people-list'>
                 <?php $index = 0;
                       foreach($event_speakers as $key => $event_speaker):
-                        echo "<!-- event_speaker : " . var_export($event_speaker, true); . "-->";
+                        echo "<!-- event_speaker : " . var_export($event_speaker, true) . "-->";
                         if($event_speaker['profile_text']):
                 ?>
                   <li id="person-profile-<?php echo $event_speaker['slug'] ?>" class="person fourcol<?php if((($index++ + 1) % 3) == 0) : ?> last<?php endif ; ?>">
