@@ -23,7 +23,7 @@ function var_trace($var, $prefix = 'pods', $enabled = true, $destination = 'page
     
     if($destination == 'page') {
       echo $output_string;
-    } elseif($destination == '' {
+    } elseif($destination == 'syslog') {
       error_log($output_string);
     }
   }
