@@ -81,14 +81,14 @@
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 <script>
       //<![CDATA[
-        jQuery().ready(function() {
-          jQuery('.flexslider').flexslider(({
+        jQuery(document).ready(function($) {
+          $('.flexslider').flexslider(({
             animation: "slide",
             slideshow: false,
             mousewheel: false
           }));
-          jQuery('.citieslist li:nth-child(odd)').addClass('alternate');
-          jQuery('.accordion').accordion();
+          $('.citieslist li:nth-child(odd)').addClass('alternate');
+          $('.accordion').accordion();
         });
       //]]>
 </script>
