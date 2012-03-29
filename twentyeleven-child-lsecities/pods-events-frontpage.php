@@ -43,6 +43,7 @@ function people_list($people, $heading_singular, $heading_plural) {
     $output .= "<dd>\n<ul>\n";
     
     foreach($people as $person) {
+      var_trace($person, false, $TRACE_PODS_EVENTS_FRONTPAGE);
       $people_count++;
       if($person['profile_text']) {
         $output .= '<li><a href="#person-profile-' . $person['slug'] . '">' . $person['name'] . ' ' . $person['family_name'] . "</a></li>\n";
