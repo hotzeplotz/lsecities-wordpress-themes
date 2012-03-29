@@ -30,6 +30,11 @@ for($year = 2005; $year <= $current_year; $year++) {
       'date' => date('d F', strtotime($events_pod->get_field('date_start')))
     ));
   }
+  
+  // if there are no events for this year, remove year's array altogether from full list
+  if(!count($events[$year]) {
+    $events = array_pop($events);
+  }
 }
 
 if($TRACE_TEMPLATE_NAV) { echo "<!-- $TRACE_PREFIX events array: \n" . var_export($events, true) . " \n-->"; }
@@ -37,20 +42,18 @@ if($TRACE_TEMPLATE_NAV) { echo "<!-- $TRACE_PREFIX events array: \n" . var_expor
 ?>
 
 <nav id="eventsmenu">
-  <?php
-    if($events_list->getTotalRows()> 0):
-  ?>
-		<ul>
-			<?php while($events_list->fetchRecord()): ?>
-	
-      <?php
-       $event_title = $events_list->get_field('name');
-       $event_date = date('d F Y', strtotime($events_list->get_field('date_start')));
-       $event_uri = $BASE_URI . $events_list->get_field('slug');
-      ?>
-      
-      <li><a href="<?php echo $event_uri; ?>"><?php echo $event_date; ?> | <?php echo $event_title; ?></a></li>
-			<?php endwhile; ?>
-		</ul>
-	<?php endif; ?>
+<?php if($events): ?>
+  <dl>
+  <?php foreach($events as $year => $year_events): ?>
+    <dt><?php echo $year ?></dt>
+    <dd>
+      <ul>
+      <?php foreach($year_events ar $event): ?>
+	<li><a href="<?php echo $BASE_URI . $event['slug'] ?>"><?php echo $event['date']; ?> | <?php echo $event['name']; ?></a></li>
+      <?php endforeach; ?>
+      </ul>
+    </dd>
+  <?php endforeach; ?>
+  </ul>
+<?php endif; ?>
 </nav>
