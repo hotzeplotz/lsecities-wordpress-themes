@@ -8,20 +8,36 @@ if($TRACE_TEMPLATE_NAV) : ?>
 pod:
 <?php var_export($pod); ?>
 -->
-<?php endif; ?>
+<?php endif; 
 
-<nav id="eventsmenu">
-	<?php
-	$events_list = new Pod('event');
-	$events_list->findRecords(array(
+// prepare array with list of events, split by year
+$events = Array();
+$current_year = date("Y");
+$events_pod = new Pod('event');
+
+for($year = 2005; $year <= $current_year; $year++) {
+  $events_pod->findRecords(array(
+    'where' => "YEAR(t.date_start) = $year",
     'orderby' => 'date_start DESC',
     'limit' => -1
   ));
-	
-  if($TRACE_TEMPLATE_NAV) { error_log($TRACE_PREFIX . 'events records found: ' . $events_list->getTotalRows()); }
-  
-	if($events_list->getTotalRows()> 0):
-	?>
+  if($TRACE_TEMPLATE_NAV) { error_log($TRACE_PREFIX . 'events records found: ' . $events_pod->getTotalRows()); }
+  while($events_pod->fetchRecord()) {
+    array_push($events[$year], Array(
+      'slug' => $events_pod->get_field('slug'),
+      'name' => $events_pod->get_field('name'),
+      'date' => date('d F', strtotime($events_list->get_field('date_start')))
+    ));
+  }
+  if($TRACE_TEMPLATE_NAV) { error_log($TRACE_PREFIX . 'events array: ' . $events; }
+}
+
+?>
+
+<nav id="eventsmenu">
+  <?php
+    if($events_list->getTotalRows()> 0):
+  ?>
 		<ul>
 			<?php while($events_list->fetchRecord()): ?>
 	
