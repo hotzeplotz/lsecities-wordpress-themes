@@ -8,7 +8,6 @@
  * @since Twenty Eleven 1.0
  */
 ?>
-
 <?php
 /**
  * Pods initialization
@@ -17,6 +16,34 @@
 global $pods;
 $BASE_URI = '/media/objects/events/';
 $TRACE_PODS_EVENTS_FRONTPAGE = true;
+
+function people_list($people, $heading_singular, $heading_plural) {
+  $output = '';
+  $people_count = 0;
+  $people_with_blurb_count = 0;
+  
+  if(is_array($people)) {
+    if(count($people) > 1) {
+      $output .= "<dt>$heading_plural</dt>\n";
+    } else {
+      $output .= "<dt>$heading_singular</dt>\n";
+    }
+    $output .= "<dd>\n<ul>\n";
+    
+    foreach($people as $person) {
+      $people_countcount++;
+      if($person['blurb']) {
+        $output .= "<li><a href='#person-profile-$person['slug']'>$person['name'] $person['family_name']</a></li>\n";
+        $people_with_blurb_count++;
+      } else {
+        $output .= "<li>$person['name'] $person['family_name']</li>\n";
+      }
+    }
+    $output .= "</ul>\n</dd>\n";
+  }
+  
+  return array('count' => $people_count, 'with_blurb' => $people_with_blurb_count, 'output' => $output);
+}
 
 // check if we are getting called via Pods (pods_url_variable is set)
 $pod_slug = pods_url_variable(3);
@@ -37,10 +64,18 @@ $button_links = $pod->get_field('links');
 if($TRACE_PODS_EVENTS_FRONTPAGE) { error_log('button_links: ' . var_export($button_links, true)); }
 
 $event_speakers = $pod->get_field('speakers', 'family_name ASC');
+$speakers_with_profile = 0; // increment this for each speaker with blurb available
 $event_respondents = $pod->get_field('respondents', 'family_name ASC');
 $event_chairs = $pod->get_field('chairs', 'family_name ASC');
 $event_moderators = $pod->get_field('moderators', 'family_name ASC');
 $event_hashtag = ltrim($pod->get_field('hashtag'), '#');
+
+$speakers_output = people_list($event_speakers, "Speaker", "Speakers");
+$respondents_output = people_list($event_respondents, "Respondent", "Respondents");
+$chairs_output = people_list($event_chairs, "Chair", "Chairs");
+$moderators_output = people_list($event_moderators, "Moderator", "Moderators");
+
+$people_with_blurb = $speakers_output['with_blurb'] + $respondents_output['with_blurb'] + $chairs_output['with_blurb'] + $moderators_output['with_blurb'];
 
 $event_blurb = do_shortcode($pod->get_field('blurb'));
 $event_contact_info = do_shortcode($pod->get_field('contact_info'));
@@ -89,7 +124,11 @@ $poster_pdf = $poster_pdf[0]['guid'];
                   <h1><?php echo $pod->get_field('name'); ?></h1>
                   <div id='keyfacts-short'>
                     <dl>
-                    <?php include 'pods-event+snippet-speaker-list.php'; ?>
+                    <?php echo $speakers_output['output'];
+                          echo $respondents_output['output'];
+                          echo $chairs_output['output'];
+                          echo $moderators_output['output'];
+                    ?>
                     </dl>
                   </div>
                 </header>
@@ -102,7 +141,11 @@ $poster_pdf = $poster_pdf[0]['guid'];
               </article>
               <div class='wireframe fourcol last' id='keyfacts'>
                 <dl>
-                    <?php include 'pods-event+snippet-speaker-list.php'; ?>
+                    <?php echo $speakers_output['output'];
+                          echo $respondents_output['output'];
+                          echo $chairs_output['output'];
+                          echo $moderators_output['output'];
+                    ?>
                     
                     <?php if($event_date_string): ?>
                       <dt>When</dt>
@@ -144,12 +187,15 @@ $poster_pdf = $poster_pdf[0]['guid'];
               </div><!-- #keyfacts -->
             </div>
             <div class='extra-content twelvecol'>
-            <?php if(is_array($event_speakers)): ?>
+            <?php if($people_with_blurb): ?>
               <section id='speaker-profiles'>
                 <h1>Speaker profiles</h1>
                 <ul class='people-list'>
-                <?php foreach($event_speakers as $key => $event_speaker): ?>
-                  <li id="person-profile-<?php echo $event_speaker['slug'] ?>" class="person fourcol<?php if((($key + 1) % 3) == 0) : ?> last<?php endif ; ?>">
+                <?php $index = 0;
+                      foreach($event_speakers as $key => $event_speaker):
+                        if($event_speaker['blurb']):
+                ?>
+                  <li id="person-profile-<?php echo $event_speaker['slug'] ?>" class="person fourcol<?php if((($index++ + 1) % 3) == 0) : ?> last<?php endif ; ?>">
                     <h1><?php echo $event_speaker['name'] ?> <?php echo $event_speaker['family_name'] ?></h1>
                     <p><?php echo $event_speaker['profile_text'] ?></p>
                     <?php if($event_speaker['homepage'] || $event_speaker['twitterhandle']): ?>
@@ -163,7 +209,8 @@ $poster_pdf = $poster_pdf[0]['guid'];
                     </ul>
                     <?php endif; ?>
                   </li>
-                <?php endforeach; ?>
+                <?php endif;
+                      endforeach; ?>
                 </ul><!-- .people-list -->
               </section><!-- #speaker-profiles -->
             <?php endif; ?>
