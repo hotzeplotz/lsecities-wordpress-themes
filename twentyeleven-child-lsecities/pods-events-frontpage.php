@@ -22,7 +22,7 @@ function var_trace($var, $prefix = 'pods', $enabled = true, $destination = 'page
     $output_string = "tracing $prefix : " . var_export($var, true) . "\n\n";
     
     if($destination == 'page') {
-      echo $output_string;
+      echo "<!-- $output_string -->";
     } elseif($destination == 'syslog') {
       error_log($output_string);
     }
