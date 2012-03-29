@@ -17,6 +17,18 @@ global $pods;
 $BASE_URI = '/media/objects/events/';
 $TRACE_PODS_EVENTS_FRONTPAGE = true;
 
+function var_trace($var, $prefix = 'pods', $enabled = true, $destination = 'page') {
+  if($enabled) {
+    $output_string = "tracing $prefix : " . var_export($var, true) . "\n\n";
+    
+    if($destination == 'page') {
+      echo $output_string;
+    } elseif($destination == '' {
+      error_log($output_string);
+    }
+  }
+}
+
 function people_list($people, $heading_singular, $heading_plural) {
   $output = '';
   $people_count = 0;
@@ -70,6 +82,7 @@ $event_moderators = $pod->get_field('moderators', 'family_name ASC');
 $event_hashtag = ltrim($pod->get_field('hashtag'), '#');
 
 $speakers_output = people_list($event_speakers, "Speaker", "Speakers");
+var_trace($speakers_output, false, $TRACE_PODS_EVENTS_FRONTPAGE);
 $respondents_output = people_list($event_respondents, "Respondent", "Respondents");
 $chairs_output = people_list($event_chairs, "Chair", "Chairs");
 $moderators_output = people_list($event_moderators, "Moderator", "Moderators");
