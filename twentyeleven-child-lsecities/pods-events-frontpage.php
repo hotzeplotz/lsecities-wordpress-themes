@@ -204,6 +204,32 @@ $poster_pdf = $poster_pdf[0]['guid'];
                     </dd>
                     <?php endif; ?>
                 </dl>
+                <div class="media-items">
+                  <?php if($event_media): ?>
+                  <h2>Event materials</h2>
+                  <?php foreach($event_media as $event_media_item): ?>
+                    <?php if($event_media_item['youtube_uri']): ?>
+                    <h3>Video</h3>
+                    <iframe
+                     width="283"
+                     height="191"
+                     src="https://www.youtube.com/embed/<?php echo $event_media_item['youtube_uri']; ?>?rel=0"
+                     frameborder="0"
+                     allowfullscreen="allowfullscreen">
+                     &#160;
+                    </iframe>
+                    <?php endif; ?>
+                    <?php if($event_media_item['audio_uri']): ?>
+                    <h3>Audio</h3>
+                    <p>Listen to <a class="link mp3" href="<?php echo $event_media_item['audio_uri']; ?>">podcast</a>.</p>
+                    <?php endif; ?>
+                    <?php if($event_media_item['presentation_uri']): ?>
+                    <h3>Presentation slides</h3>
+                    <p><a class="link pdf" href="<?php echo $event_media_item['presentation_uri']; ?>">Download</a> (PDF).</p>
+                    <?php endif; ?> 
+                  <?php endforeach; ?>
+                  <?php endif; ?>                
+                </div>
               </div><!-- #keyfacts -->
             </div>
             <?php if($people_with_blurb): ?>
