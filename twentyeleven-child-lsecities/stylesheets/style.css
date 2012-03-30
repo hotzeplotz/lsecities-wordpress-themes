@@ -287,7 +287,8 @@ right: -21px; */ }
 #contentarea .top-content article header h1 { font-family: museo-sans, nevisBold, PT Sans, sans-serif; font-weight: 900; border-bottom: 1px solid #ff0000; color: #22273b; }
 #contentarea .extra-content { border-top: 1px solid #ff0000; }
 
-#keyfacts dl dt, #navigationarea nav dl dt { border-bottom: 1px solid #eee; }
+#keyfacts dl dt, #navigationarea nav dl dt { border-bottom: 1px solid #eee; margin-top: 1em; }
+#keyfacts dl dt:first-child, #navigationarea nav dl dt:first-child { margin-top: 0; }
 
 #navigationarea nav dl dt.ui-accordion-header::before { content: '►'; }
 #navigationarea nav dl dt.ui-accordion-header.ui-state-active::before { content: '▼'; }

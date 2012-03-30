@@ -209,7 +209,7 @@ $poster_pdf = $poster_pdf[0]['guid'];
                       <?php foreach($event_media as $event_media_item): ?>
                         <?php if($event_media_item['youtube_uri']): ?>
                         <dd>
-                          <h3>Video</h3>
+                          <h4>Video</h4>
                           <iframe
                            width="283"
                            height="191"
@@ -222,13 +222,13 @@ $poster_pdf = $poster_pdf[0]['guid'];
                         <?php endif; ?>
                         <?php if($event_media_item['audio_uri']): ?>
                         <dd>
-                          <h3>Audio</h3>
+                          <h4>Audio</h4>
                           <p>Listen to <a class="link mp3" href="<?php echo $event_media_item['audio_uri']; ?>">podcast</a>.</p>
                         </dd>
                         <?php endif; ?>
                         <?php if($event_media_item['presentation_uri']): ?>
                         <dd>
-                          <h3>Presentation slides</h3>
+                          <h4>Presentation slides</h4>
                           <p><a class="link pdf" href="<?php echo $event_media_item['presentation_uri']; ?>">Download</a> (PDF).</p>
                         </dd>
                         <?php endif; ?> 
