@@ -234,7 +234,7 @@ $poster_pdf = $poster_pdf[0]['guid'];
                       </ul>
                       <?php endif; ?>
                     </li>
-                <?php if($index % 3 == 0 || $index == 0): ?>
+                <?php if(($index + 1) % 3 == 0): ?>
                   </span>
                 <?php endif;
                     $index++;
