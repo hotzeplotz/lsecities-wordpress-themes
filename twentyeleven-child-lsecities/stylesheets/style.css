@@ -76,7 +76,7 @@ nav ul, nav li { margin: 0; list-style: none; list-style-image: none; }
 
 body, select, input, textarea { color: black; }
 
-h1, h2, h3, h4, h5, h6 { font-weight: normal; }
+h1, h2, h3, h4, h5, h6 { font-weight: normal; line-height: 1.5em; }
 
 a, a:active, a:visited { color: #990000; }
 
@@ -287,7 +287,7 @@ right: -21px; */ }
 #contentarea .top-content article header h1 { font-family: museo-sans, nevisBold, PT Sans, sans-serif; font-weight: 900; border-bottom: 1px solid #ff0000; color: #22273b; }
 #contentarea .extra-content { border-top: 1px solid #ff0000; }
 
-#keyfacts dl dt, #navigationarea nav dl dt { text-transform: uppercase; border-bottom: 1px solid #eee; }
+#keyfacts dl dt, #navigationarea nav dl dt { border-bottom: 1px solid #eee; }
 
 #navigationarea nav dl dt.ui-accordion-header::before { content: '►'; }
 #navigationarea nav dl dt.ui-accordion-header.ui-state-active::before { content: '▼'; }
