@@ -210,14 +210,17 @@ $poster_pdf = $poster_pdf[0]['guid'];
             <?php var_trace($event_all_the_people, false, $TRACE_PODS_EVENTS_FRONTPAGE); ?>
             <div class='extra-content twelvecol'>
               <section id='speaker-profiles'>
-                <h1>Speaker profiles</h1>
+                <h1>Profiles</h1>
                 <ul class='people-list'>
                 <?php $index = 0;
                       foreach($event_all_the_people as $key => $event_speaker):
                         echo "<!-- event_speaker : " . var_export($event_speaker, true) . "-->";
                         if($event_speaker['profile_text']):
+                          if($index % 3 == 0):
                 ?>
-                  <li id="person-profile-<?php echo $event_speaker['slug'] ?>" class="person fourcol<?php if((($index++ + 1) % 3) == 0) : ?> last<?php endif ; ?>">
+                  <span>
+                <?php endif; ?>
+                  <li id="person-profile-<?php echo $event_speaker['slug'] ?>" class="person fourcol<?php if((($index + 1) % 3) == 0) : ?> last<?php endif ; ?>">
                     <h1><?php echo $event_speaker['name'] ?> <?php echo $event_speaker['family_name'] ?></h1>
                     <p><?php echo $event_speaker['profile_text'] ?></p>
                     <?php if($event_speaker['homepage'] || $event_speaker['twitterhandle']): ?>
@@ -232,6 +235,10 @@ $poster_pdf = $poster_pdf[0]['guid'];
                     <?php endif; ?>
                   </li>
                 <?php endif;
+                      if($index % 3 == 0): ?>
+                      </span>
+                <?php endif;
+                      $index++;
                       endforeach; ?>
                 </ul><!-- .people-list -->
               </section><!-- #speaker-profiles -->

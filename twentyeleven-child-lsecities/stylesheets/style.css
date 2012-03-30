@@ -18,7 +18,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
 
-body { font-size: 16px; font-family: ff-meta-web-pro, nimbus-sans, PT Sans, UbuntuRegular, Tahoma, Elvetica, sans-serif; line-height: 1.5; *font-size: small; }
+body { font-size: 16px; font-family: nimbus-sans, PT Sans, ff-meta-web-pro, UbuntuRegular, Tahoma, Elvetica, sans-serif; line-height: 1.5; *font-size: small; }
 
 pre, code, kbd, samp { font-family: monospace, sans-serif; }
 
@@ -83,9 +83,9 @@ a:hover { color: #555555; }
 
 strong, th { font-weight: bold; }
 
-aside { font-family: ff-meta-web-pro, nimbus-sans, PT Sans, UbuntuRegular, Tahoma, Elvetica, sans-serif; }
+aside { font-family: nimbus-sans, PT Sans, ff-meta-web-pro, UbuntuRegular, Tahoma, Elvetica, sans-serif; }
 aside p { font-size: 0.875em; line-height: 1.5em; }
-aside.extras { font-family: ff-meta-web-pro, nimbus-sans, PT Sans, UbuntuRegular, Tahoma, Elvetica, sans-serif; float: right; padding-bottom: 1.2em; background-color: #eee; }
+aside.extras { font-family: nimbus-sans, PT Sans, ff-meta-web-pro, UbuntuRegular, Tahoma, Elvetica, sans-serif; float: right; padding-bottom: 1.2em; background-color: #eee; }
 aside.extras > dl { padding-left: 1em; }
 aside.extras ul.people-list { display: inline; }
 aside.extras ul.people-list > li { display: inline; }
@@ -94,7 +94,7 @@ aside.extras ul.people-list li:last-child:after { content: ''; }
 
 .event-extra-content { margin-top: 1.2em; }
 
-#featuresgrid { width: 100%; line-height: 1em; font-family: ff-meta-web-pro, nimbus-sans, PT Sans, UbuntuRegular, Tahoma, Elvetica, sans-serif; }
+#featuresgrid { width: 100%; line-height: 1em; font-family: nimbus-sans, PT Sans, ff-meta-web-pro, UbuntuRegular, Tahoma, Elvetica, sans-serif; }
 #featuresgrid .featurescolumn { width: 49.5260664%; margin-right: 0.94786739%; margin-bottom: 0.94786739%; float: left; }
 #featuresgrid .featurescolumn.last { margin-right: 0; }
 #featuresgrid .featurebox.bigbox { width: 100%; float: left; margin-bottom: 0.9569378%; position: relative; }
@@ -118,7 +118,7 @@ aside.extras ul.people-list li:last-child:after { content: ''; }
 
 .featured-item { margin-bottom: 4em; }
 
-article { font-family: ff-meta-web-pro, nimbus-sans, PT Sans, UbuntuRegular, Tahoma, Elvetica, sans-serif; }
+article { font-family: nimbus-sans, PT Sans, ff-meta-web-pro, UbuntuRegular, Tahoma, Elvetica, sans-serif; }
 
 small { font-size: 69%; }
 
@@ -126,7 +126,7 @@ input:invalid, textarea:invalid { -moz-border-radius: 1px; -webkit-border-radius
 
 .no-boxshadow input:invalid, .no-boxshadow textarea:invalid { background-color: #f0dddd; }
 
-#slider { margin-bottom: 0.5em; font-family: ff-meta-web-pro, nimbus-sans, PT Sans, UbuntuRegular, Tahoma, Elvetica, sans-serif; max-height: 13.18001222em; height: 13.18001222em; overflow: hidden; }
+#slider { margin-bottom: 0.5em; font-family: nimbus-sans, PT Sans, ff-meta-web-pro, UbuntuRegular, Tahoma, Elvetica, sans-serif; max-height: 13.18001222em; height: 13.18001222em; overflow: hidden; }
 
 dl dt { font-weight: bold; }
 dl dd { margin-bottom: 0.5em; }
@@ -138,7 +138,7 @@ nav a:hover { color: #555555; }
 
 p { margin-bottom: 1.5em; }
 
-h1, h2, h3, h4, h5, h6 { font-family: ff-meta-web-pro, nimbus-sans, PT Sans, UbuntuRegular, Tahoma, Elvetica, sans-serif; text-transform: none; }
+h1, h2, h3, h4, h5, h6 { font-family: nimbus-sans, PT Sans, ff-meta-web-pro, UbuntuRegular, Tahoma, Elvetica, sans-serif; text-transform: none; }
 
 ul { list-style-type: none; }
 ul li { line-height: 1.2em; margin-bottom: 0.6em; }
@@ -160,7 +160,7 @@ header h1.entry-title { font-size: 2em; margin-bottom: 1.2em; font-family: museo
 #main article .introblurb h2 { margin-top: 0.6em; margin-bottom: 0; }
 #main article .introblurb p { font-size: 1.25em; line-height: 1.2em; }
 #main .wp-caption { max-width: 100% !important; }
-#main .wp-caption-text { font-size: 0.875em; font-family: ff-meta-web-pro, nimbus-sans, PT Sans, UbuntuRegular, Tahoma, Elvetica, sans-serif; }
+#main .wp-caption-text { font-size: 0.875em; font-family: nimbus-sans, PT Sans, ff-meta-web-pro, UbuntuRegular, Tahoma, Elvetica, sans-serif; }
 #main ul.publication-side-toc li { line-height: 1.25em; margin-bottom: 0.25em; }
 #main .publication-cover { -moz-box-shadow: 0.313em 0.313em 0.188em #888888; -webkit-box-shadow: 0.313em 0.313em 0.188em #888888; -o-box-shadow: 0.313em 0.313em 0.188em #888888; box-shadow: 0.313em 0.313em 0.188em #888888; }
 #main .article .entry-content.article-text.sidebyside > div { -moz-column-count: 2; -webkit-column-count: 2; -o-column-count: 2; column-count: 2; }
@@ -189,7 +189,7 @@ body > #container > header ul li a { padding: 0 0.6em; text-decoration: none; }
 #mainmenus #level2nav { background-color: #000; color: #fff; }
 #mainmenus #level2nav ul { background-color: inherit; }
 
-nav#level1nav, nav#level2nav { line-height: 1.2em; font-family: ff-meta-web-pro, nimbus-sans, PT Sans, UbuntuRegular, Tahoma, Elvetica, sans-serif; text-transform: uppercase; margin: 0.25em 0; }
+nav#level1nav, nav#level2nav { line-height: 1.2em; font-family: nimbus-sans, PT Sans, ff-meta-web-pro, UbuntuRegular, Tahoma, Elvetica, sans-serif; text-transform: uppercase; margin: 0.25em 0; }
 nav#level1nav ul li, nav#level2nav ul li { line-height: 1em; margin-bottom: 0; }
 
 #level1nav ul li { border-bottom: 5px solid transparent; }
@@ -216,7 +216,7 @@ header #socialbuttons ul { height: 16px; }
 
 #main { margin-bottom: 2em; }
 
-#level3nav { font-size: 0.925em; font-family: ff-meta-web-pro, nimbus-sans, PT Sans, UbuntuRegular, Tahoma, Elvetica, sans-serif; }
+#level3nav { font-size: 0.925em; font-family: nimbus-sans, PT Sans, ff-meta-web-pro, UbuntuRegular, Tahoma, Elvetica, sans-serif; }
 #level3nav li { line-height: 1.25em; margin-bottom: 0.25em; }
 #level3nav ul.children { margin-left: 1em; }
 #level3nav #organizer-logos { max-width: 67.7290%; width: 67.7290%; }
@@ -231,7 +231,7 @@ footer #footerSitemap > .row > section > ul li { line-height: 1em; margin-bottom
 
 .entry-meta.article-abstract { font-style: italic; }
 
-.flexslider { font-family: ff-meta-web-pro, nimbus-sans, PT Sans, UbuntuRegular, Tahoma, Elvetica, sans-serif; position: relative; font-size: 0.875em; /* .slides > li { height: #{2*$tile_base_emheight}em; }
+.flexslider { font-family: nimbus-sans, PT Sans, ff-meta-web-pro, UbuntuRegular, Tahoma, Elvetica, sans-serif; position: relative; font-size: 0.875em; /* .slides > li { height: #{2*$tile_base_emheight}em; }
 */ /* Direction Nav */ /* Control Nav */ }
 .flexslider .onecol, .flexslider .twocol, .flexslider .threecol, .flexslider .fourcol, .flexslider .fivecol, .flexslider .sixcol, .flexslider .sevencol, .flexslider .eightcol, .flexslider .ninecol, .flexslider .tencol, .flexslider .elevencol { margin-right: 0; }
 .flexslider .slide-inner { border-left: 1px solid #dedede; border-bottom: 1px solid #dedede; }
@@ -303,6 +303,7 @@ right: -21px; */ }
 #keyfacts dl dd ul li:last-child:after { content: ''; }
 
 #speaker-profiles h1 { font-size: 1.2em; }
+#speaker-profiles .people-list { -moz-column-count: 3; -webkit-column-count: 3; -o-column-count: 3; column-count: 3; }
 #speaker-profiles .people-list .person h1 { font-size: 1em; font-weight: bold; text-transform: inherit; border-bottom: 1px solid #eee; }
 
 /*/mediaquery*/
