@@ -88,7 +88,7 @@
             mousewheel: false
           }));
           $('.citieslist li:nth-child(odd)').addClass('alternate');
-          $('.accordion').accordion();
+          $('.accordion').accordion({autoHeight: false});
         });
       //]]>
 </script>
