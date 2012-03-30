@@ -216,30 +216,30 @@ $poster_pdf = $poster_pdf[0]['guid'];
                       foreach($event_all_the_people as $key => $event_speaker):
                         echo "<!-- event_speaker : " . var_export($event_speaker, true) . "-->";
                         if($event_speaker['profile_text']):
-                          if($index % 3 == 0 || $index == 0):
                 ?>
+                <?php if($index % 3 == 0 || $index == 0): ?>
                   <span>
                 <?php endif; ?>
-                  <li id="person-profile-<?php echo $event_speaker['slug'] ?>" class="person fourcol<?php if((($index + 1) % 3) == 0) : ?> last<?php endif ; ?>">
-                    <h1><?php echo $event_speaker['name'] ?> <?php echo $event_speaker['family_name'] ?></h1>
-                    <p><?php echo $event_speaker['profile_text'] ?></p>
-                    <?php if($event_speaker['homepage'] || $event_speaker['twitterhandle']): ?>
-                    <ul class="personal-links">
-                    <?php if($event_speaker['homepage']): ?>
-                        <li><a href="<?php echo $event_speaker['homepage']; ?>"><?php echo $event_speaker['homepage']; ?></a></li>
-                    <?php endif; ?>
-                    <?php if($event_speaker['twitterhandle']): ?>
-                        <li><a href="<?php echo $event_speaker['twitterhandle']; ?>"><?php echo $event_speaker['twitterhandle']; ?></a></li>
-                    <?php endif; ?>
-                    </ul>
-                    <?php endif; ?>
-                  </li>
+                    <li id="person-profile-<?php echo $event_speaker['slug'] ?>" class="person fourcol<?php if((($index + 1) % 3) == 0) : ?> last<?php endif ; ?>">
+                      <h1><?php echo $event_speaker['name'] ?> <?php echo $event_speaker['family_name'] ?></h1>
+                      <p><?php echo $event_speaker['profile_text'] ?></p>
+                      <?php if($event_speaker['homepage'] || $event_speaker['twitterhandle']): ?>
+                      <ul class="personal-links">
+                      <?php if($event_speaker['homepage']): ?>
+                          <li><a href="<?php echo $event_speaker['homepage']; ?>"><?php echo $event_speaker['homepage']; ?></a></li>
+                      <?php endif; ?>
+                      <?php if($event_speaker['twitterhandle']): ?>
+                          <li><a href="<?php echo $event_speaker['twitterhandle']; ?>"><?php echo $event_speaker['twitterhandle']; ?></a></li>
+                      <?php endif; ?>
+                      </ul>
+                      <?php endif; ?>
+                    </li>
+                <?php if($index % 3 == 0 || $index == 0): ?>
+                  </span>
                 <?php endif;
-                      if($index % 3 == 0 || $index == 0): ?>
-                      </span>
-                <?php endif;
-                      $index++;
-                      endforeach; ?>
+                    $index++;
+                  endif;
+                endforeach; ?>
                 </ul><!-- .people-list -->
               </section><!-- #speaker-profiles -->
             </div>
