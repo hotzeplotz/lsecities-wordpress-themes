@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; vertical-align: baseline; }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
@@ -288,6 +289,7 @@ right: -21px; */ }
 
 #keyfacts dl dt, #navigationarea nav dl dt { text-transform: uppercase; border-bottom: 1px solid #eee; }
 
+#navigationarea nav dl dt.ui-accordion-header::before { content: '►'; }
 #navigationarea nav h1 { font-size: 1em; }
 
 #keyfacts-short dl dt { float: left; margin-right: 0.5em; }
@@ -303,7 +305,6 @@ right: -21px; */ }
 #keyfacts dl dd ul li:last-child:after { content: ''; }
 
 #speaker-profiles h1 { font-size: 1.2em; }
-#speaker-profiles .people-list { -moz-column-count: 3; -webkit-column-count: 3; -o-column-count: 3; column-count: 3; }
 #speaker-profiles .people-list .person h1 { font-size: 1em; font-weight: bold; text-transform: inherit; border-bottom: 1px solid #eee; }
 
 /*/mediaquery*/

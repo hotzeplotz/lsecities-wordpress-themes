@@ -218,7 +218,7 @@ $poster_pdf = $poster_pdf[0]['guid'];
                         if($event_speaker['profile_text']):
                 ?>
                 <?php if($index % 3 == 0 || $index == 0): ?>
-                  <span>
+                  <div class="twelvecol">
                 <?php endif; ?>
                     <li id="person-profile-<?php echo $event_speaker['slug'] ?>" class="person fourcol<?php if((($index + 1) % 3) == 0) : ?> last<?php endif ; ?>">
                       <h1><?php echo $event_speaker['name'] ?> <?php echo $event_speaker['family_name'] ?></h1>
@@ -235,7 +235,7 @@ $poster_pdf = $poster_pdf[0]['guid'];
                       <?php endif; ?>
                     </li>
                 <?php if(($index + 1) % 3 == 0): ?>
-                  </span>
+                  </div>
                 <?php endif;
                     $index++;
                   endif;
