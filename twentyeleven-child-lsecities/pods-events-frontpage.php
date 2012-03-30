@@ -216,7 +216,7 @@ $poster_pdf = $poster_pdf[0]['guid'];
                       foreach($event_all_the_people as $key => $event_speaker):
                         echo "<!-- event_speaker : " . var_export($event_speaker, true) . "-->";
                         if($event_speaker['profile_text']):
-                          if($index % 3 == 0):
+                          if($index % 3 == 0 || $index == 0):
                 ?>
                   <span>
                 <?php endif; ?>
@@ -235,7 +235,7 @@ $poster_pdf = $poster_pdf[0]['guid'];
                     <?php endif; ?>
                   </li>
                 <?php endif;
-                      if($index % 3 == 0): ?>
+                      if($index % 3 == 0 || $index == 0): ?>
                       </span>
                 <?php endif;
                       $index++;
