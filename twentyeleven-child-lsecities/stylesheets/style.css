@@ -290,6 +290,7 @@ right: -21px; */ }
 #keyfacts dl dt, #navigationarea nav dl dt { text-transform: uppercase; border-bottom: 1px solid #eee; }
 
 #navigationarea nav dl dt.ui-accordion-header::before { content: '►'; }
+#navigationarea nav dl dt.ui-accordion-header.ui-state-active::before { content: '&#9660;'; }
 #navigationarea nav h1 { font-size: 1em; }
 
 #keyfacts-short dl dt { float: left; margin-right: 0.5em; }
