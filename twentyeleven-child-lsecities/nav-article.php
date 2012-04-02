@@ -2,6 +2,7 @@
 $TRACE_TEMPLATE_NAV = true;
 $TRACE_PREFIX = 'nav.php -- ';
 $current_post_id = $post->ID;
+global $publication_pod;
 ?>
 
 <nav>
