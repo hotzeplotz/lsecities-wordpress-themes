@@ -1,7 +1,7 @@
 <?php
 /**
  * Template Name: Pods - Articles
- * Description: The template used for Article Pods - Urban Age ua908 variant
+ * Description: The template used for Article Pods
  *
  * @package WordPress
  * @subpackage Twenty_Eleven
@@ -82,114 +82,97 @@ if(count($attachments)) {
 
 <?php get_header(); ?>
 
-<div class="row">
+<div role="main">
+
+<?php if ( have_posts() ) : the_post(); endif; ?>
+
+<div id="post-<?php the_ID(); ?>" <?php post_class('lc-article lc-newspaper-article'); ?>>
+
+          <div class='ninecol' id='contentarea'>
+            <div class='top-content'>
+              <article class='wireframe eightcol'>
+                <header class="entry-header">
+                  <div class='photospread wireframe'>
+                  <?php if($featured_image_uri) : ?>
+                    <img src="<?php echo $featured_image_uri; ?>" alt="" />
+                  <?php endif; ?>
+                  </div>
+                  <h1 class="entry-title article-title"><?php echo $article_title; ?></h1>
+                  <div class="entry-meta article-abstract"><?php echo $article_abstract; ?></div>
+                </header><!-- .entry-header -->
+                <div class="entry-content">    
+                <?php if(!empty($pod->data)): ?>
+                  <div class="article">
+                    <div class="entry-content article-text<?php if($article_layout) { echo ' ' . $article_layout; } ?>"><?php echo $article_text; ?></div>
+                    <div class="extra-content"><?php echo $article_extra_content; ?></div>
+                  </div>
+                <?php endif; ?>
+                    
+                <?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'twentyeleven' ) . '</span>', 'after' => '</div>' ) ); ?>
+                </div><!-- .entry-content -->
+                <?php if($event_blurb): ?>
+                  <div class="blurb"><?php echo $event_blurb; ?></div>
+                <?php endif; ?>
+                <?php if($event_contact_info and $is_future_event): ?>
+                  <aside class="booking-and-access"><?php echo $event_contact_info; ?></aside>
+                <?php endif; ?>
+              </article>
   
-<div role="main" class="ninecol">
-	<header class="entry-header">
-		<h1 class="entry-title article-title"><?php echo $article_title; ?></h1>
-    <div class="entry-meta article-abstract"><?php echo $article_abstract; ?></div>
-	</header><!-- .entry-header -->
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="entry-content">    
-    <?php if(!empty($pod->data)): ?>
-      <div class="article">
-        <div class="entry-content article-text<?php if($article_layout) { echo ' ' . $article_layout; } ?>"><?php echo $article_text; ?></div>
-        <div class="extra-content"><?php echo $article_extra_content; ?></div>
-      </div>
-    <?php endif; ?>
-        
-		<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'twentyeleven' ) . '</span>', 'after' => '</div>' ) ); ?>
-	</div><!-- .entry-content -->
-</article><!-- #post-<?php the_ID(); ?> -->
+  
 
-</div><!-- role:main -->
 
-<aside class="threecol last">
-<div class="entry-meta">
-    <div id="author-info">
-      <dl>
-      <?php if(is_array($article_authors)): ?>
-        <dt>Authors</dt>
-        <dd>
-          <ul>
-          <?php foreach($article_authors as $author): ?>
-            <li><?php echo $author['name'] ?> <?php echo $author['family_name'] ?></li>
-          <?php endforeach; ?>
-          </ul>
-        </dd>
-      <?php endif; ?>
-        <dt>Publication date</dt>
-        <dd><?php echo $article_publication_date ?></dd>
-        <dt>Tags</dt>
-        <dd>
-          <?php if(is_array($article_tags)): ?>
-          <ul>
-            <?php foreach($article_tags as $tag): ?>
-              <li><?php echo $tag['name'] ; ?></li>
-            <?php endforeach; ?>
-          </ul>
-          <?php else: ?>
-          <em>no tags defined</em>
-          <?php endif; ?>
-        </dd>
-        <?php if($pdf_uri or count($attachments)) : ?>
-        <dt>Downloads</dt>
-        <?php if($pdf_uri): ?>
-        <dd>
-          <a href="<?php echo $pdf_uri; ?>">Download this article as PDF</a>
-        </dd>
-        <?php endif; ?>
-        <?php
-          if(count($attachments)) :
-            foreach($attachments as $attachment) :?>
-            <dd><a href="<?php echo $attachment['guid']; ?>" /><?php echo $attachment['post_title']; ?></a></dd>
-        <?php
-            endforeach;
-          endif; ?>
-        <?php endif; ?>
-      </dl>
-    </div><!-- #author-info -->
-		<?php edit_post_link( __( 'Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
-	</div><!-- .entry-meta -->
+              <aside class='wireframe fourcol last' id='keyfacts'>
+                <dl>
+                <?php if(is_array($article_authors)): ?>
+                  <dt>Authors</dt>
+                  <dd>
+                    <ul>
+                    <?php foreach($article_authors as $author): ?>
+                      <li><?php echo $author['name'] ?> <?php echo $author['family_name'] ?></li>
+                    <?php endforeach; ?>
+                    </ul>
+                  </dd>
+                <?php endif; ?>
+                  <dt>Publication date</dt>
+                  <dd><?php echo $article_publication_date ?></dd>
+                  <dt>Tags</dt>
+                  <dd>
+                    <?php if(is_array($article_tags)): ?>
+                    <ul>
+                      <?php foreach($article_tags as $tag): ?>
+                        <li><?php echo $tag['name'] ; ?></li>
+                      <?php endforeach; ?>
+                    </ul>
+                    <?php else: ?>
+                    <em>no tags defined</em>
+                    <?php endif; ?>
+                  </dd>
+                  <?php if($pdf_uri or count($attachments)) : ?>
+                  <dt>Downloads</dt>
+                  <?php if($pdf_uri): ?>
+                  <dd>
+                    <a href="<?php echo $pdf_uri; ?>">Download this article as PDF</a>
+                  </dd>
+                  <?php endif; ?>
+                  <?php
+                    if(count($attachments)) :
+                      foreach($attachments as $attachment) :?>
+                      <dd><a href="<?php echo $attachment['guid']; ?>" /><?php echo $attachment['post_title']; ?></a></dd>
+                  <?php
+                      endforeach;
+                    endif; ?>
+                  <?php endif; ?>           
+                </dl>
+                <div class="media-items">
+                  
+                </div>
+              </aside><!-- #keyfacts -->
+            </div><!-- .top-content -->
+          </div><!-- #contentarea -->
 
-<?php if(count($publication_pod->get_field('articles'))) : ?>
-  <div>
-    <h3><?php echo $publication_pod->get_field('name'); ?></h3>
-    <ul class="publication-side-toc">
-    <?php
-    $sections = array();
-    foreach(preg_split("/\n/", $publication_pod->get_field('sections')) as $section_line) {
-      preg_match("/^(\d+)?\s?(.*)$/", $section_line, $matches);
-      array_push($sections, array( 'id' => $matches[1], 'title' => $matches[2]));
-    }
-    if($TRACE_PODS_ARTICLES) { error_log('sections: ' . var_export($sections, true)); }
-    
-    if(!count($sections)) {
-      $sections = array("010" => "");
-    }
-    foreach($sections as $section) : ?>
-      <?php if($section['title']) { ?><h4><?php echo $section['title']; ?></h4><?php }
-      foreach($publication_pod->get_field('articles') as $article) :
-        if(preg_match("/^" . $section['id'] . "/", $article['sequence'])) : ?>
-          <?php if($TRACE_PODS_ARTICLES) : ?>
-          <!-- <?php echo 'article Pod object: ' . var_export($article, true); ?> -->
-          <?php endif; ?>
-          <li>
-            <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $article['slug']; ?>"><?php echo $article['name']; ?></a>
-            <?php if(!empty($article['language']['name'])) : ?>
-              (English) - <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $article['slug'] . '/?lang=' . $article['language']['language_code']; ?>">(<?php echo $article['language']['name']; ?>)</a>
-            <?php endif; ?>
-          </li>
-      <?php
-        endif;
-      endforeach; 
-    endforeach; ?>
-    </ul>
-  </div>
-<?php endif; ?>
+</div><!-- #post-<?php the_ID(); ?> -->
 
-</aside>
-</div>
+
 <?php // get_template_part('nav'); ?>
 
 <?php get_sidebar(); ?>
