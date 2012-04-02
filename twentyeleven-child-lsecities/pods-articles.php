@@ -108,7 +108,9 @@ if(count($attachments)) {
                 <?php if(!empty($pod->data)): ?>
                   <div class="article">
                     <div class="entry-content article-text<?php if($article_layout) { echo ' ' . $article_layout; } ?>"><?php echo $article_text; ?></div>
+                    <?php if($article_extra_content): ?>
                     <div class="extra-content"><?php echo $article_extra_content; ?></div>
+                    <?php endif; ?>
                   </div>
                 <?php endif; ?>
                     
