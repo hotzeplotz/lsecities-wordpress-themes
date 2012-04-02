@@ -309,6 +309,8 @@ right: -21px; */ }
 #speaker-profiles h1 { font-size: 1.2em; }
 #speaker-profiles .people-list .person h1 { font-size: 1em; font-weight: bold; text-transform: inherit; border-bottom: 1px solid #eee; }
 
+.lc-newspaper-article article .article .entry-content img, .lc-newspaper-article article .article .extra-content img { float: right; margin-right: -50%; max-width: 150%; position: relative; width: 150%; }
+
 /*/mediaquery*/
 /*/mediaquery*/
 @media print { * { background: transparent !important; color: black !important; text-shadow: none !important; filter: none !important; -ms-filter: none !important; }
