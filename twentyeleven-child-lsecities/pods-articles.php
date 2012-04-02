@@ -27,7 +27,7 @@ $lang = strtolower(pods_url_variable('lang', 'get'));
 $article_lang2 = $pod->get_field('language.slug');
 $article_layout = $pod->get_field('layout');
 
-$publication_pod = new Pod('publication_wrappers', $pod->get_field('in_publication.id'));
+global $publication_pod = new Pod('publication_wrappers', $pod->get_field('in_publication.id'));
 
 // grab the image URI from the Pod
 $featured_image_uri = $pod->get_field('heading_image.guid');
@@ -116,12 +116,6 @@ if(count($attachments)) {
                     
                 <?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'twentyeleven' ) . '</span>', 'after' => '</div>' ) ); ?>
                 </div><!-- .entry-content -->
-                <?php if($event_blurb): ?>
-                  <div class="blurb"><?php echo $event_blurb; ?></div>
-                <?php endif; ?>
-                <?php if($event_contact_info and $is_future_event): ?>
-                  <aside class="booking-and-access"><?php echo $event_contact_info; ?></aside>
-                <?php endif; ?>
               </article>
   
   
@@ -150,7 +144,7 @@ if(count($attachments)) {
                       <?php endforeach; ?>
                     </ul>
                     <?php else: ?>
-                    <em>no tags defined</em>
+                    <em>No tags defined</em>
                     <?php endif; ?>
                   </dd>
                   <?php if($pdf_uri or count($attachments)) : ?>
