@@ -86,7 +86,7 @@ if(count($attachments)) {
 
 <?php if ( have_posts() ) : the_post(); endif; ?>
 
-<div id="post-<?php the_ID(); ?>" class='lc-article lc-newspaper-article' ?>>
+<div id="post-<?php the_ID(); ?>" class='lc-article lc-newspaper-article'>
 
           <div class='ninecol' id='contentarea'>
             <div class='top-content'>
