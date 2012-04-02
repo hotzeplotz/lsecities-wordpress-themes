@@ -176,7 +176,7 @@ if(count($attachments)) {
 
 </div><!-- role="main" -->
 
-<?php get_template_part('nav', 'article'); ?>
+<?php include(locate_template('nav-article.php')); ?>
 
 <?php get_sidebar(); ?>
 
