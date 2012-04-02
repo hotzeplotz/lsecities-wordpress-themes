@@ -17,18 +17,6 @@ global $pods;
 $BASE_URI = '/media/objects/events/';
 $TRACE_PODS_EVENTS_FRONTPAGE = true;
 
-function var_trace($var, $prefix = 'pods', $enabled = true, $destination = 'page') {
-  if($enabled) {
-    $output_string = "tracing $prefix : " . var_export($var, true) . "\n\n";
-    
-    if($destination == 'page') {
-      echo "<!-- $output_string -->";
-    } elseif($destination == 'syslog') {
-      error_log($output_string);
-    }
-  }
-}
-
 function people_list($people, $heading_singular, $heading_plural) {
   $output = '';
   $people_count = 0;
@@ -43,7 +31,7 @@ function people_list($people, $heading_singular, $heading_plural) {
     $output .= "<dd>\n<ul>\n";
     
     foreach($people as $person) {
-      var_trace($person, 'people_list:$person', $TRACE_PODS_EVENTS_FRONTPAGE);
+      echo var_trace($person, 'people_list:$person', $TRACE_PODS_EVENTS_FRONTPAGE);
       $people_count++;
       if($person['profile_text']) {
         $output .= '<li><a href="#person-profile-' . $person['slug'] . '">' . $person['name'] . ' ' . $person['family_name'] . "</a></li>\n";
@@ -81,7 +69,7 @@ $event_respondents = $pod->get_field('respondents', 'family_name ASC');
 $event_chairs = $pod->get_field('chairs', 'family_name ASC');
 $event_moderators = $pod->get_field('moderators', 'family_name ASC');
 $event_all_the_people = array_merge((array)$event_speakers, (array)$event_respondents, (array)$event_chairs, (array)$event_moderators);
-var_trace($event_all_the_people);
+echo var_trace($event_all_the_people);
 $event_hashtag = ltrim($pod->get_field('hashtag'), '#');
 
 $speakers_output = people_list($event_speakers, "Speaker", "Speakers");
@@ -126,10 +114,10 @@ $poster_pdf = $poster_pdf[0]['guid'];
 
 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-<?php var_trace($speakers_output, false, $TRACE_PODS_EVENTS_FRONTPAGE);
-      var_trace($respondents_output, false, $TRACE_PODS_EVENTS_FRONTPAGE);
-      var_trace($chairs_output, false, $TRACE_PODS_EVENTS_FRONTPAGE);
-      var_trace($moderators_output, false, $TRACE_PODS_EVENTS_FRONTPAGE);
+<?php echo var_trace($speakers_output, false, $TRACE_PODS_EVENTS_FRONTPAGE);
+      echo var_trace($respondents_output, false, $TRACE_PODS_EVENTS_FRONTPAGE);
+      echo var_trace($chairs_output, false, $TRACE_PODS_EVENTS_FRONTPAGE);
+      echo var_trace($moderators_output, false, $TRACE_PODS_EVENTS_FRONTPAGE);
 ?>
 
           <div class='ninecol' id='contentarea'>
@@ -241,7 +229,7 @@ $poster_pdf = $poster_pdf[0]['guid'];
               </div><!-- #keyfacts -->
             </div>
             <?php if($people_with_blurb): ?>
-            <?php var_trace($event_all_the_people, false, $TRACE_PODS_EVENTS_FRONTPAGE); ?>
+            <?php echo var_trace($event_all_the_people, false, $TRACE_PODS_EVENTS_FRONTPAGE); ?>
             <div class='extra-content twelvecol'>
               <section id='speaker-profiles'>
                 <h1>Profiles</h1>
