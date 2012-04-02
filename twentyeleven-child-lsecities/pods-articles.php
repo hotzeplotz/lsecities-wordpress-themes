@@ -29,6 +29,8 @@ $article_layout = $pod->get_field('layout');
 
 $publication_pod = new Pod('publication_wrappers', $pod->get_field('in_publication.id'));
 
+// grab the image URI from the Pod
+$featured_image_uri = $pod->get_field('heading_image.guid');
 
 if($TRACE_PODS_ARTICLES) { error_log('request_language: ' . $lang); }
 if($TRACE_PODS_ARTICLES) { error_log('article_lang2: ' . $article_lang2); }
@@ -90,13 +92,15 @@ if(count($attachments)) {
 
           <div class='ninecol' id='contentarea'>
             <div class='top-content'>
+              <header role="heading-image">
+                <div class='photospread wireframe'>
+                <?php if($featured_image_uri) : ?>
+                  <img src="<?php echo $featured_image_uri; ?>" alt="" />
+                <?php endif; ?>
+                </div>
+              </header>
               <article class='wireframe eightcol'>
                 <header class="entry-header">
-                  <div class='photospread wireframe'>
-                  <?php if($featured_image_uri) : ?>
-                    <img src="<?php echo $featured_image_uri; ?>" alt="" />
-                  <?php endif; ?>
-                  </div>
                   <h1 class="entry-title article-title"><?php echo $article_title; ?></h1>
                   <div class="entry-meta article-abstract"><?php echo $article_abstract; ?></div>
                 </header><!-- .entry-header -->
