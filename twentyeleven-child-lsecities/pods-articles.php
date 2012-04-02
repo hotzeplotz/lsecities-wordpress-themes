@@ -94,7 +94,7 @@ if(count($attachments)) {
 
           <div class='ninecol' id='contentarea'>
             <div class='top-content'>
-              <header role="heading-image">
+              <header class="heading-image">
                 <div class='photospread wireframe'>
                 <?php if($featured_image_uri) : ?>
                   <img src="<?php echo $featured_image_uri; ?>" alt="" />
