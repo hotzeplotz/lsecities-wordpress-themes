@@ -27,7 +27,9 @@ $lang = strtolower(pods_url_variable('lang', 'get'));
 $article_lang2 = $pod->get_field('language.slug');
 $article_layout = $pod->get_field('layout');
 
-global $publication_pod = new Pod('publication_wrappers', $pod->get_field('in_publication.id'));
+global $publication_pod;
+
+$publication_pod = new Pod('publication_wrappers', $pod->get_field('in_publication.id'));
 
 // grab the image URI from the Pod
 $featured_image_uri = $pod->get_field('heading_image.guid');
