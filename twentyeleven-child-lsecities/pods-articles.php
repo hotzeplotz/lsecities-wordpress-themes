@@ -180,7 +180,7 @@ if(count($attachments)) {
 
 </div><!-- role="main" -->
 
-<?php // get_template_part('nav'); ?>
+<?php get_template_part('nav', 'article'); ?>
 
 <?php get_sidebar(); ?>
 
