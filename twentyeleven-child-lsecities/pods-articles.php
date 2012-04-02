@@ -172,6 +172,7 @@ if(count($attachments)) {
 
 </div><!-- #post-<?php the_ID(); ?> -->
 
+</div><!-- role="main" -->
 
 <?php // get_template_part('nav'); ?>
 

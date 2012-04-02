@@ -112,7 +112,7 @@ $poster_pdf = $poster_pdf[0]['guid'];
 
 <?php if ( have_posts() ) : the_post(); endif; ?>
 
-<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<div id="post-<?php the_ID(); ?>" <?php post_class('lc-article lc-event'); ?>>
 
 <?php echo var_trace($speakers_output, false, $TRACE_PODS_EVENTS_FRONTPAGE);
       echo var_trace($respondents_output, false, $TRACE_PODS_EVENTS_FRONTPAGE);
@@ -147,7 +147,7 @@ $poster_pdf = $poster_pdf[0]['guid'];
                   <aside class="booking-and-access"><?php echo $event_contact_info; ?></aside>
                 <?php endif; ?>
               </article>
-              <div class='wireframe fourcol last' id='keyfacts'>
+              <aside class='wireframe fourcol last' id='keyfacts'>
                 <dl>
                     <?php echo $speakers_output['output'];
                           echo $respondents_output['output'];
@@ -226,8 +226,8 @@ $poster_pdf = $poster_pdf[0]['guid'];
                 <div class="media-items">
                   
                 </div>
-              </div><!-- #keyfacts -->
-            </div>
+              </aside><!-- #keyfacts -->
+            </div><!-- .top-content -->
             <?php if($people_with_blurb): ?>
             <?php echo var_trace($event_all_the_people, false, $TRACE_PODS_EVENTS_FRONTPAGE); ?>
             <div class='extra-content twelvecol'>
@@ -276,7 +276,7 @@ $poster_pdf = $poster_pdf[0]['guid'];
           <?php endif; ?>
           </div>
 
-</div>
+</div><!-- #contentarea -->
 </div>
 
 <?php get_sidebar(); ?>
