@@ -289,6 +289,7 @@ right: -21px; */ }
 #contentarea .extra-content > section > h1 { color: #fff; background-color: #e93616; display: inline-block; padding: 0 0.5em; margin-bottom: 1em; font-size: 1.2em; }
 #contentarea .top-content { margin-bottom: 1em; }
 #contentarea .top-content header.heading-image { overflow: hidden; height: 21.125em; }
+#contentarea .top-content header.heading-image .photospread img { width: 100%; }
 #contentarea .top-content article header { margin-bottom: 1em; }
 #contentarea .top-content article header h1 { font-family: museo-sans, nevisBold, PT Sans, sans-serif; font-weight: 900; color: #22273b; }
 
