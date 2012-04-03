@@ -122,13 +122,13 @@ $poster_pdf = $poster_pdf[0]['guid'];
 
           <div class='ninecol' id='contentarea'>
             <div class='top-content'>
+              <?php if($featured_image_uri) : ?>
               <header class='heading-image'>
                 <div class='photospread wireframe'>
-                <?php if($featured_image_uri) : ?>
                   <img src="<?php echo $featured_image_uri; ?>" alt="event photo" />
-                <?php endif; ?>
                 </div>
               </header>
+              <?php endif; ?>
               <article class='wireframe eightcol'>
                 <header>
                   <h1><?php echo $pod->get_field('name'); ?></h1>
