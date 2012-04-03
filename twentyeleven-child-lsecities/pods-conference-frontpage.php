@@ -76,7 +76,7 @@ $poster_pdf = $poster_pdf[0]['guid'];
               <?php if($featured_image_uri) : ?>
               <header class='heading-image'>
                 <div class='photospread wireframe'>
-                  <img src="<?php echo $featured_image_uri; ?>" alt="event photo" />
+                  <?php echo $featured_image_uri; ?>
                 </div>
               </header>
               <?php endif; ?>
