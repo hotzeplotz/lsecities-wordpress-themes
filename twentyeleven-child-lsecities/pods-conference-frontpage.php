@@ -1,7 +1,7 @@
 <?php
 /**
- * Template Name: Pods - Event
- * Description: The template used for Event Pods
+ * Template Name: Pods - Conference
+ * Description: The template used for Conference Pods
  *
  * @package WordPress
  * @subpackage Twenty_Eleven
@@ -14,55 +14,18 @@
  * URI: /media/objects/events/
  */
 global $pods;
-$BASE_URI = '/media/objects/events/';
-$TRACE_PODS_EVENTS_FRONTPAGE = true;
+$BASE_URI = '/media/objects/conferences/';
+$TRACE_PODS_CONFERENCE_FRONTPAGE = true;
 
-function people_list($people, $heading_singular, $heading_plural) {
-  $output = '';
-  $people_count = 0;
-  $people_with_blurb_count = 0;
-  
-  if(is_array($people)) {
-    if(count($people) > 1) {
-      $output .= "<dt>$heading_plural</dt>\n";
-    } else {
-      $output .= "<dt>$heading_singular</dt>\n";
-    }
-    $output .= "<dd>\n<ul>\n";
-    
-    foreach($people as $person) {
-      echo var_trace($person, 'people_list:$person', $TRACE_PODS_EVENTS_FRONTPAGE);
-      $people_count++;
-      if($person['profile_text']) {
-        $output .= '<li><a href="#person-profile-' . $person['slug'] . '">' . $person['name'] . ' ' . $person['family_name'] . "</a></li>\n";
-        $people_with_blurb_count++;
-      } else {
-        $output .= "<li>" . $person['name'] . "  " . $person['family_name'] . "</li>\n";
-      }
-    }
-    $output .= "</ul>\n</dd>\n";
-  }
-  
-  return array('count' => $people_count, 'with_blurb' => $people_with_blurb_count, 'output' => $output, 'trace' => var_export($people, true));
-}
+$pod_slug = get_post_meta($post->ID, 'pod_slug', true);
+$pod = new Pod('conference', $pod_slug);
+$is_conference = true;
 
-// check if we are getting called via Pods (pods_url_variable is set)
-$pod_slug = pods_url_variable(3);
-
-if($pod_slug) {
-  $pod = new Pod('event', $pod_slug);
-  $is_conference = false;
-} else {
-  $pod_slug = get_post_meta($post->ID, 'pod_slug', true);
-  $pod = new Pod('conference', $pod_slug);
-  $is_conference = true;
-}
-
-if($TRACE_PODS_EVENTS_FRONTPAGE) { error_log('pod_slug: ' . $pod_slug); }
+if($TRACE_PODS_CONFERENCE_FRONTPAGE) { error_log('pod_slug: ' . $pod_slug); }
 
 $button_links = $pod->get_field('links');
 
-if($TRACE_PODS_EVENTS_FRONTPAGE) { error_log('button_links: ' . var_export($button_links, true)); }
+if($TRACE_PODS_CONFERENCE_FRONTPAGE) { error_log('button_links: ' . var_export($button_links, true)); }
 
 $event_speakers = $pod->get_field('speakers', 'family_name ASC');
 $event_respondents = $pod->get_field('respondents', 'family_name ASC');
@@ -112,13 +75,8 @@ $poster_pdf = $poster_pdf[0]['guid'];
 
 <?php if ( have_posts() ) : the_post(); endif; ?>
 
-<div id="post-<?php the_ID(); ?>" <?php post_class('lc-article lc-event'); ?>>
+<div id="post-<?php the_ID(); ?>" <?php post_class('lc-article lc-conference'); ?>>
 
-<?php echo var_trace($speakers_output, false, $TRACE_PODS_EVENTS_FRONTPAGE);
-      echo var_trace($respondents_output, false, $TRACE_PODS_EVENTS_FRONTPAGE);
-      echo var_trace($chairs_output, false, $TRACE_PODS_EVENTS_FRONTPAGE);
-      echo var_trace($moderators_output, false, $TRACE_PODS_EVENTS_FRONTPAGE);
-?>
 
           <div class='ninecol' id='contentarea'>
             <div class='top-content'>
@@ -230,7 +188,7 @@ $poster_pdf = $poster_pdf[0]['guid'];
             
               
               <?php if($people_with_blurb): ?>
-              <?php echo var_trace($event_all_the_people, false, $TRACE_PODS_EVENTS_FRONTPAGE); ?>
+              <?php echo var_trace($event_all_the_people, false, $TRACE_PODS_CONFERENCE_FRONTPAGE); ?>
               <section id='speaker-profiles'>
                 <h1>Profiles</h1>
                 <ul class='people-list'>
