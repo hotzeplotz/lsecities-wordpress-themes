@@ -177,17 +177,12 @@ $poster_pdf = $poster_pdf[0]['guid'];
                       <dd><a href="<?php echo $freakin_site_map; ?>">Site map</a> (PDF)</dd>
                       <?php endif; ?>  
                     <?php endif; ?>
-                    
-                    <?php if($event_hashtag): ?>
-                    <dt class='twitterbox'></dt>
-                    <dd class='twitterbox'></dd>
-                      <div><a href="https://twitter.com/#!/search/#<?php echo $event_hashtag; ?>">#<?php echo $event_hashtag; ?></a></div>
-                    </dd>
-                    <?php endif; ?>
                 </dl>
-                <div class="media-items">
-                  
+                <?php if($event_hashtag): ?>
+                <div class='twitterbox'>
+                  <a href="https://twitter.com/#!/search/#<?php echo $event_hashtag; ?>">#<?php echo $event_hashtag; ?></a>
                 </div>
+                <?php endif; ?>
               </aside><!-- #keyfacts -->
             </div><!-- .top-content -->
 
@@ -196,31 +191,36 @@ $poster_pdf = $poster_pdf[0]['guid'];
               <?php if($event_media): ?>
               <section class="event-materials">
                 <h1>Event materials</h1>
-                <div>
+                <dl>
                 <?php foreach($event_media as $event_media_item): ?>
                   <?php if($event_media_item['youtube_uri']): ?>
                   <div class="fourcol">
-                    <h4>Video</h4>
-                    <iframe
-                     width="283"
-                     height="191"
-                     src="https://www.youtube.com/embed/<?php echo $event_media_item['youtube_uri']; ?>?rel=0"
-                     frameborder="0"
-                     allowfullscreen="allowfullscreen">
-                     &#160;
-                    </iframe>
+                    <dt>Video</dt>
+                    <dd>
+                      <iframe
+                       width="100%"
+                       src="https://www.youtube.com/embed/<?php echo $event_media_item['youtube_uri']; ?>?rel=0"
+                       frameborder="0"
+                       allowfullscreen="allowfullscreen">
+                       &#160;
+                      </iframe>
+                    </dd>
                   </div>
                   <?php endif; ?>
                   <?php if($event_media_item['audio_uri']): ?>
                   <div class="fourcol">
-                    <h4>Audio</h4>
-                    <p>Listen to <a class="link mp3" href="<?php echo $event_media_item['audio_uri']; ?>">podcast</a>.</p>
+                    <dt>Audio</dt>
+                    <dd>
+                      <p>Listen to <a class="link mp3" href="<?php echo $event_media_item['audio_uri']; ?>">podcast</a>.</p>
+                    </dd>
                   </div>
                   <?php endif; ?>
                   <?php if($event_media_item['presentation_uri']): ?>
-                  <div class="fourcol">
-                    <h4>Presentation slides</h4>
-                    <p><a class="link pdf" href="<?php echo $event_media_item['presentation_uri']; ?>">Download</a> (PDF).</p>
+                  <div class="fourcol last">
+                    <dt>Presentation slides</dt>
+                    <dd>
+                      <p><a class="link pdf" href="<?php echo $event_media_item['presentation_uri']; ?>">Download</a> (PDF).</p>
+                    </dd>
                   </div>
                   <?php endif; ?> 
                 <?php endforeach; ?>
