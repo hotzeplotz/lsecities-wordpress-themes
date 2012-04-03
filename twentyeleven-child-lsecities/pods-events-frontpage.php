@@ -132,15 +132,6 @@ $poster_pdf = $poster_pdf[0]['guid'];
               <article class='wireframe eightcol'>
                 <header>
                   <h1><?php echo $pod->get_field('name'); ?></h1>
-                  <div id='keyfacts-short'>
-                    <dl>
-                    <?php echo $speakers_output['output'];
-                          echo $respondents_output['output'];
-                          echo $chairs_output['output'];
-                          echo $moderators_output['output'];
-                    ?>
-                    </dl>
-                  </div>
                 </header>
                 <?php if($event_blurb): ?>
                   <div class="blurb"><?php echo $event_blurb; ?></div>
