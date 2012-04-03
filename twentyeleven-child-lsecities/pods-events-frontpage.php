@@ -224,7 +224,7 @@ $poster_pdf = $poster_pdf[0]['guid'];
                   </div>
                   <?php endif; ?> 
                 <?php endforeach; ?>
-                </div>
+                </dl>
               </section>
               <?php endif; ?> 
             

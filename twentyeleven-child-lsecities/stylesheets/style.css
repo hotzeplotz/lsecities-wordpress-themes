@@ -285,7 +285,7 @@ right: -21px; */ }
 
 .twitterbox { background: url("http://v1.lsecities.net/wp-content/themes/twentyeleven-child-lsecities/images/icons/mal/tweet.gif") no-repeat scroll 0 50% transparent; line-height: 2em; padding-left: 2.5em; }
 
-#contentarea .extra-content > section { clear: both; border-top: 1px solid #e93616; }
+#contentarea .extra-content > section { clear: both; border-top: 1px solid #e93616; margin-top: 2em; }
 #contentarea .extra-content > section > h1 { color: #fff; background-color: #e93616; display: inline-block; padding: 0 0.5em; margin-bottom: 1em; font-size: 1.2em; }
 #contentarea .top-content { margin-bottom: 1em; }
 #contentarea .top-content header.heading-image { overflow: hidden; height: 21.125em; }
