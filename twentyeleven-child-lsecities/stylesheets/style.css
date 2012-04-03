@@ -283,8 +283,8 @@ right: -21px; */ }
 
 #main { margin-top: 1em; }
 
-#contentarea .extra-content > section { border-top: 1px solid #e93616; }
-#contentarea .extra-content > section > h1 { color: #fff; background-color: #e93616; display: inline-block; padding: 0 0.5em; margin-bottom: 1em; }
+#contentarea .extra-content > section { clear: both; border-top: 1px solid #e93616; }
+#contentarea .extra-content > section > h1 { color: #fff; background-color: #e93616; display: inline-block; padding: 0 0.5em; margin-bottom: 1em; font-size: 1.2em; }
 #contentarea .top-content { margin-bottom: 1em; }
 #contentarea .top-content header.heading-image { overflow: hidden; height: 21.125em; }
 #contentarea .top-content article header { margin-bottom: 1em; }
@@ -309,7 +309,6 @@ right: -21px; */ }
 #keyfacts dl dd ul li:after { content: ', '; }
 #keyfacts dl dd ul li:last-child:after { content: ''; }
 
-#speaker-profiles h1 { font-size: 1.2em; }
 #speaker-profiles .people-list .person h1 { font-size: 1em; font-weight: bold; text-transform: inherit; border-bottom: 1px solid #eee; }
 
 .lc-newspaper-article header.heading-image img { width: 100%; }
