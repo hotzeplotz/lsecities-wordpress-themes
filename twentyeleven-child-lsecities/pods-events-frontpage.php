@@ -190,46 +190,45 @@ $poster_pdf = $poster_pdf[0]['guid'];
                 </div>
               </aside><!-- #keyfacts -->
             </div><!-- .top-content -->
-            
-            
-            <?php if($event_media): ?>
-            <section class="event-materials">
-            <h1>Event materials</h1>
-            <?php foreach($event_media as $event_media_item): ?>
-              <?php if($event_media_item['youtube_uri']): ?>
-              <div class="fourcol">
-                <h4>Video</h4>
-                <iframe
-                 width="283"
-                 height="191"
-                 src="https://www.youtube.com/embed/<?php echo $event_media_item['youtube_uri']; ?>?rel=0"
-                 frameborder="0"
-                 allowfullscreen="allowfullscreen">
-                 &#160;
-                </iframe>
-              </div>
-              <?php endif; ?>
-              <?php if($event_media_item['audio_uri']): ?>
-              <div class="fourcol">
-                <h4>Audio</h4>
-                <p>Listen to <a class="link mp3" href="<?php echo $event_media_item['audio_uri']; ?>">podcast</a>.</p>
-              </div>
-              <?php endif; ?>
-              <?php if($event_media_item['presentation_uri']): ?>
-              <div class="fourcol">
-                <h4>Presentation slides</h4>
-                <p><a class="link pdf" href="<?php echo $event_media_item['presentation_uri']; ?>">Download</a> (PDF).</p>
-              </div>
-              <?php endif; ?> 
-            <?php endforeach; ?>
-            </section>
-            <?php endif; ?> 
-                      
-            
-            
-            <?php if($people_with_blurb): ?>
-            <?php echo var_trace($event_all_the_people, false, $TRACE_PODS_EVENTS_FRONTPAGE); ?>
+
             <div class='extra-content twelvecol'>
+              
+              <?php if($event_media): ?>
+              <section class="event-materials">
+              <h1>Event materials</h1>
+              <?php foreach($event_media as $event_media_item): ?>
+                <?php if($event_media_item['youtube_uri']): ?>
+                <div class="fourcol">
+                  <h4>Video</h4>
+                  <iframe
+                   width="283"
+                   height="191"
+                   src="https://www.youtube.com/embed/<?php echo $event_media_item['youtube_uri']; ?>?rel=0"
+                   frameborder="0"
+                   allowfullscreen="allowfullscreen">
+                   &#160;
+                  </iframe>
+                </div>
+                <?php endif; ?>
+                <?php if($event_media_item['audio_uri']): ?>
+                <div class="fourcol">
+                  <h4>Audio</h4>
+                  <p>Listen to <a class="link mp3" href="<?php echo $event_media_item['audio_uri']; ?>">podcast</a>.</p>
+                </div>
+                <?php endif; ?>
+                <?php if($event_media_item['presentation_uri']): ?>
+                <div class="fourcol">
+                  <h4>Presentation slides</h4>
+                  <p><a class="link pdf" href="<?php echo $event_media_item['presentation_uri']; ?>">Download</a> (PDF).</p>
+                </div>
+                <?php endif; ?> 
+              <?php endforeach; ?>
+              </section>
+              <?php endif; ?> 
+            
+              
+              <?php if($people_with_blurb): ?>
+              <?php echo var_trace($event_all_the_people, false, $TRACE_PODS_EVENTS_FRONTPAGE); ?>
               <section id='speaker-profiles'>
                 <h1>Profiles</h1>
                 <ul class='people-list'>
@@ -263,8 +262,8 @@ $poster_pdf = $poster_pdf[0]['guid'];
                 endforeach; ?>
                 </ul><!-- .people-list -->
               </section><!-- #speaker-profiles -->
+              <?php endif; ?>
             </div>
-            <?php endif; ?>
           </div>
 
           <div id="navigationarea" class='wireframe threecol last'>    
