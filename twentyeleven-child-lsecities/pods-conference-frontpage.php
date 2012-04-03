@@ -35,13 +35,6 @@ $event_all_the_people = array_merge((array)$event_speakers, (array)$event_respon
 echo var_trace($event_all_the_people);
 $event_hashtag = ltrim($pod->get_field('hashtag'), '#');
 
-$speakers_output = people_list($event_speakers, "Speaker", "Speakers");
-$respondents_output = people_list($event_respondents, "Respondent", "Respondents");
-$chairs_output = people_list($event_chairs, "Chair", "Chairs");
-$moderators_output = people_list($event_moderators, "Moderator", "Moderators");
-
-$people_with_blurb = $speakers_output['with_blurb'] + $respondents_output['with_blurb'] + $chairs_output['with_blurb'] + $moderators_output['with_blurb'];
-
 $event_blurb = do_shortcode($pod->get_field('blurb'));
 $event_contact_info = do_shortcode($pod->get_field('contact_info'));
 
