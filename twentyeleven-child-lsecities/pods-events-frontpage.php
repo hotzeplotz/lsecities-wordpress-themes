@@ -179,9 +179,9 @@ $poster_pdf = $poster_pdf[0]['guid'];
                     <?php endif; ?>
                     
                     <?php if($event_hashtag): ?>
-                    <dt></dt>
-                    <dd>
-                      <div class='twitterbox'><a href="https://twitter.com/#!/search/#<?php echo $event_hashtag; ?>">#<?php echo $event_hashtag; ?></a></div>
+                    <dt class='twitterbox'></dt>
+                    <dd class='twitterbox'></dd>
+                      <div><a href="https://twitter.com/#!/search/#<?php echo $event_hashtag; ?>">#<?php echo $event_hashtag; ?></a></div>
                     </dd>
                     <?php endif; ?>
                 </dl>
