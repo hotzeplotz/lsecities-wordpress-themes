@@ -181,46 +181,52 @@ $poster_pdf = $poster_pdf[0]['guid'];
                     <?php if($event_hashtag): ?>
                     <dt></dt>
                     <dd>
-                      <div class='twitterbox'></div>
+                      <div class='twitterbox'><a href="https://twitter.com/#!/search/<?php echo $event_hashtag; ?>"><?php echo $event_hashtag; ?></a></div>
                     </dd>
                     <?php endif; ?>
-                    
-                    <?php if($event_media): ?>
-                      <dt>Event materials</dd>
-                      <?php foreach($event_media as $event_media_item): ?>
-                        <?php if($event_media_item['youtube_uri']): ?>
-                        <dd>
-                          <h4>Video</h4>
-                          <iframe
-                           width="283"
-                           height="191"
-                           src="https://www.youtube.com/embed/<?php echo $event_media_item['youtube_uri']; ?>?rel=0"
-                           frameborder="0"
-                           allowfullscreen="allowfullscreen">
-                           &#160;
-                          </iframe>
-                        </dd>
-                        <?php endif; ?>
-                        <?php if($event_media_item['audio_uri']): ?>
-                        <dd>
-                          <h4>Audio</h4>
-                          <p>Listen to <a class="link mp3" href="<?php echo $event_media_item['audio_uri']; ?>">podcast</a>.</p>
-                        </dd>
-                        <?php endif; ?>
-                        <?php if($event_media_item['presentation_uri']): ?>
-                        <dd>
-                          <h4>Presentation slides</h4>
-                          <p><a class="link pdf" href="<?php echo $event_media_item['presentation_uri']; ?>">Download</a> (PDF).</p>
-                        </dd>
-                        <?php endif; ?> 
-                      <?php endforeach; ?>
-                      <?php endif; ?>                
                 </dl>
                 <div class="media-items">
                   
                 </div>
               </aside><!-- #keyfacts -->
             </div><!-- .top-content -->
+            
+            
+            <?php if($event_media): ?>
+            <section class="event-materials">
+            <h1>Event materials</h1>
+            <?php foreach($event_media as $event_media_item): ?>
+              <?php if($event_media_item['youtube_uri']): ?>
+              <div class="fourcol">
+                <h4>Video</h4>
+                <iframe
+                 width="283"
+                 height="191"
+                 src="https://www.youtube.com/embed/<?php echo $event_media_item['youtube_uri']; ?>?rel=0"
+                 frameborder="0"
+                 allowfullscreen="allowfullscreen">
+                 &#160;
+                </iframe>
+              </div>
+              <?php endif; ?>
+              <?php if($event_media_item['audio_uri']): ?>
+              <div class="fourcol">
+                <h4>Audio</h4>
+                <p>Listen to <a class="link mp3" href="<?php echo $event_media_item['audio_uri']; ?>">podcast</a>.</p>
+              </div>
+              <?php endif; ?>
+              <?php if($event_media_item['presentation_uri']): ?>
+              <div class="fourcol">
+                <h4>Presentation slides</h4>
+                <p><a class="link pdf" href="<?php echo $event_media_item['presentation_uri']; ?>">Download</a> (PDF).</p>
+              </div>
+              <?php endif; ?> 
+            <?php endforeach; ?>
+            </section>
+            <?php endif; ?> 
+                      
+            
+            
             <?php if($people_with_blurb): ?>
             <?php echo var_trace($event_all_the_people, false, $TRACE_PODS_EVENTS_FRONTPAGE); ?>
             <div class='extra-content twelvecol'>
