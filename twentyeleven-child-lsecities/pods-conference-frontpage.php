@@ -219,12 +219,23 @@ $poster_pdf = $poster_pdf[0]['guid'];
             </div>
           </div>
 
-          <div id="navigationarea" class='wireframe threecol last'>    
-          <?php if(!$is_conference) : // if we are dealing with an event, $pod_slug is set - display events sidebar ?>
-            <?php get_template_part( 'nav', 'events' ); ?>
-          <?php else : // otherwise we are dealing with a conference - display conferences sidebar ?>
-            <?php get_template_part( 'nav', 'conferences' ); ?>
-          <?php endif; ?>
+          <div id="navigationarea" class='wireframe threecol last'>
+          <?php
+            // sort by menu_order of linked items
+            foreach($button_links as $sort_key => $sort_value) {
+              $menu_order[$sort_key] = $sort_value['menu_order'];
+            }
+            array_multisort($menu_order, SORT_ASC, $button_links);
+          ?>
+            <ul>
+            <?php foreach($button_links as $key => $link) : ?>
+              <li class='featurebox'>
+                <a href="<?php echo $link['guid'] ; ?>" title="<?php echo $link['post_title'] ; ?>">
+                  <h3><?php echo $link['post_title'] ; ?></h3>
+                </a>
+              </li>
+            <?php endforeach ; ?>
+            </ul>
           </div>
 
 </div><!-- #contentarea -->
