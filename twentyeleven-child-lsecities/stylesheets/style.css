@@ -1,4 +1,3 @@
-@charset "UTF-8";
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; vertical-align: baseline; }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
@@ -284,14 +283,16 @@ right: -21px; */ }
 
 #main { margin-top: 1em; }
 
+#contentarea extra-content > section { border-top: 1px solid #e93616; }
+#contentarea extra-content > section > h1 { color: #fff; background-color: #e93616; display: inline-block; padding: 0 0.5em; }
 #contentarea .top-content article header { margin-bottom: 1em; }
 #contentarea .top-content article header h1 { font-family: museo-sans, nevisBold, PT Sans, sans-serif; font-weight: 900; color: #22273b; }
 
 #keyfacts dl dt, #navigationarea nav dl dt { border-bottom: 1px solid #eee; margin-top: 1em; }
 #keyfacts dl dt:first-child, #navigationarea nav dl dt:first-child { margin-top: 0; }
 
-#navigationarea nav dl dt.ui-accordion-header::before { content: '►'; }
-#navigationarea nav dl dt.ui-accordion-header.ui-state-active::before { content: '▼'; }
+#navigationarea nav dl dt.ui-accordion-header { background-image: url("http://v1.lsecities.net/wp-content/themes/twentyeleven-child-lsecities/images/icons/mal/bullet-horizontal.gif"); padding-left: 1em; }
+#navigationarea nav dl dt.ui-accordion-header.ui-state-active { background-image: url("http://v1.lsecities.net/wp-content/themes/twentyeleven-child-lsecities/images/icons/mal/bullet-vertical.gif"); padding-left: 1em; }
 #navigationarea nav h1 { font-size: 1em; }
 
 #keyfacts-short dl dt { float: left; margin-right: 0.5em; }
