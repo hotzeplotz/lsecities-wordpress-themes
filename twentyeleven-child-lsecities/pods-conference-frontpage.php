@@ -227,7 +227,7 @@ $poster_pdf = $poster_pdf[0]['guid'];
             }
             array_multisort($menu_order, SORT_ASC, $button_links);
           ?>
-            <ul>
+            <ul class="conferenceboxes">
             <?php foreach($button_links as $key => $link) : ?>
               <li class='featurebox'>
                 <a href="<?php echo $link['guid'] ; ?>" title="<?php echo $link['post_title'] ; ?>">
