@@ -68,7 +68,7 @@ $poster_pdf = $poster_pdf[0]['guid'];
 
 <?php if ( have_posts() ) : the_post(); endif; ?>
 
-<div id="post-<?php the_ID(); ?>" <?php post_class('lc-article lc-conference'); ?>>
+<div id="post-<?php the_ID(); ?>" <?php post_class('lc-article lc-conference-frontpage'); ?>>
 
 
           <div class='ninecol' id='contentarea'>
