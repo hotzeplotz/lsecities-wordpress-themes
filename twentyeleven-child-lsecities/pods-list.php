@@ -90,7 +90,6 @@ if($TRACE_PODS_LIST) { var_export($pod_list); }
           </div>
         <?php endif;
           $index++;
-          endif;
           endforeach; ?>
         </ul>
       </div>
