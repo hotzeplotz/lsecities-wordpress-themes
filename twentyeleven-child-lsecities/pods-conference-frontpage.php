@@ -78,12 +78,13 @@ $poster_pdf = $poster_pdf[0]['guid'];
                 <div class='photospread wireframe'>
                   <?php echo $featured_image_uri; ?>
                 </div>
+                <div class='mainheadings'>
+                  <h1><?php echo $pod->get_field('name'); ?></h1>
+                  <?php if($pod->get_field('tagline')): ?><h2><?php echo $pod->get_field('name'); ?></h2><?php endif; ?>
+                </div>
               </header>
               <?php endif; ?>
               <article class='wireframe eightcol'>
-                <header>
-                  <h1><?php echo $pod->get_field('name'); ?></h1>
-                </header>
                 <?php if($event_blurb): ?>
                   <div class="blurb"><?php echo $event_blurb; ?></div>
                 <?php endif; ?>
