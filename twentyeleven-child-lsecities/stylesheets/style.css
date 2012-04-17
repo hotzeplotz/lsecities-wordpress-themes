@@ -324,6 +324,7 @@ right: -21px; */ }
 .lc-conference-frontpage header.heading-image .mainheadings h1, .lc-conference-frontpage header.heading-image .mainheadings h2 { margin: 0; color: #fff !important; }
 .lc-conference-frontpage header.heading-image .mainheadings h1 { text-transform: uppercase; }
 .lc-conference-frontpage #navigationarea ul li { color: #fff; background-color: #000; padding: 0.5em; }
+.lc-conference-frontpage #navigationarea ul li a { color: #fff; }
 
 /*/mediaquery*/
 /*/mediaquery*/
