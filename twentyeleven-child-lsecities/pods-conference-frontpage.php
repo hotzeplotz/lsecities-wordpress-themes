@@ -73,6 +73,7 @@ $poster_pdf = $poster_pdf[0]['guid'];
 
           <div class='ninecol' id='contentarea'>
             <div class='top-content'>
+              <article class="wireframe">
               <?php if($featured_image_uri) : ?>
               <header class='heading-image'>
                 <div class='photospread wireframe'>
@@ -136,6 +137,7 @@ $poster_pdf = $poster_pdf[0]['guid'];
                 </div>
                 <?php endif; ?>
               </aside><!-- #keyfacts -->
+              </article><!-- .wireframe -->
             </div><!-- .top-content -->
 
             <div class='extra-content twelvecol'>
