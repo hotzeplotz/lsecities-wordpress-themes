@@ -149,7 +149,7 @@ ul li { line-height: 1.2em; margin-bottom: 0.6em; }
 
 body { background: inherit; }
 
-header h1.entry-title { font-size: 2em; margin-bottom: 1.2em; font-family: museo-sans, nevisBold, PT Sans, sans-serif; }
+header h1.entry-title { font-size: 2em; /* margin-bottom: 1.2em; */ font-family: museo-sans, nevisBold, PT Sans, sans-serif; }
 
 .article-text img { max-width: 100%; }
 
