@@ -16,16 +16,17 @@
 global $pods;
 $BASE_URI = '/media/objects/conferences/';
 $TRACE_PODS_CONFERENCE_FRONTPAGE = true;
+$TRACE_PREFIX = 'pods-conference';
 
 $pod_slug = get_post_meta($post->ID, 'pod_slug', true);
 $pod = new Pod('conference', $pod_slug);
 $is_conference = true;
 
-echo var_trace('pod_slug: ' . $pod_slug, , $TRACE_PODS_CONFERENCE_FRONTPAGE);
+echo var_trace('pod_slug: ' . $pod_slug, $TRACE_PREFIX, $TRACE_PODS_CONFERENCE_FRONTPAGE);
 
 $button_links = $pod->get_field('links');
 
-echo var_trace('button_links: ' . var_export($button_links, true), , $TRACE_PODS_CONFERENCE_FRONTPAGE);
+echo var_trace('button_links: ' . var_export($button_links, true), $TRACE_PREFIX, $TRACE_PODS_CONFERENCE_FRONTPAGE);
 
 $event_hashtag = ltrim($pod->get_field('hashtag'), '#');
 
