@@ -27,39 +27,14 @@ $button_links = $pod->get_field('links');
 
 if($TRACE_PODS_CONFERENCE_FRONTPAGE) { error_log('button_links: ' . var_export($button_links, true)); }
 
-$event_speakers = $pod->get_field('speakers', 'family_name ASC');
-$event_respondents = $pod->get_field('respondents', 'family_name ASC');
-$event_chairs = $pod->get_field('chairs', 'family_name ASC');
-$event_moderators = $pod->get_field('moderators', 'family_name ASC');
-$event_all_the_people = array_merge((array)$event_speakers, (array)$event_respondents, (array)$event_chairs, (array)$event_moderators);
-echo var_trace($event_all_the_people);
 $event_hashtag = ltrim($pod->get_field('hashtag'), '#');
 
-$event_blurb = do_shortcode($pod->get_field('blurb'));
-$event_contact_info = do_shortcode($pod->get_field('contact_info'));
-
-$event_media = $pod->get_field('media_attachments');
+$event_blurb = do_shortcode($pod->get_field('abstract'));
 
 $slider = $pod->get_field('slider');
 if(!$slider) {
   $featured_image_uri = get_the_post_thumbnail(get_the_ID(), array(960,367));
 }
-
-// if this is an event, grab the image URI from the Pod
-if(!$is_conference) {
-  $featured_image_uri = $pod->get_field('heading_image.guid');
-}
-
-$event_date_string = $pod->get_field('date_freeform');
-$event_date = new DateTime($pod->get_field('date'));
-$datetime_now = new DateTime('now');
-$is_future_event = ($event_date > $datetime_now) ? true : false;
-
-$event_location = preg_replace('/<p>(.*?)<\/p>/', "$1", $pod->get_field('location'));
-$event_series = $pod->get_field('event_series');
-          
-$poster_pdf = $pod->get_field('poster_pdf');
-$poster_pdf = $poster_pdf[0]['guid'];
 ?>
 
 <?php get_header(); ?>
@@ -94,43 +69,7 @@ $poster_pdf = $poster_pdf[0]['guid'];
                 <?php endif; ?>
               </div>
               <aside class='wireframe fourcol last' id='keyfacts'>
-                <dl>
-                    <?php echo $speakers_output['output'];
-                          echo $respondents_output['output'];
-                          echo $chairs_output['output'];
-                          echo $moderators_output['output'];
-                    ?>
-                    
-                    <?php if($event_date_string): ?>
-                      <dt>When</dt>
-                      <dd><?php echo $event_date_string; ?></dd>
-                    <?php endif; ?>
-              
-                    <?php if($event_location): ?>
-                      <dt>Where</dt>
-                      <dd><?php echo $event_location; ?></dd>
-                    <?php endif; ?>
-              
-                    <?php if($event_series): ?>
-                      <dt>Event series</dt>
-                      <dd><em><?php echo do_shortcode($pod->get_field('event_series')); ?></em></dd>
-                    <?php endif; ?>
-                    
-                    <?php if($event_contact_info and $is_future_event): ?>
-                      <dt>Access &amp; booking</dt>
-                      <dd><?php echo $event_contact_info; ?></dd>
-                    <?php endif; ?>
-
-                    <?php if($poster_pdf || $freakin_site_map) : ?>
-                      <dt>Downloads</dt>
-                      <?php if($poster_pdf): ?>
-                      <dd><a href="<?php echo $poster_pdf; ?>">Event poster</a> (PDF)</dd>
-                      <?php endif; ?>
-                      <?php if($freakin_site_map): ?>
-                      <dd><a href="<?php echo $freakin_site_map; ?>">Site map</a> (PDF)</dd>
-                      <?php endif; ?>  
-                    <?php endif; ?>
-                </dl>
+                <?php echo $pod->get_field('info'); ?>
                 <?php if($event_hashtag): ?>
                 <div class='twitterbox'>
                   <a href="https://twitter.com/#!/search/#<?php echo $event_hashtag; ?>">#<?php echo $event_hashtag; ?></a>
