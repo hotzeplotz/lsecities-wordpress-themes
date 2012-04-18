@@ -83,7 +83,7 @@ $conference_publication_cover = $pod->get_field('conference_newspaper.snapshot.g
             </div><!-- .top-content -->
             <div class="extra-content">
               <aside id="photoarea" class="eightcol">
-                <div id="galleria"></div>
+                <div id="galleria" style="height: 290px;"></div>
                 <script type="text/javascript">
                   jQuery(document).ready(function() {
                     jQuery('#galleria').galleria({ 
