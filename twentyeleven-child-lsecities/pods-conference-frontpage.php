@@ -35,6 +35,8 @@ $slider = $pod->get_field('slider');
 if(!$slider) {
   $featured_image_uri = get_the_post_thumbnail(get_the_ID(), array(960,367));
 }
+
+$conference_publication_cover = $pod->get_field('conference_newspaper.snapshot.guid');
 ?>
 
 <?php get_header(); ?>
