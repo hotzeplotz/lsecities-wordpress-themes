@@ -12,13 +12,14 @@
 <?php
   /* URI: TBD */
   $TRACE_PODS_LIST = true;
+  $TRACE_PREFIX = 'pods-list';
   $pod_slug = get_post_meta($post->ID, 'pod_slug', true);
   $pod = new Pod('list', $pod_slug);
   $pod_type = $pod->get_field('pod_type.slug');
-  if($TRACE_PODS_LIST) { error_log('fetching list Pod with slug: ' . $pod_slug . " and pod_type: " . $pod_type); }
+  echo var_trace('fetching list Pod with slug: ' . $pod_slug . " and pod_type: " . $pod_type, $TRACE_PREFIX, $TRACE_PODS_LIST);
   $pod_title = $pod->get_field('name');
   $page_id = $pod->get_field('featured_item.ID');
-  if($TRACE_PODS_LIST) { error_log('slug for featured item: ' . get_post_meta($page_id, 'pod_slug', true)); }
+  echo var_trace('slug for featured item: ' . get_post_meta($page_id, 'pod_slug', true), $TRACE_PREFIX, $TRACE_PODS_LIST);
   $pod_featured_item_thumbnail = get_the_post_thumbnail($page_id, array(960,367));
   if(!$pod_featured_item_thumbnail) { $pod_featured_item_thumbnail = '<img src="' . $pod->get_field('featured_item_image.guid') . '" />'; }
   $pod_featured_item_permalink = get_permalink($page_id);
@@ -28,20 +29,11 @@
 
 <?php get_header(); ?>
 
-<!--
-
-featured_item_permalink:
-
 <?php
-if($TRACE_PODS_LIST) { var_export($pod_featured_item_permalink); }
-?>
+echo var_trace(var_export$pod_featured_item_permalink, $TRACE_PREFIX . ' - featured_item_permalink', $TRACE_PODS_LIST);
+echo var_trace(var_export($pod_list), $TRACE_PREFIX . ' - pod_list', $TRACE_PODS_LIST);
 
-list:
-
-<?php
-if($TRACE_PODS_LIST) { var_export($pod_list); }
 ?>
--->
 
 <div role="main" class="row">
 
@@ -53,20 +45,9 @@ if($TRACE_PODS_LIST) { var_export($pod_list); }
     <div class="entry-content">
     
     <?php the_content(); ?>
-
-    <?php if(!empty($pod_featured_item_pod)) : ?>
-      <div class="featured-item">
-        <h3><?php echo $pod_featured_item_pod->get_field('name'); ?></h3>
-        <a href="<?php echo $pod_featured_item_permalink; ?>">
-          <?php echo $pod_featured_item_thumbnail ; ?>
-        </a>
-        <div><?php echo $pod->get_field('featured_item_blurb') ; ?></div>
-        <p><a href="<?php echo $pod_featured_item_permalink; ?>">Read more...</a></p>
-      </div>
-    <?php endif ; ?>
     
     <?php if(!empty($pod_list)) : ?>
-      <div>
+      <div class="list">
         <ul>
         <?php
           $index = 0;
@@ -92,7 +73,7 @@ if($TRACE_PODS_LIST) { var_export($pod_list); }
           $index++;
           endforeach; ?>
         </ul>
-      </div>
+      </div><!-- .list -->
     <?php endif ?>    
         
 		<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'twentyeleven' ) . '</span>', 'after' => '</div>' ) ); ?>
