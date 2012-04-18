@@ -73,10 +73,10 @@ if($TRACE_PODS_LIST) { var_export($pod_list); }
           foreach($pod_list as $key => $item) : 
             $item_pod = new Pod($pod_type, get_post_meta($item['ID'], 'pod_slug', true));
         ?>
-        <?php if($index % 3 == 0 || $index == 0): ?>
+        <?php if($index % 4 == 0 || $index == 0): ?>
           <div class="twelvecol">
         <?php endif; ?>
-          <li class='fourcol<?php if((($index + 1) % 3) == 0) : ?> last<?php endif ; ?>'>
+          <li class='fourcol<?php if((($index + 1) % 4) == 0) : ?> last<?php endif ; ?>'>
             <a href="<?php echo get_permalink($item['ID']); ?>">
               <img src="<?php echo $item_pod->get_field('snapshot.guid'); ?>" />
             </a>
@@ -86,7 +86,7 @@ if($TRACE_PODS_LIST) { var_export($pod_list); }
               </a>
             </h3>
           </li>
-        <?php if(($index + 1) % 3 == 0): ?>
+        <?php if(($index + 1) % 4 == 0): ?>
           </div>
         <?php endif;
           $index++;
