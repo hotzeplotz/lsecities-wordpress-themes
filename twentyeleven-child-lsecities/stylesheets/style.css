@@ -75,7 +75,7 @@ nav ul, nav li { margin: 0; list-style: none; list-style-image: none; }
 
 body, select, input, textarea { color: black; }
 
-h1, h2, h3, h4, h5, h6 { font-weight: normal; line-height: 1.5em; }
+h1, h2, h3, h4, h5, h6 { font-weight: normal; line-height: 1em; }
 
 a, a:active, a:visited { color: #990000; }
 
@@ -292,6 +292,7 @@ right: -21px; */ }
 #contentarea .top-content .photospread img { width: 100%; }
 #contentarea .top-content article header { margin-bottom: 1em; }
 #contentarea .top-content article header h1 { font-family: museo-sans, nevisBold, PT Sans, sans-serif; font-weight: 900; color: #22273b; }
+#contentarea .top-content aside *:first-child { margin-top: 0.625em; }
 
 #keyfacts dl dt, #navigationarea nav dl dt { border-bottom: 1px solid #eee; margin-top: 1em; }
 #keyfacts dl dt:first-child, #navigationarea nav dl dt:first-child { margin-top: 0; }
