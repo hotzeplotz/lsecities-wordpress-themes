@@ -83,7 +83,17 @@ $conference_publication_cover = $pod->get_field('conference_newspaper.snapshot.g
             </div><!-- .top-content -->
             <div class="extra-content">
               <aside id="photoarea" class="eightcol">
-                <?php galleria_shortcode(array('width' => 552, 'picasa_album' => $pod->get_field('photo_gallery'))); ?>
+                <div id="galleria"></div>
+                <script type="text/javascript">
+                  jQuery(document).ready(function() {
+                    jQuery('#galleria').galleria({ 
+                      picasa: 'useralbum:<?php echo $pod->get_field('photo_gallery'); ?>',
+                      picasaOptions: {
+                        sort: 'date-posted-asc'
+                      }
+                    });
+                  });
+                </script>
               </aside>
               <aside id="publicationsarea" class="fourcol last">
                 <p>Istanbul is a city as beautiful as Venice or San Francisco, and, once you are away from the water, as brutal and ugly as any metropolis undergoing the trauma of warp speed urbanisation.</p>
