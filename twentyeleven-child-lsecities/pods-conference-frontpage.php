@@ -21,11 +21,11 @@ $pod_slug = get_post_meta($post->ID, 'pod_slug', true);
 $pod = new Pod('conference', $pod_slug);
 $is_conference = true;
 
-if($TRACE_PODS_CONFERENCE_FRONTPAGE) { error_log('pod_slug: ' . $pod_slug); }
+echo var_trace('pod_slug: ' . $pod_slug, , $TRACE_PODS_CONFERENCE_FRONTPAGE);
 
 $button_links = $pod->get_field('links');
 
-if($TRACE_PODS_CONFERENCE_FRONTPAGE) { error_log('button_links: ' . var_export($button_links, true)); }
+echo var_trace('button_links: ' . var_export($button_links, true), , $TRACE_PODS_CONFERENCE_FRONTPAGE);
 
 $event_hashtag = ltrim($pod->get_field('hashtag'), '#');
 
@@ -78,87 +78,23 @@ if(!$slider) {
               </aside><!-- #keyfacts -->
               </article><!-- .wireframe -->
             </div><!-- .top-content -->
-
-            <div class='extra-content twelvecol'>
-              
-              <?php if($event_media): ?>
-              <section class="event-materials">
-                <h1>Event materials</h1>
-                <dl>
-                <?php foreach($event_media as $event_media_item): ?>
-                  <?php if($event_media_item['youtube_uri']): ?>
-                  <div class="fourcol">
-                    <dt>Video</dt>
-                    <dd>
-                      <iframe
-                       width="100%"
-                       src="https://www.youtube.com/embed/<?php echo $event_media_item['youtube_uri']; ?>?rel=0"
-                       frameborder="0"
-                       allowfullscreen="allowfullscreen">
-                       &#160;
-                      </iframe>
-                    </dd>
-                  </div>
-                  <?php endif; ?>
-                  <?php if($event_media_item['audio_uri']): ?>
-                  <div class="fourcol">
-                    <dt>Audio</dt>
-                    <dd>
-                      <p>Listen to <a class="link mp3" href="<?php echo $event_media_item['audio_uri']; ?>">podcast</a>.</p>
-                    </dd>
-                  </div>
-                  <?php endif; ?>
-                  <?php if($event_media_item['presentation_uri']): ?>
-                  <div class="fourcol last">
-                    <dt>Presentation slides</dt>
-                    <dd>
-                      <p><a class="link pdf" href="<?php echo $event_media_item['presentation_uri']; ?>">Download</a> (PDF).</p>
-                    </dd>
-                  </div>
-                  <?php endif; ?> 
-                <?php endforeach; ?>
-                </dl>
-              </section>
-              <?php endif; ?> 
-            
-              
-              <?php if($people_with_blurb): ?>
-              <?php echo var_trace($event_all_the_people, false, $TRACE_PODS_CONFERENCE_FRONTPAGE); ?>
-              <section id='speaker-profiles'>
-                <h1>Profiles</h1>
-                <ul class='people-list'>
-                <?php $index = 0;
-                      foreach($event_all_the_people as $key => $event_speaker):
-                        echo "<!-- event_speaker : " . var_export($event_speaker, true) . "-->";
-                        if($event_speaker['profile_text']):
-                ?>
-                <?php if($index % 3 == 0 || $index == 0): ?>
-                  <div class="twelvecol">
-                <?php endif; ?>
-                    <li id="person-profile-<?php echo $event_speaker['slug'] ?>" class="person fourcol<?php if((($index + 1) % 3) == 0) : ?> last<?php endif ; ?>">
-                      <h1><?php echo $event_speaker['name'] ?> <?php echo $event_speaker['family_name'] ?></h1>
-                      <p><?php echo $event_speaker['profile_text'] ?></p>
-                      <?php if($event_speaker['homepage'] || $event_speaker['twitterhandle']): ?>
-                      <ul class="personal-links">
-                      <?php if($event_speaker['homepage']): ?>
-                          <li><a href="<?php echo $event_speaker['homepage']; ?>"><?php echo $event_speaker['homepage']; ?></a></li>
-                      <?php endif; ?>
-                      <?php if($event_speaker['twitterhandle']): ?>
-                          <li><a href="<?php echo $event_speaker['twitterhandle']; ?>"><?php echo $event_speaker['twitterhandle']; ?></a></li>
-                      <?php endif; ?>
-                      </ul>
-                      <?php endif; ?>
-                    </li>
-                <?php if(($index + 1) % 3 == 0): ?>
-                  </div>
-                <?php endif;
-                    $index++;
-                  endif;
-                endforeach; ?>
-                </ul><!-- .people-list -->
-              </section><!-- #speaker-profiles -->
-              <?php endif; ?>
-            </div>
+            <div class="extra-content">
+              <aside id="photoarea" class="eightcol">
+                <?php galleria_shortcode(array('width' => 552, 'picasa_album' => $pod->get_field('photo_gallery'))); ?>
+              </aside>
+              <aside id="publicationsarea" class="fourcol last">
+                <p>Istanbul is a city as beautiful as Venice or San Francisco, and, once you are away from the water, as brutal and ugly as any metropolis undergoing the trauma of warp speed urbanisation.</p>
+                <div>
+                  <ul class="sixcol">
+                    <li>Lorem</li>
+                    <li>Ipsum</li>
+                    <li>Sic</li>
+                    <li>Amet</li>
+                  </ul>
+                  <img src="http://dev.v1.lsecities.net/files/2011/10/istanbul-newspaper_cover_en.jpg" class="sixcol last">
+                </div>
+              </aside>
+            </div><!-- .extra-content -->
           </div>
 
           <div id="navigationarea" class='wireframe threecol last'>
