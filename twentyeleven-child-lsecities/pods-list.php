@@ -30,7 +30,7 @@
 <?php get_header(); ?>
 
 <?php
-echo var_trace(var_export$pod_featured_item_permalink, $TRACE_PREFIX . ' - featured_item_permalink', $TRACE_PODS_LIST);
+echo var_trace(var_export($pod_featured_item_permalink), $TRACE_PREFIX . ' - featured_item_permalink', $TRACE_PODS_LIST);
 echo var_trace(var_export($pod_list), $TRACE_PREFIX . ' - pod_list', $TRACE_PODS_LIST);
 
 ?>
