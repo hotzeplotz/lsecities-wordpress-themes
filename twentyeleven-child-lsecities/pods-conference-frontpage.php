@@ -242,11 +242,11 @@ $poster_pdf = $poster_pdf[0]['guid'];
               </ul>
             </nav>
             
-            <dl>
-              <dt>Urban Age conferences</dt>
-              <dd>
-                <nav class=citieslist>
-                  <ul>
+            <nav>
+              <dl>
+                <dt>Urban Age conferences</dt>
+                <dd>
+                  <ul class="citieslist">
                     <li>
                       <a href='/ua/conferences/2012-london/'>2012 | Electric City</a>
                     </li>
@@ -284,9 +284,9 @@ $poster_pdf = $poster_pdf[0]['guid'];
                       <a href='/ua/conferences/2005-new-york/'>2005 | New York</a>
                     </li>
                   </ul>
-                </nav>
-              </dd>
-            </dl>
+                </dd>
+              </dl>
+            </nav>
           </div>
 
 </div><!-- #contentarea -->
