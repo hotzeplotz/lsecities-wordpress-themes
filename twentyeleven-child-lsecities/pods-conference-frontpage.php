@@ -48,8 +48,8 @@ $research_summary_blurb = $pod->get_field('research_summary.blurb');
 // first one and ignore the rest - later on we should deal with more
 // complex cases (e.g. as a slider or so)
 echo var_trace('tiles: ' . var_export($pod->get_field('research_summary.visualization_tiles'), true), $TRACE_PREFIX, $TRACE_ENABLED);
-echo var_trace('visualization_tiles[0].slug => ' . $pod->get_field('research_summary.visualization_tiles[0]["slug"]'), $TRACE_PREFIX, $TRACE_ENABLED);
-$tile_pod = new Pod('tile', $pod->get_field('research_summary.visualization_tiles[0]["slug"]'));
+$visualization_tiles = $pod->get_field('research_summary.visualization_tiles');
+$tile_pod = new Pod('tile', $visualization_tiles[0]['slug']);
 echo var_trace('tile_image: ' . var_export($tile_pod->get_field('image'), true), $TRACE_PREFIX, $TRACE_ENABLED);
 $research_summary_tile_image = $tile_pod->get_field('image.guid');
 
