@@ -37,7 +37,9 @@ if(!$slider) {
   $featured_image_uri = get_the_post_thumbnail(get_the_ID(), array(960,367));
 }
 
+$conference_publication_blurb = $pod->get_field('conference_newspaper.blurb');
 $conference_publication_cover = $pod->get_field('conference_newspaper.snapshot.guid');
+$conference_publication_pdf = $pod->get_field('conference_newspaper.publication_pdf.guid');
 ?>
 
 <?php get_header(); ?>
@@ -87,7 +89,7 @@ $conference_publication_cover = $pod->get_field('conference_newspaper.snapshot.g
                 <script type="text/javascript">
                   jQuery(document).ready(function() {
                     jQuery('#galleria').galleria({
-                      carousel: false,
+                      carousel: true,
                       picasa: 'useralbum:<?php echo $pod->get_field('photo_gallery'); ?>',
                       picasaOptions: {
                         sort: 'date-posted-asc'
