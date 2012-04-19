@@ -37,7 +37,9 @@ if(!$slider) {
 
 $conference_publication_blurb = $pod->get_field('conference_newspaper.blurb');
 $conference_publication_cover = $pod->get_field('conference_newspaper.snapshot.guid');
-$conference_publication_pdf = $pod->get_field('conference_newspaper.publication_pdf.guid');
+$conference_publication_wp_page = $pod->get_field('conference_newspaper.publication_web_page.guid');
+$conference_publication_pdf = $pod->get_field('conference_newspaper.publication_pdf_uri');
+$conference_publication_issuu = $pod->get_field('conference_newspaper.issuu_uri');
 ?>
 
 <?php get_header(); ?>
@@ -97,13 +99,12 @@ $conference_publication_pdf = $pod->get_field('conference_newspaper.publication_
                 </script>
               </aside>
               <aside id="publicationsarea" class="fourcol last">
-                <p>Istanbul is a city as beautiful as Venice or San Francisco, and, once you are away from the water, as brutal and ugly as any metropolis undergoing the trauma of warp speed urbanisation.</p>
+                <?php echo $conference_publication_blurb; ?>
                 <div>
                   <ul class="sixcol">
-                    <li>Lorem</li>
-                    <li>Ipsum</li>
-                    <li>Sic</li>
-                    <li>Amet</li>
+                    <?php if($conference_publication_wp_page): ?><li><a href="<?php echo $conference_publication_wp_page; ?>">Read online</a></li><?php endif; ?>
+                    <?php if($conference_publication_pdf): ?><li><a href="<?php echo $conference_publication_pdf; ?>">Download (PDF)</a></li><?php endif; ?>
+                    <?php if($conference_publication_issuu): ?><li><a href="<?php echo $conference_publication_issuu; ?>">Online reader</a></li><?php endif; ?>
                   </ul>
                   <img src="<?php echo $conference_publication_cover; ?>" class="sixcol last">
                 </div>
