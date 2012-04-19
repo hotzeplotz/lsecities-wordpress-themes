@@ -21,7 +21,7 @@ pod:
 -->
 <?php endif; ?>
 
-<div class="threecol last" id="level3nav">
+<div class="wireframe threecol last" id="navigationarea">
 <?php
 if($current_post_id == 393) : // / (main frontpage)
   get_template_part('snippet-lsecities-frontpage');
