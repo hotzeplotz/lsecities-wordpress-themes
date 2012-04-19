@@ -37,6 +37,9 @@ foreach($button_links as $sort_key => $sort_value) {
 }
 array_multisort($menu_order, SORT_ASC, $button_links);
 
+// add the conference homepage itself
+array_unshift($button_links, array('post_title' => get_the_title($post->ID), 'guid' => get_permalink($post->ID)));
+
 if(count($button_links)) :
 ?>
 <div id="conferencepagesnav">
