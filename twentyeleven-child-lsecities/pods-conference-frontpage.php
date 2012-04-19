@@ -43,8 +43,12 @@ $conference_publication_issuu = $pod->get_field('conference_newspaper.issuu_uri'
 
 $research_summary_title = $pod->get_field('research_summary.name');
 $research_summary_blurb = $pod->get_field('research_summary.blurb');
-echo var_trace('visualization_tiles: ' . var_export($pod->get_field('research_summary.visualization_tiles'), true), $TRACE_PREFIX, $TRACE_ENABLED);
-$research_summary_tile_image = $pod->get_field('research_summary.visualization_tiles[0].image.guid');
+// tiles is a multi-select pick field so in theory we could have more
+// than one tile to display here, however initially we only process the
+// first one and ignore the rest - later on we should deal with more
+// complex cases (e.g. as a slider or so)
+$tile_pod = new Pod('tile', $pod->get_field('research_summary.visualization_tiles[0].slug'));
+$research_summary_tile_image = $tile_pod->get_field('image.guid');
 
 ?>
 
