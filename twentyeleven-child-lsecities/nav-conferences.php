@@ -22,7 +22,7 @@ elseif(check_parent_conference(381)) : // /ua/conferences/2009-istanbul
   $pod_slug = '2009-istanbul';
 elseif(check_parent_conference(106)) : // /ua/conferences/2008-sao-paulo
   $pod_slug = '2008-spaulo';
-elseif(check_parent_conference(286) : // /ua/conferences/2007-mumbai
+elseif(check_parent_conference(286)) : // /ua/conferences/2007-mumbai
   $pod_slug = '2007-mumbai';
 elseif(check_parent_conference(284)) : // /ua/conferences/2006-berlin
   $pod_slug = '2006-berlin';
