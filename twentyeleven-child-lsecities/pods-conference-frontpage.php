@@ -49,7 +49,7 @@ $research_summary_blurb = $pod->get_field('research_summary.blurb');
 // complex cases (e.g. as a slider or so)
 echo var_trace('tiles: ' . var_export($pod->get_field('research_summary.visualization_tiles'), true), $TRACE_PREFIX, $TRACE_ENABLED);
 $tile_pod = new Pod('tile', $pod->get_field('research_summary.visualization_tiles[0].slug'));
-echo var_trace('tiles: ' . var_export($tile_pod->get_field('image'), true), $TRACE_PREFIX, $TRACE_ENABLED);
+echo var_trace('tile_image: ' . var_export($tile_pod->get_field('image'), true), $TRACE_PREFIX, $TRACE_ENABLED);
 $research_summary_tile_image = $tile_pod->get_field('image.guid');
 
 ?>
@@ -98,13 +98,15 @@ $research_summary_tile_image = $tile_pod->get_field('image.guid');
             <div class="extra-content">
               <section id="research-summary">
                 <h1>Research</h1>
-                <aside id="research-blurb" class="fourcol">
-                  <h3><?php echo $research_summary_title; ?></h3>
-                  <p><?php echo $research_summary_blurb; ?></p>
-                </aside>
-                <aside id="research-visualizations" class="eightcol last">
-                  <img src="<?php echo $research_summary_tile_image; ?>" />
-                </aside>
+                <div>
+                  <aside id="research-blurb" class="fourcol">
+                    <h3><?php echo $research_summary_title; ?></h3>
+                    <p><?php echo $research_summary_blurb; ?></p>
+                  </aside>
+                  <aside id="research-visualizations" class="eightcol last">
+                    <img src="<?php echo $research_summary_tile_image; ?>" />
+                  </aside>
+                </div>
               </section>
               <aside id="photoarea" class="eightcol">
                 <div id="galleria" style="height: 290px;"></div>
