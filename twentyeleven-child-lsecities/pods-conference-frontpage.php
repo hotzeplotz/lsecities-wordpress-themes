@@ -105,7 +105,7 @@ $conference_publication_cover = $pod->get_field('conference_newspaper.snapshot.g
                     <li>Sic</li>
                     <li>Amet</li>
                   </ul>
-                  <img src="http://dev.v1.lsecities.net/files/2011/10/istanbul-newspaper_cover_en.jpg" class="sixcol last">
+                  <img src="<?php echo $conference_publication_cover; ?>" class="sixcol last">
                 </div>
               </aside>
             </div><!-- .extra-content -->
