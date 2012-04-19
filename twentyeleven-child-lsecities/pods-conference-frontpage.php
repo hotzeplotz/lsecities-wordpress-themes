@@ -112,7 +112,7 @@ $conference_publication_pdf = $pod->get_field('conference_newspaper.publication_
           </div>
 
           <div id="navigationarea" class='wireframe threecol last'>
-          <?php get_template_part('nav', 'conferences');
+          <?php get_template_part('nav', 'conferences'); ?>
             
             <nav>
               <dl>
