@@ -47,6 +47,8 @@ foreach($button_links as $sort_key => $sort_value) {
   $menu_order[$sort_key] = $sort_value['menu_order'];
 }
 array_multisort($menu_order, SORT_ASC, $button_links);
+
+if(count($button_links)) :
 ?>
 <nav class="conferencemenu">
   <ul>
@@ -59,3 +61,4 @@ array_multisort($menu_order, SORT_ASC, $button_links);
   <?php endforeach ; ?>
   </ul>
 </nav>
+<?php endif; ?>
