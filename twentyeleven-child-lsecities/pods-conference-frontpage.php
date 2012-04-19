@@ -86,7 +86,8 @@ $conference_publication_cover = $pod->get_field('conference_newspaper.snapshot.g
                 <div id="galleria" style="height: 290px;"></div>
                 <script type="text/javascript">
                   jQuery(document).ready(function() {
-                    jQuery('#galleria').galleria({ 
+                    jQuery('#galleria').galleria({
+                      carousel: false,
                       picasa: 'useralbum:<?php echo $pod->get_field('photo_gallery'); ?>',
                       picasaOptions: {
                         sort: 'date-posted-asc'
