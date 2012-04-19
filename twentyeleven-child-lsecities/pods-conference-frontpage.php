@@ -40,6 +40,11 @@ $conference_publication_cover = $pod->get_field('conference_newspaper.snapshot.g
 $conference_publication_wp_page = $pod->get_field('conference_newspaper.publication_web_page.guid');
 $conference_publication_pdf = $pod->get_field('conference_newspaper.publication_pdf_uri');
 $conference_publication_issuu = $pod->get_field('conference_newspaper.issuu_uri');
+
+$research_summary_title = $pod->get_field('research_summary.name');
+$research_summary_blurb = $pod->get_field('research_summary.blurb');
+$research_summary_tile_image = $pod->get_field('research_summary.visualization_tiles[0].image.guid');
+
 ?>
 
 <?php get_header(); ?>
@@ -84,6 +89,16 @@ $conference_publication_issuu = $pod->get_field('conference_newspaper.issuu_uri'
               </article><!-- .wireframe -->
             </div><!-- .top-content -->
             <div class="extra-content">
+              <section id="research-summary">
+                <h1>Research</h1>
+                <aside id="research-blurb" class="fourcol">
+                  <h3><?php echo $research_summary_title; ?></h3>
+                  <p><?php echo $research_summary_blurb; ?></p>
+                </aside>
+                <aside id="research-visualizations" class="eightcol last">
+                  <img src="<?php echo $research_summary_tile_image; ?>" />
+                </aside>
+              </section>
               <aside id="photoarea" class="eightcol">
                 <div id="galleria" style="height: 290px;"></div>
                 <script type="text/javascript">
