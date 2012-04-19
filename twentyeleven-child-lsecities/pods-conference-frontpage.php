@@ -47,7 +47,9 @@ $research_summary_blurb = $pod->get_field('research_summary.blurb');
 // than one tile to display here, however initially we only process the
 // first one and ignore the rest - later on we should deal with more
 // complex cases (e.g. as a slider or so)
+echo var_trace('tiles: ' . var_export($pod->get_field('tiles'), true), $TRACE_PREFIX, $TRACE_ENABLED);
 $tile_pod = new Pod('tile', $pod->get_field('research_summary.visualization_tiles[0].slug'));
+echo var_trace('tiles: ' . var_export($tile_pod->get_field('image'), true), $TRACE_PREFIX, $TRACE_ENABLED);
 $research_summary_tile_image = $tile_pod->get_field('image.guid');
 
 ?>
