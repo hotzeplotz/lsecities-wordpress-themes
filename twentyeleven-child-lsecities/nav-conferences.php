@@ -5,7 +5,7 @@ $TRACE_PREFIX = 'nav-conferences';
 if(check_parent_conference(1388)) : // /ua/conferences/2012-london
   $pod_slug = '2012-london';
 elseif(check_parent_conference(577)) : // /ua/conferences/2011-hongkong
-  $pod_slug = '2011-hong-kong';
+  $pod_slug = '2011-hongkong';
 elseif(check_parent_conference(391)) : // /ua/conferences/2010-chicago
   $pod_slug = '2010-chicago';
 elseif(check_parent_conference(381)) : // /ua/conferences/2009-istanbul
@@ -38,7 +38,7 @@ foreach($button_links as $sort_key => $sort_value) {
 array_multisort($menu_order, SORT_ASC, $button_links);
 
 // add the conference homepage itself
-array_unshift($button_links, array('post_title' => get_the_title($post->ID), 'guid' => get_permalink($post->ID)));
+array_unshift($button_links, array('post_title' => $pod->get_field('name'), 'guid' => "/ua/conferences/$pod_slug"));
 
 if(count($button_links)) :
 ?>
