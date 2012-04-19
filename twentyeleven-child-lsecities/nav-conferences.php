@@ -5,7 +5,11 @@ $TRACE_PREFIX = 'nav-conferences';
 function check_parent_conference($post_id) {
   $current_post_id = $post->ID;
   var_trace('current_post_id: ' . $current_post_id, $TRACE_PREFIX, $TRACE_ENABLED);
-  ($current_post_id == $post_id or in_array($post_id, get_post_ancestors($current_post_id))) ? return true : return false;
+  if($current_post_id == $post_id or in_array($post_id, get_post_ancestors($current_post_id))) {
+    return true
+  } else {
+    return false;
+  }
 }
 
 if(check_parent_conference(1388)) : // /ua/conferences/2012-london
