@@ -65,7 +65,7 @@ $research_summary_tile_image = $tile_pod->get_field('image.guid');
 
 
           <div class='ninecol' id='contentarea'>
-            <div class='top-content'>
+            <div class='top-content clearfix'>
               <article class="wireframe">
               <?php if($featured_image_uri) : ?>
               <header class='heading-image'>
