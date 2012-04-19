@@ -113,52 +113,6 @@ $conference_publication_pdf = $pod->get_field('conference_newspaper.publication_
 
           <div id="navigationarea" class='wireframe threecol last'>
           <?php get_template_part('nav', 'conferences'); ?>
-            
-            <nav>
-              <dl>
-                <dt>Urban Age conferences</dt>
-                <dd>
-                  <ul class="citieslist">
-                    <li>
-                      <a href='/ua/conferences/2012-london/'>2012 | Electric City</a>
-                    </li>
-                    <li>
-                      <a href='/ua/conferences/2011-hongkong/'>2011 | Hong Kong</a>
-                    </li>
-                    <li>
-                      <a href='/ua/conferences/2010-chicago/'>2010 | Chicago</a>
-                    </li>
-                    <li>
-                      <a href='/ua/conferences/2009-istanbul/'>2009 | Istanbul</a>
-                    </li>
-                    <li>
-                      <a href='/ua/conferences/2008-sao-paulo/'>2008 | São Paulo</a>
-                    </li>
-                    <li>
-                      <a href='/ua/conferences/2007-mumbai/'>2007 | Mumbai</a>
-                    </li>
-                    <li>
-                      <a href='/ua/conferences/2006-berlin/'>2006 | Berlin</a>
-                    </li>
-                    <li>
-                      <a href='/ua/conferences/2006-johannesburg/'>2006 | Johannesburg</a>
-                    </li>
-                    <li>
-                      <a href='/ua/conferences/2006-mexico-city/'>2006 | Mexico City</a>
-                    </li>
-                    <li>
-                      <a href='/ua/conferences/2005-london/'>2005 | London</a>
-                    </li>
-                    <li>
-                      <a href='/ua/conferences/2005-shanghai/'>2005 | Shanghai</a>
-                    </li>
-                    <li>
-                      <a href='/ua/conferences/2005-new-york/'>2005 | New York</a>
-                    </li>
-                  </ul>
-                </dd>
-              </dl>
-            </nav>
           </div>
 
 </div><!-- #contentarea -->

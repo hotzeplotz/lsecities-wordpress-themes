@@ -62,5 +62,15 @@ if(count($button_links)) :
     <?php endforeach ; ?>
     </ul>
   </nav>
+  <nav>
+    <dl>
+      <dt>Urban Age conferences</dt>
+      <dd>
+        <ul class="citieslist">
+          <?php wp_list_pages('title_li=&depth=1&child_of=96&sort_column=menu_order&sort_order=DESC&echo=1'); ?>
+        </ul>
+      </dd>
+    </dl>
+  </nav>
 </div>
 <?php endif; ?>
