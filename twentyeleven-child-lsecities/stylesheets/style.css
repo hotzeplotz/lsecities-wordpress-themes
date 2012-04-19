@@ -285,6 +285,9 @@ right: -21px; */ }
 
 .twitterbox { background: url("http://v1.lsecities.net/wp-content/themes/twentyeleven-child-lsecities/images/icons/mal/tweet.gif") no-repeat scroll 0 50% transparent; line-height: 2em; padding-left: 2.5em; }
 
+header.entry-header { margin-bottom: 1.5em; }
+header.entry-header h1 { font-family: museo-sans, nevisBold, PT Sans, sans-serif; font-weight: 900; color: #22273b; }
+
 #contentarea .extra-content > section { clear: both; border-top: 1px solid #e93616; margin-top: 2em; }
 #contentarea .extra-content > section > h1 { color: #fff; background-color: #e93616; display: inline-block; padding: 0 0.5em; margin-bottom: 1em; font-size: 1.2em; }
 #contentarea .top-content { margin-bottom: 1em; }
@@ -329,7 +332,7 @@ right: -21px; */ }
 .lc-conference-frontpage header.heading-image .mainheadings h1 { text-transform: uppercase; }
 .lc-conference-frontpage #navigationarea nav.conferencemenu ul li { color: #fff; background-color: #000; padding: 0.5em; }
 .lc-conference-frontpage #navigationarea nav.conferencemenu ul li a { color: #fff; }
-.lc-conference-frontpage #navigationarea nav dl dt { color: #fff; background-color: #000; padding: 0.5em; }
+.lc-conference-frontpage #navigationarea nav dl dt { color: #fff; background-color: #000; padding: 0.5em; font-weight: normal; }
 .lc-conference-frontpage #navigationarea nav dl dd { padding: 0.5em; }
 .lc-conference-frontpage .citieslist li { text-transform: uppercase; font-family: BureauGrotesque, Anton; font-size: 1.2em; line-height: 1em; }
 .lc-conference-frontpage .citieslist li a { color: inherit; text-decoration: none; }
