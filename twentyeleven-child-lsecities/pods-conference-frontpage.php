@@ -15,16 +15,16 @@
  */
 global $pods;
 $BASE_URI = '/media/objects/conferences/';
-$TRACE_PODS_CONFERENCE_FRONTPAGE = true;
+$TRACE_PODS_CONFERENCE_FRONTPAGE = $TRACE_ENABLED = true;
 $TRACE_PREFIX = 'pods-conference';
 
 $pod_slug = get_post_meta($post->ID, 'pod_slug', true);
 $pod = new Pod('conference', $pod_slug);
 $is_conference = true;
 
-echo var_trace('pod_slug: ' . $pod_slug, $TRACE_PREFIX, $TRACE_PODS_CONFERENCE_FRONTPAGE);
+echo var_trace('pod_slug: ' . $pod_slug, $TRACE_PREFIX, $TRACE_ENABLED);
 
-echo var_trace('button_links: ' . var_export($button_links, true), $TRACE_PREFIX, $TRACE_PODS_CONFERENCE_FRONTPAGE);
+echo var_trace('button_links: ' . var_export($button_links, true), $TRACE_PREFIX, $TRACE_ENABLED);
 
 $event_hashtag = ltrim($pod->get_field('hashtag'), '#');
 
@@ -43,6 +43,7 @@ $conference_publication_issuu = $pod->get_field('conference_newspaper.issuu_uri'
 
 $research_summary_title = $pod->get_field('research_summary.name');
 $research_summary_blurb = $pod->get_field('research_summary.blurb');
+echo var_trace('visualization_tiles: ' . var_export($pod->get_field('research_summary.visualization_tiles')), $TRACE_PREFIX, $TRACE_ENABLED);
 $research_summary_tile_image = $pod->get_field('research_summary.visualization_tiles[0].image.guid');
 
 ?>
