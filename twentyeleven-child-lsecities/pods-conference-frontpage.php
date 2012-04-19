@@ -98,7 +98,7 @@ $research_summary_tile_image = $tile_pod->get_field('image.guid');
             </div><!-- .top-content -->
             <div class="extra-content">
               <section id="research-summary">
-                <h1>Research</h1>
+                <header><h1>Research</h1></header>
                 <div>
                   <aside id="research-blurb" class="fourcol">
                     <h3><?php echo $research_summary_title; ?></h3>
@@ -124,6 +124,7 @@ $research_summary_tile_image = $tile_pod->get_field('image.guid');
                 </script>
               </aside>
               <aside id="publicationsarea" class="fourcol last">
+                <header><h1>Publications</h1></header>
                 <?php echo $conference_publication_blurb; ?>
                 <div>
                   <ul class="sixcol">
