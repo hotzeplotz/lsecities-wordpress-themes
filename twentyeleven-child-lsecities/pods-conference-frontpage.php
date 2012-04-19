@@ -24,8 +24,6 @@ $is_conference = true;
 
 echo var_trace('pod_slug: ' . $pod_slug, $TRACE_PREFIX, $TRACE_PODS_CONFERENCE_FRONTPAGE);
 
-$button_links = $pod->get_field('links');
-
 echo var_trace('button_links: ' . var_export($button_links, true), $TRACE_PREFIX, $TRACE_PODS_CONFERENCE_FRONTPAGE);
 
 $event_hashtag = ltrim($pod->get_field('hashtag'), '#');
@@ -114,24 +112,7 @@ $conference_publication_pdf = $pod->get_field('conference_newspaper.publication_
           </div>
 
           <div id="navigationarea" class='wireframe threecol last'>
-          <?php
-            // sort by menu_order of linked items
-            foreach($button_links as $sort_key => $sort_value) {
-              $menu_order[$sort_key] = $sort_value['menu_order'];
-            }
-            array_multisort($menu_order, SORT_ASC, $button_links);
-          ?>
-            <nav class="conferencemenu">
-              <ul>
-              <?php foreach($button_links as $key => $link) : ?>
-                <li>
-                  <a href="<?php echo $link['guid'] ; ?>" title="<?php echo $link['post_title'] ; ?>">
-                    <?php echo $link['post_title'] ; ?>
-                  </a>
-                </li>
-              <?php endforeach ; ?>
-              </ul>
-            </nav>
+          <?php get_template_part('nav', 'conferences');
             
             <nav>
               <dl>
