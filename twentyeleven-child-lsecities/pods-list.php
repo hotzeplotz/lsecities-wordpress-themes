@@ -61,11 +61,11 @@ echo var_trace(var_export($pod_list, true), $TRACE_PREFIX . ' - pod_list', $TRAC
             <a href="<?php echo get_permalink($item['ID']); ?>">
               <img src="<?php echo $item_pod->get_field('snapshot.guid'); ?>" />
             </a>
-            <h3>
+            <p>
               <a href="<?php echo get_permalink($item['ID']); ?>">
                 <?php echo $item_pod->get_field('name'); ?>
               </a>
-            </h3>
+            </p>
           </li>
         <?php if(($index + 1) % 4 == 0): ?>
           </div>
