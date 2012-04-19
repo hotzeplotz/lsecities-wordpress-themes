@@ -50,15 +50,17 @@ array_multisort($menu_order, SORT_ASC, $button_links);
 
 if(count($button_links)) :
 ?>
-<nav class="conferencemenu">
-  <ul>
-  <?php foreach($button_links as $key => $link) : ?>
-    <li>
-      <a href="<?php echo $link['guid'] ; ?>" title="<?php echo $link['post_title'] ; ?>">
-        <?php echo $link['post_title'] ; ?>
-      </a>
-    </li>
-  <?php endforeach ; ?>
-  </ul>
-</nav>
+<div id="conferencepagesnav">
+  <nav class="conferencemenu">
+    <ul>
+    <?php foreach($button_links as $key => $link) : ?>
+      <li>
+        <a href="<?php echo $link['guid'] ; ?>" title="<?php echo $link['post_title'] ; ?>">
+          <?php echo $link['post_title'] ; ?>
+        </a>
+      </li>
+    <?php endforeach ; ?>
+    </ul>
+  </nav>
+</div>
 <?php endif; ?>
