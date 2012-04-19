@@ -95,14 +95,13 @@ function process_session($session_slug) {
 
 <div role="main" class="row">
 
-<header class="entry-header ninecol">
-  <h1 class="entry-title"><?php echo $pod_title; ?></h1>
-  <?php if($pod_subtitle) : ?>
-  <h2><?php echo $pod_subtitle; ?></h2>
-  <?php endif ; ?>
-</header><!-- .entry-header -->
-
 <article id="post-<?php the_ID(); ?>" <?php post_class('ninecol'); ?>>
+  <header class="entry-header ninecol">
+    <h1 class="entry-title"><?php echo $pod_title; ?></h1>
+    <?php if($pod_subtitle) : ?>
+    <h2><?php echo $pod_subtitle; ?></h2>
+    <?php endif ; ?>
+  </header><!-- .entry-header -->
 	<div class="entry-content">
     <h1><?php echo $page_title; ?></h1>
     
