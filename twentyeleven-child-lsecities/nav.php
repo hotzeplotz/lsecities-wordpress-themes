@@ -22,9 +22,7 @@ pod:
 <?php endif; ?>
 
 <div class="wireframe threecol last" id="navigationarea">
-  
-  <?php get_template_part('nav', 'conferences'); ?>
-  
+
 <?php
 if($current_post_id == 393) : // / (main frontpage)
   get_template_part('snippet-lsecities-frontpage');
@@ -32,6 +30,8 @@ elseif($current_post_id == 94) : // /ua/ (Urban Age frontpage)
   get_template_part('snippet-organizers');
 elseif($current_post_id == 309 or in_array(309, get_post_ancestors($current_post_id)) or ($pods_toplevel_ancestor == 309)) : // /publications (the whole Publications section) or individual Article pod items
   get_template_part('nav', 'publications');
+elseif(check_parent_conference(191) or check_parent_conference(229) or check_parent_conference(250) or check_parent_conference(268) or check_parent_conference(211) or check_parent_conference(284) or check_parent_conference(286) or check_parent_conference(106) or check_parent_conference(381) or check_parent_conference(391) or check_parent_conference(577) or check_parent_conference(1388)):
+  get_template_part('nav', 'conferences');
 else :
   if($current_post_id) {
     $children = wp_list_pages('title_li=&depth=1&child_of='.$parent_post_id.'&echo=0');
