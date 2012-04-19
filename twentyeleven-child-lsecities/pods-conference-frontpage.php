@@ -43,7 +43,7 @@ $conference_publication_issuu = $pod->get_field('conference_newspaper.issuu_uri'
 
 $research_summary_title = $pod->get_field('research_summary.name');
 $research_summary_blurb = $pod->get_field('research_summary.blurb');
-echo var_trace('visualization_tiles: ' . var_export($pod->get_field('research_summary.visualization_tiles')), $TRACE_PREFIX, $TRACE_ENABLED);
+echo var_trace('visualization_tiles: ' . var_export($pod->get_field('research_summary.visualization_tiles'), true), $TRACE_PREFIX, $TRACE_ENABLED);
 $research_summary_tile_image = $pod->get_field('research_summary.visualization_tiles[0].image.guid');
 
 ?>
