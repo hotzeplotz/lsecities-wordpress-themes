@@ -96,7 +96,7 @@ function process_session($session_slug) {
 <div role="main" class="row">
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('ninecol'); ?>>
-  <header class="entry-header ninecol">
+  <header class="entry-header">
     <h1 class="entry-title"><?php echo $pod_title; ?></h1>
     <?php if($pod_subtitle) : ?>
     <h2><?php echo $pod_subtitle; ?></h2>
