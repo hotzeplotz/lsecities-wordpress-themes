@@ -61,12 +61,12 @@ $PODS_BASEURI_ARTICLES = '/media/objects/articles';
                 </div>
                 <ul>
                   <?php if($pod_issuu) : ?>
-                  <li><a href="<?php echo $pod->get_field('issuu_uri'); ">Online browser</li>
+                  <li><a href="<?php echo $pod->get_field('issuu_uri'); ?>">Online browser</li>
                   <?php endif ; ?>
                 </ul>
               </article>
               <aside class='wireframe fourcol last entry-meta' id='keyfacts'>
-                <div><img src="<?php echo $pod_cover ; ?>" /></div>
+                <div><img src="<?php echo $pod_cover; ?>" /></div>
                 
               </aside><!-- #keyfacts -->
             </div><!-- .top-content -->
