@@ -61,7 +61,7 @@ $PODS_BASEURI_ARTICLES = '/media/objects/articles';
                 </div>
                 <ul>
                   <?php if($pod_issuu) : ?>
-                  <li><a href="<?php echo $pod->get_field('issuu_uri')">Online browser</li>
+                  <li><a href="<?php echo $pod->get_field('issuu_uri'); ">Online browser</li>
                   <?php endif ; ?>
                 </ul>
               </article>
