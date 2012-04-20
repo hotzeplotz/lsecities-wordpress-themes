@@ -290,7 +290,7 @@ header.entry-header h1 { font-family: museo-sans, nevisBold, PT Sans, sans-serif
 
 #contentarea .extra-content > section, #contentarea .extra-content > aside { margin-top: 2em; }
 #contentarea .extra-content > section > header, #contentarea .extra-content > aside > header { border-top: 1px solid #e93616; }
-#contentarea .extra-content > section > header > h1, #contentarea .extra-content > aside > header > h1 { color: #fff; background-color: #e93616; display: inline-block; padding: 0 0.5em; margin-bottom: 1em; font-size: 1.2em; }
+#contentarea .extra-content > section > header > h1, #contentarea .extra-content > aside > header > h1 { color: #fff; background-color: #e93616; display: inline-block; padding: 0 0.5em; margin-bottom: 1em; font-size: 1.2em; line-height: 1.2em; }
 #contentarea .top-content { margin-bottom: 1em; }
 #contentarea .top-content > header { margin-bottom: 1em; }
 #contentarea .top-content .photospread { overflow: hidden; height: 21.125em; }
@@ -339,6 +339,8 @@ header.entry-header h1 { font-family: museo-sans, nevisBold, PT Sans, sans-serif
 .lc-conference-frontpage header.heading-image .mainheadings { position: absolute; top: 0; margin: 0.5em; line-height: 1em; color: #fff; text-shadow: black 1px 1px 5px; }
 .lc-conference-frontpage header.heading-image .mainheadings h1, .lc-conference-frontpage header.heading-image .mainheadings h2 { margin: 0; color: #fff !important; }
 .lc-conference-frontpage header.heading-image .mainheadings h1 { text-transform: uppercase; }
+
+.lc-publication #pressarea dl.reviews { -moz-column-count: 2; -webkit-column-count: 2; -o-column-count: 2; column-count: 2; }
 
 /*/mediaquery*/
 /*/mediaquery*/
