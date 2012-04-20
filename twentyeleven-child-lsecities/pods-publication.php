@@ -23,7 +23,7 @@ $pod_cover = $pod->get_field('snapshot.guid');
 $pod_abstract = do_shortcode($pod->get_field('abstract'));
 
 // get tiles for heading slider
-$slider_pod = new Pod('slide', $pod->get_field('heading_slider.slug'));
+$slider_pod = new Pod('slide', $pod->get_field('heading_slides.slug'));
 foreach($slider_pod->get_field('tiles') as $tile) {
   echo var_trace($tile, $TRACE_PREFIX, $TRACE_ENABLED);
 }
