@@ -51,25 +51,25 @@ $PODS_BASEURI_ARTICLES = '/media/objects/articles';
         <?php endif; ?>
 
 
-              <article class='wireframe eightcol'>
-                <header class='entry-header'>
-                  <h1><?php echo $pod_title; ?></h1>
-                  <?php if($pod_subtitle): ?><h2><?php echo $pod_subtitle; ?></h2><?php endif ; ?>
-                </header>
-                <div class='entry-content article-text'>
-                  <?php echo $pod->get_field('blurb'); ?>
-                </div>
-                <ul>
-                  <?php if($pod_issuu) : ?>
-                  <li><a href="<?php echo $pod->get_field('issuu_uri'); ?>">Online browser</li>
-                  <?php endif ; ?>
-                </ul>
-              </article>
-              <aside class='wireframe fourcol last entry-meta' id='keyfacts'>
-                <div><img src="<?php echo $pod_cover; ?>" /></div>
-                
-              </aside><!-- #keyfacts -->
-            </div><!-- .top-content -->
+        <article class='wireframe eightcol row'>
+          <header class='entry-header'>
+            <h1><?php echo $pod_title; ?></h1>
+            <?php if($pod_subtitle): ?><h2><?php echo $pod_subtitle; ?></h2><?php endif ; ?>
+          </header>
+          <div class='entry-content article-text'>
+            <?php echo $pod->get_field('blurb'); ?>
+          </div>
+          <ul>
+            <?php if($pod_issuu) : ?>
+            <li><a href="<?php echo $pod->get_field('issuu_uri'); ?>">Online browser</li>
+            <?php endif ; ?>
+          </ul>
+        </article>
+        <aside class='wireframe fourcol last entry-meta' id='keyfacts'>
+          <div><img src="<?php echo $pod_cover; ?>" /></div>
+          
+        </aside><!-- #keyfacts -->
+      </div><!-- .top-content -->
 
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('ninecol'); ?>>
@@ -124,28 +124,14 @@ $PODS_BASEURI_ARTICLES = '/media/objects/articles';
       endwhile;
     endforeach; ?>
     </dl>
-          </p>
           <?php endif; ?>
           
 
         </div>
         <div class="threecol last">
-          <div class="publication-cover">
-            <img src="<?php echo $pod_cover ; ?>" />
-          </div>
-          <?php if($pod_pdf) : ?>
-          <div>
-            <h3>Downloads</h3>
-            <ul>
-              <li><a href="<?php echo $pod_pdf; ?>">Publication (PDF)</a></li>
-              <?php if($pod_alt_pdf) { ?><li><a href="<?php echo $pod_alt_pdf; ?>">Expert essays (PDF)</a></li><?php } ?>
-            </ul>
-          </div>
-          <?php endif; ?>
-        </div>
+        </div><!-- .threecol.last -->
       </div>
-    <?php endif ?>    
-		<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'twentyeleven' ) . '</span>', 'after' => '</div>' ) ); ?>
+    <?php endif ?>
 	</div><!-- .entry-content -->
 </article><!-- #post-<?php the_ID(); ?> -->
 
