@@ -95,10 +95,10 @@ echo var_trace('sections: ' . var_export($publication_sections, true), $TRACE_PR
           <div><img src="<?php echo $pod_cover; ?>" /></div>
           <ul>
             <?php if($pod_pdf) : ?>
-            <li><a class="download button" href="<?php echo $pod_pdf; ?>">Download PDF</li>
+            <li><a class="download button" href="<?php echo $pod_pdf; ?>">Download PDF</a></li>
             <?php endif ; ?>
             <?php if($pod_issuu_uri) : ?>
-            <li><a class="issuu button" href="<?php echo $pod_issuu_uri; ?>">Online browser</li>
+            <li><a class="issuu button" href="<?php echo $pod_issuu_uri; ?>">Online browser</a></li>
             <?php endif ; ?>
           </ul>
           
