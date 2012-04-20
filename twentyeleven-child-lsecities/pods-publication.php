@@ -58,10 +58,18 @@ $PODS_BASEURI_ARTICLES = '/media/objects/articles';
           <div class='entry-content article-text'>
             <?php echo $pod->get_field('blurb'); ?>
           </div>
-          
-          
-          
-        <?php if(!empty($pod->data)) : ?>
+        </article>
+        <aside class='wireframe fourcol last entry-meta' id='keyfacts'>
+          <div><img src="<?php echo $pod_cover; ?>" /></div>
+          <ul>
+            <?php if($pod_issuu) : ?>
+            <li><a href="<?php echo $pod->get_field('issuu_uri'); ?>">Online browser</li>
+            <?php endif ; ?>
+          </ul>          
+        </aside><!-- #keyfacts -->
+      </div><!-- .top-content -->
+      <div class='extra-content twelvecol'>
+          <?php if(!empty($pod->data)) : ?>
           <div class="article row">
             <div class="ninecol">
               <?php if($articles_pods->getTotalRows()) : ?>
@@ -116,19 +124,8 @@ $PODS_BASEURI_ARTICLES = '/media/objects/articles';
             <div class="threecol last">
             </div><!-- .threecol.last -->
           </div>
-        <?php endif ?>          
-          
-          
-        </article>
-        <aside class='wireframe fourcol last entry-meta' id='keyfacts'>
-          <div><img src="<?php echo $pod_cover; ?>" /></div>
-          <ul>
-            <?php if($pod_issuu) : ?>
-            <li><a href="<?php echo $pod->get_field('issuu_uri'); ?>">Online browser</li>
-            <?php endif ; ?>
-          </ul>          
-        </aside><!-- #keyfacts -->
-      </div><!-- .top-content -->
+        <?php endif ?> 
+      </div>
     </div><!-- #contentarea -->
   </div><!-- #post-<?php the_ID(); ?> -->
 <?php get_template_part('nav'); ?>
