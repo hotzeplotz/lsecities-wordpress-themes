@@ -49,8 +49,7 @@ $PODS_BASEURI_ARTICLES = '/media/objects/articles';
           </div>
         </header>
         <?php endif; ?>
-
-
+        
         <article class='wireframe eightcol row'>
           <header class='entry-header'>
             <h1><?php echo $pod_title; ?></h1>
@@ -59,18 +58,18 @@ $PODS_BASEURI_ARTICLES = '/media/objects/articles';
           <div class='entry-content article-text'>
             <?php echo $pod->get_field('blurb'); ?>
           </div>
+        </article>
+        <aside class='wireframe fourcol last entry-meta' id='keyfacts'>
+          <div><img src="<?php echo $pod_cover; ?>" /></div>
           <ul>
             <?php if($pod_issuu) : ?>
             <li><a href="<?php echo $pod->get_field('issuu_uri'); ?>">Online browser</li>
             <?php endif ; ?>
-          </ul>
-        </article>
-        <aside class='wireframe fourcol last entry-meta' id='keyfacts'>
-          <div><img src="<?php echo $pod_cover; ?>" /></div>
-          
+          </ul>          
         </aside><!-- #keyfacts -->
       </div><!-- .top-content -->
-
+    </div><!-- #contentarea -->
+  </div><!-- #post-<?php the_ID(); ?> -->
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('ninecol'); ?>>
 	<div class="entry-content">
