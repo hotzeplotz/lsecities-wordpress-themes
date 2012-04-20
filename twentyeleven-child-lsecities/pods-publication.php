@@ -9,7 +9,7 @@
  */
 ?><?php
 /* URI: TBD */
-$TRACE_ENABLED = false;
+$TRACE_ENABLED = true;
 $TRACE_PREFIX = 'pods-publications';
 
 $publication_slug = get_post_meta($post->ID, 'pod_slug', true);
