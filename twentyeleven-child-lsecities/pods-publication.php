@@ -9,6 +9,7 @@
  */
 ?><?php
 /* URI: TBD */
+$PODS_BASEURI_ARTICLES = '/media/objects/articles';
 $TRACE_ENABLED = is_user_logged_in();
 $TRACE_PREFIX = 'pods-publications';
 
@@ -18,7 +19,7 @@ $pod = new Pod('publication_wrappers', $publication_slug);
 $publication_pod = $pod; // TODO refactor code and move generation of list of articles to sub used both in pods-articles and pods-publication
 $pod_title = $pod->get_field('name');
 $pod_subtitle = $pod->get_field('publication_subtitle');
-$pod_issuu = do_shortcode($pod->get_field('issuu'));
+$pod_issuu_uri = $pod->get_field('issuu_uri');
 $pod_cover = $pod->get_field('snapshot.guid');
 $pod_abstract = do_shortcode($pod->get_field('abstract'));
 
@@ -43,8 +44,16 @@ $search_params['where'] = 'in_publication.id = ' .$pod->get_field('id');
 $search_params['orderby'] = 'sequence';
 $search_params['limit'] = -1;
 $articles_pods->findRecords($search_params);
-  
-$PODS_BASEURI_ARTICLES = '/media/objects/articles';
+
+// get list of publication sections
+$publication_sections = array();
+foreach(preg_split("/\n/", $publication_pod->get_field('sections')) as $section_line) {
+  preg_match("/^(\d+)?\s?(.*)$/", $section_line, $matches);
+  array_push($publication_sections, array( 'id' => $matches[1], 'title' => $matches[2]));
+}
+echo var_trace('sections: ' . var_export($publication_sections, true), $TRACE_PREFIX, $TRACE_ENABLED);
+              
+
 ?><?php get_header(); ?>
 
 <div role="main">
@@ -72,14 +81,27 @@ $PODS_BASEURI_ARTICLES = '/media/objects/articles';
           <div class='entry-content article-text'>
             <?php echo $pod->get_field('blurb'); ?>
           </div>
+          <?php if(count($publication_sections)): ?>
+          <div class='publication-sections'>
+            <ul>
+              <?php foreach($publication_sections as $section): ?>
+              <li><?php echo $section['title']; ?></li>
+              <?php endforeach; ?>
+            </ul>
+          </div>
+          <?php endif; ?>
         </article>
         <aside class='wireframe fourcol last entry-meta' id='keyfacts'>
           <div><img src="<?php echo $pod_cover; ?>" /></div>
           <ul>
-            <?php if($pod_issuu) : ?>
-            <li><a href="<?php echo $pod->get_field('issuu_uri'); ?>">Online browser</li>
+            <?php if($pod_pdf) : ?>
+            <li><a class="download button" href="<?php echo $pod_pdf; ?>">Download PDF</li>
             <?php endif ; ?>
-          </ul>          
+            <?php if($pod_issuu_uri) : ?>
+            <li><a class="issuu button" href="<?php echo $pod_issuu_uri; ?>">Online browser</li>
+            <?php endif ; ?>
+          </ul>
+          
         </aside><!-- #keyfacts -->
       </div><!-- .top-content -->
       <div class='extra-content twelvecol'>
@@ -90,17 +112,10 @@ $PODS_BASEURI_ARTICLES = '/media/objects/articles';
               <?php if($articles_pods->getTotalRows()) : ?>
               <dl class="publication-side-toc">
               <?php
-              $sections = array();
-              foreach(preg_split("/\n/", $publication_pod->get_field('sections')) as $section_line) {
-                preg_match("/^(\d+)?\s?(.*)$/", $section_line, $matches);
-                array_push($sections, array( 'id' => $matches[1], 'title' => $matches[2]));
+              if(!count($publication_sections)) {
+                $publication_sections = array("010" => "");
               }
-              if($TRACE_PODS_ARTICLES) { error_log('sections: ' . var_export($sections, true)); }
-              
-              if(!count($sections)) {
-                $sections = array("010" => "");
-              }
-              foreach($sections as $section) : ?>
+              foreach($publication_sections as $section) : ?>
                 <?php if($section['title']) { ?><h4><?php echo $section['title']; ?></h4><?php }
           
                 mysql_data_seek($articles_pods->result,0);
