@@ -58,6 +58,67 @@ $PODS_BASEURI_ARTICLES = '/media/objects/articles';
           <div class='entry-content article-text'>
             <?php echo $pod->get_field('blurb'); ?>
           </div>
+          
+          
+          
+        <?php if(!empty($pod->data)) : ?>
+          <div class="article row">
+            <div class="ninecol">
+              <?php if($articles_pods->getTotalRows()) : ?>
+              <dl class="publication-side-toc">
+              <?php
+              $sections = array();
+              foreach(preg_split("/\n/", $publication_pod->get_field('sections')) as $section_line) {
+                preg_match("/^(\d+)?\s?(.*)$/", $section_line, $matches);
+                array_push($sections, array( 'id' => $matches[1], 'title' => $matches[2]));
+              }
+              if($TRACE_PODS_ARTICLES) { error_log('sections: ' . var_export($sections, true)); }
+              
+              if(!count($sections)) {
+                $sections = array("010" => "");
+              }
+              foreach($sections as $section) : ?>
+                <?php if($section['title']) { ?><h4><?php echo $section['title']; ?></h4><?php }
+          
+                mysql_data_seek($articles_pods->result,0);
+                while($articles_pods->fetchRecord()) :
+                  if(preg_match("/^" . $section['id'] . "/", $articles_pods->get_field('sequence'))) :
+                    $article_authors = $articles_pods->get_field('authors');
+                    $author_names = '';
+                    foreach($article_authors as $author) {
+                      $author_names = $author_names . $author['name'] . ' ' . $author['family_name'] . ', ';
+                    }
+                    
+                    // remove trailing comma
+                    $author_names = substr($author_names, 0, -2);
+                    
+                    $article_title = $articles_pods->get_field('name');
+                    echo '<!-- ' . $author_names . $article_title . '-->';
+                    if($TRACE_PODS_ARTICLES) : ?>
+                    <!-- <?php echo 'article Pod object: ' . var_export($articles_pods, true); ?> -->
+                    <?php endif; ?>
+                    <dt>
+                      <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $articles_pods->get_field('slug'); ?>"><?php echo $article_title; ?></a>
+                      <?php if(!empty($article['language']['name'])) : ?>
+                        (English) - <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $article['slug'] . '/?lang=' . $article['language']['language_code']; ?>">(<?php echo $article['language']['name']; ?>)</a>
+                      <?php endif; ?>
+                    </dt>
+                    <dd>
+                      <?php echo $author_names ; ?>
+                    </dd>
+                <?php
+                  endif;
+                endwhile;
+              endforeach; ?>
+              </dl>
+              <?php endif; ?>
+            </div>
+            <div class="threecol last">
+            </div><!-- .threecol.last -->
+          </div>
+        <?php endif ?>          
+          
+          
         </article>
         <aside class='wireframe fourcol last entry-meta' id='keyfacts'>
           <div><img src="<?php echo $pod_cover; ?>" /></div>
@@ -70,70 +131,6 @@ $PODS_BASEURI_ARTICLES = '/media/objects/articles';
       </div><!-- .top-content -->
     </div><!-- #contentarea -->
   </div><!-- #post-<?php the_ID(); ?> -->
-
-<article id="post-<?php the_ID(); ?>" <?php post_class('ninecol'); ?>>
-	<div class="entry-content">
-    <?php if(!empty($pod->data)) : ?>
-      <div class="article row">
-        <div class="ninecol">
-          <?php if($articles_pods->getTotalRows()) : ?>
-    <dl class="publication-side-toc">
-    <?php
-    $sections = array();
-    foreach(preg_split("/\n/", $publication_pod->get_field('sections')) as $section_line) {
-      preg_match("/^(\d+)?\s?(.*)$/", $section_line, $matches);
-      array_push($sections, array( 'id' => $matches[1], 'title' => $matches[2]));
-    }
-    if($TRACE_PODS_ARTICLES) { error_log('sections: ' . var_export($sections, true)); }
-    
-    if(!count($sections)) {
-      $sections = array("010" => "");
-    }
-    foreach($sections as $section) : ?>
-      <?php if($section['title']) { ?><h4><?php echo $section['title']; ?></h4><?php }
-
-      mysql_data_seek($articles_pods->result,0);
-      while($articles_pods->fetchRecord()) :
-        if(preg_match("/^" . $section['id'] . "/", $articles_pods->get_field('sequence'))) :
-          $article_authors = $articles_pods->get_field('authors');
-          $author_names = '';
-          foreach($article_authors as $author) {
-            $author_names = $author_names . $author['name'] . ' ' . $author['family_name'] . ', ';
-          }
-          
-          // remove trailing comma
-          $author_names = substr($author_names, 0, -2);
-          
-          $article_title = $articles_pods->get_field('name');
-          echo '<!-- ' . $author_names . $article_title . '-->';
-          if($TRACE_PODS_ARTICLES) : ?>
-          <!-- <?php echo 'article Pod object: ' . var_export($articles_pods, true); ?> -->
-          <?php endif; ?>
-          <dt>
-            <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $articles_pods->get_field('slug'); ?>"><?php echo $article_title; ?></a>
-            <?php if(!empty($article['language']['name'])) : ?>
-              (English) - <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $article['slug'] . '/?lang=' . $article['language']['language_code']; ?>">(<?php echo $article['language']['name']; ?>)</a>
-            <?php endif; ?>
-          </dt>
-          <dd>
-            <?php echo $author_names ; ?>
-          </dd>
-      <?php
-        endif;
-      endwhile;
-    endforeach; ?>
-    </dl>
-          <?php endif; ?>
-          
-
-        </div>
-        <div class="threecol last">
-        </div><!-- .threecol.last -->
-      </div>
-    <?php endif ?>
-	</div><!-- .entry-content -->
-</article><!-- #post-<?php the_ID(); ?> -->
-
 <?php get_template_part('nav'); ?>
 
 </div><!-- role='main'.row -->
