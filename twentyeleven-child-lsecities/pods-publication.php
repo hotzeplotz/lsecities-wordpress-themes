@@ -70,8 +70,9 @@ $PODS_BASEURI_ARTICLES = '/media/objects/articles';
       </div><!-- .top-content -->
       <div class='extra-content twelvecol'>
           <?php if(!empty($pod->data)) : ?>
-          <div class="article row">
-            <div class="ninecol">
+          <section class="row">
+            <header><h1>Articles</h1></header>
+            <div class="eightcol">
               <?php if($articles_pods->getTotalRows()) : ?>
               <dl class="publication-side-toc">
               <?php
@@ -120,10 +121,10 @@ $PODS_BASEURI_ARTICLES = '/media/objects/articles';
               endforeach; ?>
               </dl>
               <?php endif; ?>
-            </div>
-            <div class="threecol last">
-            </div><!-- .threecol.last -->
-          </div>
+            </div><!-- .eightcol -->
+            <div class="fourcol last">
+            </div><!-- .fourcol.last -->
+          </section><!-- .row -->
         <?php endif ?> 
       </div>
     </div><!-- #contentarea -->
