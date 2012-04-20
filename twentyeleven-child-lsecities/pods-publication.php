@@ -9,7 +9,7 @@
  */
 ?><?php
 /* URI: TBD */
-$TRACE_ENABLED = true;
+$TRACE_ENABLED = is_user_logged_in();
 $TRACE_PREFIX = 'pods-publications';
 
 $publication_slug = get_post_meta($post->ID, 'pod_slug', true);
@@ -24,7 +24,9 @@ $pod_abstract = do_shortcode($pod->get_field('abstract'));
 
 // get tiles for heading slider
 $slider_pod = new Pod('slide', $pod->get_field('heading_slider.slug'));
-echo var_trace($slider_pod, $TRACE_PREFIX, $TRACE_ENABLED);
+foreach($slider_pod->get_field('tiles') as $tile) {
+  echo var_trace($tile, $TRACE_PREFIX, $TRACE_ENABLED);
+}
 
 $pod_pdf = $pod->get_field('publication_pdf.guid') ? $pod->get_field('publication_pdf.guid') : $pod->get_field('publication_pdf_uri');
 $pod_alt_pdf = $pod->get_field('publication_alt_pdf.guid') ? $pod->get_field('publication_alt_pdf.guid') : $pod->get_field('publication_alt_pdf_uri');
