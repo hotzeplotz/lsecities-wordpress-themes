@@ -23,11 +23,8 @@ $pod_cover = $pod->get_field('snapshot.guid');
 $pod_abstract = do_shortcode($pod->get_field('abstract'));
 
 // get tiles for heading slider
-$heading_slider_slug = $pod->get_field('heading_slider.slug');
-$slider_pod = new Pod('slide', $heading_slider_slug);
-foreach($slider_pod->get_field('tiles.image.guid') as $tile) {
-  echo var_trace($tile, $TRACE_PREFIX, $TRACE_ENABLED);
-}
+$slider_pod = new Pod('slide', $pod->get_field('heading_slider.slug'));
+echo var_trace($slider_pod, $TRACE_PREFIX, $TRACE_ENABLED);
 
 $pod_pdf = $pod->get_field('publication_pdf.guid') ? $pod->get_field('publication_pdf.guid') : $pod->get_field('publication_pdf_uri');
 $pod_alt_pdf = $pod->get_field('publication_alt_pdf.guid') ? $pod->get_field('publication_alt_pdf.guid') : $pod->get_field('publication_alt_pdf_uri');
