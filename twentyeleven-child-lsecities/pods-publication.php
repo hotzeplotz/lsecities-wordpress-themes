@@ -76,7 +76,7 @@ $PODS_BASEURI_ARTICLES = '/media/objects/articles';
         </aside><!-- #keyfacts -->
       </div><!-- .top-content -->
       <div class='extra-content twelvecol'>
-          <?php if(!empty($pod->data)) : ?>
+          <?php if($articles_pods->getTotalRows()) : ?>
           <section class="row">
             <header><h1>Articles</h1></header>
             <div class="eightcol">
