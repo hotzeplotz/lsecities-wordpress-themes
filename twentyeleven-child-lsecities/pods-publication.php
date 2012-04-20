@@ -25,7 +25,7 @@ $pod_abstract = do_shortcode($pod->get_field('abstract'));
 // get tiles for heading slider
 $heading_slider_slug = $pod->get_field('heading_slider.slug');
 $slider_pod = new Pod('slide', $heading_slider_slug);
-foreach($slider_pod->get_field('tiles') as $tile) {
+foreach($slider_pod->get_field('tiles.image.guid') as $tile) {
   echo var_trace($tile, $TRACE_PREFIX, $TRACE_ENABLED);
 }
 
