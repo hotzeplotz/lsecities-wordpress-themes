@@ -22,11 +22,15 @@ $pod_issuu = do_shortcode($pod->get_field('issuu'));
 $pod_cover = $pod->get_field('snapshot.guid');
 $pod_abstract = do_shortcode($pod->get_field('abstract'));
 
+$heading_slides = array();
+
 // get tiles for heading slider
 echo var_trace($pod->get_field('heading_slides.slug'), $TRACE_PREFIX, $TRACE_ENABLED);
 $slider_pod = new Pod('slide', $pod->get_field('heading_slides.slug'));
-foreach($slider_pod->get_field('tiles') as $tile) {
-  echo var_trace($tile, $TRACE_PREFIX, $TRACE_ENABLED);
+foreach($slider_pod->get_field('tiles.slug') as $tile_slug) {
+  echo var_trace($tile_slug, $TRACE_PREFIX, $TRACE_ENABLED);
+  $tile = new Pod('tile', $tile_slug);
+  array_push($heading_slides, $tile->get_field('image.guid');
 }
 
 $pod_pdf = $pod->get_field('publication_pdf.guid') ? $pod->get_field('publication_pdf.guid') : $pod->get_field('publication_pdf_uri');
@@ -49,10 +53,14 @@ $PODS_BASEURI_ARTICLES = '/media/objects/articles';
   <div id="post-<?php the_ID(); ?>" <?php post_class('lc-article lc-publication'); ?>>
     <div class='ninecol' id='contentarea'>
       <div class='top-content'>
-        <?php if($featured_image_uri) : ?>
+        <?php if(count($heading_slides)) : ?>
         <header class='heading-image'>
-          <div class='photospread wireframe'>
-            <img src="<?php echo $featured_image_uri; ?>" alt="publication photo" />
+          <div class='flexslider wireframe'>
+            <ul class='slides'>
+              <?php foreach($heading_slides as $slide): ?>
+              <li><img src='<?php echo $slide; ?>' /></li>
+              <?php endforeach; ?>
+            </ul>
           </div>
         </header>
         <?php endif; ?>
