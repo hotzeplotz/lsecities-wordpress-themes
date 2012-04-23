@@ -40,12 +40,12 @@ $pod_alt_pdf_lang2 = $pod->get_field('publication_alt_pdf_lang2.guid') ? $pod->g
 
 $publication_authors_list = $pod->get_field('authors');
 foreach($publication_authors_list as $publication_author) {
-  $publication_authors .= "$publication_author['name'] $publication_author['family_name'], "
+  $publication_authors .= $publication_author['name'] . ' ' . $publication_author['family_name'] . ', ';
 }
 $publication_authors = substr($publication_authors, 0, -2);
 $publication_editors_list = $pod->get_field('editors');
 foreach($publication_editors_list as $publication_editor) {
-  $publication_editors .= "$publication_editor['name'] $publication_editor['family_name'], "
+  $publication_editors .= $publication_editor['name'] . ' ' . $publication_editor['family_name'] . ' ,';
 }
 $publication_editors = substr($publication_editors, 0, -2);
 foreach($publication_editors_list as $publication_editor) {
