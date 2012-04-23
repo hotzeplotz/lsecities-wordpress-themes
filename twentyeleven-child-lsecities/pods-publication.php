@@ -147,16 +147,21 @@ echo var_trace('sections: ' . var_export($publication_sections, true), $TRACE_PR
         </aside><!-- #keyfacts -->
       </div><!-- .top-content -->
       <div class='extra-content twelvecol'>
-          <?php echo var_trace(var_export($pod->get_field('reviews_category'), true), $TRACE_PREFIX, $TRACE_ENABLED); ?>
+          <?php echo var_trace(var_export($pod->get_field('reviews_category.term_id'), true), $TRACE_PREFIX, $TRACE_ENABLED); ?>
           <?php if($pod->get_field('reviews_category.term_id')): ?>
           <section class="row" id="wp-posts-reviews">
-            <h1>Reviews</h1>
+            <header><h1>Reviews</h1></header>
             <?php
               $wp_posts_reviews = get_posts(array('category' => $pod->get_field('reviews_category.term_id'), 'numberposts' => 10));
+              if(count($wp_posts_reviews)): ?>
+              <ul>
+              <?php
               foreach($wp_posts_reviews as $post):
-              setup_postdata($post); ?>
-              <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+                setup_postdata($post); ?>
+                <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
             <?php endforeach; ?>
+              </ul>
+            <?php endif; ?>
           </section><!-- #wp-posts-reviews -->
           <?php endif; ?>
           <?php if($articles_pods->getTotalRows()) : ?>
