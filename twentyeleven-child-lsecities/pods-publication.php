@@ -38,6 +38,21 @@ $pod_alt_pdf = $pod->get_field('publication_alt_pdf.guid') ? $pod->get_field('pu
 $pod_pdf_lang2 = $pod->get_field('publication_pdf_lang2.guid') ? $pod->get_field('publication_pdf_lang2.guid') : $pod->get_field('publication_pdf_lang2_uri');
 $pod_alt_pdf_lang2 = $pod->get_field('publication_alt_pdf_lang2.guid') ? $pod->get_field('publication_alt_pdf_lang2.guid') : $pod->get_field('publication_alt_pdf_lang2_uri');
 
+$publication_authors_list = $pod->get_field('authors');
+foreach($publication_authors_list as $publication_author) {
+  $publication_authors .= "$publication_author['name'] $publication_author['family_name'], "
+}
+$publication_authors = substr($publication_authors, 0, -2);
+$publication_editors_list = $pod->get_field('editors');
+foreach($publication_editors_list as $publication_editor) {
+  $publication_editors .= "$publication_editor['name'] $publication_editor['family_name'], "
+}
+$publication_editors = substr($publication_editors, 0, -2);
+foreach($publication_editors_list as $publication_editor) {
+}
+$publication_catalogue_data = $pod->get_field('catalogue_data');
+$publishing_date = $pod->get_field('publishing_date');
+
 $articles_pods = new Pod('article');
 $search_params = array();
 $search_params['where'] = 'in_publication.id = ' .$pod->get_field('id');
@@ -101,7 +116,24 @@ echo var_trace('sections: ' . var_export($publication_sections, true), $TRACE_PR
             <li><a class="issuu button" href="<?php echo $pod_issuu_uri; ?>">Online browser</a></li>
             <?php endif ; ?>
           </ul>
-          
+          <dl>
+          <?php if($publication_authors): ?>
+            <dt>Authors</dt>
+            <dd><?php echo $publication_authors; ?></dd>
+          <?php endif; ?>
+          <?php if($publication_editors): ?>
+            <dt>Editors</dt>
+            <dd><?php echo $publication_editors; ?></dd>
+          <?php endif; ?>
+          <?php if($publishing_date): ?>
+            <dt>Publication date</dt>
+            <dd><?php echo $publishing_date; ?></dd>
+          <?php endif; ?>
+          <?php if($publication_catalogue_data): ?>
+            <dt>Catalogue data</dt>
+            <dd><?php echo $publication_catalogue_data; ?></dd>
+          <?php endif; ?>         
+          </dl>
         </aside><!-- #keyfacts -->
       </div><!-- .top-content -->
       <div class='extra-content twelvecol'>
