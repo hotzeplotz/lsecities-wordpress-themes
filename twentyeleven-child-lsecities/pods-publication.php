@@ -144,7 +144,7 @@ echo var_trace('sections: ' . var_export($publication_sections, true), $TRACE_PR
                       <?php echo $author_names ; ?>
                     </div>
                     <?php endif; ?>
-                    <?php if($articles_pods->get_field('abstract')): ?>
+                    <?php if(false and $articles_pods->get_field('abstract')): //disable until we can generate plain text only ?>
                     <div class="excerpt">
                       <?php echo shorten_string($articles_pods->get_field('abstract'), 30); ?><a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $articles_pods->get_field('slug'); ?>">...</a>
                     </div>
