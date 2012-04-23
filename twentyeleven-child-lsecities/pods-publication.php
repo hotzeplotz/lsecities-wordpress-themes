@@ -133,28 +133,29 @@ echo var_trace('sections: ' . var_export($publication_sections, true), $TRACE_PR
                     echo var_trace('article Pod object: ' . var_export($articles_pods, true), $TRACE_PREFIX, $TRACE_ENABLED);
                     ?>
                     <div class="article">
-                    <h1>
-                      <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $articles_pods->get_field('slug'); ?>"><?php echo $article_title; ?></a>
-                      <?php if(!empty($article['language']['name'])) : ?>
-                        (English) - <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $article['slug'] . '/?lang=' . $article['language']['language_code']; ?>">(<?php echo $article['language']['name']; ?>)</a>
+                      <h1>
+                        <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $articles_pods->get_field('slug'); ?>"><?php echo $article_title; ?></a>
+                        <?php if(!empty($article['language']['name'])) : ?>
+                          (English) - <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $article['slug'] . '/?lang=' . $article['language']['language_code']; ?>">(<?php echo $article['language']['name']; ?>)</a>
+                        <?php endif; ?>
+                      </h1>
+                      <?php if($author_names): ?>
+                      <div class="authors">
+                        <?php echo $author_names ; ?>
+                      </div>
                       <?php endif; ?>
-                    </h1>
-                    <?php if($author_names): ?>
-                    <div class="authors">
-                      <?php echo $author_names ; ?>
-                    </div>
-                    <?php endif; ?>
-                    <?php if(false and $articles_pods->get_field('abstract')): //disable until we can generate plain text only ?>
-                    <div class="excerpt">
-                      <?php echo shorten_string($articles_pods->get_field('abstract'), 30); ?><a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $articles_pods->get_field('slug'); ?>">...</a>
-                    </div>
+                      <?php if(false and $articles_pods->get_field('abstract')): //disable until we can generate plain text only ?>
+                      <div class="excerpt">
+                        <?php echo shorten_string($articles_pods->get_field('abstract'), 30); ?><a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $articles_pods->get_field('slug'); ?>">...</a>
+                      </div>
                     </div><!-- .article -->
-                    <?php endif; ?>
+                  <?php endif; ?>
                 <?php
                   endif;
-                endwhile;
-              endforeach; ?>
+                endwhile; ?>
                 </section>
+              <?php  
+              endforeach; ?>
               </div><!-- .articles -->
               <?php endif; ?>
             </div><!-- .eightcol -->
