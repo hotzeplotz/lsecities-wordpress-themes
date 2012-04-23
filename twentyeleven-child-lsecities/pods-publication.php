@@ -142,9 +142,9 @@ echo var_trace('sections: ' . var_export($publication_sections, true), $TRACE_PR
                     <div class="authors">
                       <?php echo $author_names ; ?>
                     </div>
-                    <?php if($articles_pods->get_field('text')): ?>
+                    <?php if($articles_pods->get_field('abstract')): ?>
                     <div class="excerpt">
-                      <?php echo shorten_string($articles_pods->get_field('text'), 30); ?><a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $articles_pods->get_field('slug'); ?>">...</a>
+                      <?php echo shorten_string($articles_pods->get_field('abstract'), 30); ?><a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $articles_pods->get_field('slug'); ?>">...</a>
                     </div>
                     <?php endif; ?>
                 <?php
