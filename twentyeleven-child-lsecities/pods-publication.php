@@ -110,7 +110,7 @@ echo var_trace('sections: ' . var_export($publication_sections, true), $TRACE_PR
             <header><h1>Articles</h1></header>
             <div class="eightcol">
               <?php if($articles_pods->getTotalRows()) : ?>
-              <dl class="publication-side-toc">
+              <div class="publication-toc">
               <?php
               if(!count($publication_sections)) {
                 $publication_sections = array("010" => "");
@@ -131,24 +131,27 @@ echo var_trace('sections: ' . var_export($publication_sections, true), $TRACE_PR
                     $author_names = substr($author_names, 0, -2);
                     
                     $article_title = $articles_pods->get_field('name');
-                    echo '<!-- ' . $author_names . $article_title . '-->';
-                    if($TRACE_PODS_ARTICLES) : ?>
-                    <!-- <?php echo 'article Pod object: ' . var_export($articles_pods, true); ?> -->
-                    <?php endif; ?>
-                    <dt>
+                    echo var_trace('article Pod object: ' . var_export($articles_pods, true), $TRACE_PREFIX, $TRACE_ENABLED);
+                    ?>
+                    <h3>
                       <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $articles_pods->get_field('slug'); ?>"><?php echo $article_title; ?></a>
                       <?php if(!empty($article['language']['name'])) : ?>
                         (English) - <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $article['slug'] . '/?lang=' . $article['language']['language_code']; ?>">(<?php echo $article['language']['name']; ?>)</a>
                       <?php endif; ?>
-                    </dt>
-                    <dd>
+                    </h3>
+                    <div class="authors">
                       <?php echo $author_names ; ?>
-                    </dd>
+                    </div>
+                    <?php if($pod->get_field('text')): ?>
+                    <div class="excerpt">
+                      <?php echo shorten_string($pod->get_field('text'), 30); ?><a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $articles_pods->get_field('slug'); ?>">...</a>
+                    </div>
+                    <?php endif; ?>
                 <?php
                   endif;
                 endwhile;
               endforeach; ?>
-              </dl>
+              </div>
               <?php endif; ?>
             </div><!-- .eightcol -->
             <div class="fourcol last">

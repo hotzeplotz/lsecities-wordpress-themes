@@ -26,3 +26,20 @@ function check_parent_conference($post_id) {
     return false;
   }
 }
+
+/*  Returns the first $wordsreturned out of $string.  If string
+contains fewer words than $wordsreturned, the entire string
+is returned.
+*/
+
+function shorten_string($string, $wordsreturned) {
+  $retval = $string;      //  Just in case of a problem
+  $array = explode(" ", $string);
+  if (count($array)<=$wordsreturned) { // Already short enough, return the whole thing
+    $retval = $string;
+  } else { //  Need to chop some words
+    array_splice($array, $wordsreturned);
+    $retval = implode(" ", $array);
+  }
+  return $retval;
+}
