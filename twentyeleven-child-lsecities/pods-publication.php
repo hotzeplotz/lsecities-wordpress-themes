@@ -105,6 +105,7 @@ echo var_trace('sections: ' . var_export($publication_sections, true), $TRACE_PR
         </aside><!-- #keyfacts -->
       </div><!-- .top-content -->
       <div class='extra-content twelvecol'>
+          <?php echo var_trace($pod->get_field('reviews_category'), $TRACE_PREFIX, $TRACE_ENABLED); ?>
           <?php if($articles_pods->getTotalRows()) : ?>
           <section class="row" id="tableofcontents">
             <header><h1>Articles</h1></header>
