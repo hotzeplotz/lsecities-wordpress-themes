@@ -135,9 +135,6 @@ echo var_trace('sections: ' . var_export($publication_sections, true), $TRACE_PR
                     <div class="article">
                       <h1>
                         <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $articles_pods->get_field('slug'); ?>"><?php echo $article_title; ?></a>
-                        <?php if(!empty($article['language']['name'])) : ?>
-                          (English) - <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $article['slug'] . '/?lang=' . $article['language']['language_code']; ?>">(<?php echo $article['language']['name']; ?>)</a>
-                        <?php endif; ?>
                       </h1>
                       <?php if($author_names): ?>
                       <div class="authors">
@@ -148,8 +145,8 @@ echo var_trace('sections: ' . var_export($publication_sections, true), $TRACE_PR
                       <div class="excerpt">
                         <?php echo shorten_string($articles_pods->get_field('abstract'), 30); ?><a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $articles_pods->get_field('slug'); ?>">...</a>
                       </div>
+                      <?php endif; ?>
                     </div><!-- .article -->
-                  <?php endif; ?>
                 <?php
                   endif;
                 endwhile; ?>
