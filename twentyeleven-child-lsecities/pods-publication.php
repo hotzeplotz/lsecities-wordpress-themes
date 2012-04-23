@@ -45,12 +45,12 @@ foreach($publication_authors_list as $publication_author) {
 $publication_authors = substr($publication_authors, 0, -2);
 $publication_editors_list = $pod->get_field('editors');
 foreach($publication_editors_list as $publication_editor) {
-  $publication_editors .= $publication_editor['name'] . ' ' . $publication_editor['family_name'] . ' ,';
+  $publication_editors .= $publication_editor['name'] . ' ' . $publication_editor['family_name'] . ', ';
 }
 $publication_editors = substr($publication_editors, 0, -2);
 $publication_contributors_list = $pod->get_field('contributors');
 foreach($publication_contributors_list as $publication_contributor) {
-  $publication_contributors .= $publication_contributor['name'] . ' ' . $publication_contributor['family_name'] . ' ,';
+  $publication_contributors .= $publication_contributor['name'] . ' ' . $publication_contributor['family_name'] . ', ';
 }
 $publication_contributors = substr($publication_contributors, 0, -2);
 $publication_catalogue_data = $pod->get_field('catalogue_data');
