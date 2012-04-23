@@ -148,7 +148,7 @@ echo var_trace('sections: ' . var_export($publication_sections, true), $TRACE_PR
       </div><!-- .top-content -->
       <div class='extra-content twelvecol'>
           <?php echo var_trace(var_export($pod->get_field('reviews_category'), true), $TRACE_PREFIX, $TRACE_ENABLED); ?>
-          <?php if($pod->get_field('reviews_category.term_id'): ?>
+          <?php if($pod->get_field('reviews_category.term_id')): ?>
           <section class="row" id="wp-posts-reviews">
             <h1>Reviews</h1>
             <?php
