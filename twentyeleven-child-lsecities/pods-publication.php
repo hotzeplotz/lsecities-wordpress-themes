@@ -100,13 +100,14 @@ echo var_trace('sections: ' . var_export($publication_sections, true), $TRACE_PR
             <?php echo $pod->get_field('blurb'); ?>
           </div>
           <?php if(count($publication_sections)): ?>
-          <div class='publication-sections'>
+          <section class='publication-sections'>
+            <h1>Browse content</h1>
             <ul>
               <?php foreach($publication_sections as $section): ?>
               <li><a href="#publication-section-<?php echo $section['title']; ?>"><?php echo $section['title']; ?></a></li>
               <?php endforeach; ?>
             </ul>
-          </div>
+          </section>
           <?php endif; ?>
         </article>
         <aside class='wireframe fourcol last entry-meta' id='keyfacts'>
