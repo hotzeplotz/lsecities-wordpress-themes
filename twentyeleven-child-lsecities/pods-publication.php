@@ -154,13 +154,14 @@ echo var_trace('sections: ' . var_export($publication_sections, true), $TRACE_PR
             <?php
               $wp_posts_reviews = get_posts(array('category' => $pod->get_field('reviews_category.term_id'), 'numberposts' => 10));
               if(count($wp_posts_reviews)): ?>
-              <ul>
+              <dl>
               <?php
               foreach($wp_posts_reviews as $post):
                 setup_postdata($post); ?>
-                <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+                <dt><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></dt>
+                <dd><?php the_date(); ?></dd>
             <?php endforeach; ?>
-              </ul>
+              </dl>
             <?php endif; ?>
           </section><!-- #wp-posts-reviews -->
           <?php endif; ?>
