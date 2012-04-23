@@ -67,7 +67,9 @@ $articles_pods->findRecords($search_params);
 $publication_sections = array();
 foreach(preg_split("/\n/", $publication_pod->get_field('sections')) as $section_line) {
   preg_match("/^(\d+)?\s?(.*)$/", $section_line, $matches);
-  array_push($publication_sections, array( 'id' => $matches[1], 'title' => $matches[2]));
+  if($matches[1] and $matches[2]) {
+    array_push($publication_sections, array( 'id' => $matches[1], 'title' => $matches[2]));
+  }
 }
 echo var_trace('sections: ' . var_export($publication_sections, true), $TRACE_PREFIX, $TRACE_ENABLED);
               
