@@ -85,7 +85,7 @@ echo var_trace('sections: ' . var_export($publication_sections, true), $TRACE_PR
           <div class='publication-sections'>
             <ul>
               <?php foreach($publication_sections as $section): ?>
-              <li><?php echo $section['title']; ?></li>
+              <li><a href="#publication-section-<?php echo $section['title']; ?>"><?php echo $section['title']; ?></a></li>
               <?php endforeach; ?>
             </ul>
           </div>
@@ -116,7 +116,7 @@ echo var_trace('sections: ' . var_export($publication_sections, true), $TRACE_PR
                 $publication_sections = array("010" => "");
               }
               foreach($publication_sections as $section) : ?>
-                <section>
+                <section id="publication-section-<?php echo $section['title']; ?>">
                 <?php if($section['title']) { ?><h1><?php echo $section['title']; ?></h1><?php }
           
                 mysql_data_seek($articles_pods->result,0);
@@ -153,7 +153,7 @@ echo var_trace('sections: ' . var_export($publication_sections, true), $TRACE_PR
                 <?php
                   endif;
                 endwhile; ?>
-                </section>
+                </section><!-- publication-section-<?php echo $section['title']; ?> -->
               <?php  
               endforeach; ?>
               </div><!-- .articles -->
