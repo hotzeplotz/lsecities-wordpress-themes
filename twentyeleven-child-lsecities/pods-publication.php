@@ -48,8 +48,11 @@ foreach($publication_editors_list as $publication_editor) {
   $publication_editors .= $publication_editor['name'] . ' ' . $publication_editor['family_name'] . ' ,';
 }
 $publication_editors = substr($publication_editors, 0, -2);
-foreach($publication_editors_list as $publication_editor) {
+$publication_contributors_list = $pod->get_field('contributors');
+foreach($publication_contributors_list as $publication_contributor) {
+  $publication_contributors .= $publication_contributor['name'] . ' ' . $publication_contributor['family_name'] . ' ,';
 }
+$publication_contributors = substr($publication_contributors, 0, -2);
 $publication_catalogue_data = $pod->get_field('catalogue_data');
 $publishing_date = $pod->get_field('publishing_date');
 
@@ -124,6 +127,10 @@ echo var_trace('sections: ' . var_export($publication_sections, true), $TRACE_PR
           <?php if($publication_editors): ?>
             <dt>Editors</dt>
             <dd><?php echo $publication_editors; ?></dd>
+          <?php endif; ?>
+          <?php if($publication_contributors): ?>
+            <dt>Contributors</dt>
+            <dd><?php echo $publication_contributors; ?></dd>
           <?php endif; ?>
           <?php if($publishing_date): ?>
             <dt>Publication date</dt>
