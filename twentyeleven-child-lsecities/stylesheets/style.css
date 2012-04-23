@@ -341,6 +341,12 @@ header.entry-header h1 { font-family: museo-sans, nevisBold, PT Sans, sans-serif
 .lc-conference-frontpage header.heading-image .mainheadings h1 { text-transform: uppercase; }
 
 .lc-publication #pressarea dl.reviews { -moz-column-count: 2; -webkit-column-count: 2; -o-column-count: 2; column-count: 2; }
+.lc-publication #tableofcontents .articles > section { margin-bottom: 2em; }
+.lc-publication #tableofcontents .articles > section > h1 { font-size: 1.5em; line-height: 2em; font-weight: bold; }
+.lc-publication #tableofcontents .articles > section .article { margin-bottom: 0.5em; }
+.lc-publication #tableofcontents .articles > section .article > h1 { font-size: 1.5em; }
+.lc-publication #tableofcontents .articles > section .article .authors { font-size: 0.8em; }
+.lc-publication #tableofcontents .articles > section .article .excerpt { font-size: 1em; }
 
 /*/mediaquery*/
 /*/mediaquery*/

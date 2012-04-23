@@ -106,17 +106,18 @@ echo var_trace('sections: ' . var_export($publication_sections, true), $TRACE_PR
       </div><!-- .top-content -->
       <div class='extra-content twelvecol'>
           <?php if($articles_pods->getTotalRows()) : ?>
-          <section class="row">
+          <section class="row" id="tableofcontents">
             <header><h1>Articles</h1></header>
             <div class="eightcol">
               <?php if($articles_pods->getTotalRows()) : ?>
-              <div class="publication-toc">
+              <div class="articles">
               <?php
               if(!count($publication_sections)) {
                 $publication_sections = array("010" => "");
               }
               foreach($publication_sections as $section) : ?>
-                <?php if($section['title']) { ?><h4><?php echo $section['title']; ?></h4><?php }
+                <section>
+                <?php if($section['title']) { ?><h1><?php echo $section['title']; ?></h1><?php }
           
                 mysql_data_seek($articles_pods->result,0);
                 while($articles_pods->fetchRecord()) :
@@ -126,32 +127,35 @@ echo var_trace('sections: ' . var_export($publication_sections, true), $TRACE_PR
                     foreach($article_authors as $author) {
                       $author_names = $author_names . $author['name'] . ' ' . $author['family_name'] . ', ';
                     }
-                    
                     // remove trailing comma
                     $author_names = substr($author_names, 0, -2);
-                    
                     $article_title = $articles_pods->get_field('name');
                     echo var_trace('article Pod object: ' . var_export($articles_pods, true), $TRACE_PREFIX, $TRACE_ENABLED);
                     ?>
-                    <h3>
+                    <div class="article">
+                    <h1>
                       <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $articles_pods->get_field('slug'); ?>"><?php echo $article_title; ?></a>
                       <?php if(!empty($article['language']['name'])) : ?>
                         (English) - <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $article['slug'] . '/?lang=' . $article['language']['language_code']; ?>">(<?php echo $article['language']['name']; ?>)</a>
                       <?php endif; ?>
-                    </h3>
+                    </h1>
+                    <?php if($author_names): ?>
                     <div class="authors">
                       <?php echo $author_names ; ?>
                     </div>
+                    <?php endif; ?>
                     <?php if($articles_pods->get_field('abstract')): ?>
                     <div class="excerpt">
                       <?php echo shorten_string($articles_pods->get_field('abstract'), 30); ?><a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $articles_pods->get_field('slug'); ?>">...</a>
                     </div>
+                    </div><!-- .article -->
                     <?php endif; ?>
                 <?php
                   endif;
                 endwhile;
               endforeach; ?>
-              </div>
+                </section>
+              </div><!-- .articles -->
               <?php endif; ?>
             </div><!-- .eightcol -->
             <div class="fourcol last">
