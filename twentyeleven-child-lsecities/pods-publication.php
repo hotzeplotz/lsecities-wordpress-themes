@@ -158,8 +158,10 @@ echo var_trace('sections: ' . var_export($publication_sections, true), $TRACE_PR
               <?php
               foreach($wp_posts_reviews as $post):
                 setup_postdata($post); ?>
-                <dt><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></dt>
-                <dd><?php the_date(); ?></dd>
+                <div>
+                  <dt><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></dt>
+                  <dd><?php the_date(); ?></dd>
+                </div>
             <?php endforeach; ?>
               </dl><!-- .posts -->
             <?php endif; ?>
