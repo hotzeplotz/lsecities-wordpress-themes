@@ -107,20 +107,39 @@ $logo_element_id = $urban_age_section ? 'ualogo' : 'logo';
 					</div>
 				</a>
 				<div class='sevencol last' id='toolbox'>
-					<div id='searchbox'>
-						<form action='http://www.google.com/u/urbanAge' id='search-box' method='get'>
-							<div class='hiddenFields'>
-								<input name='domains' type='hidden' value='www.urban-age.net' />
-								<input name='sitesearch' type='hidden' value='www.urban-age.net' />
-								<input id='queryfield' name='q' placeholder='Search LSE Cities' size='40' type='text' />
+					<div id="searchbox" class="clearfix">
+						<form method="get" id="search-box" action="http://www.google.com/u/urbanAge">
+							<div class="hiddenFields">
+								<input type="hidden" value="www.urban-age.net" name="domains">
+								<input type="hidden" value="www.urban-age.net" name="sitesearch">
+								<input type="text" size="40" placeholder="Search LSE Cities" name="q" id="queryfield">
 							</div>
 						</form>
-						<div class='clearfix' id='persistentLogo'>
-						<?php if($urban_age_section) : ?>
-								<a href="/"><img id='lsecitiesSmallLogo' src='<?php echo get_stylesheet_directory_uri() ?>/images/logo_lsecities_nostrapline_small.gif'></a>
-						<?php endif ; ?>
-						</div>
-          </div>
+						<span id="socialbuttons">
+							<ul>
+								<li>
+									<a title="Follow us on Twitter" href="httpss://twitter.com/#!/LSECities">
+										<img src="http://v1.lsecities.net/wp-content/themes/twentyeleven-child-lsecities/images/icons/mal/icon_twitter-v1lightblue_24x24.png" alt="Follow us on Twitter">
+									</a>
+								</li>
+								<li>
+									<a title="Follow us on Facebook" href="https://facebook.com/lsecities">
+										<img src="http://v1.lsecities.net/wp-content/themes/twentyeleven-child-lsecities/images/icons/mal/icon_facebook-v2lightblue_24x24.png" alt="Follow us on Facebook">
+									</a>
+								</li>
+								<li>
+									<a title="Follow us on YouTube" href="https://youtube.com/urbanage">
+										<img src="http://v1.lsecities.net/wp-content/themes/twentyeleven-child-lsecities/images/icons/mal/icon_youtubelightblue_24x24.png" alt="Follow us on YouTube">
+									</a>
+								</li>
+								<li>
+									<a title="News archive" href="http://lsecities.net/category/urban-age/">
+										<img src="http://v1.lsecities.net/wp-content/themes/twentyeleven-child-lsecities/images/icons/mal/icon_rsslightblue_24x24.png" alt="News archive">
+									</a>
+								</li>
+							</ul>
+						</span>
+					</div>
 				</div><!-- #toolbox -->
 				<nav id='level1nav' class="row">
 					<ul>
