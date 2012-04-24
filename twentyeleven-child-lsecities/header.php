@@ -118,7 +118,7 @@ $logo_element_id = $urban_age_section ? 'ualogo' : 'logo';
 						<span id="socialbuttons">
 							<ul>
 								<li>
-									<a title="Follow us on Twitter" href="httpss://twitter.com/#!/LSECities">
+									<a title="Follow us on Twitter" href="https://twitter.com/#!/LSECities">
 										<img src="http://v1.lsecities.net/wp-content/themes/twentyeleven-child-lsecities/images/icons/mal/icon_twitter-v1lightblue_24x24.png" alt="Follow us on Twitter">
 									</a>
 								</li>
