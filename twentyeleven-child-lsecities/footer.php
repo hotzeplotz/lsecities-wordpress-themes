@@ -15,61 +15,53 @@
 	<footer id="footer">
     <nav id="footerSitemap">
       <div class="row">
-        <section class="fourcol">
+        <div class="onecol">&nbsp;</div>
+        <div class="twocol">
           <h1>About</h1>
           <ul>
             <?php wp_list_pages('title_li=&depth=1&child_of=617&sort_column=menu_order&sort_order=ASC&echo=1'); ?>
           </ul>
-        </section>
-        <section class="fourcol">
           <h1>Who's who</h1>
           <ul>
             <?php wp_list_pages('title_li=&depth=1&child_of=421&sort_column=menu_order&sort_order=ASC&echo=1'); ?>
           </ul>
-        </section>
-        <section class="fourcol last">
+        </div>
+        <div class="twocol">
           <h1>Research</h1>
           <ul>
             <?php wp_list_pages('title_li=&depth=2&child_of=306&sort_column=menu_order&sort_order=ASC&echo=1'); ?>
           </ul>
-        </section>
-      </div>
-      <div class="row">
-        <section class="fourcol">
           <h1>Publications</h1>
           <ul>
-            <?php wp_list_pages('title_li=&depth=2&child_of=309&sort_column=menu_order&sort_order=ASC&echo=1'); ?>
+            <?php wp_list_pages('title_li=&depth=1&child_of=309&sort_column=menu_order&sort_order=ASC&echo=1'); ?>
           </ul>
-        </section>
-        <section class="fourcol">
+        </div>
+        <div class="twocol">
           <h1>Conferences</h1>
           <ul>
             <?php wp_list_pages('title_li=&depth=1&child_of=96&sort_column=menu_order&sort_order=DESC&echo=1'); ?>
           </ul>
-        </section>
-        <section class="fourcol last">
-          <h1>Deutsche Bank Urban Age Award</h1>
-          <ul>
-            <?php wp_list_pages('title_li=&depth=1&child_of=489&sort_column=menu_order&sort_order=ASC&echo=1'); ?>
-          </ul>
-        </section>
-      </div>
-      <div class="row">
-        <section class="fourcol">
+        </div>
+        <div class="twocol">
           <h1>Events</h1>
           <ul>
             <?php wp_list_pages('title_li=&depth=1&child_of=311&sort_column=menu_order&sort_order=ASC&echo=1'); ?>
           </ul>
-        </section>
-        <section class="fourcol">
+          <h1>Deutsche Bank Urban Age Award</h1>
+          <ul>
+            <?php wp_list_pages('title_li=&depth=1&child_of=489&sort_column=menu_order&sort_order=ASC&echo=1'); ?>
+          </ul>
+        </div>
+  <!--  <section class="fourcol">
           <h1></h1>
           <ul>
             <?php get_template_part('snippet-colophon'); ?>
           </ul>
-        </section>
-        <section class="fourcol last">
+        </section> -->
+        <div class="twocol">
           <?php get_template_part('snippet-organizers'); ?>
-        </section>
+        </div>
+        <div class="onecol">&nbsp;</div>
       </div>
     </nav>
   </footer><!-- #footer -->
