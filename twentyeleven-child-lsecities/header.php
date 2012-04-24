@@ -101,12 +101,15 @@ $logo_element_id = $urban_age_section ? 'ualogo' : 'logo';
 	<div class='container' id='container'> <!-- ## grid -->
 		<header id='header'>
 			<div class='row'>
-				<a href="/<?php if($urban_age_section) { echo 'ua/'; }?>">
-					<div class='full fivecol' id='<?php echo $logo_element_id ; ?>'>
+				<a href="/">
+					<div class='full threecol' id='logo'>
 						&nbsp;
 					</div>
 				</a>
-				<div class='sevencol last' id='toolbox'>
+				<a href="<?php if($urban_age_section) { echo 'ua/'; }?>">
+					<div class='threecol' id='ualogo-disabled'>&nbsp;</div>
+				</a>
+				<div class='sixcol last' id='toolbox'>
 					<div id="searchbox" class="clearfix">
 						<form method="get" id="search-box" action="http://www.google.com/u/urbanAge">
 							<div class="hiddenFields">
