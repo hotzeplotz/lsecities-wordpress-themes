@@ -111,9 +111,7 @@ if($TRACE_PODS_MAIN_FRONTPAGE) { error_log('pod_slug: ' . $pod_slug); }
 $pod = new Pod('slider', $pod_slug);
 
 $slides = $pod->get_field('slides');
-?>
-
-<?php get_header(); ?>
+?><?php get_header(); ?>
 
 <div role="main">
 
@@ -121,7 +119,7 @@ $slides = $pod->get_field('slides');
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<h1 class="entry-title"><?php echo $pod->get_field('name'); ?></h1>
+		<!-- <h1 class="entry-title"><?php echo $pod->get_field('name'); ?></h1> -->
     <?php
       $tagline = $pod->get_field('tagline');
       if($tagline) : ?>
