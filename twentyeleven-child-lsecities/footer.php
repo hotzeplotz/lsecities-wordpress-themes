@@ -11,7 +11,7 @@
 ?>
 
 	</div><!-- #main -->
-
+</div><!-- #page -->
 	<footer id="footer">
     <nav id="footerSitemap">
       <div class="row">
@@ -73,7 +73,6 @@
       </div>
     </nav>
   </footer><!-- #footer -->
-</div><!-- #page -->
 </div><!-- ## grid # container -->
 
 <?php wp_footer(); ?>

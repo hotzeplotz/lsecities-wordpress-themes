@@ -222,8 +222,10 @@ header #socialbuttons ul { height: 16px; }
 #level3nav #organizer-logos { max-width: 67.7290%; width: 67.7290%; }
 
 footer { font-size: 0.75em; background: none repeat scroll 0 0 #F1F1EC; border-top: 1px solid #E5E5E0; margin-top: 20px; padding: 40px; }
-footer h1, footer h2, footer h3, footer h4, footer h5, footer h6 { font-weight: bold; margin-bottom: 0.5em; }
+footer h1, footer h2, footer h3, footer h4, footer h5, footer h6 { font-weight: bold; margin-bottom: 0.5em; color: #fff; border-bottom: 1px solid #ccc; }
 footer ul { list-style-type: none; }
+footer a, footer a:visited, footer a:active { color: #ee2222; }
+footer a:hover { color: #ccc; }
 footer #footerSitemap ul li > ul { margin-top: 0.5em; }
 footer #footerSitemap > .row { margin-bottom: 1.5em; }
 footer #footerSitemap > .row > section > ul { -moz-column-count: 2; -webkit-column-count: 2; -o-column-count: 2; column-count: 2; }
@@ -284,6 +286,8 @@ header.entry-header h1 { font-family: museo-sans, nevisBold, PT Sans, sans-serif
 #share-on-social-media { float: right; }
 #share-on-social-media > h1 { display: inline; font-size: 1em; }
 #share-on-social-media > ul, #share-on-social-media > ul > li { display: inline; vertical-align: middle; }
+
+footer { background: url("http://v1.lsecities.net/wp-content/themes/twentyeleven-child-lsecities/images/backgrounds/mal/pixelpattern_darkgrey_120420.gif") repeat scroll 0 0 transparent; }
 
 .flexslider { position: relative; /* Direction Nav */ /* Control Nav */ }
 .flexslider .flex-direction-nav li a { width: 33px; height: 64px; text-indent: -9999px; border: 0; margin: -13px 0 0; display: block; /* background: url(theme/bg_direction_nav.png) no-repeat 0 0; */ position: absolute; top: 45%; /* top: 50%; */ opacity: 0.9; }
