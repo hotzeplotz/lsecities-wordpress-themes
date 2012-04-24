@@ -7,8 +7,13 @@
       </a>
     </li>
     <li>
-      <a href="https://twitter.com/share?url=<?php echo get_current_page_URI(); ?>">
+      <a href="https://twitter.com/share?url=<?php echo get_current_page_URI(); ?>&text=<?php wp_title( '|', true, 'right' ); bloginfo( 'name' ); ?>">
         <img alt="Share on Twitter" src="<?php bloginfo('stylesheet_directory') ?>/images/icons/mal/icon_twitter-v1darkblue_24x24.png" />
+      </a>
+    </li>
+    <li>
+      <a href="https://plusone.google.com/_/+1/confirm?hl=en&url=<?php echo get_current_page_URI(); ?>">
+        <img alt="Share on Google+" src="<?php bloginfo('stylesheet_directory') ?>/images/icons/mal/icon_googleplusdarkblue_24x24.png" />
       </a>
     </li>
   </ul>
