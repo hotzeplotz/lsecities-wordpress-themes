@@ -61,7 +61,7 @@
         <div class="twocol">
           <?php get_template_part('snippet-organizers'); ?>
         </div>
-        <div class="onecol">&nbsp;</div>
+        <div class="onecol last">&nbsp;</div>
       </div>
     </nav>
   </footer><!-- #footer -->
