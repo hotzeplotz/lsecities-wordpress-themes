@@ -111,6 +111,7 @@ echo var_trace('sections: ' . var_export($publication_sections, true), $TRACE_PR
             </ul>
           </section>
           <?php endif; ?>
+          <?php get_template_part('snippet-socialmedia-share'); ?>
         </article>
         <aside class='wireframe fourcol last entry-meta' id='keyfacts'>
           <div class='cover-thumbnail'><img src="<?php echo $pod_cover; ?>" /></div>
