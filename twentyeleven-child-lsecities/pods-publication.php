@@ -147,7 +147,7 @@ echo var_trace('sections: ' . var_export($publication_sections, true), $TRACE_PR
           </dl>
         </aside><!-- #keyfacts -->
       </div><!-- .top-content -->
-      <div class='extra-content twelvecol'>
+      <div class='extra-content row'>
           <?php echo var_trace(var_export($pod->get_field('reviews_category.term_id'), true), $TRACE_PREFIX, $TRACE_ENABLED); ?>
           <?php if($pod->get_field('reviews_category.term_id')): ?>
           <section class="row" id="wp-posts-reviews">
@@ -221,7 +221,7 @@ echo var_trace('sections: ' . var_export($publication_sections, true), $TRACE_PR
             </div><!-- .fourcol.last -->
           </section><!-- .row -->
         <?php endif ?> 
-      </div>
+      </div><!-- .extra-content -->
     </div><!-- #contentarea -->
   </div><!-- #post-<?php the_ID(); ?> -->
 <?php get_template_part('nav'); ?>
