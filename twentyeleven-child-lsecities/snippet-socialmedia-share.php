@@ -8,7 +8,7 @@
     </li>
     <li>
       <a href="https://twitter.com/share?url=<?php echo get_current_page_URI(); ?>">
-        <img alt="Share on Twitter" src="<?php bloginfo('stylesheet_directory') ?>/images/icons/mal/icon_twitter-v2darkblue_24x24.png" />
+        <img alt="Share on Twitter" src="<?php bloginfo('stylesheet_directory') ?>/images/icons/mal/icon_twitter-v1darkblue_24x24.png" />
       </a>
     </li>
   </ul>
