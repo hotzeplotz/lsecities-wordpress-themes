@@ -283,8 +283,25 @@ header.entry-header h1 { font-family: museo-sans, nevisBold, PT Sans, sans-serif
 #share-on-social-media > h1 { display: inline; font-size: 1em; }
 #share-on-social-media > ul, #share-on-social-media > ul > li { display: inline; vertical-align: middle; }
 
+/* Direction Nav */
+.flex-direction-nav li a { width: 33px; height: 64px; text-indent: -9999px; border: 0; margin: -13px 0 0; display: block; /* background: url(theme/bg_direction_nav.png) no-repeat 0 0; */ position: absolute; top: 220px; /*((503-64)/2)px;*/ /* top: 50%; */ opacity: 0.9; }
+.flex-direction-nav li a:hover { background-position: 0px -65px; opacity: 1; }
+.flex-direction-nav li a:active { background-position: 0px -130px; }
+.flex-direction-nav li .next { background: transparent url("http://urban-age.net/stylesheets/plugins/jquery.nivoslider/2.4/arrow-right.png") no-repeat; right: 0px; /* background-position: -52px 0;
+right: -21px; */ }
+.flex-direction-nav li .prev { /* left: -20px; */ background: transparent url("http://urban-age.net/stylesheets/plugins/jquery.nivoslider/2.4/arrow-left.png") no-repeat; left: -2px; }
+.flex-direction-nav li .disabled { opacity: .3; filter: alpha(opacity=30); cursor: default; }
+
+/* Control Nav */
+.flex-control-nav { width: 100%; position: absolute; bottom: -30px; text-align: center; }
+.flex-control-nav li { margin: 0 0 0 5px; display: inline-block; zoom: 1; *display: inline; }
+.flex-control-nav li:first-child { margin: 0; }
+.flex-control-nav li a { width: 13px; height: 13px; display: block; background: url(theme/bg_control_nav.png) no-repeat 0 0; cursor: pointer; text-indent: -9999px; }
+.flex-control-nav li a:hover { background-position: 0 -13px; }
+.flex-control-nav li a.active { background-position: 0 -26px; cursor: default; }
+
 .lc-slider-page .flexslider { font-family: nimbus-sans, PT Sans, ff-meta-web-pro, UbuntuRegular, Tahoma, Elvetica, sans-serif; position: relative; font-size: 0.875em; /* .slides > li { height: #{2*$tile_base_emheight}em; }
-*/ /* Direction Nav */ /* Control Nav */ }
+*/ }
 .lc-slider-page .flexslider .onecol, .lc-slider-page .flexslider .twocol, .lc-slider-page .flexslider .threecol, .lc-slider-page .flexslider .fourcol, .lc-slider-page .flexslider .fivecol, .lc-slider-page .flexslider .sixcol, .lc-slider-page .flexslider .sevencol, .lc-slider-page .flexslider .eightcol, .lc-slider-page .flexslider .ninecol, .lc-slider-page .flexslider .tencol, .lc-slider-page .flexslider .elevencol { margin-right: 0; }
 .lc-slider-page .flexslider .slide-inner { border-left: 1px solid #fefefe; border-bottom: 1px solid #fefefe; }
 .lc-slider-page .flexslider .col2 { width: 32.571em; float: left; }
@@ -319,19 +336,6 @@ header.entry-header h1 { font-family: museo-sans, nevisBold, PT Sans, sans-serif
 .lc-slider-page .flexslider .feature_info .feature_blurb { float: left; line-height: 1.08em; max-height: 0; overflow: hidden; padding-top: 5px; width: 100%; }
 .lc-slider-page .flexslider ul { list-style-type: disc; }
 .lc-slider-page .flexslider ul li { list-style-type: inherit; }
-.lc-slider-page .flexslider .flex-direction-nav li a { width: 33px; height: 64px; text-indent: -9999px; border: 0; margin: -13px 0 0; display: block; /* background: url(theme/bg_direction_nav.png) no-repeat 0 0; */ position: absolute; top: 220px; /*((503-64)/2)px;*/ /* top: 50%; */ opacity: 0.9; }
-.lc-slider-page .flexslider .flex-direction-nav li a:hover { background-position: 0px -65px; opacity: 1; }
-.lc-slider-page .flexslider .flex-direction-nav li a:active { background-position: 0px -130px; }
-.lc-slider-page .flexslider .flex-direction-nav li .next { background: transparent url("http://urban-age.net/stylesheets/plugins/jquery.nivoslider/2.4/arrow-right.png") no-repeat; right: 0px; /* background-position: -52px 0;
-right: -21px; */ }
-.lc-slider-page .flexslider .flex-direction-nav li .prev { /* left: -20px; */ background: transparent url("http://urban-age.net/stylesheets/plugins/jquery.nivoslider/2.4/arrow-left.png") no-repeat; left: -2px; }
-.lc-slider-page .flexslider .flex-direction-nav li .disabled { opacity: .3; filter: alpha(opacity=30); cursor: default; }
-.lc-slider-page .flexslider .flex-control-nav { width: 100%; position: absolute; bottom: -30px; text-align: center; }
-.lc-slider-page .flexslider .flex-control-nav li { margin: 0 0 0 5px; display: inline-block; zoom: 1; *display: inline; }
-.lc-slider-page .flexslider .flex-control-nav li:first-child { margin: 0; }
-.lc-slider-page .flexslider .flex-control-nav li a { width: 13px; height: 13px; display: block; background: url(theme/bg_control_nav.png) no-repeat 0 0; cursor: pointer; text-indent: -9999px; }
-.lc-slider-page .flexslider .flex-control-nav li a:hover { background-position: 0 -13px; }
-.lc-slider-page .flexslider .flex-control-nav li a.active { background-position: 0 -26px; cursor: default; }
 
 #speaker-profiles .people-list .person h1 { font-size: 1em; font-weight: bold; text-transform: inherit; border-bottom: 1px solid #eee; }
 
