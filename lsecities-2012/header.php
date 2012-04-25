@@ -122,22 +122,22 @@ $logo_element_id = $urban_age_section ? 'ualogo' : 'logo';
 							<ul>
 								<li>
 									<a title="Follow us on Twitter" href="https://twitter.com/#!/LSECities">
-										<img src="http://v1.lsecities.net/wp-content/themes/twentyeleven-child-lsecities/images/icons/mal/icon_twitter-v1lightblue_24x24.png" alt="Follow us on Twitter">
+										<img src="http://v1.lsecities.net/wp-content/themes/lsecities-2012/images/icons/mal/icon_twitter-v1lightblue_24x24.png" alt="Follow us on Twitter">
 									</a>
 								</li>
 								<li>
 									<a title="Follow us on Facebook" href="https://facebook.com/lsecities">
-										<img src="http://v1.lsecities.net/wp-content/themes/twentyeleven-child-lsecities/images/icons/mal/icon_facebook-v2lightblue_24x24.png" alt="Follow us on Facebook">
+										<img src="http://v1.lsecities.net/wp-content/themes/lsecities-2012/images/icons/mal/icon_facebook-v2lightblue_24x24.png" alt="Follow us on Facebook">
 									</a>
 								</li>
 								<li>
 									<a title="Follow us on YouTube" href="https://youtube.com/urbanage">
-										<img src="http://v1.lsecities.net/wp-content/themes/twentyeleven-child-lsecities/images/icons/mal/icon_youtubelightblue_24x24.png" alt="Follow us on YouTube">
+										<img src="http://v1.lsecities.net/wp-content/themes/lsecities-2012/images/icons/mal/icon_youtubelightblue_24x24.png" alt="Follow us on YouTube">
 									</a>
 								</li>
 								<li>
 									<a title="News archive" href="http://lsecities.net/category/urban-age/">
-										<img src="http://v1.lsecities.net/wp-content/themes/twentyeleven-child-lsecities/images/icons/mal/icon_rsslightblue_24x24.png" alt="News archive">
+										<img src="http://v1.lsecities.net/wp-content/themes/lsecities-2012/images/icons/mal/icon_rsslightblue_24x24.png" alt="News archive">
 									</a>
 								</li>
 							</ul>
