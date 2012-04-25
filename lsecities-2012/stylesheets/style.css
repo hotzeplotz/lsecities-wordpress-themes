@@ -177,10 +177,10 @@ body > #container > header #logo.small { background: url("../images/logo_lseciti
 body > #container > header #ualogo { background: url("../images/logo_urbanage_strapline.gif") no-repeat scroll 0 0 transparent; height: 5.125em; margin-top: 0.166667em; }
 body > #container > header ul { display: inline-block; list-style: none; margin: 0; padding: 0; }
 body > #container > header ul li { display: inline; float: left; }
-body > #container > header ul li a { padding: 0 0.6em; text-decoration: none; }
+body > #container > header ul li a { padding: 0.125em 0.6em 0 0.6em; text-decoration: none; }
 body > #container > header #socialbuttons ul li a { margin: 0 0.3125em; padding: 0; }
 
-#mainmenus { opacity: 0.9; }
+#mainmenus { opacity: 1; }
 #mainmenus:hover { opacity: 1; }
 #mainmenus #level2nav h1 { display: inline-block; color: #ffffff; font-size: 1.2em; font-weight: normal; font-family: UbuntuBold; padding: 0 0.5em; }
 #mainmenus #level2nav ul { font-weight: bold; }
@@ -192,7 +192,6 @@ body > #container > header #socialbuttons ul li a { margin: 0 0.3125em; padding:
 
 nav#level1nav, nav#level2nav { line-height: 1.2em; font-family: nimbus-sans, PT Sans, ff-meta-web-pro, UbuntuRegular, Tahoma, Elvetica, sans-serif; text-transform: uppercase; }
 nav#level1nav ul li, nav#level2nav ul li { line-height: 2em; margin-bottom: 0; }
-nav#level1nav ul li a, nav#level2nav ul li a { padding-top: 0.125em; }
 
 #level1nav ul li a, #level1nav ul li a:active, #level1nav ul li a:visited { color: #000; }
 #level1nav ul li.current, #level1nav ul li.current_page_item, #level1nav ul li.current_page_ancestor { background-color: red; color: #fff; }
@@ -201,12 +200,12 @@ nav#level1nav ul li a, nav#level2nav ul li a { padding-top: 0.125em; }
 #level1nav ul li:hover:not(.current) a, #level1nav ul li:hover:not(.current_page_item) a { color: #fff; }
 
 header #searchbox #socialbuttons { float: right; }
-header #searchbox form { float: right; opacity: 0.3; font-size: 0.75em; margin-left: 0.625em; }
-header #searchbox form:hover { opacity: 0.9; }
+header #searchbox form { float: right; opacity: 1; font-size: 0.75em; margin-left: 0.625em; }
+header #searchbox form:hover { opacity: 1; }
 
 #persistentLogo { float: right; height: 31px; }
 
-header #searchbox input#queryfield { background: url("../images/icons/search_icon.png") no-repeat scroll right center transparent; border: 2px solid #CCCCCC; height: 2em; padding: 0 0.25em; font-size: 1em; line-height: 1em; -moz-border-radius: 0.25em; -webkit-border-radius: 0.25em; -o-border-radius: 0.25em; -ms-border-radius: 0.25em; -khtml-border-radius: 0.25em; border-radius: 0.25em; }
+header #searchbox input#queryfield { background: url("http://v1.lsecities.net/wp-content/themes/lsecities-2012/images/icons/mal/searchicon_for_header.gif") no-repeat scroll right center transparent; border: 2px solid #ccc; color: #888; height: 2em; padding: 0 0.25em; font-size: 1em; line-height: 1em; -moz-border-radius: 0.25em; -webkit-border-radius: 0.25em; -o-border-radius: 0.25em; -ms-border-radius: 0.25em; -khtml-border-radius: 0.25em; border-radius: 0.25em; }
 
 header #socialbuttons { height: 30px; }
 header #socialbuttons h4 { display: inline; }
