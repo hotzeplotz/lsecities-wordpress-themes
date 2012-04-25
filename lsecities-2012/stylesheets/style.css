@@ -286,7 +286,7 @@ header.entry-header h1 { font-family: museo-sans, nevisBold, PT Sans, sans-serif
 #share-on-social-media > h1 { display: inline; font-size: 1em; }
 #share-on-social-media > ul, #share-on-social-media > ul > li { display: inline; vertical-align: middle; }
 
-.downloadthis.pdf { background: url("http://v1.lsecities.net/wp-content/themes/lsecities-2012/images/backgrounds/mal/pixelpattern_darkgrey_120420.gif") repeat scroll 0 0 transparent; }
+.downloadthis.pdf { background: url("http://v1.lsecities.net/wp-content/themes/lsecities-2012/images/icons/mal/icon_downloaddarkblue_24x24.png") no-repeat scroll 0 0 transparent; padding-left: 28px; padding-bottom: 8px; }
 
 footer { background: url("http://v1.lsecities.net/wp-content/themes/lsecities-2012/images/backgrounds/mal/pixelpattern_darkgrey_120420.gif") repeat scroll 0 0 transparent; }
 
