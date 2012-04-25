@@ -178,6 +178,7 @@ body > #container > header #ualogo { background: url("../images/logo_urbanage_st
 body > #container > header ul { display: inline-block; list-style: none; margin: 0; padding: 0; }
 body > #container > header ul li { display: inline; float: left; }
 body > #container > header ul li a { padding: 0 0.6em; text-decoration: none; }
+body > #container > header #socialbuttons ul li a { margin: 0 0.3125em; padding: 0; }
 
 #mainmenus { opacity: 0.9; }
 #mainmenus:hover { opacity: 1; }
@@ -185,21 +186,22 @@ body > #container > header ul li a { padding: 0 0.6em; text-decoration: none; }
 #mainmenus #level2nav ul { font-weight: bold; }
 #mainmenus #level2nav ul li.current a, #mainmenus #level2nav ul li.current_page_item a, #mainmenus #level2nav ul li.current_page_ancestor a, #mainmenus #level2nav ul li.current_page_parent a { background-color: #ddd; color: #000; }
 #mainmenus #level2nav ul a { color: #ffffff; display: block; margin: 0; }
-#mainmenus #level2nav ul a:hover { background-color: rgba(221, 221, 221, 0.8); color: #000; }
+#mainmenus #level2nav ul a:hover { background-color: #ddd; color: #000; }
 #mainmenus #level2nav { background-color: #000; color: #fff; }
 #mainmenus #level2nav ul { background-color: inherit; }
 
 nav#level1nav, nav#level2nav { line-height: 1.2em; font-family: nimbus-sans, PT Sans, ff-meta-web-pro, UbuntuRegular, Tahoma, Elvetica, sans-serif; text-transform: uppercase; }
-nav#level1nav ul li, nav#level2nav ul li { line-height: 1.5em; margin-bottom: 0; }
+nav#level1nav ul li, nav#level2nav ul li { line-height: 2em; margin-bottom: 0; }
+nav#level1nav ul li a, nav#level2nav ul li a { padding-top: 0.125em; }
 
 #level1nav ul li a, #level1nav ul li a:active, #level1nav ul li a:visited { color: #000; }
-#level1nav ul li.current, #level1nav ul li.current_page_item, #level1nav ul li.current_page_ancestor { background-color: #e93616; color: #fff; }
+#level1nav ul li.current, #level1nav ul li.current_page_item, #level1nav ul li.current_page_ancestor { background-color: red; color: #fff; }
 #level1nav ul li.current a, #level1nav ul li.current_page_item a, #level1nav ul li.current_page_ancestor a { color: #fff; }
-#level1nav ul li:hover:not(.current), #level1nav ul li:hover:not(.current_page_item) { background-color: rgba(233, 54, 22, 0.8); }
+#level1nav ul li:hover:not(.current), #level1nav ul li:hover:not(.current_page_item) { background-color: red; }
 #level1nav ul li:hover:not(.current) a, #level1nav ul li:hover:not(.current_page_item) a { color: #fff; }
 
 header #searchbox #socialbuttons { float: right; }
-header #searchbox form { float: right; opacity: 0.3; font-size: 0.75em; }
+header #searchbox form { float: right; opacity: 0.3; font-size: 0.75em; margin-left: 0.625em; }
 header #searchbox form:hover { opacity: 0.9; }
 
 #persistentLogo { float: right; height: 31px; }
@@ -243,8 +245,8 @@ header.entry-header h1 { font-family: museo-sans, nevisBold, PT Sans, sans-serif
 
 #contentarea .top-content .entry-content .abstract { font-size: 0.9em; }
 #contentarea .extra-content > section, #contentarea .extra-content > aside { margin-top: 2em; }
-#contentarea .extra-content > section > header, #contentarea .extra-content > aside > header { border-top: 1px solid #e93616; }
-#contentarea .extra-content > section > header > h1, #contentarea .extra-content > aside > header > h1 { color: #fff; background-color: #e93616; display: inline-block; padding: 0 0.5em; margin-bottom: 1em; font-size: 1.2em; line-height: 1.2em; }
+#contentarea .extra-content > section > header, #contentarea .extra-content > aside > header { border-top: 1px solid red; }
+#contentarea .extra-content > section > header > h1, #contentarea .extra-content > aside > header > h1 { color: #fff; background-color: red; display: inline-block; padding: 0 0.5em; margin-bottom: 1em; font-size: 1.2em; line-height: 1.2em; }
 #contentarea .top-content { margin-bottom: 1em; }
 #contentarea .top-content > header { margin-bottom: 1em; }
 #contentarea .top-content .photospread { overflow: hidden; height: 21.125em; }
@@ -285,8 +287,9 @@ header.entry-header h1 { font-family: museo-sans, nevisBold, PT Sans, sans-serif
 #share-on-social-media { float: right; }
 #share-on-social-media > h1 { display: inline; font-size: 1em; }
 #share-on-social-media > ul, #share-on-social-media > ul > li { display: inline; vertical-align: middle; }
+#share-on-social-media > ul a img, #share-on-social-media > ul > li a img { width: 20px; height: 20px; }
 
-.downloadthis.pdf { background: url("http://v1.lsecities.net/wp-content/themes/lsecities-2012/images/icons/mal/icon_downloaddarkblue_24x24.png") no-repeat scroll 0 0 transparent; padding-left: 28px; padding-bottom: 8px; }
+.downloadthis.pdf { background: url("http://v1.lsecities.net/wp-content/themes/lsecities-2012/images/icons/mal/icon_downloaddarkblue_20x20.png") no-repeat scroll 0 0 transparent; padding-left: 28px; padding-bottom: 8px; }
 
 footer { background: url("http://v1.lsecities.net/wp-content/themes/lsecities-2012/images/backgrounds/mal/pixelpattern_darkgrey_120420.gif") repeat scroll 0 0 transparent; }
 
