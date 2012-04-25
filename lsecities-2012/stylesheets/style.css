@@ -172,7 +172,8 @@ body > #container > header nav ul { float: right; }
 body > #container > header #subsitesNavigation { height: 2.906em; font-size: 0.75em; font-weight: bold; }
 body > #container > header #subsitesNavigation img#lsecitiesSmallLogo { padding: 0.125em 2em 0; margin: 0.125em auto 0; display: block; background-color: #ffffff; -moz-border-radius-topleft: 3px; -webkit-border-top-left-radius: 3px; -o-border-top-left-radius: 3px; -ms-border-top-left-radius: 3px; -khtml-border-top-left-radius: 3px; border-top-left-radius: 3px; -moz-border-radius-topright: 3px; -webkit-border-top-right-radius: 3px; -o-border-top-right-radius: 3px; -ms-border-top-right-radius: 3px; -khtml-border-top-right-radius: 3px; border-top-right-radius: 3px; }
 body > #container > header #subsitesNavigation ul li a { color: #ffffff; }
-body > #container > header #logo.full { background: url("../images/logo_lsecities_strapline.gif") no-repeat scroll 0 0 transparent; height: 3.6875em; margin-top: 0.166667em; text-indent: -9999px; }
+body > #container > header #logo.full { background: url("http://v1.lsecities.net/wp-content/themes/lsecities-2012/images/logo_lsecities_strapline.gif") no-repeat scroll 0 0 transparent; height: 3.6875em; margin-top: 0.166667em; text-indent: -9999px; }
+body > #container > header #logo.full.violence { background: url("../images/logo_lsecities_fullred.gif") no-repeat scroll 0 0 transparent; }
 body > #container > header #logo.small { background: url("../images/logo_lsecities_nostrapline_small.gif") no-repeat scroll left bottom transparent; height: 5.125em; /* kept consistent with #logo.full to allow bottom alignment */ margin-top: 0.166667em; text-indent: -9999px; }
 body > #container > header #ualogo { background: url("../images/logo_urbanage_strapline.gif") no-repeat scroll 0 0 transparent; height: 5.125em; margin-top: 0.166667em; }
 body > #container > header ul { display: inline-block; list-style: none; margin: 0; padding: 0; }
@@ -199,13 +200,13 @@ nav#level1nav ul li, nav#level2nav ul li { line-height: 2em; margin-bottom: 0; }
 #level1nav ul li:hover:not(.current), #level1nav ul li:hover:not(.current_page_item) { background-color: red; }
 #level1nav ul li:hover:not(.current) a, #level1nav ul li:hover:not(.current_page_item) a { color: #fff; }
 
+header #searchbox { opacity: 0.7; }
 header #searchbox #socialbuttons { float: right; }
+header #searchbox input#queryfield { background: url("http://v1.lsecities.net/wp-content/themes/lsecities-2012/images/icons/mal/searchicon_for_header.gif") no-repeat scroll right center transparent; border: 2px solid #9b9ea7; color: #888; height: 2em; padding: 0 0.25em; font-size: 1em; line-height: 1em; -moz-border-radius: 0.25em; -webkit-border-radius: 0.25em; -o-border-radius: 0.25em; -ms-border-radius: 0.25em; -khtml-border-radius: 0.25em; border-radius: 0.25em; }
 header #searchbox form { float: right; opacity: 1; font-size: 0.75em; margin-left: 0.625em; }
 header #searchbox form:hover { opacity: 1; }
 
 #persistentLogo { float: right; height: 31px; }
-
-header #searchbox input#queryfield { background: url("http://v1.lsecities.net/wp-content/themes/lsecities-2012/images/icons/mal/searchicon_for_header.gif") no-repeat scroll right center transparent; border: 2px solid #ccc; color: #888; height: 2em; padding: 0 0.25em; font-size: 1em; line-height: 1em; -moz-border-radius: 0.25em; -webkit-border-radius: 0.25em; -o-border-radius: 0.25em; -ms-border-radius: 0.25em; -khtml-border-radius: 0.25em; border-radius: 0.25em; }
 
 header #socialbuttons { height: 30px; }
 header #socialbuttons h4 { display: inline; }
@@ -339,6 +340,7 @@ right: -21px; */ }
 .lc-slider-page .flexslider .tile.introbox .inner-box { color: #fff; }
 .lc-slider-page .flexslider .tile.introbox .inner-box p { font-size: 0.9em; }
 .lc-slider-page .flexslider .feature_info { -moz-transition-property: background-color; -webkit-transition-property: background-color; -o-transition-property: background-color; transition-property: background-color; -moz-transition-duration: 0.5s; -webkit-transition-duration: 0.5s; -o-transition-duration: 0.5s; transition-duration: 0.5s; -moz-transition-timing-function: ease-in-out; -webkit-transition-timing-function: ease-in-out; -o-transition-timing-function: ease-in-out; transition-timing-function: ease-in-out; -moz-transition-delay: 0s; -webkit-transition-delay: 0s; -o-transition-delay: 0s; transition-delay: 0s; background: none repeat scroll 0 0 rgba(0, 0, 0, 0.6); bottom: 0; color: #F8F8F8; cursor: pointer; line-height: 1em; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 5px; position: absolute; left: 0; right: 0; }
+.lc-slider-page .flexslider .feature_info p { margin: 0; }
 .lc-slider-page .flexslider .feature_info .feature_title { font-weight: bold; }
 .lc-slider-page .flexslider .feature_info .feature_caption { font-weight: normal; }
 .lc-slider-page .flexslider .feature_info .feature_blurb { float: left; line-height: 1.08em; max-height: 0; overflow: hidden; width: 100%; }
