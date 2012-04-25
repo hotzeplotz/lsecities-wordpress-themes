@@ -102,7 +102,7 @@ $logo_element_id = $urban_age_section ? 'ualogo' : 'logo';
 		<header id='header'>
 			<div class='row'>
 				<a href="/">
-					<div class='full threecol' id='logo'>
+					<div class='full violence threecol' id='logo'>
 						&nbsp;
 					</div>
 				</a>
