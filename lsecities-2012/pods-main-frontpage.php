@@ -98,7 +98,11 @@ function compose_slide($column_spans, $tiles) {
           'plain_content' => $tile->get_field('plain_content'),
           'posts_category' => $tile->get_field('posts_category'),
           'target_uri' => $tile->get_field('target_uri'),
-          'image' => $tile->get_field('image.guid')
+          'image' => $tile->get_field('image.guid'),
+          'linked_event_date' => array(
+            'month' => date('M', $tile->get_field('linked_event.date_start')),
+            'day' => date('j', $tile->get_field('linked_event.date_start'))
+          )
         )
       );
     }
@@ -180,8 +184,18 @@ $slides = $pod->get_field('slides');
                               </div>
                             <?php elseif($tile['title'] or $tile['subtitle'] or $tile['blurb']): ?>
                               <div class="feature_info">
-                                <?php if($tile['title']): ?><div class='feature_title'><?php echo $tile['title']; ?></div><?php endif; ?>
-                                <?php if($tile['subtitle']): ?><div class='feature_caption'><?php echo $tile['subtitle']; ?></div><?php endif; ?>
+                                <?php if($tile['linked_event_date']): ?>
+                                <div class="feature_date">
+                                  <div class="month"><?php echo $tile['linked_event_date']['month']; ?></div>
+                                  <div class="day"><?php echo $tile['linked_event_date']['day']; ?></div>
+                                </div>
+                                <?php endif; ?>
+                                <?php if($tile['title'] or $tile['subtitle']): ?>
+                                <header>
+                                  <?php if($tile['title']): ?><div class='feature_title'><?php echo $tile['title']; ?></div><?php endif; ?>
+                                  <?php if($tile['subtitle']): ?><div class='feature_caption'><?php echo $tile['subtitle']; ?></div><?php endif; ?>
+                                </header>
+                                <?php endif; ?>
                                 <?php if($tile['blurb']): ?><div class='feature_blurb'><?php echo $tile['blurb']; ?></div><?php endif; ?>
                               </div>
                             <?php endif; ?>
