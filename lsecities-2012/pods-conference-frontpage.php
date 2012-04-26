@@ -128,16 +128,18 @@ $research_summary_tile_image = $tile_pod->get_field('image.guid');
                 <?php endif; ?>
               </aside>
               <aside id="publicationsarea" class="fourcol last">
+                <?php if($conference_publication_cover and $conference_publication_blurb): ?>
                 <header><h1>Publications</h1></header>
                 <?php echo $conference_publication_blurb; ?>
                 <div>
                   <ul class="sixcol">
                     <?php if($conference_publication_wp_page): ?><li><a href="<?php echo $conference_publication_wp_page; ?>">Read online</a></li><?php endif; ?>
-                    <?php if($conference_publication_pdf): ?><li><a href="<?php echo $conference_publication_pdf; ?>">Download (PDF)</a></li><?php endif; ?>
+                    <?php if($conference_publication_pdf): ?><li><a class="downloadthis pdf" href="<?php echo $conference_publication_pdf; ?>">Download (PDF)</a></li><?php endif; ?>
                     <?php if($conference_publication_issuu): ?><li><a href="<?php echo $conference_publication_issuu; ?>">Online reader</a></li><?php endif; ?>
                   </ul>
                   <img src="<?php echo $conference_publication_cover; ?>" class="sixcol last">
                 </div>
+                <?php endif; ?>
               </aside>
             </div><!-- .extra-content -->
           </div>
