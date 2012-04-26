@@ -29,13 +29,15 @@ elseif(check_parent_conference(191)) : // /ua/conferences/2005-new-york
 endif;
 
 $pod = new Pod('conference', $pod_slug);
-$button_links = $pod->get_field('links') ?  $pod->get_field('links') : array();
+$button_links = count($pod->get_field('links')) ?  $pod->get_field('links') : array();
 
-// sort by menu_order of linked items
-foreach($button_links as $sort_key => $sort_value) {
-  $menu_order[$sort_key] = $sort_value['menu_order'];
+if(count($button_links)) {
+  // sort by menu_order of linked items
+  foreach($button_links as $sort_key => $sort_value) {
+    $menu_order[$sort_key] = $sort_value['menu_order'];
+  }
+  array_multisort($menu_order, SORT_ASC, $button_links);
 }
-array_multisort($menu_order, SORT_ASC, $button_links);
 
 // add the conference homepage itself
 array_unshift($button_links, array('post_title' => $pod->get_field('name'), 'guid' => "/ua/conferences/$pod_slug"));
