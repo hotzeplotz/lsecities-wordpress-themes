@@ -15,7 +15,7 @@
  */
 global $pods;
 $BASE_URI = '/media/objects/conferences/';
-$TRACE_PODS_CONFERENCE_FRONTPAGE = $TRACE_ENABLED = true;
+$TRACE_PODS_CONFERENCE_FRONTPAGE = $TRACE_ENABLED = is_user_logged_in();
 $TRACE_PREFIX = 'pods-conference';
 
 $pod_slug = get_post_meta($post->ID, 'pod_slug', true);
