@@ -98,7 +98,7 @@ function compose_slide($column_spans, $tiles) {
         $linked_event_slug = $tile->get_field('linked_event.slug');
       }
       
-      if($tile->get_field('linked_event.slug') {
+      if($tile->get_field('linked_event.slug')) {
         $target_uri = '/media/objects/events/' . $tile->get_field('linked_event.slug');
       } elseif($tile->get_field('target_uri')) {
         $target_uri = $tile->get_field('target_uri');
