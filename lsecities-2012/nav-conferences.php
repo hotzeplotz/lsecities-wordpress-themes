@@ -29,7 +29,7 @@ elseif(check_parent_conference(191)) : // /ua/conferences/2005-new-york
 endif;
 
 $pod = new Pod('conference', $pod_slug);
-$button_links = $pod->get_field('links') or array();
+$button_links = $pod->get_field('links') ?  $pod->get_field('links') : array();
 
 // sort by menu_order of linked items
 foreach($button_links as $sort_key => $sort_value) {
