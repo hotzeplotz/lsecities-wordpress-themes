@@ -88,12 +88,22 @@ function compose_slide($column_spans, $tiles) {
         echo '<!-- tile_countdown: ' . var_export($tile_count, true) . " -->\n";
       }
 
+      unset($linked_event_month, $linked_event_day, $target_uri);
+      
       if($tile->get_field('linked_event.date_start')) {
         $linked_event_date = new DateTime($tile->get_field('linked_event.date_start'));
         var_trace($linked_event_date, $TRACE_PREFIX, $TRACE_ENABLED);
         $linked_event_month = $linked_event_date->format('M');
         $linked_event_day = $linked_event_date->format('j');
+        $linked_event_slug = $tile->get_field('linked_event.slug');
       }
+      
+      if($tile->get_field('linked_event.slug') {
+        $target_uri = '/media/objects/events/' . $tile->get_field('linked_event.slug');
+      } elseif($tile->get_field('target_uri')) {
+        $target_uri = $tile->get_field('target_uri');
+      }
+      
       array_push($slide_column['tiles'],
         array(
           'id' => $tile->get_field('slug'),
@@ -104,9 +114,9 @@ function compose_slide($column_spans, $tiles) {
           'blurb' => $tile->get_field('blurb'),
           'plain_content' => $tile->get_field('plain_content'),
           'posts_category' => $tile->get_field('posts_category'),
-          'target_uri' => $tile->get_field('target_uri'),
+          'target_uri' => $target_uri,
           'image' => $tile->get_field('image.guid'),
-          'linked_event_date' => array(
+          'linked_event' => array(
             'month' => $linked_event_month,
             'day' => $linked_event_day
           )
@@ -173,6 +183,9 @@ $slides = $pod->get_field('slides');
                       <div class="<?php echo $slide_column['layout']; ?>">
                         <?php foreach($slide_column['tiles'] as $tile): ?>
                           <div class="tile <?php echo $tile['element_class']; ?>" id="slidetile-<?php echo $tile['id']; ?>">
+                            <?php if($slide_column['target_uri']): ?>
+                            <a href="<?php echo $target_uri; ?>">
+                            <?php endif; ?>
                             <?php if($tile['image']): ?>
                               <div class="crop">
                                 <img src="<?php echo $tile['image']; ?>" alt="" />
@@ -204,13 +217,16 @@ $slides = $pod->get_field('slides');
                                 </header>
                                 <?php endif; ?>
                                 <?php if($tile['blurb']): ?><div class='feature_blurb'><?php echo $tile['blurb']; ?></div><?php endif; ?>
-                              </div>
+                              </div><!-- .feature-info -->
                             <?php endif; ?>
-                          </div>
+                            <?php if($slide_column['target_uri']): ?>
+                            </a>
+                            <?php endif; ?>
+                          </div><!-- .tile#slidetile-<?php echo $tile['id']; ?> -->
                         <?php endforeach; ?>
-                      </div>
+                      </div><!-- <?php echo $slide_column['layout']; ?> -->
                     <?php endforeach; ?>
-                  </div>
+                  </div><!-- .slide-inner.row -->
                 </li>
                 <?php endforeach; ?>
               </ul>
