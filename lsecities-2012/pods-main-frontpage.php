@@ -87,6 +87,13 @@ function compose_slide($column_spans, $tiles) {
       if($TRACE_PODS_MAIN_FRONTPAGE) {
         echo '<!-- tile_countdown: ' . var_export($tile_count, true) . " -->\n";
       }
+      
+      $linked_event_date = new DateTime($tile->get_field('linked_event.date_start'));
+      var_trace($linked_event_date, $TRACE_PREFIX, $TRACE_ENABLED);
+      if($linked_event_date) {
+        $linked_event_month = $linked_event_date->format('M');
+        $linked_event_day = $linked_event_date->format('j');
+      }
       array_push($slide_column['tiles'],
         array(
           'id' => $tile->get_field('slug'),
@@ -100,8 +107,8 @@ function compose_slide($column_spans, $tiles) {
           'target_uri' => $tile->get_field('target_uri'),
           'image' => $tile->get_field('image.guid'),
           'linked_event_date' => array(
-            'month' => date('M', $tile->get_field('linked_event.date_start')),
-            'day' => date('j', $tile->get_field('linked_event.date_start'))
+            'month' => $linked_event_month,
+            'day' => $linked_event_day
           )
         )
       );
