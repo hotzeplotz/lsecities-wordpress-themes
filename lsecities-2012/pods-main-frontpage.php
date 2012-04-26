@@ -204,7 +204,7 @@ $slides = $pod->get_field('slides');
                               </div>
                             <?php elseif($tile['title'] or $tile['subtitle'] or $tile['blurb']): ?>
                               <div class="feature_info">
-                                <?php if($tile['linked_event']): ?>
+                                <?php if($tile['linked_event']['month'] and $tile['linked_event']['day']): ?>
                                 <div class="feature_date">
                                   <div class="month"><?php echo $tile['linked_event']['month']; ?></div>
                                   <div class="day"><?php echo $tile['linked_event']['day']; ?></div>
