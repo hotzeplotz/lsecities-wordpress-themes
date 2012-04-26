@@ -87,10 +87,10 @@ function compose_slide($column_spans, $tiles) {
       if($TRACE_PODS_MAIN_FRONTPAGE) {
         echo '<!-- tile_countdown: ' . var_export($tile_count, true) . " -->\n";
       }
-      
-      $linked_event_date = new DateTime($tile->get_field('linked_event.date_start'));
-      var_trace($linked_event_date, $TRACE_PREFIX, $TRACE_ENABLED);
-      if($linked_event_date) {
+
+      if($tile->get_field('linked_event.date_start')) {
+        $linked_event_date = new DateTime($tile->get_field('linked_event.date_start'));
+        var_trace($linked_event_date, $TRACE_PREFIX, $TRACE_ENABLED);
         $linked_event_month = $linked_event_date->format('M');
         $linked_event_day = $linked_event_date->format('j');
       }
