@@ -43,6 +43,7 @@ array_unshift($button_links, array('post_title' => $pod->get_field('name'), 'gui
 if(count($button_links)) :
 ?>
 <div id="conferencepagesnav">
+  <?php if(count($button_links)): ?>
   <nav class="conferencemenu">
     <ul>
     <?php foreach($button_links as $key => $link) : ?>
@@ -53,7 +54,8 @@ if(count($button_links)) :
       </li>
     <?php endforeach ; ?>
     </ul>
-  </nav>
+  </nav><!-- .conferencemenu -->
+  <?php endif; ?>
   <nav>
     <dl>
       <dt>Urban Age conferences</dt>
