@@ -97,6 +97,7 @@ $research_summary_tile_image = $tile_pod->get_field('image.guid');
               </article><!-- .wireframe -->
             </div><!-- .top-content -->
             <div class="extra-content">
+              <?php if($research_summary_title and $research_summary_blurb and $research_summary_tile_image): ?>
               <section id="research-summary">
                 <header><h1>Research</h1></header>
                 <div>
@@ -108,8 +109,10 @@ $research_summary_tile_image = $tile_pod->get_field('image.guid');
                     <img src="<?php echo $research_summary_tile_image; ?>" />
                   </aside>
                 </div>
-              </section>
+              </section><!-- #research-summary -->
+              <?php endif; ?>
               <aside id="photoarea" class="eightcol">
+                <?php if($pod->get_field('photo_gallery')): ?>
                 <div id="galleria" style="height: 290px;"></div>
                 <script type="text/javascript">
                   jQuery(document).ready(function() {
@@ -122,6 +125,7 @@ $research_summary_tile_image = $tile_pod->get_field('image.guid');
                     });
                   });
                 </script>
+                <?php endif; ?>
               </aside>
               <aside id="publicationsarea" class="fourcol last">
                 <header><h1>Publications</h1></header>
