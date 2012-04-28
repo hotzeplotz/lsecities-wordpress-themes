@@ -148,7 +148,7 @@ $slides = $pod->get_field('slides');
 	<div class="entry-content">
 
     <div class='row' id='core'>
-      <article class='twelvecol' id="contentarea">
+      <div class='twelvecol' id="contentarea">
 <div class="flexslider">
   <?php echo var_trace(var_export($slides, true), $TRACE_PREFIX, $TRACE_ENABLED); ?>
               <ul class="slides">
@@ -224,9 +224,9 @@ $slides = $pod->get_field('slides');
                 <?php endforeach; ?>
               </ul>
             </div>
-      </article>      
-    </div><!-- #core.row -->
-    <div class="extra-content">
+            
+            
+                <div class="extra-content">
       <section id='news_area'>
         <header>
           <h1>News</h1>
@@ -266,6 +266,10 @@ $slides = $pod->get_field('slides');
         </ul>
       </section><!-- #news_area -->
     </div><!-- .extra-content -->
+
+
+      </div>      
+    </div><!-- #core.row -->
     </div>        
 		<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'twentyeleven' ) . '</span>', 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->
