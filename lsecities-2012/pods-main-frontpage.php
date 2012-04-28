@@ -198,7 +198,7 @@ $slides = $pod->get_field('slides');
                                 <em>Recent news go here</em>
                               </div>
                             <?php elseif($tile['title'] or $tile['subtitle'] or $tile['blurb']): ?>
-                              <div class="feature_info">
+                              <div class="feature_info<?php if(!$tile['blurb']): ?> noblurb<?php endif; ?>">
                                 <?php if($tile['linked_event']['month'] and $tile['linked_event']['day']): ?>
                                 <div class="feature_date">
                                   <div class="month"><?php echo $tile['linked_event']['month']; ?></div>
