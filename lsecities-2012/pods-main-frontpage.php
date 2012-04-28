@@ -236,7 +236,7 @@ $slides = $pod->get_field('slides');
     <div id='news_area'>
       <h2>News</h2>
       <div class='clearfix row'>
-        <?php $latest_news = new WP_Query('posts_per_page=3');
+        <?php $latest_news = new WP_Query('posts_per_page=3&cat=' . $pod->get_field('news_category.term_id'));
           while ($latest_news->have_posts()) :
             $latest_news->the_post();
             $do_not_duplicate = $post->ID;
@@ -250,7 +250,7 @@ $slides = $pod->get_field('slides');
           wp_reset_postdata();
         ?>
       </div><!--.clearfix.row -->
-      <?php $more_news = new WP_Query('posts_per_page=10');
+      <?php $more_news = new WP_Query('posts_per_page=10&cat=' . $pod->get_field('news_category.term_id'));
         if($more_news->found_posts > 3) :
       ?>
       <ul>
