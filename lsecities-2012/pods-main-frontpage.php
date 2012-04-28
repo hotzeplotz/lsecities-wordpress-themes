@@ -236,7 +236,7 @@ $slides = $pod->get_field('slides');
             if($latest_news->current_post == 2) { $class_extra = " last"; }
           ?>
         <div class='fourcol<?php echo $class_extra; ?>'>
-          <h3><?php the_title(); ?></h3>
+          <h3><a href="<?php echo get_permalink(the_ID()); ?>"><?php the_title(); ?></a></h3>
           <?php the_excerpt(); ?>
         </div>
         <?php endwhile;
