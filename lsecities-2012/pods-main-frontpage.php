@@ -55,39 +55,27 @@ function compose_slide($column_spans, $tiles) {
   global $TRACE_ENABLED;
   global $TILES_PER_COLUMN;
   
-  if($TRACE_ENABLED) {
-    echo '<!-- compose_slide|tiles: ' . var_export($tiles, true) . " -->\n";
-  }
+  echo var_trace('compose_slide|tiles: ' . var_export($tiles, true), $TRACE_PREFIX, $TRACE_ENABLED);
 
   $slide_content = array('columns' => array());
   $tile_index = 0;
   $total_tiles = count($tiles); 
   
-  if($TRACE_ENABLED) {
-    echo '<!-- column_spans: ' . var_export($column_spans, true) . " -->\n";
-  }
+  echo var_trace('column_spans: ' . var_export($column_spans, true), $TRACE_PREFIX, $TRACE_ENABLED);
   
   foreach($column_spans as $column_span) {
     $tile_count = $column_span * $TILES_PER_COLUMN;
     $slide_column = array('layout' => 'col' . $column_span, 'tiles' => array());
     while($tile_count > 0 and $tile_index <= $total_tiles) {
-      if($TRACE_ENABLED) {
-        echo '<!-- tile[slug]: ' . var_export($tiles[$tile_index]['slug'], true) . " -->\n";
-      }
+      echo var_trace('tile[slug]: ' . var_export($tiles[$tile_index]['slug'], true), $TRACE_PREFIX, $TRACE_ENABLED);
       $tile = new Pod('tile', $tiles[$tile_index++]['slug']);
       $tile_layout = $tile->get_field('tile_layout.name');
-      if($TRACE_ENABLED) {
-        echo '<!-- tile[layout]: ' . var_export($tile_layout, true) . " -->\n";
-      }
+      echo var_trace('tile[layout]: ' . var_export($tile_layout, true), $TRACE_PREFIX, $TRACE_ENABLED);
       $this_tile_count = preg_replace('/x/', '*', $tile_layout);
-      if($TRACE_ENABLED) {
-        echo '<!-- this_tile_count: ' . var_export($this_tile_count, true) . " -->\n";
-      }
+      echo var_trace('this_tile_count: ' . var_export($this_tile_count, true), $TRACE_PREFIX, $TRACE_ENABLED);
       eval('$this_tile_count = ' . $this_tile_count . ';');
       $tile_count -= $this_tile_count;
-      if($TRACE_ENABLED) {
-        echo '<!-- tile_countdown: ' . var_export($tile_count, true) . " -->\n";
-      }
+      echo var_trace('tile_countdown: ' . var_export($tile_count, true), $TRACE_PREFIX, $TRACE_ENABLED);
 
       unset($linked_event_month, $linked_event_day, $target_uri);
       
@@ -129,7 +117,7 @@ function compose_slide($column_spans, $tiles) {
   return $slide_content;
 }
 
-if($TRACE_ENABLED) { error_log('pod_slug: ' . $pod_slug); }
+echo var_trace('pod_slug: ' . $pod_slug, $TRACE_PREFIX, $TRACE_ENABLED);
 $pod = new Pod('slider', $pod_slug);
 
 $slides = $pod->get_field('slides');
@@ -154,25 +142,21 @@ $slides = $pod->get_field('slides');
     <div class='row' id='core'>
       <article class='twelvecol'>
 <div class="flexslider">
-  <?php if($TRACE_ENABLED): ?>
-  <!--
-  <?php var_export($slides, false); ?>
-  -->
-  <?php endif; ?>
+  <?php echo var_trace(var_export($slides, true), $TRACE_PREFIX, $TRACE_ENABLED); ?>
               <ul class="slides">
                 <?php foreach($slides as $current_slide): ?>
                 <?php
                   $current_slide_pod = new Pod('slide', $current_slide['slug']);
                   $slide_layout = $current_slide_pod->get_field('slide_layout.slug');
                   $tiles = $current_slide_pod->get_field('tiles', 'displayorder ASC');
-                ?>
-<!-- <?php if($TRACE_ENABLED) { echo 'tiles => ' . var_export($tiles, true) . "\n\n" . 'slide_layout => ' . var_export($slide_layout, true); }?> -->
-				<?php
+                  
+                  echo var_trace('tiles: ' . var_export($tiles, true), $TRACE_PREFIX, $TRACE_ENABLED);
+                  echo var_trace('slide_layout: ' . var_export($slide_layout, true), $TRACE_PREFIX, $TRACE_ENABLED);
+                  
                   switch($slide_layout) {
                     case 'two-two-one':
                       $slide_content = compose_slide(array(2, 2, 1), $tiles);
-                                           
-                      if($TRACE_ENABLED) { echo '<!-- slide_content_array: ' . var_export($slide_content, true) . " -->\n"; }
+                      echo var_trace('slide_content_array: ' . var_export($slide_content, true), $TRACE_PREFIX, $TRACE_ENABLED);
                       break;
                     default:
                       break;
