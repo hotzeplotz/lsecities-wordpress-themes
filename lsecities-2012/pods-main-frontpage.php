@@ -226,42 +226,46 @@ $slides = $pod->get_field('slides');
             </div>
       </article>      
     </div><!-- #core.row -->
-    <div id='news_area'>
-      <h2>News</h2>
-      <div class='clearfix row'>
-        <?php $latest_news = new WP_Query('posts_per_page=3' . $news_categories);
-          while ($latest_news->have_posts()) :
-            $latest_news->the_post();
-            $do_not_duplicate = $post->ID;
-            if($latest_news->current_post == 2) { $class_extra = " last"; }
+    <div class="extra-content">
+      <section id='news_area'>
+        <header>
+          <h1>News</h1>
+        </header>
+        <div class='clearfix row'>
+          <?php $latest_news = new WP_Query('posts_per_page=3' . $news_categories);
+            while ($latest_news->have_posts()) :
+              $latest_news->the_post();
+              $do_not_duplicate = $post->ID;
+              if($latest_news->current_post == 2) { $class_extra = " last"; }
+            ?>
+          <div class='fourcol<?php echo $class_extra; ?>'>
+            <h3><a href="<?php echo get_permalink(the_ID()); ?>"><?php the_title(); ?></a></h3>
+            <?php the_excerpt(); ?>
+          </div>
+          <?php endwhile;
+            wp_reset_postdata();
           ?>
-        <div class='fourcol<?php echo $class_extra; ?>'>
-          <h3><a href="<?php echo get_permalink(the_ID()); ?>"><?php the_title(); ?></a></h3>
-          <?php the_excerpt(); ?>
-        </div>
-        <?php endwhile;
-          wp_reset_postdata();
+        </div><!--.clearfix.row -->
+        <?php $more_news = new WP_Query('posts_per_page=10' . $news_categories);
+          if($more_news->found_posts > 3) :
         ?>
-      </div><!--.clearfix.row -->
-      <?php $more_news = new WP_Query('posts_per_page=10' . $news_categories);
-        if($more_news->found_posts > 3) :
-      ?>
-      <ul>
-      <?php
-          while ($more_news->have_posts()) :
-            $more_news->the_post();
-            if ($more_news->current_post > 2) :
-      ?>
-        <li><a href="<?php echo get_permalink(the_ID()); ?>"><?php the_title() ?></a></li>
-      <?php endif;
-          endwhile;
-      ?>
-      </ul>
-      <?php
-        endif;
-      ?>
-      </ul>
-    </div><!-- #news_area -->
+        <ul>
+        <?php
+            while ($more_news->have_posts()) :
+              $more_news->the_post();
+              if ($more_news->current_post > 2) :
+        ?>
+          <li><a href="<?php echo get_permalink(the_ID()); ?>"><?php the_title() ?></a></li>
+        <?php endif;
+            endwhile;
+        ?>
+        </ul>
+        <?php
+          endif;
+        ?>
+        </ul>
+      </section><!-- #news_area -->
+    </div><!-- .extra-content -->
     </div>        
 		<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'twentyeleven' ) . '</span>', 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->
