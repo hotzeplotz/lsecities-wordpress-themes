@@ -239,7 +239,7 @@ $slides = $pod->get_field('slides');
     <div id='news_area'>
       <h2>News</h2>
       <div class='clearfix row'>
-        <?php var_trace($pod->get_field('news_category.term_id'), $TRACE_PREFIX, $TRACE_ENABLED);
+        <?php var_trace($pod->get_field('news_category.term_id'), $TRACE_PREFIX, $TRACE_ENABLED); ?>
         <?php $latest_news = new WP_Query('posts_per_page=3&cat=' . $pod->get_field('news_category.term_id'));
           while ($latest_news->have_posts()) :
             $latest_news->the_post();
