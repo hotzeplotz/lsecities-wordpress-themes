@@ -13,7 +13,10 @@ $PODS_BASEURI_RESEARCH_PROJECTS = '/objects/research-projects';
 $TRACE_ENABLED = is_user_logged_in();
 $TRACE_PREFIX = 'pods-research-projects';
 
-$pod_slug = get_post_meta($post->ID, 'pod_slug', true) or pods_url_variable(2);
+$pod_slug = get_post_meta($post->ID, 'pod_slug', true);
+unless($pod_slug) {
+  $pod_slug = pods_url_variable(2);
+}
 echo var_trace('pod_slug: ' . $pod_slug, $TRACE_PREFIX, $TRACE_ENABLED);
 $pod = new Pod('research_project', $pod_slug);
 $pod_title = $pod->get_field('name');
