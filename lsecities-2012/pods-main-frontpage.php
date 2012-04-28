@@ -16,8 +16,6 @@ $pod_slug = get_post_meta($post->ID, 'pod_slug', true);
 $TRACE_PREFIX = 'pods-main-frontpage';
 $TRACE_ENABLED = is_user_logged_in();
 
-$TRACE_PODS_MAIN_FRONTPAGE = true;
-
 $TILES_PER_COLUMN = 2;
 
 function get_tile_classes($tile_layout) {
@@ -54,10 +52,10 @@ function get_tile_classes($tile_layout) {
 }
 
 function compose_slide($column_spans, $tiles) {
-  global $TRACE_PODS_MAIN_FRONTPAGE;
+  global $TRACE_ENABLED;
   global $TILES_PER_COLUMN;
   
-  if($TRACE_PODS_MAIN_FRONTPAGE) {
+  if($TRACE_ENABLED) {
     echo '<!-- compose_slide|tiles: ' . var_export($tiles, true) . " -->\n";
   }
 
@@ -65,7 +63,7 @@ function compose_slide($column_spans, $tiles) {
   $tile_index = 0;
   $total_tiles = count($tiles); 
   
-  if($TRACE_PODS_MAIN_FRONTPAGE) {
+  if($TRACE_ENABLED) {
     echo '<!-- column_spans: ' . var_export($column_spans, true) . " -->\n";
   }
   
@@ -73,21 +71,21 @@ function compose_slide($column_spans, $tiles) {
     $tile_count = $column_span * $TILES_PER_COLUMN;
     $slide_column = array('layout' => 'col' . $column_span, 'tiles' => array());
     while($tile_count > 0 and $tile_index <= $total_tiles) {
-      if($TRACE_PODS_MAIN_FRONTPAGE) {
+      if($TRACE_ENABLED) {
         echo '<!-- tile[slug]: ' . var_export($tiles[$tile_index]['slug'], true) . " -->\n";
       }
       $tile = new Pod('tile', $tiles[$tile_index++]['slug']);
       $tile_layout = $tile->get_field('tile_layout.name');
-      if($TRACE_PODS_MAIN_FRONTPAGE) {
+      if($TRACE_ENABLED) {
         echo '<!-- tile[layout]: ' . var_export($tile_layout, true) . " -->\n";
       }
       $this_tile_count = preg_replace('/x/', '*', $tile_layout);
-      if($TRACE_PODS_MAIN_FRONTPAGE) {
+      if($TRACE_ENABLED) {
         echo '<!-- this_tile_count: ' . var_export($this_tile_count, true) . " -->\n";
       }
       eval('$this_tile_count = ' . $this_tile_count . ';');
       $tile_count -= $this_tile_count;
-      if($TRACE_PODS_MAIN_FRONTPAGE) {
+      if($TRACE_ENABLED) {
         echo '<!-- tile_countdown: ' . var_export($tile_count, true) . " -->\n";
       }
 
@@ -131,7 +129,7 @@ function compose_slide($column_spans, $tiles) {
   return $slide_content;
 }
 
-if($TRACE_PODS_MAIN_FRONTPAGE) { error_log('pod_slug: ' . $pod_slug); }
+if($TRACE_ENABLED) { error_log('pod_slug: ' . $pod_slug); }
 $pod = new Pod('slider', $pod_slug);
 
 $slides = $pod->get_field('slides');
@@ -156,7 +154,7 @@ $slides = $pod->get_field('slides');
     <div class='row' id='core'>
       <article class='twelvecol'>
 <div class="flexslider">
-  <?php if($TRACE_PODS_MAIN_FRONTPAGE): ?>
+  <?php if($TRACE_ENABLED): ?>
   <!--
   <?php var_export($slides, false); ?>
   -->
@@ -168,13 +166,13 @@ $slides = $pod->get_field('slides');
                   $slide_layout = $current_slide_pod->get_field('slide_layout.slug');
                   $tiles = $current_slide_pod->get_field('tiles', 'displayorder ASC');
                 ?>
-<!-- <?php if($TRACE_PODS_MAIN_FRONTPAGE) { echo 'tiles => ' . var_export($tiles, true) . "\n\n" . 'slide_layout => ' . var_export($slide_layout, true); }?> -->
+<!-- <?php if($TRACE_ENABLED) { echo 'tiles => ' . var_export($tiles, true) . "\n\n" . 'slide_layout => ' . var_export($slide_layout, true); }?> -->
 				<?php
                   switch($slide_layout) {
                     case 'two-two-one':
                       $slide_content = compose_slide(array(2, 2, 1), $tiles);
                                            
-                      if($TRACE_PODS_MAIN_FRONTPAGE) { echo '<!-- slide_content_array: ' . var_export($slide_content, true) . " -->\n"; }
+                      if($TRACE_ENABLED) { echo '<!-- slide_content_array: ' . var_export($slide_content, true) . " -->\n"; }
                       break;
                     default:
                       break;
