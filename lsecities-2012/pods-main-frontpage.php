@@ -148,7 +148,7 @@ $slides = $pod->get_field('slides');
 	<div class="entry-content">
 
     <div class='row' id='core'>
-      <article class='twelvecol'>
+      <article class='twelvecol' id="contentarea">
 <div class="flexslider">
   <?php echo var_trace(var_export($slides, true), $TRACE_PREFIX, $TRACE_ENABLED); ?>
               <ul class="slides">
