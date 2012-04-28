@@ -126,7 +126,7 @@ foreach($news_category_ids as $category_id) {
   $news_categories .= "$category_id,";
 }
 $news_categories = '&cat='. rtrim($news_categories, ',');
-echo var_trace('news_categories: ' . $news_categories, $TRACE_PREFIX, $TRACE_ENABLED); ?>
+echo var_trace('news_categories: ' . $news_categories, $TRACE_PREFIX, $TRACE_ENABLED);
 
 $slides = $pod->get_field('slides');
 ?><?php get_header(); ?>
