@@ -178,12 +178,15 @@ $slides = $pod->get_field('slides');
                       <div class="<?php echo $slide_column['layout']; ?>">
                         <?php foreach($slide_column['tiles'] as $tile): ?>
                           <div class="tile <?php echo $tile['element_class']; ?>" id="slidetile-<?php echo $tile['id']; ?>">
-                            <?php if($slide_column['target_uri']): ?>
-                            <a href="<?php echo $target_uri; ?>">
-                            <?php endif; ?>
                             <?php if($tile['image']): ?>
                               <div class="crop">
-                                <img src="<?php echo $tile['image']; ?>" alt="" />
+                              <?php if($target_uri): ?>
+                                <a href="<?php echo $target_uri; ?>">
+                              <?php endif; ?>
+                                  <img src="<?php echo $tile['image']; ?>" alt="" />
+                              <?php if($target_uri): ?>
+                                </a>
+                              <?php endif; ?>
                               </div>
                             <?php endif; ?>
                             <?php if($tile['plain_content']): ?>
@@ -215,7 +218,6 @@ $slides = $pod->get_field('slides');
                               </div><!-- .feature-info -->
                             <?php endif; ?>
                             <?php if($slide_column['target_uri']): ?>
-                            </a>
                             <?php endif; ?>
                           </div><!-- .tile#slidetile-<?php echo $tile['id']; ?> -->
                         <?php endforeach; ?>
