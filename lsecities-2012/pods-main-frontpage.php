@@ -180,11 +180,11 @@ $slides = $pod->get_field('slides');
                           <div class="tile <?php echo $tile['element_class']; ?>" id="slidetile-<?php echo $tile['id']; ?>">
                             <?php if($tile['image']): ?>
                               <div class="crop">
-                              <?php if($target_uri): ?>
-                                <a href="<?php echo $target_uri; ?>">
+                              <?php if($tile['target_uri']): ?>
+                                <a href="<?php echo $tile['target_uri']; ?>">
                               <?php endif; ?>
                                   <img src="<?php echo $tile['image']; ?>" alt="" />
-                              <?php if($target_uri): ?>
+                              <?php if($tile['target_uri']): ?>
                                 </a>
                               <?php endif; ?>
                               </div>
