@@ -13,6 +13,9 @@
  * URI: TBD
  */
 $pod_slug = get_post_meta($post->ID, 'pod_slug', true);
+$TRACE_PREFIX = 'pods-main-frontpage';
+$TRACE_ENABLED = is_user_logged_in();
+
 $TRACE_PODS_MAIN_FRONTPAGE = true;
 
 $TILES_PER_COLUMN = 2;
@@ -236,6 +239,7 @@ $slides = $pod->get_field('slides');
     <div id='news_area'>
       <h2>News</h2>
       <div class='clearfix row'>
+        <?php var_trace($pod->get_field('news_category.term_id'), $TRACE_PREFIX, $TRACE_ENABLED);
         <?php $latest_news = new WP_Query('posts_per_page=3&cat=' . $pod->get_field('news_category.term_id'));
           while ($latest_news->have_posts()) :
             $latest_news->the_post();
