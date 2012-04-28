@@ -190,8 +190,10 @@ $poster_pdf = $poster_pdf[0]['guid'];
             <div class='extra-content twelvecol'>
               
               <?php if($event_media): ?>
-              <section class="event-materials">
-                <h1>Event materials</h1>
+              <section class="event-materials clearfix">
+                <header>
+                  <h1>Event materials</h1>
+                </header>
                 <dl>
                 <?php foreach($event_media as $event_media_item): ?>
                   <?php if($event_media_item['youtube_uri']): ?>
@@ -232,8 +234,10 @@ $poster_pdf = $poster_pdf[0]['guid'];
               
               <?php if($people_with_blurb): ?>
               <?php echo var_trace($event_all_the_people, $TRACE_PREFIX, $TRACE_ENABLED); ?>
-              <section id='speaker-profiles'>
-                <h1>Profiles</h1>
+              <section id='speaker-profiles clearfix'>
+                <header>
+                  <h1>Profiles</h1>
+                </header>
                 <ul class='people-list'>
                 <?php $index = 0;
                       foreach($event_all_the_people as $key => $event_speaker):
