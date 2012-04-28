@@ -121,12 +121,14 @@ echo var_trace('pod_slug: ' . $pod_slug, $TRACE_PREFIX, $TRACE_ENABLED);
 $pod = new Pod('slider', $pod_slug);
 
 $news_category_ids = $pod->get_field('news_category.term_id');
-$news_categories = '';
-foreach($news_category_ids as $category_id) {
-  $news_categories .= "$category_id,";
+if(count($news_categories)) {
+  $news_categories = '';
+  foreach($news_category_ids as $category_id) {
+    $news_categories .= "$category_id,";
+  }
+  $news_categories = '&cat='. rtrim($news_categories, ',');
+  echo var_trace('news_categories: ' . $news_categories, $TRACE_PREFIX, $TRACE_ENABLED);
 }
-$news_categories = '&cat='. rtrim($news_categories, ',');
-echo var_trace('news_categories: ' . $news_categories, $TRACE_PREFIX, $TRACE_ENABLED);
 
 $slides = $pod->get_field('slides');
 ?><?php get_header(); ?>
