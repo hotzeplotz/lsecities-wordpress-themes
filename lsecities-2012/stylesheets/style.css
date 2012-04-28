@@ -307,6 +307,7 @@ right: -21px; */ }
 .flexslider .flex-control-nav li a:hover { background-position: 0 -13px; }
 .flexslider .flex-control-nav li a.active { background-position: 0 -26px; cursor: default; }
 
+.lc-slider-page #main { margin-top: 0; }
 .lc-slider-page .flexslider { font-family: nimbus-sans, PT Sans, ff-meta-web-pro, UbuntuRegular, Tahoma, Elvetica, sans-serif; position: relative; font-size: 0.875em; margin-left: -2px; margin-right: -2px; /* .slides > li { height: #{2*$tile_base_emheight}em; }
 */ }
 .lc-slider-page .flexslider .flex-direction-nav li a { top: 467 -64/2 px; }

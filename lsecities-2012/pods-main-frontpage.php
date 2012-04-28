@@ -138,15 +138,6 @@ $slides = $pod->get_field('slides');
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('lc-article lc-slider-page'); ?>>
-	<header class="entry-header">
-		<!-- <h1 class="entry-title"><?php echo $pod->get_field('name'); ?></h1> -->
-    <?php
-      $tagline = $pod->get_field('tagline');
-      if($tagline) : ?>
-      <h2><?php echo $tagline; ?></h2>
-    <?php endif; ?>
-	</header><!-- .entry-header -->
-
 	<div class="entry-content">
 
     <div class='row' id='core'>
