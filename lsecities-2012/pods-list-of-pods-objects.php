@@ -36,17 +36,20 @@ $TRACE_PREFIX = 'pods-list-of-pods-objects';
                 <?php switch(get_post_meta(get_the_ID(), 'list_pods', true)):
                   case 'upcoming_events':
                     $HIDE_PAST_EVENTS = true;
+                    $IN_CONTENT_AREA = true;
                 ?>
                 <div id='navigationarea'>
                 <?php get_template_part( 'nav', 'events' ); ?>
                 </div>
                 <?php break;
                   case 'past_events':
-                    $HIDE_UPCOMING_EVENTS = true
+                    $HIDE_UPCOMING_EVENTS = true;
+                    $IN_CONTENT_AREA = true;
                 ?>
                 <div id='navigationarea'>
                 <?php get_template_part( 'nav', 'events' ); ?>
                 </div>                
+                <?php break; ?>
                 <?php endswitch; ?>
               </article>
             </div><!-- .top-content -->

@@ -3,6 +3,7 @@ $TRACE_ENABLED = is_user_logged_in();
 $TRACE_PREFIX = 'nav.php -- ';
 $current_post_id = $post->ID;
 
+global $IN_CONTENT_AREA;
 global $HIDE_UPCOMING_EVENTS, $HIDE_PAST_EVENTS;
 echo var_trace('HIDE_UPCOMING_EVENTS: '. $HIDE_UPCOMING_EVENTS, $TRACE_PREFIX, $TRACE_ENABLED);
 echo var_trace('HIDE_PAST_EVENTS: '. $HIDE_PAST_EVENTS, $TRACE_PREFIX, $TRACE_ENABLED);
@@ -67,7 +68,7 @@ krsort($events);
 <nav id="eventsmenu">
   <dl>
     <?php if(!$HIDE_UPCOMING_EVENTS): ?>
-    <dt class="events upcoming">Upcoming events</dt>
+    <?php if(!$IN_CONTENT_AREA): ?><dt class="events upcoming">Upcoming events</dt><?php endif; ?>
     <dd>
     <?php if($upcoming_events): ?>
       <ul>
@@ -81,7 +82,7 @@ krsort($events);
     </dd>
     <?php endif; ?>
     <?php if($events and !$HIDE_PAST_EVENTS): ?>
-    <dt class="events past">Past events</dt>
+    <?php if(!$IN_CONTENT_AREA): ?><dt class="events past">Past events</dt><?php endif; ?>
     <dd>
       <dl class="accordion">
       <?php foreach($events as $year => $year_events): ?>
