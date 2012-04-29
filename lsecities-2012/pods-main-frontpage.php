@@ -250,7 +250,7 @@ $slides = $pod->get_field('slides');
               $more_news->the_post();
               if ($more_news->current_post > 2) :
         ?>
-          <li><a href="<?php echo get_permalink(the_ID()); ?>"><?php the_title() ?></a></li>
+          <li><a href="<?php get_permalink(the_ID()); ?>"><?php the_title() ?></a></li>
         <?php endif;
             endwhile;
         ?>
