@@ -1,15 +1,15 @@
 <?php
-$TRACE_TEMPLATE_NAV = true;
+$TRACE_ENABLED = is_user_logged_in();
 $TRACE_PREFIX = 'nav.php -- ';
 $current_post_id = $post->ID;
 global $publication_pod;
 ?>
 
-<nav>
+<nav class="publication-side-toc">
 <?php if(count($publication_pod->get_field('articles'))) : ?>
   <div>
-    <h3><?php echo $publication_pod->get_field('name'); ?></h3>
-    <ul class="publication-side-toc">
+    <h1><?php echo $publication_pod->get_field('name'); ?></h1>
+    <ul>
     <?php
     $sections = array();
     foreach(preg_split("/\n/", $publication_pod->get_field('sections')) as $section_line) {
@@ -22,7 +22,7 @@ global $publication_pod;
       $sections = array("010" => "");
     }
     foreach($sections as $section) : ?>
-      <?php if($section['title']) { ?><h4><?php echo $section['title']; ?></h4><?php }
+      <?php if($section['title']) { ?><h2><?php echo $section['title']; ?></h2><?php }
       foreach($publication_pod->get_field('articles') as $article) :
         if(preg_match("/^" . $section['id'] . "/", $article['sequence'])) : ?>
           <?php if($TRACE_PODS_ARTICLES) : ?>
