@@ -26,6 +26,7 @@ $TRACE_PREFIX = 'pods-list-of-pods-objects';
 
 <div id="post-<?php the_ID(); ?>" <?php post_class('lc-article lc-list-of-pods-objects'); ?>>
 
+<?php echo var_trace(get_post_meta(get_the_ID(), 'list_pods'), $TRACE_PREFIX, $TRACE_ENABLED); ?>
           <div class='ninecol' id='contentarea'>
             <div class='top-content'>
               <article class='wireframe row'>
