@@ -256,7 +256,7 @@ header.entry-header h1 { font-family: museo-sans, nevisBold, PT Sans, sans-serif
 #contentarea .top-content article header h1 { font-family: museo-sans, nevisBold, PT Sans, sans-serif; font-weight: 900; color: #22273b; }
 #contentarea .top-content aside *:first-child { margin-top: 0.625em; }
 
-#keyfacts dl dt, #navigationarea nav dl dt { border-bottom: 1px solid #eee; margin-top: 1em; }
+#keyfacts dl dt, #navigationarea nav dl dt { border-bottom: 1px solid #eee; margin-top: 0.5em; }
 #keyfacts dl dt:first-child, #navigationarea nav dl dt:first-child { margin-top: 0; }
 
 #navigationarea nav { margin-top: 2.5em; }
