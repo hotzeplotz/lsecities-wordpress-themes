@@ -17,12 +17,14 @@ $current_projects = array();
 $projects_pod->findRecords(array(
   'where' => 'status.name = "active"'
 ));
+$projects = array();
 while($projects_pod->fetchRecord()) {
   array_push($current_projects, array(
     'slug' => $projects_pod->get_field('slug'),
     'name' => $projects_pod->get_field('name'),
     'stream' => $projects_pod->get_field('research_stream.name')
   ));
+  $projects[$projects_pod->get_field('research_stream.name')] = array();
 }
 
 echo var_trace('projects: ' . var_export($current_projects, true), $TRACE_PREFIX, $TRACE_ENABLED);
