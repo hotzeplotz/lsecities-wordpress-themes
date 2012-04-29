@@ -49,6 +49,13 @@ $TRACE_PREFIX = 'pods-list-of-pods-objects';
                 <div id='navigationarea'>
                 <?php get_template_part( 'nav', 'events' ); ?>
                 </div>                
+                <?php break;
+                  case 'research_projects':
+                    $IN_CONTENT_AREA = true;
+                ?>
+                <div id='navigationarea'>
+                <?php get_template_part( 'nav', 'research' ); ?>
+                </div>                
                 <?php break; ?>
                 <?php endswitch; ?>
               </article>
