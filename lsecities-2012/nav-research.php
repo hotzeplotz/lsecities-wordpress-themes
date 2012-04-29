@@ -15,8 +15,7 @@ $projects_pod = new Pod('research_project');
 
 $current_projects = Array();
 $projects_pod->findRecords(array(
-  'where' => 'status.name = "active"',
-  'groupby' => 't.research_stream'
+  'where' => 'status.name = "active"'
 ));
 while($projects_pod->fetchRecord()) {
   array_push($current_projects, array(
