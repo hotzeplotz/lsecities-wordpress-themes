@@ -54,7 +54,7 @@ $TRACE_PREFIX = 'pods-list-of-pods-objects';
                 <?php break;
                   case 'research_projects':
                     $IN_CONTENT_AREA = true;
-                    $BASE_URI = '/media/research-projects/';
+                    $BASE_URI = '/objects/research-projects/';
                 ?>
                 <div id='navigationarea'>
                 <?php get_template_part( 'nav', 'research' ); ?>
