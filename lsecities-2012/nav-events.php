@@ -84,7 +84,7 @@ krsort($events);
     <?php if($events and !$HIDE_PAST_EVENTS): ?>
     <?php if(!$IN_CONTENT_AREA): ?><dt class="events past">Past events</dt><?php endif; ?>
     <dd>
-      <dl<?php if(!IN_CONTENT_AREA): ?> class="accordion"<?php endif; ?>>
+      <dl<?php if(!$IN_CONTENT_AREA): ?> class="accordion"<?php endif; ?>>
       <?php foreach($events as $year => $year_events): ?>
 	<dt><?php echo $year; ?></dt>
 	<dd>
