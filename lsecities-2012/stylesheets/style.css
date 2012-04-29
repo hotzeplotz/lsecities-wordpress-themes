@@ -318,6 +318,7 @@ right: -21px; */ }
 .lc-slider-page .flexslider .col2 { width: 32.571em; float: left; }
 .lc-slider-page .flexslider .col1 { width: 16.286em; float: left; }
 .lc-slider-page .flexslider .tile { border-right: 0px solid transparent; border-top: 0px solid transparent; float: left; padding: 0em; margin: 0.143em; overflow: hidden; position: relative; min-height: 210px; height: 16em; }
+.lc-slider-page .flexslider .tile a, .lc-slider-page .flexslider .tile a:hover, .lc-slider-page .flexslider .tile a:active, .lc-slider-page .flexslider .tile a:visited { color: inherit; }
 .lc-slider-page .flexslider .tile.tall { height: 32.286em; }
 .lc-slider-page .flexslider .tile:hover header, .lc-slider-page .flexslider .tile:hover .feature_title, .lc-slider-page .flexslider .tile:hover .feature_caption, .lc-slider-page .flexslider .tile:hover .feature_date { display: none; }
 .lc-slider-page .flexslider .tile:hover .feature_info.noblurb header, .lc-slider-page .flexslider .tile:hover .feature_info.noblurb .feature_title, .lc-slider-page .flexslider .tile:hover .feature_info.noblurb .feature_caption, .lc-slider-page .flexslider .tile:hover .feature_info.noblurb .feature_date { display: inherit; }
