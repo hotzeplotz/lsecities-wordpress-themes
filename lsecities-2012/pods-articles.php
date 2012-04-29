@@ -125,7 +125,7 @@ if(count($attachments)) {
   
 
 
-              <aside class='wireframe fourcol last' id='keyfacts'>
+              <aside class='wireframe fourcol last minorfacts' id='keyfacts'>
                 <dl>
                 <?php if(is_array($article_authors)): ?>
                   <dt>Authors</dt>
