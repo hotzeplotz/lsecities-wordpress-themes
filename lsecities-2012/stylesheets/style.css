@@ -252,11 +252,11 @@ header.entry-header h1 { font-family: museo-sans, nevisBold, PT Sans, sans-serif
 #contentarea .top-content > header { margin-bottom: 1em; }
 #contentarea .top-content article header { margin-bottom: 1em; }
 #contentarea .top-content article header h1 { font-family: museo-sans, nevisBold, PT Sans, sans-serif; font-weight: 900; color: #22273b; }
-#contentarea .top-content aside *:first-child { margin-top: 0.625em; }
 
-#keyfacts dl dt, #navigationarea nav dl dt { border-bottom: 1px solid #eee; margin-top: 0.5em; }
-#keyfacts dl dt:first-child, #navigationarea nav dl dt:first-child { margin-top: 0; }
-#keyfacts.minorfacts dl dt, #navigationarea nav.minorfacts dl dt { border-bottom: none; }
+#keyfacts, #navigationarea { font-size: 90%; }
+#keyfacts dl dt, #navigationarea dl dt { border-bottom: 1px solid #eee; margin-top: 0.5em; }
+#keyfacts dl dt:first-child, #navigationarea dl dt:first-child { margin-top: 0; }
+#keyfacts.minorfacts dl dt, #navigationarea.minorfacts dl dt { border-bottom: none; }
 
 div.widget { margin-bottom: 1em; }
 div.widget h2 { margin-bottom: 0.5em; }
