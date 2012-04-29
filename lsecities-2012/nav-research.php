@@ -30,7 +30,8 @@ echo var_trace('projects: ' . var_export($current_projects, true), $TRACE_PREFIX
 
 $projects = array();
 foreach($current_projects as $project) {
-  array_push($projects["$project['stream']"], $project);
+  $key = $project['stream'];
+  array_push($projects[$key], $project);
 }
 
 echo var_trace('projects (by stream): ' . var_export($projects, true), $TRACE_PREFIX, $TRACE_ENABLED);
