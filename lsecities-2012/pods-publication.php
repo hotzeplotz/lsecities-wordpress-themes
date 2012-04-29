@@ -114,37 +114,39 @@ echo var_trace('sections: ' . var_export($publication_sections, true), $TRACE_PR
           <?php get_template_part('snippet-socialmedia-share'); ?>
         </article>
         <aside class='wireframe fourcol last entry-meta' id='keyfacts'>
-          <div class='cover-thumbnail'><img src="<?php echo $pod_cover; ?>" /></div>
-          <ul>
-            <?php if($pod_pdf) : ?>
-            <li><a class="downloadthis pdf button" href="<?php echo $pod_pdf; ?>">Download PDF</a></li>
-            <?php endif ; ?>
-            <?php if($pod_issuu_uri) : ?>
-            <li><a class="issuu button" href="<?php echo $pod_issuu_uri; ?>">Online browser</a></li>
-            <?php endif ; ?>
-          </ul>
-          <dl>
-          <?php if($publication_authors): ?>
-            <dt>Authors</dt>
-            <dd><?php echo $publication_authors; ?></dd>
-          <?php endif; ?>
-          <?php if($publication_editors): ?>
-            <dt>Editors</dt>
-            <dd><?php echo $publication_editors; ?></dd>
-          <?php endif; ?>
-          <?php if($publication_contributors): ?>
-            <dt>Contributors</dt>
-            <dd><?php echo $publication_contributors; ?></dd>
-          <?php endif; ?>
-          <?php if($publishing_date): ?>
-            <dt>Publication date</dt>
-            <dd><?php echo $publishing_date; ?></dd>
-          <?php endif; ?>
-          <?php if($publication_catalogue_data): ?>
-            <dt>Catalogue data</dt>
-            <dd><?php echo $publication_catalogue_data; ?></dd>
-          <?php endif; ?>         
-          </dl>
+          <div>
+            <div class='cover-thumbnail'><img src="<?php echo $pod_cover; ?>" /></div>
+            <ul>
+              <?php if($pod_pdf) : ?>
+              <li><a class="downloadthis pdf button" href="<?php echo $pod_pdf; ?>">Download PDF</a></li>
+              <?php endif ; ?>
+              <?php if($pod_issuu_uri) : ?>
+              <li><a class="issuu button" href="<?php echo $pod_issuu_uri; ?>">Online browser</a></li>
+              <?php endif ; ?>
+            </ul>
+            <dl>
+            <?php if($publication_authors): ?>
+              <dt>Authors</dt>
+              <dd><?php echo $publication_authors; ?></dd>
+            <?php endif; ?>
+            <?php if($publication_editors): ?>
+              <dt>Editors</dt>
+              <dd><?php echo $publication_editors; ?></dd>
+            <?php endif; ?>
+            <?php if($publication_contributors): ?>
+              <dt>Contributors</dt>
+              <dd><?php echo $publication_contributors; ?></dd>
+            <?php endif; ?>
+            <?php if($publishing_date): ?>
+              <dt>Publication date</dt>
+              <dd><?php echo $publishing_date; ?></dd>
+            <?php endif; ?>
+            <?php if($publication_catalogue_data): ?>
+              <dt>Catalogue data</dt>
+              <dd><?php echo $publication_catalogue_data; ?></dd>
+            <?php endif; ?>         
+            </dl>
+          </div>
         </aside><!-- #keyfacts -->
       </div><!-- .top-content -->
       <div class='extra-content row'>

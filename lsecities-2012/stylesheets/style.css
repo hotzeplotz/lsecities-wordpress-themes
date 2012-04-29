@@ -378,7 +378,8 @@ right: -21px; */ }
 .lc-conference-frontpage header.heading-image .mainheadings h1, .lc-conference-frontpage header.heading-image .mainheadings h2 { margin: 0; color: #fff !important; }
 .lc-conference-frontpage header.heading-image .mainheadings h1 { text-transform: uppercase; }
 
-.lc-publication #keyfacts .cover-thumbnail img { width: 60%; }
+.lc-publication #keyfacts > div { padding: 0 4em; }
+.lc-publication #keyfacts dl dt { border-bottom: none; }
 .lc-publication #tableofcontents .articles > section { margin-bottom: 1em; }
 .lc-publication #tableofcontents .articles > section > h1 { font-size: 1.125em; line-height: 2em; font-weight: bold; }
 .lc-publication #tableofcontents .articles > section .article { margin-bottom: 0.5em; }

@@ -40,7 +40,7 @@ echo var_trace('projects (by stream): ' . var_export($projects, true), $TRACE_PR
 
 <nav id="projectsmenu">
   <dl>
-    <?php foreach($projects['stream'] as $stream_name => $stream_projects): ?>
+    <?php foreach($projects as $stream_name => $stream_projects): ?>
     <dt><?php echo $stream_name; ?></dt>
     <?php foreach($stream_projects as $stream_project): ?>
     <dd><a href="<?php echo $stream_project['slug']; ?>"><?php echo $stream_project['name']; ?></a></dd>
