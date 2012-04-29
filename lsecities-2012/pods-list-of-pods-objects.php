@@ -26,14 +26,14 @@ $TRACE_PREFIX = 'pods-list-of-pods-objects';
 
 <div id="post-<?php the_ID(); ?>" <?php post_class('lc-article lc-list-of-pods-objects'); ?>>
 
-<?php echo var_trace(get_post_meta(get_the_ID(), 'list_pods'), $TRACE_PREFIX, $TRACE_ENABLED); ?>
+<?php echo var_trace(get_post_meta(get_the_ID(), 'list_pods', true), $TRACE_PREFIX, $TRACE_ENABLED); ?>
           <div class='ninecol' id='contentarea'>
             <div class='top-content'>
               <article class='wireframe row'>
                 <header>
                   <h1><?php the_title(); ?></h1>
                 </header>
-                <?php switch(get_post_meta(get_the_ID(), 'list_pods')):
+                <?php switch(get_post_meta(get_the_ID(), 'list_pods', true)):
                   case 'upcoming_events':
                     $HIDE_PAST_EVENTS = true;
                 ?>
