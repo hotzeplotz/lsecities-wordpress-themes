@@ -15,7 +15,7 @@
  */
 global $pods;
 $BASE_URI = '/media/objects/events/';
-$TRACE_PODS_EVENTS_FRONTPAGE = $TRACE_ENABLED = true;
+$TRACE_ENABLED = is_user_logged_in();
 $TRACE_PREFIX = 'pods-events-frontpage';
 
 function people_list($people, $heading_singular, $heading_plural) {
@@ -32,7 +32,7 @@ function people_list($people, $heading_singular, $heading_plural) {
     $output .= "<dd>\n<ul>\n";
     
     foreach($people as $person) {
-      echo var_trace($person, 'people_list:$person', $TRACE_PODS_EVENTS_FRONTPAGE);
+      echo var_trace($person, 'people_list:$person', $TRACE_ENABLED);
       $people_count++;
       if($person['profile_text']) {
         $output .= '<li><a href="#person-profile-' . $person['slug'] . '">' . $person['name'] . ' ' . $person['family_name'] . "</a></li>\n";
