@@ -129,7 +129,6 @@ $research_summary_tile_image = $tile_pod->get_field('image.guid');
               </aside>
               <aside id="publicationsarea" class="fourcol last">
                 <?php if($conference_publication_cover and $conference_publication_blurb): ?>
-                <header><h1>Publications</h1></header>
                 <?php echo $conference_publication_blurb; ?>
                 <div>
                   <ul class="sixcol">
