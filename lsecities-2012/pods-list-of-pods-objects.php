@@ -32,7 +32,7 @@ $TRACE_PREFIX = 'pods-list-of-pods-objects';
                 <header>
                   <h1><?php the_title(); ?></h1>
                 </header>
-                <?php switch(get_post_meta($post->ID, 'list_pods')):
+                <?php switch(get_post_meta(get_the_ID(), 'list_pods')):
                   case 'upcoming_events':
                     $HIDE_PAST_EVENTS = true;
                 ?>
