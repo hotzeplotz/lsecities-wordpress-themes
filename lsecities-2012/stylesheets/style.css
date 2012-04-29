@@ -247,7 +247,7 @@ header.entry-header h1 { font-family: museo-sans, nevisBold, PT Sans, sans-serif
 #contentarea section > h1 { font-weight: bold; font-size: 1.2em; }
 #contentarea .extra-content > section, #contentarea .extra-content > aside { margin-top: 2em; }
 #contentarea .extra-content > section > header, #contentarea .extra-content > aside > header { border-top: 1px solid red; }
-#contentarea .extra-content > section > header > h1, #contentarea .extra-content > aside > header > h1 { color: #fff; background-color: red; display: inline-block; padding: 0 0.5em; margin-bottom: 1em; font-size: 1.125em; line-height: 1.2em; font-weight: bold; }
+#contentarea .extra-content > section > header > h1, #contentarea .extra-content > aside > header > h1 { color: #fff; background-color: red; display: inline-block; padding: 0 0.5em; margin-bottom: 1em; font-size: 1.125em; line-height: 1.3em; font-weight: bold; }
 #contentarea .top-content { margin-bottom: 1em; }
 #contentarea .top-content > header { margin-bottom: 1em; }
 #contentarea .top-content .photospread { overflow: hidden; height: 21.125em; }
