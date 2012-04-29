@@ -29,7 +29,6 @@ while($projects_pod->fetchRecord()) {
 
 echo var_trace('projects: ' . var_export($current_projects, true), $TRACE_PREFIX, $TRACE_ENABLED);
 
-$projects = array();
 foreach($current_projects as $project) {
   $key = $project['stream'];
   array_push($projects[$key], $project);
