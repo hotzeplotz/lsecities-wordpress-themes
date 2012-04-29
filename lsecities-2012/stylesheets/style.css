@@ -261,7 +261,7 @@ header.entry-header h1 { font-family: museo-sans, nevisBold, PT Sans, sans-serif
 
 #navigationarea nav { margin-top: 2.5em; }
 #navigationarea nav:first-child { margin-top: inherit; }
-#navigationarea nav dl dt.ui-accordion-header:before { content: ''; float: left; background: url("http://v1.lsecities.net/wp-content/themes/lsecities-2012/images/icons/mal/bullet-horizontal.gif") no-repeat 0; padding-left: 1em; }
+#navigationarea nav dl dt.ui-accordion-header:before { content: ''; background: url("http://v1.lsecities.net/wp-content/themes/lsecities-2012/images/icons/mal/bullet-horizontal.gif") no-repeat 0; padding-left: 0.75em; }
 #navigationarea nav dl dt.ui-accordion-header.ui-state-active:before { -moz-transform: rotate(90deg); -webkit-transform: rotate(90deg); -o-transform: rotate(90deg); -ms-transform: rotate(90deg); transform: rotate(90deg); }
 #navigationarea nav h1 { font-size: 1em; }
 
