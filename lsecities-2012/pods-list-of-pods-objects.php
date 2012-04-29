@@ -30,7 +30,7 @@ $TRACE_PREFIX = 'pods-list-of-pods-objects';
             <div class='top-content'>
               <article class='wireframe row'>
                 <header>
-                  <h1><?php echo $pod->get_field('name'); ?></h1>
+                  <h1><?php the_title(); ?></h1>
                 </header>
                 <div id='navigationarea'>
                 <?php get_template_part( 'nav', 'events' ); ?>
