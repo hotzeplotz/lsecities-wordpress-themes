@@ -7,7 +7,7 @@
  * @subpackage Twenty_Eleven
  * @since Twenty Eleven 1.0
  */
-$TRACE_PODS_ARTICLES = false;
+$TRACE_ENABLED = is_user_logged_in();
 
 // TODO: remove hostname once we switch to WP for the whole urban-age.net
 $PODS_BASEURI_ARTICLES = 'http://urban-age.net/media/objects/articles';
@@ -34,8 +34,8 @@ $publication_pod = new Pod('publication_wrappers', $pod->get_field('in_publicati
 // grab the image URI from the Pod
 $featured_image_uri = $pod->get_field('heading_image.guid');
 
-if($TRACE_PODS_ARTICLES) { error_log('request_language: ' . $lang); }
-if($TRACE_PODS_ARTICLES) { error_log('article_lang2: ' . $article_lang2); }
+if($TRACE_ENABLED) { error_log('request_language: ' . $lang); }
+if($TRACE_ENABLED) { error_log('article_lang2: ' . $article_lang2); }
 
 if(!empty($lang) && $lang == $article_lang2) {
   $article_title = $pod->get_field('title_lang2');
@@ -68,7 +68,7 @@ if(!preg_match('/^https?:\/\//i', $pdf_uri) && !empty($pdf_uri)) {
 }
 
 // force urban-age.net uri until we switch to WP for everything
-if($TRACE_PODS_ARTICLES) { error_log('pdf_uri: ' . $pdf_uri); }
+if($TRACE_ENABLED) { error_log('pdf_uri: ' . $pdf_uri); }
 $pdf_uri = preg_replace('/^https?:\/\/v1\.lsecities\.net/i', 'http://urban-age.net', $pdf_uri);
 
 $article_publication_date = $pod->get_field('publication_date');
@@ -77,11 +77,13 @@ $article_authors = $pod->get_field('authors');
 
 // fetch any attachments, replace hostname until we switch to WP+Pods for the whole website
 $attachments = $pod->get_field('attachments');
+/* // legacy code - remove once new website is live and fully tested
 if(count($attachments)) {
   foreach($attachments as &$attachment) {
     $attachment['guid'] = preg_replace('/^https?:\/\/v1\.lsecities\.net/i', 'http://urban-age.net', $attachment['guid']);
   }
 }
+*/
 ?>
 
 <?php get_header(); ?>
@@ -137,18 +139,16 @@ if(count($attachments)) {
                 <?php endif; ?>
                   <dt>Publication date</dt>
                   <dd><?php echo $article_publication_date ?></dd>
+                  <?php if(is_array($article_tags)): ?>
                   <dt>Tags</dt>
                   <dd>
-                    <?php if(is_array($article_tags)): ?>
                     <ul>
                       <?php foreach($article_tags as $tag): ?>
                         <li><?php echo $tag['name'] ; ?></li>
                       <?php endforeach; ?>
                     </ul>
-                    <?php else: ?>
-                    <em>No tags defined</em>
-                    <?php endif; ?>
                   </dd>
+                  <?php endif; ?>
                   <?php if($pdf_uri or count($attachments)) : ?>
                   <dt>Downloads</dt>
                   <?php if($pdf_uri): ?>
