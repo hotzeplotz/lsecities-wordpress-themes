@@ -10,7 +10,7 @@
 ?><?php
 /* URI: TBD */
 $PODS_BASEURI_ARTICLES = '/media/objects/articles';
-$TRACE_ENABLED = true; // is_user_logged_in();
+$TRACE_ENABLED = is_user_logged_in();
 $TRACE_PREFIX = 'pods-publications';
 
 $publication_slug = get_post_meta($post->ID, 'pod_slug', true);
