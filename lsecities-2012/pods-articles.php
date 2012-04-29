@@ -165,6 +165,7 @@ if(count($attachments)) {
                     endif; ?>
                   <?php endif; ?>           
                 </dl>
+                <?php get_template_part('snippet-socialmedia-share'); ?>
                 <div class="media-items">
                   
                 </div>
