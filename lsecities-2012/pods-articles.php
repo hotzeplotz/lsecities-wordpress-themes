@@ -94,13 +94,13 @@ if(count($attachments)) {
 
           <div class='ninecol' id='contentarea'>
             <div class='top-content'>
+              <?php if($featured_image_uri): ?>
               <header class="heading-image">
                 <div class='photospread wireframe'>
-                <?php if($featured_image_uri) : ?>
                   <img src="<?php echo $featured_image_uri; ?>" alt="" />
-                <?php endif; ?>
                 </div>
               </header>
+              <?php endif; ?>
               <article class='wireframe eightcol'>
                 <header class="entry-header">
                   <h1 class="entry-title article-title"><?php echo $article_title; ?></h1>

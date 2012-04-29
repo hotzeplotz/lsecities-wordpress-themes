@@ -250,8 +250,6 @@ header.entry-header h1 { font-family: museo-sans, nevisBold, PT Sans, sans-serif
 #contentarea .extra-content > section > header > h1, #contentarea .extra-content > aside > header > h1 { color: #fff; background-color: red; display: inline-block; padding: 0 0.5em; margin-bottom: 1em; font-size: 1.125em; line-height: 1.3em; font-weight: bold; }
 #contentarea .top-content { margin-bottom: 1em; }
 #contentarea .top-content > header { margin-bottom: 1em; }
-#contentarea .top-content .photospread { overflow: hidden; height: 21.125em; }
-#contentarea .top-content .photospread img { width: 100%; }
 #contentarea .top-content article header { margin-bottom: 1em; }
 #contentarea .top-content article header h1 { font-family: museo-sans, nevisBold, PT Sans, sans-serif; font-weight: 900; color: #22273b; }
 #contentarea .top-content aside *:first-child { margin-top: 0.625em; }
@@ -360,10 +358,13 @@ right: -21px; */ }
 
 #speaker-profiles .people-list .person h1 { font-size: 1.125em; font-weight: bold; text-transform: inherit; border-bottom: 1px solid #eee; margin-bottom: 0.444444444em; }
 
-.lc-newspaper-article header.heading-image img { width: 100%; display: none; }
-.lc-newspaper-article .has-pullquote::before { content: attr(data-pullquote); font-weight: bold; opacity: 0.8; float: right; width: 50%; margin: 0.5em -55.5% 0 0; position: relative; font-size: 1.5em; line-height: 1.25em; }
-.lc-newspaper-article .has-pullquote::before::before { content: '"'; color: #ff0000; }
-.lc-newspaper-article article .article .entry-content img, .lc-newspaper-article article .article .extra-content img { float: right; margin-left: 1.5em; margin-right: -50%; max-width: 150%; position: relative; width: 150%; }
+.lc-newspaper-article { /* // TODO: re-enable once all the articles have been reviewed and pullquotes added .has-pullquote::before { content: attr(data-pullquote);  font-weight: bold; opacity: 0.8;  float: right; width: 50%; margin: 0.5em -55.5% 0 0;  position: relative;
+ font-size: 1.5em; line-height: 1.25em; }
+ .has-pullquote::before::before { content: '"'; color: #ff0000; }
+*/ }
+.lc-newspaper-article header.heading-image img { max-width: 100%; width: 100%; }
+.lc-newspaper-article article .article .entry-content, .lc-newspaper-article article .article .extra-content { /* // TODO: re-enable once all the article photos have been double checked img { float: right; margin-left: 1.5em; margin-right: -50%; max-width: 150%; position: relative; width: 150%; }
+*/ }
 
 .lc-conference-frontpage header.heading-image { position: relative; }
 .lc-conference-frontpage header.heading-image .mainheadings { position: absolute; top: 0; margin: 0.5em; line-height: 1em; color: #fff; text-shadow: black 1px 1px 5px; }
