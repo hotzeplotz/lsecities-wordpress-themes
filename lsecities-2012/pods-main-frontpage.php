@@ -91,6 +91,8 @@ function compose_slide($column_spans, $tiles) {
         $target_uri = '/media/objects/events/' . $tile->get_field('linked_event.slug');
       } elseif($tile->get_field('target_uri')) {
         $target_uri = $tile->get_field('target_uri');
+      } elseif($tile->get_field('target_page.guid')) {
+        $target_uri = $tile->get_field('target_page.guid');
       }
       
       array_push($slide_column['tiles'],
