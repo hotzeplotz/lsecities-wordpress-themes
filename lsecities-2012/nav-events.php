@@ -1,18 +1,13 @@
 <?php
-$TRACE_TEMPLATE_NAV = true;
+$TRACE_ENABLED = is_user_logged_in();
 $TRACE_PREFIX = 'nav.php -- ';
 $current_post_id = $post->ID;
-if($TRACE_TEMPLATE_NAV) { error_log($TRACE_PREFIX . 'post ID: ' . $current_post_id); }
-if($TRACE_TEMPLATE_NAV) : ?>
-<!--
-pod:
-<?php var_export($pod); ?>
--->
-<?php endif; 
+var_trace('post ID: ' . $current_post_id, $TRACE_PREFIX, $TRACE_ENABLED);
+var_trace(var_export($pod, true), $TRACE_PREFIX, $TRACE_ENABLED);
 
 $events_pod = new Pod('event');
 $datetime_now = new DateTime('now');
-if($TRACE_TEMPLATE_NAV) { error_log($TRACE_PREFIX . 'datetime_now: ' . $datetime_now->format(DATE_ATOM)); }
+var_trace('datetime_now: ' . $datetime_now->format(DATE_ATOM), $TRACE_PREFIX, $TRACE_ENABLED);
 
 // prepare array with list of upcoming events
 $upcoming_events = Array();
@@ -40,7 +35,7 @@ for($year = 2005; $year <= $current_year; $year++) {
     'orderby' => 'date_start DESC',
     'limit' => -1
   ));
-  if($TRACE_TEMPLATE_NAV) { error_log($TRACE_PREFIX . 'events records found: ' . $events_pod->getTotalRows()); }
+  var_trace('events records found: ' . $events_pod->getTotalRows(), $TRACE_PREFIX, $TRACE_ENABLED);
   while($events_pod->fetchRecord()) {
     // if event is past, add it to array
     if($events_pod->get_field['date_start'] < $datetime_now) {
@@ -58,7 +53,7 @@ for($year = 2005; $year <= $current_year; $year++) {
   }
 }
 
-if($TRACE_TEMPLATE_NAV) { echo "<!-- $TRACE_PREFIX events array: \n" . var_export($events, true) . " \n-->"; }
+var_trace('events array: ' . var_export($events, true), $TRACE_PREFIX, $TRACE_ENABLED);
 
 // sort by year, backwards from current year
 krsort($events);
@@ -66,6 +61,7 @@ krsort($events);
 
 <nav id="eventsmenu">
   <dl>
+    <?php if(!$HIDE_UPCOMING_EVENTS): ?>
     <dt class="events upcoming">Upcoming events</dt>
     <dd>
     <?php if($upcoming_events): ?>
@@ -78,7 +74,8 @@ krsort($events);
       Please check back for more information on our upcoming events.
     <?php endif; ?>
     </dd>
-    <?php if($events): ?>
+    <?php endif; ?>
+    <?php if($events and !$HIDE_PAST_EVENTS): ?>
     <dt class="events past">Past events</dt>
     <dd>
       <dl class="accordion">
