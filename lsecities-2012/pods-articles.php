@@ -137,8 +137,10 @@ if(count($attachments)) {
                     </ul>
                   </dd>
                 <?php endif; ?>
+                  <?php if($article_publication_date): ?>
                   <dt>Publication date</dt>
                   <dd><?php echo $article_publication_date ?></dd>
+                  <?php endif; ?>
                   <?php if(is_array($article_tags)): ?>
                   <dt>Tags</dt>
                   <dd>
