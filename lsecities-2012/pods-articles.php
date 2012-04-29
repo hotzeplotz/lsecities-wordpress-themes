@@ -10,7 +10,7 @@
 $TRACE_ENABLED = is_user_logged_in();
 
 // TODO: remove hostname once we switch to WP for the whole urban-age.net
-$PODS_BASEURI_ARTICLES = 'http://urban-age.net/media/objects/articles';
+$PODS_BASEURI_ARTICLES = '/media/objects/articles';
 ?>
 
 <?php
