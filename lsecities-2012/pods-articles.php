@@ -153,13 +153,13 @@ if(count($attachments)) {
                   <dt>Downloads</dt>
                   <?php if($pdf_uri): ?>
                   <dd>
-                    <a href="<?php echo $pdf_uri; ?>">Download this article as PDF</a>
+                    <a class='downloadthis pdf button' href="<?php echo $pdf_uri; ?>">Download this article as PDF</a>
                   </dd>
                   <?php endif; ?>
                   <?php
                     if(is_array($attachments)) :
                       foreach($attachments as $attachment) :?>
-                      <dd class='downloadthis pdf'><a href="<?php echo $attachment['guid']; ?>" /><?php echo $attachment['post_title']; ?></a></dd>
+                      <dd><a class='downloadthis pdf button' href="<?php echo $attachment['guid']; ?>" /><?php echo $attachment['post_title']; ?></a></dd>
                   <?php
                       endforeach;
                     endif; ?>
