@@ -109,7 +109,7 @@ $research_stream_summary = $pod->get_field('research_stream.summary');
       </div><!-- .extra-content -->
     </div><!-- #contentarea -->
   </div><!-- #post-<?php the_ID(); ?> -->
-<?php get_template_part('nav-research'); ?>
+<?php get_template_part('nav', 'research'); ?>
 
 </div><!-- role='main'.row -->
 
