@@ -234,7 +234,7 @@ $slides = $pod->get_field('slides');
               if($latest_news->current_post == 2) { $class_extra = " last"; }
             ?>
           <div class='fourcol<?php echo $class_extra; ?>'>
-            <h3><a href="<?php get_permalink(the_ID()); ?>"><?php the_title(); ?></a></h3>
+            <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
             <?php the_excerpt(); ?>
           </div>
           <?php endwhile;
@@ -250,7 +250,7 @@ $slides = $pod->get_field('slides');
               $more_news->the_post();
               if ($more_news->current_post > 2) :
         ?>
-          <li><a href="<?php get_permalink(the_ID()); ?>"><?php the_title() ?></a></li>
+          <li><a href="<?php the_permalink(); ?>"><?php the_time('j M'); ?> | <?php the_title() ?></a></li>
         <?php endif;
             endwhile;
         ?>
