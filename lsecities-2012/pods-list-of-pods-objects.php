@@ -36,6 +36,7 @@ $TRACE_PREFIX = 'pods-list-of-pods-objects';
                 <?php switch(get_post_meta(get_the_ID(), 'list_pods', true)):
                   case 'upcoming_events':
                     $HIDE_PAST_EVENTS = true;
+                    $BASE_URI = '/media/objects/events/';
                     $IN_CONTENT_AREA = true;
                 ?>
                 <div id='navigationarea'>
@@ -44,6 +45,7 @@ $TRACE_PREFIX = 'pods-list-of-pods-objects';
                 <?php break;
                   case 'past_events':
                     $HIDE_UPCOMING_EVENTS = true;
+                    $BASE_URI = '/media/objects/events/';
                     $IN_CONTENT_AREA = true;
                 ?>
                 <div id='navigationarea'>
