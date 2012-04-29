@@ -102,7 +102,7 @@ function compose_slide($column_spans, $tiles) {
           'subtitle' => $tile->get_field('tagline'),
           'blurb' => $tile->get_field('blurb'),
           'plain_content' => $tile->get_field('plain_content'),
-          'posts_category' => $tile->get_field('posts_category'),
+          'posts_category' => $tile->get_field('posts_category.term_id'),
           'target_uri' => $target_uri,
           'image' => $tile->get_field('image.guid'),
           'linked_event' => array(
@@ -189,7 +189,7 @@ $slides = $pod->get_field('slides');
                               </div>
                             <?php elseif($tile['posts_category']): ?>
                               <div class="<?php echo ltrim($tile['element_class'] . ' categoryarchive', ' '); ?>">
-                                <em>Recent news go here</em>
+                                <!-- <em>Recent news go here</em> -->
                               </div>
                             <?php elseif($tile['title'] or $tile['subtitle'] or $tile['blurb']): ?>
                               <div class="feature_info<?php if(!$tile['blurb']): ?> noblurb<?php endif; ?>">
@@ -234,7 +234,7 @@ $slides = $pod->get_field('slides');
               if($latest_news->current_post == 2) { $class_extra = " last"; }
             ?>
           <div class='fourcol<?php echo $class_extra; ?>'>
-            <h3><a href="<?php echo get_permalink(the_ID()); ?>"><?php the_title(); ?></a></h3>
+            <h3><a href="<?php get_permalink(the_ID()); ?>"><?php the_title(); ?></a></h3>
             <?php the_excerpt(); ?>
           </div>
           <?php endwhile;
