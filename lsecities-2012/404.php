@@ -34,7 +34,7 @@ get_header(); ?>
 					</div>
 
 					<?php
-					$archive_content = '<p>' . _e( 'Try looking in the monthly archives.', 'lsecities-2012' )) . '</p>';
+					$archive_content = '<p>' . _e( 'Try looking in the monthly archives.', 'lsecities-2012' ) . '</p>';
 					the_widget( 'WP_Widget_Archives', array('count' => 0 , 'dropdown' => 1 ), array( 'after_title' => '</h2>'.$archive_content ) );
 					?>
 
