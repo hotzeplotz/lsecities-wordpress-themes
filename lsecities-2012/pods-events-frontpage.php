@@ -234,7 +234,7 @@ $poster_pdf = $poster_pdf[0]['guid'];
               
               <?php if($people_with_blurb): ?>
               <?php echo var_trace($event_all_the_people, $TRACE_PREFIX, $TRACE_ENABLED); ?>
-              <section id='speaker-profiles clearfix'>
+              <section id='speaker-profiles' class='clearfix'>
                 <header>
                   <h1>Profiles</h1>
                 </header>
@@ -249,7 +249,7 @@ $poster_pdf = $poster_pdf[0]['guid'];
                 <?php endif; ?>
                     <li id="person-profile-<?php echo $event_speaker['slug'] ?>" class="person fourcol<?php if((($index + 1) % 3) == 0) : ?> last<?php endif ; ?>">
                       <h1><?php echo $event_speaker['name'] ?> <?php echo $event_speaker['family_name'] ?></h1>
-                      <p><?php echo $event_speaker['profile_text'] ?></p>
+                      <?php echo $event_speaker['profile_text'] ?>
                       <?php if($event_speaker['homepage'] || $event_speaker['twitterhandle']): ?>
                       <ul class="personal-links">
                       <?php if($event_speaker['homepage']): ?>

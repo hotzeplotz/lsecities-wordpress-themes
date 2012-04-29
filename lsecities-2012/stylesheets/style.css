@@ -355,7 +355,7 @@ right: -21px; */ }
 .lc-slider-page .flexslider ul { list-style-type: disc; }
 .lc-slider-page .flexslider ul li { list-style-type: inherit; }
 
-#speaker-profiles .people-list .person h1 { font-size: 1em; font-weight: bold; text-transform: inherit; border-bottom: 1px solid #eee; }
+#speaker-profiles .people-list .person h1 { font-size: 1.125em; font-weight: bold; text-transform: inherit; border-bottom: 1px solid #eee; }
 
 .lc-newspaper-article header.heading-image img { width: 100%; display: none; }
 .lc-newspaper-article .has-pullquote::before { content: attr(data-pullquote); font-weight: bold; opacity: 0.8; float: right; width: 50%; margin: 0.5em -55.5% 0 0; position: relative; font-size: 1.5em; line-height: 1.25em; }
