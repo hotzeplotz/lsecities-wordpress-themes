@@ -149,22 +149,26 @@ if(count($attachments)) {
                     </ul>
                   </dd>
                   <?php endif; ?>
-                  <?php if($pdf_uri or is_array($attachments)) : ?>
-                  <dt>Downloads</dt>
+                </dl>
+                <?php if($pdf_uri or is_array($attachments)) : ?>
+                <div class="downloads-area">
+                  <ul>
                   <?php if($pdf_uri): ?>
-                  <dd>
+                  <li>
                     <a class='downloadthis pdf button' href="<?php echo $pdf_uri; ?>">Download this article as PDF</a>
-                  </dd>
+                  </li>
                   <?php endif; ?>
                   <?php
                     if(is_array($attachments)) :
                       foreach($attachments as $attachment) :?>
-                      <dd><a class='downloadthis pdf button' href="<?php echo $attachment['guid']; ?>" /><?php echo $attachment['post_title']; ?></a></dd>
+                      <li><a class='downloadthis pdf button' href="<?php echo $attachment['guid']; ?>" /><?php echo $attachment['post_title']; ?></a></li>
                   <?php
                       endforeach;
                     endif; ?>
-                  <?php endif; ?>           
-                </dl>
+                  </ul>
+                </div>
+                <?php endif; ?>           
+
                 <?php get_template_part('snippet-socialmedia-share'); ?>
                 <div class="media-items">
                   
