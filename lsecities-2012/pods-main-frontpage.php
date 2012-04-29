@@ -121,7 +121,7 @@ echo var_trace('pod_slug: ' . $pod_slug, $TRACE_PREFIX, $TRACE_ENABLED);
 $pod = new Pod('slider', $pod_slug);
 
 $news_category_ids = $pod->get_field('news_category.term_id');
-if(count($news_categories)) {
+if(is_array($news_categories_ids)) {
   $news_categories = '';
   foreach($news_category_ids as $category_id) {
     $news_categories .= "$category_id,";
