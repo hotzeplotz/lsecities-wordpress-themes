@@ -171,13 +171,9 @@ $slides = $pod->get_field('slides');
                           <div class="tile <?php echo $tile['element_class']; ?>" id="slidetile-<?php echo $tile['id']; ?>">
                             <?php if($tile['image']): ?>
                               <div class="crop">
-                              <?php if($tile['target_uri']): ?>
-                                <a href="<?php echo $tile['target_uri']; ?>">
-                              <?php endif; ?>
+                              <?php if($tile['target_uri']): ?><a href="<?php echo $tile['target_uri']; ?>"><?php endif; ?>
                                   <img src="<?php echo $tile['image']; ?>" alt="" />
-                              <?php if($tile['target_uri']): ?>
-                                </a>
-                              <?php endif; ?>
+                              <?php if($tile['target_uri']): ?></a><?php endif; ?>
                               </div>
                             <?php endif; ?>
                             <?php if($tile['plain_content']): ?>
@@ -185,6 +181,7 @@ $slides = $pod->get_field('slides');
                                 <div class="inner-box">
                                   <?php if($tile['display_title']): ?><h1><?php echo $tile['title']; ?></h1><?php endif; ?>
                                   <?php echo $tile['plain_content']; ?>
+                                  <?php if($tile['target_uri']): ?></a><?php endif; ?>
                                 </div>
                               </div>
                             <?php elseif($tile['posts_category']): ?>
@@ -195,17 +192,17 @@ $slides = $pod->get_field('slides');
                               <div class="feature_info<?php if(!$tile['blurb']): ?> noblurb<?php endif; ?>">
                                 <?php if($tile['linked_event']['month'] and $tile['linked_event']['day']): ?>
                                 <div class="feature_date">
-                                  <div class="month"><?php echo $tile['linked_event']['month']; ?></div>
-                                  <div class="day"><?php echo $tile['linked_event']['day']; ?></div>
+                                  <div class="month"><?php if($tile['target_uri']): ?><a href="<?php echo $tile['target_uri']; ?>"><?php endif; ?><?php echo $tile['linked_event']['month']; ?><?php if($tile['target_uri']): ?></a><?php endif; ?></div>
+                                  <div class="day"><?php if($tile['target_uri']): ?><a href="<?php echo $tile['target_uri']; ?>"><?php endif; ?><?php echo $tile['linked_event']['day']; ?><?php if($tile['target_uri']): ?></a><?php endif; ?></div>
                                 </div>
                                 <?php endif; ?>
                                 <?php if($tile['title'] or $tile['subtitle']): ?>
                                 <header>
-                                  <?php if($tile['title']): ?><div class='feature_title'><?php echo $tile['title']; ?></div><?php endif; ?>
-                                  <?php if($tile['subtitle']): ?><div class='feature_caption'><?php echo $tile['subtitle']; ?></div><?php endif; ?>
+                                  <?php if($tile['title']): ?><div class='feature_title'><?php if($tile['target_uri']): ?><a href="<?php echo $tile['target_uri']; ?>"><?php endif; ?><?php echo $tile['title']; ?><?php if($tile['target_uri']): ?></a><?php endif; ?></div><?php endif; ?>
+                                  <?php if($tile['subtitle']): ?><div class='feature_caption'><?php if($tile['target_uri']): ?><a href="<?php echo $tile['target_uri']; ?>"><?php endif; ?><?php echo $tile['subtitle']; ?><?php if($tile['target_uri']): ?></a><?php endif; ?></div><?php endif; ?>
                                 </header>
                                 <?php endif; ?>
-                                <?php if($tile['blurb']): ?><div class='feature_blurb'><?php echo $tile['blurb']; ?></div><?php endif; ?>
+                                <?php if($tile['blurb']): ?><div class='feature_blurb'><?php if($tile['target_uri']): ?><a href="<?php echo $tile['target_uri']; ?>"><?php endif; ?><?php echo $tile['blurb']; ?><?php if($tile['target_uri']): ?></a><?php endif; ?></div><?php endif; ?>
                               </div><!-- .feature-info -->
                             <?php endif; ?>
                             <?php if($slide_column['target_uri']): ?>
