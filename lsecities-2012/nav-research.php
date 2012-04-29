@@ -13,7 +13,7 @@ echo var_trace(var_export($pod, true), $TRACE_PREFIX, $TRACE_ENABLED);
 
 $projects_pod = new Pod('research_project');
 
-$current_projects = Array();
+$current_projects = array();
 $projects_pod->findRecords(array(
   'where' => 'status.name = "active"'
 ));
