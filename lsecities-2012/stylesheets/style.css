@@ -366,8 +366,9 @@ right: -21px; */ }
 .lc-newspaper-article header.heading-image img { max-width: 100%; width: 100%; }
 .lc-newspaper-article article .article .entry-content, .lc-newspaper-article article .article .extra-content { /* // TODO: re-enable once all the article photos have been double checked img { float: right; margin-left: 1.5em; margin-right: -50%; max-width: 150%; position: relative; width: 150%; }
 */ }
-.lc-newspaper-article .publication-side-toc h1 { font-size: 1em; font-weight: bold; margin-bottom: 0.5em; }
-.lc-newspaper-article .publication-side-toc h2 { font-size: 1em; margin-bottom: 0.25em; margin-top: 0.5em; }
+
+#publication-side-toc h1 { font-size: 1em; font-weight: bold; margin-bottom: 0.5em; }
+#publication-side-toc h2 { font-size: 1em; margin-bottom: 0.25em; margin-top: 0.5em; }
 
 .lc-conference-frontpage header.heading-image { position: relative; }
 .lc-conference-frontpage header.heading-image .mainheadings { position: absolute; top: 0; margin: 0.5em; line-height: 1em; color: #fff; text-shadow: black 1px 1px 5px; }
