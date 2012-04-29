@@ -149,7 +149,7 @@ if(count($attachments)) {
                     </ul>
                   </dd>
                   <?php endif; ?>
-                  <?php if($pdf_uri or count($attachments)) : ?>
+                  <?php if($pdf_uri or is_array($attachments)) : ?>
                   <dt>Downloads</dt>
                   <?php if($pdf_uri): ?>
                   <dd>
@@ -157,7 +157,7 @@ if(count($attachments)) {
                   </dd>
                   <?php endif; ?>
                   <?php
-                    if(count($attachments)) :
+                    if(is_array($attachments)) :
                       foreach($attachments as $attachment) :?>
                       <dd><a href="<?php echo $attachment['guid']; ?>" /><?php echo $attachment['post_title']; ?></a></dd>
                   <?php
