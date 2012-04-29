@@ -5,6 +5,8 @@ $current_post_id = $post->ID;
 
 global $IN_CONTENT_AREA;
 global $HIDE_CURRENT_PROJECTS, $HIDE_PAST_PROJECTS;
+global $BASE_URI;
+
 echo var_trace('HIDE_CURRENT_PROJECTS: '. $HIDE_CURRENT_PROJECTS, $TRACE_PREFIX, $TRACE_ENABLED);
 echo var_trace('HIDE_PAST_PROJECTS: '. $HIDE_PAST_PROJECTS, $TRACE_PREFIX, $TRACE_ENABLED);
 
@@ -43,7 +45,7 @@ echo var_trace('projects (by stream): ' . var_export($projects, true), $TRACE_PR
     <?php foreach($projects as $stream_name => $stream_projects): ?>
     <dt><?php echo $stream_name; ?></dt>
     <?php foreach($stream_projects as $stream_project): ?>
-    <dd><a href="<?php echo $stream_project['slug']; ?>"><?php echo $stream_project['name']; ?></a></dd>
+    <dd><a href="<?php echo $BASE_URI . $stream_project['slug']; ?>"><?php echo $stream_project['name']; ?></a></dd>
     <?php endforeach; ?>
     <?php endforeach; ?>
   </dl>
