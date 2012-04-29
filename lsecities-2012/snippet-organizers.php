@@ -1,6 +1,6 @@
 <ul id="organizer-logos">
   <li>
-    <a href="http://www.lse.ac.uk/collections/cities" target="_blank">
+    <a href="http://www.lse.ac.uk/" target="_blank">
       <img alt="LSE" src="<?php bloginfo('stylesheet_directory') ?>/images/lse_logo_white.gif" height="49" />
     </a>
   </li>
