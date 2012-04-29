@@ -159,7 +159,7 @@ if(count($attachments)) {
                   <?php
                     if(is_array($attachments)) :
                       foreach($attachments as $attachment) :?>
-                      <dd><a href="<?php echo $attachment['guid']; ?>" /><?php echo $attachment['post_title']; ?></a></dd>
+                      <dd class='downloadthis pdf'><a href="<?php echo $attachment['guid']; ?>" /><?php echo $attachment['post_title']; ?></a></dd>
                   <?php
                       endforeach;
                     endif; ?>
