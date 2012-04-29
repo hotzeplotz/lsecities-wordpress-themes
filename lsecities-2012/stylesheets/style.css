@@ -259,6 +259,9 @@ header.entry-header h1 { font-family: museo-sans, nevisBold, PT Sans, sans-serif
 #keyfacts dl dt, #navigationarea nav dl dt { border-bottom: 1px solid #eee; margin-top: 0.5em; }
 #keyfacts dl dt:first-child, #navigationarea nav dl dt:first-child { margin-top: 0; }
 
+div.widget { margin-bottom: 1em; }
+div.widget h2 { margin-bottom: 0.5em; }
+
 #navigationarea nav { margin-top: 2.5em; }
 #navigationarea nav:first-child { margin-top: inherit; }
 #navigationarea nav dl dt.ui-accordion-header:before { content: ''; background: url("http://v1.lsecities.net/wp-content/themes/lsecities-2012/images/icons/mal/bullet-horizontal.gif") no-repeat 0; padding-left: 0.75em; }
