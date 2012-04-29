@@ -2,12 +2,17 @@
 $TRACE_ENABLED = is_user_logged_in();
 $TRACE_PREFIX = 'nav.php -- ';
 $current_post_id = $post->ID;
-var_trace('post ID: ' . $current_post_id, $TRACE_PREFIX, $TRACE_ENABLED);
-var_trace(var_export($pod, true), $TRACE_PREFIX, $TRACE_ENABLED);
+
+global $HIDE_UPCOMING_EVENTS, $HIDE_PAST_EVENTS;
+echo var_trace('HIDE_UPCOMING_EVENTS: '. $HIDE_UPCOMING_EVENTS, $TRACE_PREFIX, $TRACE_ENABLED);
+echo var_trace('HIDE_PAST_EVENTS: '. $HIDE_PAST_EVENTS, $TRACE_PREFIX, $TRACE_ENABLED);
+
+echo var_trace('post ID: ' . $current_post_id, $TRACE_PREFIX, $TRACE_ENABLED);
+echo var_trace(var_export($pod, true), $TRACE_PREFIX, $TRACE_ENABLED);
 
 $events_pod = new Pod('event');
 $datetime_now = new DateTime('now');
-var_trace('datetime_now: ' . $datetime_now->format(DATE_ATOM), $TRACE_PREFIX, $TRACE_ENABLED);
+echo var_trace('datetime_now: ' . $datetime_now->format(DATE_ATOM), $TRACE_PREFIX, $TRACE_ENABLED);
 
 // prepare array with list of upcoming events
 $upcoming_events = Array();
@@ -35,7 +40,7 @@ for($year = 2005; $year <= $current_year; $year++) {
     'orderby' => 'date_start DESC',
     'limit' => -1
   ));
-  var_trace('events records found: ' . $events_pod->getTotalRows(), $TRACE_PREFIX, $TRACE_ENABLED);
+  echo var_trace('events records found: ' . $events_pod->getTotalRows(), $TRACE_PREFIX, $TRACE_ENABLED);
   while($events_pod->fetchRecord()) {
     // if event is past, add it to array
     if($events_pod->get_field['date_start'] < $datetime_now) {
@@ -53,7 +58,7 @@ for($year = 2005; $year <= $current_year; $year++) {
   }
 }
 
-var_trace('events array: ' . var_export($events, true), $TRACE_PREFIX, $TRACE_ENABLED);
+echo var_trace('events array: ' . var_export($events, true), $TRACE_PREFIX, $TRACE_ENABLED);
 
 // sort by year, backwards from current year
 krsort($events);
