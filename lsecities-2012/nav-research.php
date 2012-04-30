@@ -65,7 +65,7 @@ echo var_trace('past projects (by stream): ' . var_export($projects, true), $TRA
 <nav id="projectsmenu">
   <?php if(!$HIDE_CURRENT_PROJECTS): ?>
   <div id="current-projects">
-    <?php if(!$IN_CONTENT_AREA): ?><h1>Current projects</h1><?php endif; ?>
+    <?php if(!$IN_CONTENT_AREA): ?><h1>Current research</h1><?php endif; ?>
     <dl>
     <?php foreach($current_projects as $stream_name => $stream_projects): ?>
       <dt><?php echo $stream_name; ?></dt>
@@ -78,7 +78,7 @@ echo var_trace('past projects (by stream): ' . var_export($projects, true), $TRA
   <?php endif; ?>
   <?php if(!$HIDE_PAST_PROJECTS): ?>
   <div id="past-projects">
-    <?php if(!$IN_CONTENT_AREA): ?><h1>Completed projects</h1><?php endif; ?>
+    <?php if(!$IN_CONTENT_AREA): ?><h1>Completed research</h1><?php endif; ?>
     <dl>
     <?php foreach($past_projects as $stream_name => $stream_projects): ?>
       <dt><?php echo $stream_name; ?></dt>
