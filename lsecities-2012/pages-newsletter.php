@@ -468,11 +468,13 @@ if($TRACE_ENABLED) {
                                             
                                             </td>
                                         </tr>
+                                        <?php if(!strtolower(get_post_meta(get_the_ID(), "hide_newsletter_title", true)) == 'true'): ?>
                                         <tr>
                                             <td>
                                               <h1 id="headerTitle"><?php the_title(); ?></h1>
                                             </td>
                                         </tr>
+                                        <?php endif; ?>
                                     </table>
                                     <!-- // End Template Header \\ -->
                                 </td>
