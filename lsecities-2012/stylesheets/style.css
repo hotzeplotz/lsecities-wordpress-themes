@@ -389,6 +389,8 @@ right: -21px; */ }
 .lc-publication #tableofcontents .articles > section .article .authors { font-size: 0.8em; }
 .lc-publication #tableofcontents .articles > section .article .excerpt { font-size: 1em; }
 
+.lc-research-project nav#projectsmenu h1 { font-size: 1.2em; font-weight: bold; margin-bottom: 0.5em; }
+
 /*/mediaquery*/
 /*/mediaquery*/
 @media print { * { background: transparent !important; color: black !important; text-shadow: none !important; filter: none !important; -ms-filter: none !important; }
