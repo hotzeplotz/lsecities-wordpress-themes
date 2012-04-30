@@ -251,6 +251,7 @@ if($TRACE_ENABLED) {
    
    h1#headerTitle.detached {
      padding: 20px;
+     padding-bottom: 0;
      color: #000;
      background-color: inherit;
      display: block;
