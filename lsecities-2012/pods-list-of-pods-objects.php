@@ -85,8 +85,8 @@ $TRACE_PREFIX = 'pods-list-of-pods-objects';
             <?php get_template_part( 'nav', 'research' ); ?>                
             <?php break;
               case 'past_research_projects':
-                $HIDE_CURRENT_PROJECTS = true;
-                $IN_CONTENT_AREA = true;
+                $HIDE_PAST_PROJECTS = true;
+                $IN_CONTENT_AREA = false;
                 $BASE_URI = '/objects/research-projects/';
             ?>
             <?php get_template_part( 'nav', 'research' ); ?>              
