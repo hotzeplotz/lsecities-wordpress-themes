@@ -124,7 +124,7 @@ $pod = new Pod('slider', $pod_slug);
 
 $news_category_ids = $pod->get_field('news_category');
 echo var_trace('news_category_ids: ' . var_export($news_category_ids, true), $TRACE_PREFIX, $TRACE_ENABLED);
-if(count($news_categories_ids)) {
+if($news_categories_ids) {
   $news_categories = '';
   foreach($news_category_ids as $category) {
     $news_categories .= $category['id'] . ',';
