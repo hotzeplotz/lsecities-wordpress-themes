@@ -11,15 +11,15 @@
 
 <?php
   /* URI: TBD */
-  $TRACE_PODS_LIST = true;
+  $TRACE_ENABLED = is_user_logged_in();
   $TRACE_PREFIX = 'pods-list';
   $pod_slug = get_post_meta($post->ID, 'pod_slug', true);
   $pod = new Pod('list', $pod_slug);
   $pod_type = $pod->get_field('pod_type.slug');
-  echo var_trace('fetching list Pod with slug: ' . $pod_slug . " and pod_type: " . $pod_type, $TRACE_PREFIX, $TRACE_PODS_LIST);
+  echo var_trace('fetching list Pod with slug: ' . $pod_slug . " and pod_type: " . $pod_type, $TRACE_PREFIX, $TRACE_ENABLED);
   $pod_title = $pod->get_field('name');
   $page_id = $pod->get_field('featured_item.ID');
-  echo var_trace('slug for featured item: ' . get_post_meta($page_id, 'pod_slug', true), $TRACE_PREFIX, $TRACE_PODS_LIST);
+  echo var_trace('slug for featured item: ' . get_post_meta($page_id, 'pod_slug', true), $TRACE_PREFIX, $TRACE_ENABLED);
   $pod_featured_item_thumbnail = get_the_post_thumbnail($page_id, array(960,367));
   if(!$pod_featured_item_thumbnail) { $pod_featured_item_thumbnail = '<img src="' . $pod->get_field('featured_item_image.guid') . '" />'; }
   $pod_featured_item_permalink = get_permalink($page_id);
@@ -30,8 +30,8 @@
 <?php get_header(); ?>
 
 <?php
-echo var_trace(var_export($pod_featured_item_permalink, true), $TRACE_PREFIX . ' - featured_item_permalink', $TRACE_PODS_LIST);
-echo var_trace(var_export($pod_list, true), $TRACE_PREFIX . ' - pod_list', $TRACE_PODS_LIST);
+echo var_trace(var_export($pod_featured_item_permalink, true), $TRACE_PREFIX . ' - featured_item_permalink', $TRACE_ENABLED);
+echo var_trace(var_export($pod_list, true), $TRACE_PREFIX . ' - pod_list', $TRACE_ENABLED);
 
 ?>
 

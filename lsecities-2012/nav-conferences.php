@@ -1,5 +1,5 @@
 <?php
-$TRACE_ENABLED = true;
+$TRACE_ENABLED = is_user_logged_in();
 $TRACE_PREFIX = 'nav-conferences';
 
 if(check_parent_conference(1388)) : // /ua/conferences/2012-london

@@ -7,11 +7,11 @@
  * @subpackage Twenty_Eleven
  * @since Twenty Eleven 1.0
  */
-$TRACE_PAGES_CAMPAIGN = true;
+$TRACE_ENABLED = is_user_logged_in();
 
 // change to $our_permalink = get_permalink($id); once switch to WP+Pods is complete
 $our_permalink = preg_replace('/^https?:\/\/.*?\//', 'http://urban-age.net/', get_permalink($id));
-if($TRACE_PAGES_CAMPAIGN) {
+if($TRACE_ENABLED) {
   error_log('post_permalink: ' . get_permalink($id));
   error_log('our_permalink: ' . $our_permalink);
 }
@@ -452,7 +452,7 @@ if($TRACE_PAGES_CAMPAIGN) {
                                             	<!-- // Begin Module: Standard Header Image \\ -->
                                              <?php
                                              $heading_link = get_post_meta(get_the_ID(), "campaign_heading_link", true);
-                                             if($TRACE_PAGES_CAMPAIGN) {
+                                             if($TRACE_ENABLED) {
                                                error_log('post ID: ' . get_the_ID());
                                                error_log('campaign_heading_link: ' . $heading_link);
                                              }

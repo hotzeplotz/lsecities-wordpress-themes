@@ -13,10 +13,10 @@
  * URI: /media/search/?search=<search_string>
  */
 $search = get_post_meta($post->ID, 'pod_slug', true) || pods_url_variable('search', 'get');
-$TRACE_PODS_MEDIA_ARCHIVE_ITEM_JS = true;
+$TRACE_ENABLED = is_user_logged_in();
 $PODS_BASEURI_MEDIA_ARCHIVE_SEARCH = '/media/search/';
 
-if($TRACE_PODS_MEDIA_ARCHIVE_ITEM_JS) { error_log('pod_slug: ' . $pod_slug); }
+if($TRACE_ENABLED) { error_log('pod_slug: ' . $pod_slug); }
 $pod = new Pod('media_item');
 $params = Array();
 $params['where'] = 't.name LIKE "%' . $search . '%"';
