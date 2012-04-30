@@ -75,7 +75,7 @@ $TRACE_PREFIX = 'pods-list-of-pods-objects';
             </div><!-- .top-content -->
           </div>
 
-          <div class='wireframe threecol last'>
+          <div id="navigationarea" class='wireframe threecol last'>
             <?php switch(get_post_meta(get_the_ID(), 'list_pods', true)):
               case 'research_projects':
                 $HIDE_CURRENT_PROJECTS = true;
