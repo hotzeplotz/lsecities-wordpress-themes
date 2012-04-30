@@ -9,17 +9,26 @@
  */
 $TRACE_ENABLED = is_user_logged_in();
 
-// change to $our_permalink = get_permalink($id); once switch to WP+Pods is complete
-$our_permalink = preg_replace('/^https?:\/\/.*?\//', 'http://urban-age.net/', get_permalink($id));
+$our_permalink = preg_replace('/^https/', 'http', get_permalink($id);
+
+// read post meta newsletter_title_meta and check if we should hide title or add extra classes
+$newsletter_title_meta = strtolower(get_post_meta(get_the_ID(), 'newsletter_title_meta', true);
+
+switch($newsletter_title_meta) {
+  case 'hidden':
+    $hide_newsletter_title = true;
+    break;
+  case 'class-detached':
+    $newsletter_title_extra_classes = 'detached';
+    break;
+}
+
 if($TRACE_ENABLED) {
   error_log('post_permalink: ' . get_permalink($id));
   error_log('our_permalink: ' . $our_permalink);
 }
 
-?>
-<?php define('WP_USE_THEMES', false); ?>
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+?><?php define('WP_USE_THEMES', false); ?><?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -238,6 +247,13 @@ if($TRACE_ENABLED) {
     display: inline-block;
     text-transform: uppercase;
     padding: 0 20px;
+   }
+   
+   h1#headerTitle.detached {
+     padding: 20px;
+     color: #000;
+     background-color: inherit;
+     display: block;
    }
 			/* /\/\/\/\/\/\/\/\/\/\ STANDARD STYLING: MAIN BODY /\/\/\/\/\/\/\/\/\/\ */
 
@@ -468,10 +484,10 @@ if($TRACE_ENABLED) {
                                             
                                             </td>
                                         </tr>
-                                        <?php if(!strtolower(get_post_meta(get_the_ID(), "hide_newsletter_title", true)) == 'true'): ?>
+                                        <?php if(!$hide_newsletter_title): ?>
                                         <tr>
                                             <td>
-                                              <h1 id="headerTitle"><?php the_title(); ?></h1>
+                                              <h1 id="headerTitle"<?php if($newsletter_title_extra_classes): ?> class="<?php echo $newsletter_title_extra_classes; ?>"<?php endif; ?>><?php the_title(); ?></h1>
                                             </td>
                                         </tr>
                                         <?php endif; ?>
