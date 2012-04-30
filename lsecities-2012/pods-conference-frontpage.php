@@ -134,9 +134,9 @@ $research_summary_pdf_uri = $pod->get_field('research_summary.data_section_pdf_u
                 <?php if($conference_publication_cover and $conference_publication_blurb): ?>
                 <div>
                   <ul class="sixcol">
-                    <?php if($conference_publication_wp_page): ?><li><a href="<?php echo $conference_publication_wp_page; ?>">Read online</a></li><?php endif; ?>
+                    <?php if($conference_publication_wp_page): ?><li><a class="readthis online" href="<?php echo $conference_publication_wp_page; ?>">Read online</a></li><?php endif; ?>
                     <?php if($conference_publication_pdf): ?><li><a class="downloadthis pdf" href="<?php echo $conference_publication_pdf; ?>">Download (PDF)</a></li><?php endif; ?>
-                    <?php if($conference_publication_issuu): ?><li><a href="<?php echo $conference_publication_issuu; ?>">Online reader</a></li><?php endif; ?>
+                    <?php if($conference_publication_issuu): ?><li><a class="readthis online" href="<?php echo $conference_publication_issuu; ?>">Online reader</a></li><?php endif; ?>
                   </ul>
                   <img src="<?php echo $conference_publication_cover; ?>" class="sixcol last">
                 </div>
