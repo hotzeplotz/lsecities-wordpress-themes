@@ -75,10 +75,10 @@ function process_session($session_slug) {
   if($session_youtube_video or $session_slides) {
     echo '<ul class="mediaitems">';
     if($session_youtube_video) {
-      echo "<li class='link video'><a href='http://youtube.com/watch?v=$session_youtube_video'>Watch video</a></li>";
+      echo "<li class='link video'><a class='watchvideo onyoutube' href='http://youtube.com/watch?v=$session_youtube_video'>Watch video</a></li>";
     }
     if($session_slides) {
-      echo "<li class='link slides'><a href='http://downloads0.cloud.lsecities.net/$session_slides'>Browse slides</a></li>";
+      echo "<li class='link slides'><a class='downloadthis pdf' href='http://downloads0.cloud.lsecities.net/$session_slides'>Browse slides</a></li>";
     }
     echo '</ul>';
   }
