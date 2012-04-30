@@ -140,7 +140,7 @@ $logo_element_id = $urban_age_section ? 'ualogo' : 'logo';
 									</a>
 								</li>
 								<li>
-									<a title="News archive" href="http://lsecities.net/category/urban-age/">
+									<a title="News feed" href="http://lsecities.net/feed/">
 										<img src="http://v1.lsecities.net/wp-content/themes/lsecities-2012/images/icons/mal/icon_rsslightblue_24x24.png" alt="News archive">
 									</a>
 								</li>
