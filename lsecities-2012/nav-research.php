@@ -15,38 +15,78 @@ echo var_trace(var_export($pod, true), $TRACE_PREFIX, $TRACE_ENABLED);
 
 $projects_pod = new Pod('research_project');
 
-$current_projects = array();
+$current_projects_list = array();
 $projects_pod->findRecords(array(
   'where' => 'status.name = "active"'
 ));
-$projects = array();
+$current_projects = array();
 while($projects_pod->fetchRecord()) {
-  array_push($current_projects, array(
+  array_push($current_projects_list, array(
     'slug' => $projects_pod->get_field('slug'),
     'name' => $projects_pod->get_field('name'),
     'stream' => $projects_pod->get_field('research_stream.name')
   ));
-  $projects[$projects_pod->get_field('research_stream.name')] = array();
+  $current_projects[$projects_pod->get_field('research_stream.name')] = array();
+}
+
+echo var_trace('projects: ' . var_export($current_projects_list, true), $TRACE_PREFIX, $TRACE_ENABLED);
+
+foreach($current_projects_list as $project) {
+  $key = $project['stream'];
+  array_push($current_projects[$key], $project);
+}
+
+echo var_trace('projects (by stream): ' . var_export($current_projects, true), $TRACE_PREFIX, $TRACE_ENABLED);
+
+$past_projects_list = array();
+$projects_pod->findRecords(array(
+  'where' => 'status.name = "completed"'
+));
+$past_projects = array();
+while($projects_pod->fetchRecord()) {
+  array_push($past_projects_list, array(
+    'slug' => $projects_pod->get_field('slug'),
+    'name' => $projects_pod->get_field('name'),
+    'stream' => $projects_pod->get_field('research_stream.name')
+  ));
+  $past_projects[$projects_pod->get_field('research_stream.name')] = array();
 }
 
 echo var_trace('projects: ' . var_export($current_projects, true), $TRACE_PREFIX, $TRACE_ENABLED);
 
-foreach($current_projects as $project) {
+foreach($past_projects as $project) {
   $key = $project['stream'];
-  array_push($projects[$key], $project);
+  array_push($past_projects[$key], $project);
 }
 
 echo var_trace('projects (by stream): ' . var_export($projects, true), $TRACE_PREFIX, $TRACE_ENABLED);
-
 ?>
 
 <nav id="projectsmenu">
-  <dl>
-    <?php foreach($projects as $stream_name => $stream_projects): ?>
-    <dt><?php echo $stream_name; ?></dt>
-    <?php foreach($stream_projects as $stream_project): ?>
-    <dd><a href="<?php echo $BASE_URI . $stream_project['slug']; ?>"><?php echo $stream_project['name']; ?></a></dd>
+  <?php if(!$HIDE_CURRENT_PROJECTS): ?>
+  <div id="current-projects">
+    <?php if(!$IN_CONTENT_AREA): ?><h1>Current projects</h1><?php endif; ?>
+    <dl>
+    <?php foreach($current_projects as $stream_name => $stream_projects): ?>
+      <dt><?php echo $stream_name; ?></dt>
+      <?php foreach($stream_projects as $stream_project): ?>
+      <dd><a href="<?php echo $BASE_URI . $stream_project['slug']; ?>"><?php echo $stream_project['name']; ?></a></dd>
+      <?php endforeach; ?>
     <?php endforeach; ?>
+    </dl>
+  </div>
+  <?php endif; ?>
+  <?php if(!$HIDE_PAST_PROJECTS): ?>
+  <div id="past-projects">
+    <?php if(!$IN_CONTENT_AREA): ?><h1>Completed projects</h1><?php endif; ?>
+    <dl>
+    <?php foreach($past_projects as $stream_name => $stream_projects): ?>
+      <dt><?php echo $stream_name; ?></dt>
+      <?php foreach($stream_projects as $stream_project): ?>
+      <dd><a href="<?php echo $BASE_URI . $stream_project['slug']; ?>"><?php echo $stream_project['name']; ?></a></dd>
+      <?php endforeach; ?>
     <?php endforeach; ?>
-  </dl>
+    </dl>
+  </div>
+  <?php endif; ?>
 </nav>
