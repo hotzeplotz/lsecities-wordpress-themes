@@ -121,7 +121,7 @@ echo var_trace('sections: ' . var_export($publication_sections, true), $TRACE_PR
               <li><a class="downloadthis pdf button" href="<?php echo $pod_pdf; ?>">Download PDF</a></li>
               <?php endif ; ?>
               <?php if($pod_issuu_uri) : ?>
-              <li><a class="issuu button" href="<?php echo $pod_issuu_uri; ?>">Online browser</a></li>
+              <li><a class="readthis online issuu button" href="<?php echo $pod_issuu_uri; ?>">Online browser</a></li>
               <?php endif ; ?>
             </ul>
             <dl>
