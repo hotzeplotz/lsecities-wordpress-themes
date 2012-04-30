@@ -43,7 +43,7 @@ foreach($publication_authors_list as $publication_author) {
   $publication_authors .= $publication_author['name'] . ' ' . $publication_author['family_name'] . ', ';
 }
 $publication_authors = substr($publication_authors, 0, -2);
-$publication_editors_list = $pod->get_field('editors');
+$publication_editors_list = (array) $pod->get_field('editors');
 foreach($publication_editors_list as $publication_editor) {
   $publication_editors .= $publication_editor['name'] . ' ' . $publication_editor['family_name'] . ', ';
 }
