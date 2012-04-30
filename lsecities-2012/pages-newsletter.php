@@ -12,7 +12,7 @@ $TRACE_ENABLED = is_user_logged_in();
 $our_permalink = preg_replace('/^https/', 'http', get_permalink($id));
 
 // read post meta newsletter_title_meta and check if we should hide title or add extra classes
-$newsletter_title_meta = strtolower(get_post_meta(get_the_ID(), 'newsletter_title_meta', true);
+$newsletter_title_meta = strtolower(get_post_meta(get_the_ID(), 'newsletter_title_meta', true));
 
 switch($newsletter_title_meta) {
   case 'hidden':
