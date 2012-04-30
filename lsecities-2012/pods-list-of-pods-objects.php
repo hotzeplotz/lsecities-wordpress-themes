@@ -75,9 +75,24 @@ $TRACE_PREFIX = 'pods-list-of-pods-objects';
             </div><!-- .top-content -->
           </div>
 
-          <div class='wireframe threecol last'>    
+          <div class='wireframe threecol last'>
+            <?php switch(get_post_meta(get_the_ID(), 'list_pods', true)):
+              case 'research_projects':
+                $HIDE_CURRENT_PROJECTS = true;
+                $BASE_URI = '/media/objects/events/';
+                $IN_CONTENT_AREA = false;
+            ?>
+            <?php get_template_part( 'nav', 'research' ); ?>                
+            <?php break;
+              case 'past_research_projects':
+                $HIDE_CURRENT_PROJECTS = true;
+                $IN_CONTENT_AREA = true;
+                $BASE_URI = '/objects/research-projects/';
+            ?>
+            <?php get_template_part( 'nav', 'research' ); ?>              
+            <?php break; ?>
+            <?php endswitch; ?>
           </div>
-
 </div><!-- #contentarea -->
 </div>
 
