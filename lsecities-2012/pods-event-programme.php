@@ -103,9 +103,8 @@ function process_session($session_slug) {
     <?php endif ; ?>
   </header><!-- .entry-header -->
 	<div class="entry-content">
+    <div id="contentarea">
     <h1><?php echo $page_title; ?></h1>
-    
-		<?php the_content(); ?>
 
     <?php if(!empty($pod->data)) : ?>
       <div class="article row">
@@ -123,6 +122,7 @@ function process_session($session_slug) {
       </div>
     <?php endif ?>    
 		<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'twentyeleven' ) . '</span>', 'after' => '</div>' ) ); ?>
+    </div><!-- #contentarea -->
 	</div><!-- .entry-content -->
 </article><!-- #post-<?php the_ID(); ?> -->
 
