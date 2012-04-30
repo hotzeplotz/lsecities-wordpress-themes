@@ -99,8 +99,8 @@ $research_stream_summary = $pod->get_field('research_stream.summary');
             <dd><?php echo $project_partners; ?></dd>
           <?php endif; ?>
           <?php if($research_stream_title): ?>
-            <dt><?php echo $research_stream_title; ?></dt>
-            <dd><?php echo $research_stream_summary; ?></dd>
+            <dt>Research stream</dt>
+            <dd><?php echo $research_stream_title; ?></dd>
           <?php endif; ?>       
           </dl>
         </aside><!-- #keyfacts -->
