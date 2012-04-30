@@ -248,6 +248,7 @@ header.entry-header h1 { font-family: museo-sans, nevisBold, PT Sans, sans-serif
 .lc-event-programme #contentarea section > header { border-top: 1px solid red; }
 .lc-event-programme #contentarea section > header > h1 { color: #fff; background-color: red; display: inline-block; padding: 0 0.5em; margin-bottom: 1em; font-size: 1.125em; line-height: 1.3em; font-weight: bold; }
 .lc-event-programme #contentarea section > header > h1 { margin-bottom: 0; }
+.lc-event-programme #contentarea .event-programme .session-chairs dd { display: inline; }
 .lc-event-programme #contentarea .event-programme ul.mediaitems { display: inline; }
 .lc-event-programme #contentarea .event-programme ul.mediaitems > li { display: inline; margin-right: 1em; }
 
