@@ -302,6 +302,8 @@ div.widget h2 { margin-bottom: 0.5em; }
 
 .readthis.online { background: url("http://v1.lsecities.net/wp-content/themes/lsecities-2012/images/icons/mal/icon_magglassdarkblue_20x20.png") no-repeat scroll 0 0 transparent; padding-left: 28px; padding-bottom: 8px; }
 
+.watchvideo.onyoutube { background: url("http://v1.lsecities.net/wp-content/themes/lsecities-2012/images/icons/mal/icon_youtubedarkblue_20x20.png") no-repeat scroll 0 0 transparent; padding-left: 28px; padding-bottom: 8px; }
+
 .flexslider { position: relative; /* Direction Nav */ /* Control Nav */ }
 .flexslider .flex-direction-nav li a { width: 33px; height: 64px; text-indent: -9999px; border: 0; margin: -13px 0 0; display: block; /* background: url(theme/bg_direction_nav.png) no-repeat 0 0; */ position: absolute; top: 45%; /* top: 50%; */ opacity: 0.9; }
 .flexslider .flex-direction-nav li a:hover { background-position: 0px -65px; opacity: 1; }
