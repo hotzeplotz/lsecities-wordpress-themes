@@ -52,7 +52,7 @@ $visualization_tiles = $pod->get_field('research_summary.visualization_tiles');
 $tile_pod = new Pod('tile', $visualization_tiles[0]['slug']);
 echo var_trace('tile_image: ' . var_export($tile_pod->get_field('image'), true), $TRACE_PREFIX, $TRACE_ENABLED);
 $research_summary_tile_image = $tile_pod->get_field('image.guid');
-
+$research_summary_pdf_uri = $pod->get_field('research_summary.data_section_pdf_uri');
 ?>
 
 <?php get_header(); ?>
@@ -104,6 +104,9 @@ $research_summary_tile_image = $tile_pod->get_field('image.guid');
                   <aside id="research-blurb" class="fourcol">
                     <h3><?php echo $research_summary_title; ?></h3>
                     <p><?php echo $research_summary_blurb; ?></p>
+                    <?php if($research_summary_pdf_uri): ?>
+                    <p><a class="downloadthis pdf button" href="<?php echo $research_summary_pdf_uri; ?>">Download research summary</a></p>
+                    <?php endif; ?>
                   </aside>
                   <aside id="research-visualizations" class="eightcol last">
                     <img src="<?php echo $research_summary_tile_image; ?>" />
