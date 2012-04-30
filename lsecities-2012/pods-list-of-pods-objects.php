@@ -80,7 +80,7 @@ $TRACE_PREFIX = 'pods-list-of-pods-objects';
               case 'research_projects':
                 $HIDE_CURRENT_PROJECTS = true;
                 $HIDE_PAST_PROJECTS = false;
-                $BASE_URI = '/media/objects/events/';
+                $BASE_URI = '/objects/research-projects/';
                 $IN_CONTENT_AREA = false;
             ?>
             <?php get_template_part( 'nav', 'research' ); ?>                
