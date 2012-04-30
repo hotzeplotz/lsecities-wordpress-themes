@@ -148,7 +148,7 @@ $logo_element_id = $urban_age_section ? 'ualogo' : 'logo';
 						</span>
 					</div>
 				</div><!-- #toolbox -->
-				<nav id='level1nav' class="row">
+				<nav id='level1nav'>
 					<ul>
 					<?php wp_list_pages('depth=1&sort_column=menu_order&title_li=&exclude=393,395,562,1074'); ?>
 					</ul>
