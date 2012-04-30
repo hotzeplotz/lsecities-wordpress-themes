@@ -385,6 +385,9 @@ right: -21px; */ }
 
 .lc-publication #keyfacts > div { padding: 0 4em; }
 .lc-publication #keyfacts dl dt { border-bottom: none; }
+.lc-publication .publication-sections { margin-top: 2em; }
+.lc-publication .publication-sections h1 { margin-bottom: 0.5em; }
+.lc-publication .publication-sections ul li { line-height: 1.125em; margin-bottom: 0.5em; }
 .lc-publication #tableofcontents .articles > section { margin-bottom: 1em; }
 .lc-publication #tableofcontents .articles > section > h1 { font-size: 1.125em; line-height: 2em; font-weight: bold; }
 .lc-publication #tableofcontents .articles > section .article { margin-bottom: 0.5em; }
