@@ -11,15 +11,15 @@
 
 <?php
   /* URI: TBD */
-  $TRACE_PODS_EVENT_PROGRAMME = true;
+  $TRACE_ENABLED = is_user_logged_in();
   $TRACE_PREFIX = 'pods-event-programme.php -- ';
   $pod_slug = get_post_meta($post->ID, 'pod_slug', true);
-  if($TRACE_PODS_EVENT_PROGRAMME) { error_log($TRACE_PREFIX . 'pod_slug: ' . var_export($publication_slug, true)); }
+  if($TRACE_ENABLED) { error_log($TRACE_PREFIX . 'pod_slug: ' . var_export($publication_slug, true)); }
   $pod = new Pod('event_programme', $pod_slug);
   $pod_title = $pod->get_field('name');
-  if($TRACE_PODS_EVENT_PROGRAMME) { error_log($TRACE_PREFIX . 'title: ' . var_export($pod_title, true)); }
+  if($TRACE_ENABLED) { error_log($TRACE_PREFIX . 'title: ' . var_export($pod_title, true)); }
   $pod_subtitle = $pod->get_field('programme_subtitle');
-  if($TRACE_PODS_EVENT_PROGRAMME) { error_log($TRACE_PREFIX . 'subtitle: ' . var_export($subtitle, true)); }
+  if($TRACE_ENABLED) { error_log($TRACE_PREFIX . 'subtitle: ' . var_export($subtitle, true)); }
   $subsessions = $pod->get_field('sessions.slug');
   if(count($subsessions) == 1) { $subsessions = array(0 => $subsessions); }
   
@@ -28,10 +28,10 @@
   
   $page_title = !empty($for_conference) ? "Conference programme" : "Event programme";
   
-  if($TRACE_PODS_EVENT_PROGRAMME) { error_log($TRACE_PREFIX . 'sessions: ' . var_export($subsessions, true)); }
+  if($TRACE_ENABLED) { error_log($TRACE_PREFIX . 'sessions: ' . var_export($subsessions, true)); }
   
 function process_session($session_slug) {
-  global $TRACE_PODS_EVENT_PROGRAMME;
+  global $TRACE_ENABLED;
   $ALLOWED_TAGS_IN_BLURBS = '<strong><em>';
   
   $pod = new Pod('event_session', $session_slug);
@@ -60,10 +60,10 @@ function process_session($session_slug) {
   $session_slides = $pod->get_field('media_items.slides_uri');
   $subsessions = $pod->get_field('sessions.slug');
   if($subsessions and count($subsessions) == 1) { $subsessions = array(0 => $subsessions); }
-  if($TRACE_PODS_EVENT_PROGRAMME) { error_log($TRACE_PREFIX . 'session count: ' . count($subsessions)); }
-  if($TRACE_PODS_EVENT_PROGRAMME) { error_log($TRACE_PREFIX . 'sessions: ' . var_export($subsessions, true)); }
-  echo "<div id='$session_id' class='$session_type'>";
-  if($session_title and !$hide_title) { echo '<h2>' . $session_times . $session_title . '</h2>'; }
+  if($TRACE_ENABLED) { error_log($TRACE_PREFIX . 'session count: ' . count($subsessions)); }
+  if($TRACE_ENABLED) { error_log($TRACE_PREFIX . 'sessions: ' . var_export($subsessions, true)); }
+  echo "<section id='$session_id' class='$session_type'>";
+  if($session_title and !$hide_title) { echo '<header><h1>' . $session_times . $session_title . '</h1></header>'; }
   if($session_subtitle and !$hide_title) { echo "<h3>$session_subtitle</h3>"; }
   if($session_chairs) {
     $caption = count($session_chairs) > 1 ? "Chairs" : "Chair";
@@ -87,7 +87,7 @@ function process_session($session_slug) {
       process_session($session);
     }
   }
-  echo "</div>";
+  echo "</section><!-- #$session_id -->";
 }
 ?>
 
@@ -95,7 +95,7 @@ function process_session($session_slug) {
 
 <div role="main" class="row">
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('ninecol'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('ninecol lc-article lc-event-programme'); ?>>
   <header class="entry-header">
     <h1 class="entry-title"><?php echo $pod_title; ?></h1>
     <?php if($pod_subtitle) : ?>
