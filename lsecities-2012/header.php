@@ -106,9 +106,13 @@ $logo_element_id = $urban_age_section ? 'ualogo' : 'logo';
 						&nbsp;
 					</div>
 				</a>
-				<a href="<?php if($urban_age_section) { echo 'ua/'; }?>">
-					<div class='threecol' id='ualogo-disabled'>&nbsp;</div>
+        <?php if($urban_age_section): ?>
+				<a href="/ua/">
+					<div class='threecol' id='ualogo'>&nbsp;</div>
 				</a>
+        <?php else: ?>
+        <span class="threecol">&nbsp;</span>
+        <?php endif; ?>
 				<div class='sixcol last' id='toolbox'>
 					<div id="searchbox" class="clearfix">
 						<form method="get" id="search-box" action="http://www.google.com/u/urbanAge">
