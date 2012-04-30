@@ -54,12 +54,12 @@ while($projects_pod->fetchRecord()) {
 
 echo var_trace('projects: ' . var_export($current_projects, true), $TRACE_PREFIX, $TRACE_ENABLED);
 
-foreach($past_projects as $project) {
+foreach($past_projects_list as $project) {
   $key = $project['stream'];
   array_push($past_projects[$key], $project);
 }
 
-echo var_trace('projects (by stream): ' . var_export($projects, true), $TRACE_PREFIX, $TRACE_ENABLED);
+echo var_trace('past projects (by stream): ' . var_export($projects, true), $TRACE_PREFIX, $TRACE_ENABLED);
 ?>
 
 <nav id="projectsmenu">
