@@ -250,11 +250,13 @@ if($TRACE_ENABLED) {
    }
    
    h1#headerTitle.detached {
+     background-color: transparent;
+     color: #000;
+     font-size: 1.5em;
+     display: block;
+     text-transform: uppercase;
      padding: 20px;
      padding-bottom: 0;
-     color: #000;
-     background-color: inherit;
-     display: block;
    }
 			/* /\/\/\/\/\/\/\/\/\/\ STANDARD STYLING: MAIN BODY /\/\/\/\/\/\/\/\/\/\ */
 
