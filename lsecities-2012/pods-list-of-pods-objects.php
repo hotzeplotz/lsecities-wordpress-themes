@@ -40,7 +40,7 @@ switch($pod_type) {
                 <header>
                   <h1><?php the_title($pod_type); ?></h1>
                 </header>
-                <?php switch():
+                <?php switch($pod_type):
                   case 'upcoming_events':
                     $HIDE_PAST_EVENTS = true;
                     $BASE_URI = '/media/objects/events/';
