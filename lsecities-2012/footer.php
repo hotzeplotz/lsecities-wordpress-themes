@@ -67,7 +67,7 @@
 </div><!-- ## grid # container -->
 
 <?php wp_footer(); ?>
-<script type="text/javascript" src="https://use.typekit.com/ftd3lpp.js"></script>
+<script type="text/javascript" src="http://use.typekit.com/ftd3lpp.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 <script>
       //<![CDATA[
