@@ -28,8 +28,8 @@ if($TRACE_ENABLED) { error_log('toplevel_ancestor: ' . $toplevel_ancestor); }
 $level2nav = wp_list_pages('child_of=' . $toplevel_ancestor . '&depth=1&sort_column=menu_order&title_li=&echo=0');
 
 // check if we are in the Urban Age section
-$urban_age_section = ($toplevel_ancestor == 94) ? true : false;
-$logo_element_id = $urban_age_section ? 'ualogo' : 'logo';
+$GLOBALS['urban_age_section'] = ($toplevel_ancestor == 94) ? true : false;
+$logo_element_id = $GLOBALS['urban_age_section'] ? 'ualogo' : 'logo';
 
 ?><!DOCTYPE html>
 <!--[if IE 6]>
@@ -115,7 +115,7 @@ $logo_element_id = $urban_age_section ? 'ualogo' : 'logo';
 						&nbsp;
 					</div>
 				</a>
-        <?php if($urban_age_section): ?>
+        <?php if($GLOBALS['urban_age_section']): ?>
 				<a href="/ua/">
 					<div class='threecol' id='ualogo'>&nbsp;</div>
 				</a>
