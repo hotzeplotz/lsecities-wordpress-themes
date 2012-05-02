@@ -25,6 +25,9 @@
   $pod_featured_item_permalink = get_permalink($page_id);
   $pod_featured_item_pod = new Pod($pod_type, get_post_meta($pod->get_field('featured_item.ID'), 'pod_slug', true));
   $pod_list = $pod->get_field('list');
+  if($pod->get_field('sort_descending') {
+    $pod_list = array_reverse($pod_list);
+  }
 ?>
 
 <?php get_header(); ?>
