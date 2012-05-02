@@ -43,6 +43,7 @@ $logo_element_id = $urban_age_section ? 'ualogo' : 'logo';
 <html <?php language_attributes(); ?>>
 <!--<![endif]-->
 <head>
+<meta http-equiv="x-ua-compatible" content="IE=8">
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name="viewport" content="width=device-width" />
 <title><?php
