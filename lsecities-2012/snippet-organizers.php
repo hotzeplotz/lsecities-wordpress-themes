@@ -1,8 +1,11 @@
 <?php 
+$TRACE_ENABLED = is_user_logged_in();
+$TRACE_PREFIX = 'footer';
 $ancestors = get_ancestors($post->ID, 'page');
 array_unshift($ancestors, $post->ID);
 $toplevel_ancestor = array_pop($ancestors);
-$urban_age_section = (($toplevel_ancestor) == 94) ?  true : false;;
+$urban_age_section = ($toplevel_ancestor == 94) ?  true : false;
+echo var_trace($toplevel_ancestor, $TRACE_PREFIX, $TRACE_ENABLED);
 ?>
 <ul id="organizer-logos">
   <li>
