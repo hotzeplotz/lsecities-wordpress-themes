@@ -8,8 +8,9 @@
  * @subpackage Twenty_Eleven
  * @since Twenty Eleven 1.0
  */
+ 
+global $urban_age_section;
 ?>
-
 	</div><!-- #main -->
 </div><!-- #page -->
 	<footer id="footer">
