@@ -38,7 +38,7 @@ switch($pod_type) {
             <div class='top-content'>
               <article class='wireframe row'>
                 <header>
-                  <h1><?php the_title($pod_type); ?></h1>
+                  <h1><?php the_title(); ?></h1>
                 </header>
                 <?php switch($pod_type):
                   case 'upcoming_events':
