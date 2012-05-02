@@ -1,4 +1,6 @@
-<?php global $urban_age_section; ?>
+<?php 
+$urban_age_section = (array_pop(get_ancestors($post->ID, 'page')) == 94) ?  true : false;;
+?>
 <ul id="organizer-logos">
   <li>
     <a href="http://www.lse.ac.uk/" target="_blank">
