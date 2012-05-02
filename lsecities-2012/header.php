@@ -161,6 +161,8 @@ $logo_element_id = $urban_age_section ? 'ualogo' : 'logo';
 					<ul>
 					<?php if($toplevel_ancestor): ?>
 						<?php echo $level2nav ; ?>
+					<?php else: ?>
+						<li>&nbsp;</li>
 					<?php endif; ?>
 					</ul>
 				</nav>
