@@ -211,7 +211,7 @@ header #socialbuttons { height: 30px; }
 header #socialbuttons h4 { display: inline; }
 header #socialbuttons ul { height: 16px; }
 
-#conferencesmenu ul { font-family: BureauGrotesque-ThreeSeven, Anton; font-size: 1.125em; line-height: 1.5em; text-transform: uppercase; list-style: none; padding-left: 0; }
+#conferencesmenu ul { font-family: BureauGrotesque-ThreeSeven, Anton, Arial, Helvetica, sans-serif; font-size: 1.125em; line-height: 1.5em; text-transform: uppercase; list-style: none; padding-left: 0; }
 #conferencesmenu a, #conferencesmenu a:active, #conferencesmenu a:visited { color: #555555; }
 #conferencesmenu a:hover { color: #990000; }
 
@@ -280,7 +280,7 @@ div.widget h2 { margin-bottom: 0.5em; }
 #conferencepagesnav nav.conferencemenu ul li a { color: #fff; }
 #conferencepagesnav nav dl dt { color: #fff; background-color: #000; padding: 0.5em; font-weight: normal; }
 #conferencepagesnav nav dl dd { padding: 0.5em; }
-#conferencepagesnav .citieslist li { text-transform: uppercase; font-family: BureauGrotesque-ThreeSeven, Anton; font-size: 1.2em; line-height: 1em; }
+#conferencepagesnav .citieslist li { text-transform: uppercase; font-family: BureauGrotesque-ThreeSeven, Anton, Arial, Helvetica, sans-serif; font-size: 1.2em; line-height: 1em; }
 #conferencepagesnav .citieslist li a { color: inherit; text-decoration: none; }
 #conferencepagesnav .citieslist li a:hover { color: #990000; }
 
@@ -344,10 +344,10 @@ right: -21px; */ }
 .lc-slider-page .flexslider .tile .inner-box { padding: 0.714285714em; }
 .lc-slider-page .flexslider .tile .crop { position: relative; overflow: hidden; }
 .lc-slider-page .flexslider .tile .crop img { /* position: absolute; */ margin: 0; width: 100%; }
-.lc-slider-page .flexslider .tile.databox { font-family: BureauGrotesque-ThreeSeven, Anton; }
-.lc-slider-page .flexslider .tile.databox h1 { font-family: BureauGrotesque-ThreeSeven, Anton; text-transform: uppercase; font-weight: bold; font-size: 6em !important; display: inline; line-height: 1em; margin-bottom: inherit !important; }
+.lc-slider-page .flexslider .tile.databox { font-family: BureauGrotesque-ThreeSeven, Anton, Arial, Helvetica, sans-serif; }
+.lc-slider-page .flexslider .tile.databox h1 { font-family: BureauGrotesque-ThreeSeven, Anton, Arial, Helvetica, sans-serif; text-transform: uppercase; font-weight: bold; font-size: 6em !important; display: inline; line-height: 1em; margin-bottom: inherit !important; }
 .lc-slider-page .flexslider .tile.databox p { font-size: 1.4em !important; display: inline; text-transform: uppercase; }
-.lc-slider-page .flexslider .tile.citieslist ul { display: inline; text-transform: uppercase; font-family: BureauGrotesque-ThreeSeven, Anton; font-size: 2em; }
+.lc-slider-page .flexslider .tile.citieslist ul { display: inline; text-transform: uppercase; font-family: BureauGrotesque-ThreeSeven, Anton, Arial, Helvetica, sans-serif; font-size: 2em; }
 .lc-slider-page .flexslider .tile.citieslist ul li { display: inline; }
 .lc-slider-page .flexslider .tile.citieslist ul li::after { content: ' '; }
 .lc-slider-page .flexslider .tile.citieslist ul li.alternate { color: #999; }
