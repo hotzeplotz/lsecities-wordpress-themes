@@ -12,7 +12,7 @@
 $PODS_BASEURI_RESEARCH_PROJECTS = '/objects/research-projects';
 $TRACE_ENABLED = is_user_logged_in();
 $TRACE_PREFIX = 'pods-research-projects';
-
+$pods_toplevel_ancestor = 306;
 $pod_slug = get_post_meta($post->ID, 'pod_slug', true);
 if(!$pod_slug) {
   $pod_slug = pods_url_variable(2);
