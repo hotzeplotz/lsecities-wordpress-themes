@@ -36,19 +36,15 @@
           </ul>
         </div>
         <div class="twocol">
-          <h1>Conferences</h1>
+          <h1>Urban Age</h1>
           <ul>
-            <?php wp_list_pages('title_li=&depth=1&child_of=96&sort_column=menu_order&sort_order=DESC&echo=1'); ?>
+            <?php wp_list_pages('title_li=&depth=1&child_of=94&sort_column=menu_order&sort_order=ASC&echo=1'); ?>
           </ul>
         </div>
         <div class="twocol">
           <h1>Events</h1>
           <ul>
             <?php wp_list_pages('title_li=&depth=1&child_of=311&sort_column=menu_order&sort_order=ASC&echo=1'); ?>
-          </ul>
-          <h1>Deutsche Bank Urban Age Award</h1>
-          <ul>
-            <?php wp_list_pages('title_li=&depth=1&child_of=489&sort_column=menu_order&sort_order=ASC&echo=1'); ?>
           </ul>
         </div>
   <!--  <section class="fourcol">
