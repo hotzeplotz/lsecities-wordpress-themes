@@ -18,7 +18,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
 
-body { font-size: 16px; font-family: nimbus-sans, PT Sans, ff-meta-web-pro, UbuntuRegular, Tahoma, Elvetica, sans-serif; line-height: 1.5; *font-size: small; }
+body { font-size: 16px; font-family: nimbus-sans, PT Sans, ff-meta-web-pro, Arial, Helvetica, sans-serif; line-height: 1.5; *font-size: small; }
 
 pre, code, kbd, samp { font-family: monospace, sans-serif; }
 
@@ -83,9 +83,9 @@ a:hover { color: #555555; }
 
 strong, th { font-weight: bold; }
 
-aside { font-family: nimbus-sans, PT Sans, ff-meta-web-pro, UbuntuRegular, Tahoma, Elvetica, sans-serif; }
+aside { font-family: nimbus-sans, PT Sans, ff-meta-web-pro, Arial, Helvetica, sans-serif; }
 aside p { font-size: 0.875em; line-height: 1.5em; }
-aside.extras { font-family: nimbus-sans, PT Sans, ff-meta-web-pro, UbuntuRegular, Tahoma, Elvetica, sans-serif; float: right; padding-bottom: 1.2em; background-color: #eee; }
+aside.extras { font-family: nimbus-sans, PT Sans, ff-meta-web-pro, Arial, Helvetica, sans-serif; float: right; padding-bottom: 1.2em; background-color: #eee; }
 aside.extras > dl { padding-left: 1em; }
 aside.extras ul.people-list { display: inline; }
 aside.extras ul.people-list > li { display: inline; }
@@ -94,7 +94,7 @@ aside.extras ul.people-list li:last-child:after { content: ''; }
 
 .event-extra-content { margin-top: 1.2em; }
 
-#featuresgrid { width: 100%; line-height: 1em; font-family: nimbus-sans, PT Sans, ff-meta-web-pro, UbuntuRegular, Tahoma, Elvetica, sans-serif; }
+#featuresgrid { width: 100%; line-height: 1em; font-family: nimbus-sans, PT Sans, ff-meta-web-pro, Arial, Helvetica, sans-serif; }
 #featuresgrid .featurescolumn { width: 49.5260664%; margin-right: 0.94786739%; margin-bottom: 0.94786739%; float: left; }
 #featuresgrid .featurescolumn.last { margin-right: 0; }
 #featuresgrid .featurebox.bigbox { width: 100%; float: left; margin-bottom: 0.9569378%; position: relative; }
@@ -118,7 +118,7 @@ aside.extras ul.people-list li:last-child:after { content: ''; }
 
 .featured-item { margin-bottom: 4em; }
 
-article { font-family: nimbus-sans, PT Sans, ff-meta-web-pro, UbuntuRegular, Tahoma, Elvetica, sans-serif; }
+article { font-family: nimbus-sans, PT Sans, ff-meta-web-pro, Arial, Helvetica, sans-serif; }
 
 small { font-size: 69%; }
 
@@ -126,7 +126,7 @@ input:invalid, textarea:invalid { -moz-border-radius: 1px; -webkit-border-radius
 
 .no-boxshadow input:invalid, .no-boxshadow textarea:invalid { background-color: #f0dddd; }
 
-#slider { margin-bottom: 0.5em; font-family: nimbus-sans, PT Sans, ff-meta-web-pro, UbuntuRegular, Tahoma, Elvetica, sans-serif; max-height: 13.18001222em; height: 13.18001222em; overflow: hidden; }
+#slider { margin-bottom: 0.5em; font-family: nimbus-sans, PT Sans, ff-meta-web-pro, Arial, Helvetica, sans-serif; max-height: 13.18001222em; height: 13.18001222em; overflow: hidden; }
 
 dl dt { font-weight: bold; }
 dl dd { margin-bottom: 0.5em; }
@@ -138,7 +138,7 @@ nav a:hover { color: #555555; }
 
 p { margin-bottom: 1.5em; }
 
-h1, h2, h3, h4, h5, h6 { font-family: nimbus-sans, PT Sans, ff-meta-web-pro, UbuntuRegular, Tahoma, Elvetica, sans-serif; text-transform: none; }
+h1, h2, h3, h4, h5, h6 { font-family: nimbus-sans, PT Sans, ff-meta-web-pro, Arial, Helvetica, sans-serif; text-transform: none; }
 
 ul { list-style-type: none; }
 ul li { line-height: 1.2em; margin-bottom: 0.6em; }
@@ -161,7 +161,7 @@ header h1.entry-title { font-size: 2em; /* margin-bottom: 1.2em; */ font-family:
 #main article .introblurb h2 { margin-top: 0.6em; margin-bottom: 0; }
 #main article .introblurb p { font-size: 1.25em; line-height: 1.2em; }
 #main .wp-caption { max-width: 100% !important; }
-#main .wp-caption-text { font-size: 0.875em; font-family: nimbus-sans, PT Sans, ff-meta-web-pro, UbuntuRegular, Tahoma, Elvetica, sans-serif; }
+#main .wp-caption-text { font-size: 0.875em; font-family: nimbus-sans, PT Sans, ff-meta-web-pro, Arial, Helvetica, sans-serif; }
 #main ul.publication-side-toc li { line-height: 1.25em; margin-bottom: 0.25em; }
 #main .publication-cover { -moz-box-shadow: 0.313em 0.313em 0.188em #888888; -webkit-box-shadow: 0.313em 0.313em 0.188em #888888; -o-box-shadow: 0.313em 0.313em 0.188em #888888; box-shadow: 0.313em 0.313em 0.188em #888888; }
 #main .article .entry-content.article-text.sidebyside > div { -moz-column-count: 2; -webkit-column-count: 2; -o-column-count: 2; column-count: 2; }
@@ -172,7 +172,7 @@ body > #container > header nav ul { float: right; }
 body > #container > header #subsitesNavigation { height: 2.906em; font-size: 0.75em; font-weight: bold; }
 body > #container > header #subsitesNavigation img#lsecitiesSmallLogo { padding: 0.125em 2em 0; margin: 0.125em auto 0; display: block; background-color: #ffffff; -moz-border-radius-topleft: 3px; -webkit-border-top-left-radius: 3px; -o-border-top-left-radius: 3px; -ms-border-top-left-radius: 3px; -khtml-border-top-left-radius: 3px; border-top-left-radius: 3px; -moz-border-radius-topright: 3px; -webkit-border-top-right-radius: 3px; -o-border-top-right-radius: 3px; -ms-border-top-right-radius: 3px; -khtml-border-top-right-radius: 3px; border-top-right-radius: 3px; }
 body > #container > header #subsitesNavigation ul li a { color: #ffffff; }
-body > #container > header #logo.full { background: url("http://v1.lsecities.net/wp-content/themes/lsecities-2012/images/logo_lsecities_strapline.gif") no-repeat scroll 0 0 transparent; height: 3.6875em; margin-top: 0.166667em; text-indent: -9999px; }
+body > #container > header #logo.full { background: url("http://v1.lsecities.net/wp-content/themes/lsecities-2012/images/logo_lsecities_strapline.gif") no-repeat scroll 0 0 transparent; height: 4em; margin-top: 0.166667em; text-indent: -9999px; }
 body > #container > header #logo.full.violence { background: url("http://v1.lsecities.net/wp-content/themes/lsecities-2012/images/logo_lsecities_fullred.png") no-repeat scroll 0 0 transparent; }
 body > #container > header #logo.small { background: url("http://v1.lsecities.net/wp-content/themes/lsecities-2012/images/logo_lsecities_nostrapline_small.gif") no-repeat scroll left bottom transparent; height: 5.125em; /* kept consistent with #logo.full to allow bottom alignment */ margin-top: 0.166667em; text-indent: -9999px; }
 body > #container > header #ualogo { background: url("http://v1.lsecities.net/wp-content/themes/lsecities-2012/images/logo_urbanage_nostrapline.gif") no-repeat scroll 0 0 transparent; height: 5.125em; margin-top: 0.166667em; }
@@ -191,7 +191,7 @@ body > #container > header #socialbuttons ul li a { margin: 0 0.3125em; padding:
 #mainmenus #level2nav { background-color: #000; color: #fff; }
 #mainmenus #level2nav ul { background-color: inherit; }
 
-nav#level1nav, nav#level2nav { line-height: 1.2em; font-family: nimbus-sans, PT Sans, ff-meta-web-pro, UbuntuRegular, Tahoma, Elvetica, sans-serif; text-transform: uppercase; }
+nav#level1nav, nav#level2nav { line-height: 1.2em; font-family: nimbus-sans, PT Sans, ff-meta-web-pro, Arial, Helvetica, sans-serif; text-transform: uppercase; }
 nav#level1nav ul li, nav#level2nav ul li { line-height: 1.8em; margin-bottom: 0; }
 
 #level1nav { margin-top: 4em; }
@@ -219,7 +219,7 @@ header #socialbuttons ul { height: 16px; }
 
 #main { margin-bottom: 2em; }
 
-#level3nav { font-size: 0.925em; font-family: nimbus-sans, PT Sans, ff-meta-web-pro, UbuntuRegular, Tahoma, Elvetica, sans-serif; }
+#level3nav { font-size: 0.925em; font-family: nimbus-sans, PT Sans, ff-meta-web-pro, Arial, Helvetica, sans-serif; }
 #level3nav li { line-height: 1.25em; margin-bottom: 0.25em; }
 #level3nav ul.children { margin-left: 1em; }
 #level3nav #organizer-logos { max-width: 67.7290%; width: 67.7290%; }
@@ -325,7 +325,7 @@ right: -21px; */ }
 .flexslider .flex-control-nav li a.active { background-position: 0 -26px; cursor: default; }
 
 .lc-slider-page #main { margin-top: 0; }
-.lc-slider-page .flexslider { font-family: nimbus-sans, PT Sans, ff-meta-web-pro, UbuntuRegular, Tahoma, Elvetica, sans-serif; position: relative; font-size: 0.875em; margin-left: -2px; margin-right: -2px; /* .slides > li { height: #{2*$tile_base_emheight}em; }
+.lc-slider-page .flexslider { font-family: nimbus-sans, PT Sans, ff-meta-web-pro, Arial, Helvetica, sans-serif; position: relative; font-size: 0.875em; margin-left: -2px; margin-right: -2px; /* .slides > li { height: #{2*$tile_base_emheight}em; }
 */ }
 .lc-slider-page .flexslider .flex-direction-nav li a { top: 467 -64/2 px; }
 .lc-slider-page .flexslider .onecol, .lc-slider-page .flexslider .twocol, .lc-slider-page .flexslider .threecol, .lc-slider-page .flexslider .fourcol, .lc-slider-page .flexslider .fivecol, .lc-slider-page .flexslider .sixcol, .lc-slider-page .flexslider .sevencol, .lc-slider-page .flexslider .eightcol, .lc-slider-page .flexslider .ninecol, .lc-slider-page .flexslider .tencol, .lc-slider-page .flexslider .elevencol { margin-right: 0; }

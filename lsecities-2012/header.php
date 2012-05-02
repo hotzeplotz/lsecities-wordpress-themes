@@ -109,7 +109,7 @@ $logo_element_id = $urban_age_section ? 'ualogo' : 'logo';
 
 	<div class='container' id='container'> <!-- ## grid -->
 		<header id='header'>
-			<div class='row'>
+			<div>
 				<a href="/">
 					<div class='full violence threecol' id='logo'>
 						&nbsp;
