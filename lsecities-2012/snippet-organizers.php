@@ -2,7 +2,7 @@
 $ancestors = get_ancestors($post->ID, 'page');
 array_unshift($ancestors, $post->ID);
 $toplevel_ancestor = array_pop($ancestors);
-$urban_age_section = ($toplevel_ancestor) == 94) ?  true : false;;
+$urban_age_section = (($toplevel_ancestor) == 94) ?  true : false;;
 ?>
 <ul id="organizer-logos">
   <li>
