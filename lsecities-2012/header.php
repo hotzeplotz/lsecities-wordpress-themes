@@ -72,10 +72,10 @@ $logo_element_id = $urban_age_section ? 'ualogo' : 'logo';
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_directory') ?>/stylesheets/cssgrid.net/1140.css" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_url'); ?>" />
-<link href='http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
-<link href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic|PT+Serif:400,700,700italic,400italic|Sorts+Mill+Goudy:400,400italic&amp;subset=latin,latin-ext" media="screen" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Anton'>
-<?php wp_enqueue_style('fonts_nevis', get_stylesheet_directory_uri() . '/stylesheets/fonts/webfont_nevis/stylesheet.css'); ?>
+<?php if(false): // not needed ?><link href='http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400italic,700,700italic' rel='stylesheet' type='text/css'><?php endif; ?>
+<?php if(false): // redundant until we switch to PT Sans ?><link href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic|PT+Serif:400,700,700italic,400italic|Sorts+Mill+Goudy:400,400italic&amp;subset=latin,latin-ext" media="screen" rel="stylesheet" type="text/css" /><?php endif; ?>
+<?php if(false): // not needed ?><link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Anton'><?php endif; ?>
+<?php if(false): // not needed ?><?php wp_enqueue_style('fonts_nevis', get_stylesheet_directory_uri() . '/stylesheets/fonts/webfont_nevis/stylesheet.css'); ?><?php endif; ?>
 <?php wp_enqueue_script('jquery.flexslider', get_stylesheet_directory_uri() . '/javascripts/jquery.flexslider.js', 'jquery', false, true); ?>
 <?php wp_enqueue_script('jquery-ui-core', '', '', '', true); ?>
 <?php wp_enqueue_script('jquery-ui-accordion', '', '', '', true); ?>
