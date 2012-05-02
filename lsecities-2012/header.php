@@ -103,6 +103,9 @@ $logo_element_id = $GLOBALS['urban_age_section'] ? 'ualogo' : 'logo';
 	 */
 	wp_head();
 ?>
+<script type="text/javascript" src="http://use.typekit.com/ftd3lpp.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<link href="http://cloud.webtype.com/css/9044dce3-7052-4e0e-9dbb-377978412ca7.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body <?php body_class(); ?>>
