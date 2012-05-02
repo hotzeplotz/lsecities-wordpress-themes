@@ -30,21 +30,21 @@
           <ul>
             <?php wp_list_pages('title_li=&depth=2&child_of=306&sort_column=menu_order&sort_order=ASC&echo=1'); ?>
           </ul>
+        </div>
+        <div class="twocol">
           <h1>Publications</h1>
           <ul>
             <?php wp_list_pages('title_li=&depth=1&child_of=309&sort_column=menu_order&sort_order=ASC&echo=1'); ?>
+          </ul>
+          <h1>Events</h1>
+          <ul>
+            <?php wp_list_pages('title_li=&depth=1&child_of=311&sort_column=menu_order&sort_order=ASC&echo=1'); ?>
           </ul>
         </div>
         <div class="twocol">
           <h1>Urban Age</h1>
           <ul>
             <?php wp_list_pages('title_li=&depth=1&child_of=94&sort_column=menu_order&sort_order=ASC&echo=1'); ?>
-          </ul>
-        </div>
-        <div class="twocol">
-          <h1>Events</h1>
-          <ul>
-            <?php wp_list_pages('title_li=&depth=1&child_of=311&sort_column=menu_order&sort_order=ASC&echo=1'); ?>
           </ul>
         </div>
   <!--  <section class="fourcol">
