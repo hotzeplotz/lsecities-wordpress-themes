@@ -323,7 +323,7 @@ right: -21px; */ }
 .flexslider .flex-control-nav li a.active { background-position: 0 -26px; cursor: default; }
 
 .lc-slider-page #main { margin-top: 0; }
-.lc-slider-page .flexslider { font-family: nimbus-sans, PT Sans, ff-meta-web-pro, Arial, Helvetica, sans-serif; position: relative; font-size: 0.875em; margin-left: -2px; margin-right: -2px; }
+.lc-slider-page .flexslider { font-family: nimbus-sans, PT Sans, ff-meta-web-pro, Arial, Helvetica, sans-serif; position: relative; font-size: 0.875em; margin-left: -2px; margin-right: -2px; border: 0; }
 .lc-slider-page .flexslider .flex-direction-nav li a { top: 467 -64/2 px; }
 .lc-slider-page .flexslider .onecol, .lc-slider-page .flexslider .twocol, .lc-slider-page .flexslider .threecol, .lc-slider-page .flexslider .fourcol, .lc-slider-page .flexslider .fivecol, .lc-slider-page .flexslider .sixcol, .lc-slider-page .flexslider .sevencol, .lc-slider-page .flexslider .eightcol, .lc-slider-page .flexslider .ninecol, .lc-slider-page .flexslider .tencol, .lc-slider-page .flexslider .elevencol { margin-right: 0; }
 .lc-slider-page .flexslider .slides > li { width: 1140px; }
