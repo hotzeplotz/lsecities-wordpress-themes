@@ -128,22 +128,22 @@ $logo_element_id = $urban_age_section ? 'ualogo' : 'logo';
 							<ul>
 								<li>
 									<a title="Follow us on Twitter" href="https://twitter.com/#!/LSECities">
-										<img src="<?php get_stylesheet_directory_uri(); ?>/images/icons/mal/icon_twitter-v1lightblue_24x24.png" alt="Follow us on Twitter">
+										<img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/mal/icon_twitter-v1lightblue_24x24.png" alt="Follow us on Twitter">
 									</a>
 								</li>
 								<li>
 									<a title="Follow us on Facebook" href="https://facebook.com/lsecities">
-										<img src="<?php get_stylesheet_directory_uri(); ?>/images/icons/mal/icon_facebook-v2lightblue_24x24.png" alt="Follow us on Facebook">
+										<img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/mal/icon_facebook-v2lightblue_24x24.png" alt="Follow us on Facebook">
 									</a>
 								</li>
 								<li>
 									<a title="Follow us on YouTube" href="https://youtube.com/urbanage">
-										<img src="<?php get_stylesheet_directory_uri(); ?>/images/icons/mal/icon_youtubelightblue_24x24.png" alt="Follow us on YouTube">
+										<img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/mal/icon_youtubelightblue_24x24.png" alt="Follow us on YouTube">
 									</a>
 								</li>
 								<li>
 									<a title="News feed" href="http://lsecities.net/feed/">
-										<img src="<?php get_stylesheet_directory_uri(); ?>/images/icons/mal/icon_rsslightblue_24x24.png" alt="News archive">
+										<img src="<?php bloginfo('stylesheet_directory'); ?>/images/icons/mal/icon_rsslightblue_24x24.png" alt="News archive">
 									</a>
 								</li>
 							</ul>
