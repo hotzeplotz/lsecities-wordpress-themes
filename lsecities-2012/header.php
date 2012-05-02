@@ -109,7 +109,7 @@ $logo_element_id = $GLOBALS['urban_age_section'] ? 'ualogo' : 'logo';
 		<header id='header'>
 			<div class='row'>
 				<a href="/">
-					<div id='lclogo'>
+					<div class='threecol' id='lclogo'>
 						<img src="<?php bloginfo('stylesheet_directory'); ?>/images/logo_lsecities_fullred.png" alt="LSE Cities logo">
 					</div>
 				</a>

@@ -170,8 +170,8 @@ body > #container > header nav ul { float: right; }
 body > #container > header #subsitesNavigation { height: 2.906em; font-size: 0.75em; font-weight: bold; }
 body > #container > header #subsitesNavigation img#lsecitiesSmallLogo { padding: 0.125em 2em 0; margin: 0.125em auto 0; display: block; background-color: #ffffff; -moz-border-radius-topleft: 3px; -webkit-border-top-left-radius: 3px; -o-border-top-left-radius: 3px; -ms-border-top-left-radius: 3px; -khtml-border-top-left-radius: 3px; border-top-left-radius: 3px; -moz-border-radius-topright: 3px; -webkit-border-top-right-radius: 3px; -o-border-top-right-radius: 3px; -ms-border-top-right-radius: 3px; -khtml-border-top-right-radius: 3px; border-top-right-radius: 3px; }
 body > #container > header #subsitesNavigation ul li a { color: #ffffff; }
-body > #container > header #lclogo { height: 3.5em; }
-body > #container > header #ualogo { height: 3.5em; margin-top: 0.166667em; }
+body > #container > header #lclogo { height: 4.5em; }
+body > #container > header #ualogo { height: 4.5em; margin-top: 0.166667em; }
 body > #container > header ul { display: inline-block; list-style: none; margin: 0; padding: 0; }
 body > #container > header ul li { display: inline; float: left; }
 body > #container > header ul li a { padding: 0.125em 0.6em 0 0.6em; text-decoration: none; }
