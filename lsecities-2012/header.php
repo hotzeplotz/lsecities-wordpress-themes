@@ -48,6 +48,12 @@ $logo_element_id = $urban_age_section ? 'ualogo' : 'logo';
 <meta http-equiv="x-ua-compatible" content="IE=8">
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name="viewport" content="width=device-width" />
+    <style type="text/css">
+      .js .flexslider {display: none;}
+    </style>
+    <script type="text/javascript">
+      document.documentElement.className = 'avoidfouc';
+    </script>
 <title><?php
 	/*
 	 * Print the <title> tag based on what is being viewed.
