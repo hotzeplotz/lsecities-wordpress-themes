@@ -169,7 +169,7 @@ $logo_element_id = $GLOBALS['urban_age_section'] ? 'ualogo' : 'logo';
 			<div class='row' id='mainmenus'>
 				<nav class='twelvecol section-ancestor-<?php echo $toplevel_ancestor ; ?>' id='level2nav'>
 					<ul>
-					<?php if($toplevel_ancestor): ?>
+					<?php if($toplevel_ancestor and $level2nav): ?>
 						<?php echo $level2nav ; ?>
 					<?php else: ?>
 						<li>&nbsp;</li>
