@@ -53,6 +53,7 @@ $project_partners = substr($project_partners, 0, -2);
 $research_stream_title = $pod->get_field('research_stream.name');
 $research_stream_summary = $pod->get_field('research_stream.summary');
 
+$project_status = $pod->get_field('project_status.name');
 ?><?php get_header(); ?>
 
 <div role="main">
@@ -109,7 +110,15 @@ $research_stream_summary = $pod->get_field('research_stream.summary');
       </div><!-- .extra-content -->
     </div><!-- #contentarea -->
     <div id="navigationarea" class='wireframe threecol last'>
-      <?php get_template_part('nav', 'research'); ?>
+      <?php
+        if($project_status == 'active') {
+          $HIDE_CURRENT_PROJECTS = false;
+          $HIDE_PAST_PROJECTS = true;
+        } else {
+          $HIDE_CURRENT_PROJECTS = true;
+          $HIDE_PAST_PROJECTS = false;
+        }
+        get_template_part('nav', 'research'); ?>
     </div>
   </div><!-- #post-<?php the_ID(); ?> -->
 
