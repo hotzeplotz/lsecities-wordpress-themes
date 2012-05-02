@@ -7,7 +7,7 @@ array_unshift($ancestors, $post->ID);
 echo var_trace(var_export($ancestors, true), $TRACE_PREFIX, $TRACE_ENABLED);
 $toplevel_ancestor = array_pop($ancestors);
 echo var_trace($toplevel_ancestor, $TRACE_PREFIX, $TRACE_ENABLED);
-$urban_age_section = ($toplevel_ancestor == 94) ?  true : false;
+$urban_age_section = ($toplevel_ancestor == 94 or $post->ID == 94) ?  true : false;
 echo var_trace($post->ID, $TRACE_PREFIX, $TRACE_ENABLED);
 ?>
 <ul id="organizer-logos">
