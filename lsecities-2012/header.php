@@ -109,16 +109,16 @@ $logo_element_id = $GLOBALS['urban_age_section'] ? 'ualogo' : 'logo';
 		<header id='header'>
 			<div class='row'>
 				<a href="/">
-					<div class='full violence threecol' id='logo'>
-						&nbsp;
+					<div id='lclogo'>
+						<img src="<?php bloginfo('stylesheet_directory'); ?>/images/logo_lsecities_fullred.png" alt="LSE Cities logo">
 					</div>
 				</a>
         <?php if($GLOBALS['urban_age_section']): ?>
 				<a href="/ua/">
-					<div class='threecol' id='ualogo'>&nbsp;</div>
+					<div class='threecol' id='ualogo'><img src="<?php bloginfo('stylesheet_directory'); ?>/images/logo_urbanage_nostrapline.gif" alt="Urban Age logo"></div>
 				</a>
         <?php else: ?>
-        <span class="threecol">&nbsp;</span>
+        <span class='threecol'>&nbsp;</span>
         <?php endif; ?>
 				<div class='sixcol last' id='toolbox'>
 					<div id="searchbox" class="clearfix">
