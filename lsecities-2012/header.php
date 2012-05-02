@@ -49,7 +49,7 @@ $logo_element_id = $GLOBALS['urban_age_section'] ? 'ualogo' : 'logo';
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name="viewport" content="width=device-width" />
     <style type="text/css">
-      .avoidfouc .flexslider > ul > li+li{display: none;}
+      .avoidfouc .flexslider > ul > li {display: none;}
     </style>
     <script type="text/javascript">
       document.documentElement.className = 'avoidfouc';
