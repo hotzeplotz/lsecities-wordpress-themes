@@ -48,12 +48,6 @@ $logo_element_id = $GLOBALS['urban_age_section'] ? 'ualogo' : 'logo';
 <meta http-equiv="x-ua-compatible" content="IE=8">
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name="viewport" content="width=device-width" />
-    <style type="text/css">
-      .avoidfouc .flexslider > ul > li {display: none;}
-    </style>
-    <script type="text/javascript">
-      document.documentElement.className = 'avoidfouc';
-    </script>
 <title><?php
 	/*
 	 * Print the <title> tag based on what is being viewed.
@@ -77,6 +71,7 @@ $logo_element_id = $GLOBALS['urban_age_section'] ? 'ualogo' : 'logo';
 	?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_directory') ?>/stylesheets/cssgrid.net/1140.css" />
+<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_directory') ?>/stylesheets/flexslider/flexslider.css" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('stylesheet_url'); ?>" />
 <?php if(false): // not needed ?><link href='http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400italic,700,700italic' rel='stylesheet' type='text/css'><?php endif; ?>
 <?php if(false): // redundant until we switch to PT Sans ?><link href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic|PT+Serif:400,700,700italic,400italic|Sorts+Mill+Goudy:400,400italic&amp;subset=latin,latin-ext" media="screen" rel="stylesheet" type="text/css" /><?php endif; ?>

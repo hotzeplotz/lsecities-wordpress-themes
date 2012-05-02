@@ -70,7 +70,6 @@
 <script>
       //<![CDATA[
         jQuery(document).ready(function($) {
-          $('.avoidfouc .flexslider > ul > li').show();
           $('.flexslider').flexslider(({
             animation: "slide",
             slideshow: false,
