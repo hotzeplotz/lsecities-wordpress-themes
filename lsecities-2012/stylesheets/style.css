@@ -79,7 +79,8 @@ nav ul, nav li { margin: 0; list-style: none; list-style-image: none; }
 
 #mc_signup .mc_merge_var { margin-bottom: 1em; width: 100%; clear: both; }
 #mc_signup .mc_merge_var label { width: 30%; margin-right: 3%; float: left; }
-#mc_signup .mc_merge_var .mc_mv_TOPICS, #mc_signup .mc_merge_var .mc_mv_2012CONF { height: 5em; }
+#mc_signup .mc_merge_var input { width: 60%; }
+#mc_signup .mc_merge_var #mc_mv_TOPICS, #mc_signup .mc_merge_var #mc_mv_2012CONF { height: 5em; }
 
 body, select, input, textarea { color: black; }
 
