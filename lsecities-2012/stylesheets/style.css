@@ -71,6 +71,11 @@ nav ul, nav li { margin: 0; list-style: none; list-style-image: none; }
 
 .row .row { min-width: inherit; }
 
+.yks-mailchimpFormTable { width: 100%; }
+.yks-mailchimpFormTable .yks-mailchimpFormDivRow { clear: both; margin-bottom: 0.5em; }
+.yks-mailchimpFormTable .yks-mailchimpFormDivRowLabel { float: left; width: 30%; margin-right: 3%; }
+.yks-mailchimpFormTable .yks-mailchimpFormDivRowField { float: left; width: 50%; }
+
 body, select, input, textarea { color: black; }
 
 h1, h2, h3, h4, h5, h6 { font-weight: normal; line-height: 1em; }
