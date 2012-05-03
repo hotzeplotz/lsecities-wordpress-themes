@@ -69,7 +69,8 @@
           $('.flexslider').flexslider(({
             animation: "slide",
             slideshow: false,
-            mousewheel: false
+            mousewheel: false,
+<?php global $jquery_options; if($jquery_options) { echo $jquery_options; } ?>
           }));
           $('.citieslist li:nth-child(odd)').addClass('alternate');
           $('.accordion').accordion({autoHeight: false});

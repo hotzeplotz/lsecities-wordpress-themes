@@ -132,6 +132,7 @@ if($news_category_ids) {
   $news_categories = '&cat='. rtrim($news_categories, ',');
   echo var_trace('news_categories: ' . $news_categories, $TRACE_PREFIX, $TRACE_ENABLED);
 }
+$jquery_options = $pod->get_field('jquery_options');
 
 $slides = $pod->get_field('slides');
 ?><?php get_header(); ?>
