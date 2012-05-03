@@ -86,7 +86,7 @@ switch($pod_type) {
             <?php switch(get_post_meta(get_the_ID(), 'list_pods', true)):
               case 'research_projects':
                 $HIDE_CURRENT_PROJECTS = true;
-                $HIDE_PAST_PROJECTS = false;
+                $HIDE_PAST_PROJECTS = true;
                 $BASE_URI = '/objects/research-projects/';
                 $IN_CONTENT_AREA = false;
             ?>
@@ -94,7 +94,7 @@ switch($pod_type) {
             <?php break;
               case 'past_research_projects':
                 $HIDE_PAST_PROJECTS = true;
-                $HIDE_CURRENT_PROJECTS = false;
+                $HIDE_CURRENT_PROJECTS = true;
                 $IN_CONTENT_AREA = false;
                 $BASE_URI = '/objects/research-projects/';
             ?>
