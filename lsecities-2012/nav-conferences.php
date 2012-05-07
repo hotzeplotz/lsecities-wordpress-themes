@@ -77,7 +77,7 @@ $pod_type = $conference_list->get_field('pod_type.slug');
 $pod_list = $conference_list->get_field('list');
 foreach($pod_list as $key => $item) {
   $item_pod = new Pod($pod_type, get_post_meta($item['ID'], 'pod_slug', true));
-  echo $item['name'] . ' ' . $item['year'];
+  echo $item_pod->get_field('name') . ' ' . $item_pod->get_field('year');
 }
 ?>
 -->
