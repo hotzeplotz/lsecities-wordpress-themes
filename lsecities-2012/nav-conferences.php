@@ -70,3 +70,12 @@ if(count($button_links)) :
   </nav>
 </div>
 <?php endif; ?>
+<!--
+<?php
+$conference_list = new Pod('list', 'urban-age-conferences');
+$conference_list->findRecords();
+while($conference_list->fetchRecord() as $conference) {
+  echo "$conference['name'] $conference['year']";
+}
+?>
+-->
