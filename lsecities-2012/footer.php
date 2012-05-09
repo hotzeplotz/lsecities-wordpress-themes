@@ -75,6 +75,7 @@
           }));
           $('.runon li:nth-child(odd)').addClass('alternate');
           $('.accordion').accordion({autoHeight: false});
+          $('input:radio[name=8245')[0].checked = true;
         });
       //]]>
 </script>
