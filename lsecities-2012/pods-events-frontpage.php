@@ -72,6 +72,7 @@ $event_moderators = $pod->get_field('moderators', 'family_name ASC');
 $event_all_the_people = array_merge((array)$event_speakers, (array)$event_respondents, (array)$event_chairs, (array)$event_moderators);
 echo var_trace($event_all_the_people, $TRACE_PREFIX, $TRACE_ENABLED);
 $event_hashtag = ltrim($pod->get_field('hashtag'), '#');
+$event_story_id = $pod->get_field('storify_id');
 
 $speakers_output = people_list($event_speakers, "Speaker", "Speakers");
 $respondents_output = people_list($event_respondents, "Respondent", "Respondents");
@@ -189,8 +190,13 @@ $poster_pdf = $poster_pdf[0]['guid'];
                       <dd><a href="<?php echo $freakin_site_map; ?>">Site map</a> (PDF)</dd>
                       <?php endif; ?>  
                     <?php endif; ?>
+                    
+                    <?php if(!$is_future_event and $event_story_id): ?>
+                      <dt>Twitter archive</dt>
+                      <dd><a href="https://storify.com/<?php echo $event_story_id; ?>">Read on Storify</a></dd>
+                    <?php endif; ?>
                 </dl>
-                <?php if($event_hashtag): ?>
+                <?php if(($is_future_event and $event_hashtag) or (!$event_story_id and $event_hashtag)): ?>
                 <div class='twitterbox'>
                   <a href="https://twitter.com/#!/search/<?php echo $event_hashtag; ?>">#<?php echo $event_hashtag; ?></a>
                 </div>
