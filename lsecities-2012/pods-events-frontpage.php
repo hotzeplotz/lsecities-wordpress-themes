@@ -81,7 +81,7 @@ $moderators_output = people_list($event_moderators, "Moderator", "Moderators");
 $people_with_blurb = $speakers_output['with_blurb'] + $respondents_output['with_blurb'] + $chairs_output['with_blurb'] + $moderators_output['with_blurb'];
 
 $event_blurb = do_shortcode($pod->get_field('blurb'));
-$event_blurb_after_event = do_shortcode($pod->get_field('blurb_after_event');
+$event_blurb_after_event = do_shortcode($pod->get_field('blurb_after_event'));
 $event_contact_info = do_shortcode($pod->get_field('contact_info'));
 
 $event_media = $pod->get_field('media_attachments');
