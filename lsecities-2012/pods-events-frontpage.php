@@ -136,17 +136,17 @@ $poster_pdf = $poster_pdf[0]['guid'];
                 <header>
                   <h1><?php echo $pod->get_field('name'); ?></h1>
                 </header>
-                <?php if(!$is_future_event): ?>
+                <?php if($is_future_event): ?>
                   <?php if($event_blurb): ?>
                   <div class="blurb"><?php echo $event_blurb; ?></div>
                   <?php endif; ?>
                 <?php else: ?>
                   <?php if($event_blurb_after_event): ?>
-                  <div class="blurb"><?php echo $event_blurb_after_event; ?></div>
+                  <div class="blurb after-event"><?php echo $event_blurb_after_event; ?></div>
                   <?php elseif($event_blurb): ?>
                   <div class="blurb"><?php echo $event_blurb; ?></div>
                   <?php endif; ?>
-                <?php endif; // !$is_future_event ?>
+                <?php endif; // $is_future_event ?>
                 <?php if($event_contact_info and $is_future_event): ?>
                   <aside class="booking-and-access"><?php echo $event_contact_info; ?></aside>
                 <?php endif; ?>
