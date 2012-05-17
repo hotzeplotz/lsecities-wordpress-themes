@@ -172,12 +172,13 @@ $poster_pdf = $poster_pdf[0]['guid'];
                       <dt>Event series</dt>
                       <dd><em><?php echo do_shortcode($pod->get_field('event_series')); ?></em></dd>
                     <?php endif; ?>
-                    
-                    <?php if($event_contact_info and $is_future_event): ?>
+
+<!--
+                    <?php if(false and $event_contact_info and $is_future_event): ?>
                       <dt>Access &amp; booking</dt>
                       <dd><?php echo $event_contact_info; ?></dd>
                     <?php endif; ?>
-
+-->
                     <?php if($poster_pdf || $freakin_site_map) : ?>
                       <dt>Downloads</dt>
                       <?php if($poster_pdf): ?>
