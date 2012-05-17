@@ -82,6 +82,7 @@ $people_with_blurb = $speakers_output['with_blurb'] + $respondents_output['with_
 
 $event_blurb = do_shortcode($pod->get_field('blurb'));
 $event_blurb_after_event = do_shortcode($pod->get_field('blurb_after_event'));
+echo var_trace('blurb_after_event', $event_blurb_after_event, $TRACE_PREFIX, $TRACE_ENABLED);
 $event_contact_info = do_shortcode($pod->get_field('contact_info'));
 
 $event_media = $pod->get_field('media_attachments');
