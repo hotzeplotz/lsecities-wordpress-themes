@@ -81,6 +81,7 @@ $moderators_output = people_list($event_moderators, "Moderator", "Moderators");
 $people_with_blurb = $speakers_output['with_blurb'] + $respondents_output['with_blurb'] + $chairs_output['with_blurb'] + $moderators_output['with_blurb'];
 
 $event_blurb = do_shortcode($pod->get_field('blurb'));
+$event_blurb_after_event = do_shortcode($pod->get_field('blurb_after_event');
 $event_contact_info = do_shortcode($pod->get_field('contact_info'));
 
 $event_media = $pod->get_field('media_attachments');
@@ -96,7 +97,7 @@ if(!$is_conference) {
 }
 
 $event_date_string = $pod->get_field('date_freeform');
-$event_date = new DateTime($pod->get_field('date'));
+$event_date = new DateTime($pod->get_field('date_start'));
 $datetime_now = new DateTime('now');
 $is_future_event = ($event_date > $datetime_now) ? true : false;
 
@@ -134,9 +135,17 @@ $poster_pdf = $poster_pdf[0]['guid'];
                 <header>
                   <h1><?php echo $pod->get_field('name'); ?></h1>
                 </header>
-                <?php if($event_blurb): ?>
+                <?php if(!$is_future_event): >?
+                  <?php if($event_blurb): ?>
                   <div class="blurb"><?php echo $event_blurb; ?></div>
-                <?php endif; ?>
+                  <?php endif; ?>
+                <?php else: ?>
+                  <?php if($event_blurb_after_event): ?>
+                  <div class="blurb"><?php echo $event_blurb_after_event; ?></div>
+                  <?php elseif($event_blurb): ?>
+                  <div class="blurb"><?php echo $event_blurb; ?></div>
+                  <?php endif; ?>
+                <?php endif; // !$is_future_event ?>
                 <?php if($event_contact_info and $is_future_event): ?>
                   <aside class="booking-and-access"><?php echo $event_contact_info; ?></aside>
                 <?php endif; ?>
