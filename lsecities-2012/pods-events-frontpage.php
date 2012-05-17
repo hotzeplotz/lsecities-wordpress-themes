@@ -135,7 +135,7 @@ $poster_pdf = $poster_pdf[0]['guid'];
                 <header>
                   <h1><?php echo $pod->get_field('name'); ?></h1>
                 </header>
-                <?php if(!$is_future_event): >?
+                <?php if(!$is_future_event): ?>
                   <?php if($event_blurb): ?>
                   <div class="blurb"><?php echo $event_blurb; ?></div>
                   <?php endif; ?>
