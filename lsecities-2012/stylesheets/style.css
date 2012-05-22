@@ -316,13 +316,13 @@ div.widget h2 { margin-bottom: 0.5em; }
 #share-on-social-media > ul a img, #share-on-social-media > ul > li a img { width: 20px; height: 20px; }
 
 blockquote { margin: 1.5em 0 0.75em -1.5em; box-shadow: 0 0 6px rgba(0, 0, 0, 0.5); border-left: 0.5em solid #DDDDDD; }
-blockquote::before { color: #999999; content: "“"; display: block; font: italic 400%/1 Cochin, Georgia, "Times New Roman", serif; height: 0; margin-left: -0.95em; }
+blockquote::before { color: #999999; content: "“"; display: block; font: italic 400%/1 "Times New Roman", serif; height: 0; margin-left: -0.95em; }
 
-.downloadthis.pdf { background: url("http://v1.lsecities.net/wp-content/themes/lsecities-2012/images/icons/mal/icon_downloaddarkblue_20x20.png") no-repeat scroll 0 0 transparent; padding-left: 28px; padding-bottom: 8px; }
+.downloadthis.pdf { background: url("http://lsecities.net/wp-content/themes/lsecities-2012/images/icons/mal/icon_downloaddarkblue_20x20.png") no-repeat scroll 0 0 transparent; padding-left: 28px; padding-bottom: 8px; }
 
-.readthis.online { background: url("http://v1.lsecities.net/wp-content/themes/lsecities-2012/images/icons/mal/icon_magglassdarkblue_20x20.png") no-repeat scroll 0 0 transparent; padding-left: 28px; padding-bottom: 8px; }
+.readthis.online { background: url("http://lsecities.net/wp-content/themes/lsecities-2012/images/icons/mal/icon_magglassdarkblue_20x20.png") no-repeat scroll 0 0 transparent; padding-left: 28px; padding-bottom: 8px; }
 
-.watchvideo.onyoutube { background: url("http://v1.lsecities.net/wp-content/themes/lsecities-2012/images/icons/mal/icon_youtubedarkblue_20x20.png") no-repeat scroll 0 0 transparent; padding-left: 28px; padding-bottom: 8px; }
+.watchvideo.onyoutube { background: url("http://lsecities.net/wp-content/themes/lsecities-2012/images/icons/mal/icon_youtubedarkblue_20x20.png") no-repeat scroll 0 0 transparent; padding-left: 28px; padding-bottom: 8px; }
 
 .flexslider { position: relative; /* Direction Nav */ /* Control Nav */ }
 .flexslider .flex-direction-nav li a { width: 33px; height: 64px; text-indent: -9999px; border: 0; margin: -13px 0 0; display: block; /* background: url(theme/bg_direction_nav.png) no-repeat 0 0; */ position: absolute; top: 45%; /* top: 50%; */ opacity: 0.9; }
