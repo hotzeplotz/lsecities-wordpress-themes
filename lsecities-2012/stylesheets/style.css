@@ -71,6 +71,10 @@ nav ul, nav li { margin: 0; list-style: none; list-style-image: none; }
 
 .row .row { min-width: inherit; }
 
+/* uservoice.com integration -- begin */
+#uvTab { opacity: 0.7; }
+
+/* uservoice.com integration -- end */
 .yks-mailchimpFormContainer { width: 100%; }
 .yks-mailchimpFormContainer .yks-mailchimpFormDivRow { clear: both; }
 .yks-mailchimpFormContainer .yks-mailchimpFormDivRowLabel { float: left; width: 30%; margin-right: 3%; margin-bottom: 1.5em; }
