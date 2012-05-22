@@ -24,10 +24,8 @@
   if(!$pod_featured_item_thumbnail) { $pod_featured_item_thumbnail = '<img src="' . $pod->get_field('featured_item_image.guid') . '" />'; }
   $pod_featured_item_permalink = get_permalink($page_id);
   $pod_featured_item_pod = new Pod($pod_type, get_post_meta($pod->get_field('featured_item.ID'), 'pod_slug', true));
-  $pod_list = $pod->get_field('list');
-  if($pod->get_field('sort_descending')) {
-    $pod_list = array_reverse($pod_list);
-  }
+  $sort_order = $pod->get_field('sort_descending') ? 'DESC' : 'ASC';
+  $pod_list = $pod->get_field('list', "menu_order $sort_order");
 ?>
 
 <?php get_header(); ?>
