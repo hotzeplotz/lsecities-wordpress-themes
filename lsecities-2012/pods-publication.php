@@ -38,17 +38,17 @@ $pod_alt_pdf = $pod->get_field('publication_alt_pdf.guid') ? $pod->get_field('pu
 $pod_pdf_lang2 = $pod->get_field('publication_pdf_lang2.guid') ? $pod->get_field('publication_pdf_lang2.guid') : $pod->get_field('publication_pdf_lang2_uri');
 $pod_alt_pdf_lang2 = $pod->get_field('publication_alt_pdf_lang2.guid') ? $pod->get_field('publication_alt_pdf_lang2.guid') : $pod->get_field('publication_alt_pdf_lang2_uri');
 
-$publication_authors_list = $pod->get_field('authors');
+$publication_authors_list = $pod->get_field('authors', 'family_name ASC');
 foreach($publication_authors_list as $publication_author) {
   $publication_authors .= $publication_author['name'] . ' ' . $publication_author['family_name'] . ', ';
 }
 $publication_authors = substr($publication_authors, 0, -2);
-$publication_editors_list = (array) $pod->get_field('editors');
+$publication_editors_list = (array) $pod->get_field('editors', 'family_name ASC');
 foreach($publication_editors_list as $publication_editor) {
   $publication_editors .= $publication_editor['name'] . ' ' . $publication_editor['family_name'] . ', ';
 }
 $publication_editors = substr($publication_editors, 0, -2);
-$publication_contributors_list = $pod->get_field('contributors');
+$publication_contributors_list = $pod->get_field('contributors', 'family_name ASC');
 foreach($publication_contributors_list as $publication_contributor) {
   $publication_contributors .= $publication_contributor['name'] . ' ' . $publication_contributor['family_name'] . ', ';
 }
