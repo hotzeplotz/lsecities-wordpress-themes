@@ -332,14 +332,21 @@ right: -21px; */ }
 .flexslider .flex-control-nav li a.active { background-position: 0 -26px; cursor: default; }
 
 .lc-slider-page #main { margin-top: 0; }
-.lc-slider-page .flexslider { font-family: nimbus-sans, PT Sans, ff-meta-web-pro, Arial, Helvetica, sans-serif; position: relative; font-size: 0.875em; margin-left: -2px; margin-right: -2px; border: 0; }
+.lc-slider-page .flexslider { font-family: nimbus-sans, PT Sans, ff-meta-web-pro, Arial, Helvetica, sans-serif; position: relative; font-size: 0.875em; border: 0; }
 .lc-slider-page .flexslider .flex-direction-nav li a { top: 467 -64/2 px; }
 .lc-slider-page .flexslider .onecol, .lc-slider-page .flexslider .twocol, .lc-slider-page .flexslider .threecol, .lc-slider-page .flexslider .fourcol, .lc-slider-page .flexslider .fivecol, .lc-slider-page .flexslider .sixcol, .lc-slider-page .flexslider .sevencol, .lc-slider-page .flexslider .eightcol, .lc-slider-page .flexslider .ninecol, .lc-slider-page .flexslider .tencol, .lc-slider-page .flexslider .elevencol { margin-right: 0; }
 .lc-slider-page .flexslider .slides > li { width: 1140px; }
-.lc-slider-page .flexslider .slide-inner { border-left: 0px solid transparent; border-bottom: 0px solid transparent; }
-.lc-slider-page .flexslider .col2 { width: 32.571em; float: left; }
-.lc-slider-page .flexslider .col1 { width: 16.286em; float: left; }
-.lc-slider-page .flexslider .tile { border-right: 0px solid transparent; border-top: 0px solid transparent; float: left; padding: 0em; margin: 0.143em; overflow: hidden; position: relative; min-height: 210px; height: 16em; }
+.lc-slider-page .flexslider .col1 { width: 20%; float: left; }
+.lc-slider-page .flexslider .col1 .tile { margin: 0.877%; }
+.lc-slider-page .flexslider .col1 .tile.onetile { width: 98.246%; }
+.lc-slider-page .flexslider .col2 { width: 40%; float: left; }
+.lc-slider-page .flexslider .col2 .tile { margin: 0.439%; }
+.lc-slider-page .flexslider .col2 .tile.onetile { width: 49.123%; }
+.lc-slider-page .flexslider .col2 .tile.twotiles { width: 99.342%; }
+.lc-slider-page .flexslider .slide-inner { border-left: 0px solid transparent; border-bottom: 0px solid transparent; /*       & > div:first-child .tile { margin-left: $sides_margin; }
+ & > div:last-child .tile { margin-right: $sides_margin; }
+*/ }
+.lc-slider-page .flexslider .tile { border-right: 0px solid transparent; border-top: 0px solid transparent; float: left; padding: 0em; overflow: hidden; position: relative; min-height: 210px; height: 16em; }
 .lc-slider-page .flexslider .tile a, .lc-slider-page .flexslider .tile a:hover, .lc-slider-page .flexslider .tile a:active, .lc-slider-page .flexslider .tile a:visited { color: inherit; }
 .lc-slider-page .flexslider .tile.tall { height: 32.286em; }
 .lc-slider-page .flexslider .tile:hover header, .lc-slider-page .flexslider .tile:hover .feature_title, .lc-slider-page .flexslider .tile:hover .feature_caption, .lc-slider-page .flexslider .tile:hover .feature_date { display: none; }
@@ -348,8 +355,6 @@ right: -21px; */ }
 .lc-slider-page .flexslider .tile:hover .feature_blurb { max-height: 75%; background: url("http://v1.lsecities.net/wp-content/themes/lsecities-2012/images/backgrounds/mal/pixelpattern_darkgrey_120420.gif"); }
 .lc-slider-page .flexslider .tile:hover .feature_info { -moz-transition-property: background-color; -webkit-transition-property: background-color; -o-transition-property: background-color; transition-property: background-color; -moz-transition-duration: 0.5s; -webkit-transition-duration: 0.5s; -o-transition-duration: 0.5s; transition-duration: 0.5s; -moz-transition-timing-function: ease-in-out; -webkit-transition-timing-function: ease-in-out; -o-transition-timing-function: ease-in-out; transition-timing-function: ease-in-out; -moz-transition-delay: 0s; -webkit-transition-delay: 0s; -o-transition-delay: 0s; transition-delay: 0s; background-color: #000; background: url("http://v1.lsecities.net/wp-content/themes/lsecities-2012/images/backgrounds/mal/pixelpattern_darkgrey_120420.gif") repeat scroll 0 0 transparent; max-height: 75%; }
 .lc-slider-page .flexslider .tile:hover .feature_info.textonly { -moz-transition-property: background-color; -webkit-transition-property: background-color; -o-transition-property: background-color; transition-property: background-color; -moz-transition-duration: 0.5s; -webkit-transition-duration: 0.5s; -o-transition-duration: 0.5s; transition-duration: 0.5s; -moz-transition-timing-function: ease-in-out; -webkit-transition-timing-function: ease-in-out; -o-transition-timing-function: ease-in-out; transition-timing-function: ease-in-out; -moz-transition-delay: 0s; -webkit-transition-delay: 0s; -o-transition-delay: 0s; transition-delay: 0s; background-color: #000; max-height: inherit; }
-.lc-slider-page .flexslider .tile.onetile { width: 16em; }
-.lc-slider-page .flexslider .tile.twotiles { width: 32.329em; }
 .lc-slider-page .flexslider .tile .inner-box { padding: 0.714285714em; }
 .lc-slider-page .flexslider .tile .crop { position: relative; overflow: hidden; }
 .lc-slider-page .flexslider .tile .crop img { /* position: absolute; */ margin: 0; width: 100%; }
@@ -382,11 +387,9 @@ right: -21px; */ }
 
 #speaker-profiles .people-list .person h1 { font-size: 1.125em; font-weight: bold; text-transform: inherit; border-bottom: 1px solid #eee; margin-bottom: 0.444444444em; }
 
-.lc-newspaper-article { /* // TODO: re-enable once all the articles have been reviewed and pullquotes added .has-pullquote::before { content: attr(data-pullquote);  font-weight: bold; opacity: 0.8;  float: right; width: 50%; margin: 0.5em -55.5% 0 0;  position: relative;
- font-size: 1.5em; line-height: 1.25em; }
- .has-pullquote::before::before { content: '"'; color: #ff0000; }
-*/ }
 .lc-newspaper-article header.heading-image img { max-width: 100%; width: 100%; }
+.lc-newspaper-article .has-pullquote::before { content: attr(data-pullquote); font-weight: bold; opacity: 0.8; float: right; width: 50%; margin: 0.5em -55.5% 0 0; position: relative; font-size: 1.5em; line-height: 1.25em; }
+.lc-newspaper-article .has-pullquote::before::before { content: '"'; color: #ff0000; }
 .lc-newspaper-article article .article .entry-content, .lc-newspaper-article article .article .extra-content { /* // TODO: re-enable once all the article photos have been double checked img { float: right; margin-left: 1.5em; margin-right: -50%; max-width: 150%; position: relative; width: 150%; }
 */ }
 
