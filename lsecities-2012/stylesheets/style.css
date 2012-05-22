@@ -315,8 +315,8 @@ div.widget h2 { margin-bottom: 0.5em; }
 #share-on-social-media > ul, #share-on-social-media > ul > li { display: inline; vertical-align: middle; }
 #share-on-social-media > ul a img, #share-on-social-media > ul > li a img { width: 20px; height: 20px; }
 
-blockquote { margin: 1.5em 0 0.75em 3em; -moz-box-shadow: rgba(0, 0, 0, 0.5) 0 0 6px; -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 0 6px; -o-box-shadow: rgba(0, 0, 0, 0.5) 0 0 6px; box-shadow: rgba(0, 0, 0, 0.5) 0 0 6px; border-left: 0.5em solid #DDDDDD; }
-blockquote::before { color: #999999; content: "“"; display: block; font-size: 4em; font-style: italic; line-height: 1em; height: 0; margin-left: -0.6em; }
+blockquote { margin: 1.5em 0 0.75em 3em; -moz-box-shadow: rgba(0, 0, 0, 0.5) 0 0 6px; -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 0 6px; -o-box-shadow: rgba(0, 0, 0, 0.5) 0 0 6px; box-shadow: rgba(0, 0, 0, 0.5) 0 0 6px; border-left: 0.5em solid #DDDDDD; padding: 0 0.5em; }
+blockquote::before { color: #999999; content: "“"; display: block; font-size: 4em; font-style: italic; line-height: 1em; height: 0; margin-left: -0.8em; }
 
 .downloadthis.pdf { background: url("http://lsecities.net/wp-content/themes/lsecities-2012/images/icons/mal/icon_downloaddarkblue_20x20.png") no-repeat scroll 0 0 transparent; padding-left: 28px; padding-bottom: 8px; }
 
