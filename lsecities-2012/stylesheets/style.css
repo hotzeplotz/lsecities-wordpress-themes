@@ -279,8 +279,10 @@ header.entry-header h1 { font-family: museo-sans, PT Sans, sans-serif; font-weig
 #keyfacts dl dt:first-child, #navigationarea dl dt:first-child { margin-top: 0; }
 #keyfacts.minorfacts dl dt, #navigationarea.minorfacts dl dt { border-bottom: none; }
 
-#contentarea #keyfacts, #contentarea #navigationarea { font-size: 100%; }
-
+/* // keyfacts should always be displayed in smaller font
+#contentarea { #keyfacts, #navigationarea { font-size: 100%; }
+}
+*/
 div.widget { margin-bottom: 1em; }
 div.widget h2 { margin-bottom: 0.5em; }
 
