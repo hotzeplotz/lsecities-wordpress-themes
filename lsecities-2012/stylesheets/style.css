@@ -392,7 +392,7 @@ right: -21px; */ }
 #speaker-profiles .people-list .person h1 { font-size: 1.125em; font-weight: bold; text-transform: inherit; border-bottom: 1px solid #eee; margin-bottom: 0.444444444em; }
 
 .lc-newspaper-article header.heading-image img { max-width: 100%; width: 100%; }
-.lc-newspaper-article .has-pullquote::before { content: attr(data-pullquote); font-weight: bold; opacity: 0.8; float: right; width: 50%; margin: 0.5em -55.5% 0 0; position: relative; font-size: 1.5em; line-height: 1.25em; }
+.lc-newspaper-article .has-pullquote::before { content: attr(data-pullquote); font-weight: bold; opacity: 0.8; float: right; width: 50%; margin: 0.5em -30% 0 0; padding-left: 1.5em; padding-bottom: 0.5em; font-style: italic; position: relative; font-size: 1.5em; line-height: 1.25em; }
 .lc-newspaper-article .has-pullquote::before::before { content: '"'; color: #ff0000; }
 .lc-newspaper-article article .article .entry-content, .lc-newspaper-article article .article .extra-content { /* // TODO: re-enable once all the article photos have been double checked img { float: right; margin-left: 1.5em; margin-right: -50%; max-width: 150%; position: relative; width: 150%; }
 */ }
