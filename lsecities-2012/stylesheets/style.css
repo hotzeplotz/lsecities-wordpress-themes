@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; vertical-align: baseline; }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
@@ -313,6 +314,9 @@ div.widget h2 { margin-bottom: 0.5em; }
 #share-on-social-media > h1 { display: inline; font-size: 1em; }
 #share-on-social-media > ul, #share-on-social-media > ul > li { display: inline; vertical-align: middle; }
 #share-on-social-media > ul a img, #share-on-social-media > ul > li a img { width: 20px; height: 20px; }
+
+blockquote { margin: 1.5em 0 0.75em -1.5em; box-shadow: 0 0 6px rgba(0, 0, 0, 0.5); border-left: 0.5em solid #DDDDDD; }
+blockquote::before { color: #999999; content: "“"; display: block; font: italic 400%/1 Cochin, Georgia, "Times New Roman", serif; height: 0; margin-left: -0.95em; }
 
 .downloadthis.pdf { background: url("http://v1.lsecities.net/wp-content/themes/lsecities-2012/images/icons/mal/icon_downloaddarkblue_20x20.png") no-repeat scroll 0 0 transparent; padding-left: 28px; padding-bottom: 8px; }
 
