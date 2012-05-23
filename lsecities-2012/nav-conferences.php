@@ -62,22 +62,13 @@ if(count($button_links)) :
     <dl>
       <dt>Urban Age conferences</dt>
       <dd>
-        <ul class="citieslist">
-          <?php wp_list_pages('title_li=&depth=1&child_of=96&sort_column=menu_order&sort_order=DESC&echo=1'); ?>
-        </ul>
-      </dd>
-    </dl>
-  </nav>
-</div>
-<?php endif; ?>
-<!--
 <?php
 $conference_list = new Pod('list', 'urban-age-conferences');
 $pod_type = $conference_list->get_field('pod_type.slug');
 $pod_list = $conference_list->get_field('list', 'menu_order DESC');
 
 if(count($pod_list)) : ?>
-<ul>
+<ul class="citieslist">
 <?php foreach($pod_list as $key => $item) :
     $item_pod = new Pod($pod_type, get_post_meta($item['ID'], 'pod_slug', true)); ?>
     <li><a href="<?php echo get_permalink($item['ID']); ?>"><?php if($item_pod->get_field('conference_title') and $item_pod->get_field('show_title_in_navigation')) { echo $item_pod->get_field('conference_title') . '<br/>'; }?><?php echo $item_pod->get_field('city') . ' | ' . $item_pod->get_field('year'); ?></a></li>
@@ -85,4 +76,9 @@ if(count($pod_list)) : ?>
 </ul>
 <?php endif;
 ?>
--->
+      </dd>
+    </dl>
+  </nav>
+</div>
+<?php endif; ?>
+
