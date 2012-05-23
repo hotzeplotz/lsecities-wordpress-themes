@@ -1,0 +1,18 @@
+lsecities-2012 (1.0.1) stable; urgency=low
+
+  * sliders are now responsive
+  * event pages:
+    * [new feature] added support for linking to a Storify story
+    * [new feature] editors can insert in advance an event blurb to be
+      displayed before the event and a blurb to be displayed once the
+      event has happened
+    * [bug fixed] contact and booking access info was supposed to be
+      displayed before an event but wasn't displaying - this is now fixed
+
+ -- andrea rota <a.rota@lse.ac.uk>  [DATE]
+ 
+lsecities-2012 (1.0) stable; urgency=low
+
+  * first public release
+
+ -- andrea rota <a.rota@lse.ac.uk>  Mon, 30 Apr 2012 03:48:39 +0100
