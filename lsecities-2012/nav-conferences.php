@@ -80,7 +80,7 @@ if(count($pod_list)) : ?>
 <ul>
 <?php foreach($pod_list as $key => $item) :
     $item_pod = new Pod($pod_type, get_post_meta($item['ID'], 'pod_slug', true)); ?>
-    <li><a href="<?php echo get_permalink($item['ID']); ?>"><?php if($item_pod->get_field('conference_title')) { echo $item_pod->get_field('conference_title') . '<br/>'; }?><?php echo $item_pod->get_field('city') . ' | ' . $item_pod->get_field('year'); ?></a></li>
+    <li><a href="<?php echo get_permalink($item['ID']); ?>"><?php if($item_pod->get_field('conference_title') and $item_pod->get_field('show_tagline_in_navigation')) { echo $item_pod->get_field('conference_title') . '<br/>'; }?><?php echo $item_pod->get_field('city') . ' | ' . $item_pod->get_field('year'); ?></a></li>
 <?php endforeach; ?>
 </ul>
 <?php endif;
