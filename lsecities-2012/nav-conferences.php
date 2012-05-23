@@ -74,10 +74,9 @@ if(count($button_links)) :
 <?php
 $conference_list = new Pod('list', 'urban-age-conferences');
 $pod_type = $conference_list->get_field('pod_type.slug');
-$pod_list = $conference_list->get_field('list');
-if($conference_list->get_field('sort_descending')) {
-    $pod_list = array_reverse($pod_list);
-  }
+$sort_order = $pod->get_field('sort_descending') ? 'DESC' : 'ASC';
+$pod_list = $conference_list->get_field('list', "menu_order $sort_order");
+
 if(count($pod_list)) : ?>
 <ul>
 <?php foreach($pod_list as $key => $item) :
