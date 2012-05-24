@@ -158,7 +158,7 @@ $logo_element_id = $GLOBALS['urban_age_section'] ? 'ualogo' : 'logo';
 				<nav id='level1nav'>
 					<ul>
             <li><a href="/" title="Home">Home</a></li>
-					<?php wp_list_pages('depth=1&sort_column=menu_order&title_li=&exclude=393,395,562,1074'); ?>
+					<?php wp_list_pages('depth=1&sort_column=menu_order&title_li=&exclude=393,395,562,1074,2032'); ?>
 					</ul>
 				</nav><!-- #level1nav -->
 			</div><!-- row -->
