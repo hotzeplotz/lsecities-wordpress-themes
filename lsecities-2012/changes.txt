@@ -1,5 +1,6 @@
 lsecities-2012 (1.0.1) stable; urgency=low
 
+  * [design] clearer keyfacts column for Publications pod
   * [new feature] Urban Age conferences/cities menu in the Urban Age
     Conferences section of the site now support displaying a conference
     title besides city and year - e.g.
