@@ -75,7 +75,9 @@
           }));
           $('.runon li:nth-child(odd)').addClass('alternate');
           $('.accordion').accordion({autoHeight: false});
-          $('input:radio[name=group[8245]]')[0].checked = true;
+          if($('input:radio[name=group[8245]]')[0].length) {
+            $('input:radio[name=group[8245]]')[0].checked = true;
+          }
         });
         var uvOptions = {};
         (function() {
