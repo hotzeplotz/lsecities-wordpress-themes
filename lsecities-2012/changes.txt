@@ -1,5 +1,6 @@
 lsecities-2012 (1.0.1) stable; urgency=low
 
+  * [content] added privacy policy
   * [feature] compliance with UK Cookie law - added support for
     Cookie Control by CIVIC UK (http://civicuk.com/cookie-law/)
   * [bug fixed] some jQuery code would not load correctly when
