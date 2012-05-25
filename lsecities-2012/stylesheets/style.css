@@ -251,6 +251,10 @@ footer#footer #footerSitemap > .row > section > ul li { line-height: 1em; margin
 
 .twitterbox { background: url("http://v1.lsecities.net/wp-content/themes/lsecities-2012/images/icons/mal/icon_twitter-v1darkblue_24x24.png") no-repeat scroll 0 50% transparent; line-height: 2em; padding-left: 2em; }
 
+table { border-bottom: 1px solid #fff; }
+table tr { border-bottom: 1px solid #eee; border-left: 1px solid #fff; }
+table tr td { padding: 0.25em; border-left: 1px solid #eee; }
+
 header.heading-image .flexslider .flex-direction-nav li a { top: 352 -64/2 px; }
 
 header.entry-header { margin-bottom: 1.5em; }
