@@ -190,7 +190,7 @@ body > #container > header #lclogo { height: 4.5em; }
 body > #container > header #ualogo { height: 4.5em; margin-top: 0.166667em; }
 body > #container > header ul { display: inline-block; list-style: none; margin: 0; padding: 0; }
 body > #container > header ul li { display: inline; float: left; }
-body > #container > header ul li a { padding: 0.125em 0.6em 0 0.6em; text-decoration: none; }
+body > #container > header ul li a { padding: 0.250em 0.6em 0 0.6em; text-decoration: none; }
 body > #container > header #socialbuttons ul li a { margin: 0 0.3125em; padding: 0; }
 
 #mainmenus { opacity: 1; }
@@ -204,7 +204,7 @@ body > #container > header #socialbuttons ul li a { margin: 0 0.3125em; padding:
 #mainmenus #level2nav ul { background-color: inherit; }
 
 nav#level1nav, nav#level2nav { line-height: 1.2em; font-family: nimbus-sans, PT Sans, ff-meta-web-pro, Arial, Helvetica, sans-serif; text-transform: uppercase; }
-nav#level1nav ul li, nav#level2nav ul li { line-height: 1.8em; margin-bottom: 0; }
+nav#level1nav ul li, nav#level2nav ul li { line-height: 1.5em; margin-bottom: 0; }
 
 #level1nav { margin-top: 4em; }
 #level1nav ul li a, #level1nav ul li a:active, #level1nav ul li a:visited { color: #000; }
@@ -251,9 +251,11 @@ footer#footer #footerSitemap > .row > section > ul li { line-height: 1em; margin
 
 .twitterbox { background: url("http://lsecities.net/wp-content/themes/lsecities-2012/images/icons/mal/icon_twitter-v1darkblue_24x24.png") no-repeat scroll 0 50% transparent; line-height: 2em; padding-left: 2em; }
 
+td { padding: 0.25em; border-left: 1px dashed #eee; }
+
+tr { border-bottom: 1px dashed #eee; border-left: 1px solid #fff; }
+
 table { border-bottom: 1px solid #fff; }
-table tr { border-bottom: 1px solid #eee; border-left: 1px solid #fff; }
-table tr td { padding: 0.25em; border-left: 1px solid #eee; }
 
 header.heading-image .flexslider .flex-direction-nav li a { top: 352 -64/2 px; }
 
