@@ -414,7 +414,7 @@ right: -21px; */ }
 .lc-conference-frontpage header.heading-image .mainheadings h1 { text-transform: uppercase; }
 
 .lc-publication #keyfacts .cover-thumbnail { padding: 0 4em; }
-.lc-publication #keyfacts .cover-thumbnail img { margin: 1em 0; -moz-transform: rotate(4deg); -webkit-transform: rotate(4deg); -o-transform: rotate(4deg); -ms-transform: rotate(4deg); transform: rotate(4deg); -moz-border-radius: 3px; -webkit-border-radius: 3px; -o-border-radius: 3px; -ms-border-radius: 3px; -khtml-border-radius: 3px; border-radius: 3px; }
+.lc-publication #keyfacts .cover-thumbnail img { margin: 1em 0; -moz-transform: rotate(3deg); -webkit-transform: rotate(3deg); -o-transform: rotate(3deg); -ms-transform: rotate(3deg); transform: rotate(3deg); -moz-border-radius: 3px; -webkit-border-radius: 3px; -o-border-radius: 3px; -ms-border-radius: 3px; -khtml-border-radius: 3px; border-radius: 3px; -moz-box-shadow: 3px 3px 3px #cccccc; -webkit-box-shadow: 3px 3px 3px #cccccc; -o-box-shadow: 3px 3px 3px #cccccc; box-shadow: 3px 3px 3px #cccccc; }
 .lc-publication #keyfacts dl dt { border-bottom: none; }
 .lc-publication .publication-sections { margin-top: 2em; }
 .lc-publication .publication-sections h1 { margin-bottom: 0.5em; }
