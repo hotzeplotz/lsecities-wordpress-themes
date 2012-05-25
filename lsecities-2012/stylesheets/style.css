@@ -270,6 +270,8 @@ header.entry-header h1 { font-family: museo-sans, PT Sans, sans-serif; font-weig
 .lc-event-programme #contentarea .event-programme ul.mediaitems { display: inline; }
 .lc-event-programme #contentarea .event-programme ul.mediaitems > li { display: inline; margin-right: 1em; }
 
+ol.article-references { list-style-position: inside; }
+ol.article-references li { margin-bottom: 0.25em; }
 ol.article-references li:target { background-color: #ffeeee; }
 
 #contentarea .top-content .entry-content .abstract { font-size: 0.9em; }
