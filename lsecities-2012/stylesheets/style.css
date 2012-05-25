@@ -251,7 +251,7 @@ footer#footer #footerSitemap > .row > section > ul li { line-height: 1em; margin
 
 .twitterbox { background: url("http://lsecities.net/wp-content/themes/lsecities-2012/images/icons/mal/icon_twitter-v1darkblue_24x24.png") no-repeat scroll 0 50% transparent; line-height: 2em; padding-left: 2em; }
 
-td { padding: 0.25em; border-left: 1px dashed #eee; }
+th, td { padding: 0.25em; border-left: 1px dashed #eee; }
 
 tr { border-bottom: 1px dashed #eee; border-left: 1px solid #fff; }
 
