@@ -1,5 +1,9 @@
 lsecities-2012 (1.0.1) stable; urgency=low
 
+  * [feature] compliance with UK Cookie law - added support for
+    Cookie Control by CIVIC UK (http://civicuk.com/cookie-law/)
+  * [bug fixed] some jQuery code would not load correctly when
+    jQuery code at an earlier stage would fail - this is now fixed
   * [design] clearer keyfacts column for Publications pod
   * [new feature] Urban Age conferences/cities menu in the Urban Age
     Conferences section of the site now support displaying a conference

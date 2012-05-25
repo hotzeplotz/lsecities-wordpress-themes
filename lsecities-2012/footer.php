@@ -63,6 +63,35 @@
 </div><!-- ## grid # container -->
 
 <?php wp_footer(); ?>
+
+<script src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
+<script src="http://lsecities.net/wp-content/plugins/cookie-control/js/cookieControl-4.1.min.js?ver=3.3.2" type="text/javascript"></script>
+<script type="text/javascript">//<![CDATA[
+  cookieControl({
+      introText:'<p>This site uses some unobtrusive cookies to store information on your computer.</p>',
+      fullText:'<p>Some cookies on this site are essential, and the site won\'t work as expected without them. These cookies are set when you submit a form, login or interact with the site by doing something that goes beyond clicking on simple links.</p><p>We also use some non-essential cookies to anonymously track visitors or enhance your experience of the site. If you\'re not happy with this, we won\'t set these cookies but some nice features of the site may be unavailable.</p><p>By using our site you accept the terms of our <a href="http://lsecities.net/info/privacy-policy/">Privacy Policy</a>.</p>',
+      position:'right', // left or right
+      shape:'triangle', // triangle or diamond
+      theme:'light', // light or dark
+      startOpen:false,
+      autoHide:6000,
+      subdomains:false,
+      onAccept:function(){ccAddAnalytics()},
+      onReady:function(){},
+      onCookiesAllowed:function(){ccAddAnalytics()},
+      onCookiesNotAllowed:function(){},
+      countries:'United Kingdom' // Or supply a list ['United Kingdom', 'Greece']
+      });
+
+      function ccAddAnalytics() {
+        jQuery.getScript("http://www.google-analytics.com/ga.js", function() {
+          var GATracker = _gat._createTracker('UA-5245143-1');
+          GATracker._trackPageview();
+        });
+      }
+   //]]>
+</script>  
+
 <script>
       //<![CDATA[
         jQuery(document).ready(function($) {
