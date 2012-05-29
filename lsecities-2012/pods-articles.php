@@ -38,6 +38,7 @@ if($TRACE_ENABLED) { error_log('article_lang2: ' . $article_lang2); }
 if(!empty($lang) && $lang == $article_lang2) {
   $article_title = $pod->get_field('title_lang2');
   $article_abstract = do_shortcode($pod->get_field('abstract_lang2'));
+  $article_summary = do_shortcode($pod->get_field('summary_lang2'));
   $article_text = do_shortcode($pod->get_field('text_lang2'));
   $article_extra_content = do_shortcode($pod->get_field('extra_content_lang2'));
   $pdf_uri = $pod->get_field('article_pdf_lang2.guid');
@@ -47,6 +48,7 @@ if(!empty($lang) && $lang == $article_lang2) {
 } else {
   $article_title = $pod->get_field('name');
   $article_abstract = do_shortcode($pod->get_field('abstract'));
+  $article_summary = do_shortcode($pod->get_field('summary'));
   $article_text = do_shortcode($pod->get_field('text'));
   $article_extra_content = do_shortcode($pod->get_field('extra_content'));
   $pdf_uri = $pod->get_field('article_pdf.guid');
@@ -105,7 +107,13 @@ if(count($attachments)) {
                 <div class="entry-content">    
                 <?php if(!empty($pod->data)): ?>
                   <div class="article">
-                    <div class="entry-content article-text<?php if($article_layout) { echo ' ' . $article_layout; } ?>"><?php echo $article_text; ?></div>
+                    <div class="entry-content article-text<?php if($article_layout) { echo ' ' . $article_layout; } ?>">
+                    <?php if($article_text): ?>
+                      <?php echo $article_text; ?>
+                    <?php elseif($article_summary): ?>
+                      <?php echo $article_summary; ?>
+                    <?php endif; ?>
+                    </div>
                     <?php if($article_extra_content): ?>
                     <div class="extra-content"><?php echo $article_extra_content; ?></div>
                     <?php endif; ?>
