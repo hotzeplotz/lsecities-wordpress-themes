@@ -1,5 +1,10 @@
 lsecities-2012 (1.0.1) stable; urgency=low
 
+  * who's who pages
+    * [new feature] added support for display after/display until
+    * [new feature] added support for staff group membership
+    * [new feature] added support for profile text specifically
+      for staff pages
   * [content] added privacy policy
   * [feature] compliance with UK Cookie law - added support for
     Cookie Control by CIVIC UK (http://civicuk.com/cookie-law/)
