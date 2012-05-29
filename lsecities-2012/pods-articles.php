@@ -37,6 +37,7 @@ if($TRACE_ENABLED) { error_log('article_lang2: ' . $article_lang2); }
 
 if(!empty($lang) && $lang == $article_lang2) {
   $article_title = $pod->get_field('title_lang2');
+  $article_subtitle = $pod->get_field('subtitle_lang2');
   $article_abstract = do_shortcode($pod->get_field('abstract_lang2'));
   $article_summary = do_shortcode($pod->get_field('summary_lang2'));
   $article_text = do_shortcode($pod->get_field('text_lang2'));
@@ -47,6 +48,7 @@ if(!empty($lang) && $lang == $article_lang2) {
   }
 } else {
   $article_title = $pod->get_field('name');
+  $article_subtitle = $pod->get_field('subtitle');
   $article_abstract = do_shortcode($pod->get_field('abstract'));
   $article_summary = do_shortcode($pod->get_field('summary'));
   $article_text = do_shortcode($pod->get_field('text'));
@@ -102,7 +104,12 @@ if(count($attachments)) {
               <article class='wireframe eightcol'>
                 <header class="entry-header">
                   <h1 class="entry-title article-title"><?php echo $article_title; ?></h1>
+                  <?php if($article_subtitle): ?>
+                  <h2><?php echo $article_subtitle; ?></h2>
+                  <?php endif; ?>
+                  <?php if($article_abstract): ?>
                   <div class="entry-meta article-abstract"><?php echo $article_abstract; ?></div>
+                  <?php endif; ?>
                 </header><!-- .entry-header -->
                 <div class="entry-content">    
                 <?php if(!empty($pod->data)): ?>
