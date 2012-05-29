@@ -48,7 +48,7 @@ if(!empty($lang) && $lang == $article_lang2) {
   }
 } else {
   $article_title = $pod->get_field('name');
-  $article_subtitle = $pod->get_field('subtitle');
+  $article_subtitle = $pod->get_field('article_subtitle');
   $article_abstract = do_shortcode($pod->get_field('abstract'));
   $article_summary = do_shortcode($pod->get_field('summary'));
   $article_text = do_shortcode($pod->get_field('text'));
