@@ -549,7 +549,7 @@ if($TRACE_ENABLED) {
                                                              <tbody>
                                                                <tr>
                                                                  <td>
-                                                                   <a href="https://facebook.com/lsecities"><img border="0" src="http://urban-age.net/images/art/icons/socialmedia/facebook-32x32.png" alt="Facebook" height="32" width="32" style="display: block;"></a>
+                                                                   <a href="https://facebook.com/lsecities"><img border="0" src="http://lsecities.net/wp-content/themes/lsecities-2012/images/icons/mal/icon_facebook-v2lightblue_27x27.png" alt="Facebook" height="27" width="27" style="display: block;"></a>
                                                                  </td>
                                                                  <td width="5">&nbsp;</td>
                                                                  <td>
@@ -557,7 +557,7 @@ if($TRACE_ENABLED) {
                                                                  </td>
                                                                  <td valign="top" width="20">&nbsp;</td>
                                                                  <td>
-                                                                   <a target="_blank" href="https://twitter.com/#!/LSECities"><img border="0" src="http://urban-age.net/images/art/icons/socialmedia/twitter-32x32.png" alt="Twitter" height="36" width="36" style="display: block;"></a>
+                                                                   <a target="_blank" href="https://twitter.com/#!/LSECities"><img border="0" src="http://lsecities.net/wp-content/themes/lsecities-2012/images/icons/mal/icon_twitter-v1lightblue_27x27.png" alt="Twitter" height="27" width="27" style="display: block;"></a>
                                                                  </td>
                                                                  <td width="5">&nbsp;</td>
                                                                  <td>
