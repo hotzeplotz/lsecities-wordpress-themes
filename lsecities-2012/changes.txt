@@ -1,6 +1,8 @@
 lsecities-2012 (1.0.1) stable; urgency=low
 
-  * [fixed] search lsecities.net via google
+  * search
+    * [fixed] search lsecities.net via google
+    * [usability] search icon is now a clickable button
   * who's who pages
     * [feature] added support for display after/display until
     * [feature] added support for staff group membership
