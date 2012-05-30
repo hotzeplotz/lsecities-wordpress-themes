@@ -1,29 +1,30 @@
 lsecities-2012 (1.0.1) stable; urgency=low
 
+  * [fixed] search lsecities.net via google
   * who's who pages
-    * [new feature] added support for display after/display until
-    * [new feature] added support for staff group membership
-    * [new feature] added support for profile text specifically
+    * [feature] added support for display after/display until
+    * [feature] added support for staff group membership
+    * [feature] added support for profile text specifically
       for staff pages
   * [content] added privacy policy
   * [feature] compliance with UK Cookie law - added support for
     Cookie Control by CIVIC UK (http://civicuk.com/cookie-law/)
-  * [bug fixed] some jQuery code would not load correctly when
+  * [fixed] some jQuery code would not load correctly when
     jQuery code at an earlier stage would fail - this is now fixed
   * [design] clearer keyfacts column for Publications pod
   * [feature] integration with Usernoise WP plugin for feedback
-  * [new feature] Urban Age conferences/cities menu in the Urban Age
+  * [feature] Urban Age conferences/cities menu in the Urban Age
     Conferences section of the site now support displaying a conference
     title besides city and year - e.g.
       Electric City
       London | 2012
   * sliders are now responsive
   * event pages:
-    * [new feature] added support for linking to a Storify story
-    * [new feature] editors can insert in advance an event blurb to be
+    * [feature] added support for linking to a Storify story
+    * [feature] editors can insert in advance an event blurb to be
       displayed before the event and a blurb to be displayed once the
       event has happened
-    * [bug fixed] contact and booking access info was supposed to be
+    * [fixed] contact and booking access info was supposed to be
       displayed before an event but wasn't displaying - this is now
       fixed
 

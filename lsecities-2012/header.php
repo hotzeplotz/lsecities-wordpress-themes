@@ -127,10 +127,10 @@ var usernoiseButton = {"text":"Feedback","style":"background-color: #ff0000; col
         <?php endif; ?>
 				<div class='sixcol last' id='toolbox'>
 					<div id="searchbox" class="clearfix">
-						<form method="get" id="search-box" action="http://www.google.com/u/urbanAge">
+						<form method="get" id="search-box" action="http://www.google.com/search">
 							<div class="hiddenFields">
-								<input type="hidden" value="www.urban-age.net" name="domains">
-								<input type="hidden" value="www.urban-age.net" name="sitesearch">
+								<input type="hidden" value="lsecities.net" name="domains">
+								<input type="hidden" value="lsecities.net" name="sitesearch">
 								<input type="text" size="40" placeholder="Search LSE Cities" name="q" id="queryfield">
 							</div>
 						</form>
