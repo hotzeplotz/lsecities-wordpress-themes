@@ -4,6 +4,10 @@
 
 $PODS_BASEURI_ARTICLES = '/media/objects/articles';
 
+function force_https_to_http($uri) {
+   return preg_replace('/^https?:\/\//i', 'http://', $uri);
+}
+
 function var_trace($var, $prefix = 'pods', $enabled = true, $destination = 'page') {
   if($enabled) {
     $output_string = "tracing $prefix : " . var_export($var, true) . "\n\n";

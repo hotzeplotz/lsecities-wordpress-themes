@@ -95,7 +95,7 @@ if(!$slider) {
 
 // if this is an event, grab the image URI from the Pod
 if(!$is_conference) {
-  $featured_image_uri = $pod->get_field('heading_image.guid');
+  $featured_image_uri = force_https_to_http($pod->get_field('heading_image.guid'));
 }
 
 $event_date_string = $pod->get_field('date_freeform');
@@ -107,7 +107,7 @@ $event_location = preg_replace('/<p>(.*?)<\/p>/', "$1", $pod->get_field('locatio
 $event_series = $pod->get_field('event_series');
           
 $poster_pdf = $pod->get_field('poster_pdf');
-$poster_pdf = $poster_pdf[0]['guid'];
+$poster_pdf = force_https_to_http($poster_pdf[0]['guid']);
 ?>
 
 <?php get_header(); ?>
