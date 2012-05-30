@@ -197,16 +197,18 @@ if(count($attachments)) {
             </div><!-- .top-content -->
           </div><!-- #contentarea -->
 
+          <div id="navigationarea" class='wireframe threecol last'>
+          <?php
+            if($pod_from_page) {
+              get_template_part('nav', 'conferences');
+            }
+            include(locate_template('nav-article.php'));
+          ?>
+          </div><!-- #navigationarea -->
+          
 </div><!-- #post-<?php the_ID(); ?> -->
 
 </div><!-- role="main" -->
-
-<?php
- if($pod_from_page) {
-   get_template_part('nav', 'conferences');
- }
- include(locate_template('nav-article.php'));
-?>
 
 <?php get_sidebar(); ?>
 
