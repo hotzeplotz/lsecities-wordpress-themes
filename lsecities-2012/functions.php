@@ -7,10 +7,16 @@ $PODS_BASEURI_ARTICLES = '/media/objects/articles';
 /* deal with WP's insane URI (mis)management - example from
  * http://codex.wordpress.org/Plugin_API/Filter_Reference/wp_get_attachment_url */
 add_filter('wp_get_attachment_url', 'honor_ssl_for_attachments');
+add_filter( 'the_content', 'honor_ssl_for_attachments' );
 function honor_ssl_for_attachments($url) {
 	$http = site_url(FALSE, 'http');
 	$https = site_url(FALSE, 'https');
-	return ( $_SERVER['HTTPS'] == 'on' ) ? str_replace($http, $https, $url) : $url;
+	if($_SERVER['HTTPS'] == 'on') {
+    str_replace($http, $https, $url);
+  }
+  else {
+    str_replace($https, $http, $url);
+  }
 }
 
 function var_trace($var, $prefix = 'pods', $enabled = true, $destination = 'page') {
