@@ -216,7 +216,7 @@ nav#level1nav ul li, nav#level2nav ul li { line-height: 1.5em; margin-bottom: 0;
 header #searchbox { opacity: 0.7; }
 header #searchbox #socialbuttons { float: right; }
 header #searchbox #queryfield { border: 2px solid #a8abb2; color: #888; height: 1.9166667em; padding: 0 0 0 0.25em; font-size: 1em; -moz-border-radius: 0.25em; -webkit-border-radius: 0.25em; -o-border-radius: 0.25em; -ms-border-radius: 0.25em; -khtml-border-radius: 0.25em; border-radius: 0.25em; }
-header #searchbox #queryfield input[type="text"] { border: none; line-height: 1em; color: inherit; }
+header #searchbox #queryfield input[type="text"] { border: none; color: inherit; }
 header #searchbox #queryfield input[type="submit"] { background: url("http://lsecities.net/wp-content/themes/lsecities-2012/images/icons/mal/searchicon_for_header.gif") no-repeat scroll right center transparent; border: none; width: 35px; height: 25px; }
 header #searchbox form { float: right; opacity: 1; font-size: 0.75em; margin-left: 0.625em; }
 header #searchbox form:hover { opacity: 1; }
