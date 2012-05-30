@@ -15,12 +15,21 @@ $PODS_BASEURI_ARTICLES = '/media/objects/articles';
 global $pods;
 /* URI: /media/objects/articles/<article-slug>[?lang=<language>] */
 
-// set toplevel ancestor explicitly as we are outside of WP's hierarchy
-global $pods_toplevel_ancestor;
+$pod_slug = get_post_meta($post->ID, 'pod_slug', true);
+if($pod_slug) {
+  $pod = new Pod('article', $pod_slug);
+  $pod_from_page = true;
+} else {
+  $pod = new Pod('article', pods_url_variable(3));
+}
 
-$pods_toplevel_ancestor = 309;
+if(!$pod_from_page) {
+  // set toplevel ancestor explicitly as we are outside of WP's hierarchy
+  global $pods_toplevel_ancestor;
 
-$pod = new Pod('article', pods_url_variable(3));
+  $pods_toplevel_ancestor = 309;
+}
+
 $lang = strtolower(pods_url_variable('lang', 'get'));
 $article_lang2 = $pod->get_field('language.slug');
 $article_layout = $pod->get_field('layout');
@@ -192,7 +201,12 @@ if(count($attachments)) {
 
 </div><!-- role="main" -->
 
-<?php include(locate_template('nav-article.php')); ?>
+<?php
+ if($pod_from_page) {
+   get_template_part('nav', 'conferences');
+ }
+ include(locate_template('nav-article.php'));
+?>
 
 <?php get_sidebar(); ?>
 
