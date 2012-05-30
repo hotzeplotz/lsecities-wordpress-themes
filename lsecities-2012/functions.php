@@ -12,10 +12,10 @@ function honor_ssl_for_attachments($url) {
 	$http = site_url(FALSE, 'http');
 	$https = site_url(FALSE, 'https');
 	if($_SERVER['HTTPS'] == 'on') {
-    str_replace($http, $https, $url);
+    return str_replace($http, $https, $url);
   }
   else {
-    str_replace($https, $http, $url);
+    return str_replace($https, $http, $url);
   }
 }
 
