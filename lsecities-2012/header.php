@@ -129,11 +129,14 @@ var usernoiseButton = {"text":"Feedback","style":"background-color: #ff0000; col
 					<div id="searchbox" class="clearfix">
 						<form method="get" id="search-box" action="http://www.google.com/search">
 							<div class="hiddenFields">
-								<input type="hidden" value="lsecities.net" name="domains">
-								<input type="hidden" value="lsecities.net" name="sitesearch">
-								<input type="text" size="40" placeholder="Search LSE Cities" name="q" id="queryfield">
+								<input type="hidden" value="lsecities.net" name="domains" />
+								<input type="hidden" value="lsecities.net" name="sitesearch" />
+								<div id="queryfield">
+									<input type="text" size="35 " placeholder="Search LSE Cities" name="q" />
+									<input type="submit" value="" />
+								</div>
 							</div>
-						</form>
+             </form>
 						<span id="socialbuttons">
 							<ul>
 								<li>
