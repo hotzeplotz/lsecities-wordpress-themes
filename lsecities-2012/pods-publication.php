@@ -33,7 +33,7 @@ foreach($slider_pod->get_field('tiles.slug') as $tile_slug) {
   array_push($heading_slides, honor_ssl_for_attachments($tile->get_field('image.guid')));
 }
 
-$pod_pdf = $pod->get_field('publication_pdf.guid') ? honor_ssl_for_attachments$pod->get_field('publication_pdf.guid')) : $pod->get_field('publication_pdf_uri');
+$pod_pdf = $pod->get_field('publication_pdf.guid') ? honor_ssl_for_attachments($pod->get_field('publication_pdf.guid')) : $pod->get_field('publication_pdf_uri');
 $pod_alt_pdf = $pod->get_field('publication_alt_pdf.guid') ? honor_ssl_for_attachments($pod->get_field('publication_alt_pdf.guid')) : $pod->get_field('publication_alt_pdf_uri');
 $pod_pdf_lang2 = $pod->get_field('publication_pdf_lang2.guid') ? honor_ssl_for_attachments($pod->get_field('publication_pdf_lang2.guid')) : $pod->get_field('publication_pdf_lang2_uri');
 $pod_alt_pdf_lang2 = $pod->get_field('publication_alt_pdf_lang2.guid') ? honor_ssl_for_attachments($pod->get_field('publication_alt_pdf_lang2.guid')) : $pod->get_field('publication_alt_pdf_lang2_uri');
