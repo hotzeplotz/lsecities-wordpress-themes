@@ -47,11 +47,11 @@ textarea { overflow: auto; vertical-align: text-top; }
 
 input::-moz-focus-inner, button::-moz-focus-inner { border: 0; padding: 0; }
 
-::-moz-selection { background: #ff5e99; color: white; text-shadow: none; }
+::-moz-selection { background: #a8d1ff; color: white; text-shadow: none; }
 
-::selection { background: #ff5e99; color: white; text-shadow: none; }
+::selection { background: #a8d1ff; color: white; text-shadow: none; }
 
-a:link { -webkit-tap-highlight-color: #ff5e99; }
+a:link { -webkit-tap-highlight-color: #a8d1ff; }
 
 .ie7 img { -ms-interpolation-mode: bicubic; }
 
