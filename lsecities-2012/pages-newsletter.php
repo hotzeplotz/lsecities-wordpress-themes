@@ -374,8 +374,8 @@ if($TRACE_ENABLED) {
 				display:inline;
 			}
    
-   .footerContent {
-    font-size: 13px;
+   .footerContent, .footerContent a {
+    font-size: 12px;
     font-family: Arial, sans-serif;
    }
    
