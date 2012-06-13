@@ -542,12 +542,9 @@ if($TRACE_ENABLED) {
                                                    <table cellpadding="0" cellspacing="0" border="0" width="558">
                                                      <tbody>
                                                        <tr>
-                                                         <td valign="top" width="269">
-                                                           <h1>Follow LSE Cities</h1>
-                                                           <p style="margin-top: 5px;">Get all our updates on the social web.</p>
-                                                         </td>
-                                                         <td valign="top" width="10">&nbsp;</td>
+                                                         <td valign="top" width="134">&nbsp;</td>
                                                          <td valign="top" width="289">
+							 <td valign="top" width="133">&nbsp;</td>
                                                            <table cellpadding="0" cellspacing="0" border="0" width="289">
                                                              <tbody>
                                                                <tr>
@@ -564,7 +561,7 @@ if($TRACE_ENABLED) {
                                                                  </td>
                                                                  <td width="5">&nbsp;</td>
                                                                  <td>
-                                                                   <a href="http://twitter.com/#!/LSECities">Join us on Twitter</a>
+                                                                   <a href="http://twitter.com/#!/LSECities">Follow us on Twitter</a>
                                                                  </td>
                                                                </tr>
                                                              </tbody>
