@@ -58,6 +58,9 @@ if($TRACE_ENABLED) {
    a:hover {
     color: #777;
    }
+   div p:last-child {
+    margin-bottom: 0;
+   }
 
 			/* Template Styles */
 
