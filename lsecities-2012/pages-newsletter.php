@@ -542,7 +542,7 @@ if($TRACE_ENABLED) {
                                                      <tbody>
                                                        <tr>
                                                          <td valign="top" width="134">&nbsp;</td>
-							 <td valign="top" width="289">&nbsp;</td>
+							 <td valign="top" width="289">
                                                            <table cellpadding="0" cellspacing="0" border="0" width="289">
                                                              <tbody>
                                                                <tr>
