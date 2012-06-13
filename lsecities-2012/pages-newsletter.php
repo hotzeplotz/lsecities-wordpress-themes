@@ -48,16 +48,15 @@ if($TRACE_ENABLED) {
 			img{border:0; height:auto; line-height:100%; outline:none; text-decoration:none;}
 			table td{border-collapse:collapse;}
 			#backgroundTable{height:100% !important; margin:0; padding:0; width:100% !important;}
-			
+   p, body, a {
+     font-family: Arial, sans-serif;
+   }
    a, a:active, a:visited, a:hover {
     text-decoration: none;
     color: #de1f00;
    }
    a:hover {
     color: #777;
-   }
-   p {
-     font-family: Arial, sans-serif;
    }
 
 			/* Template Styles */
