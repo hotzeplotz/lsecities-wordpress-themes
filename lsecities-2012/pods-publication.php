@@ -38,12 +38,14 @@ $pod_alt_pdf = $pod->get_field('publication_alt_pdf.guid') ? honor_ssl_for_attac
 $pod_pdf_lang2 = $pod->get_field('publication_pdf_lang2.guid') ? honor_ssl_for_attachments($pod->get_field('publication_pdf_lang2.guid')) : $pod->get_field('publication_pdf_lang2_uri');
 $pod_alt_pdf_lang2 = $pod->get_field('publication_alt_pdf_lang2.guid') ? honor_ssl_for_attachments($pod->get_field('publication_alt_pdf_lang2.guid')) : $pod->get_field('publication_alt_pdf_lang2_uri');
 
+$extra_publication_metadata = $pod->get_field('extra_publication_metadata');
+
 $publication_authors_list = $pod->get_field('authors', 'family_name ASC');
 foreach($publication_authors_list as $publication_author) {
   $publication_authors .= $publication_author['name'] . ' ' . $publication_author['family_name'] . ', ';
 }
 $publication_authors = substr($publication_authors, 0, -2);
-$publication_editors_list = (array) $pod->get_field('editors', 'family_name ASC');
+$publication_editors_list = $pod->get_field('editors', 'family_name ASC');
 foreach($publication_editors_list as $publication_editor) {
   $publication_editors .= $publication_editor['name'] . ' ' . $publication_editor['family_name'] . ', ';
 }
@@ -124,6 +126,9 @@ echo var_trace('sections: ' . var_export($publication_sections, true), $TRACE_PR
               <li><a class="readthis online issuu button" href="<?php echo $pod_issuu_uri; ?>">Online browser</a></li>
               <?php endif ; ?>
             </ul>
+            <?php if($extra_publication_metadata): ?>
+            <?php echo $extra_publication_metadata; ?>
+            <?php endif; ?>
             <dl>
             <?php if($publication_authors): ?>
               <dt>Authors</dt>
