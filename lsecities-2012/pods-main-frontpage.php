@@ -77,18 +77,18 @@ function compose_slide($column_spans, $tiles) {
       $tile_count -= $this_tile_count;
       echo var_trace('tile_countdown: ' . var_export($tile_count, true), $TRACE_PREFIX, $TRACE_ENABLED);
 
-      unset($linked_event_month, $linked_event_day, $target_uri);
+      unset($target_event_month, $target_event_day, $target_uri);
       
-      if($tile->get_field('linked_event.date_start')) {
-        $linked_event_date = new DateTime($tile->get_field('linked_event.date_start'));
-        var_trace('linked_event_date: ' . var_export($linked_event_date, true), $TRACE_PREFIX, $TRACE_ENABLED);
-        $linked_event_month = $linked_event_date->format('M');
-        $linked_event_day = $linked_event_date->format('j');
-        $linked_event_slug = $tile->get_field('linked_event.slug');
+      if($tile->get_field('target_event.date_start')) {
+        $target_event_date = new DateTime($tile->get_field('target_event.date_start'));
+        var_trace('target_event_date: ' . var_export($target_event_date, true), $TRACE_PREFIX, $TRACE_ENABLED);
+        $target_event_month = $target_event_date->format('M');
+        $target_event_day = $target_event_date->format('j');
+        $target_event_slug = $tile->get_field('target_event.slug');
       }
       
-      if($tile->get_field('linked_event.slug')) {
-        $target_uri = '/media/objects/events/' . $tile->get_field('linked_event.slug');
+      if($tile->get_field('target_event.slug')) {
+        $target_uri = '/media/objects/events/' . $tile->get_field('target_event.slug');
       } elseif($tile->get_field('target_uri')) {
         $target_uri = $tile->get_field('target_uri');
       } elseif($tile->get_field('target_page.guid')) {
@@ -107,9 +107,9 @@ function compose_slide($column_spans, $tiles) {
           'posts_category' => $tile->get_field('posts_category.term_id'),
           'target_uri' => $target_uri,
           'image' => $tile->get_field('image.guid'),
-          'linked_event' => array(
-            'month' => $linked_event_month,
-            'day' => $linked_event_day
+          'target_event' => array(
+            'month' => $target_event_month,
+            'day' => $target_event_day
           )
         )
       );
@@ -194,10 +194,10 @@ $slides = $pod->get_field('slides');
                               </div>
                             <?php elseif($tile['title'] or $tile['subtitle'] or $tile['blurb']): ?>
                               <div class="feature_info<?php if(!$tile['blurb']): ?> noblurb<?php endif; ?>">
-                                <?php if($tile['linked_event']['month'] and $tile['linked_event']['day']): ?>
+                                <?php if($tile['target_event']['month'] and $tile['target_event']['day']): ?>
                                 <div class="feature_date">
-                                  <div class="month"><?php if($tile['target_uri']): ?><a href="<?php echo $tile['target_uri']; ?>"><?php endif; ?><?php echo $tile['linked_event']['month']; ?><?php if($tile['target_uri']): ?></a><?php endif; ?></div>
-                                  <div class="day"><?php if($tile['target_uri']): ?><a href="<?php echo $tile['target_uri']; ?>"><?php endif; ?><?php echo $tile['linked_event']['day']; ?><?php if($tile['target_uri']): ?></a><?php endif; ?></div>
+                                  <div class="month"><?php if($tile['target_uri']): ?><a href="<?php echo $tile['target_uri']; ?>"><?php endif; ?><?php echo $tile['target_event']['month']; ?><?php if($tile['target_uri']): ?></a><?php endif; ?></div>
+                                  <div class="day"><?php if($tile['target_uri']): ?><a href="<?php echo $tile['target_uri']; ?>"><?php endif; ?><?php echo $tile['target_event']['day']; ?><?php if($tile['target_uri']): ?></a><?php endif; ?></div>
                                 </div>
                                 <?php endif; ?>
                                 <?php if($tile['title'] or $tile['subtitle']): ?>
