@@ -27,10 +27,12 @@ $pod_abstract = do_shortcode($pod->get_field('abstract'));
 $heading_slides = array();
 echo var_trace($pod->get_field('heading_slides.slug'), $TRACE_PREFIX . '--heading_slides.slug', $TRACE_ENABLED);
 $slider_pod = new Pod('slide', $pod->get_field('heading_slides.slug'));
-foreach($slider_pod->get_field('tiles.slug') as $tile_slug) {
+foreach((array)$slider_pod->get_field('tiles.slug') as $tile_slug) {
   echo var_trace($tile_slug, $TRACE_PREFIX. '--tiles.slug', $TRACE_ENABLED);
   $tile = new Pod('tile', $tile_slug);
-  array_push($heading_slides, honor_ssl_for_attachments($tile->get_field('image.guid')));
+  if($tile) {
+    array_push($heading_slides, honor_ssl_for_attachments($tile->get_field('image.guid')));
+  }
 }
 
 $pod_pdf = $pod->get_field('publication_pdf.guid') ? honor_ssl_for_attachments($pod->get_field('publication_pdf.guid')) : $pod->get_field('publication_pdf_uri');
