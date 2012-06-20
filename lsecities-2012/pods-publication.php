@@ -117,7 +117,9 @@ echo var_trace('sections: ' . var_export($publication_sections, true), $TRACE_PR
         </article>
         <aside class='wireframe fourcol last entry-meta' id='keyfacts'>
           <div>
+            <?php if($pod_cover): ?>
             <div class='cover-thumbnail'><img src="<?php echo $pod_cover; ?>" /></div>
+            <?php endif; ?>
             <ul>
               <?php if($pod_pdf) : ?>
               <li><a class="downloadthis pdf button" href="<?php echo $pod_pdf; ?>">Download PDF</a></li>
