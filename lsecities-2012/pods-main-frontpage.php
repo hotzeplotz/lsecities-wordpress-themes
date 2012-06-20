@@ -93,6 +93,8 @@ function compose_slide($column_spans, $tiles) {
         $target_uri = $tile->get_field('target_uri');
       } elseif($tile->get_field('target_page.guid')) {
         $target_uri = $tile->get_field('target_page.guid');
+      } elseif($tile->get_field('target_post.guid')) {
+        $target_uri = $tile->get_field('target_post.guid');
       }
       
       array_push($slide_column['tiles'],
