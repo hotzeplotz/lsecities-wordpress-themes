@@ -58,16 +58,22 @@ function generate_person_profile($slug, $extra_title) {
     $affiliation = $organization;
   }
   $output .= "<li class='person row'>";
-  $output .= " <div class='fourcol profile-photo'><img src='$profile_photo_uri' alt='$fullname - photo'/></div>";
-  $output .= " <div class='eightcol last'>";
-  $output .= "  <h2>$fullname_for_heading</h2>";
+  $output .= "  <div class='fourcol profile-photo'>";
+  if($profile_photo_uri) {
+    $output .= "    <img src='$profile_photo_uri' alt='$fullname - photo'/>";
+  } else {
+    $output .= "&nbsp;";
+  }
+  $output .= "  </div>";
+  $output .= "  <div class='eightcol last'>";
+  $output .= "    <h2>$fullname_for_heading</h2>";
   if($affiliation) {
     $output .= "  <p>$affiliation</p>";
   }
   if($blurb) {
     $output .= "  $blurb";
   }
-  $output .= " </div>";
+  $output .= "  </div>";
   $output .= "</li>";
   
   return $output;
