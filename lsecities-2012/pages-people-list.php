@@ -14,7 +14,7 @@ $people_list = get_post_meta($post->ID, 'people_list', true);
 
 $lists = array(
   'lsecities-staff' =>
-    array('lsecities-staff-management'),
+    array('lsecities-staff-mgmt'),
     array('lsecities-staff')
 );
   
