@@ -20,7 +20,7 @@ $lists = array(
   
 function generate_list($list_id, $mode = 'full_list') {
   if($list_id == 'lsecities-staff') {
-    $output .= generate_section('lsecities-staff-management');
+    $output .= generate_section('lsecities-staff-mgmt');
     $output .= generate_section('lsecities-staff');
   }
   
