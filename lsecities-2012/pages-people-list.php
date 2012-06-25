@@ -55,8 +55,8 @@ function generate_person_profile($slug, $extra_title) {
     $affiliation = $organization;
   }
   $output .= "<li class='person'>";
-  $output .= " <div class='fourcol'><img src='$profile_photo_uri' alt='$fullname - photo'/></div>";
-  $output .= " <div class='eightcol'>";
+  $output .= " <div class='fourcol profile-photo'><img src='$profile_photo_uri' alt='$fullname - photo'/></div>";
+  $output .= " <div class='eightcol last'>";
   $output .= "  <h2>$fullname_for_heading</h2>";
   if($affiliation) {
     $output .= "  <p>$affiliation</p>";
