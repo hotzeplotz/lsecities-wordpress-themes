@@ -31,7 +31,7 @@ function generate_section($section_slug, $mode = 'full_list') {
   $pod = Pod('people_group', $section_slug);
   $people = (array)$pod->get_field('members', 'family_name ASC');
   echo var_trace('group_members: ' . var_export($people, true), $TRACE_PREFIX, $TRACE_ENABLED);
-  for($people as $person) {
+  foreach($people as $person) {
     $output .= generate_person_profile($person['slug']);
   }
   return $output;
