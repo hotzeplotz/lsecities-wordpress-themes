@@ -42,7 +42,7 @@ function generate_section($section_slug, $mode = 'full_list') {
 function generate_person_profile($slug, $extra_title) {
   $LEGACY_PHOTO_URI_PREFIX = 'http://v0.urban-age.net';
   $pod = new Pod('authors', $slug);
-  $fullname = $pod->get_field('name') . ' ' . $pod->get_field('family name');
+  $fullname = $pod->get_field('name') . ' ' . $pod->get_field('family_name');
   $fullname = trim($fullname);
   if($extra_title) {
     $fullname_for_heading = $fullname . ' ' . $extra_title;
