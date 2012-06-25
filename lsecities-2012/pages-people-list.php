@@ -49,6 +49,8 @@ function generate_person_profile($slug, $extra_title) {
     $fullname_for_heading .= ' ' . $extra_title;
   }
   $profile_photo_uri = $pod->get_field('photo.guid');
+  $email_address = preg_replace('/\@/', ' [AT] ', $pod->get_field('email_address'));
+  
   if(!$profile_photo_uri and $pod->get_field('photo_legacy')) {
     $profile_photo_uri = $LEGACY_PHOTO_URI_PREFIX . $pod->get_field('photo_legacy');
   }
@@ -72,6 +74,9 @@ function generate_person_profile($slug, $extra_title) {
   $output .= "    <h2>$fullname_for_heading</h2>";
   if($affiliation) {
     $output .= "  <p>$affiliation</p>";
+  }
+  if($email_address) {
+    $output .= "  <p>$email_address</p>";
   }
   if($blurb) {
     $output .= "  $blurb";
