@@ -44,8 +44,9 @@ function generate_person_profile($slug, $extra_title) {
   $pod = new Pod('authors', $slug);
   $fullname = $pod->get_field('name') . ' ' . $pod->get_field('family_name');
   $fullname = trim($fullname);
+  $fullname_for_heading = $fullname;
   if($extra_title) {
-    $fullname_for_heading = $fullname . ' ' . $extra_title;
+    $fullname_for_heading .= ' ' . $extra_title;
   }
   $profile_photo_uri = $pod->get_field('photo.guid') ? $pod->get_field('photo.guid') : $LEGACY_PHOTO_URI_PREFIX . $pod->get_field('photo_legacy');
   $blurb = $pod->get_field('staff_pages_blurb');
