@@ -48,7 +48,10 @@ function generate_person_profile($slug, $extra_title) {
   if($extra_title) {
     $fullname_for_heading .= ' ' . $extra_title;
   }
-  $profile_photo_uri = $pod->get_field('photo.guid') ? $pod->get_field('photo.guid') : $LEGACY_PHOTO_URI_PREFIX . $pod->get_field('photo_legacy');
+  $profile_photo_uri = $pod->get_field('photo.guid');
+  if(!$profile_photo_uri and $pod->get_field('photo_legacy')) {
+    $profile_photo_uri = $LEGACY_PHOTO_URI_PREFIX . $pod->get_field('photo_legacy');
+  }
   $blurb = $pod->get_field('staff_pages_blurb');
   $organization = $pod->get_field('organization');
   $role = $pod->get_field('role');
