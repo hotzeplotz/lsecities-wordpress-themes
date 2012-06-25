@@ -56,7 +56,7 @@ function generate_person_profile($slug, $extra_title) {
   $organization = $pod->get_field('organization');
   $role = $pod->get_field('role');
   if($role and $organization) {
-    $affiliation = $role . ', ' . $organization;
+    $affiliation = "<strong>$role</strong>" . ', ' . $organization;
   } elseif (!$role and $organization) {
     $affiliation = $organization;
   }
