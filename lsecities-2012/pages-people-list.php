@@ -62,7 +62,7 @@ function generate_person_profile($slug, $extra_title) {
   } elseif (!$role and $organization) {
     $affiliation = $organization;
   }
-  $output .= "<li class='person row'>";
+  $output .= "<li class='person row' id='p-$slug'>";
   $output .= "  <div class='fourcol profile-photo'>";
   if($profile_photo_uri) {
     $output .= "    <img src='$profile_photo_uri' alt='$fullname - photo'/>";
