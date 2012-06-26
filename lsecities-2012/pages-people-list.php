@@ -76,8 +76,9 @@ function generate_person_profile($slug, $extra_title) {
   if($qualifications_list) {
     $output .= "<div class='qualifications'>";
     foreach($qualifications_list as $qualification) {
-      $output .= "<span>$qualification</span>";
+      $output .= "<span>$qualification</span> ";
     }
+    $output = rtrim($output, ' ');
     $output .= "</div>";
   }  
   if($affiliation) {
