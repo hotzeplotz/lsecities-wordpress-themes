@@ -48,6 +48,7 @@ function generate_person_profile($slug, $extra_title) {
   if($extra_title) {
     $fullname_for_heading .= ' ' . $extra_title;
   }
+  $qualifications_list = array_map(function($string) { return trim($string); }, explode("\n", $pod->get_field('qualifications')));
   $profile_photo_uri = $pod->get_field('photo.guid');
   $email_address = preg_replace('/\@/', ' [AT] ', $pod->get_field('email_address'));
   
@@ -72,6 +73,13 @@ function generate_person_profile($slug, $extra_title) {
   $output .= "  </div>";
   $output .= "  <div class='eightcol last'>";
   $output .= "    <h2>$fullname_for_heading</h2>";
+  if($qualifications_list) {
+    $output .= "<div class='qualifications'>";
+    foreach($qualifications_list as $qualification) {
+      $output .= "<span>$qualification</span>";
+    }
+    $output .= "</div>";
+  }  
   if($affiliation) {
     $output .= "  <p>$affiliation</p>";
   }
