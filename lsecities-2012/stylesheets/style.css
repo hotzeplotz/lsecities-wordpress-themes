@@ -167,18 +167,18 @@ header h1.entry-title { font-size: 2em; /* margin-bottom: 1.2em; */ font-family:
 
 .article-text img { max-width: 100%; }
 
-#main h1 { font-size: 2em; }
-#main h1.mainheading { font-size: 3em; }
-#main h2 { font-size: 1.5em; }
-#main h2.mainheading { font-size: 2.5em; }
-#main h3 { font-size: 1.2em; }
-#main article .introblurb h2 { margin-top: 0.6em; margin-bottom: 0; }
-#main article .introblurb p { font-size: 1.25em; line-height: 1.2em; }
-#main .wp-caption { max-width: 100% !important; }
-#main .wp-caption-text { font-size: 0.875em; font-family: proxima-nova, "Helvetica Neue", Helvetica, sans-serif; }
-#main ul.publication-side-toc li { line-height: 1.25em; margin-bottom: 0.25em; }
-#main .publication-cover { -moz-box-shadow: 0.313em 0.313em 0.188em #888888; -webkit-box-shadow: 0.313em 0.313em 0.188em #888888; -o-box-shadow: 0.313em 0.313em 0.188em #888888; box-shadow: 0.313em 0.313em 0.188em #888888; }
-#main .article .entry-content.article-text.sidebyside > div { -moz-column-count: 2; -webkit-column-count: 2; -o-column-count: 2; column-count: 2; }
+body h1 { font-size: 2em; }
+body h1.mainheading { font-size: 3em; }
+body h2 { font-size: 1.5em; }
+body h2.mainheading { font-size: 2.5em; }
+body h3 { font-size: 1.2em; }
+body article .introblurb h2 { margin-top: 0.6em; margin-bottom: 0; }
+body article .introblurb p { font-size: 1.25em; line-height: 1.2em; }
+body .wp-caption { max-width: 100% !important; }
+body .wp-caption-text { font-size: 0.875em; font-family: proxima-nova, "Helvetica Neue", Helvetica, sans-serif; }
+body ul.publication-side-toc li { line-height: 1.25em; margin-bottom: 0.25em; }
+body .publication-cover { -moz-box-shadow: 0.313em 0.313em 0.188em #888888; -webkit-box-shadow: 0.313em 0.313em 0.188em #888888; -o-box-shadow: 0.313em 0.313em 0.188em #888888; box-shadow: 0.313em 0.313em 0.188em #888888; }
+body .article .entry-content.article-text.sidebyside > div { -moz-column-count: 2; -webkit-column-count: 2; -o-column-count: 2; column-count: 2; }
 
 body > #container > header { /* font-size: 0.75em; */ /* margin-top: 1em; */ /* background: url('../images/backgrounds/header-background-strip-lsecities.gif') repeat-x; */ padding-top: 0.75em; }
 body > #container > header nav { color: inherit; }
