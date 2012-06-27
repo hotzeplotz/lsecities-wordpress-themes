@@ -38,7 +38,8 @@ function generate_section($section_slug, $section_heading = false, $mode = MODE_
   $people = (array)$pod->get_field('members', 'family_name ASC');
   global $people_in_output_full, $people_in_output_summary;
   echo var_trace('group_members: ' . var_export($people, true), $TRACE_PREFIX, true);
-  $output = "<h1>$section_heading</h1>";
+  $output = "<section>";
+  $output .= "<h1>$section_heading</h1>";
   $output .= "<ul class='$section_slug'>";
   foreach($people as $person) {
     if($mode == MODE_FULL_LIST) {
@@ -55,7 +56,8 @@ function generate_section($section_slug, $section_heading = false, $mode = MODE_
   }
   echo var_trace('people_in_output_full: ' . var_export($people_in_output_full, true), $TRACE_PREFIX, true);
   echo var_trace('people_in_output_summary: ' . var_export($people_in_output_summary, true), $TRACE_PREFIX, true);
-  $output .= "</ul>";
+  $output .= " </ul>";
+  $output .= "</section>";
   return $output;
 }
 
@@ -132,7 +134,7 @@ function generate_person_profile($slug, $extra_title, $mode = MODE_FULL_LIST) {
       <div class='top-content'>
         <article class='wireframe row'>
           <header class='entry-header'>
-            <h1><?php echo $pod_title; ?></h1>
+            <h1><?php the_title(); ?></h1>
           </header>
           <div class='entry-content article-text'>
             <?php echo generate_list($people_list, MODE_FULL_LIST); ?>
