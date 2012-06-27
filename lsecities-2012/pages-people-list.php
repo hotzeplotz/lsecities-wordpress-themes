@@ -42,7 +42,7 @@ function generate_section_full($section_slug) {
   echo var_trace('group_members: ' . var_export($people, true), $TRACE_PREFIX, $TRACE_ENABLED);
   $output .= "<ul class='$section_slug'>";
   foreach($people as $person) {
-    $output .= generate_person_profile($person['slug'], , MODE_FULL_LIST);
+    $output .= generate_person_profile($person['slug'], false, MODE_FULL_LIST);
   }
   $output .= "</ul>";
   return $output;
