@@ -42,15 +42,20 @@ function generate_section($section_slug, $section_heading = false, $mode = MODE_
   $output .= "<h1>$section_heading</h1>";
   $output .= "<ul>";
   foreach($people as $person) {
-    if($mode == MODE_FULL_LIST) {
-      if(!in_array($person['slug'], $people_in_output_full)) {
-        array_push($people_in_output_full, $person['slug']);
-        $output .= generate_person_profile($person['slug'], false, MODE_FULL_LIST);
-      }
-    } elseif ($mode == MODE_SUMMARY) {
-      if(!in_array($person['slug'], $people_in_output_summary)) {
-        array_push($people_in_output_summary, $person['slug']);
-        $output .= generate_person_profile($person['slug'], false, MODE_SUMMARY);
+    $display_after = new DateTime($pod->get_field('display_after'));
+    $display_until = new DateTime($pod->get_field('display_until'));
+    $datetime_now = new DateTime('now');
+    if($display_after <= $datetime_now <= $display_until) {
+      if($mode == MODE_FULL_LIST) {
+        if(!in_array($person['slug'], $people_in_output_full)) {
+          array_push($people_in_output_full, $person['slug']);
+          $output .= generate_person_profile($person['slug'], false, MODE_FULL_LIST);
+        }
+      } elseif ($mode == MODE_SUMMARY) {
+        if(!in_array($person['slug'], $people_in_output_summary)) {
+          array_push($people_in_output_summary, $person['slug']);
+          $output .= generate_person_profile($person['slug'], false, MODE_SUMMARY);
+        }
       }
     }
   }
