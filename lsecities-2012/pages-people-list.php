@@ -43,16 +43,18 @@ function generate_section($section_slug, $section_heading = false, $mode = MODE_
   foreach($people as $person) {
     if($mode == MODE_FULL_LIST) {
       if(!in_array($person['slug'], $people_in_output_full)) {
+        array_push($people_in_output_full, $person['slug']);
         $output .= generate_person_profile($person['slug'], false, MODE_FULL_LIST);
       }
-      array_push($people_in_output_full, $person['slug']);
     } elseif ($mode == MODE_SUMMARY) {
       if(!in_array($person['slug'], $people_in_output_summary)) {
+        array_push($people_in_output_summary, $person['slug']);
         $output .= generate_person_profile($person['slug'], false, MODE_SUMMARY);
       }
-      array_push($people_in_output_summary, $person['slug']);
     }
   }
+  echo var_trace('people_in_output_full: ' . var_export($people_in_output_full, true), $TRACE_PREFIX, true);
+  echo var_trace('people_in_output_summary: ' . var_export($people_in_output_summary, true), $TRACE_PREFIX, true);
   $output .= "</ul>";
   return $output;
 }
