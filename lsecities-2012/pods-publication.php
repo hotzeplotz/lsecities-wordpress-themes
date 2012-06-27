@@ -130,9 +130,6 @@ echo var_trace('sections: ' . var_export($publication_sections, true), $TRACE_PR
               <li><a class="readthis online issuu button" href="<?php echo $pod_issuu_uri; ?>">Online browser</a></li>
               <?php endif ; ?>
             </ul>
-            <?php if($extra_publication_metadata): ?>
-            <?php echo $extra_publication_metadata; ?>
-            <?php endif; ?>
             <dl>
             <?php if($publication_authors): ?>
               <dt>Authors</dt>
@@ -145,6 +142,9 @@ echo var_trace('sections: ' . var_export($publication_sections, true), $TRACE_PR
             <?php if($publication_contributors): ?>
               <dt>Contributors</dt>
               <dd><?php echo $publication_contributors; ?></dd>
+            <?php endif; ?>
+            <?php if($extra_publication_metadata): ?>
+            <?php echo $extra_publication_metadata; ?>
             <?php endif; ?>
             <?php if($publishing_date): ?>
               <dt>Publication date</dt>
