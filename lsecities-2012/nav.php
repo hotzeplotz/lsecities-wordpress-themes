@@ -39,7 +39,6 @@ elseif($current_post_id = 421 or in_array(421, get_post_ancestors($current_post_
   get_template_part('nav', 'generic');
 else :
   get_template_part('nav', 'generic');
-<?php
 endif;
 ?>
 </div>
