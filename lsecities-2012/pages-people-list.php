@@ -14,6 +14,10 @@ define('MODE_FULL_LIST', 'full_list');
 define('MODE_SUMMARY',  'summary');
 $people_list = get_post_meta($post->ID, 'people_list', true);
 
+// save here all the people whose profile has already been added to output
+$people_in_output_full = array();
+$people_in_output_summary = array();
+
 $lists = array(
   'lsecities-staff' =>
     array('lsecities-staff-mgmt'),
@@ -29,23 +33,24 @@ function generate_list($list_id, $mode = MODE_FULL_LIST) {
   return $output;
 }
 
-function generate_section($section_slug, $section_heading = false, $mode = MODE_FULL_LIST, $subtract_list_slug = false) {
+function generate_section($section_slug, $section_heading = false, $mode = MODE_FULL_LIST) {
   $pod = new Pod('people_group', $section_slug);
   $people = (array)$pod->get_field('members', 'family_name ASC');
   
-  if($subtract_list_slug) {
-    $subtract_pod = new Pod('people_group', $subtract_list_slug);
-    $subtract_array = (array)$pod->get_field('members', 'family_name ASC');
-    $people = array_diff($people, $subtract_array);
-  }
   echo var_trace('group_members: ' . var_export($people, true), $TRACE_PREFIX, true);
   $output = "<h1>$section_heading</h1>";
   $output .= "<ul class='$section_slug'>";
   foreach($people as $person) {
     if($mode == MODE_FULL_LIST) {
-      $output .= generate_person_profile($person['slug'], false, MODE_FULL_LIST);
+      if(!in_array($people_in_output_full, $person['slug'])) {
+        $output .= generate_person_profile($person['slug'], false, MODE_FULL_LIST);
+      }
+      array_push($people_in_output_full, $person['slug']);
     } elseif ($mode == MODE_SUMMARY) {
-      $output .= generate_person_profile($person['slug'], false, MODE_SUMMARY);
+      if(!in_array($people_in_output_summary, $person['slug'])) {
+        $output .= generate_person_profile($person['slug'], false, MODE_SUMMARY);
+      }
+      array_push($people_in_output_summary, $person['slug']);
     }
   }
   $output .= "</ul>";
