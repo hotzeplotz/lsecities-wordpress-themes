@@ -45,7 +45,7 @@ function generate_section($section_slug, $mode = MODE_FULL_LIST) {
   return $output;
 }
 
-function generate_person_profile($slug, $extra_title) {
+function generate_person_profile($slug, $extra_title, $mode = MODE_FULL_LIST) {
   $LEGACY_PHOTO_URI_PREFIX = 'http://v0.urban-age.net';
   $pod = new Pod('authors', $slug);
   $fullname = $pod->get_field('name') . ' ' . $pod->get_field('family_name');
@@ -121,7 +121,7 @@ function generate_person_profile($slug, $extra_title) {
             <h1><?php echo $pod_title; ?></h1>
           </header>
           <div class='entry-content article-text'>
-            <?php echo generate_list($people_list); ?>
+            <?php echo generate_list($people_list, MODE_FULL_LIST); ?>
           </div>
           <?php get_template_part('snippet-socialmedia-share'); ?>
         </article>
