@@ -22,14 +22,14 @@ $lists = array(
   
 function generate_list($list_id, $mode = MODE_FULL_LIST) {
   if($list_id == 'lsecities-staff') {
-    $output .= generate_section('lsecities-staff-mgmt', $mode);
-    $output .= generate_section('lsecities-staff', $mode, 'lsecities-staff-mgmt');
+    $output .= generate_section('lsecities-staff-mgmt', 'Executive', $mode);
+    $output .= generate_section('lsecities-staff', 'Centre staff', $mode, 'lsecities-staff-mgmt');
   }
   
   return $output;
 }
 
-function generate_section($section_slug, $mode = MODE_FULL_LIST, $subtract_list_slug = false) {
+function generate_section($section_slug, $section_heading = false, $mode = MODE_FULL_LIST, $subtract_list_slug = false) {
   $pod = new Pod('people_group', $section_slug);
   $people = (array)$pod->get_field('members', 'family_name ASC');
   
@@ -39,6 +39,7 @@ function generate_section($section_slug, $mode = MODE_FULL_LIST, $subtract_list_
     $people = array_diff($people, $subtract_array);
   }
   echo var_trace('group_members: ' . var_export($people, true), $TRACE_PREFIX, true);
+  $output = "<h1>$section_heading</h1>";
   $output .= "<ul class='$section_slug'>";
   foreach($people as $person) {
     if($mode == MODE_FULL_LIST) {
