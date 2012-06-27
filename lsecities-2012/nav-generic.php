@@ -1,4 +1,5 @@
 <?php
+global $current_post_id, $parent_post_id;
 if($current_post_id) {
   $children = wp_list_pages('title_li=&depth=1&child_of='.$parent_post_id.'&echo=0');
 }
