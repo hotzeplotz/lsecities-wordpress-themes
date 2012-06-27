@@ -34,7 +34,7 @@ elseif($current_post_id == 489 or in_array(1890, get_post_ancestors($current_pos
   get_template_part('nav', 'empty');
 elseif(check_parent_conference(191) or check_parent_conference(229) or check_parent_conference(250) or check_parent_conference(268) or check_parent_conference(211) or check_parent_conference(284) or check_parent_conference(286) or check_parent_conference(106) or check_parent_conference(381) or check_parent_conference(391) or check_parent_conference(577) or check_parent_conference(1388)):
   get_template_part('nav', 'conferences');
-elseif(($current_post_id = 421 or in_array(421, get_post_ancestors($current_post_id))) and get_post_meta($post->ID, 'people_list', true))): // /about/whos-who/
+elseif(($current_post_id = 421 or in_array(421, get_post_ancestors($current_post_id))) and get_post_meta($post->ID, 'people_list', true)): // /about/whos-who/
   get_template_part('nav', 'whoswho'); 
   get_template_part('nav', 'generic');
 else :
