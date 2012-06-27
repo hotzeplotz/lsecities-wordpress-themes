@@ -443,11 +443,11 @@ right: -21px; */ }
 
 nav#projectsmenu h1 { font-size: 1.2em; font-weight: bold; margin-bottom: 0.5em; }
 
-.lc-people-list section.people-list h1 { font-size: 1.5em !important; margin-bottom: 1.5em; }
-.lc-people-list section.people-list .person { margin-bottom: 2em; }
-.lc-people-list section.people-list .person .profile-photo { text-align: center; }
-.lc-people-list section.people-list .person .profile-photo img { width: 144px; max-width: 144px; -moz-border-radius: 2px; -webkit-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; -khtml-border-radius: 2px; border-radius: 2px; }
-.lc-people-list section.people-list .person h1 { font-size: 1.2em; font-weight: bold; }
+.lc-people-list #contentarea section.people-list h1 { font-size: 1.5em; margin-bottom: 1.5em; }
+.lc-people-list #contentarea section.people-list .person { margin-bottom: 2em; }
+.lc-people-list #contentarea section.people-list .person .profile-photo { text-align: center; }
+.lc-people-list #contentarea section.people-list .person .profile-photo img { width: 144px; max-width: 144px; -moz-border-radius: 2px; -webkit-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; -khtml-border-radius: 2px; border-radius: 2px; }
+.lc-people-list #contentarea section.people-list .person h1 { font-size: 1.2em; font-weight: bold; }
 
 /*/mediaquery*/
 /*/mediaquery*/
