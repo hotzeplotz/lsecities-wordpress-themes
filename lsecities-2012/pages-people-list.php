@@ -9,7 +9,7 @@
  */
 ?><?php
 $TRACE_ENABLED = is_user_logged_in();
-$TRACE_PREFIX = 'pods-publications';
+$TRACE_PREFIX = 'pages-people-list';
 define('MODE_FULL_LIST', 'full_list');
 define('MODE_SUMMARY',  'summary');
 $people_list = get_post_meta($post->ID, 'people_list', true);
