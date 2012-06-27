@@ -42,9 +42,12 @@ function generate_section($section_slug, $section_heading = false, $mode = MODE_
   $output .= "<h1>$section_heading</h1>";
   $output .= "<ul>";
   foreach($people as $person) {
-    $display_after = new DateTime($pod->get_field('display_after'));
-    $display_until = new DateTime($pod->get_field('display_until'));
+    if($pod->get_field('display_after')) { $display_after = new DateTime($pod->get_field('display_after')); }
+    if($pod->get_field('display_until')) { $display_until = new DateTime($pod->get_field('display_until')); }
     $datetime_now = new DateTime('now');
+    echo var_trace('display_after: ' . var_export($display_after, true), $TRACE_PREFIX, true);
+    echo var_trace('display_until: ' . var_export($display_until, true), $TRACE_PREFIX, true);
+    echo var_trace('datetime_now: ' . var_export($datetime_now, true), $TRACE_PREFIX, true);
     if($display_after <= $datetime_now and $datetime_now <= $display_until) {
       if($mode == MODE_FULL_LIST) {
         if(!in_array($person['slug'], $people_in_output_full)) {
