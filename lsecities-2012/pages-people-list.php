@@ -42,8 +42,8 @@ function generate_section($section_slug, $section_heading = false, $mode = MODE_
   $output .= "<h1>$section_heading</h1>";
   $output .= "<ul>";
   foreach($people as $person) {
-    if($person['display_after']) { $display_after = new DateTime($pod->get_field('display_after')); }
-    if($person['display_until']) { $display_until = new DateTime($pod->get_field('display_until')); }
+    $display_after = new DateTime($pod->get_field('display_after'));
+    $display_until = new DateTime($pod->get_field('display_until'));
     $datetime_now = new DateTime('now');
     echo var_trace('display_after: ' . var_export($display_after, true), $TRACE_PREFIX, true);
     echo var_trace('display_until: ' . var_export($display_until, true), $TRACE_PREFIX, true);
