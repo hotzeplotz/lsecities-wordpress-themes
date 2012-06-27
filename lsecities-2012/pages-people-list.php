@@ -29,7 +29,7 @@ function generate_list($list_id, $mode = MODE_FULL_LIST) {
   return $output;
 }
 
-function generate_section($section_slug, $mode = MODE_FULL_LIST, $subtract_list_slug) {
+function generate_section($section_slug, $mode = MODE_FULL_LIST, $subtract_list_slug = false) {
   $pod = new Pod('people_group', $section_slug);
   $people = (array)$pod->get_field('members', 'family_name ASC');
   
