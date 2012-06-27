@@ -60,7 +60,7 @@ $publication_contributors = substr($publication_contributors, 0, -2);
 $publication_partners_list = $pod->get_field('partner_organizations', 'name ASC');
 foreach($publication_partners_list as $publication_partner) {
   if($publication_partner['web_uri']) {
-    $publication_partners .= "<a href='$publication_partner['web_uri']'>" . $publication_partner['name'] . '</a>, ';
+    $publication_partners .= '<a href="' . $publication_partner['web_uri'] . '">' . $publication_partner['name'] . '</a>, ';
   } else {
     $publication_partners .= $publication_partner['name'] . ', ';
   }
