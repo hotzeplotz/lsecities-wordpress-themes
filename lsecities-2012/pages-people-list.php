@@ -36,7 +36,7 @@ function generate_list($list_id, $mode = MODE_FULL_LIST) {
 function generate_section($section_slug, $section_heading = false, $mode = MODE_FULL_LIST) {
   $pod = new Pod('people_group', $section_slug);
   $people = (array)$pod->get_field('members', 'family_name ASC');
-  
+  global $people_in_output_full, $people_in_output_summary;
   echo var_trace('group_members: ' . var_export($people, true), $TRACE_PREFIX, true);
   $output = "<h1>$section_heading</h1>";
   $output .= "<ul class='$section_slug'>";
