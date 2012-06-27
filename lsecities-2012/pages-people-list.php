@@ -45,7 +45,7 @@ function generate_section($section_slug, $section_heading = false, $mode = MODE_
     $display_after = new DateTime($pod->get_field('display_after'));
     $display_until = new DateTime($pod->get_field('display_until'));
     $datetime_now = new DateTime('now');
-    if($display_after <= $datetime_now <= $display_until) {
+    if($display_after <= $datetime_now and $datetime_now <= $display_until) {
       if($mode == MODE_FULL_LIST) {
         if(!in_array($person['slug'], $people_in_output_full)) {
           array_push($people_in_output_full, $person['slug']);
