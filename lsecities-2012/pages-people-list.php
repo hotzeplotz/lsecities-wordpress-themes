@@ -38,7 +38,7 @@ function generate_section($section_slug, $mode = MODE_FULL_LIST, $subtract_list_
     $subtract_array = (array)$pod->get_field('members', 'family_name ASC');
     $people = array_diff($people, $subtract_array);
   }
-  echo var_trace('group_members: ' . var_export($people, true), $TRACE_PREFIX, $TRACE_ENABLED);
+  echo var_trace('group_members: ' . var_export($people, true), $TRACE_PREFIX, true);
   $output .= "<ul class='$section_slug'>";
   foreach($people as $person) {
     if($mode == MODE_FULL_LIST) {
