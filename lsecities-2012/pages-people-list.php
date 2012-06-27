@@ -42,12 +42,12 @@ function generate_section($section_slug, $section_heading = false, $mode = MODE_
   $output .= "<ul class='$section_slug'>";
   foreach($people as $person) {
     if($mode == MODE_FULL_LIST) {
-      if(!in_array($people_in_output_full, $person['slug'])) {
+      if(!in_array($person['slug'], $people_in_output_full)) {
         $output .= generate_person_profile($person['slug'], false, MODE_FULL_LIST);
       }
       array_push($people_in_output_full, $person['slug']);
     } elseif ($mode == MODE_SUMMARY) {
-      if(!in_array($people_in_output_summary, $person['slug'])) {
+      if(!in_array($person['slug'], $people_in_output_summary)) {
         $output .= generate_person_profile($person['slug'], false, MODE_SUMMARY);
       }
       array_push($people_in_output_summary, $person['slug']);
