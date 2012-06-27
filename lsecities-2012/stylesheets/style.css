@@ -239,7 +239,7 @@ header #socialbuttons ul { height: 16px; }
 #level3nav #organizer-logos { max-width: 67.7290%; width: 67.7290%; }
 
 footer#footer { font-size: 0.75em; background: url("http://v1.lsecities.net/wp-content/themes/lsecities-2012/images/backgrounds/mal/pixelpattern_darkgrey_120420.gif") repeat scroll 0 0 transparent; border-top: 1px solid #E5E5E0; margin-top: 20px; padding: 40px; color: #fff; }
-footer#footer h1, footer#footer h2, footer#footer h3, footer#footer h4, footer#footer h5, footer#footer h6 { font-weight: bold; margin-bottom: 0.5em; color: #fff; border-bottom: 1px solid rgba(204, 204, 204, 0.6); }
+footer#footer h1, footer#footer h2, footer#footer h3, footer#footer h4, footer#footer h5, footer#footer h6 { font-weight: bold; margin-bottom: 0.5em; color: #fff; border-bottom: 1px solid rgba(204, 204, 204, 0.6); font-size: 1em; }
 footer#footer ul { list-style-type: none; margin-bottom: 2em; }
 footer#footer a, footer#footer a:visited, footer#footer a:active { color: #ee2222; }
 footer#footer a:hover { color: #ccc; }
