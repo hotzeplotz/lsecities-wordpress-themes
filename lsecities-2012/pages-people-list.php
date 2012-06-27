@@ -38,9 +38,9 @@ function generate_section($section_slug, $section_heading = false, $mode = MODE_
   $people = (array)$pod->get_field('members', 'family_name ASC');
   global $people_in_output_full, $people_in_output_summary;
   echo var_trace('group_members: ' . var_export($people, true), $TRACE_PREFIX, true);
-  $output = "<section>";
+  $output = "<section class='people-list $section_slug'>";
   $output .= "<h1>$section_heading</h1>";
-  $output .= "<ul class='$section_slug'>";
+  $output .= "<ul>";
   foreach($people as $person) {
     if($mode == MODE_FULL_LIST) {
       if(!in_array($person['slug'], $people_in_output_full)) {
@@ -96,7 +96,7 @@ function generate_person_profile($slug, $extra_title, $mode = MODE_FULL_LIST) {
     }
     $output .= "  </div>";
     $output .= "  <div class='eightcol last'>";
-    $output .= "    <h2>$fullname_for_heading</h2>";
+    $output .= "    <h1>$fullname_for_heading</h1>";
     if($qualifications_list) {
       $output .= "<div class='qualifications'>";
       foreach($qualifications_list as $qualification) {
