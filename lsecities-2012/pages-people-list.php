@@ -10,6 +10,8 @@
 ?><?php
 $TRACE_ENABLED = is_user_logged_in();
 $TRACE_PREFIX = 'pods-publications';
+$MODE_FULL_LIST = 'full_list';
+$MODE_SUMMARY = 'summary';
 $people_list = get_post_meta($post->ID, 'people_list', true);
 
 $lists = array(
@@ -18,28 +20,42 @@ $lists = array(
     array('lsecities-staff')
 );
   
-function generate_list($list_id, $mode = 'full_list') {
+function generate_list($list_id, $mode = $MODE_FULL_LIST) {
   if($list_id == 'lsecities-staff') {
-    $output .= generate_section('lsecities-staff-mgmt');
-    $output .= generate_section('lsecities-staff');
+    $output .= generate_section('lsecities-staff-mgmt', $mode);
+    $output .= generate_section('lsecities-staff', $mode);
   }
   
   return $output;
 }
 
-function generate_section($section_slug, $mode = 'full_list') {
+function generate_section($section_slug, $mode = $MODE_FULL_LIST) {
+  if($mode == $MODE_FULL_LIST) {
+    $output = generate_section_full($section_slug);
+  }
+  return $output;
+}
+
+function generate_section_full($section_slug) {
   $pod = new Pod('people_group', $section_slug);
   $people = (array)$pod->get_field('members', 'family_name ASC');
   echo var_trace('group_members: ' . var_export($people, true), $TRACE_PREFIX, $TRACE_ENABLED);
   $output .= "<ul class='$section_slug'>";
   foreach($people as $person) {
-    $output .= generate_person_profile($person['slug']);
+    $output .= generate_person_profile($person['slug'], , $MODE_FULL_LIST);
   }
   $output .= "</ul>";
   return $output;
 }
 
-function generate_person_profile($slug, $extra_title) {
+function generate_person_profile($slug, $extra_title, $mode = $MODE_FULL_LIST) {
+  if($mode == $MODE_FULL_LIST) {
+    $output = generate_person_profile_full($slug, $extra_title);
+  }
+  return $output;
+}
+
+function generate_person_profile_full($slug, $extra_title) {
   $LEGACY_PHOTO_URI_PREFIX = 'http://v0.urban-age.net';
   $pod = new Pod('authors', $slug);
   $fullname = $pod->get_field('name') . ' ' . $pod->get_field('family_name');
@@ -95,6 +111,7 @@ function generate_person_profile($slug, $extra_title) {
   
   return $output;
 }
+
 ?><?php get_header(); ?>
 
 <div role="main">
