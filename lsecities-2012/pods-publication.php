@@ -57,6 +57,16 @@ foreach($publication_contributors_list as $publication_contributor) {
   $publication_contributors .= $publication_contributor['name'] . ' ' . $publication_contributor['family_name'] . ', ';
 }
 $publication_contributors = substr($publication_contributors, 0, -2);
+$publication_partners_list = $pod->get_field('partner_organizations', 'name ASC');
+foreach($publication_partners_list as $publication_partner) {
+  if($publication_partner['web_uri']) {
+    $publication_partners .= "<a href='$publication_partner['web_uri']'>"$publication_partner['name'] . '</a>, ';
+  } else {
+    $publication_partners .= $publication_partner['name'] . ', ';
+  }
+}
+$publication_partners = substr($publication_partners, 0, -2);
+
 $publication_catalogue_data = $pod->get_field('catalogue_data');
 $publishing_date = $pod->get_field('publishing_date');
 
@@ -145,6 +155,10 @@ echo var_trace('sections: ' . var_export($publication_sections, true), $TRACE_PR
             <?php endif; ?>
             <?php if($extra_publication_metadata): ?>
             <?php echo $extra_publication_metadata; ?>
+            <?php endif; ?>
+            <?php if($publication_partners): ?>
+              <dt>Partners</dt>
+              <dd></dd><?php echo $publication_partners; ?></dd>
             <?php endif; ?>
             <?php if($publishing_date): ?>
               <dt>Publication date</dt>
