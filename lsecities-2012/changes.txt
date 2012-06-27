@@ -1,4 +1,4 @@
-lsecities-2012 (1.0.1) stable; urgency=low
+lsecities-2012 (1.1) stable; urgency=low
 
   * search
     * [fixed] search lsecities.net via google
@@ -8,12 +8,16 @@ lsecities-2012 (1.0.1) stable; urgency=low
     * [feature] added support for staff group membership
     * [feature] added support for profile text specifically
       for staff pages
+    * [feature] full template for who's who pages
+  * publications
+    * [design] clearer keyfacts column for Publications pod
+    * [feature] display extra metadata field until Pods supports
+      flexible lists
   * [content] added privacy policy
   * [feature] compliance with UK Cookie law - added support for
     Cookie Control by CIVIC UK (http://civicuk.com/cookie-law/)
   * [fixed] some jQuery code would not load correctly when
     jQuery code at an earlier stage would fail - this is now fixed
-  * [design] clearer keyfacts column for Publications pod
   * [feature] integration with Usernoise WP plugin for feedback
   * [feature] Urban Age conferences/cities menu in the Urban Age
     Conferences section of the site now support displaying a conference
@@ -30,7 +34,7 @@ lsecities-2012 (1.0.1) stable; urgency=low
       displayed before an event but wasn't displaying - this is now
       fixed
 
- -- andrea rota <a.rota@lse.ac.uk>  [DATE]
+ -- andrea rota <a.rota@lse.ac.uk>  Wed, 27 June 2012 16:30:00 +0100
  
 lsecities-2012 (1.0) stable; urgency=low
 
