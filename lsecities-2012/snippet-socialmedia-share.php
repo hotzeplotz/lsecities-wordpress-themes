@@ -1,6 +1,6 @@
 <div id="share-on-social-media">
-  <div class="eightcol">&nbsp;</div>
-  <div class="fourcol last">
+  <div class="fivecol">&nbsp;</div>
+  <div class="sevencol last">
     <span>Share</span>
     <span>
       <a href="https://www.facebook.com/sharer.php?u=<?php echo get_current_page_URI(); ?>&t=<?php wp_title( '|', true, 'right' ); bloginfo( 'name' ); ?>">
