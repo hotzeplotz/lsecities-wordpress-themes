@@ -3,6 +3,7 @@
 /* LSE Cities Twenty Eleven functions and variable definitions */
 
 $PODS_BASEURI_ARTICLES = '/media/objects/articles';
+define(PODS_BASEURI_RESEARCH_PROJECTS, '/objects/research-projects');
 
 /* deal with WP's insane URI (mis)management - example from
  * http://codex.wordpress.org/Plugin_API/Filter_Reference/wp_get_attachment_url */
