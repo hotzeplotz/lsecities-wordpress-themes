@@ -12,7 +12,7 @@
 /**
  * TODO: For now, list types are hardcoded - make this flexible ASAP
  */
-$BASE_URI = '/media/objects/events/';
+$BASE_URI = PODS_BASEURI_EVENTS;
 $TRACE_ENABLED = is_user_logged_in();
 $TRACE_PREFIX = 'pods-list-of-pods-objects';
 $pod_type = get_post_meta(get_the_ID(), 'list_pods', true);
@@ -43,7 +43,7 @@ switch($pod_type) {
                 <?php switch($pod_type):
                   case 'upcoming_events':
                     $HIDE_PAST_EVENTS = true;
-                    $BASE_URI = '/media/objects/events/';
+                    $BASE_URI = PODS_BASEURI_EVENTS;
                     $IN_CONTENT_AREA = true;
                 ?>
                 <div id='navigationarea'>
@@ -52,7 +52,7 @@ switch($pod_type) {
                 <?php break;
                   case 'past_events':
                     $HIDE_UPCOMING_EVENTS = true;
-                    $BASE_URI = '/media/objects/events/';
+                    $BASE_URI = PODS_BASEURI_EVENTS;
                     $IN_CONTENT_AREA = true;
                 ?>
                 <div id='navigationarea'>
@@ -62,7 +62,7 @@ switch($pod_type) {
                   case 'research_projects':
                     $HIDE_PAST_PROJECTS = true;
                     $IN_CONTENT_AREA = true;
-                    $BASE_URI = '/objects/research-projects/';
+                    $BASE_URI = PODS_BASEURI_RESEARCH_PROJECTS;
                 ?>
                 <div id='navigationarea'>
                 <?php get_template_part( 'nav', 'research' ); ?>
@@ -71,7 +71,7 @@ switch($pod_type) {
                   case 'past_research_projects':
                     $HIDE_CURRENT_PROJECTS = true;
                     $IN_CONTENT_AREA = true;
-                    $BASE_URI = '/objects/research-projects/';
+                    $BASE_URI = PODS_BASEURI_RESEARCH_PROJECTS;
                 ?>
                 <div id='navigationarea'>
                 <?php get_template_part( 'nav', 'research' ); ?>
@@ -87,7 +87,7 @@ switch($pod_type) {
               case 'research_projects':
                 $HIDE_CURRENT_PROJECTS = true;
                 $HIDE_PAST_PROJECTS = true;
-                $BASE_URI = '/objects/research-projects/';
+                $BASE_URI = PODS_BASEURI_RESEARCH_PROJECTS;
                 $IN_CONTENT_AREA = false;
             ?>
             <?php get_template_part( 'nav', 'research' ); ?>                
@@ -96,7 +96,7 @@ switch($pod_type) {
                 $HIDE_PAST_PROJECTS = true;
                 $HIDE_CURRENT_PROJECTS = true;
                 $IN_CONTENT_AREA = false;
-                $BASE_URI = '/objects/research-projects/';
+                $BASE_URI = PODS_BASEURI_RESEARCH_PROJECTS;
             ?>
             <?php get_template_part( 'nav', 'research' ); ?>              
             <?php break; ?>

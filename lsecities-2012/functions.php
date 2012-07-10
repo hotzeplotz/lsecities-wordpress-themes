@@ -3,6 +3,9 @@
 /* LSE Cities Twenty Eleven functions and variable definitions */
 
 $PODS_BASEURI_ARTICLES = '/media/objects/articles';
+define(PODS_BASEURI_ARTICLES, '/media/objects/articles');
+define(PODS_BASEURI_CONFERENCES, '/media/objects/conferences');
+define(PODS_BASEURI_EVENTS, '/media/objects/events');
 define(PODS_BASEURI_RESEARCH_PROJECTS, '/objects/research-projects');
 
 /* deal with WP's insane URI (mis)management - example from

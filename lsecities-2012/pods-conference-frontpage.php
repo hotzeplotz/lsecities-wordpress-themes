@@ -11,10 +11,8 @@
 <?php
 /**
  * Pods initialization
- * URI: /media/objects/events/
  */
 global $pods;
-$BASE_URI = '/media/objects/conferences/';
 $TRACE_ENABLED = is_user_logged_in();
 $TRACE_PREFIX = 'pods-conference';
 

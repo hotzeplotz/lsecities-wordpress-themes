@@ -8,8 +8,6 @@
  * @since Twenty Eleven 1.0
  */
 ?><?php
-/* URI: TBD */
-$PODS_BASEURI_ARTICLES = '/media/objects/articles';
 $TRACE_ENABLED = is_user_logged_in();
 $TRACE_PREFIX = 'pods-publications';
 
@@ -219,7 +217,7 @@ echo var_trace('sections: ' . var_export($publication_sections, true), $TRACE_PR
                     ?>
                     <div class="article">
                       <h1>
-                        <a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $articles_pods->get_field('slug'); ?>"><?php echo $article_title; ?></a>
+                        <a href="<?php echo PODS_BASEURI_ARTICLES . '/' . $articles_pods->get_field('slug'); ?>"><?php echo $article_title; ?></a>
                       </h1>
                       <?php if($author_names): ?>
                       <div class="authors">
@@ -228,7 +226,7 @@ echo var_trace('sections: ' . var_export($publication_sections, true), $TRACE_PR
                       <?php endif; ?>
                       <?php if(false and $articles_pods->get_field('abstract')): //disable until we can generate plain text only ?>
                       <div class="excerpt">
-                        <?php echo shorten_string($articles_pods->get_field('abstract'), 30); ?><a href="<?php echo $PODS_BASEURI_ARTICLES . '/' . $articles_pods->get_field('slug'); ?>">...</a>
+                        <?php echo shorten_string($articles_pods->get_field('abstract'), 30); ?><a href="<?php echo PODS_BASEURI_ARTICLES . '/' . $articles_pods->get_field('slug'); ?>">...</a>
                       </div>
                       <?php endif; ?>
                     </div><!-- .article -->
