@@ -21,7 +21,7 @@
   $page_id = $pod->get_field('featured_item.ID');
   echo var_trace('slug for featured item: ' . get_post_meta($page_id, 'pod_slug', true), $TRACE_PREFIX, $TRACE_ENABLED);
   $pod_featured_item_thumbnail = get_the_post_thumbnail($page_id, array(960,367));
-  if(!$pod_featured_item_thumbnail) { $pod_featured_item_thumbnail = '<img src="' . $pod->get_field('featured_item_image.guid') . '" />'; }
+  if(!$pod_featured_item_thumbnail) { $pod_featured_item_thumbnail = '<img src="' . honor_ssl_for_attachments($pod->get_field('featured_item_image.guid')) . '" />'; }
   $pod_featured_item_permalink = get_permalink($page_id);
   $pod_featured_item_pod = new Pod($pod_type, get_post_meta($pod->get_field('featured_item.ID'), 'pod_slug', true));
   $sort_order = $pod->get_field('sort_descending') ? 'DESC' : 'ASC';
@@ -60,7 +60,7 @@ echo var_trace(var_export($pod_list, true), $TRACE_PREFIX . ' - pod_list', $TRAC
         <?php endif; ?>
           <li class='threecol<?php if((($index + 1) % 4) == 0) : ?> last<?php endif ; ?>'>
             <a href="<?php echo get_permalink($item['ID']); ?>">
-              <img src="<?php echo $item_pod->get_field('snapshot.guid'); ?>" />
+              <img src="<?php echo honor_ssl_for_attachments($item_pod->get_field('snapshot.guid')); ?>" />
             </a>
             <p>
               <a href="<?php echo get_permalink($item['ID']); ?>">

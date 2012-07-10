@@ -36,8 +36,8 @@ if(!$slider) {
 }
 
 $conference_publication_blurb = $pod->get_field('conference_newspaper.blurb');
-$conference_publication_cover = $pod->get_field('conference_newspaper.snapshot.guid');
-$conference_publication_wp_page = $pod->get_field('conference_newspaper.publication_web_page.guid');
+$conference_publication_cover = honor_ssl_for_attachments($pod->get_field('conference_newspaper.snapshot.guid'));
+$conference_publication_wp_page = honor_ssl_for_attachments($pod->get_field('conference_newspaper.publication_web_page.guid'));
 $conference_publication_pdf = $pod->get_field('conference_newspaper.publication_pdf_uri');
 $conference_publication_issuu = $pod->get_field('conference_newspaper.issuu_uri');
 
@@ -51,7 +51,7 @@ echo var_trace('tiles: ' . var_export($pod->get_field('research_summary.visualiz
 $visualization_tiles = $pod->get_field('research_summary.visualization_tiles');
 $tile_pod = new Pod('tile', $visualization_tiles[0]['slug']);
 echo var_trace('tile_image: ' . var_export($tile_pod->get_field('image'), true), $TRACE_PREFIX, $TRACE_ENABLED);
-$research_summary_tile_image = $tile_pod->get_field('image.guid');
+$research_summary_tile_image = honor_ssl_for_attachments($tile_pod->get_field('image.guid'));
 $research_summary_pdf_uri = $pod->get_field('research_summary.data_section_pdf_uri');
 ?>
 
