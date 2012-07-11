@@ -106,6 +106,14 @@ function generate_person_profile($slug, $extra_title, $mode = MODE_FULL_LIST) {
     $affiliation = $role;
   }
   
+  $additional_affiliations = explode$pod->get_field('additional_affiliations');
+  if($additional_affiliations) {
+    $additional_affiliations = explode('\n', $additional_affiliations);
+    foreach($additional_affiliations as $additional_affiliation) {
+      $affiliation .= '<br />\n' . $additional_affiliation;
+    }
+  }
+  
   if($mode == MODE_FULL_LIST) {
     $output = "<li class='person row' id='p-$slug'>";
     $output .= "  <div class='fourcol profile-photo'>";
