@@ -99,7 +99,7 @@ function generate_person_profile($slug, $extra_title, $mode = MODE_FULL_LIST) {
   $organization = $pod->get_field('organization');
   $role = $pod->get_field('role');
   if($role and $organization) {
-    $affiliation = "<strong>$role</strong>" . ', ' . $organization;
+    $affiliation = "$role" . ', ' . $organization;
   } elseif(!$role and $organization) {
     $affiliation = $organization;
   } elseif($role and !$organization) {
