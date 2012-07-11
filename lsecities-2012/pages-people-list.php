@@ -35,6 +35,9 @@ function generate_list($list_id, $mode = MODE_FULL_LIST) {
     $output .= generate_section('lsecities-executive-group-director', 'Director', $mode);
     $output .= generate_section('lsecities-executive-group-executive-director', 'Executive director', $mode);
     $output .= generate_section('lsecities-executive-group-academic-director', 'Academic director', $mode);
+  } elseif($list_id == 'lsecities-governing-board') {
+    $output .= generate_section('lsecities-governing-board-chair', 'Chair', $mode);
+    $output .= generate_section('lsecities-governing-board', 'Board members', $mode);
   }
   
   return $output;
