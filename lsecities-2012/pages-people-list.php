@@ -110,7 +110,7 @@ function generate_person_profile($slug, $extra_title, $mode = MODE_FULL_LIST) {
   if($additional_affiliations) {
     $additional_affiliations = explode('\n', $additional_affiliations);
     foreach($additional_affiliations as $additional_affiliation) {
-      $affiliation .= '<br />\n' . $additional_affiliation;
+      $affiliation .= "<br />\n" . $additional_affiliation;
     }
   }
   
