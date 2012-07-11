@@ -1,3 +1,25 @@
+lsecities-2012 (1.2) stable; urgency=low
+  
+  * slider pages (pods-main-frontpage.php)
+    * [fixed] only news from appropriate categories are now selected
+    * [feature] tiles linked to research project now link directly to
+      the relevant research project rather than to the Research
+      front page
+  * event pages (pods-events-frontpage.php)
+    * [feature] added new fields for:
+      * hosted by
+      * event series
+      * event type
+      these are linked to relevant Pods so that data is structured and
+      linked for future search capabilities (e.g. all events of
+      series X)
+  * general
+    * [feature] calls to functions that retrieve GUIDs for links are
+      now all wrapped within the honor_ssl_for_attachments() function
+      to work around WP's way of storing URIs
+
+ -- andrea rota <a.rota@lse.ac.uk>  DDD, DD MMM 2012 HH:MM:SS +0100
+  
 lsecities-2012 (1.1) stable; urgency=low
 
   * search
