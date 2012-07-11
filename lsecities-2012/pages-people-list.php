@@ -78,10 +78,16 @@ function generate_person_profile($slug, $extra_title, $mode = MODE_FULL_LIST) {
   $pod = new Pod('authors', $slug);
   $fullname = $pod->get_field('name') . ' ' . $pod->get_field('family_name');
   $fullname = trim($fullname);
+  $title = $pod->get_field('title');
+  
   $fullname_for_heading = $fullname;
+  if($title) {
+    $fullname_for_heading .= " ($title)";
+  }
   if($extra_title) {
     $fullname_for_heading .= ' ' . $extra_title;
   }
+  
   $qualifications_list = array_map(function($string) { return trim($string); }, explode("\n", $pod->get_field('qualifications')));
   $profile_photo_uri = $pod->get_field('photo.guid');
   $email_address = preg_replace('/\@/', ' [AT] ', $pod->get_field('email_address'));
