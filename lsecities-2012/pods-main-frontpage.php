@@ -131,7 +131,7 @@ echo var_trace('news_category_ids: ' . var_export($news_category_ids, true), $TR
 if($news_category_ids) {
   $news_categories = '';
   foreach($news_category_ids as $category) {
-    $news_categories .= $category['id'] . ',';
+    $news_categories .= $category['term_id'] . ',';
   }
   $news_categories = '&cat='. rtrim($news_categories, ',');
   echo var_trace('news_categories: ' . $news_categories, $TRACE_PREFIX, $TRACE_ENABLED);
