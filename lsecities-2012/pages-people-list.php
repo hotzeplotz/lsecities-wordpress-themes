@@ -29,6 +29,10 @@ function generate_list($list_id, $mode = MODE_FULL_LIST) {
     $output .= generate_section('lsecities-staff-mgmt', 'Executive', $mode);
     $output .= generate_section('lsecities-staff', 'Centre staff', $mode);
   }
+  if($list_id == 'lsecities-advisory-board') {
+    $output .= generate_section('lsecities-advisory-board-chair', 'Chair', $mode);
+    $output .= generate_section('lsecities-advisory-board', 'Advisors', $mode);
+  }
   
   return $output;
 }
