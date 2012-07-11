@@ -28,10 +28,13 @@ function generate_list($list_id, $mode = MODE_FULL_LIST) {
   if($list_id == 'lsecities-staff') {
     $output .= generate_section('lsecities-staff-mgmt', 'Executive', $mode);
     $output .= generate_section('lsecities-staff', 'Centre staff', $mode);
-  }
-  if($list_id == 'lsecities-advisory-board') {
+  } elseif($list_id == 'lsecities-advisory-board') {
     $output .= generate_section('lsecities-advisory-board-chair', 'Chair', $mode);
     $output .= generate_section('lsecities-advisory-board', 'Advisors', $mode);
+  } elseif($list_id == 'lsecities-executive-group') {
+    $output .= generate_section('lsecities-executive-group-director', 'Director', $mode);
+    $output .= generate_section('lsecities-executive-group-executive-director', 'Executive director', $mode);
+    $output .= generate_section('lsecities-executive-group-academic-director', 'Academic director', $mode);
   }
   
   return $output;
