@@ -165,7 +165,7 @@ body { background: inherit; }
 
 header h1.entry-title { font-size: 2em; /* margin-bottom: 1.2em; */ font-family: museo-sans, PT Sans, sans-serif; }
 
-.article-text img { max-width: 100%; }
+.article-text img { max-width: 100%; width: auto; height: auto; }
 
 body h1 { font-size: 2em; }
 body h1.mainheading { font-size: 3em; }
