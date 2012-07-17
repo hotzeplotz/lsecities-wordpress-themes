@@ -75,7 +75,10 @@ if(!preg_match('/^https?:\/\//i', $pdf_uri) && !empty($pdf_uri)) {
   }
 }
 
-$article_publication_date = $pod->get_field('publication_date');
+$article_publishing_date = $pod->get_field('publishing_date');
+if(!$article_publishing_date) {
+  $article_publishing_date = $publication_pod->get_field('publishing_date');
+}
 $article_tags = $pod->get_field('tags');
 $article_authors = $pod->get_field('authors');
 
@@ -152,9 +155,9 @@ if(count($attachments)) {
                     </ul>
                   </dd>
                 <?php endif; ?>
-                  <?php if($article_publication_date): ?>
+                  <?php if($article_publishing_date): ?>
                   <dt>Publication date</dt>
-                  <dd><?php echo $article_publication_date ?></dd>
+                  <dd><?php echo $article_publishing_date ?></dd>
                   <?php endif; ?>
                   <?php if(is_array($article_tags)): ?>
                   <dt>Tags</dt>
