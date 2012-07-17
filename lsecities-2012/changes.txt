@@ -1,5 +1,7 @@
 lsecities-2012 (1.2) stable; urgency=low
   
+  * article pages (pods-articles.php)
+    * [fixed] image ratio is now enforced correctly also in IE<9
   * slider pages (pods-main-frontpage.php)
     * [fixed] only news from appropriate categories are now selected
     * [feature] tiles linked to research project now link directly to
