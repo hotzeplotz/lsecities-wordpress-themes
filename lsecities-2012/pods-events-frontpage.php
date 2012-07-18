@@ -216,7 +216,7 @@ $poster_pdf = honor_ssl_for_attachments($poster_pdf[0]['guid']);
                   <div class="fourcol">
                     <dt>Video</dt>
                     <dd>
-                      <!--
+                      <?php if(true) : ?>
                       <iframe
                        width="100%"
                        src="https://www.youtube.com/embed/<?php echo $event_media_item['youtube_uri']; ?>?rel=0"
@@ -224,10 +224,11 @@ $poster_pdf = honor_ssl_for_attachments($poster_pdf[0]['guid']);
                        allowfullscreen="allowfullscreen">
                        &#160;
                       </iframe>
-                      -->
+                      <?php else : ?>
                       <video width="100%" id="youtube-<?php echo $event_media_item['youtube_uri']; ?>" preload="none">
                         <source type="video/youtube" src="http://www.youtube.com/watch?v=<?php echo $event_media_item['youtube_uri']; ?>" />
                       </video>
+                      <?php endif; ?>
                     </dd>
                   </div>
                   <?php endif; ?>
@@ -236,7 +237,7 @@ $poster_pdf = honor_ssl_for_attachments($poster_pdf[0]['guid']);
                     <dt>Audio</dt>
                     <dd>
                       <p>Listen to <a class="link mp3" href="<?php echo $event_media_item['audio_uri']; ?>">podcast</a>.</p>
-                      <?php if(false) : ?><audio class='mediaelement' src='<?php echo $event_media_item['audio_uri']; ?>' preload='auto'></audio><?php endif; ?>
+                      <?php if(true) : ?><audio class='mediaelement' src='<?php echo $event_media_item['audio_uri']; ?>' preload='auto'></audio><?php endif; ?>
                     </dd>
                   </div>
                   <?php endif; ?>
