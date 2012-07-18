@@ -302,7 +302,7 @@ jQuery(function($) {
   $('.event-materials audio').mediaelementplayer({
     audiowidth: '100%'
   });
-}
+});
 </script>
 </div><!-- #contentarea -->
 </div>
