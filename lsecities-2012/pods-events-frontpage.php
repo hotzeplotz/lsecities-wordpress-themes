@@ -128,7 +128,7 @@ $poster_pdf = honor_ssl_for_attachments($poster_pdf[0]['guid']);
               <?php if($featured_image_uri) : ?>
               <header class='heading-image'>
                 <div class='photospread wireframe'>
-                  <?php if($event_media[0]['youtube_uri']): ?>
+                  <?php if(false): ?>
                   <a href="https://www.youtube.com/watch?v=<?php echo $event_media[0]['youtube_uri'] ?>"><img src="<?php echo get_stylesheet_directory_uri() . '/stylesheets/mediaelement/bigplay.png'; ?>" style="background: url('<?php echo $featured_image_uri; ?>'); center center black" alt="event photo" /></a>
                   <?php else: ?>
                   <img src="<?php echo $featured_image_uri; ?>" alt="event photo" />
