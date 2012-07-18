@@ -231,6 +231,7 @@ $poster_pdf = honor_ssl_for_attachments($poster_pdf[0]['guid']);
                     <dt>Audio</dt>
                     <dd>
                       <p>Listen to <a class="link mp3" href="<?php echo $event_media_item['audio_uri']; ?>">podcast</a>.</p>
+                      <audio class='mediaelement' src='<?php echo $event_media_item['audio_uri']; ?>' preload='auto'></audio>
                     </dd>
                   </div>
                   <?php endif; ?>
@@ -296,7 +297,13 @@ $poster_pdf = honor_ssl_for_attachments($poster_pdf[0]['guid']);
             <?php get_template_part( 'nav', 'conferences' ); ?>
           <?php endif; ?>
           </div>
-
+<script type="text/javascript">
+jQuery(function($) {
+  $('.event-materials audio').mediaelementplayer({
+    audiowidth: '100%'
+  });
+}
+</script>
 </div><!-- #contentarea -->
 </div>
 
