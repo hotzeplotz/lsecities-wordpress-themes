@@ -216,6 +216,7 @@ $poster_pdf = honor_ssl_for_attachments($poster_pdf[0]['guid']);
                   <div class="fourcol">
                     <dt>Video</dt>
                     <dd>
+                      <!--
                       <iframe
                        width="100%"
                        src="https://www.youtube.com/embed/<?php echo $event_media_item['youtube_uri']; ?>?rel=0"
@@ -223,6 +224,10 @@ $poster_pdf = honor_ssl_for_attachments($poster_pdf[0]['guid']);
                        allowfullscreen="allowfullscreen">
                        &#160;
                       </iframe>
+                      -->
+                      <video width="100%" id="youtube-<?php echo $event_media_item['youtube_uri']; ?>" preload="none">
+                        <source type="video/youtube" src="http://www.youtube.com/watch?v=<?php echo $event_media_item['youtube_uri']; ?>" />
+                      </video>
                     </dd>
                   </div>
                   <?php endif; ?>
@@ -299,8 +304,9 @@ $poster_pdf = honor_ssl_for_attachments($poster_pdf[0]['guid']);
           </div>
 <script type="text/javascript">
 jQuery(function($) {
-  $('.event-materials audio').mediaelementplayer({
-    audiowidth: '100%'
+  $('.event-materials audio, .event-materials video').mediaelementplayer({
+    audiowidth: '100%',
+    defaultVideoWidth: '100%'
   });
 });
 </script>
