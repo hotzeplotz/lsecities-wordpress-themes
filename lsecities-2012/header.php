@@ -80,7 +80,7 @@ $logo_element_id = $GLOBALS['urban_age_section'] ? 'ualogo' : 'logo';
 <?php wp_enqueue_script('jquery.flexslider', get_stylesheet_directory_uri() . '/javascripts/jquery.flexslider.js', 'jquery', false, true); ?>
 <?php wp_enqueue_script('jquery-ui-core', '', '', '', true); ?>
 <?php wp_enqueue_script('jquery-ui-accordion', '', '', '', true); ?>
-<?php wp_enqueue_script('jquery-mediaelement', get_stylesheet_directory_uri() . '/javascripts/mediaelement-and-player.min.js', 'jquery', '2.9.2', false); ?>
+<?php wp_enqueue_script('jquery-mediaelement', get_stylesheet_directory_uri() . '/javascripts/mediaelement-and-player.js', 'jquery', '2.9.2', false); ?>
 <?php wp_enqueue_style('jquery-mediaelement', get_stylesheet_directory_uri() .'/stylesheets/mediaelement/mediaelementplayer.css'); ?>
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <!--[if lt IE 9]>
