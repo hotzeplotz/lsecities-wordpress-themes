@@ -231,7 +231,7 @@ $poster_pdf = honor_ssl_for_attachments($poster_pdf[0]['guid']);
                     <dt>Audio</dt>
                     <dd>
                       <p>Listen to <a class="link mp3" href="<?php echo $event_media_item['audio_uri']; ?>">podcast</a>.</p>
-                      <audio class='mediaelement' src='<?php echo $event_media_item['audio_uri']; ?>' preload='auto'></audio>
+                      <?php if(false) : ?><audio class='mediaelement' src='<?php echo $event_media_item['audio_uri']; ?>' preload='auto'></audio><?php endif; ?>
                     </dd>
                   </div>
                   <?php endif; ?>
