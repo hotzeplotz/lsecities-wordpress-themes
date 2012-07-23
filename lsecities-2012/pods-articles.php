@@ -18,10 +18,12 @@ if($pod_slug) {
   $pod_from_page = true;
 } else {
   $pod = new Pod('article', pods_url_variable(3));
+  $pod_from_page = false;
 }
 
 global $pods_toplevel_ancestor;
 $pods_toplevel_ancestor = 309;
+global $nav_show_conferences = $pod_from_page;
 
 $lang = strtolower(pods_url_variable('lang', 'get'));
 $article_lang2 = $pod->get_field('language.slug');

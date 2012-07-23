@@ -6,6 +6,9 @@ $current_post_id = $post->ID;
 $ancestors = get_post_ancestors($current_post_id);
 global $pods_toplevel_ancestor;
 
+// global overrides set in caller templates to force any specific template part rendering
+global $nav_show_conferences;
+
 if($TRACE_ENABLED) { error_log($TRACE_PREFIX . 'ancestors: ' . var_export($ancestors, true)); }
 
 global $parent_post_id;
@@ -33,7 +36,7 @@ elseif($current_post_id == 311 or in_array(311, get_post_ancestors($current_post
   get_template_part('nav', 'events');
 elseif($current_post_id == 489 or in_array(1890, get_post_ancestors($current_post_id))): // /ua/award/ or /about/collaboration-opportunities/
   get_template_part('nav', 'empty');
-elseif(check_parent_conference(191) or check_parent_conference(229) or check_parent_conference(250) or check_parent_conference(268) or check_parent_conference(211) or check_parent_conference(284) or check_parent_conference(286) or check_parent_conference(106) or check_parent_conference(381) or check_parent_conference(391) or check_parent_conference(577) or check_parent_conference(1388)): // /ua/conferences/
+elseif($nav_show_conferences or check_parent_conference(191) or check_parent_conference(229) or check_parent_conference(250) or check_parent_conference(268) or check_parent_conference(211) or check_parent_conference(284) or check_parent_conference(286) or check_parent_conference(106) or check_parent_conference(381) or check_parent_conference(391) or check_parent_conference(577) or check_parent_conference(1388)): // /ua/conferences/
   get_template_part('nav', 'conferences');
 elseif($current_post_id = 421 or in_array(421, get_post_ancestors($current_post_id))): // /about/whos-who/
   get_template_part('nav', 'generic');
