@@ -62,7 +62,7 @@ endif;
     //<![CDATA[
     jQuery(document).ready(function($) {
       $('#mailing-list-subscription > h1').click(function() {$('#mailchimp-form').toggle()});
-      }));
+    });
     //]]>
   </script>
 </div>
