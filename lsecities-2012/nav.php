@@ -43,9 +43,14 @@ if($current_post_id == 306 or in_array(306, get_post_ancestors($current_post_id)
   $nav_generated = true;
 }
 
-// /publications (the whole Publications section) or individual Article pod items
-if($current_post_id == 309 or in_array(309, get_post_ancestors($current_post_id)) or ($pods_toplevel_ancestor == 309)) {
+// /publications (the whole Publications section)
+if($current_post_id == 309 or in_array(309, get_post_ancestors($current_post_id))) {
   get_template_part('nav', 'publications');
+  $nav_generated = true;
+}
+
+if($pods_toplevel_ancestor == 309) {
+  get_template_part('nav', 'article');
   $nav_generated = true;
 }
 
