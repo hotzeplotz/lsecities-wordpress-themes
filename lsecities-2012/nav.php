@@ -69,10 +69,14 @@ if($nav_show_conferences or check_parent_conference(191) or check_parent_confere
 }
 
 // /about/whos-who/
-if($current_post_id = 421 or in_array(421, get_post_ancestors($current_post_id))) {
+if($current_post_id == 421 or in_array(421, get_post_ancestors($current_post_id))) {
   get_template_part('nav', 'generic');
   get_template_part('nav', 'whoswho');
   $nav_generated = true;
+}
+
+if($nav_generated == false) {
+  get_template_part('nav', 'generic');
 }
 ?>
             
