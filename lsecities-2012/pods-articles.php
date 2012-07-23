@@ -23,7 +23,8 @@ if($pod_slug) {
 
 global $pods_toplevel_ancestor;
 $pods_toplevel_ancestor = 309;
-global $nav_show_conferences = $pod_from_page;
+global $nav_show_conferences;
+$nav_show_conferences = $pod_from_page;
 
 $lang = strtolower(pods_url_variable('lang', 'get'));
 $article_lang2 = $pod->get_field('language.slug');
