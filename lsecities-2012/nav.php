@@ -2,6 +2,7 @@
 $TRACE_ENABLED = is_user_logged_in();
 $TRACE_PREFIX = 'nav.php -- ';
 global $current_post_id;
+global $BASE_URI;
 $current_post_id = $post->ID;
 $ancestors = get_post_ancestors($current_post_id);
 global $pods_toplevel_ancestor;
