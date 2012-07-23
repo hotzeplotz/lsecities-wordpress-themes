@@ -9,7 +9,7 @@
  */
 ?><?php
 /* URI: TBD */
-$PODS_BASEURI_RESEARCH_PROJECTS = '/objects/research-projects';
+$BASE_URI = PODS_BASEURI_RESEARCH_PROJECTS;
 $TRACE_ENABLED = is_user_logged_in();
 $TRACE_PREFIX = 'pods-research-projects';
 $pods_toplevel_ancestor = 306;
