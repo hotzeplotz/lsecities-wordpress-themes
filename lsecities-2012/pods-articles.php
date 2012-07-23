@@ -20,11 +20,8 @@ if($pod_slug) {
   $pod = new Pod('article', pods_url_variable(3));
 }
 
-if(!$pod_from_page) {
-  // set toplevel ancestor explicitly as we are outside of WP's hierarchy
-  global $pods_toplevel_ancestor;
-  $pods_toplevel_ancestor = 309;
-}
+global $pods_toplevel_ancestor;
+$pods_toplevel_ancestor = 309;
 
 $lang = strtolower(pods_url_variable('lang', 'get'));
 $article_lang2 = $pod->get_field('language.slug');
