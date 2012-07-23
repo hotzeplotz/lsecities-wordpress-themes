@@ -82,26 +82,7 @@ switch($pod_type) {
             </div><!-- .top-content -->
           </div>
 
-          <div id="navigationarea" class='wireframe threecol last'>
-            <?php switch(get_post_meta(get_the_ID(), 'list_pods', true)):
-              case 'research_projects':
-                $HIDE_CURRENT_PROJECTS = true;
-                $HIDE_PAST_PROJECTS = true;
-                $BASE_URI = PODS_BASEURI_RESEARCH_PROJECTS;
-                $IN_CONTENT_AREA = false;
-            ?>
-            <?php get_template_part( 'nav', 'research' ); ?>                
-            <?php break;
-              case 'past_research_projects':
-                $HIDE_PAST_PROJECTS = true;
-                $HIDE_CURRENT_PROJECTS = true;
-                $IN_CONTENT_AREA = false;
-                $BASE_URI = PODS_BASEURI_RESEARCH_PROJECTS;
-            ?>
-            <?php get_template_part( 'nav', 'research' ); ?>              
-            <?php break; ?>
-            <?php endswitch; ?>
-          </div>
+          <?php get_template_part('nav'); ?>
 </div><!-- #contentarea -->
 </div>
 
