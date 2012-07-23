@@ -121,6 +121,7 @@ $project_status = $pod->get_field('project_status.name');
       </div><!-- .extra-content -->
     </div><!-- #contentarea -->
     <?php
+      $IN_CONTENT_AREA = false;
       if($project_status == 'active') {
         $HIDE_CURRENT_PROJECTS = false;
         $HIDE_PAST_PROJECTS = true;
