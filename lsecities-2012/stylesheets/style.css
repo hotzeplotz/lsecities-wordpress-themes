@@ -289,7 +289,7 @@ ol.article-references li:target { background-color: #ffeeee; }
 #contentarea .top-content article header h1 { font-family: museo-sans, PT Sans, sans-serif; font-weight: 900; color: #22273b; }
 
 #keyfacts, #navigationarea { font-size: 90%; }
-#keyfacts h1, #navigationarea h1 { font-size: 1em; }
+#keyfacts h1, #navigationarea h1 { font-size: 1em; font-weight: bold; }
 #keyfacts dl dt, #navigationarea dl dt { border-bottom: 1px solid #eee; margin-top: 0.5em; }
 #keyfacts dl dt:first-child, #navigationarea dl dt:first-child { margin-top: 0; }
 #keyfacts dl dd, #navigationarea dl dd { line-height: 1.5em; margin-bottom: 0.2em; }
@@ -306,7 +306,6 @@ div.widget h2 { margin-bottom: 0.5em; }
 #navigationarea nav:first-child { margin-top: inherit; }
 #navigationarea nav dl dt.ui-accordion-header:before { content: ''; background: url("http://lsecities.net/wp-content/themes/lsecities-2012/images/icons/mal/bullet-horizontal.gif") no-repeat 0; padding-left: 0.75em; }
 #navigationarea nav dl dt.ui-accordion-header.ui-state-active:before { background: url("http://lsecities.net/wp-content/themes/lsecities-2012/images/icons/mal/bullet-vertical.gif") no-repeat 0; padding-left: 0.75em; }
-#navigationarea nav h1 { font-size: 1em; }
 #navigationarea #whoswho-side-toc h1 { font-weight: bold; }
 #navigationarea #whoswho-side-toc h1 + ul { margin-bottom: 1.5em; }
 #navigationarea #mailchimp-form { display: none; }
