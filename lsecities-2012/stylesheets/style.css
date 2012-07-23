@@ -259,6 +259,8 @@ tr { border-bottom: 1px dashed #eee; border-left: 1px solid #fff; }
 
 table { border-bottom: 1px solid #fff; }
 
+label { display: block; }
+
 header.heading-image .flexslider .flex-direction-nav li a { top: 352 -64/2 px; }
 
 header.entry-header { margin-bottom: 1.5em; }
