@@ -144,9 +144,7 @@ $research_summary_pdf_uri = $pod->get_field('research_summary.data_section_pdf_u
             </div><!-- .extra-content -->
           </div><!-- #contentarea -->
 
-          <div id="navigationarea" class='wireframe threecol last'>
           <?php get_template_part('nav', 'conferences'); ?>
-          </div><!-- #navigationarea -->
 
 </div><!-- #post-<?php the_ID(); ?> -->
 </div>
