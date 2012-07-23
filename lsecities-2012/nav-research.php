@@ -70,7 +70,7 @@ echo var_trace('past projects (by stream): ' . var_export($projects, true), $TRA
     <?php foreach($current_projects as $stream_name => $stream_projects): ?>
       <dt><?php echo $stream_name; ?></dt>
       <?php foreach($stream_projects as $stream_project): ?>
-      <dd><a href="<?php echo $BASE_URI . $stream_project['slug']; ?>"><?php echo $stream_project['name']; ?></a></dd>
+      <dd><a href="<?php echo $BASE_URI . '/' . $stream_project['slug']; ?>"><?php echo $stream_project['name']; ?></a></dd>
       <?php endforeach; ?>
     <?php endforeach; ?>
     </dl>
@@ -83,7 +83,7 @@ echo var_trace('past projects (by stream): ' . var_export($projects, true), $TRA
     <?php foreach($past_projects as $stream_name => $stream_projects): ?>
       <dt><?php echo $stream_name; ?></dt>
       <?php foreach($stream_projects as $stream_project): ?>
-      <dd><a href="<?php echo $BASE_URI . $stream_project['slug']; ?>"><?php echo $stream_project['name']; ?></a></dd>
+      <dd><a href="<?php echo $BASE_URI . '/' . $stream_project['slug']; ?>"><?php echo $stream_project['name']; ?></a></dd>
       <?php endforeach; ?>
     <?php endforeach; ?>
     </dl>
