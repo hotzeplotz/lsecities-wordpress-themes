@@ -61,7 +61,7 @@ endif;
   <script>
     //<![CDATA[
     jQuery(document).ready(function($) {
-      $('#mailing-list-subscription > h1 > a').click(function() {$('#mailchimp-form').toggle()});
+      $('#mailing-list-subscription > h1').click(function() {$('#mailchimp-form').toggle()});
       }));
     //]]>
   </script>
