@@ -38,7 +38,7 @@ if($current_post_id == 94) {
 }
 
 // /research (the whole Research section) or individual Research project pod items
-if($current_post_id == 306 or in_array(306, get_post_ancestors($current_post_id)) or ($pods_toplevel_ancestor == 306)) {
+if($current_post_id == 306 or in_array(306, get_post_ancestors($current_post_id)) or ($GLOBALS['pods_toplevel_ancestor'] == 306)) {
   get_template_part('nav', 'research');
   $nav_generated = true;
 }
@@ -55,7 +55,7 @@ if($GLOBALS['pods_toplevel_ancestor'] == 309) {
 }
 
 // /events (the whole Events section) or individual Event pod items
-if($current_post_id == 311 or in_array(311, get_post_ancestors($current_post_id)) or ($pods_toplevel_ancestor == 311)) {
+if($current_post_id == 311 or in_array(311, get_post_ancestors($current_post_id)) or ($GLOBALS['pods_toplevel_ancestor'] == 311)) {
   get_template_part('nav', 'events');
   $nav_generated = true;
 }
