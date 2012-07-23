@@ -15,7 +15,7 @@ if($TRACE_ENABLED) { error_log($TRACE_PREFIX . 'post ID: ' . $current_post_id); 
 if($TRACE_ENABLED) { error_log($TRACE_PREFIX . 'post ID: ' . $parent_post_id); }
 if($TRACE_ENABLED) { error_log($TRACE_PREFIX . 'ancestors: ' . var_export($ancestors, true)); }
 if($TRACE_ENABLED) { error_log($TRACE_PREFIX . 'pods_toplevel_ancestor: ' . var_export($pods_toplevel_ancestor, true)); }
-echo var_trace('pod: ' . var_export($Pod), $TRACE_PREFIX, $TRACE_ENABLED);
+var_trace('pod: ' . var_export($Pod), $TRACE_PREFIX, $TRACE_ENABLED);
 ?>
 
 <div class="wireframe threecol last" id="navigationarea">

@@ -16,6 +16,7 @@
 global $pods;
 $TRACE_ENABLED = is_user_logged_in();
 $TRACE_PREFIX = 'pods-events-frontpage';
+global $pods_toplevel_ancestor;
 $pods_toplevel_ancestor = 311;
 
 function people_list($people, $heading_singular, $heading_plural) {
