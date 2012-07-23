@@ -120,17 +120,15 @@ $project_status = $pod->get_field('project_status.name');
       <div class='extra-content twelvecol'>
       </div><!-- .extra-content -->
     </div><!-- #contentarea -->
-    <div id="navigationarea" class='wireframe threecol last'>
-      <?php
-        if($project_status == 'active') {
-          $HIDE_CURRENT_PROJECTS = false;
-          $HIDE_PAST_PROJECTS = true;
-        } else {
-          $HIDE_CURRENT_PROJECTS = true;
-          $HIDE_PAST_PROJECTS = false;
-        }
-        get_template_part('nav'); ?>
-    </div>
+    <?php
+      if($project_status == 'active') {
+        $HIDE_CURRENT_PROJECTS = false;
+        $HIDE_PAST_PROJECTS = true;
+      } else {
+        $HIDE_CURRENT_PROJECTS = true;
+        $HIDE_PAST_PROJECTS = false;
+      }
+      get_template_part('nav'); ?>
   </div><!-- #post-<?php the_ID(); ?> -->
 
 </div><!-- role='main'.row -->
