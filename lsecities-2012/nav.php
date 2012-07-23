@@ -49,7 +49,7 @@ if($current_post_id == 309 or in_array(309, get_post_ancestors($current_post_id)
   $nav_generated = true;
 }
 
-if($GLOBALS['pods_toplevel_ancestor'] == 309) {
+if($pods_toplevel_ancestor == 309) {
   get_template_part('nav', 'article');
   $nav_generated = true;
 }
