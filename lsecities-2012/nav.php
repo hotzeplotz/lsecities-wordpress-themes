@@ -3,7 +3,9 @@ $TRACE_ENABLED = is_user_logged_in();
 $TRACE_PREFIX = 'nav.php -- ';
 global $current_post_id;
 global $BASE_URI;
+global $IN_CONTENT_AREA;
 $current_post_id = $post->ID;
+$IN_CONTENT_AREA = false;
 $ancestors = get_post_ancestors($current_post_id);
 global $pods_toplevel_ancestor;
 
@@ -46,22 +48,6 @@ else :
   get_template_part('nav', 'generic');
 endif;
 ?>
-
-<?php
-if(get_post_meta(get_the_ID(), 'list_pods', true) == 'research_projects') {
-  $HIDE_CURRENT_PROJECTS = true;
-  $HIDE_PAST_PROJECTS = true;
-  $BASE_URI = PODS_BASEURI_RESEARCH_PROJECTS;
-  $IN_CONTENT_AREA = false;
-  get_template_part('nav', 'research');
-} elseif(get_post_meta(get_the_ID(), 'list_pods', true) == 'past_research_projects') {
-  $HIDE_PAST_PROJECTS = true;
-  $HIDE_CURRENT_PROJECTS = true;
-  $IN_CONTENT_AREA = false;
-  $BASE_URI = PODS_BASEURI_RESEARCH_PROJECTS;
-  get_template_part('nav', 'research');
-} ?>
-            
             
   <div id="mailing-list-subscription">
     <h1>Click here to subscribe to LSE Cities updates</h1>
