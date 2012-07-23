@@ -15,13 +15,8 @@ if($TRACE_ENABLED) { error_log($TRACE_PREFIX . 'post ID: ' . $current_post_id); 
 if($TRACE_ENABLED) { error_log($TRACE_PREFIX . 'post ID: ' . $parent_post_id); }
 if($TRACE_ENABLED) { error_log($TRACE_PREFIX . 'ancestors: ' . var_export($ancestors, true)); }
 if($TRACE_ENABLED) { error_log($TRACE_PREFIX . 'pods_toplevel_ancestor: ' . var_export($pods_toplevel_ancestor, true)); }
-
-if($TRACE_ENABLED) : ?>
-<!--
-pod:
-<?php var_export($Pod); ?>
--->
-<?php endif; ?>
+echo var_trace('pod: ' . var_export($Pod), $TRACE_PREFIX, $TRACE_ENABLED);
+?>
 
 <div class="wireframe threecol last" id="navigationarea">
 
@@ -32,9 +27,11 @@ elseif($current_post_id == 94) : // /ua/ (Urban Age frontpage)
   get_template_part('snippet-organizers');
 elseif($current_post_id == 309 or in_array(309, get_post_ancestors($current_post_id)) or ($pods_toplevel_ancestor == 309)) : // /publications (the whole Publications section) or individual Article pod items
   get_template_part('nav', 'publications');
+elseif($current_post_id == 311 or in_array(311, get_post_ancestors($current_post_id)) or ($pods_toplevel_ancestor == 311)) : // /events (the whole Events section) or individual Event pod items
+  get_template_part('nav', 'events');
 elseif($current_post_id == 489 or in_array(1890, get_post_ancestors($current_post_id))): // /ua/award/ or /about/collaboration-opportunities/
   get_template_part('nav', 'empty');
-elseif(check_parent_conference(191) or check_parent_conference(229) or check_parent_conference(250) or check_parent_conference(268) or check_parent_conference(211) or check_parent_conference(284) or check_parent_conference(286) or check_parent_conference(106) or check_parent_conference(381) or check_parent_conference(391) or check_parent_conference(577) or check_parent_conference(1388)):
+elseif(check_parent_conference(191) or check_parent_conference(229) or check_parent_conference(250) or check_parent_conference(268) or check_parent_conference(211) or check_parent_conference(284) or check_parent_conference(286) or check_parent_conference(106) or check_parent_conference(381) or check_parent_conference(391) or check_parent_conference(577) or check_parent_conference(1388)): // /ua/conferences/
   get_template_part('nav', 'conferences');
 elseif($current_post_id = 421 or in_array(421, get_post_ancestors($current_post_id))): // /about/whos-who/
   get_template_part('nav', 'generic');

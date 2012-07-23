@@ -16,6 +16,7 @@
 global $pods;
 $TRACE_ENABLED = is_user_logged_in();
 $TRACE_PREFIX = 'pods-events-frontpage';
+$pods_toplevel_ancestor = 311;
 
 function people_list($people, $heading_singular, $heading_plural) {
   $output = '';
@@ -300,13 +301,8 @@ $poster_pdf = honor_ssl_for_attachments($poster_pdf[0]['guid']);
             </div>
           </div>
 
-          <div id="navigationarea" class='wireframe threecol last'>    
-          <?php if(!$is_conference) : // if we are dealing with an event, $pod_slug is set - display events sidebar ?>
-            <?php get_template_part( 'nav', 'events' ); ?>
-          <?php else : // otherwise we are dealing with a conference - display conferences sidebar ?>
-            <?php get_template_part( 'nav', 'conferences' ); ?>
-          <?php endif; ?>
-          </div>
+          <?php get_template_part( 'nav'); ?>
+
 <script type="text/javascript">
 jQuery(function($) {
   $('.event-materials audio, .event-materials video').mediaelementplayer({
