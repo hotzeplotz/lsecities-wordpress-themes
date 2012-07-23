@@ -302,7 +302,7 @@ $poster_pdf = honor_ssl_for_attachments($poster_pdf[0]['guid']);
             </div>
           </div>
 
-          <?php get_template_part( 'nav'); ?>
+          <?php get_template_part('nav'); ?>
 
 <script type="text/javascript">
 jQuery(function($) {
