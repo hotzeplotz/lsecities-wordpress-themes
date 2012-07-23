@@ -9,9 +9,6 @@ $IN_CONTENT_AREA = false;
 $ancestors = get_post_ancestors($current_post_id);
 global $pods_toplevel_ancestor;
 
-// global overrides set in caller templates to force any specific template part rendering
-global $nav_show_conferences;
-
 if($TRACE_ENABLED) { error_log($TRACE_PREFIX . 'ancestors: ' . var_export($ancestors, true)); }
 
 global $parent_post_id;
@@ -27,26 +24,58 @@ if($TRACE_ENABLED) { error_log($TRACE_PREFIX . 'pods_toplevel_ancestor: ' . var_
 <div class="wireframe threecol last" id="navigationarea">
 
 <?php
-if($current_post_id == 393) : // / (main frontpage)
+// / (main frontpage)
+if($current_post_id == 393) {
   get_template_part('snippet-lsecities-frontpage');
-elseif($current_post_id == 94) : // /ua/ (Urban Age frontpage)
+  $nav_generated = true;
+}
+
+// /ua/ (Urban Age frontpage)
+if($current_post_id == 94) {
   get_template_part('snippet-organizers');
-elseif($current_post_id == 306 or in_array(306, get_post_ancestors($current_post_id)) or ($pods_toplevel_ancestor == 306)) : // /research (the whole Research section) or individual Research project pod items
+  $nav_generated = true;
+}
+
+// /research (the whole Research section) or individual Research project pod items
+if($current_post_id == 306 or in_array(306, get_post_ancestors($current_post_id)) or ($pods_toplevel_ancestor == 306)) {
   get_template_part('nav', 'research');
-elseif($current_post_id == 309 or in_array(309, get_post_ancestors($current_post_id)) or ($pods_toplevel_ancestor == 309)) : // /publications (the whole Publications section) or individual Article pod items
+  $nav_generated = true;
+}
+
+// /publications (the whole Publications section) or individual Article pod items
+if($current_post_id == 309 or in_array(309, get_post_ancestors($current_post_id)) or ($pods_toplevel_ancestor == 309)) {
   get_template_part('nav', 'publications');
-elseif($current_post_id == 311 or in_array(311, get_post_ancestors($current_post_id)) or ($pods_toplevel_ancestor == 311)) : // /events (the whole Events section) or individual Event pod items
+  $nav_generated = true;
+}
+
+// /events (the whole Events section) or individual Event pod items
+if($current_post_id == 311 or in_array(311, get_post_ancestors($current_post_id)) or ($pods_toplevel_ancestor == 311)) {
   get_template_part('nav', 'events');
-elseif($current_post_id == 489 or in_array(1890, get_post_ancestors($current_post_id))): // /ua/award/ or /about/collaboration-opportunities/
+  $nav_generated = true;
+}
+
+// /ua/award/ or /about/collaboration-opportunities/
+if($current_post_id == 489 or in_array(1890, get_post_ancestors($current_post_id))) {
   get_template_part('nav', 'empty');
-elseif($nav_show_conferences or check_parent_conference(191) or check_parent_conference(229) or check_parent_conference(250) or check_parent_conference(268) or check_parent_conference(211) or check_parent_conference(284) or check_parent_conference(286) or check_parent_conference(106) or check_parent_conference(381) or check_parent_conference(391) or check_parent_conference(577) or check_parent_conference(1388)): // /ua/conferences/
+  $nav_generated = true;
+}
+
+// /ua/conferences/
+if($nav_show_conferences or check_parent_conference(191) or check_parent_conference(229) or check_parent_conference(250) or check_parent_conference(268) or check_parent_conference(211) or check_parent_conference(284) or check_parent_conference(286) or check_parent_conference(106) or check_parent_conference(381) or check_parent_conference(391) or check_parent_conference(577) or check_parent_conference(1388)) {
   get_template_part('nav', 'conferences');
-elseif($current_post_id = 421 or in_array(421, get_post_ancestors($current_post_id))): // /about/whos-who/
+  $nav_generated = true;
+}
+
+// /about/whos-who/
+if($current_post_id = 421 or in_array(421, get_post_ancestors($current_post_id))) {
   get_template_part('nav', 'generic');
   get_template_part('nav', 'whoswho');
-else :
+  $nav_generated = true;
+}
+
+if(!$nav_generated) {
   get_template_part('nav', 'generic');
-endif;
+}
 ?>
             
   <div id="mailing-list-subscription">
