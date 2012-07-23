@@ -2,10 +2,11 @@
 $TRACE_ENABLED = is_user_logged_in();
 $TRACE_PREFIX = 'nav.php -- ';
 $current_post_id = $post->ID;
+$publication_pod = $GLOBALS['publication_pod'];
 ?>
 
 <nav id="publication-side-toc">
-<?php if(count($GLOBALS['publication_pod']->get_field('articles'))) : ?>
+<?php if(count($publication_pod->get_field('articles'))) : ?>
   <div>
     <h1><?php echo $publication_pod->get_field('name'); ?></h1>
     <ul>
