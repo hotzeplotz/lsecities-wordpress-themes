@@ -7,7 +7,6 @@ global $IN_CONTENT_AREA;
 $current_post_id = $post->ID;
 $IN_CONTENT_AREA = false;
 $ancestors = get_post_ancestors($current_post_id);
-global $pods_toplevel_ancestor;
 
 if($TRACE_ENABLED) { error_log($TRACE_PREFIX . 'ancestors: ' . var_export($ancestors, true)); }
 
