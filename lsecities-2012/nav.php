@@ -75,7 +75,7 @@ if($current_post_id = 421 or in_array(421, get_post_ancestors($current_post_id))
   $nav_generated = true;
 }
 
-if($nav_generated == false) {
+if(false) {
   get_template_part('nav', 'generic');
 }
 ?>
