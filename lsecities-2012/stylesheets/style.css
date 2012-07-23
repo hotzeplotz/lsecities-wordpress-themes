@@ -287,6 +287,7 @@ ol.article-references li:target { background-color: #ffeeee; }
 #contentarea .top-content article header h1 { font-family: museo-sans, PT Sans, sans-serif; font-weight: 900; color: #22273b; }
 
 #keyfacts, #navigationarea { font-size: 90%; }
+#keyfacts h1, #navigationarea h1 { font-size: 1em; }
 #keyfacts dl dt, #navigationarea dl dt { border-bottom: 1px solid #eee; margin-top: 0.5em; }
 #keyfacts dl dt:first-child, #navigationarea dl dt:first-child { margin-top: 0; }
 #keyfacts dl dd, #navigationarea dl dd { line-height: 1.5em; margin-bottom: 0.2em; }
