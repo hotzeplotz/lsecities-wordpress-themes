@@ -5,7 +5,7 @@ $current_post_id = $post->ID;
 ?>
 
 <nav id="publication-side-toc">
-<?php if(count($publication_pod->get_field('articles'))) : ?>
+<?php if(count($GLOBALS['publication_pod']->get_field('articles'))) : ?>
   <div>
     <h1><?php echo $publication_pod->get_field('name'); ?></h1>
     <ul>
