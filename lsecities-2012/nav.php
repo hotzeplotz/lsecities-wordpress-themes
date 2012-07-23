@@ -95,7 +95,7 @@ if($nav_generated == false) {
       <input type="text" value="" name="MERGE1" id="MERGE1" />
       <label for="MERGE2">last name <em>*</em></label>
       <input type="text" value="" name="MERGE2" id="MERGE2" />
-      <p><input type="submit" /></p>
+      <p><input type="submit" value="subscribe"/></p>
     </form>
   </div>
   <script>
