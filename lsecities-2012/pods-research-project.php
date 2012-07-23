@@ -8,7 +8,7 @@
  * @since Twenty Eleven 1.0
  */
 ?><?php
-/* URI: TBD */
+/* URI: /objects/research-projects */
 $BASE_URI = PODS_BASEURI_RESEARCH_PROJECTS;
 $TRACE_ENABLED = is_user_logged_in();
 $TRACE_PREFIX = 'pods-research-projects';
@@ -129,7 +129,7 @@ $project_status = $pod->get_field('project_status.name');
           $HIDE_CURRENT_PROJECTS = true;
           $HIDE_PAST_PROJECTS = false;
         }
-        get_template_part('nav', 'research'); ?>
+        get_template_part('nav'); ?>
     </div>
   </div><!-- #post-<?php the_ID(); ?> -->
 

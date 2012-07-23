@@ -23,7 +23,6 @@ if($pod_slug) {
 if(!$pod_from_page) {
   // set toplevel ancestor explicitly as we are outside of WP's hierarchy
   global $pods_toplevel_ancestor;
-
   $pods_toplevel_ancestor = 309;
 }
 
@@ -197,13 +196,7 @@ if(count($attachments)) {
             </div><!-- .top-content -->
           </div><!-- #contentarea -->
 
-          <div id="navigationarea" class='wireframe threecol last'>
-          <?php
-            if($pod_from_page) {
-              get_template_part('nav', 'conferences');
-            }
-            include(locate_template('nav-article.php'));
-          ?>
+          <?php get_template_part('nav'); ?>
           </div><!-- #navigationarea -->
           
 </div><!-- #post-<?php the_ID(); ?> -->
