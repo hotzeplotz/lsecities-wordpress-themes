@@ -45,7 +45,7 @@ endif;
 ?>
 
   <div id="mailing-list-subscription">
-    <h1>Subscribe to LSE Cities updates</h1>
+    <h1>Click here to subscribe to LSE Cities updates</h1>
     <form method="post" action="http://urban-age.us4.list-manage1.com/subscribe/post" id="mailchimp-form">
       <input type="hidden" value="6a19b1b794ce991fff919b68d" name="u" />
       <input type="hidden" value="1f3b65491d" name="id" />
@@ -55,7 +55,7 @@ endif;
       <input type="text" value="" name="MERGE1" id="MERGE1" />
       <label for="MERGE2">last name <em>*</em></label>
       <input type="text" value="" name="MERGE2" id="MERGE2" />
-      <input type="submit" />
+      <p><input type="submit" /></p>
     </form>
   </div>
   <script>
