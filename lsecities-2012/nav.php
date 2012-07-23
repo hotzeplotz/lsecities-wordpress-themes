@@ -4,6 +4,8 @@ $TRACE_PREFIX = 'nav.php -- ';
 global $current_post_id;
 global $BASE_URI;
 global $IN_CONTENT_AREA;
+global $HIDE_CURRENT_PROJECTS;
+global $HIDE_PAST_PROJECTS;
 $current_post_id = $post->ID;
 $IN_CONTENT_AREA = false;
 $ancestors = get_post_ancestors($current_post_id);
