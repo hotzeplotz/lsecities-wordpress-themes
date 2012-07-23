@@ -74,10 +74,6 @@ if($current_post_id = 421 or in_array(421, get_post_ancestors($current_post_id))
   get_template_part('nav', 'whoswho');
   $nav_generated = true;
 }
-
-if(false) {
-  get_template_part('nav', 'generic');
-}
 ?>
             
   <div id="mailing-list-subscription">
