@@ -21,6 +21,7 @@ lsecities-2012 (1.2) stable; urgency=low
     * [feature] calls to functions that retrieve GUIDs for links are
       now all wrapped within the honor_ssl_for_attachments() function
       to work around WP's way of storing URIs
+    * [feature] signup form in col4 (closes: #18)
 
  -- andrea rota <a.rota@lse.ac.uk>  DDD, DD MMM 2012 HH:MM:SS +0100
   
