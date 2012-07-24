@@ -94,7 +94,7 @@
 
 <script>
       //<![CDATA[
-        // add jQuery regex filter (http://james.padolsey.com/javascript/regex-selector-for-jquery/)
+        // jQuery regex filter (http://james.padolsey.com/javascript/regex-selector-for-jquery/)
         jQuery.expr[':'].regex = function(elem, index, match) {
           var matchParams = match[3].split(','),
           validLabels = /^(data|css):/,
@@ -120,12 +120,16 @@
           if($('input:radio[name=group[8245]]').length) {
             $('input:radio[name=group[8245]]')[0].checked = true;
           };
+          
+          // track clicks to PDFs hosted in WordPress.
+          // based on http://www.wduffy.co.uk/blog/tracking-google-goals-with-no-url-using-jquery/.
+          // uses regex jQuery filter (http://james.padolsey.com/javascript/regex-selector-for-jquery/).
           $(':regex(href,(http:\/\/lsecities\.net\/)?\/files\/.*.pdf)').click(function() {
             var re = /^(http:\/\/lsecities\.net)?(.*)$/gi;
             var originalhref = $(this).attr('href');
             var href = originalhref.replace(re, '$2');
-            console.log("logging PDF download for URI %s logged as %s", originalhref, href);
-            _gaq.push(['_trackPageview', href]);
+            console.log("PDF download at URI %s tracked with event label '%s'", originalhref, href);
+            _gaq.push(['_trackEvent', 'PDF', 'download', href]);
           });
         });
       //]]>
