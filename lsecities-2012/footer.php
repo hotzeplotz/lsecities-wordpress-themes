@@ -121,8 +121,10 @@
             $('input:radio[name=group[8245]]')[0].checked = true;
           };
           $(':regex(href,(http:\/\/lsecities\.net\/)?\/files\/.*.pdf)').click(function() {
-            var href = $(this).attr('href').replace('^http:\/\/lsecities\.net', '');
-            console.log("logging PDF download for URI %s", href);
+            var re = /^(http:\/\/lsecities\.net)?(.*)$/gi;
+            var originalhref = $(this).attr('href');
+            var href = originalhref.replace(re, '$2');
+            console.log("logging PDF download for URI %s logged as %s", originalhref, href);
             _gaq.push(['_trackPageview', href]);
           });
         });
