@@ -122,7 +122,7 @@
           };
           $(':regex(href,(http:\/\/lsecities\.net\/)?\/files\/.*.pdf)').click(function() {
             var href = $(this).attr('href').replace('^http:\/\/lsecities\.net', '');
-            console.log("logging PDF download for URI %s", fullhref, href);
+            console.log("logging PDF download for URI %s", href);
             _gaq.push(['_trackPageview', href]);
           });
         });
