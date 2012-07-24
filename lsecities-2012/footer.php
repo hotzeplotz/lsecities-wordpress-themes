@@ -94,6 +94,19 @@
 
 <script>
       //<![CDATA[
+        // add jQuery regex filter (http://james.padolsey.com/javascript/regex-selector-for-jquery/)
+        jQuery.expr[':'].regex = function(elem, index, match) {
+          var matchParams = match[3].split(','),
+          validLabels = /^(data|css):/,
+          attr = {
+            method: matchParams[0].match(validLabels) ? 
+                        matchParams[0].split(':')[0] : 'attr',
+            property: matchParams.shift().replace(validLabels,'')
+          },
+          regexFlags = 'ig',
+          regex = new RegExp(matchParams.join('').replace(/^\s+|\s+$/g,''), regexFlags);
+          return regex.test(jQuery(elem)[attr.method](attr.property));
+        };
         jQuery(document).ready(function($) {
           $('.flexslider').flexslider(({
             animation: "slide",
@@ -106,7 +119,12 @@
           $('.accordion').accordion({autoHeight: false});
           if($('input:radio[name=group[8245]]').length) {
             $('input:radio[name=group[8245]]')[0].checked = true;
-          }
+          };
+          $(':regex(href,(http:\/\/lsecities\.net\/)?\/files\/.*.pdf)').click(function() {
+            var href = $(this).attr('href').replace('^http:\/\/lsecities\.net', '');
+            console.log("URI for %s is %s", fullhref, href);
+            _gaq.push(['_trackPageview', href]);
+          });
         });
       //]]>
 </script>
