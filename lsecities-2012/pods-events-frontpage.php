@@ -103,7 +103,7 @@ $event_date_start = new DateTime($pod->get_field('date_start'));
 $event_date_end = new DateTime($pod->get_field('date_end'));
 // $event_date_string = $pod->get_field('date_freeform');
 $event_date_string = $event_date_start->format("l j F Y | H:i");
-$event_date_string = $event_date_string . '-' . $event_date_end->format("H:i");
+$event_date_string = $event_date_string . ' - ' . $event_date_end->format("H:i");
 $datetime_now = new DateTime('now');
 $is_future_event = ($event_date_start > $datetime_now) ? true : false;
 
