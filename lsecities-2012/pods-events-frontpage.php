@@ -99,13 +99,16 @@ if(!$is_conference) {
   $featured_image_uri = honor_ssl_for_attachments($pod->get_field('heading_image.guid'));
 }
 
-$event_date_string = $pod->get_field('date_freeform');
-$event_date = new DateTime($pod->get_field('date_start'));
+$event_date_start = new DateTime($pod->get_field('date_start'));
+$event_date_end = new DateTime($pod->get_field('date_end'));
+// $event_date_string = $pod->get_field('date_freeform');
+$event_date_string = $event_date_start->format("l j F Y | H:i");
+$event_date_string = $event_date_string . '-' . $event_date_end->format("H:i");
 $datetime_now = new DateTime('now');
-$is_future_event = ($event_date > $datetime_now) ? true : false;
+$is_future_event = ($event_date_start > $datetime_now) ? true : false;
 
 $event_location = preg_replace('/<p>(.*?)<\/p>/', "$1", $pod->get_field('location'));
-$event_series = $pod->get_field('event_series');
+$event_series = $pod->get_field('eventseries');
           
 $poster_pdf = $pod->get_field('poster_pdf');
 $poster_pdf = honor_ssl_for_attachments($poster_pdf[0]['guid']);
@@ -177,7 +180,7 @@ $poster_pdf = honor_ssl_for_attachments($poster_pdf[0]['guid']);
               
                     <?php if($event_series): ?>
                       <dt>Event series</dt>
-                      <dd><em><?php echo do_shortcode($pod->get_field('event_series')); ?></em></dd>
+                      <dd><em><?php echo do_shortcode($event_series); ?></em></dd>
                     <?php endif; ?>
 
 <!--
