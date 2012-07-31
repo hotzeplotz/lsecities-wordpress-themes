@@ -75,18 +75,19 @@ krsort($events);
 <nav>
   <dl>
   <?php 
-    if(!$HIDE_UPCOMING_EVENTS) {
-      if($IN_CONTENT_AREA) {
-	include 'nav-events-upcoming.php';
-      } else {
-	include 'nav-events-past.php';
+    if($IN_CONTENT_AREA) {
+      if(!$HIDE_PAST_EVENTS) {
+        include 'nav-events-upcoming.php';
       }
-    }
-    if(!$HIDE_PAST_EVENTS) {
-      if($IN_CONTENT_AREA) {
-	include 'nav-events-past.php';
-      } else {
-	include 'nav-events-upcoming.php';
+      if(!$HIDE_UPCOMING_EVENTS) {
+        include 'nav-events-past.php';
+      }
+    } else {
+      if(!$HIDE_UPCOMING_EVENTS) {
+        include 'nav-events-upcoming.php';
+      }
+      if(!$HIDE_PAST_EVENTS) {
+        include 'nav-events-past.php';
       }
     }
   ?>
