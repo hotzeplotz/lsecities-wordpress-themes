@@ -5,6 +5,7 @@ $current_post_id = $post->ID;
 
 global $IN_CONTENT_AREA;
 global $HIDE_UPCOMING_EVENTS, $HIDE_PAST_EVENTS;
+global $pod_slug;
 $BASE_URI = PODS_BASEURI_EVENTS;
 
 echo var_trace('HIDE_UPCOMING_EVENTS: '. $HIDE_UPCOMING_EVENTS, $TRACE_PREFIX, $TRACE_ENABLED);
@@ -35,6 +36,7 @@ while($events_pod->fetchRecord()) {
 // prepare array with list of past events, split by year
 $events = Array();
 $current_year = date("Y");
+$active_year = $current_year; // used to set initial active section for jQuery UI accordion
 
 for($year = 2005; $year <= $current_year; $year++) {
   $events[$year] = Array();
@@ -47,6 +49,9 @@ for($year = 2005; $year <= $current_year; $year++) {
   while($events_pod->fetchRecord()) {
     // if event is past, add it to array
     if($events_pod->get_field['date_start'] < $datetime_now) {
+      if($pod_slug == $events_pod->get_field('slug')) {
+	$active_year = $year;
+      }
       array_push($events[$year], Array(
 	'slug' => $events_pod->get_field('slug'),
 	'name' => $events_pod->get_field('name'),
@@ -86,9 +91,9 @@ krsort($events);
     <?php if($events and !$HIDE_PAST_EVENTS): ?>
     <?php if(!$IN_CONTENT_AREA): ?><dt class="events past">Past events</dt><?php endif; ?>
     <dd>
-      <dl <?php if(!$IN_CONTENT_AREA): ?>class="accordion"<?php endif; ?>>
+      <dl<?php if(!$IN_CONTENT_AREA): ?> class="accordion"<?php endif; ?>>
       <?php foreach($events as $year => $year_events): ?>
-	<dt><?php echo $year; ?></dt>
+	<dt<?php if($year == $active_year): ?> class="active"<?php endif; ?>><?php echo $year; ?></dt>
 	<dd>
 	  <ul>
 	  <?php foreach($year_events as $event): ?>
