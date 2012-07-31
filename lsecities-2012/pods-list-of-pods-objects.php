@@ -42,6 +42,7 @@ switch($pod_type) {
                 </header>
                 <?php switch($pod_type):
                   case 'upcoming_events':
+                    $HIDE_UPCOMING_EVENTS = false;
                     $HIDE_PAST_EVENTS = true;
                     $BASE_URI = PODS_BASEURI_EVENTS;
                     $IN_CONTENT_AREA = true;
@@ -52,6 +53,7 @@ switch($pod_type) {
                 <?php break;
                   case 'past_events':
                     $HIDE_UPCOMING_EVENTS = true;
+                    $HIDE_PAST_EVENTS = false;
                     $BASE_URI = PODS_BASEURI_EVENTS;
                     $IN_CONTENT_AREA = true;
                 ?>

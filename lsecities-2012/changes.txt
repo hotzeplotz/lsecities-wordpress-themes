@@ -17,6 +17,8 @@ lsecities-2012 (1.2) stable; urgency=low
       these are linked to relevant Pods so that data is structured and
       linked for future search capabilities (e.g. all events of
       series X)
+    * [feature] open section side navigation on event pages is now
+      by default the one of the year of the event displayed
   * general
     * [feature] calls to functions that retrieve GUIDs for links are
       now all wrapped within the honor_ssl_for_attachments() function
