@@ -47,9 +47,7 @@ switch($pod_type) {
                     $BASE_URI = PODS_BASEURI_EVENTS;
                     $IN_CONTENT_AREA = true;
                 ?>
-                <div id='navigationarea'>
                 <?php get_template_part( 'nav', 'events' ); ?>
-                </div>
                 <?php break;
                   case 'past_events':
                     $HIDE_UPCOMING_EVENTS = true;
@@ -57,27 +55,21 @@ switch($pod_type) {
                     $BASE_URI = PODS_BASEURI_EVENTS;
                     $IN_CONTENT_AREA = true;
                 ?>
-                <div id='navigationarea'>
-                <?php get_template_part( 'nav', 'events' ); ?>
-                </div>                
+                <?php get_template_part( 'nav', 'events' ); ?>                
                 <?php break;
                   case 'research_projects':
                     $HIDE_PAST_PROJECTS = true;
                     $IN_CONTENT_AREA = true;
                     $BASE_URI = PODS_BASEURI_RESEARCH_PROJECTS;
                 ?>
-                <div id='navigationarea'>
-                <?php get_template_part( 'nav', 'research' ); ?>
-                </div>                
+                <?php get_template_part( 'nav', 'research' ); ?>               
                 <?php break;
                   case 'past_research_projects':
                     $HIDE_CURRENT_PROJECTS = true;
                     $IN_CONTENT_AREA = true;
                     $BASE_URI = PODS_BASEURI_RESEARCH_PROJECTS;
                 ?>
-                <div id='navigationarea'>
-                <?php get_template_part( 'nav', 'research' ); ?>
-                </div>                
+                <?php get_template_part( 'nav', 'research' ); ?>            
                 <?php break; ?>
                 <?php endswitch; ?>
               </article>
