@@ -109,7 +109,11 @@ $is_future_event = ($event_date_start > $datetime_now) ? true : false;
 
 $event_location = $pod->get_field('venue.name');
 $eventseries = $pod->get_field('eventseries');
-          
+$event_series = $pod->get_field('event_series.name');
+$event_type = $pod->get_field('event_type.name');
+$event_host_organizations = (array) $pod->get_field('hosted_by');
+$event_partner_organizations = (array) $pod->get_field('partners');
+
 $poster_pdf = $pod->get_field('poster_pdf');
 $poster_pdf = honor_ssl_for_attachments($poster_pdf[0]['guid']);
 ?>
@@ -203,6 +207,29 @@ $poster_pdf = honor_ssl_for_attachments($poster_pdf[0]['guid']);
                       <dt>Twitter archive</dt>
                       <dd><a href="https://storify.com/<?php echo $event_story_id; ?>">Read on Storify</a></dd>
                     <?php endif; ?>
+                    
+                    <?php // only show linked data to logged in users for debugging for now
+                      if($TRACE_ENABLED): ?>
+                      <?php if($event_type): ?>
+                      <dt>Event type</dt>
+                      <dd><?php echo $event_type; ?></dd>
+                      <?php endif; ?>
+                      <?php if($event_series): ?>
+                      <dt>Event series</dt>
+                      <dd><?php echo $event_series; ?></dd>
+                      <?php endif; ?>
+                      <?php if($event_type): ?>
+                      <dt>Hosted by</dt>
+                      <dd><?php echo var_export($event_host_organizations, true); ?></dd>
+                      <?php endif; ?>
+                      <?php if($event_type): ?>
+                      <dt>Partners</dt>
+                      <dd><?php echo var_export($event_type, true); ?></dd>
+                      <?php endif; ?>
+
+                    <?php
+                      endif;
+                    ?>
                 </dl>
                 <?php if(($is_future_event and $event_hashtag) or (!$event_story_id and $event_hashtag)): ?>
                 <div class='twitterbox'>
