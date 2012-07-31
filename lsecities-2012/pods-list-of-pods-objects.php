@@ -15,6 +15,8 @@
 $BASE_URI = PODS_BASEURI_EVENTS;
 $TRACE_ENABLED = is_user_logged_in();
 $TRACE_PREFIX = 'pods-list-of-pods-objects';
+global $IN_CONTENT_AREA;
+
 $pod_type = get_post_meta(get_the_ID(), 'list_pods', true);
 // set toplevel ancestor explicitly as we are outside of WP's hierarchy
 global $pods_toplevel_ancestor;
@@ -61,6 +63,7 @@ switch($pod_type) {
                     $HIDE_PAST_PROJECTS = true;
                     $IN_CONTENT_AREA = true;
                     $BASE_URI = PODS_BASEURI_RESEARCH_PROJECTS;
+                    $IN_CONTENT_AREA = true;
                 ?>
                 <?php get_template_part( 'nav', 'research' ); ?>               
                 <?php break;
@@ -68,6 +71,7 @@ switch($pod_type) {
                     $HIDE_CURRENT_PROJECTS = true;
                     $IN_CONTENT_AREA = true;
                     $BASE_URI = PODS_BASEURI_RESEARCH_PROJECTS;
+                    $IN_CONTENT_AREA = true;
                 ?>
                 <?php get_template_part( 'nav', 'research' ); ?>            
                 <?php break; ?>

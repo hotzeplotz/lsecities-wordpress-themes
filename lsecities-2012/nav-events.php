@@ -72,38 +72,23 @@ echo var_trace('events array: ' . var_export($events, true), $TRACE_PREFIX, $TRA
 krsort($events);
 ?>
 
-<nav id="eventsmenu">
+<nav>
   <dl>
-    <?php if(!$HIDE_UPCOMING_EVENTS): ?>
-    <?php if(!$IN_CONTENT_AREA): ?><dt class="events upcoming">Upcoming events</dt><?php endif; ?>
-    <dd>
-    <?php if($upcoming_events): ?>
-      <ul>
-      <?php foreach($upcoming_events as $event): ?>
-	<li><a href="<?php echo $BASE_URI . '/' . $event['slug']; ?>"><?php echo $event['date']; ?> | <?php echo $event['name']; ?></a></li>
-      <?php endforeach; ?>
-      </ul>
-    <?php else: ?>
-      Please check back for more information on our upcoming events.
-    <?php endif; ?>
-    </dd>
-    <?php endif; ?>
-    <?php if($events and !$HIDE_PAST_EVENTS): ?>
-    <?php if(!$IN_CONTENT_AREA): ?><dt class="events past">Past events</dt><?php endif; ?>
-    <dd>
-      <dl<?php if(!$IN_CONTENT_AREA): ?> class="accordion"<?php endif; ?>>
-      <?php foreach($events as $year => $year_events): ?>
-	<dt<?php if($year == $active_year): ?> class="active"<?php endif; ?>><?php echo $year; ?></dt>
-	<dd>
-	  <ul>
-	  <?php foreach($year_events as $event): ?>
-	    <li><a href="<?php echo $BASE_URI . '/' . $event['slug']; ?>"><?php echo $event['date']; ?> | <?php echo $event['name']; ?></a></li>
-	  <?php endforeach; ?>
-	  </ul>
-	</dd>
-      <?php endforeach; ?>
-      </dl>
-    </dd>
-    <?php endif; ?>
+  <?php 
+    if(!$HIDE_UPCOMING_EVENTS) {
+      if($IN_CONTENT_AREA) {
+	include 'nav-events-upcoming.php';
+      } else {
+	include 'nav-events-past.php';
+      }
+    }
+    if(!$HIDE_PAST_EVENTS) {
+      if($IN_CONTENT_AREA) {
+	include 'nav-events-past.php';
+      } else {
+	include 'nav-events-upcoming.php';
+      }
+    }
+  ?>
   </dl>
 </nav>
