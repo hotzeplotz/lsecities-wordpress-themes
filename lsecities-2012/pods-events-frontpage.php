@@ -107,7 +107,7 @@ $event_date_string = $event_date_string . '-' . $event_date_end->format("H:i");
 $datetime_now = new DateTime('now');
 $is_future_event = ($event_date_start > $datetime_now) ? true : false;
 
-$event_location = preg_replace('/<p>(.*?)<\/p>/', "$1", $pod->get_field('location'));
+$event_location = $pod->get_field('venue.name');
 $event_series = $pod->get_field('eventseries');
           
 $poster_pdf = $pod->get_field('poster_pdf');
