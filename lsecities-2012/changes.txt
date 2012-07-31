@@ -19,6 +19,9 @@ lsecities-2012 (1.2) stable; urgency=low
       series X)
     * [feature] open section side navigation on event pages is now
       by default the one of the year of the event displayed
+    * [fixed] proper nav subset is displayed on upcoming/past events
+      index pages (on upcoming events list page, past events sidenav
+      is displayed, and viceversa)
   * general
     * [feature] calls to functions that retrieve GUIDs for links are
       now all wrapped within the honor_ssl_for_attachments() function
