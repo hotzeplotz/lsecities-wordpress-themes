@@ -302,6 +302,8 @@ ol.article-references li:target { background-color: #ffeeee; }
 div.widget { margin-bottom: 1em; }
 div.widget h2 { margin-bottom: 0.5em; }
 
+.ui-accordion-header { cursor: pointer; }
+
 #navigationarea nav { margin-top: 2.5em; }
 #navigationarea nav:first-child { margin-top: inherit; }
 #navigationarea nav dl dt.ui-accordion-header:before { content: ''; background: url("http://lsecities.net/wp-content/themes/lsecities-2012/images/icons/mal/bullet-horizontal.gif") no-repeat 0; padding-left: 0.75em; }
