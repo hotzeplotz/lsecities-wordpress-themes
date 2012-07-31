@@ -84,7 +84,8 @@ switch($pod_type) {
             </div><!-- .top-content -->
           </div>
 
-          <?php get_template_part('nav'); ?>
+          <?php $IN_CONTENT_AREA = false; 
+                get_template_part('nav'); ?>
 </div><!-- #contentarea -->
 </div>
 
