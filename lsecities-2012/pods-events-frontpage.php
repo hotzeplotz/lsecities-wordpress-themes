@@ -218,11 +218,11 @@ $poster_pdf = honor_ssl_for_attachments($poster_pdf[0]['guid']);
                       <dt>Event series</dt>
                       <dd><?php echo $event_series; ?></dd>
                       <?php endif; ?>
-                      <?php if(count($event_type)): ?>
+                      <?php if(count($event_host_organizations)): ?>
                       <dt>Hosted by</dt>
                       <dd><?php echo var_export($event_host_organizations, true); ?></dd>
                       <?php endif; ?>
-                      <?php if(count($event_type)): ?>
+                      <?php if(count($event_partner_organizations)): ?>
                       <dt>Partners</dt>
                       <dd><?php echo var_export($event_partner_organizations, true); ?></dd>
                       <?php endif; ?>
