@@ -108,7 +108,7 @@ $datetime_now = new DateTime('now');
 $is_future_event = ($event_date_start > $datetime_now) ? true : false;
 
 $event_location = $pod->get_field('venue.name');
-$event_series = $pod->get_field('eventseries');
+$eventseries = $pod->get_field('eventseries');
           
 $poster_pdf = $pod->get_field('poster_pdf');
 $poster_pdf = honor_ssl_for_attachments($poster_pdf[0]['guid']);
@@ -178,9 +178,9 @@ $poster_pdf = honor_ssl_for_attachments($poster_pdf[0]['guid']);
                       <dd><?php echo $event_location; ?></dd>
                     <?php endif; ?>
               
-                    <?php if($event_series): ?>
+                    <?php if($eventseries): ?>
                       <dt>Event series</dt>
-                      <dd><em><?php echo do_shortcode($event_series); ?></em></dd>
+                      <dd><em><?php echo do_shortcode($eventseries); ?></em></dd>
                     <?php endif; ?>
 
 <!--
