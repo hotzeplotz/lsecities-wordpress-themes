@@ -1,5 +1,7 @@
 lsecities-2012 (1.2) stable; urgency=low
   
+  release 1.2 "abricot"
+  
   * article pages (pods-articles.php)
     * [fixed] image ratio is now enforced correctly also in IE<9
     * [feature] if no publishing date is defined, use publishing
@@ -22,16 +24,29 @@ lsecities-2012 (1.2) stable; urgency=low
     * [fixed] proper sidenav subset is displayed on upcoming/past events
       index pages (on upcoming events list page, past events sidenav
       is displayed, and viceversa)
+    * [feature] added linked Pods for venues, replacing the previous
+      freeform venue field
+    * [feature] "When" keyfact is now generated from the date_start and
+      date_end fields, replacing the previous "free form event date and
+      time" field
+  * venue pod
+    * new pod (see above under the event pages section)
+    * each venue can be linked to an organization
+    * geographic coordinates can be specified (later feature: display
+      map of area around venue, linked to the relevant OpenStreetMap
+      map)
   * general
     * [feature] calls to functions that retrieve GUIDs for links are
       now all wrapped within the honor_ssl_for_attachments() function
       to work around WP's way of storing URIs
     * [feature] signup form in col4 (closes: #18)
 
- -- andrea rota <a.rota@lse.ac.uk>  DDD, DD MMM 2012 HH:MM:SS +0100
+ -- andrea rota <a.rota@lse.ac.uk>  Tue, 31 Jul 2012 18:30:00 +0100
   
 lsecities-2012 (1.1) stable; urgency=low
 
+  version 1.1 "absinthe"
+  
   * search
     * [fixed] search lsecities.net via google
     * [usability] search icon is now a clickable button
@@ -70,6 +85,8 @@ lsecities-2012 (1.1) stable; urgency=low
  
 lsecities-2012 (1.0) stable; urgency=low
 
+  version 1.0 "rhubarbe" (https://en.wikipedia.org/wiki/French_republican_calendar)
+  
   * first public release
 
  -- andrea rota <a.rota@lse.ac.uk>  Mon, 30 Apr 2012 03:48:39 +0100
