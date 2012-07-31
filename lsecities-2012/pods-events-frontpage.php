@@ -113,7 +113,7 @@ $event_series = $pod->get_field('event_series.name');
 $event_type = $pod->get_field('event_type.name');
 $event_host_organizations_pods = (array) $pod->get_field('hosted_by');
 $event_host_organizations = '';
-foreach($event_host_organizations as $org) {
+foreach($event_host_organizations_pods as $org) {
   if($org['web_uri']) {
    $event_host_organizations .= '<a href=' . $org['web_uri'] . '>';
   }
@@ -127,7 +127,7 @@ $event_host_organizations = substr($event_host_organizations, 0, -2);
 
 $event_partner_organizations_pods = (array) $pod->get_field('partners');
 $event_partner_organizations = '';
-foreach($event_partner_organizations as $org) {
+foreach($event_partner_organizations_pods as $org) {
   if($org['web_uri']) {
    $event_partner_organizations .= '<a href=' . $org['web_uri'] . '>';
   }
