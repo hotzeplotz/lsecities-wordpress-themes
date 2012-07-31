@@ -117,7 +117,7 @@
           }));
           $('.runon li:nth-child(odd)').addClass('alternate');
           $('.accordion').accordion({autoHeight: false});
-          $('#accordion').accordion('activate', '.accordion > dt.active');
+          $('.accordion').accordion('activate', $(this).find('.active'));
           if($('input:radio[name=group[8245]]').length) {
             $('input:radio[name=group[8245]]')[0].checked = true;
           };
