@@ -224,7 +224,7 @@ $poster_pdf = honor_ssl_for_attachments($poster_pdf[0]['guid']);
                       <?php endif; ?>
                       <?php if($event_type): ?>
                       <dt>Partners</dt>
-                      <dd><?php echo var_export($event_type, true); ?></dd>
+                      <dd><?php echo var_export($event_partner_organizations, true); ?></dd>
                       <?php endif; ?>
 
                     <?php
