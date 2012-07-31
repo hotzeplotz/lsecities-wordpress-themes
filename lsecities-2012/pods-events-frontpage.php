@@ -111,8 +111,33 @@ $event_location = $pod->get_field('venue.name');
 $eventseries = $pod->get_field('eventseries');
 $event_series = $pod->get_field('event_series.name');
 $event_type = $pod->get_field('event_type.name');
-$event_host_organizations = (array) $pod->get_field('hosted_by');
-$event_partner_organizations = (array) $pod->get_field('partners');
+$event_host_organizations_pods = (array) $pod->get_field('hosted_by');
+$event_host_organizations = '';
+foreach($event_host_organizations as $org) {
+  if($org['web_uri']) {
+   $event_host_organizations .= '<a href=' . $org['web_uri'] . '>';
+  }
+  $event_host_organizations .= $org['name'];
+  if($org['web_uri']) {
+   $event_host_organizations .= '</a>';
+  }
+  $event_host_organizations .= ', ';
+}
+$event_host_organizations = substr($event_host_organizations, 0, -2);
+
+$event_partner_organizations_pods = (array) $pod->get_field('partners');
+$event_partner_organizations = '';
+foreach($event_partner_organizations as $org) {
+  if($org['web_uri']) {
+   $event_partner_organizations .= '<a href=' . $org['web_uri'] . '>';
+  }
+  $event_partner_organizations .= $org['name'];
+  if($org['web_uri']) {
+   $event_partner_organizations .= '</a>';
+  }
+  $event_partner_organizations .= ', ';
+}
+$event_partner_organizations = substr($event_partner_organizations, 0, -2);
 
 $poster_pdf = $pod->get_field('poster_pdf');
 $poster_pdf = honor_ssl_for_attachments($poster_pdf[0]['guid']);
@@ -212,21 +237,20 @@ $poster_pdf = honor_ssl_for_attachments($poster_pdf[0]['guid']);
                       if($TRACE_ENABLED): ?>
                       <?php if($event_type): ?>
                       <dt>Event type</dt>
-                      <dd><?php echo $event_type; ?></dd>
+                      <dd><?php echo ucfirst($event_type); ?></dd>
                       <?php endif; ?>
                       <?php if($event_series): ?>
                       <dt>Event series</dt>
                       <dd><?php echo $event_series; ?></dd>
                       <?php endif; ?>
-                      <?php if(count($event_host_organizations)): ?>
+                      <?php if($event_host_organizations): ?>
                       <dt>Hosted by</dt>
-                      <dd><?php echo var_export($event_host_organizations, true); ?></dd>
+                      <dd><?php echo $event_host_organizations; ?></dd>
                       <?php endif; ?>
-                      <?php if(count($event_partner_organizations)): ?>
+                      <?php if($event_partner_organizations): ?>
                       <dt>Partners</dt>
-                      <dd><?php echo var_export($event_partner_organizations, true); ?></dd>
+                      <dd><?php echo $event_partner_organizations; ?></dd>
                       <?php endif; ?>
-
                     <?php
                       endif;
                     ?>
