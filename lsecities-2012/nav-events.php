@@ -74,7 +74,7 @@ krsort($events);
 
 <nav id="eventsmenu">
   <dl>
-    <?php if($HIDE_UPCOMING_EVENTS): ?>
+    <?php if(!$HIDE_UPCOMING_EVENTS): ?>
     <?php if(!$IN_CONTENT_AREA): ?><dt class="events upcoming">Upcoming events</dt><?php endif; ?>
     <dd>
     <?php if($upcoming_events): ?>
@@ -88,7 +88,7 @@ krsort($events);
     <?php endif; ?>
     </dd>
     <?php endif; ?>
-    <?php if($events and $HIDE_PAST_EVENTS): ?>
+    <?php if($events and !$HIDE_PAST_EVENTS): ?>
     <?php if(!$IN_CONTENT_AREA): ?><dt class="events past">Past events</dt><?php endif; ?>
     <dd>
       <dl<?php if(!$IN_CONTENT_AREA): ?> class="accordion"<?php endif; ?>>
