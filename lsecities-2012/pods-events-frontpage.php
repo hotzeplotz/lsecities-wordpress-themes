@@ -42,7 +42,7 @@ function people_list($people, $heading_singular, $heading_plural) {
         $output .= $person['name'] . '  ' . $person['family_name'] . ", \n";
       }
     }
-    $output = substr($output, 0, 2);
+    $output = substr($output, 0, -2);
     $output .= "</dd>\n";
   }
   
