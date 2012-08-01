@@ -158,7 +158,7 @@ if($event_host_organizations) {
   $event_info .= 'hosted by LSE Cities ';
 }
 if($event_partner_organizations) {
-  $event_info . 'in partnership with ' . $event_partner_organizations;
+  $event_info .= 'in partnership with ' . $event_partner_organizations;
 }
 
 $poster_pdf = $pod->get_field('poster_pdf');
