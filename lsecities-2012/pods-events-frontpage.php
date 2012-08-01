@@ -143,7 +143,7 @@ $event_series = $pod->get_field('event_series.name');
 $event_host_organizations = orgs_list((array) $pod->get_field('hosted_by'));
 $event_partner_organizations = orgs_list((array) $pod->get_field('partners'));
 
-$event_info '';
+$event_info = '';
 if($event_type) {
   $event_info .= '<em>' . $event_type . '</em>';
 } else {
