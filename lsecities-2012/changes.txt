@@ -44,6 +44,9 @@ lsecities-2012 (1.2) stable; urgency=low
     * [feature] signup form in col4 (closes: #18)
     * [design] background colour for highlighted selections is now
       light blue
+    * [design] set minimum height for content area so that pages
+      with little to no text (e.g. vacancies page when there are no
+      vacancies) display some white space before the footer
 
  -- andrea rota <a.rota@lse.ac.uk>  Tue, 31 Jul 2012 18:30:00 +0100
   
