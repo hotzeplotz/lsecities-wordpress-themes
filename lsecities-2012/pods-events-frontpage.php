@@ -30,22 +30,40 @@ function people_list($people, $heading_singular, $heading_plural) {
     } else {
       $output .= "<dt>$heading_singular</dt>\n";
     }
-    $output .= "<dd>\n<ul>\n";
+    $output .= "<dd>\n";
     
     foreach($people as $person) {
       echo var_trace($person, 'people_list:$person', $TRACE_ENABLED);
       $people_count++;
       if($person['profile_text']) {
-        $output .= '<li><a href="#person-profile-' . $person['slug'] . '">' . $person['name'] . ' ' . $person['family_name'] . "</a></li>\n";
+        $output .= '<a href="#person-profile-' . $person['slug'] . '">' . $person['name'] . ' ' . $person['family_name'] . "</a>, \n";
         $people_with_blurb_count++;
       } else {
-        $output .= "<li>" . $person['name'] . "  " . $person['family_name'] . "</li>\n";
+        $output .= $person['name'] . '  ' . $person['family_name'] . ", \n";
       }
     }
-    $output .= "</ul>\n</dd>\n";
+    $output = substr($output, 0, 2);
+    $output .= "</dd>\n";
   }
   
   return array('count' => $people_count, 'with_blurb' => $people_with_blurb_count, 'output' => $output, 'trace' => var_export($people, true));
+}
+
+function orgs_list($organizations, $heading_singular, $heading_plural) {
+  $output = '';
+  $org_count = 0;
+  
+  foreach($organizations as $org) {
+    if($org['web_uri']) {
+      $output .= '<a href=' . $org['web_uri'] . '>';
+    }
+    $output .= $org['name'];
+    if($org['web_uri']) {
+      $output .= '</a>';
+    }
+    $output .= ', ';
+  }
+  $output = substr($output, 0, -2);
 }
 
 // check if we are getting called via Pods (pods_url_variable is set)
@@ -111,33 +129,8 @@ $event_location = $pod->get_field('venue.name');
 $eventseries = $pod->get_field('eventseries');
 $event_series = $pod->get_field('event_series.name');
 $event_type = $pod->get_field('event_type.name');
-$event_host_organizations_pods = (array) $pod->get_field('hosted_by');
-$event_host_organizations = '';
-foreach($event_host_organizations_pods as $org) {
-  if($org['web_uri']) {
-   $event_host_organizations .= '<a href=' . $org['web_uri'] . '>';
-  }
-  $event_host_organizations .= $org['name'];
-  if($org['web_uri']) {
-   $event_host_organizations .= '</a>';
-  }
-  $event_host_organizations .= ', ';
-}
-$event_host_organizations = substr($event_host_organizations, 0, -2);
-
-$event_partner_organizations_pods = (array) $pod->get_field('partners');
-$event_partner_organizations = '';
-foreach($event_partner_organizations_pods as $org) {
-  if($org['web_uri']) {
-   $event_partner_organizations .= '<a href=' . $org['web_uri'] . '>';
-  }
-  $event_partner_organizations .= $org['name'];
-  if($org['web_uri']) {
-   $event_partner_organizations .= '</a>';
-  }
-  $event_partner_organizations .= ', ';
-}
-$event_partner_organizations = substr($event_partner_organizations, 0, -2);
+$event_host_organizations = orgs_list((array) $pod->get_field('hosted_by'));
+$event_partner_organizations = orgs_list((array) $pod->get_field('partners'));
 
 $poster_pdf = $pod->get_field('poster_pdf');
 $poster_pdf = honor_ssl_for_attachments($poster_pdf[0]['guid']);
