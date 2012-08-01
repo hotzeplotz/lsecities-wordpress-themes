@@ -53,7 +53,8 @@ function orgs_list($organizations) {
   $output = '';
   $org_count = count($organizations);
   
-  $last_item = end($organizations);
+  end($organizations);
+  $last_item = each($organizations);
   reset($organizations);
   
   foreach($organizations as $key => $org) {
