@@ -249,7 +249,7 @@ footer#footer #footerSitemap > .row > section > ul li { line-height: 1em; margin
 
 .entry-meta.article-abstract { font-style: italic; }
 
-#main { margin-top: 1em; }
+#main { margin-top: 1em; min-height: 18em; }
 
 .twitterbox { background: url("http://lsecities.net/wp-content/themes/lsecities-2012/images/icons/mal/icon_twitter-v1darkblue_24x24.png") no-repeat scroll 0 50% transparent; line-height: 2em; padding-left: 2em; }
 
@@ -288,7 +288,7 @@ ol.article-references li:target { background-color: #ffeeee; }
 #contentarea .top-content article header { margin-bottom: 1em; }
 #contentarea .top-content article header h1 { font-family: museo-sans, PT Sans, sans-serif; font-weight: 900; color: #22273b; }
 
-#keyfacts, #navigationarea { font-size: 90%; }
+#keyfacts, #navigationarea { font-size: 0.9em; }
 #keyfacts h1, #navigationarea h1 { font-size: 1em; font-weight: bold; }
 #keyfacts dl dt, #navigationarea dl dt { border-bottom: 1px solid #eee; margin-top: 0.5em; }
 #keyfacts dl dt:first-child, #navigationarea dl dt:first-child { margin-top: 0; }
@@ -417,7 +417,8 @@ right: -21px; */ }
 .lc-slider-page .flexslider ul { list-style-type: disc; }
 .lc-slider-page .flexslider ul li { list-style-type: inherit; }
 
-#speaker-profiles .people-list .person h1 { font-size: 1.125em; font-weight: bold; text-transform: inherit; border-bottom: 1px solid #eee; margin-bottom: 0.444444444em; }
+.lc-event .event-info { font-size: 0.9em; }
+.lc-event #speaker-profiles .people-list .person h1 { font-size: 1.125em; font-weight: bold; text-transform: inherit; border-bottom: 1px solid #eee; margin-bottom: 0.444444444em; }
 
 .lc-newspaper-article header.heading-image img { max-width: 100%; width: 100%; }
 .lc-newspaper-article .has-pullquote::before { content: attr(data-pullquote); font-weight: bold; opacity: 0.8; float: right; width: 50%; margin: 0.5em -30% 0 0; padding-left: 1.5em; padding-bottom: 0.5em; font-style: italic; position: relative; font-size: 1.5em; line-height: 1.25em; }
