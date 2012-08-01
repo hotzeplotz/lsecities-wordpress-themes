@@ -195,6 +195,7 @@ $poster_pdf = honor_ssl_for_attachments($poster_pdf[0]['guid']);
               <article class='wireframe eightcol'>
                 <header>
                   <h1><?php echo $pod->get_field('name'); ?></h1>
+                  <p class="event-info"><?php echo $event_info; ?></p>
                 </header>
                 <?php if($is_future_event): ?>
                   <?php if($event_blurb): ?>
@@ -228,12 +229,6 @@ $poster_pdf = honor_ssl_for_attachments($poster_pdf[0]['guid']);
                       <dt>Where</dt>
                       <dd><?php echo $event_location; ?></dd>
                     <?php endif; ?>
-              
-                    <?php if($eventseries): ?>
-                      <dt>Event series</dt>
-                      <dd><em><?php echo do_shortcode($eventseries); ?></em></dd>
-                    <?php endif; ?>
-
 <!--
                     <?php if(false and $event_contact_info and $is_future_event): ?>
                       <dt>Access &amp; booking</dt>
@@ -254,16 +249,6 @@ $poster_pdf = honor_ssl_for_attachments($poster_pdf[0]['guid']);
                       <dt>Twitter archive</dt>
                       <dd><a href="https://storify.com/<?php echo $event_story_id; ?>">Read on Storify</a></dd>
                     <?php endif; ?>
-                    
-                    <?php // only show linked data to logged in users for debugging for now
-                      if($TRACE_ENABLED): ?>
-                      <?php if($event_type): ?>
-                      <dt></dt>
-                      <dd><?php echo $event_info; ?></dd>
-                      <?php endif; ?>
-                    <?php
-                      endif;
-                    ?>
                 </dl>
                 <?php if(($is_future_event and $event_hashtag) or (!$event_story_id and $event_hashtag)): ?>
                 <div class='twitterbox'>
