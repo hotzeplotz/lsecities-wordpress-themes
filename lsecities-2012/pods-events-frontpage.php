@@ -137,10 +137,29 @@ $is_future_event = ($event_date_start > $datetime_now) ? true : false;
 
 $event_location = $pod->get_field('venue.name');
 $eventseries = $pod->get_field('eventseries');
-$event_series = $pod->get_field('event_series.name');
+
 $event_type = $pod->get_field('event_type.name');
+$event_series = $pod->get_field('event_series.name');
 $event_host_organizations = orgs_list((array) $pod->get_field('hosted_by'));
 $event_partner_organizations = orgs_list((array) $pod->get_field('partners'));
+
+$event_info '';
+if($event_type) {
+  $event_info .= '<em>' . $event_type . '</em>';
+} else {
+  $event_info .= 'an event';
+}
+if($event_series) {
+  $event_info .= 'of the <em>' . $event_series . '</em>';
+}
+if($event_host_organizations) {
+  $event_info .= 'hosted by ' . $event_host_organizations;
+} else {
+  $event_info .= 'hosted by LSE Cities';
+}
+if($event_partner_organizations) {
+  $event_info . 'in partnership with ' . $event_partner_organizations;
+}
 
 $poster_pdf = $pod->get_field('poster_pdf');
 $poster_pdf = honor_ssl_for_attachments($poster_pdf[0]['guid']);
@@ -239,20 +258,8 @@ $poster_pdf = honor_ssl_for_attachments($poster_pdf[0]['guid']);
                     <?php // only show linked data to logged in users for debugging for now
                       if($TRACE_ENABLED): ?>
                       <?php if($event_type): ?>
-                      <dt>Event type</dt>
-                      <dd><?php echo ucfirst($event_type); ?></dd>
-                      <?php endif; ?>
-                      <?php if($event_series): ?>
-                      <dt>Event series</dt>
-                      <dd><?php echo $event_series; ?></dd>
-                      <?php endif; ?>
-                      <?php if($event_host_organizations): ?>
-                      <dt>Hosted by</dt>
-                      <dd><?php echo $event_host_organizations; ?></dd>
-                      <?php endif; ?>
-                      <?php if($event_partner_organizations): ?>
-                      <dt>Partners</dt>
-                      <dd><?php echo $event_partner_organizations; ?></dd>
+                      <dt></dt>
+                      <dd><?php echo ucfirst($event_info); ?></dd>
                       <?php endif; ?>
                     <?php
                       endif;
