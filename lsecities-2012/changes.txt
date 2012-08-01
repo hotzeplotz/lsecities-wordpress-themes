@@ -13,9 +13,11 @@ lsecities-2012 (1.2) stable; urgency=low
       front page
   * event pages (pods-events-frontpage.php)
     * [feature] added new fields for:
-      * hosted by
-      * event series
       * event type
+      * event series
+      * hosted by
+      * partners
+      displayed under the event title;
       these are linked to relevant Pods so that data is structured and
       linked for future search capabilities (e.g. all events of
       series X)
