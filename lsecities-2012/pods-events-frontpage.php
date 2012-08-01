@@ -49,7 +49,7 @@ function people_list($people, $heading_singular, $heading_plural) {
   return array('count' => $people_count, 'with_blurb' => $people_with_blurb_count, 'output' => $output, 'trace' => var_export($people, true));
 }
 
-function orgs_list($organizations, $heading_singular, $heading_plural) {
+function orgs_list($organizations) {
   $output = '';
   $org_count = 0;
   
