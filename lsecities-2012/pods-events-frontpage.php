@@ -64,6 +64,8 @@ function orgs_list($organizations) {
     $output .= ", \n";
   }
   $output = substr($output, 0, -3);
+  
+  return $output;
 }
 
 // check if we are getting called via Pods (pods_url_variable is set)
