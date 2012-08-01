@@ -42,7 +42,7 @@ function people_list($people, $heading_singular, $heading_plural) {
         $output .= $person['name'] . '  ' . $person['family_name'] . ", \n";
       }
     }
-    $output = substr($output, 0, -2);
+    $output = substr($output, 0, -3);
     $output .= "</dd>\n";
   }
   
@@ -61,9 +61,9 @@ function orgs_list($organizations) {
     if($org['web_uri']) {
       $output .= '</a>';
     }
-    $output .= ', ';
+    $output .= ", \n";
   }
-  $output = substr($output, 0, -2);
+  $output = substr($output, 0, -3);
 }
 
 // check if we are getting called via Pods (pods_url_variable is set)
