@@ -417,7 +417,7 @@ right: -21px; */ }
 .lc-slider-page .flexslider ul { list-style-type: disc; }
 .lc-slider-page .flexslider ul li { list-style-type: inherit; }
 
-.lc-event .event-info { font-size: 0.9em; }
+.lc-event .event-info { font-size: 0.9em; margin-top: 1em; }
 .lc-event #speaker-profiles .people-list .person h1 { font-size: 1.125em; font-weight: bold; text-transform: inherit; border-bottom: 1px solid #eee; margin-bottom: 0.444444444em; }
 
 .lc-newspaper-article header.heading-image img { max-width: 100%; width: 100%; }
