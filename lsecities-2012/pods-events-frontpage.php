@@ -150,7 +150,7 @@ if($event_type) {
   $event_info .= 'An event ';
 }
 if($event_series) {
-  $event_info .= 'of the <em>' . $event_series . '</em> ';
+  $event_info .= 'of the <em>' . $event_series . '</em> event series ';
 }
 if($event_host_organizations) {
   $event_info .= 'hosted by ' . $event_host_organizations . ' ';
