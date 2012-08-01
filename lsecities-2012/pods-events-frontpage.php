@@ -145,17 +145,17 @@ $event_partner_organizations = orgs_list((array) $pod->get_field('partners'));
 
 $event_info = '';
 if($event_type) {
-  $event_info .= '<em>' . $event_type . '</em>';
+  $event_info .= '<em>' . ucfirst($event_type) . '</em> ';
 } else {
-  $event_info .= 'an event';
+  $event_info .= 'An event ';
 }
 if($event_series) {
-  $event_info .= 'of the <em>' . $event_series . '</em>';
+  $event_info .= 'of the <em>' . $event_series . '</em> ';
 }
 if($event_host_organizations) {
-  $event_info .= 'hosted by ' . $event_host_organizations;
+  $event_info .= 'hosted by ' . $event_host_organizations . ' ';
 } else {
-  $event_info .= 'hosted by LSE Cities';
+  $event_info .= 'hosted by LSE Cities ';
 }
 if($event_partner_organizations) {
   $event_info . 'in partnership with ' . $event_partner_organizations;
@@ -259,7 +259,7 @@ $poster_pdf = honor_ssl_for_attachments($poster_pdf[0]['guid']);
                       if($TRACE_ENABLED): ?>
                       <?php if($event_type): ?>
                       <dt></dt>
-                      <dd><?php echo ucfirst($event_info); ?></dd>
+                      <dd><?php echo $event_info; ?></dd>
                       <?php endif; ?>
                     <?php
                       endif;
