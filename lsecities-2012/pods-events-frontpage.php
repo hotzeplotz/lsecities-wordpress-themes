@@ -51,9 +51,16 @@ function people_list($people, $heading_singular, $heading_plural) {
 
 function orgs_list($organizations) {
   $output = '';
-  $org_count = 0;
+  $org_count = count($organizations);
   
-  foreach($organizations as $org) {
+  $last_item = end($organizations);
+  reset($organizations);
+  
+  foreach($organizations as $key => $org) {
+    if($key == $last_item['key'] and $org_count > 1) {
+      $output = substr($output, 0, -3);
+      $output .= " and \n";
+    }
     if($org['web_uri']) {
       $output .= '<a href=' . $org['web_uri'] . '>';
     }
