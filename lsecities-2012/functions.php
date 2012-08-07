@@ -123,9 +123,10 @@ function push_media_attribution($attributions, $attachment_ID) {
   $attribution_uri = get_post_meta($attachment_ID, '_attribution_uri', true);
   $attribution_name = get_post_meta($attachment_ID, '_attribution_name', true);
   global $META_media_attributions;
-  return array_push($attributions, array(
+  array_push($attributions, array(
     'title' => get_the_title($attachment_ID),
     'attribution_uri' => $attribution_uri,
     'author' => $attribution_name,
   ));
+  return $attributions;
 }
