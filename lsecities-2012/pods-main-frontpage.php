@@ -119,7 +119,7 @@ function compose_slide($column_spans, $tiles) {
           )
         )
       );
-      push_media_attribution($META_media_attributions, $tile->get_field('image.ID');
+      push_media_attribution($META_media_attributions, $tile->get_field('image.ID'));
     }
     array_push($slide_content['columns'], $slide_column);
   }
