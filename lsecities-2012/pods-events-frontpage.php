@@ -130,7 +130,8 @@ $META_media_attributions = array();
 if(!$is_conference) {
   $featured_image_uri = honor_ssl_for_attachments($pod->get_field('heading_image.guid'));
   echo var_trace($pod->get_field('heading_image'), $TRACE_PREFIX . ': heading_image', $TRACE_ENABLED);
-  $attachment_metadata = wp_get_attachment_metadata($pod->get_field('heading_image'));
+  $attachment_metadata = wp_get_attachment_metadata($pod->get_field('heading_image.ID'));
+  echo var_trace($attachment_metadata, $TRACE_PREFIX . ': attachment_metadata', $TRACE_ENABLED);
   array_push($META_media_attributions, array(
     'title' => $pod->get_field('heading_image.name'),
     'uri' => $attachment_metadata['AttributionURI'],
