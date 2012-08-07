@@ -133,10 +133,12 @@ if(!$is_conference) {
   echo var_trace($pod->get_field('heading_image'), $TRACE_PREFIX . ': heading_image', $TRACE_ENABLED);
   $attachment_metadata = wp_get_attachment_metadata($attachment_ID);
   echo var_trace($attachment_metadata, $TRACE_PREFIX . ': attachment_metadata', $TRACE_ENABLED);
+  $attribution_uri = get_post_meta($attachment_ID, '_AttributionURI', true);
+  $attribution_name = get_post_meta($attachment_ID, '_AttributionName', true);
   array_push($META_media_attributions, array(
     'title' => $pod->get_field('heading_image.name'),
-    'uri' => get_post_meta($attachment_ID, '_AttributionURI', true),
-    'author' => get_post_meta($attachment_ID, '_AttributionName', true),
+    'uri' => $attribution_uri,
+    'author' => $attribution_name,
   ));
 }
 
