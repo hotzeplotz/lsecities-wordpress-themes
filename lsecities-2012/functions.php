@@ -125,6 +125,7 @@ function push_media_attribution($attachment_ID) {
   echo var_trace($attachment_metadata, $TRACE_PREFIX . ': attachment_metadata', $TRACE_ENABLED);
   $attribution_uri = get_post_meta($attachment_ID, '_attribution_uri', true);
   $attribution_name = get_post_meta($attachment_ID, '_attribution_name', true);
+  global $META_media_attributions;
   array_push($META_media_attributions, array(
     'title' => get_the_title($attachment_ID),
     'attribution_uri' => $attribution_uri,
