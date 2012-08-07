@@ -132,6 +132,8 @@ $event_date_end = new DateTime($pod->get_field('date_end'));
 // $event_date_string = $pod->get_field('date_freeform');
 $event_date_string = $event_date_start->format("l j F Y | H:i");
 $event_date_string = $event_date_string . '-' . $event_date_end->format("H:i");
+$event_dtstart = $event_date_start->format(ISO8601);
+$event_dtend = $event_date_end->format(ISO8601);
 $datetime_now = new DateTime('now');
 $is_future_event = ($event_date_start > $datetime_now) ? true : false;
 
@@ -171,7 +173,7 @@ $poster_pdf = honor_ssl_for_attachments($poster_pdf[0]['guid']);
 
 <?php if ( have_posts() ) : the_post(); endif; ?>
 
-<div id="post-<?php the_ID(); ?>" <?php post_class('lc-article lc-event'); ?>>
+<div id="post-<?php the_ID(); ?>" <?php post_class('lc-article lc-event vevent'); ?>>
 
 <?php echo var_trace($speakers_output, $TRACE_PREFIX, $TRACE_ENABLED);
       echo var_trace($respondents_output, $TRACE_PREFIX, $TRACE_ENABLED);
@@ -199,7 +201,7 @@ $poster_pdf = honor_ssl_for_attachments($poster_pdf[0]['guid']);
                 </header>
                 <?php if($is_future_event): ?>
                   <?php if($event_blurb): ?>
-                  <div class="blurb"><?php echo $event_blurb; ?></div>
+                  <div class="blurb summary"><?php echo $event_blurb; ?></div>
                   <?php endif; ?>
                 <?php else: ?>
                   <?php if($event_blurb_after_event): ?>
@@ -222,12 +224,12 @@ $poster_pdf = honor_ssl_for_attachments($poster_pdf[0]['guid']);
                     
                     <?php if($event_date_string): ?>
                       <dt>When</dt>
-                      <dd><?php echo $event_date_string; ?></dd>
+                      <dd class="dtstart" title="<?php echo $event_dtstart; ?>"><?php echo $event_date_string; ?></dd>
                     <?php endif; ?>
               
                     <?php if($event_location): ?>
                       <dt>Where</dt>
-                      <dd><?php echo $event_location; ?></dd>
+                      <dd class="location"><?php echo $event_location; ?></dd>
                     <?php endif; ?>
 <!--
                     <?php if(false and $event_contact_info and $is_future_event): ?>
