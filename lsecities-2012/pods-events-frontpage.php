@@ -133,8 +133,8 @@ $event_dtstart = $event_date_start->format(DATE_ISO8601);
 $event_dtend = $event_date_end->format(DATE_ISO8601);
 // $event_date_string = $pod->get_field('date_freeform');
 $event_date_string = $event_date_start->format("l j F Y | ");
-$event_date_string .= '<time class="dt-start dtstart" datetime="' . $event_dtstart . '">' . $event_date_start->format("H:i") . '</time>';
-$event_date_string .=  '-' . '<time class="dt-end dtend" datetime="' . $event_dtend . '">' . $event_date_end->format("H:i") . '</time>';
+$event_date_string .= '<time class="dt-start dtstart" itemprop="startDate" datetime="' . $event_dtstart . '">' . $event_date_start->format("H:i") . '</time>';
+$event_date_string .=  '-' . '<time class="dt-end dtend" itemprop="endDate" datetime="' . $event_dtend . '">' . $event_date_end->format("H:i") . '</time>';
 $datetime_now = new DateTime('now');
 $is_future_event = ($event_date_start > $datetime_now) ? true : false;
 
