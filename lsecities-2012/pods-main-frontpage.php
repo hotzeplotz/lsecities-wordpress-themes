@@ -18,6 +18,7 @@ $TRACE_ENABLED = is_user_logged_in();
 
 $TILES_PER_COLUMN = 2;
 
+global $META_media_attributions;
 $META_media_attributions = array();
 
 function get_tile_classes($tile_layout) {
