@@ -132,8 +132,8 @@ $event_date_end = new DateTime($pod->get_field('date_end'));
 // $event_date_string = $pod->get_field('date_freeform');
 $event_date_string = $event_date_start->format("l j F Y | H:i");
 $event_date_string = $event_date_string . '-' . $event_date_end->format("H:i");
-$event_dtstart = $event_date_start->format(ISO8601);
-$event_dtend = $event_date_end->format(ISO8601);
+$event_dtstart = $event_date_start->format(DATE_ISO8601);
+$event_dtend = $event_date_end->format(DATE_ISO8601);
 $datetime_now = new DateTime('now');
 $is_future_event = ($event_date_start > $datetime_now) ? true : false;
 
