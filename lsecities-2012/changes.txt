@@ -2,7 +2,13 @@ lsecities-2012 (1.3) stable; urgency=low
   
   release 1.3 "<nickname>"
   
+  * people pages
+    * [feature] added hCard microformat
+  * events pages
+    * [feature] added hCalendar microformat
   * general
+    * [feature] added support for media attachments attribution metadata
+      display
   * license
     * [update] updated license to GNU AGPLv3
 
