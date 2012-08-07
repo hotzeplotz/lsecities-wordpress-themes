@@ -18,9 +18,6 @@ $TRACE_ENABLED = is_user_logged_in();
 
 $TILES_PER_COLUMN = 2;
 
-global $META_media_attributions;
-$META_media_attributions = array();
-
 function get_tile_classes($tile_layout) {
   $element_classes = '';
   
@@ -120,7 +117,7 @@ function compose_slide($column_spans, $tiles) {
           )
         )
       );
-      push_media_attribution($GLOBALS['META_media_attributions'], $tile->get_field('image.ID'));
+      push_media_attribution($tile->get_field('image.ID'));
     }
     array_push($slide_content['columns'], $slide_column);
   }

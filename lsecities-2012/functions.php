@@ -117,16 +117,14 @@ function save_media_library_item_custom_form_fields($post, $attachment) {
 
 add_filter('attachment_fields_to_save','save_media_library_item_custom_form_fields', null, 2);
 
-function push_media_attribution($attributions, $attachment_ID) {
+function push_media_attribution($attachment_ID) {
   $attachment_metadata = wp_get_attachment_metadata($attachment_ID);
   echo var_trace($attachment_metadata, $TRACE_PREFIX . ': attachment_metadata', $TRACE_ENABLED);
   $attribution_uri = get_post_meta($attachment_ID, '_attribution_uri', true);
   $attribution_name = get_post_meta($attachment_ID, '_attribution_name', true);
-  global $META_media_attributions;
-  array_push($attributions, array(
+  array_push($GLOBALS['META_media_attributions'], array(
     'title' => get_the_title($attachment_ID),
     'attribution_uri' => $attribution_uri,
     'author' => $attribution_name,
   ));
-  return $attributions;
 }
