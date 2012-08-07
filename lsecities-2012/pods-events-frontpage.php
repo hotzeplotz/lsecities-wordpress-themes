@@ -88,6 +88,8 @@ if($pod_slug) {
   $is_conference = true;
 }
 
+$META_last_modified = $pod->get_field('modified');
+
 echo var_trace('pod_slug: ' . $pod_slug, $TRACE_PREFIX, $TRACE_ENABLED);
 
 $button_links = $pod->get_field('links');
@@ -125,6 +127,13 @@ if(!$slider) {
 // if this is an event, grab the image URI from the Pod
 if(!$is_conference) {
   $featured_image_uri = honor_ssl_for_attachments($pod->get_field('heading_image.guid'));
+  echo var_trace($pod->get_field('heading_image'), $TRACE_PREFIX, $TRACE_ENABLED);
+  $attachment_metadata = wp_get_attachment_metadata($pod->get_field('heading_image'));
+  array_push($META_media_attributions, array(
+    'title' => $pod->get_field('heading_image.name'),
+    'uri' => $attachment_metadata['AttributionURI'],
+    'author' => $attachment_metadata['AttributionName']
+  ));
 }
 
 $event_date_start = new DateTime($pod->get_field('date_start'));
@@ -352,7 +361,7 @@ $poster_pdf = honor_ssl_for_attachments($poster_pdf[0]['guid']);
               </section><!-- #speaker-profiles -->
               <?php endif; ?>
             </div><!-- .extra-content -->
-<div id="hiddenmeta" style="display: none;"><span class="updated" title="<?php echo $pod->get_field('modified'); ?>"></span></div>
+<?php include 'snippet-page-meta.php'; ?>
           </div>
 
           <?php get_template_part('nav'); ?>
