@@ -6,9 +6,6 @@ define(PODS_BASEURI_CONFERENCES, '/media/objects/conferences');
 define(PODS_BASEURI_EVENTS, '/media/objects/events');
 define(PODS_BASEURI_RESEARCH_PROJECTS, '/objects/research-projects');
 
-$META_media_attributions = array();
-global $META_media_attributions;
-
 /* deal with WP's insane URI (mis)management - example from
  * http://codex.wordpress.org/Plugin_API/Filter_Reference/wp_get_attachment_url */
 add_filter('wp_get_attachment_url', 'honor_ssl_for_attachments');
@@ -120,13 +117,13 @@ function save_media_library_item_custom_form_fields($post, $attachment) {
 
 add_filter('attachment_fields_to_save','save_media_library_item_custom_form_fields', null, 2);
 
-function push_media_attribution($attachment_ID) {
+function push_media_attribution($attributions, $attachment_ID) {
   $attachment_metadata = wp_get_attachment_metadata($attachment_ID);
   echo var_trace($attachment_metadata, $TRACE_PREFIX . ': attachment_metadata', $TRACE_ENABLED);
   $attribution_uri = get_post_meta($attachment_ID, '_attribution_uri', true);
   $attribution_name = get_post_meta($attachment_ID, '_attribution_name', true);
   global $META_media_attributions;
-  array_push($META_media_attributions, array(
+  return array_push($attributions, array(
     'title' => get_the_title($attachment_ID),
     'attribution_uri' => $attribution_uri,
     'author' => $attribution_name,

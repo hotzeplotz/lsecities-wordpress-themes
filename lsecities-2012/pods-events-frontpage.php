@@ -130,7 +130,7 @@ $META_media_attributions = array();
 if(!$is_conference) {
   $featured_image_uri = honor_ssl_for_attachments($pod->get_field('heading_image.guid'));
   $attachment_ID = $pod->get_field('heading_image.ID');
-  push_media_attribution($attachment_ID);
+  $META_media_attributions = push_media_attribution($META_media_attributions, $attachment_ID);
 }
 
 $event_date_start = new DateTime($pod->get_field('date_start'));
