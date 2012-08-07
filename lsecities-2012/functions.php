@@ -73,3 +73,46 @@ function get_current_page_URI() {
  }
  return $pageURL;
 }
+
+
+/* attribution and license metadata support for media library
+ * thanks to jvelez (http://stackoverflow.com/questions/11475741/word-press-saving-custom-field-to-database)
+ * 
+ * To learn more: 
+ * http://net.tutsplus.com/tutorials/wordpress/creating-custom-fields-for-attachments-in-wordpress/
+ * http://codex.wordpress.org/Plugin_API/Filter_Reference/attachment_fields_to_save
+ * 
+ * Weird Wordpress convention : Fields prefixed with an underscore 
+ * (_RevisionDate) will not be listed in the drop down of available custom fields on the post/page screen;
+ * We only need the custom fields in the media library page
+ */
+function GetMediaLibraryItemCustomFormFields($form_fields, $post) {
+  $form_fields['AttributionName'] = array(
+    'label' => 'Author',
+    'input' => 'text',
+    'value' => get_post_meta($post->ID, '_AttributionName', true),
+    'helps' => 'Media author (or rights holder)'
+  );
+  
+  $form_fields['AttributionURI'] = array(
+    'label' => 'URI of original work',
+    'input' => 'text',
+    'value' => get_post_meta($post->ID, '_AttributionURI', true),
+    'helps' => 'Link to original work for attribution purposes'
+  );
+  
+  return $form_fields;
+}
+
+add_filter('attachment_fields_to_edit', "GetMediaLibraryItemCustomFormFields", null, 2);  
+
+function SaveMediaLibraryItemFormFields($post, $attachment) {
+  if(isset($attachment['AttributionName'])) {
+    update_post_meta($post['ID'], '_AttributionName', $attachment['AttributionName']);  
+  }
+  if(isset($attachment['AttributionURI'])) {
+    update_post_meta($post['ID'], '_AttributionURI', $attachment['AttributionURI']);  
+  }
+}
+
+add_filter('attachment_fields_to_save','SaveMediaLibraryItemFormFields', null, 2);
