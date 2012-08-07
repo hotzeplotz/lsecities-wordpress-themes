@@ -197,12 +197,12 @@ $poster_pdf = honor_ssl_for_attachments($poster_pdf[0]['guid']);
               <?php endif; ?>
               <article class='wireframe eightcol'>
                 <header>
-                  <h1><?php echo $pod->get_field('name'); ?></h1>
+                  <h1 class="summary"><?php echo $pod->get_field('name'); ?></h1>
                   <p class="event-info"><?php echo $event_info; ?></p>
                 </header>
                 <?php if($is_future_event): ?>
                   <?php if($event_blurb): ?>
-                  <div class="blurb summary"><?php echo $event_blurb; ?></div>
+                  <div class="blurb description"><?php echo $event_blurb; ?></div>
                   <?php endif; ?>
                 <?php else: ?>
                   <?php if($event_blurb_after_event): ?>
