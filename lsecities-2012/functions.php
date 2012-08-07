@@ -6,6 +6,9 @@ define(PODS_BASEURI_CONFERENCES, '/media/objects/conferences');
 define(PODS_BASEURI_EVENTS, '/media/objects/events');
 define(PODS_BASEURI_RESEARCH_PROJECTS, '/objects/research-projects');
 
+$META_media_attributions = array();
+global $META_media_attributions;
+
 /* deal with WP's insane URI (mis)management - example from
  * http://codex.wordpress.org/Plugin_API/Filter_Reference/wp_get_attachment_url */
 add_filter('wp_get_attachment_url', 'honor_ssl_for_attachments');
@@ -86,33 +89,45 @@ function get_current_page_URI() {
  * (_RevisionDate) will not be listed in the drop down of available custom fields on the post/page screen;
  * We only need the custom fields in the media library page
  */
-function GetMediaLibraryItemCustomFormFields($form_fields, $post) {
-  $form_fields['AttributionName'] = array(
+function get_media_library_item_custom_form_fields($form_fields, $post) {
+  $form_fields['attribution_name'] = array(
     'label' => 'Author',
     'input' => 'text',
-    'value' => get_post_meta($post->ID, '_AttributionName', true),
+    'value' => get_post_meta($post->ID, '_attribution_name', true),
     'helps' => 'Media author (or rights holder)'
   );
   
-  $form_fields['AttributionURI'] = array(
+  $form_fields['attribution_uri'] = array(
     'label' => 'URI of original work',
     'input' => 'text',
-    'value' => get_post_meta($post->ID, '_AttributionURI', true),
+    'value' => get_post_meta($post->ID, '_attribution_uri', true),
     'helps' => 'Link to original work for attribution purposes'
   );
   
   return $form_fields;
 }
 
-add_filter('attachment_fields_to_edit', "GetMediaLibraryItemCustomFormFields", null, 2);  
+add_filter('attachment_fields_to_edit', "get_media_library_item_custom_form_fields", null, 2);  
 
-function SaveMediaLibraryItemFormFields($post, $attachment) {
-  if(isset($attachment['AttributionName'])) {
-    update_post_meta($post['ID'], '_AttributionName', $attachment['AttributionName']);  
+function save_media_library_item_custom_form_fields($post, $attachment) {
+  if(isset($attachment['attribution_name'])) {
+    update_post_meta($post['ID'], '_attribution_name', $attachment['attribution_name']);  
   }
-  if(isset($attachment['AttributionURI'])) {
-    update_post_meta($post['ID'], '_AttributionURI', $attachment['AttributionURI']);  
+  if(isset($attachment['attribution_udi'])) {
+    update_post_meta($post['ID'], '_attribution_uri', $attachment['attribution_uri']);  
   }
 }
 
-add_filter('attachment_fields_to_save','SaveMediaLibraryItemFormFields', null, 2);
+add_filter('attachment_fields_to_save','save_media_library_item_custom_form_fields', null, 2);
+
+function push_media_attribution($attachment_ID) {
+  $attachment_metadata = wp_get_attachment_metadata($attachment_ID);
+  echo var_trace($attachment_metadata, $TRACE_PREFIX . ': attachment_metadata', $TRACE_ENABLED);
+  $attribution_uri = get_post_meta($attachment_ID, '_attribution_uri', true);
+  $attribution_name = get_post_meta($attachment_ID, '_attribution_name', true);
+  array_push($META_media_attributions, array(
+    'title' => get_the_title($attachment_ID),
+    'attribution_uri' => $attribution_uri,
+    'author' => $attribution_name,
+  ));
+}

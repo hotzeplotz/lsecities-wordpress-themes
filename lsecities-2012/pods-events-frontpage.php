@@ -130,16 +130,7 @@ $META_media_attributions = array();
 if(!$is_conference) {
   $featured_image_uri = honor_ssl_for_attachments($pod->get_field('heading_image.guid'));
   $attachment_ID = $pod->get_field('heading_image.ID');
-  echo var_trace($pod->get_field('heading_image'), $TRACE_PREFIX . ': heading_image', $TRACE_ENABLED);
-  $attachment_metadata = wp_get_attachment_metadata($attachment_ID);
-  echo var_trace($attachment_metadata, $TRACE_PREFIX . ': attachment_metadata', $TRACE_ENABLED);
-  $attribution_uri = get_post_meta($attachment_ID, '_AttributionURI', true);
-  $attribution_name = get_post_meta($attachment_ID, '_AttributionName', true);
-  array_push($META_media_attributions, array(
-    'title' => get_the_title($attachment_ID),
-    'attribution_uri' => $attribution_uri,
-    'author' => $attribution_name,
-  ));
+  push_media_attribution($attachment_ID);
 }
 
 $event_date_start = new DateTime($pod->get_field('date_start'));
