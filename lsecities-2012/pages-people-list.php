@@ -121,16 +121,16 @@ function generate_person_profile($slug, $extra_title, $mode = MODE_FULL_LIST) {
   }
   
   if($mode == MODE_FULL_LIST) {
-    $output = "<li class='person row' id='p-$slug'>";
+    $output = "<li class='person row vcard' id='p-$slug'>";
     $output .= "  <div class='fourcol profile-photo'>";
     if($profile_photo_uri) {
-      $output .= "    <img src='$profile_photo_uri' alt='$fullname - photo'/>";
+      $output .= "    <img class='photo' src='$profile_photo_uri' alt='$fullname - photo'/>";
     } else {
       $output .= "&nbsp;";
     }
     $output .= "  </div>";
     $output .= "  <div class='eightcol last'>";
-    $output .= "    <h1>$fullname_for_heading</h1>";
+    $output .= "    <h1 class='fn'>$fullname_for_heading</h1>";
     if($qualifications_list) {
       $output .= "<div class='qualifications'>";
       foreach($qualifications_list as $qualification) {
@@ -140,10 +140,10 @@ function generate_person_profile($slug, $extra_title, $mode = MODE_FULL_LIST) {
       $output .= "</div>";
     }  
     if($affiliation) {
-      $output .= "  <p>$affiliation</p>";
+      $output .= "  <p class='org'>$affiliation</p>";
     }
     if($email_address) {
-      $output .= "  <p>$email_address</p>";
+      $output .= "  <p class='email'>$email_address</p>";
     }
     if($blurb) {
       $output .= "  $blurb";
