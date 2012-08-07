@@ -197,7 +197,7 @@ $poster_pdf = honor_ssl_for_attachments($poster_pdf[0]['guid']);
               <?php endif; ?>
               <article class='wireframe eightcol'>
                 <header>
-                  <h1 class="p-name summary"><?php echo $pod->get_field('name'); ?></h1>
+                  <h1 class="hentry-title p-name summary"><?php echo $pod->get_field('name'); ?></h1>
                   <p class="event-info"><?php echo $event_info; ?></p>
                 </header>
                 <?php if($is_future_event): ?>
@@ -351,7 +351,8 @@ $poster_pdf = honor_ssl_for_attachments($poster_pdf[0]['guid']);
                 </ul><!-- .people-list -->
               </section><!-- #speaker-profiles -->
               <?php endif; ?>
-            </div>
+            </div><!-- .extra-content -->
+<div id="hiddenmeta" style="display: none;"><span class="updated" title="<?php echo $pod->get_field('modified'); ?>"></span></div>
           </div>
 
           <?php get_template_part('nav'); ?>
