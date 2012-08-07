@@ -110,7 +110,7 @@ function save_media_library_item_custom_form_fields($post, $attachment) {
   if(isset($attachment['attribution_name'])) {
     update_post_meta($post['ID'], '_attribution_name', $attachment['attribution_name']);  
   }
-  if(isset($attachment['attribution_udi'])) {
+  if(isset($attachment['attribution_uri'])) {
     update_post_meta($post['ID'], '_attribution_uri', $attachment['attribution_uri']);  
   }
 }
