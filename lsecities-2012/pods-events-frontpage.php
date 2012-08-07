@@ -136,8 +136,8 @@ if(!$is_conference) {
   $attribution_uri = get_post_meta($attachment_ID, '_AttributionURI', true);
   $attribution_name = get_post_meta($attachment_ID, '_AttributionName', true);
   array_push($META_media_attributions, array(
-    'title' => $pod->get_field('heading_image.name'),
-    'uri' => $attribution_uri,
+    'title' => $get_the_title($attachment_ID),
+    'attribution_uri' => $attribution_uri,
     'author' => $attribution_name,
   ));
 }
