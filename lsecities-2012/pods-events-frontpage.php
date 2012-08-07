@@ -197,7 +197,7 @@ $poster_pdf = honor_ssl_for_attachments($poster_pdf[0]['guid']);
               <?php endif; ?>
               <article class='wireframe eightcol'>
                 <header>
-                  <h1 class="summary"><?php echo $pod->get_field('name'); ?></h1>
+                  <h1 class="p-name summary"><?php echo $pod->get_field('name'); ?></h1>
                   <p class="event-info"><?php echo $event_info; ?></p>
                 </header>
                 <?php if($is_future_event): ?>
@@ -230,7 +230,7 @@ $poster_pdf = honor_ssl_for_attachments($poster_pdf[0]['guid']);
               
                     <?php if($event_location): ?>
                       <dt>Where</dt>
-                      <dd class="p-location location"><?php echo $event_location; ?></dd>
+                      <dd class="h-card vcard"><span class="p-location location"><?php echo $event_location; ?></span></dd>
                     <?php endif; ?>
 <!--
                     <?php if(false and $event_contact_info and $is_future_event): ?>
