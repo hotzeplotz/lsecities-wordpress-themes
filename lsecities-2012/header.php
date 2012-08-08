@@ -13,7 +13,6 @@ $TRACE_ENABLED = is_user_logged_in();
 if($TRACE_ENABLED) { error_log('header.php starting for post with ID ' . $post->ID); }
 $ancestors = get_ancestors($post->ID, 'page');
 array_unshift($ancestors, $post->ID);
-// $GLOBALS['META_media_attributions'] = array();
 global $pods_toplevel_ancestor;
 $toplevel_ancestor = array_pop($ancestors);
 
