@@ -135,6 +135,8 @@ function save_media_library_item_custom_form_fields($post, $attachment) {
   if(isset($attachment['attribution_uri'])) {
     update_post_meta($post['ID'], '_attribution_uri', $attachment['attribution_uri']);  
   }
+  
+  return $post;
 }
 
 add_filter('attachment_fields_to_save','save_media_library_item_custom_form_fields', 8, 2);
