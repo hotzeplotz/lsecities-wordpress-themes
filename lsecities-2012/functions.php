@@ -6,16 +6,15 @@ define(PODS_BASEURI_CONFERENCES, '/media/objects/conferences');
 define(PODS_BASEURI_EVENTS, '/media/objects/events');
 define(PODS_BASEURI_RESEARCH_PROJECTS, '/objects/research-projects');
 
-//include_once('./inc/assets_pipeline.php');
+include_once('./inc/asset_pipeline.php');
 // define assets to load
-// load: 
 $json_assets =
 '[{
   "jquery.cookiecuttr": {
     "load": [ "logged-in": true, "not-logged-in": false, "admin-area": false ]
   }
 }]';
-//$asset_pipeline = new LcAssetPipeline(json_decode($json_assets));
+$asset_pipeline = new LcAssetPipeline(json_decode($json_assets));
 
 /* deal with WP's insane URI (mis)management - example from
  * http://codex.wordpress.org/Plugin_API/Filter_Reference/wp_get_attachment_url */
