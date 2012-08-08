@@ -15,6 +15,9 @@ if(is_user_logged_in()) {
   @ini_set('error_log', LSECITIES2012_LOG_FILE); // path to server-writable log file
 }
 
+// global scope variables
+$META_media_attr = array();
+
 include_once('inc/asset_pipeline.php');
 // define assets to load
 $json_assets =
@@ -137,11 +140,13 @@ function save_media_library_item_custom_form_fields($post, $attachment) {
 // add_filter('attachment_fields_to_save','save_media_library_item_custom_form_fields', null, 2);
 
 function push_media_attribution($attachment_ID) {
+  global $META_media_attr;
   $attachment_metadata = wp_get_attachment_metadata($attachment_ID);
   echo var_trace($attachment_metadata, $TRACE_PREFIX . ': attachment_metadata', $TRACE_ENABLED);
   $attribution_uri = get_post_meta($attachment_ID, '_attribution_uri', true);
   $attribution_name = get_post_meta($attachment_ID, '_attribution_name', true);
-  array_push($GLOBALS['META_media_attributions'], array(
+  // array_push($GLOBALS['META_media_attributions'], array(
+  array_push($META_media_attr, array(
     'title' => get_the_title($attachment_ID),
     'attribution_uri' => $attribution_uri,
     'author' => $attribution_name,
