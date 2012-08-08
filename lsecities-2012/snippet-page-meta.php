@@ -8,9 +8,11 @@
     <h4>Media sources</h4>
     <ul>
   <?php
-    foreach($GLOBALS['META_media_attributions'] as $key => $item): ?>
+    foreach($GLOBALS['META_media_attributions'] as $key => $item): 
+      if($item['attribution_uri'] and $item['author']): ?>
     <li><a href="<?php echo $item['attribution_uri']; ?>"><?php echo $item['title']; ?></a> by <?php echo $item['author']; ?></li>
   <?php
+      endif;
     endforeach; ?>
     </ul>
   <?php
