@@ -82,13 +82,6 @@
       onCookiesNotAllowed:function(){},
       countries:'United Kingdom' // Or supply a list ['United Kingdom', 'Greece']
       });
-
-      function ccAddAnalytics() {
-        jQuery.getScript("http://www.google-analytics.com/ga.js", function() {
-          var GATracker = _gat._createTracker('UA-5245143-1');
-          GATracker._trackPageview();
-        });
-      }
    //]]>
 </script>  
 

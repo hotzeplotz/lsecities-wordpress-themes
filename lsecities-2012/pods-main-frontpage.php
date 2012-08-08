@@ -264,7 +264,6 @@ $slides = $pod->get_field('slides');
                 <?php
                   endif;
                 ?>
-                </ul>
               </section><!-- #news_area -->
               <?php endif; ?>
             </div><!-- .extra-content -->
