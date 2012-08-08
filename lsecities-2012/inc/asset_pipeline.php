@@ -1,4 +1,5 @@
 <?php
+namespace LC;
 /* This class processes assets to be included in template pages
  * 
  * example code taken from:

@@ -18,7 +18,6 @@ if(is_user_logged_in()) {
 // global scope variables
 $META_media_attr = array();
 
-include_once('inc/asset_pipeline.php');
 // define assets to load
 $json_assets =
 '[{
@@ -26,7 +25,8 @@ $json_assets =
     "load": [ "logged-in": true, "not-logged-in": false, "admin-area": false ]
   }
 }]';
-$asset_pipeline = new LcAssetPipeline(json_decode($json_assets));
+include_once('inc/asset_pipeline.php');
+$asset_pipeline = new LC/AssetPipeline(json_decode($json_assets));
 
 /* deal with WP's insane URI (mis)management - example from
  * http://codex.wordpress.org/Plugin_API/Filter_Reference/wp_get_attachment_url */
