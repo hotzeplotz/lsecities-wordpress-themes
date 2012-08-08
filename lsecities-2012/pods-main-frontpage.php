@@ -267,7 +267,7 @@ $slides = $pod->get_field('slides');
               </section><!-- #news_area -->
               <?php endif; ?>
             </div><!-- .extra-content -->
-<?php include 'snippet-page-meta.php'; ?>
+<?php include_once('inc/snippets/page-meta.php'); ?>
       </div>      
     </div><!-- #core.row -->
     </div>        

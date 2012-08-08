@@ -356,7 +356,7 @@ $poster_pdf = honor_ssl_for_attachments($poster_pdf[0]['guid']);
               </section><!-- #speaker-profiles -->
               <?php endif; ?>
             </div><!-- .extra-content -->
-<?php include 'snippet-page-meta.php'; ?>
+<?php include_once('inc/snippets/page-meta.php'); ?>
           </div>
 
           <?php get_template_part('nav'); ?>
