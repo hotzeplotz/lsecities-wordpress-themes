@@ -137,7 +137,7 @@ function save_media_library_item_custom_form_fields($post, $attachment) {
   }
 }
 
-add_filter('attachment_fields_to_save','save_media_library_item_custom_form_fields', 20, 2);
+add_filter('attachment_fields_to_save','save_media_library_item_custom_form_fields', 8, 2);
 
 function push_media_attribution($attachment_ID) {
   global $META_media_attr;
