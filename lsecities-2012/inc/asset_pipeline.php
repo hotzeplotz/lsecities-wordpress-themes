@@ -6,7 +6,7 @@ namespace LC;
  * http://scribu.net/wordpress/optimal-script-loading.html
  */
 
-class LcAssetPipeline {
+class AssetPipeline {
   static $asset_map;
   
   static function init($asset_map) {
