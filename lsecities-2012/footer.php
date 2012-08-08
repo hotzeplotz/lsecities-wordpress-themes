@@ -76,12 +76,9 @@
       startOpen:false,
       autoHide:6000,
       subdomains:false,
-      onAccept:function(){ccAddAnalytics()},
-      onReady:function(){ccAddAnalytics()},
-      onCookiesAllowed:function(){ccAddAnalytics()},
       onCookiesNotAllowed:function(){},
       countries:'United Kingdom' // Or supply a list ['United Kingdom', 'Greece']
-      });
+  });
    //]]>
 </script>  
 
