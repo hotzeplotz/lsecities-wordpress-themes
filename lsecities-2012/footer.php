@@ -123,7 +123,7 @@
             var href = originalhref.replace(re, '$2');
             console.log("PDF download at URI %s tracked with event label '%s'", originalhref, href);
             _gaq.push(['_trackEvent', 'PDF', 'download', href]);
-          });*/
+          });
           <?php endif; ?>
         });
       //]]>
