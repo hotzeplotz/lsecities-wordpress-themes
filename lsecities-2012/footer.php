@@ -66,6 +66,7 @@
 
 <script src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
 <script src="http://lsecities.net/wp-content/plugins/cookie-control/js/cookieControl-4.1.min.js?ver=3.3.2" type="text/javascript"></script>
+<?php if(!is_user_logged_in()): ?>
 <script type="text/javascript">//<![CDATA[
   cookieControl({
       introText:'<p>This site uses some unobtrusive cookies to store information on your computer.</p>',
@@ -81,6 +82,7 @@
   });
    //]]>
 </script>  
+?>
 
 <script>
       //<![CDATA[
