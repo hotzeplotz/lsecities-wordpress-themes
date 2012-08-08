@@ -82,7 +82,7 @@
   });
    //]]>
 </script>  
-?>
+<?php endif; ?>
 
 <script>
       //<![CDATA[
