@@ -6,7 +6,7 @@ define(PODS_BASEURI_CONFERENCES, '/media/objects/conferences');
 define(PODS_BASEURI_EVENTS, '/media/objects/events');
 define(PODS_BASEURI_RESEARCH_PROJECTS, '/objects/research-projects');
 
-include_once('/inc/asset_pipeline.php');
+include_once('inc/asset_pipeline.php');
 // define assets to load
 $json_assets =
 '[{
