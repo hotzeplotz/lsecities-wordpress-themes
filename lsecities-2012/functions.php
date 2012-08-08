@@ -6,6 +6,8 @@ define(PODS_BASEURI_CONFERENCES, '/media/objects/conferences');
 define(PODS_BASEURI_EVENTS, '/media/objects/events');
 define(PODS_BASEURI_RESEARCH_PROJECTS, '/objects/research-projects');
 
+include_once('inc/assets_pipeline.php');
+
 /* deal with WP's insane URI (mis)management - example from
  * http://codex.wordpress.org/Plugin_API/Filter_Reference/wp_get_attachment_url */
 add_filter('wp_get_attachment_url', 'honor_ssl_for_attachments');

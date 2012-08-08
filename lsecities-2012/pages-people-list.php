@@ -102,10 +102,10 @@ function generate_person_profile($slug, $extra_title, $mode = MODE_FULL_LIST) {
     $profile_photo_uri = $LEGACY_PHOTO_URI_PREFIX . $pod->get_field('photo_legacy');
   }
   $blurb = $pod->get_field('staff_pages_blurb');
-  $organization = $pod->get_field('organization');
-  $role = $pod->get_field('role');
+  $organization = '<span class=\'org\'>' . $pod->get_field('organization') . '</span>';
+  $role = '<span class=\'role\'>' . $pod->get_field('role') . '</span>';
   if($role and $organization) {
-    $affiliation = "$role" . ', ' . $organization;
+    $affiliation = $role . ', ' . $organization;
   } elseif(!$role and $organization) {
     $affiliation = $organization;
   } elseif($role and !$organization) {
@@ -140,7 +140,7 @@ function generate_person_profile($slug, $extra_title, $mode = MODE_FULL_LIST) {
       $output .= "</div>";
     }  
     if($affiliation) {
-      $output .= "  <p class='org'>$affiliation</p>";
+      $output .= "  <p>$affiliation</p>";
     }
     if($email_address) {
       $output .= "  <p class='email'>$email_address</p>";
