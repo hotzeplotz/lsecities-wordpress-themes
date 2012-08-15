@@ -56,11 +56,7 @@ $logo_element_id = $GLOBALS['urban_age_section'] ? 'ualogo' : 'logo';
 
 	// if the page title is set from within a Pods template, use this -
 	// otherwise use wp_title
-	if($pods_title) {
-		echo $pods_title;
-	} else { 
-		wp_title( '|', true, 'right' );
-	}
+	$pod_page_title ? echo $pod_page_title : wp_title( '|', true, 'right' );
 
 	// Add the blog name.
 	bloginfo( 'name' );
