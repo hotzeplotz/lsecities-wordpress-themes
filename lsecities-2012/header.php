@@ -13,7 +13,7 @@ $TRACE_ENABLED = is_user_logged_in();
 if($TRACE_ENABLED) { error_log('header.php starting for post with ID ' . $post->ID); }
 $ancestors = get_ancestors($post->ID, 'page');
 array_unshift($ancestors, $post->ID);
-global $pods_toplevel_ancestor;
+global $pods_toplevel_ancestor, $pods_title;
 $toplevel_ancestor = array_pop($ancestors);
 
 // If we are on the root frontpage ('/', page ID 393), set ancestor to nil
@@ -54,7 +54,9 @@ $logo_element_id = $GLOBALS['urban_age_section'] ? 'ualogo' : 'logo';
 	 */
 	global $page, $paged;
 
-	wp_title( '|', true, 'right' );
+	// if the page title is set from within a Pods template, use this -
+	// otherwise use wp_title
+	$pods_title ? echo $pods_title : wp_title( '|', true, 'right' );
 
 	// Add the blog name.
 	bloginfo( 'name' );

@@ -13,7 +13,8 @@
  * Pods initialization
  * URI: /media/objects/events/
  */
-global $pods;
+global $pod_title;
+$pod_title = $pod->get_field('name') . ' | Events';
 $TRACE_ENABLED = is_user_logged_in();
 $TRACE_PREFIX = 'pods-events-frontpage';
 global $pods_toplevel_ancestor, $pod_slug;
