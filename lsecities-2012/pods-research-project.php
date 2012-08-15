@@ -33,6 +33,8 @@ if(!$pod_from_page) {
 echo var_trace('pod_slug: ' . $pod_slug, $TRACE_PREFIX, $TRACE_ENABLED);
 $pod = new Pod('research_project', $pod_slug);
 
+include_once('inc/pods/pod_class.php');
+global $this_pod;
 $this_pod = new PodObject($pod, 'Research');
 
 $pod_title = $pod->get_field('name');
