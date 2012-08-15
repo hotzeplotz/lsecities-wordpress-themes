@@ -32,7 +32,9 @@ if(!$pod_from_page) {
 
 echo var_trace('pod_slug: ' . $pod_slug, $TRACE_PREFIX, $TRACE_ENABLED);
 $pod = new Pod('research_project', $pod_slug);
-$pod_page_title = $pod_title = $pod->get_field('name');
+
+$pod_page_title = $pod->get_field('name') . ' | Research | ';
+$pod_title = $pod->get_field('name');
 $pod_tagline = $pod->get_field('tagline');
 $pod_summary = do_shortcode($pod->get_field('summary'));
 $pod_blurb = do_shortcode($pod->get_field('blurb'));
