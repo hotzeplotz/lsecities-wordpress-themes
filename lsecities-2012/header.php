@@ -13,7 +13,7 @@ $TRACE_ENABLED = is_user_logged_in();
 if($TRACE_ENABLED) { error_log('header.php starting for post with ID ' . $post->ID); }
 $ancestors = get_ancestors($post->ID, 'page');
 array_unshift($ancestors, $post->ID);
-global $pods_toplevel_ancestor, $pods_title;
+global $pods_toplevel_ancestor, $pod_page_title;
 $toplevel_ancestor = array_pop($ancestors);
 
 // If we are on the root frontpage ('/', page ID 393), set ancestor to nil
