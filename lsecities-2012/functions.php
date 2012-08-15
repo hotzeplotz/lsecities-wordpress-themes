@@ -83,6 +83,24 @@ function shorten_string($string, $wordsreturned) {
   return $retval;
 }
 
+/* 
+ * Set wp_title according to current Pod content
+ */
+function set_pod_page_title($title, $sep, $seplocation) {
+  global $this_pod;
+  if(isset($this_pod) and $this_pod->pod_page_title){
+    $title = $this_pod->pod_page_title;
+    
+    if($this_pod->pod_page_section){
+      $title .= " $sep " . $this_pod->pod_page_section;
+    }
+    
+    $title .= " $sep ";
+  }
+  return $title;
+}
+add_filter('wp_title', 'set_pod_page_title', null, 3);
+
 // from http://webcheatsheet.com/php/get_current_page_url.php
 function get_current_page_URI() {
  $pageURL = 'http';
