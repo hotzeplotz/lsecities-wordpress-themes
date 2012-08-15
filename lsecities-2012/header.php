@@ -56,7 +56,7 @@ $logo_element_id = $GLOBALS['urban_age_section'] ? 'ualogo' : 'logo';
 
 	// if the page title is set from within a Pods template, use this -
 	// otherwise use wp_title
-	if($pod_page_title( {
+	if($pod_page_title) {
 		echo $pod_page_title;
 	} else {
 		wp_title( '|', true, 'right' );
