@@ -19,9 +19,7 @@ global $pods_toplevel_ancestor, $pod_slug;
 $pods_toplevel_ancestor = 311;
 include_once('inc/pods/event/pods-event.php');
 global $this_pod;
-$this_pod = new PodObject($pod);
-$this_pod->pod_page_title = $pod->get_field('name');
-$this_pod->pod_page_section = 'Events';
+$this_pod = new PodObject($pod, 'Events');
 ?>
 
 <?php get_header(); ?>

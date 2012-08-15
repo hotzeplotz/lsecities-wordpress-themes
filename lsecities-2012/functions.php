@@ -88,11 +88,11 @@ function shorten_string($string, $wordsreturned) {
  */
 function set_pod_page_title($title, $sep, $seplocation) {
   global $this_pod;
-  if(isset($this_pod) and $this_pod->pod_page_title){
-    $title = $this_pod->pod_page_title;
+  if(isset($this_pod) and $this_pod->page_title){
+    $title = $this_pod->page_title;
     
-    if($this_pod->pod_page_section){
-      $title .= " $sep " . $this_pod->pod_page_section;
+    if($this_pod->page_section){
+      $title .= " $sep " . $this_pod->page_section;
     }
     
     $title .= " $sep ";
