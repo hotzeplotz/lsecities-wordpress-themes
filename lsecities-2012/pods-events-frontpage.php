@@ -18,9 +18,9 @@ $TRACE_PREFIX = 'pods-events-frontpage';
 global $pods_toplevel_ancestor, $pod_slug;
 $pods_toplevel_ancestor = 311;
 include_once('inc/pods/event/pods-event.php');
-include_once('inc/pods/pod_class.php');
+
 global $this_pod;
-$this_pod = new PodObject($pod, 'Events');
+$this_pod = new LC\PodObject($pod, 'Events');
 ?>
 
 <?php get_header(); ?>
